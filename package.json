@@ -1,7 +1,7 @@
 {
   "name": "react-director-admin-template",
   "version": "0.1.0",
-  "description": "director admin bootstrap template ported to ReactJS",
+  "description": "ReactJS version of Director Responsive Admin Template Free",
   "main": "src/index.js",
   "scripts": {
     "dev": "NODE_ENV=dev webpack",
