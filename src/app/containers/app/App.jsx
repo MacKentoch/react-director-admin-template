@@ -6,7 +6,9 @@ import { connect }            from 'react-redux';
 import * as actions           from '../../redux/actions';
 
 import {
-  Header
+  Header,
+  AsideLeft,
+  AsideRight
 }                             from '../../components';
 
 class App extends Component {
@@ -18,9 +20,10 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div class="wrapper row-offcanvas row-offcanvas-left">
-          
-          {this.props.children}
+        <div className="wrapper row-offcanvas row-offcanvas-left">
+          <AsideLeft />
+          <AsideRight />
+          {/*{this.props.children}*/}
         </div>
       </div>
     );
