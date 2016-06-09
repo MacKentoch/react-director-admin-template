@@ -5,6 +5,7 @@ import precss       from 'precss';
 
 const assetsDir       = path.resolve(__dirname, 'public/assets');
 const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
+const vendorsDir      = path.resolve(__dirname, 'src/app/vendors');
 
 let config = {
   entry: [
@@ -17,7 +18,7 @@ let config = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      exclude: [nodeModulesDir],
+      exclude: [nodeModulesDir, vendorsDir],
       loader: 'babel'
     },  {
       test: /\.css$/,

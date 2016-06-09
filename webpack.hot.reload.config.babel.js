@@ -3,7 +3,8 @@ import webpack      from 'webpack';
 import autoprefixer from 'autoprefixer';
 import precss       from 'precss';
 
-const assetsDir = path.resolve(__dirname, 'public/assets');
+const assetsDir   = path.resolve(__dirname, 'public/assets');
+const vendorsDir  = path.resolve(__dirname, 'src/app/vendors');
 
 let config = {
   devtool: 'eval',
@@ -29,6 +30,7 @@ let config = {
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['react-hot', 'babel'],
+      exclude: [vendorsDir],
       include: path.join(__dirname, 'src/app')
     },  {
       test: /\.scss$/,
