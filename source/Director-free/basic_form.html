@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Director | Dashboard</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <meta name="description" content="Developed By M Abdur Rokib Promy">
+        <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
+        <!-- bootstrap 3.0.2 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <!-- Theme style -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="skin-black">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                Director
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Director Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tasks"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-success" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Create a nice theme
+                                                    <small class="pull-right">40%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">40% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Some task I need to do
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Make beautiful transitions
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <span>Jane Doe <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                                <li class="dropdown-header text-center">Account</li>
+
+                                <li>
+                                    <a href="#">
+                                    <i class="fa fa-clock-o fa-fw pull-right"></i>
+                                        <span class="badge badge-success pull-right">10</span> Updates</a>
+                                    <a href="#">
+                                    <i class="fa fa-envelope-o fa-fw pull-right"></i>
+                                        <span class="badge badge-danger pull-right">5</span> Messages</a>
+                                    <a href="#"><i class="fa fa-magnet fa-fw pull-right"></i>
+                                        <span class="badge badge-info pull-right">3</span> Subscriptions</a>
+                                    <a href="#"><i class="fa fa-question fa-fw pull-right"></i> <span class=
+                                        "badge pull-right">11</span> FAQ</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                    <li>
+                                        <a href="#">
+                                        <i class="fa fa-user fa-fw pull-right"></i>
+                                            Profile
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-user-settings">
+                                        <i class="fa fa-cog fa-fw pull-right"></i>
+                                            Settings
+                                        </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                        </li>
+                                    </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, Jane</p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="general.html">
+                                <i class="fa fa-gavel"></i> <span>General</span>
+                            </a>
+                        </li>
+
+                        <li class="active">
+                            <a href="basic_form.html">
+                                <i class="fa fa-globe"></i> <span>Basic Elements</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="simple.html">
+                                <i class="fa fa-glass"></i> <span>Simple tables</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                          <section class="panel">
+                              <header class="panel-heading">
+                                  Basic Forms
+                              </header>
+                              <div class="panel-body">
+                                  <form role="form">
+                                      <div class="form-group">
+                                          <label for="exampleInputEmail1">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="exampleInputPassword1">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="exampleInputFile">File input</label>
+                                          <input type="file" id="exampleInputFile">
+                                          <p class="help-block">Example block-level help text here.</p>
+                                      </div>
+                                      <div class="checkbox">
+                                          <label>
+                                              <input type="checkbox"> Check me out
+                                          </label>
+                                      </div>
+                                      <button type="submit" class="btn btn-info">Submit</button>
+                                  </form>
+
+                              </div>
+                          </section>
+                      </div>
+                      <div class="col-lg-6">
+                          <section class="panel">
+                              <header class="panel-heading">
+                                  Horizontal Forms
+                              </header>
+                              <div class="panel-body">
+                                  <form class="form-horizontal" role="form">
+                                      <div class="form-group">
+                                          <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                          <div class="col-lg-10">
+                                              <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                              <p class="help-block">Example block-level help text here.</p>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                          <div class="col-lg-10">
+                                              <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <div class="col-lg-offset-2 col-lg-10">
+                                              <div class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox"> Remember me
+                                                  </label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <div class="col-lg-offset-2 col-lg-10">
+                                              <button type="submit" class="btn btn-danger">Sign in</button>
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+                          </section>
+                          <section class="panel">
+
+                              <div class="panel-body">
+                                  <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-success">
+                                      Form in Modal
+                                  </a>
+                                  <a href="#myModal-1" data-toggle="modal" class="btn btn-xs btn-warning">
+                                      Form in Modal 2
+                                  </a>
+                                  <a href="#myModal-2" data-toggle="modal" class="btn btn-xs btn-danger">
+                                      Form in Modal 3
+                                  </a>
+
+                                  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                  <h4 class="modal-title">Form Tittle</h4>
+                                              </div>
+                                              <div class="modal-body">
+
+                                                  <form role="form">
+                                                      <div class="form-group">
+                                                          <label for="exampleInputEmail1">Email address</label>
+                                                          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label for="exampleInputPassword1">Password</label>
+                                                          <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label for="exampleInputFile">File input</label>
+                                                          <input type="file" id="exampleInputFile3">
+                                                          <p class="help-block">Example block-level help text here.</p>
+                                                      </div>
+                                                      <div class="checkbox">
+                                                          <label>
+                                                              <input type="checkbox"> Check me out
+                                                          </label>
+                                                      </div>
+                                                      <button type="submit" class="btn btn-default">Submit</button>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                  <h4 class="modal-title">Form Tittle</h4>
+                                              </div>
+                                              <div class="modal-body">
+
+                                                  <form class="form-horizontal" role="form">
+                                                      <div class="form-group">
+                                                          <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
+                                                          <div class="col-lg-10">
+                                                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">Password</label>
+                                                          <div class="col-lg-10">
+                                                              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <div class="col-lg-offset-2 col-lg-10">
+                                                              <div class="checkbox">
+                                                                  <label>
+                                                                      <input type="checkbox"> Remember me
+                                                                  </label>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <div class="col-lg-offset-2 col-lg-10">
+                                                              <button type="submit" class="btn btn-default">Sign in</button>
+                                                          </div>
+                                                      </div>
+                                                  </form>
+
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-2" class="modal fade">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                  <h4 class="modal-title">Form Tittle</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <form class="form-inline" role="form">
+                                                      <div class="form-group">
+                                                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                          <input type="email" class="form-control sm-input" id="exampleInputEmail5" placeholder="Enter email">
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                          <input type="password" class="form-control sm-input" id="exampleInputPassword5" placeholder="Password">
+                                                      </div>
+                                                      <div class="checkbox">
+                                                          <label>
+                                                              <input type="checkbox"> Remember me
+                                                          </label>
+                                                      </div>
+                                                      <button type="submit" class="btn btn-default">Sign in</button>
+                                                  </form>
+
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </section>
+                      </div>
+                    </div><!--row1-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <section class="panel">
+                              <header class="panel-heading">
+                                  Inline form
+                              </header>
+                              <div class="panel-body">
+                                  <form class="form-inline" role="form">
+                                      <div class="form-group">
+                                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                      </div>
+                                      <div class="checkbox">
+                                          <label>
+                                              <input type="checkbox"> Remember me
+                                          </label>
+                                      </div>
+                                      <button type="submit" class="btn btn-success">Sign in</button>
+                                  </form>
+
+                              </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <section class="panel">
+                              <header class="panel-heading">
+                                 Form Elements
+                              </header>
+                              <div class="panel-body">
+                                  <form class="form-horizontal tasi-form" method="get">
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Default</label>
+                                          <div class="col-sm-10">
+                                              <input type="text" class="form-control">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Help text</label>
+                                          <div class="col-sm-10">
+                                              <input type="text" class="form-control">
+                                              <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Rounder</label>
+                                          <div class="col-sm-10">
+                                              <input type="text" class="form-control round-input">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Input focus</label>
+                                          <div class="col-sm-10">
+                                              <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Disabled</label>
+                                          <div class="col-sm-10">
+                                              <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Placeholder</label>
+                                          <div class="col-sm-10">
+                                              <input type="text" class="form-control" placeholder="placeholder">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 col-sm-2 control-label">Password</label>
+                                          <div class="col-sm-10">
+                                              <input type="password" class="form-control" placeholder="">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-2 col-sm-2 control-label">Static control</label>
+                                          <div class="col-lg-10">
+                                              <p class="form-control-static">email@example.com</p>
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+                            </section>
+                            <section class="panel">
+                                <header class="panel-heading">
+                                 Form Elements
+                                </header>
+                                <div class="panel-body">
+                                  <form class="form-horizontal tasi-form" method="get">
+                                      <div class="form-group has-success">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Input with success</label>
+                                          <div class="col-lg-10">
+                                              <input type="text" class="form-control" id="inputSuccess">
+                                          </div>
+                                      </div>
+                                      <div class="form-group has-warning">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputWarning">Input with warning</label>
+                                          <div class="col-lg-10">
+                                              <input type="text" class="form-control" id="inputWarning">
+                                          </div>
+                                      </div>
+                                      <div class="form-group has-error">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputError">Input with error</label>
+                                          <div class="col-lg-10">
+                                              <input type="text" class="form-control" id="inputError">
+                                          </div>
+                                      </div>
+                                  </form>
+                                </div>
+                            </section>
+                            <section class="panel">
+                                <header class="panel-heading">
+                                     Control sizing
+                                </header>
+                                <div class="panel-body">
+                                  <form class="form-horizontal tasi-form" method="get">
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Control sizing</label>
+                                          <div class="col-lg-10">
+                                              <input class="form-control input-lg m-b-10" type="text" placeholder=".input-lg">
+                                              <input class="form-control m-b-10" type="text" placeholder="Default input">
+                                              <input class="form-control input-sm m-b-10" type="text" placeholder=".input-sm">
+
+                                              <select class="form-control input-lg m-b-10">
+                                                  <option>Option 1</option>
+                                                  <option>Option 2</option>
+                                                  <option>Option 3</option>
+                                              </select>
+                                              <select class="form-control m-b-10">
+                                                  <option>Option 1</option>
+                                                  <option>Option 2</option>
+                                                  <option>Option 3</option>
+                                              </select>
+                                              <select class="form-control input-sm m-b-10">
+                                                  <option>Option 1</option>
+                                                  <option>Option 2</option>
+                                                  <option>Option 3</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </form>
+                                </div>
+                            </section>
+                            <section class="panel">
+                                <header class="panel-heading">
+                                 Form Elements
+                                </header>
+                                <div class="panel-body">
+                                    <form class="form-horizontal tasi-form" method="get">
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Checkboxes and radios</label>
+                                          <div class="col-lg-10">
+                                              <div class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox" value="">
+                                                      Option one is this and that—be sure to include why it's great
+                                                  </label>
+                                              </div>
+
+                                              <div class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox" value="">
+                                                      Option one is this and that—be sure to include why it's great option one
+                                                  </label>
+                                              </div>
+
+                                              <div class="radio">
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                                      Option one is this and that—be sure to include why it's great
+                                                  </label>
+                                              </div>
+                                              <div class="radio">
+                                                  <label>
+                                                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                      Option two can be something else and selecting it will deselect option one
+                                                  </label>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Inline checkboxes</label>
+                                          <div class="col-lg-10">
+                                              <label class="checkbox-inline">
+                                                  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                                              </label>
+                                              <label class="checkbox-inline">
+                                                  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                                              </label>
+                                              <label class="checkbox-inline">
+                                                  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                                              </label>
+
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Selects</label>
+                                          <div class="col-lg-10">
+                                              <select class="form-control m-b-10">
+                                                  <option>1</option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                              </select>
+
+                                              <select multiple="" class="form-control">
+                                                  <option>1</option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                              </select>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Column sizing</label>
+                                          <div class="col-lg-10">
+                                              <div class="row">
+                                                  <div class="col-lg-2">
+                                                      <input type="text" class="form-control" placeholder=".col-lg-2">
+                                                  </div>
+                                                  <div class="col-lg-3">
+                                                      <input type="text" class="form-control" placeholder=".col-lg-3">
+                                                  </div>
+                                                  <div class="col-lg-4">
+                                                      <input type="text" class="form-control" placeholder=".col-lg-4">
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+
+                                  </form>
+                              </div>
+                            </section>
+                            <section class="panel">
+                              <header class="panel-heading">
+                                  Input groups
+                              </header>
+                              <div class="panel-body">
+                                  <form class="form-horizontal tasi-form" method="get">
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2">Basic examples</label>
+                                          <div class="col-lg-10">
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-addon">@</span>
+                                                  <input type="text" class="form-control" placeholder="Username">
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <input type="text" class="form-control">
+                                                  <span class="input-group-addon">.00</span>
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-addon">$</span>
+                                                  <input type="text" class="form-control">
+                                                  <span class="input-group-addon">.00</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2">Sizing</label>
+                                          <div class="col-lg-10">
+                                              <div class="input-group input-group-lg m-b-10">
+                                                  <span class="input-group-addon">@</span>
+                                                  <input type="text" class="form-control input-lg" placeholder="Username">
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-addon">@</span>
+                                                  <input type="text" class="form-control" placeholder="Username">
+                                              </div>
+
+                                              <div class="input-group input-group-sm m-b-10">
+                                                  <span class="input-group-addon">@</span>
+                                                  <input type="text" class="form-control" placeholder="Username">
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2">Checkboxe and radio</label>
+                                          <div class="col-lg-10">
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-addon">
+                                                    <input type="checkbox">
+                                                  </span>
+                                                  <input type="text" class="form-control">
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-addon">
+                                                    <input type="radio">
+                                                  </span>
+                                                  <input type="text" class="form-control">
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2">Button addons</label>
+                                          <div class="col-lg-10">
+                                              <div class="input-group m-b-10">
+                                                  <span class="input-group-btn">
+                                                    <button class="btn btn-white" type="button">Go!</button>
+                                                  </span>
+                                                  <input type="text" class="form-control">
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <input type="text" class="form-control">
+                                                  <span class="input-group-btn">
+                                                    <button class="btn btn-white" type="button">Go!</button>
+                                                  </span>
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <div class="input-group-btn">
+                                                      <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                                      <ul class="dropdown-menu">
+                                                          <li><a href="#">Action</a></li>
+                                                          <li><a href="#">Another action</a></li>
+                                                          <li><a href="#">Something else here</a></li>
+                                                          <li class="divider"></li>
+                                                          <li><a href="#">Separated link</a></li>
+                                                      </ul>
+                                                  </div>
+                                                  <input type="text" class="form-control">
+                                              </div>
+                                              <div class="input-group m-b-10">
+                                                  <input type="text" class="form-control">
+                                                  <div class="input-group-btn">
+                                                      <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                                                      <ul class="dropdown-menu pull-right">
+                                                          <li><a href="#">Action</a></li>
+                                                          <li><a href="#">Another action</a></li>
+                                                          <li><a href="#">Something else here</a></li>
+                                                          <li class="divider"></li>
+                                                          <li><a href="#">Separated link</a></li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label class="col-sm-2 control-label col-lg-2">Segmented buttons</label>
+                                          <div class="col-lg-10">
+                                              <div class="input-group m-b-10">
+                                                  <div class="input-group-btn">
+                                                      <button tabindex="-1" class="btn btn-white" type="button">Action</button>
+                                                      <button tabindex="-1" data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">
+                                                          <span class="caret"></span>
+                                                      </button>
+                                                      <ul role="menu" class="dropdown-menu">
+                                                          <li><a href="#">Action</a></li>
+                                                          <li><a href="#">Another action</a></li>
+                                                          <li><a href="#">Something else here</a></li>
+                                                          <li class="divider"></li>
+                                                          <li><a href="#">Separated link</a></li>
+                                                      </ul>
+                                                  </div>
+                                                  <input type="text" class="form-control">
+                                              </div>
+
+                                              <div class="input-group m-b-10">
+                                                  <input type="text" class="form-control">
+                                                  <div class="input-group-btn">
+                                                      <button tabindex="-1" class="btn btn-white" type="button">Action</button>
+                                                      <button tabindex="-1" data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">
+                                                          <span class="caret"></span>
+                                                      </button>
+                                                      <ul role="menu" class="dropdown-menu pull-right">
+                                                          <li><a href="#">Action</a></li>
+                                                          <li><a href="#">Another action</a></li>
+                                                          <li><a href="#">Something else here</a></li>
+                                                          <li class="divider"></li>
+                                                          <li><a href="#">Separated link</a></li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                  </form>
+                              </div>
+                            </section>
+                            <section class="panel">
+                                <header class="panel-heading">
+                                  Inline Grid
+                                </header>
+                                <div class="panel-body">
+
+                                    <div class="row">
+
+                                        <div class="col-md-12 form-group">
+                                            <input type="text" placeholder=".col-md-12" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <input type="text" placeholder=".col-md-6" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6 form-group">
+                                            <input type="text" placeholder=".col-md-6" class="form-control">
+                                        </div>
+
+
+                                        <div class="col-md-4 form-group">
+                                            <input type="text" placeholder=".col-md-4" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input type="text" placeholder=".col-md-4" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <input type="text" placeholder=".col-md-4" class="form-control">
+                                        </div>
+
+
+                                        <div class="col-md-3 form-group">
+                                            <input type="text" placeholder=".col-md-3" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-3 form-group">
+                                            <input type="text" placeholder=".col-md-3" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-3 form-group">
+                                            <input type="text" placeholder=".col-md-3" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-3 form-group">
+                                            <input type="text" placeholder=".col-md-3" class="form-control">
+                                        </div>
+
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-2 form-group">
+                                            <input type="text" placeholder=".col-md-2" class="form-control">
+                                        </div>
+
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-1 form-group">
+                                            <input type="text" placeholder=".col-md-1" class="form-control">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+            <div class="footer-main">
+                Copyright &copy Director, 2014
+            </div>
+        </div><!-- ./wrapper -->
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Director App -->
+        <script src="js/Director/app.js" type="text/javascript"></script>
+    </body>
+</html>

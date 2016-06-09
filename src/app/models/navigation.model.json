@@ -1,0 +1,18 @@
+{
+  "brand":      "React Redux Bootstrap Starter",
+  "leftLinks":  [],
+  "rightLinks": [
+    {
+      "label":      "Home",
+      "link":       "/",
+      "view":       "home",
+      "isRouteBtn": true
+    },
+    {
+      "label":      "About",
+      "link":       "/about",
+      "view":       "about",
+      "isRouteBtn": true
+    }
+  ]
+}
