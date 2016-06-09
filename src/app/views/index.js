@@ -1,8 +1,7 @@
-import About  from './about/About.jsx';
+'use strict';
+
 import Home   from './home/Home.jsx';
 
-
 export {
-  About,
   Home
 };

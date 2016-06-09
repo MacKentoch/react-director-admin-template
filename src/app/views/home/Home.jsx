@@ -1,11 +1,11 @@
 'use strict';
 
-import React      from 'react';
+import React, { PropTypes, Component } from 'react';
 import Jumbotron  from '../../components/jumbotron/Jumbotron.jsx';
 import classNames from 'classnames';
 import { Link }   from 'react-router';
 
-class Home extends React.Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.init();
@@ -19,7 +19,7 @@ class Home extends React.Component {
   }
 
   componentWillMount() {
-    this.props.actions.enterHome();
+    this.props.enterHome();
 
     this.state = {
       viewEnters  : true
@@ -27,7 +27,7 @@ class Home extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.actions.leaveHome();
+    this.props.leaveHome();
   }
 
   processViewAnimationClasses() {
@@ -73,7 +73,8 @@ class Home extends React.Component {
 }
 
 Home.propTypes= {
-  actions: React.PropTypes.object
+  enterHome: PropTypes.func,
+  leaveHome: PropTypes.func
 };
 
 export default Home;
