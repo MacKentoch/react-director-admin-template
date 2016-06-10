@@ -19,7 +19,8 @@ class EarningGraph extends Component {
       responsive : true,
       maintainAspectRatio: false
     };
-    new Chart(this.linechart.getContext('2d'), {
+    
+    this.chart = new Chart(this.linechart.getContext('2d'), {
       type: 'line',
       data: this.props.data,
       options
@@ -39,7 +40,7 @@ class EarningGraph extends Component {
             } }
             id="linechart"
             width="600"
-            height="330">
+            height="330" >
           </canvas>
         </div>
       </section>
@@ -56,6 +57,6 @@ EarningGraph.propTypes = {
 
 EarningGraph.defaultProps = {
   data: earningGraphMockData
-}
+};
 
 export default EarningGraph;
