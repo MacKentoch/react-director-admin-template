@@ -60,12 +60,15 @@
   "dependencies": {
     "animate.css": "^3.5.1",
     "babel-polyfill": "^6.7.4",
+    "better-react-spinkit": "^1.2.2",
     "bootstrap": "^3.3.6",
     "chart.js": "^2.1.4",
     "classnames": "^2.2.3",
     "font-awesome": "^4.5.0",
     "ionicons": "^3.0.0",
     "jquery": "^2.2.1",
+    "js-base64": "^2.1.9",
+    "moment": "^2.13.0",
     "react": "^0.14.7",
     "react-bootstrap": "^0.28.3",
     "react-dom": "^0.14.7",
@@ -74,9 +77,11 @@
     "react-redux": "^4.4.1",
     "react-router": "^2.0.0",
     "react-router-redux": "^4.0.1",
+    "react-svg-morph": "^0.1.9",
     "react-tap-event-plugin": "^0.2.2",
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1",
-    "superagent": "^1.8.3"
+    "superagent": "^1.8.3",
+    "whatwg-fetch": "^1.0.0"
   }
 }

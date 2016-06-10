@@ -5,12 +5,16 @@ import {
   leaveHome,
   enterAbout,
   leaveAbout
-}             from './views';
+}                                 from './views';
+import {
+  fetchEarningGraphDataIfNeeded
+}                                 from './earningGraph';
 
 
 export {
   enterHome,
   leaveHome,
   enterAbout,
-  leaveAbout
+  leaveAbout,
+  fetchEarningGraphDataIfNeeded
 };
