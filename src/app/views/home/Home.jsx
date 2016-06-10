@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes, Component } from 'react';
-import classNames from 'classnames';
+import classNames                      from 'classnames';
 // import { Link }   from 'react-router';
 import {
   StatsCard,
@@ -12,7 +12,9 @@ import {
   TwitterFeed,
   TodoList,
   TeamMates
-}                 from '../../components';
+}                                     from '../../components';
+import { earningGraphMockData }       from '../../models';
+
 
 class Home extends Component {
   constructor(props) {
@@ -22,17 +24,18 @@ class Home extends Component {
 
   init() {
     this.state = {
-      animated    : true,
-      viewEnters  : false
+      animated: true,
+      viewEnters: false,
+      earningGraphDemoData: earningGraphMockData
     };
   }
 
   componentWillMount() {
     this.props.actions.enterHome();
+  }
 
-    this.state = {
-      viewEnters  : true
-    };
+  componentDidMount() {
+    this.setState = { viewEnters  : true };
   }
 
   componentWillUnmount() {
@@ -79,10 +82,11 @@ class Home extends Component {
           </div>
         </div>
 
-        {/* <!-- Main row --> */}
         <div className="row">
           <div className="col-md-8">
-            <EarningGraph />
+            <EarningGraph
+              data={this.state.earningGraphDemoData}
+            />
           </div>
           <div className="col-lg-4">
            <Notifications />
