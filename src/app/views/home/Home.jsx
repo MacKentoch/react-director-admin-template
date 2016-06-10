@@ -13,7 +13,6 @@ import {
   TodoList,
   TeamMates
 }                                     from '../../components';
-import { earningGraphMockData }       from '../../models';
 
 
 class Home extends Component {
@@ -25,8 +24,7 @@ class Home extends Component {
   init() {
     this.state = {
       animated: true,
-      viewEnters: false,
-      earningGraphDemoData: earningGraphMockData
+      viewEnters: false
     };
   }
 
@@ -35,7 +33,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.setState = { viewEnters  : true };
+    this.props.actions.fetchEarningGraphDataIfNeeded();
   }
 
   componentWillUnmount() {
@@ -85,7 +83,8 @@ class Home extends Component {
         <div className="row">
           <div className="col-md-8">
             <EarningGraph
-              data={this.state.earningGraphDemoData}
+              labels={this.props.earningGraphLabels}
+              datasets={this.props.earningGraphDatasets}
             />
           </div>
           <div className="col-lg-4">

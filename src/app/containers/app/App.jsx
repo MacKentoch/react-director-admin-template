@@ -44,7 +44,7 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    currentView: state.views.currentView
+    currentView:            state.views.currentView
   };
 };
 

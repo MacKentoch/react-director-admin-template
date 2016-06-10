@@ -19,10 +19,13 @@ class EarningGraph extends Component {
       responsive : true,
       maintainAspectRatio: false
     };
-    
+
     this.chart = new Chart(this.linechart.getContext('2d'), {
       type: 'line',
-      data: this.props.data,
+      data: {
+        labels:   this.props.labels,
+        datasets: this.props.datasets
+      },
       options
     });
   }
@@ -49,10 +52,8 @@ class EarningGraph extends Component {
 }
 
 EarningGraph.propTypes = {
-  data: PropTypes.shape({
-    labels: PropTypes.array,
-    datasets: PropTypes.array
-  })
+  labels: PropTypes.array,
+  datasets: PropTypes.array
 };
 
 EarningGraph.defaultProps = {

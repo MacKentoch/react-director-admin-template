@@ -7,7 +7,11 @@ import { Home }               from '../../views';
 
 const mapStateToProps = (state) => {
   return {
-    currentView:  state.views.currentView
+    currentView:  state.views.currentView,
+
+    earningGraphIsFetching: state.earningGraph.isFetching,
+    earningGraphLabels:     state.earningGraph.labels,
+    earningGraphDatasets:   state.earningGraph.datasets
   };
 };
 
@@ -17,7 +21,8 @@ const mapDispatchToProps = (dispatch) => {
     actions : bindActionCreators(
       {
         enterHome: actions.enterHome,
-        leaveHome: actions.leaveHome
+        leaveHome: actions.leaveHome,
+        fetchEarningGraphDataIfNeeded: actions.fetchEarningGraphDataIfNeeded
       },
       dispatch)
   };
