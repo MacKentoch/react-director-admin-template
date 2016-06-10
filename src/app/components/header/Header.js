@@ -13,13 +13,16 @@ const Header = () => {
       <nav
         className="navbar navbar-static-top"
         role="navigation">
-        <a href="#" className="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+        <a
+          href="#"
+          className="navbar-btn sidebar-toggle"
+          data-toggle="offcanvas"
+          role="button">
           <span className="sr-only">Toggle navigation</span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </a>
-
         <div className="navbar-right">
           <ul className="nav navbar-nav">
             {/*<!-- Messages: style can be found in dropdown.less-->*/}

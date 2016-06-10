@@ -1,10 +1,12 @@
 'use strict';
 
-import React, { PropTypes, Component } from 'react';
+import React, {
+  PropTypes,
+  Component
+}                             from 'react';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as actions           from '../../redux/actions';
-
 import {
   Header,
   AsideLeft,
@@ -12,8 +14,8 @@ import {
 }                             from '../../components';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
   }
 
   render() {
@@ -22,22 +24,21 @@ class App extends Component {
         <Header />
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft />
-          <AsideRight />
-          {/*{this.props.children}*/}
+          <AsideRight>
+            { this.props.children }
+          </AsideRight>
         </div>
       </div>
     );
   }
 }
 
-
-// statics :
 App.propTypes = {
+  dispatch:   PropTypes.func,
   children:   PropTypes.node,
   history:    PropTypes.object,
   location:   PropTypes.object
 };
-
 
 const mapStateToProps = (state) => {
   return {

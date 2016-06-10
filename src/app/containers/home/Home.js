@@ -1,9 +1,9 @@
 'use strict';
 
 import { bindActionCreators } from 'redux';
-import { connect }   from 'react-redux';
-import * as actions  from '../../redux/actions';
-import { Home }      from '../../views';
+import { connect }            from 'react-redux';
+import * as actions           from '../../redux/actions';
+import { Home }               from '../../views';
 
 const mapStateToProps = (state) => {
   return {
