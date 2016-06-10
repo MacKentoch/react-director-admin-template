@@ -61,6 +61,7 @@
     "animate.css": "^3.5.1",
     "babel-polyfill": "^6.7.4",
     "bootstrap": "^3.3.6",
+    "chart.js": "^2.1.4",
     "classnames": "^2.2.3",
     "font-awesome": "^4.5.0",
     "ionicons": "^3.0.0",

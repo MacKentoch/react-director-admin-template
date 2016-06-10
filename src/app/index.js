@@ -22,7 +22,7 @@ import './vendors/css/director-style.css';
 
 import './vendors/js/jquery-ui-1.10.3.min.js';
 // import './vendors/js/plugins/daterangepicker/daterangepicker.js';
-import './vendors/js/plugins/chart.js';
+// import './vendors/js/plugins/chart.js';
 // import './vendors/js/plugins/iCheck/icheck.min.js';clear
 import './vendors/js/plugins/fullcalendar/fullcalendar.js';
 
