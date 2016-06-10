@@ -1,5 +1,5 @@
 'use strict';
-
+/* eslint no-use-before-define:0 */
 import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
 import { persistState }         from 'redux-devtools';
 import { routerReducer }        from 'react-router-redux';
@@ -17,13 +17,16 @@ const loggerMiddleware = createLogger({
 // createStore : enhancer
 const enhancer = compose(
   applyMiddleware(loggerMiddleware, thunkMiddleware),
-  DevTools.instrument(),
-  persistState(
-    window.location.href.match(
-      /[?&]debug_session=([^&#]+\b)/
-    )
-  )
+  persistState(getDebugSessionKey()),
+  DevTools.instrument()
 );
+
+function getDebugSessionKey() {
+  // You can write custom logic here!
+  // By default we try to read the key from ?debug_session=<key> in the address bar
+  const matches = window.location.href.match(/[?&]debug_session=([^&]+)\b/);
+  return (matches && matches.length > 0)? matches[1] : null;
+}
 
 // combine reducers -> createStore reducer
 const reducer = combineReducers({
