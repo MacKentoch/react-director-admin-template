@@ -19,23 +19,23 @@ export const ERROR_EARNING_GRAPH_DATA     = 'ERROR_EARNING_GRAPH_DATA';
 
 const requestEarningGraphData = (time = moment().format()) => {
   return {
-    type: REQUEST_EARNING_GRAPH_DATA,
+    type:       REQUEST_EARNING_GRAPH_DATA,
     isFetching: true,
     time
   };
 };
 const receivedEarningGraphData = (data, time = moment().format()) => {
   return {
-    type: RECEIVED_EARNING_GRAPH_DATA,
+    type:       RECEIVED_EARNING_GRAPH_DATA,
     isFetching: false,
-    labels: [...data.labels],
-    datasets: [...data.datasets],
+    labels:     [...data.labels],
+    datasets:   [...data.datasets],
     time
   };
 };
 const errorEarningGraphData = (time = moment().format()) => {
   return {
-    type: ERROR_EARNING_GRAPH_DATA,
+    type:       ERROR_EARNING_GRAPH_DATA,
     isFetching: false,
     time
   };
@@ -46,7 +46,12 @@ const fetchEarningGraphData = () => dispatch => {
     // DEV ONLY
     fetchMockEarningGraphData()
       .then(
-        json => dispatch(receivedEarningGraphData(json.data))
+        json => {
+          if (appConfig.DEBUG_ENABLED) {
+            console.log('fetchMockEarningGraphData result: ', json.data);
+          }
+          dispatch(receivedEarningGraphData(json.data));
+        }
       );
   } else {
     const url = `${getLocationOrigin()}/${appConfig.earningGraph.data.API}`;
@@ -69,11 +74,16 @@ const fetchEarningGraphData = () => dispatch => {
 };
 
 export const fetchEarningGraphDataIfNeeded = () => (dispatch, getState) => {
+  console.log('fetchEarningGraphDataIfNeeded starts');
   if (shouldFetchEarningData(getState())) {
-    dispatch(fetchEarningGraphData());
+    if (appConfig.DEBUG_ENABLED) {
+      console.log('shouldFetchEarningData is true: ');
+    }
+    return dispatch(fetchEarningGraphData());
   }
 };
 function shouldFetchEarningData(state) {
+  console.log('shouldFetchEarningData');
   const earningGraph = state.earningGraph;
   // just check wether fetching (assuming data could be refreshed and should not persist in store)
   if (earningGraph.isFetching) {

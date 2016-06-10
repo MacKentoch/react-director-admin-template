@@ -124,9 +124,12 @@ class Home extends Component {
 }
 
 Home.propTypes= {
+  earningGraphLabels: PropTypes.array,
+  earningGraphDatasets: PropTypes.array,
   actions: PropTypes.shape({
     enterHome: PropTypes.func,
-    leaveHome: PropTypes.func
+    leaveHome: PropTypes.func,
+    fetchEarningGraphDataIfNeeded: PropTypes.func
   })
 };
 

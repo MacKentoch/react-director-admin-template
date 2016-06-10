@@ -16,8 +16,8 @@ const loggerMiddleware = createLogger({
 
 // createStore : enhancer
 const enhancer = compose(
-  DevTools.instrument(),
   applyMiddleware(loggerMiddleware, thunkMiddleware),
+  DevTools.instrument(),
   persistState(
     window.location.href.match(
       /[?&]debug_session=([^&#]+\b)/
