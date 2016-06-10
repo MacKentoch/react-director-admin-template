@@ -3,7 +3,7 @@
 import React, { PropTypes } from 'react';
 
 const StatsCard = (props) => {
-  const colorClass = `sm-st-icon st-${props.color}`;
+  const colorClass = `sm-st-icon st-${props.backColor}`;
   return (
     <div className="sm-st clearfix">
       <span className={colorClass}>
@@ -13,7 +13,9 @@ const StatsCard = (props) => {
         <span>
           {props.statValue}
         </span>
-        {props.statLabel}
+        <div>
+          { props.statLabel }
+        </div>
       </div>
     </div>
   );
@@ -23,7 +25,7 @@ StatsCard.propTypes = {
   statValue: PropTypes.string,
   statLabel: PropTypes.string,
   icon: PropTypes.node,
-  color: PropTypes.oneOf([
+  backColor: PropTypes.oneOf([
     'red',
     'blue',
     'violet',
@@ -34,8 +36,8 @@ StatsCard.propTypes = {
 StatsCard.defaultProps = {
   statValue: '0',
   statLabel: 'unknown',
-  icon: (<i className="fa fa-check-square-o"></i>)
-  color: 'blue'
+  icon: (<i className="fa fa-check-square-o"></i>),
+  backColor: 'blue'
 };
 
 export default StatsCard;

@@ -3,9 +3,9 @@
 import React from 'react';
 import TodoList from '../../todoList/TodoList';
 import TeamMates from '../../teamMates/TeamMates';
-import TwitterFeed from '../..twitterFeed/TwitterFeed';
+import TwitterFeed from '../../twitterFeed/TwitterFeed';
 import WorkProgress from '../../workProgress/WorkProgress';
-import Notifications from '../../notification/Notification';
+import Notifications from '../../notifications/Notifications';
 import EarningGraph from '../../earningGraph/EarningGraph';
 import Footer from '../../footer/Footer';
 import StatsCard from '../../statsCard/StatsCard';
@@ -24,7 +24,7 @@ const AsideRight = () => {
               statValue={'3200'}
               statLabel={'Total Tasks'}
               icon={<i className="fa fa-check-square-o"></i>}
-              color={'red'}
+              backColor={'red'}
             />
           </div>
           <div className="col-md-3">
@@ -32,7 +32,7 @@ const AsideRight = () => {
               statValue={'2200'}
               statLabel={'Total Messages'}
               icon={<i className="fa fa-envelope-o"></i>}
-              color={'violet'}
+              backColor={'violet'}
             />
           </div>
           <div className="col-md-3">
@@ -40,7 +40,7 @@ const AsideRight = () => {
               statValue={'100,320'}
               statLabel={'Total Profit'}
               icon={<i className="fa fa-dollar"></i>}
-              color={'blue'}
+              backColor={'blue'}
             />
           </div>
           <div className="col-md-3">
@@ -48,7 +48,7 @@ const AsideRight = () => {
               statValue={'4567'}
               statLabel={'Total Documents'}
               icon={<i className="fa fa-paperclip"></i>}
-              color={'green'}
+              backColor={'green'}
             />
           </div>
         </div>

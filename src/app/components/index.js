@@ -9,7 +9,7 @@ import Notifications from './notifications/Notifications';
 import TeamMates from './teamMates/TeamMates';
 import TwitterFeed from './twitterFeed/TwitterFeed';
 import WorkProgress from './workProgress/WorkProgress';
-import StatsCard from '../../statsCard/StatsCard';
+import StatsCard from './statsCard/StatsCard';
 
 export {
   Header,
