@@ -15,8 +15,9 @@ const AsideRight = () => {
       {/* <!-- Main content --> */}
       <section className="content">
 
-        <div className="row" style="margin-bottom:5px;">
+        <div className="row" style={{marginBottom:'5px'}}>
           <div className="col-md-3">
+            
               <div className="sm-st clearfix">
                   <span className="sm-st-icon st-red"><i className="fa fa-check-square-o"></i></span>
                   <div className="sm-st-info">
@@ -24,6 +25,7 @@ const AsideRight = () => {
                       Total Tasks
                   </div>
               </div>
+
           </div>
           <div className="col-md-3">
               <div className="sm-st clearfix">

@@ -18,9 +18,9 @@ const TwitterFeed = () => {
                   Tweet
                 </button>
                 <a className="btn btn-link btn-icon fa fa-location-arrow" data-original-title="Add Location" data-placement="bottom" data-toggle="tooltip" href=
-                "#" style="text-decoration:none;" title=""></a>
+                "#" style={{textDecoration: 'none'}} title=""></a>
                 <a className="btn btn-link btn-icon fa fa-camera" data-original-title="Add Photo" data-placement="bottom" data-toggle="tooltip" href="#"
-                style="text-decoration:none;" title=""></a>
+                style={{textDecoration: 'none'}} title=""></a>
             </div>
           </form>
         </div>
