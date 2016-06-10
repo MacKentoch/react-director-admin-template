@@ -1,6 +1,6 @@
 'use strict';
-/* eslint no-use-before-define:0 */
 /* eslint no-console:0 */
+/* eslint consistent-return:0 */
 import moment         from 'moment';
 import { appConfig }  from '../../config';
 import {
@@ -46,12 +46,7 @@ const fetchEarningGraphData = () => dispatch => {
     // DEV ONLY
     fetchMockEarningGraphData()
       .then(
-        json => {
-          if (appConfig.DEBUG_ENABLED) {
-            console.log('fetchMockEarningGraphData result: ', json.data);
-          }
-          dispatch(receivedEarningGraphData(json.data));
-        }
+        json => dispatch(receivedEarningGraphData(json))
       );
   } else {
     const url = `${getLocationOrigin()}/${appConfig.earningGraph.data.API}`;
@@ -74,16 +69,11 @@ const fetchEarningGraphData = () => dispatch => {
 };
 
 export const fetchEarningGraphDataIfNeeded = () => (dispatch, getState) => {
-  console.log('fetchEarningGraphDataIfNeeded starts');
   if (shouldFetchEarningData(getState())) {
-    if (appConfig.DEBUG_ENABLED) {
-      console.log('shouldFetchEarningData is true: ');
-    }
     return dispatch(fetchEarningGraphData());
   }
 };
 function shouldFetchEarningData(state) {
-  console.log('shouldFetchEarningData');
   const earningGraph = state.earningGraph;
   // just check wether fetching (assuming data could be refreshed and should not persist in store)
   if (earningGraph.isFetching) {
