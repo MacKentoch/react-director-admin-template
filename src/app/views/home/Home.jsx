@@ -28,7 +28,7 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    this.props.enterHome();
+    this.props.actions.enterHome();
 
     this.state = {
       viewEnters  : true
@@ -36,7 +36,7 @@ class Home extends Component {
   }
 
   componentWillUnmount() {
-    this.props.leaveHome();
+    this.props.actions.leaveHome();
   }
 
   render() {
@@ -121,8 +121,10 @@ class Home extends Component {
 }
 
 Home.propTypes= {
-  enterHome: PropTypes.func,
-  leaveHome: PropTypes.func
+  actions: PropTypes.shape({
+    enterHome: PropTypes.func,
+    leaveHome: PropTypes.func
+  })
 };
 
 export default Home;

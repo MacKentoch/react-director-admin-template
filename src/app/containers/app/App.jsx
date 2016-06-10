@@ -25,7 +25,9 @@ class App extends Component {
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft />
           <AsideRight>
-            { this.props.children }
+            <div>
+              { this.props.children }
+            </div>
           </AsideRight>
         </div>
       </div>
@@ -35,7 +37,7 @@ class App extends Component {
 
 App.propTypes = {
   dispatch:   PropTypes.func,
-  children:   PropTypes.node,
+  children:   PropTypes.node.isRequired,
   history:    PropTypes.object,
   location:   PropTypes.object
 };
