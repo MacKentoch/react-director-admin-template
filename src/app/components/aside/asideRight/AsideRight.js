@@ -8,6 +8,7 @@ import WorkProgress from '../../workProgress/WorkProgress';
 import Notifications from '../../notification/Notification';
 import EarningGraph from '../../earningGraph/EarningGraph';
 import Footer from '../../footer/Footer';
+import StatsCard from '../../statsCard/StatsCard';
 
 const AsideRight = () => {
   return (
@@ -15,44 +16,40 @@ const AsideRight = () => {
       {/* <!-- Main content --> */}
       <section className="content">
 
-        <div className="row" style={{marginBottom:'5px'}}>
+        <div
+          className="row"
+          style={{marginBottom: '5px'}}>
           <div className="col-md-3">
-            
-              <div className="sm-st clearfix">
-                  <span className="sm-st-icon st-red"><i className="fa fa-check-square-o"></i></span>
-                  <div className="sm-st-info">
-                      <span>3200</span>
-                      Total Tasks
-                  </div>
-              </div>
-
+            <StatsCard
+              statValue={'3200'}
+              statLabel={'Total Tasks'}
+              icon={<i className="fa fa-check-square-o"></i>}
+              color={'red'}
+            />
           </div>
           <div className="col-md-3">
-              <div className="sm-st clearfix">
-                  <span className="sm-st-icon st-violet"><i className="fa fa-envelope-o"></i></span>
-                  <div className="sm-st-info">
-                      <span>2200</span>
-                      Total Messages
-                  </div>
-              </div>
+            <StatsCard
+              statValue={'2200'}
+              statLabel={'Total Messages'}
+              icon={<i className="fa fa-envelope-o"></i>}
+              color={'violet'}
+            />
           </div>
           <div className="col-md-3">
-              <div className="sm-st clearfix">
-                  <span className="sm-st-icon st-blue"><i className="fa fa-dollar"></i></span>
-                  <div className="sm-st-info">
-                      <span>100,320</span>
-                      Total Profit
-                  </div>
-              </div>
+            <StatsCard
+              statValue={'100,320'}
+              statLabel={'Total Profit'}
+              icon={<i className="fa fa-dollar"></i>}
+              color={'blue'}
+            />
           </div>
           <div className="col-md-3">
-              <div className="sm-st clearfix">
-                  <span className="sm-st-icon st-green"><i className="fa fa-paperclip"></i></span>
-                  <div className="sm-st-info">
-                      <span>4567</span>
-                      Total Documents
-                  </div>
-              </div>
+            <StatsCard
+              statValue={'4567'}
+              statLabel={'Total Documents'}
+              icon={<i className="fa fa-paperclip"></i>}
+              color={'green'}
+            />
           </div>
         </div>
 

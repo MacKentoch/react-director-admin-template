@@ -9,6 +9,7 @@ import Notifications from './notifications/Notifications';
 import TeamMates from './teamMates/TeamMates';
 import TwitterFeed from './twitterFeed/TwitterFeed';
 import WorkProgress from './workProgress/WorkProgress';
+import StatsCard from '../../statsCard/StatsCard';
 
 export {
   Header,
@@ -20,5 +21,6 @@ export {
   Notifications,
   TeamMates,
   TwitterFeed,
-  WorkProgress
+  WorkProgress,
+  StatsCard
 };

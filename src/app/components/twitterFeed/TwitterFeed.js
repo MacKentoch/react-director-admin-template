@@ -10,24 +10,53 @@ const TwitterFeed = () => {
       </header>
       <div className="panel-body">
         <div className="twt-area">
-          <form action="#" method="post">
-            <textarea className="form-control" name="profile-tweet" placeholder="Share something on Twitter.." rows="3"></textarea>
-              <div className="clearfix">
-                <button className="btn btn-sm btn-primary pull-right" type="submit">
-                  <i className="fa fa-twitter"></i>
-                  Tweet
-                </button>
-                <a className="btn btn-link btn-icon fa fa-location-arrow" data-original-title="Add Location" data-placement="bottom" data-toggle="tooltip" href=
-                "#" style={{textDecoration: 'none'}} title=""></a>
-                <a className="btn btn-link btn-icon fa fa-camera" data-original-title="Add Photo" data-placement="bottom" data-toggle="tooltip" href="#"
-                style={{textDecoration: 'none'}} title=""></a>
+          <form
+            action="#"
+            method="post">
+            <textarea
+              className="form-control"
+              name="profile-tweet"
+              placeholder="Share something on Twitter.."
+              rows="3">
+            </textarea>
+            <div className="clearfix">
+              <button
+                className="btn btn-sm btn-primary pull-right"
+                type="submit">
+                <i className="fa fa-twitter"></i>
+                Tweet
+              </button>
+              <a
+                className="btn btn-link btn-icon fa fa-location-arrow"
+                data-original-title="Add Location"
+                data-placement="bottom"
+                data-toggle="tooltip"
+                href="#"
+                style={{textDecoration: 'none'}}
+                title="">
+              </a>
+              <a
+                className="btn btn-link btn-icon fa fa-camera"
+                data-original-title="Add Photo"
+                data-placement="bottom"
+                data-toggle="tooltip"
+                href="#"
+                style={{textDecoration: 'none'}}
+                title="">
+              </a>
             </div>
           </form>
         </div>
         <ul className="media-list">
           <li className="media">
             <a href="#" className="pull-left">
-              <img src="img/26115.jpg" alt="Avatar" className="img-circle" width="64" height="64" />
+              <img
+                src="vendors/img/26115.jpg"
+                alt="Avatar"
+                className="img-circle"
+                width="64"
+                height="64"
+              />
             </a>
             <div className="media-body">
               <span className="text-muted pull-right">
