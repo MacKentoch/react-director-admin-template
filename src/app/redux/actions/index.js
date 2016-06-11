@@ -9,12 +9,19 @@ import {
 import {
   fetchEarningGraphDataIfNeeded
 }                                 from './earningGraph';
-
+import {
+  openSideMenu,
+  closeSideMenu,
+  toggleSideMenu
+}                                 from './sideMenu';
 
 export {
   enterHome,
   leaveHome,
   enterAbout,
   leaveAbout,
-  fetchEarningGraphDataIfNeeded
+  fetchEarningGraphDataIfNeeded,
+  openSideMenu,
+  closeSideMenu,
+  toggleSideMenu
 };
