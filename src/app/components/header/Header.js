@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Header = () => {
   return (
@@ -225,6 +225,10 @@ const Header = () => {
       </nav>
     </header>
   );
+};
+
+Header.propTypes = {
+  toggleSideMenu: PropTypes.func
 };
 
 export default Header;
