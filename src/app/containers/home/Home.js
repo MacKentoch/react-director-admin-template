@@ -22,6 +22,7 @@ const mapDispatchToProps = (dispatch) => {
       {
         enterHome: actions.enterHome,
         leaveHome: actions.leaveHome,
+
         fetchEarningGraphDataIfNeeded: actions.fetchEarningGraphDataIfNeeded
       },
       dispatch)

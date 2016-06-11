@@ -1,12 +1,19 @@
 'use strict';
 /* eslint no-console: 0 */
-import React      from 'react';
+import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 
-const AsideLeft = () => {
+const AsideLeft = (props) => {
+  const sideMenuClasses = classNames({
+    'left-side': true,
+    'sidebar-offcanvas': true,
+    'sidebar-animated': props.isAnimated,
+    'collapse-left':    props.isCollapsed
+  });
   return (
-    <aside className="left-side sidebar-offcanvas">
+    <aside className={sideMenuClasses}>
         <section className="sidebar">
           <UserPanel />
 
@@ -45,6 +52,16 @@ const AsideLeft = () => {
     </aside>
 
   );
+};
+
+AsideLeft.propTypes = {
+  isAnimated: PropTypes.bool,
+  isCollapsed: PropTypes.bool
+};
+
+AsideLeft.propTypes = {
+  isAnimated: false,
+  isCollapsed: false
 };
 
 export default AsideLeft;

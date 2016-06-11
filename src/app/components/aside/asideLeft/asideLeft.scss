@@ -1,0 +1,10 @@
+.sidebar-animated {
+  transition: all 0.2s ease-out;
+}
+
+.left-side {
+  transform: translateX(0) !important; // translate to MINUS sideMenu width
+}
+.left-side.collapse-left {
+    transform: translateX(-220px) !important; // translate to MINUS sideMenu width
+}

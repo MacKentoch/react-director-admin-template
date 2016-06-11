@@ -2,7 +2,7 @@
 
 import React, { PropTypes } from 'react';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header
       className="header">
@@ -15,6 +15,7 @@ const Header = () => {
         role="navigation">
         <a
           href="#"
+          onClick={(e)=>props.toggleSideMenu(e)}
           className="navbar-btn sidebar-toggle"
           data-toggle="offcanvas"
           role="button">

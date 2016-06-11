@@ -1,8 +1,8 @@
 'use strict';
 
 const initialState = {
-  isOpened:   false,
-  time:       null
+  isCollapsed: false,
+  time: null
 };
 
 const sideMenu = (state = initialState, action) => {
@@ -11,15 +11,15 @@ const sideMenu = (state = initialState, action) => {
   case 'OPEN_SIDE_MENU':
     return {
       ...state,
-      isOpened: action.isOpened,
-      time:     action.time
+      isCollapsed:  action.isCollapsed,
+      time:         action.time
     };
 
   case 'CLOSE_SIDE_MENU':
     return {
       ...state,
-      isOpened: action.isOpened,
-      time:     action.time
+      isCollapsed:  action.isCollapsed,
+      time:         action.time
     };
 
   default:
