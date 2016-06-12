@@ -59,7 +59,7 @@ AsideLeft.propTypes = {
   isCollapsed: PropTypes.bool
 };
 
-AsideLeft.propTypes = {
+AsideLeft.defaultProps = {
   isAnimated: false,
   isCollapsed: false
 };

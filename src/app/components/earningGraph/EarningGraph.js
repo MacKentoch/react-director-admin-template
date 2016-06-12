@@ -14,20 +14,17 @@ class EarningGraph extends Component {
   }
 
   componentDidMount() {
-    // BAR CHART
-    const options = {
-      responsive : true,
-      maintainAspectRatio: false
-    };
+    const { labels, datasets } = this.props;
+    this.drawChart({labels, datasets});
+  }
 
-    this.chart = new Chart(this.linechart.getContext('2d'), {
-      type: 'line',
-      data: {
-        labels:   this.props.labels,
-        datasets: this.props.datasets
-      },
-      options
-    });
+  componentWillReceiveProps(newProps) {
+    if (newProps.labels.length > 0 && newProps.datasets.length > 0) {
+      this.drawChart({
+        labels: newProps.labels,
+        datasets: newProps.datasets
+      });
+    }
   }
 
   render() {
@@ -48,6 +45,20 @@ class EarningGraph extends Component {
         </div>
       </section>
     );
+  }
+
+  drawChart(data) {
+    // BAR CHART
+    const options = {
+      responsive : true,
+      maintainAspectRatio: true
+    };
+
+    this.chart = new Chart(this.linechart.getContext('2d'), {
+      type: 'line',
+      data,
+      options
+    });
   }
 }
 
