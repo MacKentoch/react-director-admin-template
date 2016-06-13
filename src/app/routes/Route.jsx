@@ -14,7 +14,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import {
   App,
   HomeConnected,
-  SimpleTablesConnected
+  SimpleTablesConnected,
+  BasicElementsConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -30,6 +31,7 @@ export const Routes = () => {
           <Route path="/" component={App} >
             <IndexRoute component={HomeConnected} />
             <Route path="/simpleTables" component={SimpleTablesConnected} />
+            <Route path="/basicElements" component={BasicElementsConnected} />
           </Route>
         </Router>
         { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
