@@ -4,15 +4,15 @@
   opacity: 0;
 }
 
-.view-enter {
-   animation: smoothFadeInUp 0.3s both ease-in;
-   z-index: 9999;
- }
-
 .animatedViews {
   animation-duration: 0.3s;
   animation-fill-mode: both;
 }
+
+.view-enter {
+   animation: smoothFadeInUp 0.3s both ease-in;
+   z-index: 9999;
+ }
 
 @keyframes smoothFadeInUp {
   0% {
@@ -21,6 +21,11 @@
   }
 
   90% {
+    opacity: 0.4;
+    transform: none;
+  }
+  
+  95% {
     opacity: 0.6;
     transform: none;
   }
