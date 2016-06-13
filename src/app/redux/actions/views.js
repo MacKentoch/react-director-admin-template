@@ -12,7 +12,7 @@ export const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
 export const enterHome = (time = moment().format()) => {
   return {
     type:         ENTER_HOME_VIEW,
-    currentView:  'home',
+    currentView:  'Home',
     enterTime:    time,
     leaveTime:    null
   };
@@ -21,7 +21,7 @@ export const enterHome = (time = moment().format()) => {
 export const leaveHome = (time = moment().format()) => {
   return {
     type:         LEAVE_HOME_VIEW,
-    currentView:  'home',
+    currentView:  'Home',
     enterTime:    null,
     leaveTime:    time
   };

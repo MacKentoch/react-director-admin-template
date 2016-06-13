@@ -24,25 +24,25 @@ const AsideLeft = (props) => {
           />
 
           <ul className="sidebar-menu">
-            <li className="active">
+            <li className={props.currentView === 'Home' ? 'active' : '' }>
               <Link to="/">
                 <i className="fa fa-dashboard"></i>
                 <span>Dashboard</span>
               </Link>
             </li>
-            <li>
+            <li className={props.currentView === 'General' ? 'active' : '' }>
               <a href="general.html">
                 <i className="fa fa-gavel"></i>
                 <span>General</span>
               </a>
             </li>
-            <li>
+            <li className={props.currentView === 'BasicElements' ? 'active' : '' }>
               <a href="basic_form.html">
                 <i className="fa fa-globe"></i>
                 <span>Basic Elements</span>
               </a>
             </li>
-            <li>
+            <li className={props.currentView === 'SimpleTables' ? 'active' : '' }>
               <Link
                 to="/simpleTables">
                 <i className="fa fa-glass"></i>
@@ -59,7 +59,8 @@ const AsideLeft = (props) => {
 
 AsideLeft.propTypes = {
   isAnimated: PropTypes.bool,
-  isCollapsed: PropTypes.bool
+  isCollapsed: PropTypes.bool,
+  currentView: PropTypes.string
 };
 
 AsideLeft.defaultProps = {

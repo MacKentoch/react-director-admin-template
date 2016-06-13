@@ -22,11 +22,13 @@ class App extends Component {
     return (
       <div>
         <Header
+          currentView={this.props.currentView}
           toggleSideMenu={(e)=>this.handlesMenuButtonClick(e)}
         />
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft
             isAnimated={true}
+            currentView={this.props.currentView}
             isCollapsed={this.props.sideMenuIsCollapsed}
           />
           <AsideRight
@@ -54,6 +56,7 @@ App.propTypes = {
   location:   PropTypes.object,
 
   sideMenuIsCollapsed: PropTypes.bool,
+  currentView: PropTypes.string,
 
   actions: PropTypes.shape({
     enterHome: PropTypes.func,
