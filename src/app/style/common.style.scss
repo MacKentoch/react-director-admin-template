@@ -1,5 +1,19 @@
 @import "./app.var.style";
 
+.invisible {
+  opacity: 0;
+}
+
+.view-enter {
+   animation: fadeIn 0.5s both ease-in;
+   z-index: 9999;
+ }
+
+.animatedViews {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
 .panel-heading {
   z-index: 1 !important;
 }

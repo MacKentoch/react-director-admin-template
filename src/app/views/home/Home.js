@@ -44,6 +44,7 @@ class Home extends Component {
     const homeViewClasses = classNames({
       'content':        true,
       'animatedViews':  this.state.animated,
+      'invisible':      !this.state.viewEnters,
       'view-enter':     this.state.viewEnters
     });
 

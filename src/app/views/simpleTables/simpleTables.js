@@ -36,6 +36,7 @@ class SimpleTables extends Component {
     const simpleTablesViewClasses = classNames({
       'content':        true,
       'animatedViews':  this.state.animated,
+      'invisible':      !this.state.viewEnters,
       'view-enter':     this.state.viewEnters
     });
 
@@ -86,7 +87,7 @@ class SimpleTables extends Component {
                           <div className="progress xs">
                             <div
                               className="progress-bar progress-bar-yellow"
-                              style="width: 70%">
+                              style={{width: '70%'}}>
                             </div>
                           </div>
                         </td>
@@ -99,7 +100,7 @@ class SimpleTables extends Component {
                           <div className="progress xs progress-striped active">
                             <div
                               className="progress-bar progress-bar-primary"
-                              style="width: 30%">
+                              style={{width: '30%'}}>
                             </div>
                           </div>
                         </td>
@@ -112,7 +113,7 @@ class SimpleTables extends Component {
                           <div className="progress xs progress-striped active">
                             <div
                               className="progress-bar progress-bar-success"
-                              style="width: 90%">
+                              style={{width: '90%'}}>
                             </div>
                           </div>
                         </td>
@@ -136,57 +137,62 @@ class SimpleTables extends Component {
                   Condensed Full Width Table
                 </header>
                 <div className="panel-body no-padding">
-                            <table className="table table-condensed">
-                                <tr>
-                                    <th style="width: 10px">#</th>
-                                    <th>Task</th>
-                                    <th>Progress</th>
-                                    <th style="width: 40px">Label</th>
-                                </tr>
-                                <tr>
-                                    <td>1.</td>
-                                    <td>Update software</td>
-                                    <td>
-                                        <div className="progress xs">
-                                            <div className="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span className="badge bg-red">55%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>2.</td>
-                                    <td>Clean database</td>
-                                    <td>
-                                        <div className="progress xs">
-                                            <div className="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span className="badge bg-yellow">70%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3.</td>
-                                    <td>Cron job running</td>
-                                    <td>
-                                        <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-primary" style="width: 30%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span className="badge bg-light-blue">30%</span></td>
-                                </tr>
-                                <tr>
-                                    <td>4.</td>
-                                    <td>Fix and squish bugs</td>
-                                    <td>
-                                        <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-success" style="width: 90%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span className="badge bg-green">90%</span></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                  <table className="table table-condensed">
+                      <tr>
+                        <th style={{width: '10px'}}>#</th>
+                        <th>Task</th>
+                        <th>Progress</th>
+                        <th style={{width: '40px'}}>Label</th>
+                      </tr>
+                      <tr>
+                        <td>1.</td>
+                        <td>Update software</td>
+                        <td>
+                          <div className="progress xs">
+                            <div
+                              className="progress-bar progress-bar-danger"
+                              style={{width: '55%'}}>
+                            </div>
+                          </div>
+                        </td>
+                        <td><span className="badge bg-red">55%</span></td>
+                      </tr>
+                      <tr>
+                        <td>2.</td>
+                        <td>Clean database</td>
+                        <td>
+                          <div className="progress xs">
+                            <div className="progress-bar progress-bar-yellow" style={{width: '70%'}}></div>
+                          </div>
+                        </td>
+                        <td><span className="badge bg-yellow">70%</span></td>
+                      </tr>
+                      <tr>
+                        <td>3.</td>
+                        <td>Cron job running</td>
+                        <td>
+                          <div className="progress xs progress-striped active">
+                            <div className="progress-bar progress-bar-primary" style={{width: '30%'}}></div>
+                          </div>
+                        </td>
+                        <td><span className="badge bg-light-blue">30%</span></td>
+                      </tr>
+                      <tr>
+                        <td>4.</td>
+                        <td>Fix and squish bugs</td>
+                        <td>
+                          <div className="progress xs progress-striped active">
+                            <div className="progress-bar progress-bar-success" style={{width: '90%'}}></div>
+                          </div>
+                        </td>
+                        <td><span className="badge bg-green">90%</span></td>
+                      </tr>
+                  </table>
+
                 </div>
+              </div>
+            </div>
+
                 <div className="col-md-6">
                     <div className="panel">
                         <header className="panel-heading">
@@ -194,37 +200,43 @@ class SimpleTables extends Component {
                         </header>
                         <div className="panel-body">
                             <div className="box-tools">
-                                <ul className="pagination pagination-sm m-b-10 m-t-10 pull-right">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
+                              <ul className="pagination pagination-sm m-b-10 m-t-10 pull-right">
+                                <li><a href="#">&laquo;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                              </ul>
                             </div>
                             <table className="table">
+                              <thead>
                                 <tr>
-                                    <th style="width: 10px">#</th>
-                                    <th>Task</th>
-                                    <th>Progress</th>
-                                    <th style="width: 40px">Label</th>
+                                  <th style={{width: '10px'}}>#</th>
+                                  <th>Task</th>
+                                  <th>Progress</th>
+                                  <th style={{width: '40px'}}>Label</th>
                                 </tr>
+                              </thead>
+                              <tbody>
                                 <tr>
-                                    <td>1.</td>
-                                    <td>Update software</td>
-                                    <td>
-                                        <div className="progress xs">
-                                            <div className="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span className="badge bg-red">55%</span></td>
+                                  <td>1.</td>
+                                  <td>Update software</td>
+                                  <td>
+                                    <div className="progress xs">
+                                      <div
+                                        className="progress-bar progress-bar-danger"
+                                        style={{width: '55%'}}>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span className="badge bg-red">55%</span></td>
                                 </tr>
                                 <tr>
                                     <td>2.</td>
                                     <td>Clean database</td>
                                     <td>
                                         <div className="progress xs">
-                                            <div className="progress-bar progress-bar-yellow" style="width: 70%"></div>
+                                            <div className="progress-bar progress-bar-yellow" style={{width: '70%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-yellow">70%</span></td>
@@ -234,7 +246,7 @@ class SimpleTables extends Component {
                                     <td>Cron job running</td>
                                     <td>
                                         <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-primary" style="width: 30%"></div>
+                                            <div className="progress-bar progress-bar-primary" style={{width: '30%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-light-blue">30%</span></td>
@@ -244,11 +256,12 @@ class SimpleTables extends Component {
                                     <td>Fix and squish bugs</td>
                                     <td>
                                         <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-success" style="width: 90%"></div>
+                                            <div className="progress-bar progress-bar-success" style={{width: '90%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-green">90%</span></td>
                                 </tr>
+                              </tbody>
                             </table>
                         </div>
                     </div>
@@ -260,17 +273,17 @@ class SimpleTables extends Component {
                         <div className="panel-body">
                             <table className="table table-striped">
                                 <tr>
-                                    <th style="width: 10px">#</th>
+                                    <th style={{width: '10px'}}>#</th>
                                     <th>Task</th>
                                     <th>Progress</th>
-                                    <th style="width: 40px">Label</th>
+                                    <th style={{width: '40px'}}>Label</th>
                                 </tr>
                                 <tr>
                                     <td>1.</td>
                                     <td>Update software</td>
                                     <td>
                                         <div className="progress xs">
-                                            <div className="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                            <div className="progress-bar progress-bar-danger" style={{width: '55%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-red">55%</span></td>
@@ -280,7 +293,7 @@ class SimpleTables extends Component {
                                     <td>Clean database</td>
                                     <td>
                                         <div className="progress xs">
-                                            <div className="progress-bar progress-bar-yellow" style="width: 70%"></div>
+                                            <div className="progress-bar progress-bar-yellow" style={{width: '70%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-yellow">70%</span></td>
@@ -290,7 +303,7 @@ class SimpleTables extends Component {
                                     <td>Cron job running</td>
                                     <td>
                                         <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-primary" style="width: 30%"></div>
+                                            <div className="progress-bar progress-bar-primary" style={{width: '30%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-light-blue">30%</span></td>
@@ -300,7 +313,7 @@ class SimpleTables extends Component {
                                     <td>Fix and squish bugs</td>
                                     <td>
                                         <div className="progress xs progress-striped active">
-                                            <div className="progress-bar progress-bar-success" style="width: 90%"></div>
+                                            <div className="progress-bar progress-bar-success" style={{width: '90%'}}></div>
                                         </div>
                                     </td>
                                     <td><span className="badge bg-green">90%</span></td>
@@ -319,7 +332,7 @@ class SimpleTables extends Component {
                         <div className="panel-body table-responsive">
                             <div className="box-tools m-b-15">
                                 <div className="input-group">
-                                    <input type="text" name="table_search" className="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
+                                    <input type="text" name="table_search" className="form-control input-sm pull-right" style={{width: '150px'}} placeholder="Search"/>
                                     <div className="input-group-btn">
                                         <button className="btn btn-sm btn-default"><i className="fa fa-search"></i></button>
                                     </div>
