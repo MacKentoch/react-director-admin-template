@@ -6,7 +6,9 @@ import {
   enterSimpleTables,
   leaveSimpleTables,
   enterBasicElements,
-  leaveBasicElements
+  leaveBasicElements,
+  enterGeneral,
+  leaveGeneral
 }                                 from './views';
 import {
   fetchEarningGraphDataIfNeeded
@@ -27,5 +29,7 @@ export {
   fetchEarningGraphDataIfNeeded,
   openSideMenu,
   closeSideMenu,
-  toggleSideMenu
+  toggleSideMenu,
+  enterGeneral,
+  leaveGeneral
 };

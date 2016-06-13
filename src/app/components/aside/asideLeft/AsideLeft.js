@@ -31,10 +31,11 @@ const AsideLeft = (props) => {
               </Link>
             </li>
             <li className={props.currentView === 'General' ? 'active' : '' }>
-              <a href="general.html">
+              <Link
+                to="/general">
                 <i className="fa fa-gavel"></i>
                 <span>General</span>
-              </a>
+              </Link>
             </li>
             <li className={props.currentView === 'BasicElements' ? 'active' : '' }>
               <Link

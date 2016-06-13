@@ -15,7 +15,8 @@ import {
   App,
   HomeConnected,
   SimpleTablesConnected,
-  BasicElementsConnected
+  BasicElementsConnected,
+  GeneralConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -32,6 +33,7 @@ export const Routes = () => {
             <IndexRoute component={HomeConnected} />
             <Route path="/simpleTables" component={SimpleTablesConnected} />
             <Route path="/basicElements" component={BasicElementsConnected} />
+            <Route path="/general" component={GeneralConnected} />
           </Route>
         </Router>
         { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
