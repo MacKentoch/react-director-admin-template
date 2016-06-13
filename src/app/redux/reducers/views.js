@@ -58,6 +58,29 @@ const views = (state = initialState, action) => {
     }
     return state;
 
+  case 'ENTER_BASIC_ELEMENTS_VIEW':
+    // can't enter if you are already inside
+    if (state.currentView !== action.currentView) {
+      return {
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+    return state;
+
+  case 'LEAVE_BASIC_ELEMENTS_VIEW':
+    // can't leave if you aren't already inside
+    if (state.currentView === action.currentView) {
+      return {
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+    return state;
 
   default:
     return state;

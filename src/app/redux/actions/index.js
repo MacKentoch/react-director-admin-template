@@ -4,7 +4,9 @@ import {
   enterHome,
   leaveHome,
   enterSimpleTables,
-  leaveSimpleTables
+  leaveSimpleTables,
+  enterBasicElements,
+  leaveBasicElements
 }                                 from './views';
 import {
   fetchEarningGraphDataIfNeeded
@@ -20,6 +22,8 @@ export {
   leaveHome,
   enterSimpleTables,
   leaveSimpleTables,
+  enterBasicElements,
+  leaveBasicElements,
   fetchEarningGraphDataIfNeeded,
   openSideMenu,
   closeSideMenu,
