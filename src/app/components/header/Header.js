@@ -30,7 +30,7 @@ const Header = (props) => {
             <li className="dropdown messages-menu">
               <a
                 href="#"
-                className="dropdown-toggle" 
+                className="dropdown-toggle"
                 data-toggle="dropdown">
                 <i className="fa fa-envelope"></i>
                 <span className="label label-success">
@@ -351,6 +351,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
+  currentView: PropTypes.string,
   toggleSideMenu: PropTypes.func
 };
 
