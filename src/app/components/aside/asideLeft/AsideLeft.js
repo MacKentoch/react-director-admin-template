@@ -2,12 +2,14 @@
 /* eslint no-console: 0 */
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import { Link }   from 'react-router';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 
 const AsideLeft = (props) => {
   const sideMenuClasses = classNames({
     'left-side': true,
+    'aside-left--fixed': true,
     'sidebar-offcanvas': true,
     'sidebar-animated': props.isAnimated,
     'collapse-left':    props.isCollapsed
@@ -23,10 +25,10 @@ const AsideLeft = (props) => {
 
           <ul className="sidebar-menu">
             <li className="active">
-              <a href="index.html">
+              <Link to="/">
                 <i className="fa fa-dashboard"></i>
                 <span>Dashboard</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="general.html">
@@ -41,10 +43,11 @@ const AsideLeft = (props) => {
               </a>
             </li>
             <li>
-              <a href="simple.html">
+              <Link
+                to="/simpleTables">
                 <i className="fa fa-glass"></i>
                 <span>Simple tables</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </section>

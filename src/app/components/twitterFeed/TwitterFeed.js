@@ -51,7 +51,7 @@ const TwitterFeed = () => {
           <li className="media">
             <a href="#" className="pull-left">
               <img
-                src="vendors/img/26115.jpg"
+                src={require('../../vendors/img/26115.jpg')}
                 alt="Avatar"
                 className="img-circle"
                 width="64"
@@ -60,34 +60,67 @@ const TwitterFeed = () => {
             </a>
             <div className="media-body">
               <span className="text-muted pull-right">
-                <small><em>30 min ago</em></small>
+                <small>
+                  <em>
+                    30 min ago
+                  </em>
+                </small>
               </span>
               <a href="page_ready_user_profile.php">
-                <strong>John Doe</strong>
+                <strong>
+                  John Doe
+                </strong>
               </a>
               <p>
-                In hac <a href="#">habitasse</a> platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-                <a href="#" className="text-danger">
-                    <strong>#dev</strong>
+                In hac
+                <a href="#">
+                  habitasse
+                </a>
+                 platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+                <a
+                  href="#"
+                  className="text-danger">
+                  <strong>
+                    #dev
+                  </strong>
                 </a>
               </p>
             </div>
           </li>
           <li className="media">
             <a href="#" className="pull-left">
-              <img src="img/26115.jpg" alt="Avatar" className="img-circle" width="64" height="64"/>
+              <img
+                src={require('../../vendors/img/26115.jpg')}
+                alt="Avatar"
+                className="img-circle"
+                width="64"
+                height="64"
+              />
             </a>
             <div className="media-body">
               <span className="text-muted pull-right">
-                  <small><em>30 min ago</em></small>
+                <small>
+                  <em>
+                    30 min ago
+                  </em>
+                </small>
               </span>
               <a href="page_ready_user_profile.php">
-                <strong>John Doe</strong>
+                <strong>
+                  John Doe
+                </strong>
               </a>
               <p>
-                In hac <a href="#">habitasse</a> platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-                <a href="#" className="text-danger">
-                  <strong>#design</strong>
+                In hac
+                <a href="#">
+                  habitasse</a>
+                 platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+                <a
+                  href="#"
+                  className="text-danger">
+                  <strong>
+                    #design
+                  </strong>
                 </a>
               </p>
             </div>

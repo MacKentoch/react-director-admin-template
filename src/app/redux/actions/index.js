@@ -3,8 +3,8 @@
 import {
   enterHome,
   leaveHome,
-  enterAbout,
-  leaveAbout
+  enterSimpleTables,
+  leaveSimpleTables
 }                                 from './views';
 import {
   fetchEarningGraphDataIfNeeded
@@ -18,8 +18,8 @@ import {
 export {
   enterHome,
   leaveHome,
-  enterAbout,
-  leaveAbout,
+  enterSimpleTables,
+  leaveSimpleTables,
   fetchEarningGraphDataIfNeeded,
   openSideMenu,
   closeSideMenu,

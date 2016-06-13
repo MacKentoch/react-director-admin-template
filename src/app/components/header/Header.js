@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 const Header = (props) => {
   return (
     <header
-      className="header">
+      className="header fixed--header">
       <a href="#"
         className="logo">
         Director
@@ -28,12 +28,19 @@ const Header = (props) => {
           <ul className="nav navbar-nav">
             {/* <!-- Messages: style can be found in dropdown.less--> */}
             <li className="dropdown messages-menu">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+              <a
+                href="#"
+                className="dropdown-toggle" 
+                data-toggle="dropdown">
                 <i className="fa fa-envelope"></i>
-                <span className="label label-success">4</span>
+                <span className="label label-success">
+                  4
+                </span>
               </a>
               <ul className="dropdown-menu">
-                <li className="header">You have 4 messages</li>
+                <li className="header">
+                  You have 4 messages
+                </li>
                 <li>
                   {/* <!-- inner menu: contains the actual data --> */}
                   <ul className="menu">
@@ -49,7 +56,9 @@ const Header = (props) => {
                         <h4>
                             Support Team
                         </h4>
-                        <p>Why not buy a new awesome theme?</p>
+                        <p>
+                          Why not buy a new awesome theme?
+                        </p>
                         <small className="pull-right">
                           <i className="fa fa-clock-o"></i>
                             5 mins

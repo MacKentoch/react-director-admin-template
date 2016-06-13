@@ -2,7 +2,6 @@
 
 import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
-// import { Link }   from 'react-router';
 import {
   StatsCard,
   Footer,
@@ -18,10 +17,6 @@ import {
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.init();
-  }
-
-  init() {
     this.state = {
       animated: true,
       viewEnters: false
@@ -33,16 +28,27 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    this.enterAnimationTimer = setTimeout(
+      ()=>this.setState({viewEnters: true}),
+      500
+    );
     this.props.actions.fetchEarningGraphDataIfNeeded();
   }
 
   componentWillUnmount() {
     this.props.actions.leaveHome();
+    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
+    const homeViewClasses = classNames({
+      'content':        true,
+      'animatedViews':  this.state.animated,
+      'view-enter':     this.state.viewEnters
+    });
+
     return(
-      <section className="content">
+      <section className={homeViewClasses}>
         <div
           className="row"
           style={{marginBottom: '5px'}}>
@@ -112,14 +118,6 @@ class Home extends Component {
         <Footer />
       </section>
     );
-  }
-
-  processViewAnimationClasses() {
-    const homeViewClasses = classNames({
-      'animatedViews'    : this.state.animated,
-      'view-enter'       : this.state.viewEnters
-    });
-    return homeViewClasses;
   }
 }
 

@@ -1,13 +1,15 @@
 'use strict';
 
+import moment from 'moment';
+
 export const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
 export const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
 
-export const ENTER_ABOUT_VIEW = 'ENTER_ABOUT_VIEW';
-export const LEAVE_ABOUT_VIEW = 'LEAVE_ABOUT_VIEW';
+export const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
+export const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
 
 
-export const enterHome = (time = new Date()) => {
+export const enterHome = (time = moment().format()) => {
   return {
     type:         ENTER_HOME_VIEW,
     currentView:  'home',
@@ -16,7 +18,7 @@ export const enterHome = (time = new Date()) => {
   };
 };
 
-export const leaveHome = (time = new Date()) => {
+export const leaveHome = (time = moment().format()) => {
   return {
     type:         LEAVE_HOME_VIEW,
     currentView:  'home',
@@ -26,19 +28,19 @@ export const leaveHome = (time = new Date()) => {
 };
 
 
-export const enterAbout = (time = new Date()) => {
+export const enterSimpleTables = (time = moment().format()) => {
   return {
-    type:         ENTER_ABOUT_VIEW,
-    currentView:  'about',
+    type:         ENTER_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
     enterTime:    time,
     leaveTime:    null
   };
 };
 
-export const leaveAbout = (time = new Date()) => {
+export const leaveSimpleTables = (time = moment().format()) => {
   return {
-    type:         LEAVE_ABOUT_VIEW,
-    currentView:  'about',
+    type:         LEAVE_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
     enterTime:    null,
     leaveTime:    time
   };

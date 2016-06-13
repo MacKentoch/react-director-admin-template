@@ -6,6 +6,7 @@ import classNames from 'classnames';
 const AsideRight = (props) => {
   const asideRightClasses = classNames({
     'right-side': true,
+    'right-side--top-margin': true,
     'strech': props.isExpanded
   });
   return (

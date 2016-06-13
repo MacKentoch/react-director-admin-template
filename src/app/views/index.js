@@ -1,7 +1,9 @@
 'use strict';
 
-import Home   from './home/Home.jsx';
+import Home         from './home/Home';
+import SimpleTables from './simpleTables/SimpleTables';
 
 export {
-  Home
+  Home,
+  SimpleTables
 };
