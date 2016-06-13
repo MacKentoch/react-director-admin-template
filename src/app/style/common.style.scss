@@ -17,16 +17,16 @@
 @keyframes smoothFadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 3%, 0);
   }
 
   90% {
-    opacity: 0.4;
+    opacity: 0.3;
     transform: none;
   }
-  
+
   95% {
-    opacity: 0.6;
+    opacity: 0.5;
     transform: none;
   }
 
