@@ -19,7 +19,9 @@ class EarningGraph extends Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.labels.length > 0 && newProps.datasets.length > 0) {
+    const { labels, datasets } = this.props;
+    if ((newProps.labels.length > 0 && newProps.datasets.length > 0) &&
+        (labels.length === 0 && datasets.length === 0)) {
       this.drawChart({
         labels: newProps.labels,
         datasets: newProps.datasets
