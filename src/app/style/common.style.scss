@@ -1,0 +1,69 @@
+@import "./app.var.style";
+
+.invisible {
+  opacity: 0;
+}
+
+.animatedViews {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.view-enter {
+   animation: smoothFadeInUp 0.3s both ease-in;
+   z-index: 1;
+ }
+
+@keyframes smoothFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3%, 0);
+  }
+
+  90% {
+    opacity: 0.3;
+    transform: none;
+  }
+
+  95% {
+    opacity: 0.5;
+    transform: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.smoothFadeInUp {
+  animation-name: smoothFadeInUp;
+}
+
+// fix form inline
+.form-inline > * {
+   margin:5px 3px;
+}
+// fix
+.panel-heading {
+  z-index: 1 !important;
+}
+// fix
+.btn {
+  margin: {
+    left: 2px;
+    right: 2px;
+  }
+}
+// fix
+.well {
+    padding: 7px;
+}
+// fix
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 2px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-top: 2px;
+    // line-height: normal;
+}

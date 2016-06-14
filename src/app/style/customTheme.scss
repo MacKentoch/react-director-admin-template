@@ -1,0 +1,20 @@
+.skin-black .logo {
+  background-color: #F9690E;
+}
+.skin-black .left-side {
+    background: #222222;
+}
+.skin-black .sidebar > .sidebar-menu > li > a:hover, .skin-black .sidebar > .sidebar-menu > li.active > a {
+    // color: #f6f6f6;
+    background: #425164;
+}
+
+.skin-black .sidebar > .sidebar-menu > li > a:hover, .skin-black .sidebar > .sidebar-menu > li.active > a {
+    background-color: #E67E22;
+}
+.skin-black .navbar .nav > li > a:hover, .skin-black .navbar .nav > li > a:active, .skin-black .navbar .nav > li > a:focus, .skin-black .navbar .nav .open > a, .skin-black .navbar .nav .open > a:hover, .skin-black .navbar .nav .open > a:focus {
+    background-color: #E67E22;
+}
+.dropdown-menu-right > li > a:hover {
+    background-color: #E67E22;
+}

@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+.idea/
+*.log
+
+build/
+dist/
+public/assets/

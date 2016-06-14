@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Director | General UI</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <meta name="description" content="Developed By M Abdur Rokib Promy">
+        <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
+        <!-- bootstrap 3.0.2 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <!-- Theme style -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="skin-black">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                Director
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Director Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Tasks: style can be found in dropdown.less -->
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tasks"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-success" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Create a nice theme
+                                                    <small class="pull-right">40%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">40% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Some task I need to do
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Make beautiful transitions
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <span>Jane Doe <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                                <li class="dropdown-header text-center">Account</li>
+
+                                <li>
+                                    <a href="#">
+                                    <i class="fa fa-clock-o fa-fw pull-right"></i>
+                                        <span class="badge badge-success pull-right">10</span> Updates</a>
+                                    <a href="#">
+                                    <i class="fa fa-envelope-o fa-fw pull-right"></i>
+                                        <span class="badge badge-danger pull-right">5</span> Messages</a>
+                                    <a href="#"><i class="fa fa-magnet fa-fw pull-right"></i>
+                                        <span class="badge badge-info pull-right">3</span> Subscriptions</a>
+                                    <a href="#"><i class="fa fa-question fa-fw pull-right"></i> <span class=
+                                        "badge pull-right">11</span> FAQ</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                    <li>
+                                        <a href="#">
+                                        <i class="fa fa-user fa-fw pull-right"></i>
+                                            Profile
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-user-settings">
+                                        <i class="fa fa-cog fa-fw pull-right"></i>
+                                            Settings
+                                        </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, Jane</p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="general.html">
+                                <i class="fa fa-gavel"></i> <span>General</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="basic_form.html">
+                                <i class="fa fa-globe"></i> <span>Basic Elements</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="simple.html">
+                                <i class="fa fa-glass"></i> <span>Simple tables</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <div class="right-side">
+
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--breadcrumbs start -->
+                            <ul class="breadcrumb">
+                                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="#">Dashboard</a></li>
+                                <li class="active">Current page</li>
+                            </ul>
+                            <!--breadcrumbs end -->
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#fa8564;">
+                                    <i class="fa fa-file-o fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">999 Projects</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#45cf95;">
+                                    <i class="fa fa-paperclip fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">999 Documents</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#AC75F0">
+                                    <i class="fa fa-envelope-o fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">999 Messages</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#45cf95;">
+                                    <i class="fa fa-check-square-o fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">1000 Tasks</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#AC75F0">
+                                    <i class="fa fa-dollar fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">$99999 Earnings</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="stat">
+                                <div class="stat-icon" style="color:#fa8564">
+                                    <i class="fa fa-refresh fa-spin fa-3x stat-elem"></i>
+                                </div>
+                                <h5 class="stat-info">Procesing....</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--progress bar start-->
+                                    <section class="panel">
+                                        <header class="panel-heading">
+                                            Basic Progress Bars
+                                        </header>
+                                        <div class="panel-body"><p><code>.progress</code></p>
+                                          <div class="progress">
+                                            <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                              <span class="sr-only">40% Complete (success)</span>
+                                            </div>
+                                          </div>
+                                          <p>Class: <code>.sm</code></p>
+                                          <div class="progress progress-sm active">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                              <span class="sr-only">20% Complete</span>
+                                            </div>
+                                          </div>
+                                          <p>Class: <code>.xs</code></p>
+                                          <div class="progress progress-xs">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                              <span class="sr-only">60% Complete (warning)</span>
+                                            </div>
+                                          </div>
+                                          <p>Class: <code>.xxs</code></p>
+                                          <div class="progress progress-xxs">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                              <span class="sr-only">60% Complete (warning)</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </section>
+                                    <!--progress bar end-->
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--progress bar start-->
+                                    <section class="panel">
+                                        <header class="panel-heading">
+                                            Striped Progress Bars
+                                        </header>
+                                        <div class="panel-body">
+                                            <p><code>.progress</code></p>
+                                              <div class="progress progress-striped">
+                                                <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                  <span class="sr-only">40% Complete (success)</span>
+                                                </div>
+                                              </div>
+                                              <p>Class: <code>.sm</code></p>
+                                              <div class="progress progress-striped progress-sm active">
+                                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                  <span class="sr-only">20% Complete</span>
+                                                </div>
+                                              </div>
+                                              <p>Class: <code>.xs</code></p>
+                                              <div class="progress progress-striped progress-xs">
+                                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                  <span class="sr-only">60% Complete (warning)</span>
+                                                </div>
+                                              </div>
+                                              <p>Class: <code>.xxs</code></p>
+                                              <div class="progress progress-striped progress-xxs">
+                                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                  <span class="sr-only">60% Complete (warning)</span>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </section>
+                                    <!--progress bar end-->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--tooltips start-->
+                                    <section class="panel">
+                                        <div class="panel-body btn-gap">
+                                            <button title="" data-placement="top" data-toggle="tooltip" class="btn btn-default tooltips" type="button" data-original-title="Tooltip on top">Tooltip on top</button>
+                                            <button title="" data-placement="left" data-toggle="tooltip" class="btn btn-default tooltips" type="button" data-original-title="Tooltip on left"> left</button>
+                                            <button title="" data-placement="bottom" data-toggle="tooltip " class="btn btn-default tooltips" type="button" data-original-title="Tooltip on bottom"> bottom</button>
+                                            <button title="" data-placement="right" data-toggle="tooltip" class="btn btn-default tooltips" type="button" data-original-title="Tooltip on right"> right</button>
+                                        </div>
+                                    </section>
+                                    <!--tooltips end-->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--pagination start-->
+                                    <section class="panel">
+                                        <header class="panel-heading">
+                                            Pagination
+                                        </header>
+                                        <div class="panel-body">
+                                            <div>
+                                                <ul class="pagination pagination-lg">
+                                                    <li><a href="#">«</a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">»</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="text-center">
+                                                <ul class="pagination">
+                                                    <li><a href="#">«</a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">»</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul class="pagination pagination-sm pull-right">
+                                                    <li><a href="#">«</a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">»</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h3>Default Example</h3>
+                                        <nav>
+                                          <ul class="pager">
+                                            <li><a href="#">Previous</a></li>
+                                            <li><a href="#">Next</a></li>
+                                          </ul>
+                                        </nav>
+                                        <h3>Aligned links</h3>
+                                        <nav>
+                                          <ul class="pager">
+                                            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                                            <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                                          </ul>
+                                        </nav>
+                                    </section>
+                                    <!--pagination end-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                        <!--tab nav start-->
+                        <section class="panel general">
+                            <header class="panel-heading tab-bg-dark-navy-blue">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#home">Home</a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#about">About</a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#profile">Profile</a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="home" class="tab-pane active">
+                                        Home
+                                    </div>
+                                    <div id="about" class="tab-pane">About</div>
+                                    <div id="profile" class="tab-pane">Profile</div>
+                                    <div id="contact" class="tab-pane">Contact</div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--tab nav start-->
+
+                        <!--tab nav start-->
+                        <section class="panel general">
+                            <header class="panel-heading tab-bg-dark-navy-blue">
+                                <ul class="nav nav-tabs">
+                                    <li>
+                                        <a data-toggle="tab" href="#home-2">
+                                            <i class="fa fa-home"></i>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#about-2">
+                                            <i class="fa fa-user"></i>
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#contact-2">
+                                            <i class="fa fa-envelope-o"></i>
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="home-2" class="tab-pane ">
+                                        Home
+                                    </div>
+                                    <div id="about-2" class="tab-pane active">About</div>
+                                    <div id="contact-2" class="tab-pane ">Contact</div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--tab nav end-->
+
+
+                        <!--tab nav start-->
+                        <section class="panel">
+                            <header class="panel-heading tab-bg-dark-navy-blue tab-right ">
+                                <ul class="nav nav-tabs pull-right">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#home-3">
+                                            <i class="fa fa-home"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#about-3">
+                                            <i class="fa fa-user"></i>
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-toggle="tab" href="#contact-3">
+                                            <i class="fa fa-envelope-o"></i>
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="home-3" class="tab-pane active">
+                                        Home
+                                    </div>
+                                    <div id="about-3" class="tab-pane">About</div>
+                                    <div id="contact-3" class="tab-pane">Contact</div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--tab nav end-->
+
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--notification start-->
+                                <section class="panel">
+                                    <div class="panel-body">
+
+                                        <div class="alert alert-block alert-danger ">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                        </div>
+                                        <div class="alert alert-success ">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>Well done!</strong> You successfully read this important alert message.
+                                        </div>
+                                        <div class="alert alert-info ">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                                        </div>
+                                        <div class="alert alert-warning ">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                                        </div>
+
+                                    </div>
+                                </section>
+                                <!--notification end-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="panel">
+                                <header class="panel-heading">
+                                    Default Buttons
+                                </header>
+                                <div class="panel-body">
+                                    <button type="button" class="btn btn-default">Default</button>
+                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                    <button type="button" class="btn btn-info">Info</button>
+                                    <button type="button" class="btn btn-warning">Warning</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+
+                                        <p class="text-muted text-center">Labels</p>
+                                        <p class="text-center">
+                                            <span class="label label-default">label</span>
+                                            <span class="label label-primary">Primary</span>
+                                            <span class="label label-success">Success</span>
+                                            <span class="label label-info">Info</span>
+                                            <span class="label label-inverse">Inverse</span>
+                                            <span class="label label-warning">Warning</span>
+                                            <span class="label label-danger">Danger</span>
+                                        </p>
+                                        <p class="text-muted text-center">Badges</p>
+                                        <p class="m-bot-none text-center">
+                                            <span class="badge">5</span>
+                                            <span class="badge badge-primary">10</span>
+                                            <span class="badge badge-success">15</span>
+                                            <span class="badge badge-info">20</span>
+                                            <span class="badge badge-inverse">25</span>
+                                            <span class="badge badge-warning">30</span>
+                                            <span class="badge badge-danger">35</span>
+                                        </p>
+                                        <h3>Modals</h3>
+                                        <a class="btn btn-success" data-toggle="modal" href="#myModal">
+                                            Dialog
+                                        </a>
+                                        <a class="btn btn-warning" data-toggle="modal" href="#myModal2">
+                                            Confirm
+                                        </a>
+                                        <a class="btn btn-danger" data-toggle="modal" href="#myModal3">
+                                            Alert !
+                                        </a>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title">Modal Tittle</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        Body goes here...
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                                                        <button class="btn btn-success" type="button">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title">Modal Tittle</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        Body goes here...
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                                                        <button class="btn btn-warning" type="button"> Confirm</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        <h4 class="modal-title">Modal Tittle</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        Body goes here...
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-danger" type="button"> Ok</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- modal -->
+
+
+
+                                </div>
+                            </section>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+            <div class="footer-main">
+                Copyright &copy Director, 2014
+            </div>
+        </div><!-- ./wrapper -->
+
+
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Director App -->
+        <script src="js/Director/app.js" type="text/javascript"></script>
+    </body>
+</html>
