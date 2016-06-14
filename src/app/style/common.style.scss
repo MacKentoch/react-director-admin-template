@@ -40,6 +40,22 @@
   animation-name: smoothFadeInUp;
 }
 
+// fix form inline
+.form-inline > * {
+   margin:5px 3px;
+}
+// fix
 .panel-heading {
   z-index: 1 !important;
+}
+// fix
+.btn {
+  margin: {
+    left: 2px;
+    right: 2px;
+  }
+}
+// fix
+.well {
+    padding: 7px;
 }
