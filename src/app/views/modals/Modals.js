@@ -134,7 +134,7 @@ const Modals = () => {
           aria-labelledby="myModalLabel"
           role="dialog"
           tabIndex="-1"
-          id="myModal"
+          id="myModalBasicElements"
           className="modal fade">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -207,7 +207,7 @@ const Modals = () => {
           aria-labelledby="myModalLabel"
           role="dialog"
           tabIndex="-1"
-          id="myModal-1"
+          id="myModalBasicElements-1"
           className="modal fade">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -286,7 +286,7 @@ const Modals = () => {
           aria-labelledby="myModalLabel"
           role="dialog"
           tabIndex="-1"
-          id="myModal-2"
+          id="myModalBasicElements-2"
           className="modal fade">
           <div className="modal-dialog">
             <div className="modal-content">

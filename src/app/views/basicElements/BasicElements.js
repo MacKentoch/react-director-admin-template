@@ -159,19 +159,19 @@ class BasicElements extends Component {
             <section className="panel">
               <div className="panel-body">
                 <a
-                  href="#myModal"
+                  href="#myModalBasicElements"
                   data-toggle="modal"
                   className="btn btn-xs btn-success">
                   Form in Modal
                 </a>
                 <a
-                  href="#myModal-1"
+                  href="#myModalBasicElements-1"
                   data-toggle="modal"
                   className="btn btn-xs btn-warning">
                   Form in Modal 2
                 </a>
                 <a
-                  href="#myModal-2"
+                  href="#myModalBasicElements-2"
                   data-toggle="modal"
                   className="btn btn-xs btn-danger">
                   Form in Modal 3
