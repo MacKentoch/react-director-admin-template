@@ -11,7 +11,7 @@ const Modals = () => {
         {/* <!-- Modal --> */}
         <div
           className="modal fade"
-          id="myModal"
+          id="myModalGeneral"
           tabIndex="-1"
           role="dialog"
           aria-labelledby="myModalLabel"
@@ -49,11 +49,10 @@ const Modals = () => {
             </div>
           </div>
         </div>
-        {/* <!-- modal --> */}
-        {/* <!-- Modal --> */}
+
         <div
           className="modal fade"
-          id="myModal2"
+          id="myModalGeneral2"
           tabIndex="-1"
           role="dialog"
           aria-labelledby="myModalLabel"
@@ -86,6 +85,41 @@ const Modals = () => {
                   className="btn btn-warning"
                   type="button">
                   Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="modal fade"
+          id="myModalGeneral3"
+          tabIndex="-1"
+          role="dialog"
+          aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-hidden="true">
+                  ×
+                </button>
+                <h4 className="modal-title">
+                  Modal Tittle
+                </h4>
+              </div>
+              <div className="modal-body">
+                Body goes here...
+              </div>
+              <div className="modal-footer">
+                <button
+                  className="btn btn-danger"
+                  type="button">
+                   Ok
                 </button>
               </div>
             </div>

@@ -733,19 +733,19 @@ class General extends Component {
                   <a
                     className="btn btn-success"
                     data-toggle="modal"
-                    href="#myModal">
+                    href="#myModalGeneral">
                     Dialog
                   </a>
                   <a
                     className="btn btn-warning"
                     data-toggle="modal"
-                    href="#myModal2">
+                    href="#myModalGeneral2">
                     Confirm
                   </a>
                   <a
                     className="btn btn-danger"
                     data-toggle="modal"
-                    href="#myModal3">
+                    href="#myModalGeneral3">
                     Alert !
                   </a>
                 </div>
