@@ -6,8 +6,8 @@ import {
   Router,
   Route,
   IndexRoute,
-  // hashHistory,
-  browserHistory
+  hashHistory,
+  // browserHistory
  }                              from 'react-router';
 import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
@@ -22,7 +22,7 @@ import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
 
 const store         = configureStore();
-const syncedHistory = syncHistoryWithStore(browserHistory, store);
+const syncedHistory = syncHistoryWithStore(hashHistory, store);
 
 export const Routes = () => {
   return (
