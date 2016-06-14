@@ -11,7 +11,7 @@
 
 .view-enter {
    animation: smoothFadeInUp 0.3s both ease-in;
-   z-index: 99;
+   z-index: 1;
  }
 
 @keyframes smoothFadeInUp {

@@ -434,28 +434,28 @@ class General extends Component {
                 <a
                   data-toggle="tab"
                   href="#home">
-                  Home
+                  &nbsp;Home
                 </a>
               </li>
               <li className="">
                 <a
                   data-toggle="tab"
                   href="#about">
-                  About
+                  &nbsp;About
                 </a>
               </li>
               <li className="">
                 <a
                   data-toggle="tab"
                   href="#profile">
-                  Profile
+                  &nbsp;Profile
                 </a>
               </li>
               <li className="">
                 <a
                   data-toggle="tab"
                   href="#contact">
-                  Contact
+                  &nbsp;Contact
                 </a>
               </li>
             </ul>
@@ -465,22 +465,22 @@ class General extends Component {
               <div
                 id="home"
                 className="tab-pane active">
-                Home
+                &nbsp;Home
               </div>
               <div
                 id="about"
                 className="tab-pane">
-                About
+                &nbsp;About
               </div>
               <div
                 id="profile"
                 className="tab-pane">
-                Profile
+                &nbsp;Profile
               </div>
               <div
                 id="contact"
                 className="tab-pane">
-                Contact
+                &nbsp;Contact
               </div>
             </div>
           </div>
@@ -502,7 +502,7 @@ class General extends Component {
                   data-toggle="tab"
                   href="#about-2">
                   <i className="fa fa-user"></i>
-                  About
+                  &nbsp;About
                 </a>
               </li>
               <li className="">
@@ -510,7 +510,7 @@ class General extends Component {
                   data-toggle="tab"
                   href="#contact-2">
                   <i className="fa fa-envelope-o"></i>
-                  Contact
+                  &nbsp;Contact
                 </a>
               </li>
             </ul>
@@ -520,17 +520,17 @@ class General extends Component {
               <div
                 id="home-2"
                 className="tab-pane ">
-                Home
+                &nbsp;Home
               </div>
               <div
                 id="about-2"
                 className="tab-pane active">
-                About
+                &nbsp;About
               </div>
               <div
                 id="contact-2"
                 className="tab-pane ">
-                Contact
+                &nbsp;Contact
               </div>
             </div>
           </div>
@@ -552,7 +552,7 @@ class General extends Component {
                     data-toggle="tab"
                     href="#about-3">
                     <i className="fa fa-user"></i>
-                    About
+                    &nbsp;About
                   </a>
                 </li>
                 <li className="">
@@ -560,7 +560,7 @@ class General extends Component {
                     data-toggle="tab"
                     href="#contact-3">
                     <i className="fa fa-envelope-o"></i>
-                    Contact
+                    &nbsp;Contact
                   </a>
                 </li>
               </ul>
@@ -570,17 +570,17 @@ class General extends Component {
                 <div
                   id="home-3"
                   className="tab-pane active">
-                  Home
+                  &nbsp;Home
                 </div>
                 <div
                   id="about-3"
                   className="tab-pane">
-                  About
+                  &nbsp;About
                 </div>
                 <div
                   id="contact-3"
                   className="tab-pane">
-                  Contact
+                  &nbsp;Contact
                 </div>
               </div>
             </div>
@@ -751,113 +751,6 @@ class General extends Component {
                     href="#myModal3">
                     Alert !
                   </a>
-                  {/* <!-- Modal --> */}
-                  <div
-                    className="modal fade"
-                    id="myModal"
-                    tabIndex="-1"
-                    role="dialog"
-                    aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-hidden="true">
-                            ×
-                          </button>
-                          <h4 className="modal-title">
-                            Modal Tittle
-                          </h4>
-                        </div>
-                        <div className="modal-body">
-                          Body goes here...
-                        </div>
-                        <div className="modal-footer">
-                          <button
-                            data-dismiss="modal"
-                            className="btn btn-default"
-                            type="button">
-                            Close
-                          </button>
-                          <button
-                            className="btn btn-success"
-                            type="button">
-                            Save changes
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- modal --> */}
-                  {/* <!-- Modal --> */}
-                  <div
-                    className="modal fade"
-                    id="myModal2"
-                    tabIndex="-1"
-                    role="dialog"
-                    aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-hidden="true">
-                            ×
-                          </button>
-                          <h4 className="modal-title">
-                            Modal Tittle
-                          </h4>
-                        </div>
-                        <div className="modal-body">
-                          Body goes here...
-                        </div>
-                        <div className="modal-footer">
-                          <button
-                            data-dismiss="modal"
-                            className="btn btn-default"
-                            type="button">
-                            Close
-                          </button>
-                          <button
-                            className="btn btn-warning"
-                            type="button">
-                            Confirm
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- modal --> */}
-                  {/* <!-- Modal --> */}
-                  <div
-                    className="modal fade"
-                    id="myModal3"
-                    tabIndex="-1"
-                    role="dialog"
-                    aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <button type="button" className="close" data-dismiss="modal" aria-hidden="true">×</button>
-                          <h4 className="modal-title">Modal Tittle</h4>
-                        </div>
-                        <div className="modal-body">
-                          Body goes here...
-                        </div>
-                        <div className="modal-footer">
-                          <button className="btn btn-danger" type="button"> Ok</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </section>
             </div>
@@ -865,7 +758,9 @@ class General extends Component {
         </div>
       </div>
       <Footer />
+      
     </section>
+
     );
   }
 }

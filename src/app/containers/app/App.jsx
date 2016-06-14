@@ -12,6 +12,7 @@ import {
   AsideLeft,
   AsideRight
 }                             from '../../components';
+import { Modals }             from '../../views';
 
 class App extends Component {
   constructor(props, context) {
@@ -39,6 +40,8 @@ class App extends Component {
             </div>
           </AsideRight>
         </div>
+        {/* modals cannot be placed anywhere (avoid backdrop or modal placement issues) so al grouped in same component and outside .wrapper*/}
+        <Modals />
       </div>
     );
   }
