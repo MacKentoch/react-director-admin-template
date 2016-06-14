@@ -2,9 +2,6 @@
 
 import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
-import {
-  Footer
-}                                     from '../../components';
 
 
 class SimpleTables extends Component {
@@ -417,7 +414,6 @@ class SimpleTables extends Component {
               </div>
             </div>
           </div>
-        <Footer />
       </section>
     );
   }

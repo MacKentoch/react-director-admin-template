@@ -2,9 +2,6 @@
 
 import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
-import {
-  Footer
-}                                     from '../../components';
 
 
 class BasicElements extends Component {
@@ -1039,7 +1036,6 @@ class BasicElements extends Component {
             </section>
           </div>
         </div>
-        <Footer />
       </section>
     );
   }

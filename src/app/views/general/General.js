@@ -2,9 +2,6 @@
 
 import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
-import {
-  Footer
-}                                     from '../../components';
 
 
 class General extends Component {
@@ -757,8 +754,6 @@ class General extends Component {
           </div>
         </div>
       </div>
-      <Footer />
-      
     </section>
 
     );

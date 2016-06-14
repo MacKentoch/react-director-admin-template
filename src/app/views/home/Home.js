@@ -4,7 +4,6 @@ import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
 import {
   StatsCard,
-  Footer,
   EarningGraph,
   Notifications,
   WorkProgress,
@@ -116,7 +115,6 @@ class Home extends Component {
             <TodoList />
           </div>
         </div>
-        <Footer />
       </section>
     );
   }
