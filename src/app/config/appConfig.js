@@ -9,7 +9,7 @@ export const appConfig = {
   FAKE_ASYNC_DELAY: 1000,
 
 
-  APP_NAME: 'Call Center',
+  APP_NAME: 'reactDirector',
 
   // eaningGraph config
   earningGraph: {

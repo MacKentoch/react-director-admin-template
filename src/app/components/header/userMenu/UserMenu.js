@@ -3,8 +3,7 @@
 import React, { PropTypes } from 'react';
 
 const UserMenu = (props) => {
-  const { login, firstname, lastname, picture } = props;
-  console.log('firstname: ', props.firstname);
+  const { firstname, lastname } = props;
   return (
     <li className="dropdown user user-menu">
       <a
