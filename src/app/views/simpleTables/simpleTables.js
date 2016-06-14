@@ -358,9 +358,17 @@ class SimpleTables extends Component {
                 <div className="panel-body table-responsive">
                   <div className="box-tools m-b-15">
                     <div className="input-group">
-                      <input type="text" name="table_search" className="form-control input-sm pull-right" style={{width: '150px'}} placeholder="Search"/>
+                      <input
+                        type="text"
+                        name="table_search"
+                        className="form-control input-sm pull-right"
+                        style={{width: '150px'}}
+                        placeholder="Search"
+                      />
                       <div className="input-group-btn">
-                        <button className="btn btn-sm btn-default"><i className="fa fa-search"></i></button>
+                        <button className="btn btn-sm btn-default">
+                          <i className="fa fa-search"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
