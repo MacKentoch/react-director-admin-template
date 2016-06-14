@@ -24,12 +24,22 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.actions.fetchUserInfoDataIfNeeded();
+  }
+
   render() {
     const { appName } = this.state;
+    const { userInfos } = this.props;
+
     return (
       <div>
         <Header
           appName={appName}
+          userLogin={userInfos.login}
+          userFirstname={userInfos.firstname}
+          userLastname={userInfos.lastname}
+          userPicture={userInfos.picture}
           currentView={this.props.currentView}
           toggleSideMenu={(e)=>this.handlesMenuButtonClick(e)}
         />
@@ -67,12 +77,19 @@ App.propTypes = {
   location:   PropTypes.object,
 
   sideMenuIsCollapsed: PropTypes.bool,
+  userInfos: PropTypes.shape({
+    login: PropTypes.string,
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
+    picture: PropTypes.string
+  }),
   currentView: PropTypes.string,
 
   actions: PropTypes.shape({
     enterHome: PropTypes.func,
     leaveHome: PropTypes.func,
     fetchEarningGraphDataIfNeeded: PropTypes.func,
+    fetchUserInfoDataIfNeeded: PropTypes.func,
     openSideMenu:   PropTypes.func,
     closeSideMenu:  PropTypes.func,
     toggleSideMenu: PropTypes.func
@@ -81,8 +98,9 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    currentView:      state.views.currentView,
-    sideMenuIsCollapsed: state.sideMenu.isCollapsed
+    currentView:          state.views.currentView,
+    sideMenuIsCollapsed:  state.sideMenu.isCollapsed,
+    userInfos:            state.userInfos.data
   };
 };
 
