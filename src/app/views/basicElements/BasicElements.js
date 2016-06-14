@@ -3,7 +3,6 @@
 import React, { PropTypes, Component } from 'react';
 import classNames                      from 'classnames';
 
-
 class BasicElements extends Component {
   constructor(props) {
     super(props);
