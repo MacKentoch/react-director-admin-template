@@ -8,7 +8,7 @@ const Header = (props) => {
       className="header fixed--header">
       <a href="#"
         className="logo">
-        Director
+        { props.appName }
       </a>
       <nav
         className="navbar navbar-static-top"
@@ -351,8 +351,13 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
+  appName: PropTypes.string,
   currentView: PropTypes.string,
   toggleSideMenu: PropTypes.func
+};
+
+Header.defaultProps = {
+  appName: 'applicationName'
 };
 
 export default Header;

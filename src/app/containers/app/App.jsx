@@ -14,16 +14,22 @@ import {
   AsideRight
 }                             from '../../components';
 import { Modals }             from '../../views';
+import { appConfig }          from '../../config';
 
 class App extends Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      appName: appConfig.APP_NAME
+    };
   }
 
   render() {
+    const { appName } = this.state;
     return (
       <div>
         <Header
+          appName={appName}
           currentView={this.props.currentView}
           toggleSideMenu={(e)=>this.handlesMenuButtonClick(e)}
         />

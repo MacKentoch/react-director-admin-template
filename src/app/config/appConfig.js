@@ -8,6 +8,9 @@ export const appConfig = {
   // fake delay to mock async
   FAKE_ASYNC_DELAY: 1000,
 
+
+  APP_NAME: 'Call Center',
+
   // eaningGraph config
   earningGraph: {
     data: {
