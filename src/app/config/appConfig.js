@@ -11,6 +11,11 @@ export const appConfig = {
 
   APP_NAME: 'reactDirector',
 
+  // connection status text references
+  CONNECTION_STATUS: {
+    online: 'online',
+    disconnected: 'disconnected'
+  },
   // eaningGraph config
   earningGraph: {
     data: {
@@ -23,6 +28,8 @@ export const appConfig = {
     data: {
       API: 'api/userInfos'
     }
-  }
+  },
+
+  HELLO_WORD: 'Hello'
 
 };

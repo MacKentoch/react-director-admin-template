@@ -20,7 +20,9 @@ class App extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      appName: appConfig.APP_NAME
+      appName: appConfig.APP_NAME,
+      connectionStatus: appConfig.CONNECTION_STATUS,
+      helloWord: appConfig.HELLO_WORD
     };
   }
 
@@ -29,9 +31,9 @@ class App extends Component {
   }
 
   render() {
-    const { appName } = this.state;
-    const { userInfos } = this.props;
-
+    const { appName, connectionStatus, helloWord } = this.state;
+    const { userInfos, userIsConnected } = this.props;
+    const userFullName = `${userInfos.firstname} ${userInfos.lastname.toUpperCase()}`;
     return (
       <div>
         <Header
@@ -48,6 +50,10 @@ class App extends Component {
             isAnimated={true}
             currentView={this.props.currentView}
             isCollapsed={this.props.sideMenuIsCollapsed}
+            helloWord={helloWord}
+            connectionStatus={connectionStatus}
+            userIsConnected={userIsConnected}
+            username={userFullName}
           />
           <AsideRight
             isAnimated={true}
@@ -83,6 +89,7 @@ App.propTypes = {
     lastname: PropTypes.string,
     picture: PropTypes.string
   }),
+  userIsConnected: PropTypes.bool,
   currentView: PropTypes.string,
 
   actions: PropTypes.shape({
@@ -100,7 +107,8 @@ const mapStateToProps = (state) => {
   return {
     currentView:          state.views.currentView,
     sideMenuIsCollapsed:  state.sideMenu.isCollapsed,
-    userInfos:            state.userInfos.data
+    userInfos:            state.userInfos.data,
+    userIsConnected:      state.userInfos.isConnected
   };
 };
 

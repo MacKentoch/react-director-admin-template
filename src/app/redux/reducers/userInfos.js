@@ -8,6 +8,7 @@ const initialState = {
     lastname: '',
     picture: null
   },
+  isConnected: false,
   time: null
 };
 
@@ -26,6 +27,7 @@ const userInfos = (state = initialState, action) => {
       ...state,
       isFetching: action.isFetching,
       data:       { ...action.userInfos },
+      isConnected: true, // set user connected when retreiving userInfos
       time:       action.time
     };
 
