@@ -1,6 +1,6 @@
 'use strict';
 
-export const userInfoMockData = {
+export const userInfosMockData = {
   login: 'abcdef',
   firstname: 'jean',
   lastname: 'dupond',

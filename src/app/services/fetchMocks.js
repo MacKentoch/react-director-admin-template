@@ -3,7 +3,7 @@
 import { appConfig }    from '../config';
 import {
   earningGraphMockData,
-  userInfoMockData
+  userInfosMockData
 }                       from '../models';
 
 export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
@@ -20,11 +20,11 @@ export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELA
  );
 };
 
-export const fetchMockUserInfoData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
+export const fetchMockUserInfosData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
   return new Promise(
     resolve => {
       setTimeout(
-       () => resolve({...userInfoMockData}),
+       () => resolve({...userInfosMockData}),
        timeToWait
      );
     }

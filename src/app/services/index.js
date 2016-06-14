@@ -8,7 +8,8 @@ import {
   encodeBase64
 }                     from './fetchTools';
 import {
-  fetchMockEarningGraphData
+  fetchMockEarningGraphData,
+  fetchMockUserInfosData
 }                     from './fetchMocks';
 
 
@@ -18,5 +19,6 @@ export {
   parseJSON,
   getLocationOrigin,
   encodeBase64,
-  fetchMockEarningGraphData
+  fetchMockEarningGraphData,
+  fetchMockUserInfosData
 };

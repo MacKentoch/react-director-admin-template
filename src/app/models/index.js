@@ -2,10 +2,10 @@
 
 import { navigation } from './navigation';
 import { earningGraphMockData } from './earningGraphMockData';
-import { userInfoMockData } from './userInfoMockData'
+import { userInfosMockData } from './userInfosMock';
 
 export {
   navigation,
   earningGraphMockData,
-  userInfoMockData
+  userInfosMockData
 };

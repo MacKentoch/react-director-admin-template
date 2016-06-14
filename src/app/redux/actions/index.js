@@ -14,6 +14,9 @@ import {
   fetchEarningGraphDataIfNeeded
 }                                 from './earningGraph';
 import {
+  fetchUserInfoDataIfNeeded
+}                                 from './userInfos';
+import {
   openSideMenu,
   closeSideMenu,
   toggleSideMenu
@@ -31,5 +34,6 @@ export {
   closeSideMenu,
   toggleSideMenu,
   enterGeneral,
-  leaveGeneral
+  leaveGeneral,
+  fetchUserInfoDataIfNeeded
 };

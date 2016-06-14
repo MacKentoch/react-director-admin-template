@@ -13,7 +13,13 @@ export const appConfig = {
     data: {
       API: 'api/earnigGraphData'
     }
-  }
+  },
 
+  // userInfos config
+  userInfos: {
+    data: {
+      API: 'api/userInfos'
+    }
+  }
 
 };
