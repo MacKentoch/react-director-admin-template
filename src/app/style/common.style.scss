@@ -59,3 +59,11 @@
 .well {
     padding: 7px;
 }
+// fix
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 2px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-top: 2px;
+    // line-height: normal;
+}
