@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import TeamMember from './teamMember/TeamMember';
 
 const TeamMates = () => {
   return (
