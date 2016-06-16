@@ -9,7 +9,8 @@ import {
 }                     from './fetchTools';
 import {
   fetchMockEarningGraphData,
-  fetchMockUserInfosData
+  fetchMockUserInfosData,
+  fetchMockTeamMatesData
 }                     from './fetchMocks';
 
 
@@ -20,5 +21,6 @@ export {
   getLocationOrigin,
   encodeBase64,
   fetchMockEarningGraphData,
-  fetchMockUserInfosData
+  fetchMockUserInfosData,
+  fetchMockTeamMatesData
 };

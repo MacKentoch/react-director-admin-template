@@ -32,6 +32,7 @@ class Home extends Component {
       500
     );
     this.props.actions.fetchEarningGraphDataIfNeeded();
+    this.props.actions.fetchTeamMatesDataIfNeeded();
   }
 
   componentWillUnmount() {
@@ -46,7 +47,7 @@ class Home extends Component {
       'invisible':      !this.state.viewEnters,
       'view-enter':     this.state.viewEnters
     });
-
+    const { teamMates, teamMatesIsFetching } = this.props;
     return(
       <section className={homeViewClasses}>
         <div
@@ -109,12 +110,16 @@ class Home extends Component {
 
         <div className="row">
           <div className="col-md-5">
-            <TeamMates />
+            <TeamMates
+              isFetching={teamMatesIsFetching}
+              members={teamMates}
+            />
           </div>
           <div className="col-md-7">
             <TodoList />
           </div>
         </div>
+
       </section>
     );
   }
@@ -123,10 +128,21 @@ class Home extends Component {
 Home.propTypes= {
   earningGraphLabels: PropTypes.array,
   earningGraphDatasets: PropTypes.array,
+  teamMatesIsFetching: PropTypes.bool,
+  teamMates: PropTypes.arrayOf(
+    PropTypes.shape({
+      picture: PropTypes.string,
+      firstname: PropTypes.string,
+      lastname: PropTypes.string,
+      profile: PropTypes.string,
+      profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
+    })
+  ),
   actions: PropTypes.shape({
     enterHome: PropTypes.func,
     leaveHome: PropTypes.func,
-    fetchEarningGraphDataIfNeeded: PropTypes.func
+    fetchEarningGraphDataIfNeeded: PropTypes.func,
+    fetchTeamMatesDataIfNeeded: PropTypes.func
   })
 };
 

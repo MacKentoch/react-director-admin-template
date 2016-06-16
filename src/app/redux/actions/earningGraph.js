@@ -46,7 +46,7 @@ const fetchEarningGraphData = () => dispatch => {
     // DEV ONLY
     fetchMockEarningGraphData()
       .then(
-        json => dispatch(receivedEarningGraphData(json))
+        data => dispatch(receivedEarningGraphData(data))
       );
   } else {
     const url = `${getLocationOrigin()}/${appConfig.earningGraph.data.API}`;

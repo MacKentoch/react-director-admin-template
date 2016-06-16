@@ -14,6 +14,9 @@ import {
   fetchEarningGraphDataIfNeeded
 }                                 from './earningGraph';
 import {
+  fetchTeamMatesDataIfNeeded
+}                                 from './teamMates';
+import {
   fetchUserInfoDataIfNeeded
 }                                 from './userInfos';
 import {
@@ -35,5 +38,6 @@ export {
   toggleSideMenu,
   enterGeneral,
   leaveGeneral,
-  fetchUserInfoDataIfNeeded
+  fetchUserInfoDataIfNeeded,
+  fetchTeamMatesDataIfNeeded
 };

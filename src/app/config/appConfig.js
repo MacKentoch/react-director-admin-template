@@ -22,6 +22,11 @@ export const appConfig = {
       API: 'api/earnigGraphData'
     }
   },
+  teamMates:{
+    data: {
+      API: 'api/teamMates'
+    }
+  },
 
   // userInfos config
   userInfos: {

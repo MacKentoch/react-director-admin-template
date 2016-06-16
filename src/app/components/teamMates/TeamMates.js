@@ -1,99 +1,34 @@
 'use strict';
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import TeamMember from './teamMember/TeamMember';
 
-const TeamMates = () => {
+const TeamMates = (props) => {
+  const { members } = props;
   return (
     <div className="panel">
       <header className="panel-heading">
         Teammates
       </header>
       <ul className="list-group teammates">
-
-        <li className="list-group-item">
-          <a href="">
-            <img
-              src={require('../../vendors/img/26115.jpg')}
-              width="50"
-              height="50"
-              />
-          </a>
-          <span className="pull-right label label-danger inline m-t-15">
-            Admin
-          </span>
-          <a href="">
-            Damon Parker
-          </a>
-        </li>
-
-        <li className="list-group-item">
-          <a href="">
-            <img
-              src={require('../../vendors/img/26115.jpg')}
-              width="50"
-              height="50"
-            />
-          </a>
-          <span className="pull-right label label-info inline m-t-15">
-            Member
-          </span>
-          <a href="">
-            Joe Waston
-          </a>
-        </li>
-
-        <li className="list-group-item">
-          <a href="">
-            <img
-              src={require('../../vendors/img/26115.jpg')}
-              width="50"
-              height="50"
-            />
-          </a>
-          <span className="pull-right label label-warning inline m-t-15">
-            Editor
-          </span>
-          <a href="">
-            Jannie Dvis
-          </a>
-        </li>
-
-        <li className="list-group-item">
-          <a href="">
-            <img
-              src={require('../../vendors/img/26115.jpg')}
-              width="50"
-              height="50"
-            />
-          </a>
-          <span className="pull-right label label-warning inline m-t-15">
-            Editor
-          </span>
-          <a href="">
-            Emma Welson
-          </a>
-        </li>
-
-        <li className="list-group-item">
-          <a href="">
-            <img
-              src={require('../../vendors/img/26115.jpg')}
-              width="50"
-              height="50"
-            />
-          </a>
-          <span className="pull-right label label-success inline m-t-15">
-            Subscriber
-          </span>
-          <a href="">
-            Emma Welson
-          </a>
-        </li>
-
+        {
+          members.map(
+            (member, memberIndex) => {
+              return (
+                <TeamMember
+                  key={memberIndex}
+                  picture={member.picture}
+                  firstname={member.firstname}
+                  lastname={member.lastname}
+                  profile={member.profile}
+                  profileColor={member.profileColor}
+                />
+              );
+            }
+          )
+        }
       </ul>
       <div className="panel-footer bg-white">
-        {/* <!-- <span className="pull-right badge badge-info">32</span> --> */}
         <button className="btn btn-primary btn-addon btn-sm">
           <i className="fa fa-plus"></i>
           Add Teammate
@@ -101,6 +36,18 @@ const TeamMates = () => {
       </div>
     </div>
   );
+};
+
+TeamMates.propTypes = {
+  members: PropTypes.arrayOf(
+    PropTypes.shape({
+      picture: PropTypes.string,
+      firstname: PropTypes.string,
+      lastname: PropTypes.string,
+      profile: PropTypes.string,
+      profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
+    })
+  )
 };
 
 export default TeamMates;

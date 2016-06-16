@@ -11,7 +11,9 @@ const mapStateToProps = (state) => {
 
     earningGraphIsFetching: state.earningGraph.isFetching,
     earningGraphLabels:     state.earningGraph.labels,
-    earningGraphDatasets:   state.earningGraph.datasets
+    earningGraphDatasets:   state.earningGraph.datasets,
+    teamMatesIsFetching:    state.teamMates.isFetching,
+    teamMates:              state.teamMates.data
   };
 };
 
@@ -23,7 +25,8 @@ const mapDispatchToProps = (dispatch) => {
         enterHome: actions.enterHome,
         leaveHome: actions.leaveHome,
 
-        fetchEarningGraphDataIfNeeded: actions.fetchEarningGraphDataIfNeeded
+        fetchEarningGraphDataIfNeeded:  actions.fetchEarningGraphDataIfNeeded,
+        fetchTeamMatesDataIfNeeded:     actions.fetchTeamMatesDataIfNeeded
       },
       dispatch)
   };

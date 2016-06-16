@@ -108,7 +108,8 @@ const mapStateToProps = (state) => {
     currentView:          state.views.currentView,
     sideMenuIsCollapsed:  state.sideMenu.isCollapsed,
     userInfos:            state.userInfos.data,
-    userIsConnected:      state.userInfos.isConnected
+    userIsConnected:      state.userInfos.isConnected,
+
   };
 };
 

@@ -9,7 +9,7 @@ const TeamMember = (props) => {
     <li className="list-group-item">
       <a href="">
         <img
-          src={require('../../../vendors/img/26115.jpg')}
+          src={picture}
           width="50"
           height="50"
           />
@@ -25,7 +25,7 @@ const TeamMember = (props) => {
 };
 
 TeamMember.propTypes = {
-  picture: PropTypes.any,
+  picture: PropTypes.string,
   firstname: PropTypes.string,
   lastname: PropTypes.string,
   profile: PropTypes.string,

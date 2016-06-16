@@ -9,7 +9,7 @@ const UserPanel = (props) => {
         props.showUserPicture &&
         <div className="pull-left image">
           <img
-            src={require('../../../../vendors/img/26115.jpg')}
+            src={'/public/img/26115.jpg'}
             className="img-circle"
             alt="User Image"
           />
