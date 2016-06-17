@@ -14,7 +14,7 @@ const AsideLeft = (props) => {
     'sidebar-animated': props.isAnimated,
     'collapse-left':    props.isCollapsed
   });
-  const { connectionStatus, userIsConnected, username, helloWord } = props;
+  const { connectionStatus, userIsConnected, username, helloWord, userPicture, showPicture } = props;
   return (
     <aside className={sideMenuClasses}>
         <section className="sidebar">
@@ -23,6 +23,8 @@ const AsideLeft = (props) => {
             username={username}
             connectionStatus={connectionStatus}
             online={userIsConnected}
+            userPicture={userPicture}
+            showUserPicture={showPicture}
           />
 
           <SearchForm
@@ -75,6 +77,8 @@ AsideLeft.propTypes = {
   }),
   userIsConnected: PropTypes.bool,
   username: PropTypes.string,
+  userPicture: PropTypes.string,
+  showPicture: PropTypes.bool,
   helloWord: PropTypes.string
 };
 

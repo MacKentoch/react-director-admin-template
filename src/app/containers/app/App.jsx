@@ -42,6 +42,7 @@ class App extends Component {
           userFirstname={userInfos.firstname}
           userLastname={userInfos.lastname}
           userPicture={userInfos.picture}
+          showPicture={userInfos.showPicture}
           currentView={this.props.currentView}
           toggleSideMenu={(e)=>this.handlesMenuButtonClick(e)}
         />
@@ -54,6 +55,8 @@ class App extends Component {
             connectionStatus={connectionStatus}
             userIsConnected={userIsConnected}
             username={userFullName}
+            userPicture={userInfos.picture}
+            showPicture={userInfos.showPicture}
           />
           <AsideRight
             isAnimated={true}
@@ -87,7 +90,8 @@ App.propTypes = {
     login: PropTypes.string,
     firstname: PropTypes.string,
     lastname: PropTypes.string,
-    picture: PropTypes.string
+    picture: PropTypes.string,
+    showPicture: PropTypes.bool
   }),
   userIsConnected: PropTypes.bool,
   currentView: PropTypes.string,

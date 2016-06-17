@@ -9,7 +9,7 @@ const UserPanel = (props) => {
         props.showUserPicture &&
         <div className="pull-left image">
           <img
-            src={'/public/img/26115.jpg'}
+            src={props.userPicture}
             className="img-circle"
             alt="User Image"
           />
@@ -27,7 +27,6 @@ const UserPanel = (props) => {
           { props.online &&
             props.connectionStatus.online
           }
-
           {
             !props.online &&
             <i className="fa fa-circle text-default"></i>

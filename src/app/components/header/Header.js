@@ -6,7 +6,7 @@ import TaskMenu from './taskMenu/TaskMenu';
 import MessageMenu from './messageMenu/MessageMenu';
 
 const Header = (props) => {
-  const { userLogin, userFirstname, userLastname, userPicture } = props;
+  const { userLogin, userFirstname, userLastname, userPicture, showPicture } = props;
   return (
     <header
       className="header fixed--header">
@@ -37,6 +37,7 @@ const Header = (props) => {
               firstname={userFirstname}
               lastname={userLastname}
               picture={userPicture}
+              showUserPicture={showPicture}
             />
           </ul>
         </div>
@@ -52,6 +53,7 @@ Header.propTypes = {
   userFirstname: PropTypes.string,
   userLastname: PropTypes.string,
   userPicture: PropTypes.string,
+  showPicture: PropTypes.bool,
 
   currentView: PropTypes.string,
   toggleSideMenu: PropTypes.func
