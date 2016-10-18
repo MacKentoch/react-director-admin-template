@@ -1,9 +1,7 @@
-'use strict';
-
 import React                from 'react';
 import ReactDOM             from 'react-dom';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
-import { Routes }           from './routes/Route.jsx';
+import { Routes }           from './routes/Route';
 
 import 'babel-polyfill';
 import 'animate.css';

@@ -6,8 +6,8 @@ import {
   Router,
   Route,
   IndexRoute,
-  // hashHistory,
-  browserHistory
+  hashHistory,
+  // browserHistory
  }                              from 'react-router';
 import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
@@ -18,11 +18,12 @@ import {
   BasicElementsConnected,
   GeneralConnected
 }                               from '../containers';
+import { PageNotFound }         from '../views';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
 
 const store         = configureStore();
-const syncedHistory = syncHistoryWithStore(browserHistory, store);
+const syncedHistory = syncHistoryWithStore(hashHistory, store);
 
 export const Routes = () => {
   return (
@@ -34,6 +35,7 @@ export const Routes = () => {
             <Route path="/simpleTables" component={SimpleTablesConnected} />
             <Route path="/basicElements" component={BasicElementsConnected} />
             <Route path="/general" component={GeneralConnected} />
+            <Route path="*" component={PageNotFound} />
           </Route>
         </Router>
         { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
