@@ -1,6 +1,4 @@
-'use strict';
-
-import App    from './app/App.jsx';
+import App    from './app/App';
 import HomeConnected   from './home/Home';
 import SimpleTablesConnected from './simpleTables/SimpleTables';
 import BasicElementsConnected from './basicElements/BasicElements';

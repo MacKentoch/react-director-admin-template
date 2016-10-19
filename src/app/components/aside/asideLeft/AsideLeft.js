@@ -1,22 +1,35 @@
-'use strict';
 /* eslint no-console: 0 */
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
+import cx         from 'classnames';
 import { Link }   from 'react-router';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 
 const AsideLeft = (props) => {
-  const sideMenuClasses = classNames({
-    'left-side': true,
-    'aside-left--fixed': true,
-    'sidebar-offcanvas': true,
-    'sidebar-animated': props.isAnimated,
-    'collapse-left':    props.isCollapsed
-  });
-  const { connectionStatus, userIsConnected, username, helloWord, userPicture, showPicture } = props;
+  const {
+    connectionStatus,
+    userIsConnected,
+    username,
+    helloWord,
+    userPicture,
+    showPicture
+  } = props;
+
+  const {
+    isAnimated,
+    isCollapsed,
+    currentView
+  } = props;
+
   return (
-    <aside className={sideMenuClasses}>
+    <aside className={
+      cx({
+        'left-side': true,
+        'aside-left--fixed': true,
+        'sidebar-offcanvas': true,
+        'sidebar-animated': isAnimated,
+        'collapse-left':    isCollapsed
+      })}>
         <section className="sidebar">
           <UserPanel
             hello={helloWord}
@@ -32,27 +45,27 @@ const AsideLeft = (props) => {
           />
 
           <ul className="sidebar-menu">
-            <li className={props.currentView === 'Home' ? 'active' : '' }>
+            <li className={currentView === 'Home' ? 'active' : '' }>
               <Link to="/">
                 <i className="fa fa-dashboard"></i>
                 <span>Dashboard</span>
               </Link>
             </li>
-            <li className={props.currentView === 'General' ? 'active' : '' }>
+            <li className={currentView === 'General' ? 'active' : '' }>
               <Link
                 to="/general">
                 <i className="fa fa-gavel"></i>
                 <span>General</span>
               </Link>
             </li>
-            <li className={props.currentView === 'BasicElements' ? 'active' : '' }>
+            <li className={currentView === 'BasicElements' ? 'active' : '' }>
               <Link
                 to="/basicElements">
                 <i className="fa fa-globe"></i>
                 <span>Basic Elements</span>
               </Link>
             </li>
-            <li className={props.currentView === 'SimpleTables' ? 'active' : '' }>
+            <li className={currentView === 'SimpleTables' ? 'active' : '' }>
               <Link
                 to="/simpleTables">
                 <i className="fa fa-glass"></i>

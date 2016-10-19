@@ -1,5 +1,3 @@
-'use strict';
-
 import React, {
   PropTypes,
   Component
@@ -17,22 +15,23 @@ import { Modals }             from '../../views';
 import { appConfig }          from '../../config';
 
 class App extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      appName: appConfig.APP_NAME,
-      connectionStatus: appConfig.CONNECTION_STATUS,
-      helloWord: appConfig.HELLO_WORD
-    };
-  }
+
+  state = {
+    appName: appConfig.APP_NAME,
+    connectionStatus: appConfig.CONNECTION_STATUS,
+    helloWord: appConfig.HELLO_WORD
+  };
 
   componentDidMount() {
-    this.props.actions.fetchUserInfoDataIfNeeded();
+    const { actions: { fetchUserInfoDataIfNeeded } } = this.props;
+    fetchUserInfoDataIfNeeded();
   }
 
   render() {
     const { appName, connectionStatus, helloWord } = this.state;
     const { userInfos, userIsConnected } = this.props;
+    const { sideMenuIsCollapsed, currentView, children } = this.props;
+
     const userFullName = `${userInfos.firstname} ${userInfos.lastname.toUpperCase()}`;
     return (
       <div>
@@ -43,14 +42,14 @@ class App extends Component {
           userLastname={userInfos.lastname}
           userPicture={userInfos.picture}
           showPicture={userInfos.showPicture}
-          currentView={this.props.currentView}
-          toggleSideMenu={(e)=>this.handlesMenuButtonClick(e)}
+          currentView={currentView}
+          toggleSideMenu={this.handlesMenuButtonClick}
         />
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft
             isAnimated={true}
-            currentView={this.props.currentView}
-            isCollapsed={this.props.sideMenuIsCollapsed}
+            currentView={currentView}
+            isCollapsed={sideMenuIsCollapsed}
             helloWord={helloWord}
             connectionStatus={connectionStatus}
             userIsConnected={userIsConnected}
@@ -60,9 +59,9 @@ class App extends Component {
           />
           <AsideRight
             isAnimated={true}
-            isExpanded={this.props.sideMenuIsCollapsed}>
+            isExpanded={sideMenuIsCollapsed}>
             <div>
-              { this.props.children }
+              { children }
             </div>
           </AsideRight>
         </div>
@@ -73,9 +72,10 @@ class App extends Component {
     );
   }
 
-  handlesMenuButtonClick(event) {
+  handlesMenuButtonClick = (event) => {
     event.preventDefault();
-    this.props.actions.toggleSideMenu();
+    const { actions: { toggleSideMenu } } = this.props;
+    toggleSideMenu();
   }
 }
 
@@ -112,8 +112,7 @@ const mapStateToProps = (state) => {
     currentView:          state.views.currentView,
     sideMenuIsCollapsed:  state.sideMenu.isCollapsed,
     userInfos:            state.userInfos.data,
-    userIsConnected:      state.userInfos.isConnected,
-
+    userIsConnected:      state.userInfos.isConnected
   };
 };
 

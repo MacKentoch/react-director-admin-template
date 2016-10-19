@@ -1,18 +1,17 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
 
-const AsideRight = (props) => {
-  const asideRightClasses = classNames({
-    'right-side': true,
-    'right-side--top-margin': true,
-    'aside-right-animated': props.isAnimated,
-    'strech': props.isExpanded
-  });
-
+const AsideRight = ({children, isAnimated, isExpanded}) => {
   return (
-    <aside className={asideRightClasses}>
-      { props.children }
+    <aside className={
+      cx({
+        'right-side': true,
+        'right-side--top-margin': true,
+        'aside-right-animated': isAnimated,
+        'strech': isExpanded
+      })}>
+      { children }
     </aside>
   );
 };

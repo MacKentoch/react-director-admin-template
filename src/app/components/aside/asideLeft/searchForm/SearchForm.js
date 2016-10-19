@@ -1,5 +1,3 @@
-'use strict';
-
 import React, {
   Component,
   PropTypes
@@ -15,25 +13,20 @@ class SearchForm extends Component {
   }
 
   render() {
-    const props = this.props;
     return (
       <form
         className="sidebar-form"
-        onKeyPress={(e) =>this.handlesFormKeyPress(e) }>
+        onKeyPress={this.handlesFormKeyPress}>
         <div className="input-group">
           <input
-            ref={
-              (ref) => {
-                this.searchinput = ref;
-              }
-            }
+            ref={this.getRef}
             type="text"
             name="searchinput"
             className="form-control"
             placeholder="Search..."/>
           <span className="input-group-btn">
             <button
-              onClick={(e) => props.onSearchSubmit(e)}
+              onClick={this.handlesFormKeyPress}
               name="search"
               id="search-btn"
               className="btn btn-flat">
@@ -45,15 +38,21 @@ class SearchForm extends Component {
     );
   }
 
-  handlesButtonPress(event) {
-    event.preventDefault();
-    this.props.onSearchSubmit(this.searchinput.value.trim());
+  getRef = (ref) => {
+    this.searchinput = ref;
   }
 
-  handlesFormKeyPress(event) {
+  handlesButtonPress = (event) => {
+    event.preventDefault();
+    const { onSearchSubmit } = this.props;
+    onSearchSubmit(this.searchinput.value.trim());
+  }
+
+  handlesFormKeyPress = (event) => {
     if (event.charCode === 13) {
       event.preventDefault();
-      this.props.onSearchSubmit(this.searchinput.value.trim());
+      const { onSearchSubmit } = this.props;
+      onSearchSubmit(this.searchinput.value.trim());
     }
   }
 }
