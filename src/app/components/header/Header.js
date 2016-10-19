@@ -1,25 +1,33 @@
-'use strict';
-
 import React, { PropTypes } from 'react';
 import UserMenu from './userMenu/UserMenu';
 import TaskMenu from './taskMenu/TaskMenu';
 import MessageMenu from './messageMenu/MessageMenu';
 
 const Header = (props) => {
-  const { userLogin, userFirstname, userLastname, userPicture, showPicture } = props;
+  const {
+    userLogin,
+    userFirstname,
+    userLastname,
+    userPicture,
+    showPicture,
+
+    appName,
+    toggleSideMenu
+  } = props;
+
   return (
     <header
       className="header fixed--header">
       <a href="#"
         className="logo">
-        { props.appName }
+        { appName }
       </a>
       <nav
         className="navbar navbar-static-top"
         role="navigation">
         <a
           href="#"
-          onClick={(e)=>props.toggleSideMenu(e)}
+          onClick={toggleSideMenu}
           className="navbar-btn sidebar-toggle"
           data-toggle="offcanvas"
           role="button">

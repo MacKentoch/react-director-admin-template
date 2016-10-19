@@ -1,7 +1,4 @@
-'use strict';
-
 import { Base64 } from 'js-base64';
-
 
 export const defaultOptions = {
   credentials: 'same-origin'

@@ -1,17 +1,17 @@
-'use strict';
-
-import React, { PropTypes, Component } from 'react';
-import classNames                      from 'classnames';
+import React, {
+  PropTypes,
+  Component
+}                     from 'react';
+import cx             from 'classnames';
+import shallowCompare from 'react-addons-shallow-compare';
 
 
 class General extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      animated: true,
-      viewEnters: false
-    };
-  }
+
+  state = {
+    animated: true,
+    viewEnters: false
+  };
 
   componentWillMount() {
     this.props.actions.enterGeneral();
@@ -24,21 +24,24 @@ class General extends Component {
     );
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
   componentWillUnmount() {
     this.props.actions.leaveGeneral();
     clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const generalViewClasses = classNames({
-      'content':        true,
-      'animatedViews':  this.state.animated,
-      'invisible':      !this.state.viewEnters,
-      'view-enter':     this.state.viewEnters
-    });
-
     return(
-      <section className={generalViewClasses}>
+      <section className={
+        cx({
+          'content':        true,
+          'animatedViews':  this.state.animated,
+          'invisible':      !this.state.viewEnters,
+          'view-enter':     this.state.viewEnters
+        })}>
         <div className="row">
           <div className="col-md-12">
             {/* <!--breadcrumbs start --> */}

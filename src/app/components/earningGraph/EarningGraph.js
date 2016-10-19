@@ -1,17 +1,15 @@
-'use strict';
-
 import React, {
   Component,
   PropTypes
-}                 from 'react';
-import Chart      from 'chart.js';
-import { earningGraphMockData } from '../../models';
+}                     from 'react';
+import Chart          from 'chart.js';
+import {
+  earningGraphMockData
+}                     from '../../models';
+import shallowCompare from 'react-addons-shallow-compare';
 
 
 class EarningGraph extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
 
   componentDidMount() {
     const { labels, datasets } = this.props;
@@ -27,6 +25,10 @@ class EarningGraph extends Component {
         datasets: newProps.datasets
       });
     }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
   }
 
   render() {

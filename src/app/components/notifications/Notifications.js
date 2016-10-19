@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 const Notifications = () => {
@@ -65,7 +63,7 @@ const Notifications = () => {
           </button>
           <strong>Warning!</strong> Best check yo self, you're not looking too good.
         </div>
-        
+
       </div>
     </section>
   );

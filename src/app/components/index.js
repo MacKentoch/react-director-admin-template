@@ -1,5 +1,3 @@
-'use strict';
-
 import Header from './header/Header.js';
 import { AsideLeft, AsideRight } from './aside';
 import TodoList from './todoList/TodoList';
@@ -10,6 +8,7 @@ import TeamMates from './teamMates/TeamMates';
 import TwitterFeed from './twitterFeed/TwitterFeed';
 import WorkProgress from './workProgress/WorkProgress';
 import StatsCard from './statsCard/StatsCard';
+import Jumbotron from './jumbotron/Jumbotron';
 
 export {
   Header,
@@ -22,5 +21,6 @@ export {
   TeamMates,
   TwitterFeed,
   WorkProgress,
-  StatsCard
+  StatsCard,
+  Jumbotron
 };

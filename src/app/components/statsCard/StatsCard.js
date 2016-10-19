@@ -1,20 +1,19 @@
-'use strict';
-
 import React, { PropTypes } from 'react';
 
-const StatsCard = (props) => {
-  const colorClass = `sm-st-icon st-${props.backColor}`;
+const StatsCard = ({ statValue, statLabel, icon, backColor }) => {
+  const colorClass = `sm-st-icon st-${backColor}`;
+
   return (
     <div className="sm-st clearfix">
-      <span className={colorClass}>
-        {props.icon}
+      <span className={ colorClass }>
+        { icon }
       </span>
       <div className="sm-st-info">
         <span>
-          {props.statValue}
+          { statValue }
         </span>
         <div>
-          { props.statLabel }
+          { statLabel }
         </div>
       </div>
     </div>

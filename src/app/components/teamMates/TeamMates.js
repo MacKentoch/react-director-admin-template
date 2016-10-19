@@ -1,10 +1,9 @@
-'use strict';
-
 import React, { PropTypes } from 'react';
 import TeamMember from './teamMember/TeamMember';
 
 const TeamMates = (props) => {
   const { members } = props;
+
   return (
     <div className="panel">
       <header className="panel-heading">

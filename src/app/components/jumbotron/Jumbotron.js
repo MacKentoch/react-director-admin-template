@@ -1,11 +1,9 @@
-'use strict';
-
 import React from 'react';
 
-const Jombotron = (props) => {
+const Jombotron = ({ children }) => {
   return (
     <div className="jumbotron">
-      {props.children}
+      { children }
     </div>
   );
 };

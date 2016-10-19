@@ -1,5 +1,3 @@
-'use strict';
-
 import { appConfig }    from '../config';
 import {
   earningGraphMockData,

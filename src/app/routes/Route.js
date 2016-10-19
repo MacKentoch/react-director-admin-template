@@ -1,6 +1,4 @@
-'use strict';
 /* eslint no-process-env:0 */
-
 import React from 'react';
 import {
   Router,

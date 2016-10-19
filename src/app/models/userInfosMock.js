@@ -1,5 +1,3 @@
-'use strict';
-
 export const userInfosMockData = {
   login: 'abcdef',
   firstname: 'Jean',

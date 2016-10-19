@@ -1,5 +1,3 @@
-'use strict';
-
 export const navigation = {
   brand:      'reactDirectorAdmin',
   leftLinks:  [],

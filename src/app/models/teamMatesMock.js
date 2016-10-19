@@ -1,5 +1,3 @@
-'use strict';
-
 export const teamMatesMock = [
   {
     picture: './public/img/26115.jpg',
