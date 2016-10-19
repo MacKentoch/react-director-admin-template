@@ -13,6 +13,10 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 
 ## Usage
 
+### preview
+
+[Preview of application here](https://mackentoch.github.io/react-director-admin-template)
+
 ### Install
 ```bash
 npm install
