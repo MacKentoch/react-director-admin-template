@@ -1,7 +1,4 @@
-'use strict';
-
 import React from 'react';
-
 
 const Modals = () => {
   return(

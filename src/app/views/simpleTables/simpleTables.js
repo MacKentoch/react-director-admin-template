@@ -1,20 +1,21 @@
-'use strict';
-
-import React, { PropTypes, Component } from 'react';
-import classNames                      from 'classnames';
+import React, {
+  PropTypes,
+  Component
+}                       from 'react';
+import cx               from 'classnames';
+import shallowCompare   from 'react-addons-shallow-compare';
 
 
 class SimpleTables extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      animated: true,
-      viewEnters: false
-    };
-  }
+
+  state = {
+    animated: true,
+    viewEnters: false
+  };
 
   componentWillMount() {
-    this.props.actions.enterSimpleTables();
+    const { actions: {  enterSimpleTables } } = this.props;
+    enterSimpleTables();
   }
 
   componentDidMount() {
@@ -24,21 +25,28 @@ class SimpleTables extends Component {
     );
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
   componentWillUnmount() {
-    this.props.actions.leaveSimpleTables();
+    const { actions: {  leaveSimpleTables } } = this.props;
+    leaveSimpleTables();
     clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const simpleTablesViewClasses = classNames({
-      'content':        true,
-      'animatedViews':  this.state.animated,
-      'invisible':      !this.state.viewEnters,
-      'view-enter':     this.state.viewEnters
-    });
+    const { animated, viewEnters } = this.state;
 
     return(
-      <section className={simpleTablesViewClasses}>
+      <section className={
+        cx({
+          'content':        true,
+          'animatedViews':  animated,
+          'invisible':      !viewEnters,
+          'view-enter':     viewEnters
+        })
+      }>
         <div className="row">
           <div className="col-md-6">
             <div className="panel">

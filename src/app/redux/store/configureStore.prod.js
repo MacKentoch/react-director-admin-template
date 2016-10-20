@@ -18,7 +18,7 @@ const loggerMiddleware = createLogger({
 
 // createStore : enhancer
 const enhancer = compose(
-  applyMiddleware(loggerMiddleware, thunkMiddleware)
+  applyMiddleware(thunkMiddleware, loggerMiddleware)
 );
 
 // combine reducers
