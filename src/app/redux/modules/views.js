@@ -1,0 +1,131 @@
+import moment from 'moment';
+
+const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
+const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
+
+const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
+const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
+
+const ENTER_BASIC_ELEMENTS_VIEW = 'ENTER_BASIC_ELEMENTS_VIEW';
+const LEAVE_BASIC_ELEMENTS_VIEW = 'LEAVE_BASIC_ELEMENTS_VIEW';
+
+const ENTER_GENERAL_VIEW  = 'ENTER_GENERAL_VIEW';
+const LEAVE_GENERAL_VIEW  = 'LEAVE_GENERAL_VIEW';
+
+
+const initialState = {
+  currentView:  'home',
+  enterTime:    null,
+  leaveTime:    null
+};
+
+export default function views(state = initialState, action) {
+  switch (action.type) {
+
+  case 'ENTER_HOME_VIEW':
+  case 'ENTER_SIMPLE_TABLES_VIEW':
+  case 'ENTER_BASIC_ELEMENTS_VIEW':
+  case 'ENTER_GENERAL_VIEW':
+    // can't enter if you are already inside
+    if (state.currentView !== action.currentView) {
+      return {
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+    return state;
+
+  case 'LEAVE_HOME_VIEW':
+  case 'LEAVE_SIMPLE_TABLES_VIEW':
+  case 'LEAVE_BASIC_ELEMENTS_VIEW':
+  case 'LEAVE_GENERAL_VIEW':
+    // can't leave if you aren't already inside
+    if (state.currentView === action.currentView) {
+      return {
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+    return state;
+
+  default:
+    return state;
+  }
+}
+
+
+export function enterHome(time = moment().format()) {
+  return {
+    type:         ENTER_HOME_VIEW,
+    currentView:  'Home',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveHome(time = moment().format()) {
+  return {
+    type:         LEAVE_HOME_VIEW,
+    currentView:  'Home',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterSimpleTables(time = moment().format()) {
+  return {
+    type:         ENTER_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveSimpleTables(time = moment().format()) {
+  return {
+    type:         LEAVE_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterBasicElements(time = moment().format()) {
+  return {
+    type:         ENTER_BASIC_ELEMENTS_VIEW,
+    currentView:  'BasicElements',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveBasicElements(time = moment().format()) {
+  return {
+    type:         LEAVE_BASIC_ELEMENTS_VIEW,
+    currentView:  'BasicElements',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterGeneral(time = moment().format()) {
+  return {
+    type:         ENTER_GENERAL_VIEW,
+    currentView:  'General',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveGeneral(time = moment().format()) {
+  return {
+    type:         LEAVE_GENERAL_VIEW,
+    currentView:  'General',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
