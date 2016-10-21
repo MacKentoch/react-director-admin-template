@@ -1,9 +1,9 @@
-import { appConfig }    from '../config';
+import { appConfig }    from '../../config';
 import {
   earningGraphMockData,
   userInfosMockData,
   teamMatesMock
-}                       from '../models';
+}                       from '../../models';
 
 export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
   return new Promise(
