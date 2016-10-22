@@ -65,7 +65,7 @@ class TelephoneInput extends Component {
             type="text"
             // value={value}
             defaultValue={stateValue}
-            // onChange={this.handlesOnChange} // IE11 misses keys... yes I know what you think...
+            // onChange={this.handlesOnChange} // IE11 misses some keys entered... yes I know what you think...
             onInput={this.handlesOnChange}
           />
         </div>

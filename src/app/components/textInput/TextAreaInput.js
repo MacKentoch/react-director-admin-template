@@ -52,7 +52,7 @@ class TextAreaInput extends Component {
             id={id}
             // value={stateValue}
             defaultValue={stateValue}
-            // onChange={this.handlesOnChange} // IE11 miss keys... yes I know what you think...
+            // onChange={this.handlesOnChange} // IE11 misses some keys entered... yes I know what you think...
             onInput={this.handlesOnChange}
           />
         </div>
