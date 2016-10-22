@@ -7,7 +7,7 @@ import { connect }            from 'react-redux';
 import * as actions           from '../../redux/modules/actions';
 import {
   Header,
-  Footer,
+  // Footer,
   AsideLeft,
   AsideRight
 }                             from '../../components';
@@ -65,7 +65,7 @@ class App extends Component {
             </div>
           </AsideRight>
         </div>
-        <Footer />
+        {/* <Footer /> */}
         {/* modals cannot be placed anywhere (avoid backdrop or modal placement issues) so all grouped in same component and outside .wrapper*/}
         <Modals />
       </div>
