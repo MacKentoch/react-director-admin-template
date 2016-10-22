@@ -9,7 +9,7 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 - Director template (see [original one here]((http://web-apps.ninja/director-free-responsive-admin-template/)))
 - ReactJS
 - Redux (*+ hot reload + devTools*)
-  - since v0.2.0: adopted redux ducks (*for clarity, easier read and maintenance*)
+  - since v0.2.0: adopted redux ducks (*for clarity*)
 - *...more content coming soon*
 
 ## Usage
