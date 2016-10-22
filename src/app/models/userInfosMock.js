@@ -2,6 +2,6 @@ export const userInfosMockData = {
   login: 'abcdef',
   firstname: 'Jean',
   lastname: 'Dupond',
-  picture: '/img/avatar5.png',
+  picture: './public/img/26115.jpg',
   showPicture: true
 };
