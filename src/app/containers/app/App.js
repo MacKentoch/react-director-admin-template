@@ -4,7 +4,7 @@ import React, {
 }                             from 'react';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
-import * as actions           from '../../redux/actions';
+import * as actions           from '../../redux/modules/actions';
 import {
   Header,
   Footer,

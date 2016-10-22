@@ -14,9 +14,9 @@ import {
   HomeConnected,
   SimpleTablesConnected,
   BasicElementsConnected,
-  GeneralConnected
+  GeneralConnected,
+  PageNotFoundConnected
 }                               from '../containers';
-import { PageNotFound }         from '../views';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
 
@@ -33,7 +33,7 @@ export const Routes = () => {
             <Route path="/simpleTables" component={SimpleTablesConnected} />
             <Route path="/basicElements" component={BasicElementsConnected} />
             <Route path="/general" component={GeneralConnected} />
-            <Route path="*" component={PageNotFound} />
+            <Route path="*" component={PageNotFoundConnected} />
           </Route>
         </Router>
         { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }

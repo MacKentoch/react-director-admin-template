@@ -35,7 +35,7 @@ class TextAreaInput extends Component {
   }
 
   render() {
-    const {label, id, value, nbrows} = this.props;
+    const {label, id, nbrows} = this.props;
     const { stateValue } = this.state;
 
     return (
@@ -48,7 +48,7 @@ class TextAreaInput extends Component {
         <div>
           <textarea
             className="form-control"
-            rows="3"
+            rows={nbrows}
             id={id}
             // value={stateValue}
             defaultValue={stateValue}

@@ -1,3 +1,4 @@
+// fetchTools:
 import {
   defaultOptions,
   checkStatus,
@@ -5,13 +6,17 @@ import {
   getLocationOrigin,
   encodeBase64
 }                             from './fetchTools';
+// fetchMocks:
 import {
   fetchMockEarningGraphData,
   fetchMockUserInfosData,
   fetchMockTeamMatesData
 }                             from './fetchMocks';
+// API:
 import {
-  getEarningGraphData
+  getEarningGraphData,
+  getTeamMatesData,
+  getUserInfoData
 }                             from './API';
 
 export {
@@ -26,5 +31,7 @@ export {
   fetchMockUserInfosData,
   fetchMockTeamMatesData,
   // API:
-  getEarningGraphData
+  getEarningGraphData,
+  getTeamMatesData,
+  getUserInfoData
 };

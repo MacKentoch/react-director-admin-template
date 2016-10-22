@@ -1,11 +1,14 @@
-'use strict';
-
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
+import {
+  createStore,
+  compose,
+  combineReducers,
+  applyMiddleware
+}                               from 'redux';
 import { persistState }         from 'redux-devtools';
 import { routerReducer }        from 'react-router-redux';
 import createLogger             from 'redux-logger';
 import thunkMiddleware          from 'redux-thunk';
-import * as reducers            from '../reducers';
+import * as reducers            from '../modules/reducers';
 import DevTools                 from '../devTools/DevTools.jsx';
 
 
@@ -34,8 +37,8 @@ const reducer = combineReducers({
 
 export default function configureStore(initialState) {
   const store = createStore(reducer, initialState, enhancer);
-  module.hot.accept('../reducers', () =>
-    store.replaceReducer(require('../reducers').default)
+  module.hot.accept('../modules/reducers', () =>
+    store.replaceReducer(require('../modules/reducers').default)
   );
   return store;
 }

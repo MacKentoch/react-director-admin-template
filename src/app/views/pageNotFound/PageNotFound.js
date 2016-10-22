@@ -13,7 +13,7 @@ class PageNotFound extends Component {
 
   componentDidMount() {
     const  { actions } =  this.props;
-    // actions.enterRecherche();
+    actions.enterPageNotFound();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -22,7 +22,7 @@ class PageNotFound extends Component {
 
   componentWillUnmount() {
     const { actions } = this.props;
-    // actions.leaveRecherche();
+    actions.leavePageNotFound();
   }
 
   render() {
@@ -55,8 +55,8 @@ class PageNotFound extends Component {
 
 PageNotFound.propTypes = {
   actions: PropTypes.shape({
-    // enterRecherche: PropTypes.func,
-    // leaveRecherche: PropTypes.func
+    enterPageNotFound: PropTypes.func.isRequired,
+    leavePageNotFound: PropTypes.func.isRequired
   })
 };
 

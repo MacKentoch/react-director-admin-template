@@ -61,6 +61,13 @@ export default function earningGraph(state = initialState, action) {
 /*
   action creators
  */
+export function fetchEarningGraphDataIfNeeded() {
+  return (dispatch, getState) => {
+    if (shouldFetchEarningData(getState())) {
+      return dispatch(fetchEarningGraphData());
+    }
+  };
+}
 function requestEarningGraphData(time = moment().format()) {
   return {
     type:       REQUEST_EARNING_GRAPH_DATA,
@@ -102,13 +109,6 @@ function fetchEarningGraphData() {
         .catch(
           error => dispatch(errorEarningGraphData(error))
         );
-    }
-  };
-}
-export function fetchEarningGraphDataIfNeeded() {
-  return (dispatch, getState) => {
-    if (shouldFetchEarningData(getState())) {
-      return dispatch(fetchEarningGraphData());
     }
   };
 }

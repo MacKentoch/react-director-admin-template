@@ -12,6 +12,8 @@ const LEAVE_BASIC_ELEMENTS_VIEW = 'LEAVE_BASIC_ELEMENTS_VIEW';
 const ENTER_GENERAL_VIEW  = 'ENTER_GENERAL_VIEW';
 const LEAVE_GENERAL_VIEW  = 'LEAVE_GENERAL_VIEW';
 
+const ENTER_PAGE_NOT_FOUND_VIEW  = 'ENTER_PAGE_NOT_FOUND_VIEW';
+const LEAVE_PAGE_NOT_FOUND_VIEW  = 'LEAVE_PAGE_NOT_FOUND_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -22,10 +24,11 @@ const initialState = {
 export default function views(state = initialState, action) {
   switch (action.type) {
 
-  case 'ENTER_HOME_VIEW':
-  case 'ENTER_SIMPLE_TABLES_VIEW':
-  case 'ENTER_BASIC_ELEMENTS_VIEW':
-  case 'ENTER_GENERAL_VIEW':
+  case ENTER_HOME_VIEW:
+  case ENTER_SIMPLE_TABLES_VIEW:
+  case ENTER_BASIC_ELEMENTS_VIEW:
+  case ENTER_GENERAL_VIEW:
+  case ENTER_PAGE_NOT_FOUND_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -37,10 +40,11 @@ export default function views(state = initialState, action) {
     }
     return state;
 
-  case 'LEAVE_HOME_VIEW':
-  case 'LEAVE_SIMPLE_TABLES_VIEW':
-  case 'LEAVE_BASIC_ELEMENTS_VIEW':
-  case 'LEAVE_GENERAL_VIEW':
+  case LEAVE_HOME_VIEW:
+  case LEAVE_SIMPLE_TABLES_VIEW:
+  case LEAVE_BASIC_ELEMENTS_VIEW:
+  case LEAVE_GENERAL_VIEW:
+  case LEAVE_PAGE_NOT_FOUND_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -125,6 +129,24 @@ export function leaveGeneral(time = moment().format()) {
   return {
     type:         LEAVE_GENERAL_VIEW,
     currentView:  'General',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterPageNotFound(time = moment().format()) {
+  return {
+    type:         ENTER_PAGE_NOT_FOUND_VIEW,
+    currentView:  'PageNotFound',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leavePageNotFound(time = moment().format()) {
+  return {
+    type:         LEAVE_PAGE_NOT_FOUND_VIEW,
+    currentView:  'PageNotFound',
     enterTime:    null,
     leaveTime:    time
   };

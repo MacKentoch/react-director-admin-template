@@ -44,7 +44,6 @@ export function closeSideMenu(time = moment().format()) {
     time
   };
 }
-
 export function toggleSideMenu() {
   return (dispatch, getState) => {
     const state     = getState();

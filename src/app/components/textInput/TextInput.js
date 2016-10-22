@@ -34,7 +34,7 @@ class TextInput extends Component {
   }
 
   render() {
-    const {label, id, value} = this.props;
+    const {label, id} = this.props;
     const { stateValue } = this.state;
 
     return (

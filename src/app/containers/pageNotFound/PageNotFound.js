@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as actions           from '../../redux/modules/actions';
-import { BasicElements }       from '../../views';
+import { PageNotFound }       from '../../views';
 
 const mapStateToProps = (state) => {
   return {
@@ -9,21 +9,20 @@ const mapStateToProps = (state) => {
   };
 };
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     actions : bindActionCreators(
       {
-        enterBasicElements: actions.enterBasicElements,
-        leaveBasicElements: actions.leaveBasicElements
+        enterPageNotFound: actions.enterPageNotFound,
+        leavePageNotFound: actions.leavePageNotFound
       },
       dispatch)
   };
 };
 
-const BasicElementsConnected = connect(
+const PageNotFoundConnected = connect(
   mapStateToProps,
   mapDispatchToProps
-)(BasicElements);
+)(PageNotFound);
 
-export default BasicElementsConnected;
+export default PageNotFoundConnected;
