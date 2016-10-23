@@ -3,7 +3,8 @@
 }
 
 .aside-right-animated {
-  transition: all 0.2s;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
 }
 
 .right-side.strech {
