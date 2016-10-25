@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import UserMenu from './userMenu/UserMenu';
 import TaskMenu from './taskMenu/TaskMenu';
 import MessageMenu from './messageMenu/MessageMenu';
+import Button from './button/Button';
 
 const Header = (props) => {
   const {
@@ -25,17 +26,9 @@ const Header = (props) => {
       <nav
         className="navbar navbar-static-top"
         role="navigation">
-        <a
-          href="#"
-          onClick={toggleSideMenu}
-          className="navbar-btn sidebar-toggle"
-          data-toggle="offcanvas"
-          role="button">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar"></span>
-          <span className="icon-bar"></span>
-          <span className="icon-bar"></span>
-        </a>
+        <Button
+          toggleSideMenu={toggleSideMenu}
+        />
         <div className="navbar-right">
           <ul className="nav navbar-nav">
             <MessageMenu />
