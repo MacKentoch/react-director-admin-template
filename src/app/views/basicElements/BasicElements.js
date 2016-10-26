@@ -4,6 +4,9 @@ import React, {
 }                     from 'react';
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
+import {
+  BasicForms
+}                     from '../../components';
 
 class BasicElements extends Component {
 
@@ -45,62 +48,9 @@ class BasicElements extends Component {
         })}>
         <div className="row">
           <div className="col-lg-6">
-            <section className="panel">
-              <header className="panel-heading">
-                Basic Forms
-              </header>
-              <div className="panel-body">
-                <form role="form">
-                  <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">
-                      Email address
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      placeholder="Enter email"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label
-                      htmlFor="exampleInputPassword1">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="exampleInputFile">
-                      File input
-                    </label>
-                    <input
-                      type="file"
-                      id="exampleInputFile"
-                    />
-                    <p className="help-block">
-                      Example block-level help text here.
-                    </p>
-                  </div>
-                  <div className="checkbox">
-                    <label>
-                      <input type="checkbox" />
-                       Check me out
-                    </label>
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-info">
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </section>
+            <BasicForms />
           </div>
+          
           <div className="col-lg-6">
             <section className="panel">
               <header className="panel-heading">

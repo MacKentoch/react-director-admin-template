@@ -9,6 +9,8 @@ import TwitterFeed from './twitterFeed/TwitterFeed';
 import WorkProgress from './workProgress/WorkProgress';
 import StatsCard from './statsCard/StatsCard';
 import Jumbotron from './jumbotron/Jumbotron';
+import BasicForms from './basicForms/BasicForms';
+import Panel from './panel/Panel';
 
 export {
   Header,
@@ -22,5 +24,7 @@ export {
   TwitterFeed,
   WorkProgress,
   StatsCard,
-  Jumbotron
+  Jumbotron,
+  BasicForms,
+  Panel
 };
