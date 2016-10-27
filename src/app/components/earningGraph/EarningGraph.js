@@ -7,6 +7,7 @@ import {
   earningGraphMockData
 }                     from '../../models';
 import shallowCompare from 'react-addons-shallow-compare';
+import Panel          from '../panel/Panel';
 
 
 class EarningGraph extends Component {
@@ -33,21 +34,18 @@ class EarningGraph extends Component {
 
   render() {
     return (
-      <section className="panel">
-        <header className="panel-heading">
-          Earning Graph
-        </header>
-        <div className="panel-body">
-          <canvas
-            ref={ (ref)=>{
-              this.linechart = ref;
-            } }
-            id="linechart"
-            width="600"
-            height="330" >
-          </canvas>
-        </div>
-      </section>
+      <Panel
+        hasTitle={true}
+        title={'Earning Graph'}>
+        <canvas
+          ref={ (ref)=>{
+            this.linechart = ref;
+          } }
+          id="linechart"
+          width="600"
+          height="330" >
+        </canvas>
+      </Panel>
     );
   }
 
