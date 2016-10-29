@@ -3,8 +3,8 @@ import React, { PropTypes } from 'react';
 const Tweet = ({
   time,
   author,
-  authorAvatar
-
+  authorAvatar,
+  children
 }) => {
   return (
     <li className="media">
@@ -30,20 +30,7 @@ const Tweet = ({
             {author}
           </strong>
         </a>
-        <p>
-          In hac
-          <a href="#">
-            habitasse
-          </a>
-           platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-          <a
-            href="#"
-            className="text-danger">
-            <strong>
-              #dev
-            </strong>
-          </a>
-        </p>
+        { children }
       </div>
     </li>
   );
@@ -52,8 +39,8 @@ const Tweet = ({
 Tweet.propTypes = {
   time: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  authorAvatar: PropTypes.object.isRequired,
-  tweetMessage: PropTypes.node.isRequired
+  authorAvatar: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Tweet;

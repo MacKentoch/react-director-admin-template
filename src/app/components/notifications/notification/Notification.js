@@ -27,7 +27,7 @@ const Notification = ({children, type}) => {
 };
 
 Notification.propTypes = {
-  type: PropTypes.oneOf(['danger', 'sucess', 'info', 'warning']),
+  type: PropTypes.oneOf(['danger', 'success', 'info', 'warning']),
   children: PropTypes.node
 };
 
