@@ -5,7 +5,8 @@ import React, {
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import {
-  Breadcrumb
+  Breadcrumb,
+  Stat
 }                     from '../../components';
 
 class General extends Component {
@@ -54,7 +55,13 @@ class General extends Component {
         <div className="row">
 
           <div className="col-md-2">
-            <div className="stat">
+            <Stat
+              statFaIconName="fa-file-o"
+              statIconColor="#fa8564"
+              statLabel="999 Projects"
+            />
+
+            {/* <div className="stat">
               <div style={{textAlign: 'center'}}>
                 <span className="fa-stack fa-lg fa-3x">
                   <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
@@ -64,7 +71,7 @@ class General extends Component {
               <h5 className="stat-info">
                 999 Projects
               </h5>
-            </div>
+            </div> */}
           </div>
 
           <div className="col-md-2">

@@ -13,6 +13,7 @@ import BasicForms from './basicForms/BasicForms';
 import Panel from './panel/Panel';
 import Horloge from './horloge/Horloge';
 import Breadcrumb from './breadcrumb/Breadcrumb';
+import Stat from './stat/Stat';
 
 export {
   Header,
@@ -30,5 +31,6 @@ export {
   BasicForms,
   Panel,
   Horloge,
-  Breadcrumb
+  Breadcrumb,
+  Stat
 };

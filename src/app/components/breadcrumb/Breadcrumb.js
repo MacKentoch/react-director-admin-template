@@ -34,7 +34,8 @@ const Breadcrumb = ({ path }) => {
           }
           if (viewIndex === path.length - 1) {
             return (
-              <li className="active">
+              <li key={viewIndex}
+                className="active">
                 {view}
               </li>
             );
