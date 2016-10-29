@@ -26,15 +26,16 @@ export const localStorageManager = store => next => action => {
       if (permanentStore.ReadOrWrite) {
         // write to localStorage
         localStorage.setItem(key, jsonStringify(value));
-        next(action);
+        next({ ...action, permanentStore: {...permanentStore} });
       } else {
         // read localStorage and set action.permanentStore.value to read value from localStorage
         permanentStore.storeValue = jsonParse(localStorage.getItem(key));
-        next(action);
+        next({ ...action, permanentStore: {...permanentStore} });
       }
+    } else {
+      // permanent storage not needed in this action:
+      next(action);
     }
-    // permanent storage not needed in this action:
-    next(action);
   } else {
     next(action);
   }
