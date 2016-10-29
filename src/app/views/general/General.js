@@ -53,89 +53,48 @@ class General extends Component {
           </div>
         </div>
         <div className="row">
-
           <div className="col-md-2">
             <Stat
               statFaIconName="fa-file-o"
               statIconColor="#fa8564"
               statLabel="999 Projects"
             />
-
-            {/* <div className="stat">
-              <div style={{textAlign: 'center'}}>
-                <span className="fa-stack fa-lg fa-3x">
-                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
-                  <i className="fa fa-file-o fa-stack-1x fa-inverse" style={{color: '#fa8564'}}></i>
-                </span>
-              </div>
-              <h5 className="stat-info">
-                999 Projects
-              </h5>
-            </div> */}
-          </div>
-
-          <div className="col-md-2">
-            <div className="stat">
-              <div style={{textAlign: 'center'}}>
-                <span className="fa-stack fa-lg fa-3x">
-                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
-                  <i className="fa fa-paperclip fa-stack-1x fa-inverse" style={{color: '#45cf95'}}></i>
-                </span>
-              </div>
-              <h5 className="stat-info">
-                999 Documents
-              </h5>
-            </div>
-          </div>
-
-          <div className="col-md-2">
-            <div className="stat">
-              <div style={{textAlign: 'center'}}>
-                <span className="fa-stack fa-lg fa-3x">
-                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
-                  <i className="fa fa-envelope-o fa-stack-1x fa-inverse" style={{color: '#AC75F0'}}></i>
-                </span>
-              </div>
-              <h5 className="stat-info">
-                999 Messages
-              </h5>
-            </div>
-          </div>
-
-          <div className="col-md-2">
-            <div className="stat">
-              <div
-                className="stat-icon"
-                style={{color: '#45cf95'}}>
-                <i className="fa fa-check-square-o fa-3x stat-elem"></i>
-              </div>
-              <h5 className="stat-info">
-                1000 Tasks
-              </h5>
-            </div>
           </div>
           <div className="col-md-2">
-            <div className="stat">
-              <div
-                className="stat-icon" style={{color:'#AC75F0'}}>
-                <i className="fa fa-dollar fa-3x stat-elem"></i>
-              </div>
-              <h5 className="stat-info">
-                $99999 Earnings
-              </h5>
-            </div>
+            <Stat
+              statFaIconName="fa-paperclip"
+              statIconColor="#45cf95"
+              statLabel="999 Documents"
+            />
           </div>
           <div className="col-md-2">
-            <div className="stat">
-              <div
-                className="stat-icon"
-                style={{color:'#fa8564'}}>
-                <i className="fa fa-refresh fa-spin fa-3x stat-elem"></i>
-              </div>
-              <h5 className="stat-info">
-                Procesing....
-              </h5>
-            </div>
+            <Stat
+              statFaIconName="fa-envelope-o"
+              statIconColor="#AC75F0"
+              statLabel="999 Messages"
+            />
+          </div>
+          <div className="col-md-2">
+            <Stat
+              statFaIconName="fa-check-square-o"
+              statIconColor="#45cf95"
+              statLabel="1000 Tasks"
+            />
+          </div>
+          <div className="col-md-2">
+            <Stat
+              statFaIconName="fa-dollar"
+              statIconColor="#AC75F0"
+              statLabel="$99999 Earnings"
+            />
+          </div>
+          <div className="col-md-2">
+            <Stat
+              statFaIconName="fa-refresh"
+              statIconColor="#fa8564"
+              statIconSpin={true}
+              statLabel="Processing...."
+            />
           </div>
         </div>
         <div className="row">
