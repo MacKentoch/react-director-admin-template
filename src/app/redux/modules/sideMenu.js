@@ -20,8 +20,6 @@ export default function sideMenu(state = initialState, action) {
   switch (action.type) {
 
   case GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE:
-    console.log('action.permanentStore.storeValue: ', action.permanentStore.storeValue);
-    console.log('Boolean(action.permanentStore.storeValue): ', Boolean(action.permanentStore.storeValue));
     return {
       isCollapsed:  Boolean(action.permanentStore.storeValue),
       time:         action.time
