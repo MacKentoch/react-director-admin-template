@@ -12,6 +12,7 @@ import Jumbotron from './jumbotron/Jumbotron';
 import BasicForms from './basicForms/BasicForms';
 import Panel from './panel/Panel';
 import Horloge from './horloge/Horloge';
+import Breadcrumb from './breadcrumb/Breadcrumb';
 
 export {
   Header,
@@ -28,5 +29,6 @@ export {
   Jumbotron,
   BasicForms,
   Panel,
-  Horloge
+  Horloge,
+  Breadcrumb
 };

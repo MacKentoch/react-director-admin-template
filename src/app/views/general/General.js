@@ -4,7 +4,9 @@ import React, {
 }                     from 'react';
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
-
+import {
+  Breadcrumb
+}                     from '../../components';
 
 class General extends Component {
 
@@ -44,25 +46,9 @@ class General extends Component {
         })}>
         <div className="row">
           <div className="col-md-12">
-            {/* <!--breadcrumbs start --> */}
-            <ul className="breadcrumb">
-              <li>
-                <a href="#">
-                  <i className="fa fa-home"></i>
-                    &nbsp;
-                    Home
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Dashboard
-                </a>
-              </li>
-              <li className="active">
-                Current page
-              </li>
-            </ul>
-            {/* <!--breadcrumbs end --> */}
+            <Breadcrumb
+              path={['Home', 'Dashboard', 'Current page']}
+            />
           </div>
         </div>
         <div className="row">
