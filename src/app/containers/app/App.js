@@ -23,8 +23,15 @@ class App extends Component {
   };
 
   componentDidMount() {
-    const { actions: { fetchUserInfoDataIfNeeded } } = this.props;
+    const {
+      actions: {
+        fetchUserInfoDataIfNeeded,
+        getSideMenuCollpasedStateFromLocalStorage
+      }
+    } = this.props;
+
     fetchUserInfoDataIfNeeded();
+    getSideMenuCollpasedStateFromLocalStorage();
   }
 
   render() {

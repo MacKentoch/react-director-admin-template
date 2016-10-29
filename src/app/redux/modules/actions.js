@@ -4,7 +4,8 @@ import {fetchEarningGraphDataIfNeeded} from './earningGraph';
 import {
   openSideMenu,
   closeSideMenu,
-  toggleSideMenu
+  toggleSideMenu,
+  getSideMenuCollpasedStateFromLocalStorage
 }                                      from './sideMenu';
 // teamMates:
 import {fetchTeamMatesDataIfNeeded}    from './teamMates';
@@ -36,6 +37,7 @@ export {
   openSideMenu,
   closeSideMenu,
   toggleSideMenu,
+  getSideMenuCollpasedStateFromLocalStorage,
   // teamMates:
   fetchTeamMatesDataIfNeeded,
   // userInfos:
