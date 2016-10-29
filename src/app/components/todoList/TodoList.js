@@ -1,4 +1,6 @@
 import React from 'react';
+import TodoListItem from './todoListItem/TodoListItem';
+
 
 const TodoList = () => {
   return (
@@ -9,22 +11,7 @@ const TodoList = () => {
       <div className="panel-body">
         <div className="task-content">
           <ul className="task-list">
-              <li>
-                <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey list-child"/>
-                    {/* <!-- <input type="checkbox" className="square-grey"/> --> */}
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Director is Modern Dashboard</span>
-                  <span className="label label-success">2 Days</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
+              <TodoListItem />
               <li>
                 <div className="task-checkbox">
                     {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
