@@ -4,6 +4,8 @@ import cx         from 'classnames';
 import { Link }   from 'react-router';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
+import Horloge    from '../../horloge/Horloge';
+
 
 const AsideLeft = (props) => {
   const {
@@ -39,10 +41,12 @@ const AsideLeft = (props) => {
             userPicture={userPicture}
             showUserPicture={showPicture}
           />
+          <Horloge />
 
           <SearchForm
             onSearchSubmit={(value) => console.log('searching: ', value)}
           />
+
 
           <ul className="sidebar-menu">
             <li className={currentView === 'Home' ? 'active' : '' }>

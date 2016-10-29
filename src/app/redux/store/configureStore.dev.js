@@ -10,6 +10,7 @@ import createLogger             from 'redux-logger';
 import thunkMiddleware          from 'redux-thunk';
 import * as reducers            from '../modules/reducers';
 import DevTools                 from '../devTools/DevTools.jsx';
+import { localStorageManager }  from '../middleware';
 
 
 const loggerMiddleware = createLogger({
@@ -19,7 +20,7 @@ const loggerMiddleware = createLogger({
 
 // createStore : enhancer
 const enhancer = compose(
-  applyMiddleware(thunkMiddleware, loggerMiddleware),
+  applyMiddleware(localStorageManager, thunkMiddleware, loggerMiddleware),
   persistState(getDebugSessionKey()),
   DevTools.instrument()
 );

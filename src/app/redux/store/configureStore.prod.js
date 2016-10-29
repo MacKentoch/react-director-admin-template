@@ -3,14 +3,15 @@ import {
   applyMiddleware,
   compose,
   combineReducers
-}                         from 'redux';
-import thunkMiddleware    from 'redux-thunk';
-import * as reducers      from '../modules/reducers';
-import { routerReducer }  from 'react-router-redux';
+}                               from 'redux';
+import thunkMiddleware          from 'redux-thunk';
+import * as reducers            from '../modules/reducers';
+import { routerReducer }        from 'react-router-redux';
+import { localStorageManager }  from '../middleware';
 
 // createStore : enhancer
 const enhancer = compose(
-  applyMiddleware(thunkMiddleware)
+  applyMiddleware(localStorageManager, thunkMiddleware)
 );
 
 // combine reducers

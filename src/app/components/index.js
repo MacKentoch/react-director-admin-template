@@ -11,6 +11,7 @@ import StatsCard from './statsCard/StatsCard';
 import Jumbotron from './jumbotron/Jumbotron';
 import BasicForms from './basicForms/BasicForms';
 import Panel from './panel/Panel';
+import Horloge from './horloge/Horloge';
 
 export {
   Header,
@@ -26,5 +27,6 @@ export {
   StatsCard,
   Jumbotron,
   BasicForms,
-  Panel
+  Panel,
+  Horloge
 };
