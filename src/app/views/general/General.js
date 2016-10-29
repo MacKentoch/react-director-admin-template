@@ -49,6 +49,7 @@ class General extends Component {
               <li>
                 <a href="#">
                   <i className="fa fa-home"></i>
+                    &nbsp;
                     Home
                 </a>
               </li>
@@ -65,42 +66,49 @@ class General extends Component {
           </div>
         </div>
         <div className="row">
+
           <div className="col-md-2">
             <div className="stat">
-              <div
-                className="stat-icon"
-                style={{color: '#fa8564'}}>
-                <i className="fa fa-file-o fa-3x stat-elem"></i>
+              <div style={{textAlign: 'center'}}>
+                <span className="fa-stack fa-lg fa-3x">
+                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
+                  <i className="fa fa-file-o fa-stack-1x fa-inverse" style={{color: '#fa8564'}}></i>
+                </span>
               </div>
               <h5 className="stat-info">
                 999 Projects
               </h5>
             </div>
           </div>
+
           <div className="col-md-2">
             <div className="stat">
-              <div
-                className="stat-icon"
-                style={{color:'#45cf95'}}>
-                <i className="fa fa-paperclip fa-3x stat-elem"></i>
+              <div style={{textAlign: 'center'}}>
+                <span className="fa-stack fa-lg fa-3x">
+                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
+                  <i className="fa fa-paperclip fa-stack-1x fa-inverse" style={{color: '#45cf95'}}></i>
+                </span>
               </div>
               <h5 className="stat-info">
                 999 Documents
               </h5>
             </div>
           </div>
+
           <div className="col-md-2">
             <div className="stat">
-              <div
-                className="stat-icon"
-                style={{color:'#AC75F0'}}>
-                <i className="fa fa-envelope-o fa-3x stat-elem"></i>
+              <div style={{textAlign: 'center'}}>
+                <span className="fa-stack fa-lg fa-3x">
+                  <i className="fa fa-circle fa-stack-2x" style={{color: '#FFFFFF'}}></i>
+                  <i className="fa fa-envelope-o fa-stack-1x fa-inverse" style={{color: '#AC75F0'}}></i>
+                </span>
               </div>
               <h5 className="stat-info">
                 999 Messages
               </h5>
             </div>
           </div>
+
           <div className="col-md-2">
             <div className="stat">
               <div
