@@ -13,6 +13,7 @@ import {
 }                             from '../../components';
 import { Modals }             from '../../views';
 import { appConfig }          from '../../config';
+import { navigation }         from '../../models';
 
 class App extends Component {
 
@@ -55,6 +56,7 @@ class App extends Component {
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft
             isAnimated={true}
+            sideMenu={navigation.sideMenu}
             currentView={currentView}
             isCollapsed={sideMenuIsCollapsed}
             helloWord={helloWord}

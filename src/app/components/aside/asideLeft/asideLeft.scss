@@ -1,17 +1,32 @@
 .aside-left--fixed {
   position: fixed;
 }
-
 .sidebar-animated {
   transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
+}
+.sidebar-menu__marginTop {
+  margin: {
+    top: 0px !important;
+  }
+}
+
+.sidebar-menu__group-container {
+  margin: {
+    top: 0px !important;
+  }
+  height: 20px;
+}
+
+.sidebar-menu__group-title {
+  text-align: left;
+  font-size: 14px;
+  color: #f6f6f6;
+  font-weight: 600;
 }
 
 .left-side {
   transform: translateX(0) !important; // translate to MINUS sideMenu width
-  -webkit-transform: translateX(0) !important; // translate to MINUS sideMenu width
 }
 .left-side.collapse-left {
     transform: translateX(-220px) !important; // translate to MINUS sideMenu width
-    -webkit-transform: translateX(-220px) !important; // translate to MINUS sideMenu width
 }

@@ -5,6 +5,7 @@ import { Link }   from 'react-router';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 import Horloge    from '../../horloge/Horloge';
+import Menu       from './menu/Menu';
 
 
 const AsideLeft = (props) => {
@@ -20,18 +21,26 @@ const AsideLeft = (props) => {
   const {
     isAnimated,
     isCollapsed,
-    currentView
+    currentView,
+    sideMenu
   } = props;
 
   return (
     <aside className={
       cx({
+        'no-print': true,
         'left-side': true,
         'aside-left--fixed': true,
         'sidebar-offcanvas': true,
         'sidebar-animated': isAnimated,
         'collapse-left':    isCollapsed
-      })}>
+      })}
+      // add overflow to left sidebar:
+      style={{
+        height: '100%',
+        overflow: 'auto',
+        position: 'fixed'
+      }}>
         <section className="sidebar">
           <UserPanel
             hello={helloWord}
@@ -47,7 +56,22 @@ const AsideLeft = (props) => {
             onSearchSubmit={(value) => console.log('searching: ', value)}
           />
 
-
+          {
+            sideMenu.map(
+              ({id, group, menus}, menuIdx) => {
+                return (
+                  <Menu
+                    key={menuIdx}
+                    headerTitle={group}
+                    headerBackColor="#283744"
+                    activeView={currentView}
+                    views={menus}
+                  />
+                );
+              }
+            )
+          }
+{/*
           <ul className="sidebar-menu">
             <li className={currentView === 'Home' ? 'active' : '' }>
               <Link to="/">
@@ -76,7 +100,7 @@ const AsideLeft = (props) => {
                 <span>Simple tables</span>
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </section>
 
     </aside>
@@ -87,6 +111,19 @@ const AsideLeft = (props) => {
 AsideLeft.propTypes = {
   isAnimated: PropTypes.bool,
   isCollapsed: PropTypes.bool,
+  sideMenu: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+      group: PropTypes.string.isRequired,
+      menus: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          linkTo: PropTypes.string.isRequired,
+          faIconName: PropTypes.string.isRequired
+        })
+      )
+    })
+  ).isRequired,
   currentView: PropTypes.string,
   connectionStatus: PropTypes.shape({
     online: PropTypes.string,

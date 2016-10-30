@@ -4,7 +4,7 @@ import React, {
 import moment     from 'moment';
 
 const CENTIEME_SEC = 1000;
-const DATE_FORMAT  = 'DD/MM/YYYY';
+const DATE_FORMAT  = 'MM/DD/YYYY';
 const TIME_FORMAT  = 'HH:mm:ss';
 
 class Horloge extends Component {
@@ -35,7 +35,7 @@ class Horloge extends Component {
         className="row horlogeContainer dateAndTimeContainer text-center"
         style={{marginLeft: 0, marginRight: 0}}>
         <div className="col-xs-12 dateAndTimeContainer">
-          <h2 
+          <h2
             className="text-center"
             style={{marginTop: '5px'}}>
             <span className="horlogeTime">
