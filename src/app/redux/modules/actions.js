@@ -26,7 +26,10 @@ import {
   leaveGeneral,
 
   enterPageNotFound,
-  leavePageNotFound
+  leavePageNotFound,
+
+  enterStatsCard,
+  leaveStatsCard
 }                                     from './views';
 
 
@@ -52,5 +55,7 @@ export {
   enterGeneral,
   leaveGeneral,
   enterPageNotFound,
-  leavePageNotFound
+  leavePageNotFound,
+  enterStatsCard,
+  leaveStatsCard
 };

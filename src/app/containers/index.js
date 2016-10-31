@@ -4,6 +4,7 @@ import SimpleTablesConnected from './simpleTables/SimpleTables';
 import BasicElementsConnected from './basicElements/BasicElements';
 import GeneralConnected from './general/General';
 import PageNotFoundConnected from './pageNotFound/PageNotFound';
+import StatsCardConnected from './statsCard/StatsCard';
 
 export {
   App,
@@ -11,5 +12,6 @@ export {
   SimpleTablesConnected,
   BasicElementsConnected,
   GeneralConnected,
-  PageNotFoundConnected
+  PageNotFoundConnected,
+  StatsCardConnected
 };

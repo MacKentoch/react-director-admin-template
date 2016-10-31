@@ -1,7 +1,6 @@
 /* eslint no-console: 0 */
 import React, { PropTypes } from 'react';
 import cx         from 'classnames';
-import { Link }   from 'react-router';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 import Horloge    from '../../horloge/Horloge';
