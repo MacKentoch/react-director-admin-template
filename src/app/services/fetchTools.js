@@ -37,7 +37,8 @@ export const checkStatus = (response) => {
   } else {
     const error = new Error(response.statusText);
     error.response = response;
-    throw error;
+    // throw error;
+    return Promise.reject(error);
   }
 };
 
