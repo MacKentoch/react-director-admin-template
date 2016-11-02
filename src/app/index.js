@@ -18,8 +18,10 @@ import './vendors/css/director-style.css';
 
 import './vendors/js/jquery-ui-1.10.3.min.js';
 import './vendors/js/plugins/fullcalendar/fullcalendar.js';
+import './style/highlight/darkula.css';
 
 import './style/index.style.scss';
+
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
 const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
