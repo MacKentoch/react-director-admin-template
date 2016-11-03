@@ -45,8 +45,12 @@ class StatsCard extends Component {
     const { animated, viewEnters } = this.state;
 
     const source = `
+      // import
+      import { StatsCard } from './_SOMEWHERE_/components';
+
+      // in render():
       <div className="col-md-3">
-        <StatsCardComponent
+        <StatsCard
           statValue={'3200'}
           statLabel={'Total Tasks'}
           icon={<i className="fa fa-check-square-o"></i>}
@@ -54,7 +58,7 @@ class StatsCard extends Component {
         />
       </div>
       <div className="col-md-3">
-        <StatsCardComponent
+        <StatsCard
           statValue={'2200'}
           statLabel={'Total Messages'}
           icon={<i className="fa fa-envelope-o"></i>}
@@ -62,7 +66,7 @@ class StatsCard extends Component {
         />
       </div>
       <div className="col-md-3">
-        <StatsCardComponent
+        <StatsCard
           statValue={'100,320'}
           statLabel={'Total Profit'}
           icon={<i className="fa fa-dollar"></i>}
@@ -70,7 +74,7 @@ class StatsCard extends Component {
         />
       </div>
       <div className="col-md-3">
-        <StatsCardComponent
+        <StatsCard
           statValue={'4567'}
           statLabel={'Total Documents'}
           icon={<i className="fa fa-paperclip"></i>}
@@ -91,7 +95,7 @@ class StatsCard extends Component {
       <div className="row">
         <div className="col-xs-12">
           <Panel
-            title="stats cards"
+            title="Stats cards"
             hasTitle={true}
             bodyBackGndColor={'#F4F5F6'}>
             <div className="row">

@@ -2,22 +2,18 @@ import moment from 'moment';
 
 const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
 const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
-
 const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
 const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
-
 const ENTER_BASIC_ELEMENTS_VIEW = 'ENTER_BASIC_ELEMENTS_VIEW';
 const LEAVE_BASIC_ELEMENTS_VIEW = 'LEAVE_BASIC_ELEMENTS_VIEW';
-
 const ENTER_GENERAL_VIEW  = 'ENTER_GENERAL_VIEW';
 const LEAVE_GENERAL_VIEW  = 'LEAVE_GENERAL_VIEW';
-
 const ENTER_PAGE_NOT_FOUND_VIEW  = 'ENTER_PAGE_NOT_FOUND_VIEW';
 const LEAVE_PAGE_NOT_FOUND_VIEW  = 'LEAVE_PAGE_NOT_FOUND_VIEW';
-
 const ENTER_STATS_CARD_VIEW = 'ENTER_STATS_CARD_VIEW';
 const LEAVE_STATS_CARD_VIEW = 'LEAVE_STATS_CARD_VIEW';
-
+const ENTER_EARNING_GRAPH_VIEW = 'ENTER_EARNING_GRAPH_VIEW';
+const LEAVE_EARNING_GRAPH_VIEW = 'LEAVE_EARNING_GRAPH_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -34,6 +30,7 @@ export default function views(state = initialState, action) {
   case ENTER_GENERAL_VIEW:
   case ENTER_PAGE_NOT_FOUND_VIEW:
   case ENTER_STATS_CARD_VIEW:
+  case ENTER_EARNING_GRAPH_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -51,6 +48,7 @@ export default function views(state = initialState, action) {
   case LEAVE_GENERAL_VIEW:
   case LEAVE_PAGE_NOT_FOUND_VIEW:
   case LEAVE_STATS_CARD_VIEW:
+  case LEAVE_EARNING_GRAPH_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -171,6 +169,24 @@ export function leaveStatsCard(time = moment().format()) {
   return {
     type:         LEAVE_STATS_CARD_VIEW,
     currentView:  'StatsCard',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterEarningGraph(time = moment().format()) {
+  return {
+    type:         ENTER_EARNING_GRAPH_VIEW,
+    currentView:  'EarningGraph',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveEarningGraph(time = moment().format()) {
+  return {
+    type:         LEAVE_EARNING_GRAPH_VIEW,
+    currentView:  'EarningGraph',
     enterTime:    null,
     leaveTime:    time
   };

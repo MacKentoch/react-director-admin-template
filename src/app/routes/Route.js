@@ -16,7 +16,8 @@ import {
   BasicElementsConnected,
   GeneralConnected,
   PageNotFoundConnected,
-  StatsCardConnected
+  StatsCardConnected,
+  EarningGraphConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -32,6 +33,7 @@ export const Routes = () => {
           <Route path="/" component={App} >
             <IndexRoute component={HomeConnected} />
             <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
+            <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />
             
             <Route path="/simpleTables" component={SimpleTablesConnected} />
 

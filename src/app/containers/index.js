@@ -5,6 +5,7 @@ import BasicElementsConnected from './basicElements/BasicElements';
 import GeneralConnected from './general/General';
 import PageNotFoundConnected from './pageNotFound/PageNotFound';
 import StatsCardConnected from './statsCard/StatsCard';
+import EarningGraphConnected from './earningGraph/EarningGraph';
 
 export {
   App,
@@ -13,5 +14,6 @@ export {
   BasicElementsConnected,
   GeneralConnected,
   PageNotFoundConnected,
-  StatsCardConnected
+  StatsCardConnected,
+  EarningGraphConnected
 };

@@ -29,7 +29,10 @@ import {
   leavePageNotFound,
 
   enterStatsCard,
-  leaveStatsCard
+  leaveStatsCard,
+
+  enterEarningGraph,
+  leaveEarningGraph
 }                                     from './views';
 
 
@@ -57,5 +60,7 @@ export {
   enterPageNotFound,
   leavePageNotFound,
   enterStatsCard,
-  leaveStatsCard
+  leaveStatsCard,
+  enterEarningGraph,
+  leaveEarningGraph
 };
