@@ -6,6 +6,8 @@ import Modals             from './modals/Modals';
 import PageNotFound       from './pageNotFound/PageNotFound';
 import StatsCard          from './statsCard/StatsCard';
 import EarningGraph       from './earningGraph/EarningGraph';
+import Notifications      from './notifications/Notifications';
+
 
 export {
   Home,
@@ -15,5 +17,6 @@ export {
   Modals,
   PageNotFound,
   StatsCard,
-  EarningGraph
+  EarningGraph,
+  Notifications
 };

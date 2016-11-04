@@ -1,16 +1,10 @@
-import React         from 'react';
-import Notification  from './notification/Notification';
+import React              from 'react';
+import NotificationPanel  from './notificationPanel/NotificationPanel';
+import Notification       from './notification/Notification';
 
 const Notifications = () => {
   return (
-    <section className="panel">
-      <header className="panel-heading">
-        Notifications
-      </header>
-      <div
-        className="panel-body notification--body-container"
-        id="noti-box">
-
+    <NotificationPanel>
         <Notification type={'danger'}>
           <span>
             <strong>
@@ -56,8 +50,7 @@ const Notifications = () => {
           </span>
         </Notification>
 
-      </div>
-    </section>
+    </NotificationPanel>
   );
 };
 

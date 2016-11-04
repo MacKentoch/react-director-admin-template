@@ -6,6 +6,7 @@ import GeneralConnected from './general/General';
 import PageNotFoundConnected from './pageNotFound/PageNotFound';
 import StatsCardConnected from './statsCard/StatsCard';
 import EarningGraphConnected from './earningGraph/EarningGraph';
+import NotificationsConnected from './notifications/Notifications';
 
 export {
   App,
@@ -15,5 +16,6 @@ export {
   GeneralConnected,
   PageNotFoundConnected,
   StatsCardConnected,
-  EarningGraphConnected
+  EarningGraphConnected,
+  NotificationsConnected
 };

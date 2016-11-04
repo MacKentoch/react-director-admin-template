@@ -32,7 +32,10 @@ import {
   leaveStatsCard,
 
   enterEarningGraph,
-  leaveEarningGraph
+  leaveEarningGraph,
+
+  enterNotifications,
+  leaveNotifications
 }                                     from './views';
 
 
@@ -62,5 +65,7 @@ export {
   enterStatsCard,
   leaveStatsCard,
   enterEarningGraph,
-  leaveEarningGraph
+  leaveEarningGraph,
+  enterNotifications,
+  leaveNotifications
 };
