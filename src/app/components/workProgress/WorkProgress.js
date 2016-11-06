@@ -1,23 +1,22 @@
 import React from 'react';
 import WorkProgressPanel from './workProgressPanel/WorkProgressPanel';
 import WorkProgressTable from './workProgressTable/WorkProgressTable';
-import WorkProgressHeader from './workProgressHeader/WorkProgressHeader';
+import WorkProgressTableHeader from './workProgressTableHeader/WorkProgressTableHeader';
+import WorkProgressTableBody from './workProgressTableBody/WorkProgressTableBody';
 
 const WorkProgress = () => {
   return (
     <WorkProgressPanel>
       <WorkProgressTable>
-          <thead>
-            <tr>
+          <WorkProgressTableHeader>
               <th>#</th>
               <th>Project</th>
               <th>Manager</th>
               <th>Deadline</th>
               <th>Status</th>
               <th>Progress</th>
-            </tr>
-          </thead>
-          <tbody>
+          </WorkProgressTableHeader>
+          <WorkProgressTableBody>
             <tr>
               <td>1</td>
               <td>Facebook</td>
@@ -74,9 +73,9 @@ const WorkProgress = () => {
               <td><span className="label label-info">in progress</span></td>
               <td><span className="badge badge-success">95%</span></td>
             </tr>
-          </tbody>
+          </WorkProgressTableBody>
       </WorkProgressTable>
-    </WorkProgressPanel>>
+    </WorkProgressPanel>
   );
 };
 
