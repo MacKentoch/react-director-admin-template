@@ -2,6 +2,7 @@ import React from 'react';
 import WorkProgressPanel from './workProgressPanel/WorkProgressPanel';
 import WorkProgressTable from './workProgressTable/WorkProgressTable';
 import WorkProgressTableHeader from './workProgressTableHeader/WorkProgressTableHeader';
+import WorkProgressTableHeaderItem from './workProgressTableHeaderItem/WorkProgressTableHeaderItem';
 import WorkProgressTableBody from './workProgressTableBody/WorkProgressTableBody';
 
 const WorkProgress = () => {
@@ -9,12 +10,27 @@ const WorkProgress = () => {
     <WorkProgressPanel>
       <WorkProgressTable>
           <WorkProgressTableHeader>
-              <th>#</th>
-              <th>Project</th>
-              <th>Manager</th>
-              <th>Deadline</th>
-              <th>Status</th>
-              <th>Progress</th>
+            <WorkProgressTableHeaderItem>
+              #
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              #
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              Project
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              Manager
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              Deadline
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              Status
+            </WorkProgressTableHeaderItem>
+            <WorkProgressTableHeaderItem>
+              Progress
+            </WorkProgressTableHeaderItem>
           </WorkProgressTableHeader>
           <WorkProgressTableBody>
             <tr>
