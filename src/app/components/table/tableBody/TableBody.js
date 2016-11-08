@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const WorkProgressTableBody = ({children}) => {
+const TableBody = ({children}) => {
   return (
     <tbody>
       {children}
@@ -8,8 +8,8 @@ const WorkProgressTableBody = ({children}) => {
   );
 };
 
-WorkProgressTableBody.propTypes = {
+TableBody.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default WorkProgressTableBody;
+export default TableBody;

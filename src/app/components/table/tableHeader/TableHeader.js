@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const WorkProgressTableHeader = ({children}) => {
+const TableHeader = ({children}) => {
   return (
     <thead>
       <tr>
@@ -10,8 +10,8 @@ const WorkProgressTableHeader = ({children}) => {
   );
 };
 
-WorkProgressTableHeader.propTypes = {
+TableHeader.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default WorkProgressTableHeader;
+export default TableHeader;

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const WorkProgressTable = ({children}) => {
+const Table = ({children}) => {
   return (
     <table className="table table-hover">
       {children}
@@ -8,8 +8,8 @@ const WorkProgressTable = ({children}) => {
   );
 };
 
-WorkProgressTable.propTypes = {
+Table.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default WorkProgressTable;
+export default Table;

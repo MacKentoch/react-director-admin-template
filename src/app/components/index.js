@@ -18,6 +18,13 @@ import Panel from './panel/Panel';
 import Horloge from './horloge/Horloge';
 import Breadcrumb from './breadcrumb/Breadcrumb';
 import Stat from './stat/Stat';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCol
+} from './table';
 
 export {
   Header,
@@ -38,5 +45,11 @@ export {
   Panel,
   Horloge,
   Breadcrumb,
-  Stat
+  Stat,
+  // table
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCol
 };
