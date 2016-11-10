@@ -7,6 +7,7 @@ import PageNotFoundConnected from './pageNotFound/PageNotFound';
 import StatsCardConnected from './statsCard/StatsCard';
 import EarningGraphConnected from './earningGraph/EarningGraph';
 import NotificationsConnected from './notifications/Notifications';
+import WorkProgressConnected from './workProgress/WorkProgress';
 
 export {
   App,
@@ -17,5 +18,6 @@ export {
   PageNotFoundConnected,
   StatsCardConnected,
   EarningGraphConnected,
-  NotificationsConnected
+  NotificationsConnected,
+  WorkProgressConnected
 };

@@ -55,8 +55,12 @@ class WorkProgress extends Component {
   }
 
   render() {
-    const {} = this.props;
-    const { animated, viewEnters } = this.state;
+    const {
+      animated,
+      viewEnters,
+      headers,
+      content
+    } = this.state;
 
     const source = `
       // import
@@ -97,23 +101,54 @@ class WorkProgress extends Component {
         })
       }>
       {/* preview: */}
-      <div className="row">
-        <div className="col-xs-12">
+      {/* <div className="row">
+        <div className="col-xs-12"> */}
           <Panel
-            title="Earning graph"
+            title="Work Progress"
             hasTitle={true}
-            bodyBackGndColor={'#F4F5F6'}>
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2">
-                <EarningGraphComponent
-                  labels={this.state.labels}
-                  datasets={this.state.datasets}
-                />
-              </div>
-            </div>
+            bodyBackGndColor={'#F4F5F6'}
+            bodyCustomClass="table-responsive">
+            <Table>
+              <TableHeader>
+                {
+                  headers.map(
+                    (header, headerIdx) => {
+                      return (
+                        <TableCol key={headerIdx}>
+                          {header}
+                        </TableCol>
+                      );
+                    }
+                  )
+                }
+              </TableHeader>
+              <TableBody>
+                {
+                  content.map(
+                    (contentRow, contentRowIdx) => {
+                      return (
+                        <TableRow key={contentRowIdx}>
+                          {
+                            contentRow.map(
+                              (contentColumn, contentColumnIdx) => {
+                                return (
+                                  <TableCol key={contentColumnIdx}>
+                                    {contentColumn}
+                                  </TableCol>
+                                );
+                              }
+                            )
+                          }
+                        </TableRow>
+                      );
+                    }
+                  )
+                }
+              </TableBody>
+            </Table>
           </Panel>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
       {/* source: */}
       <div className="row">
         <div className="col-xs-12">

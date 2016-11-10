@@ -35,7 +35,10 @@ import {
   leaveEarningGraph,
 
   enterNotifications,
-  leaveNotifications
+  leaveNotifications,
+
+  enterWorkProgress,
+  leaveWorkProgress
 }                                     from './views';
 
 
@@ -67,5 +70,7 @@ export {
   enterEarningGraph,
   leaveEarningGraph,
   enterNotifications,
-  leaveNotifications
+  leaveNotifications,
+  enterWorkProgress,
+  leaveWorkProgress
 };

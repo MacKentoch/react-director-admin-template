@@ -16,6 +16,8 @@ const ENTER_EARNING_GRAPH_VIEW = 'ENTER_EARNING_GRAPH_VIEW';
 const LEAVE_EARNING_GRAPH_VIEW = 'LEAVE_EARNING_GRAPH_VIEW';
 const ENTER_NOTIFICATIONS_VIEW = 'ENTER_NOTIFICATIONS_VIEW';
 const LEAVE_NOTIFICATIONS_VIEW = 'LEAVE_NOTIFICATIONS_VIEW';
+const ENTER_WORK_PROGRESS_VIEW = 'ENTER_WORK_PROGRESS_VIEW';
+const LEAVE_WORK_PROGRESS_VIEW = 'LEAVE_WORK_PROGRESS_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -34,6 +36,7 @@ export default function views(state = initialState, action) {
   case ENTER_STATS_CARD_VIEW:
   case ENTER_EARNING_GRAPH_VIEW:
   case ENTER_NOTIFICATIONS_VIEW:
+  case ENTER_WORK_PROGRESS_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -53,6 +56,7 @@ export default function views(state = initialState, action) {
   case LEAVE_STATS_CARD_VIEW:
   case LEAVE_EARNING_GRAPH_VIEW:
   case LEAVE_NOTIFICATIONS_VIEW:
+  case LEAVE_WORK_PROGRESS_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -209,6 +213,24 @@ export function leaveNotifications(time = moment().format()) {
   return {
     type:         LEAVE_NOTIFICATIONS_VIEW,
     currentView:  'Notifications',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterWorkProgress(time = moment().format()) {
+  return {
+    type:         ENTER_WORK_PROGRESS_VIEW,
+    currentView:  'WorkProgress',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveWorkProgress(time = moment().format()) {
+  return {
+    type:         LEAVE_WORK_PROGRESS_VIEW,
+    currentView:  'WorkProgress',
     enterTime:    null,
     leaveTime:    time
   };

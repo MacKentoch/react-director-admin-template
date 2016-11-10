@@ -4,6 +4,7 @@ const Panel = ({
   hasTitle,
   title,
   bodyBackGndColor,
+  bodyCustomClass,
   children
 }) => {
   return (
@@ -15,7 +16,7 @@ const Panel = ({
         </header>
       }
       <div
-        className="panel-body"
+        className={`panel-body ${bodyCustomClass}`}
         style={{backgroundColor: bodyBackGndColor}}>
         { children }
       </div>
@@ -27,6 +28,7 @@ Panel.propTypes = {
   hasTitle: PropTypes.bool,
   title: PropTypes.string,
   bodyBackGndColor: PropTypes.string,
+  bodyCustomClass: PropTypes.string,
   children: PropTypes.node
 };
 
