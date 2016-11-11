@@ -47,6 +47,11 @@ export const navigation = {
           faIconName: 'fa-briefcase'
         },
         {
+          name: 'Twitter feed',
+          linkTo: '/Dashboard/twitterFeed',
+          faIconName: 'fa-twitter'
+        },
+        {
           name: 'Todo list',
           linkTo: '/Dashboard/todoList',
           faIconName: 'fa-check'

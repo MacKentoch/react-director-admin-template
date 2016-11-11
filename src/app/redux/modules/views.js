@@ -18,6 +18,8 @@ const ENTER_NOTIFICATIONS_VIEW = 'ENTER_NOTIFICATIONS_VIEW';
 const LEAVE_NOTIFICATIONS_VIEW = 'LEAVE_NOTIFICATIONS_VIEW';
 const ENTER_WORK_PROGRESS_VIEW = 'ENTER_WORK_PROGRESS_VIEW';
 const LEAVE_WORK_PROGRESS_VIEW = 'LEAVE_WORK_PROGRESS_VIEW';
+const ENTER_TWITTER_FEED_VIEW = 'ENTER_TWITTER_FEED_VIEW';
+const LEAVE_TWITTER_FEED_VIEW = 'LEAVE_TWITTER_FEED_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -37,6 +39,7 @@ export default function views(state = initialState, action) {
   case ENTER_EARNING_GRAPH_VIEW:
   case ENTER_NOTIFICATIONS_VIEW:
   case ENTER_WORK_PROGRESS_VIEW:
+  case ENTER_TWITTER_FEED_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -57,6 +60,7 @@ export default function views(state = initialState, action) {
   case LEAVE_EARNING_GRAPH_VIEW:
   case LEAVE_NOTIFICATIONS_VIEW:
   case LEAVE_WORK_PROGRESS_VIEW:
+  case LEAVE_TWITTER_FEED_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -231,6 +235,24 @@ export function leaveWorkProgress(time = moment().format()) {
   return {
     type:         LEAVE_WORK_PROGRESS_VIEW,
     currentView:  'WorkProgress',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterTwitterFeed(time = moment().format()) {
+  return {
+    type:         ENTER_TWITTER_FEED_VIEW,
+    currentView:  'TwitterFeed',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveTwitterFeed(time = moment().format()) {
+  return {
+    type:         LEAVE_TWITTER_FEED_VIEW,
+    currentView:  'TwitterFeed',
     enterTime:    null,
     leaveTime:    time
   };

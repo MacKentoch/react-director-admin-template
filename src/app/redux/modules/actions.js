@@ -38,7 +38,10 @@ import {
   leaveNotifications,
 
   enterWorkProgress,
-  leaveWorkProgress
+  leaveWorkProgress,
+
+  enterTwitterFeed,
+  leaveTwitterFeed
 }                                     from './views';
 
 
@@ -72,5 +75,7 @@ export {
   enterNotifications,
   leaveNotifications,
   enterWorkProgress,
-  leaveWorkProgress
+  leaveWorkProgress,
+  enterTwitterFeed,
+  leaveTwitterFeed
 };

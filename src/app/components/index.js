@@ -25,6 +25,11 @@ import {
   TableRow,
   TableCol
 } from './table';
+import {
+  Tweet,
+  WriteNewTweet,
+  ListTweetsContainer
+} from './twitterFeed';
 
 export {
   Header,
@@ -51,5 +56,9 @@ export {
   TableHeader,
   TableBody,
   TableRow,
-  TableCol
+  TableCol,
+  // twitterFeed
+  Tweet,
+  WriteNewTweet,
+  ListTweetsContainer
 };

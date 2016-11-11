@@ -8,6 +8,7 @@ import StatsCardConnected from './statsCard/StatsCard';
 import EarningGraphConnected from './earningGraph/EarningGraph';
 import NotificationsConnected from './notifications/Notifications';
 import WorkProgressConnected from './workProgress/WorkProgress';
+import TwitterFeedConnected from './twitterFeed/TwitterFeed';
 
 export {
   App,
@@ -19,5 +20,6 @@ export {
   StatsCardConnected,
   EarningGraphConnected,
   NotificationsConnected,
-  WorkProgressConnected
+  WorkProgressConnected,
+  TwitterFeedConnected
 };
