@@ -1,14 +1,16 @@
 import React, { PropTypes } from 'react';
-import TeamMember from './teamMember/TeamMember';
+import TeamMember           from './teamMember/TeamMember';
+import TeamMateAddButton    from './teamMateAddButton/TeamMateAddButton';
+import Panel                from '../panel/Panel';
+
 
 const TeamMates = (props) => {
   const { members } = props;
 
   return (
-    <div className="panel">
-      <header className="panel-heading">
-        Teammates
-      </header>
+    <Panel
+      hasTitle={true}
+      title={'Teammates'}>
       <ul className="list-group teammates">
         {
           members.map(
@@ -27,13 +29,8 @@ const TeamMates = (props) => {
           )
         }
       </ul>
-      <div className="panel-footer bg-white">
-        <button className="btn btn-primary btn-addon btn-sm">
-          <i className="fa fa-plus"></i>
-          Add Teammate
-        </button>
-      </div>
-    </div>
+      <TeamMateAddButton />
+    </Panel>
   );
 };
 
