@@ -1,17 +1,18 @@
 import React, { PropTypes } from 'react';
+import TeamMates            from './teamMates/TeamMates';
 import TeamMember           from './teamMember/TeamMember';
 import TeamMateAddButton    from './teamMateAddButton/TeamMateAddButton';
 import Panel                from '../panel/Panel';
 
 
-const TeamMates = (props) => {
+const TeamMatesDemo = (props) => {
   const { members } = props;
 
   return (
     <Panel
       hasTitle={true}
       title={'Teammates'}>
-      <ul className="list-group teammates">
+      <TeamMates>
         {
           members.map(
             (member, memberIndex) => {
@@ -28,13 +29,13 @@ const TeamMates = (props) => {
             }
           )
         }
-      </ul>
+      </TeamMates>
       <TeamMateAddButton />
     </Panel>
   );
 };
 
-TeamMates.propTypes = {
+TeamMatesDemo.propTypes = {
   members: PropTypes.arrayOf(
     PropTypes.shape({
       picture: PropTypes.string,
@@ -46,4 +47,4 @@ TeamMates.propTypes = {
   )
 };
 
-export default TeamMates;
+export default TeamMatesDemo;

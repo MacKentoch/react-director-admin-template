@@ -8,7 +8,7 @@ import {
   NotificationPanel,
   Notification
 }  from './notifications';
-import TeamMates from './teamMates/TeamMates';
+import TeamMatesDemo from './teamMates/TeamMatesDemo';
 import TwitterFeed from './twitterFeed/TwitterFeed';
 import WorkProgress from './workProgress/WorkProgress';
 import StatsCard from './statsCard/StatsCard';
@@ -30,6 +30,11 @@ import {
   WriteNewTweet,
   ListTweetsContainer
 } from './twitterFeed';
+import {
+  TeamMates,
+  TeamMember,
+  TeamMateAddButton
+} from './teamMates';
 
 export {
   Header,
@@ -41,7 +46,7 @@ export {
   Notifications, // as demo implementation
   NotificationPanel,
   Notification,
-  TeamMates,
+  TeamMatesDemo,
   TwitterFeed,
   WorkProgress,
   StatsCard,
@@ -60,5 +65,9 @@ export {
   // twitterFeed
   Tweet,
   WriteNewTweet,
-  ListTweetsContainer
+  ListTweetsContainer,
+  // teamMates
+  TeamMates,
+  TeamMember,
+  TeamMateAddButton
 };

@@ -10,7 +10,7 @@ import {
   WorkProgress,
   TwitterFeed,
   TodoList,
-  TeamMates
+  TeamMatesDemo
 }                         from '../../components';
 import shallowCompare     from 'react-addons-shallow-compare';
 
@@ -133,7 +133,7 @@ class Home extends Component {
 
         <div className="row">
           <div className="col-md-5">
-            <TeamMates
+            <TeamMatesDemo
               isFetching={teamMatesIsFetching}
               members={teamMates}
             />
