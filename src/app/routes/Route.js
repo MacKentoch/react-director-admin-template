@@ -20,7 +20,8 @@ import {
   EarningGraphConnected,
   NotificationsConnected,
   WorkProgressConnected,
-  TwitterFeedConnected
+  TwitterFeedConnected,
+  TeamMatesViewConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -40,6 +41,7 @@ export const Routes = () => {
             <Route path="/Dashboard/notifications" component={NotificationsConnected} />
             <Route path="/Dashboard/workProgress" component={WorkProgressConnected} />
             <Route path="/Dashboard/twitterFeed" component={TwitterFeedConnected} />
+            <Route path="/Dashboard/teamMates" component={TeamMatesViewConnected} />
 
             <Route path="/simpleTables" component={SimpleTablesConnected} />
 

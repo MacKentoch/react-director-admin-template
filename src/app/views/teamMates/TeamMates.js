@@ -58,8 +58,8 @@ class TeamMatesView extends Component {
   };
 
   componentWillMount() {
-    const { actions: { enterTwitterFeed } } = this.props;
-    enterTwitterFeed();
+    const { actions: { enterTeamMatesView } } = this.props;
+    enterTeamMatesView();
   }
 
   componentDidMount() {
@@ -74,8 +74,8 @@ class TeamMatesView extends Component {
   }
 
   componentWillUnmount() {
-    const { actions: { leaveTwitterFeed } } = this.props;
-    leaveTwitterFeed();
+    const { actions: { leaveTeamMatesView } } = this.props;
+    leaveTeamMatesView();
     clearTimeout(this.enterAnimationTimer);
   }
 
@@ -218,8 +218,8 @@ class TeamMatesView extends Component {
 
 TeamMatesView.propTypes= {
   actions: PropTypes.shape({
-    enterTwitterFeed: PropTypes.func.isRequired,
-    leaveTwitterFeed: PropTypes.func.isRequired
+    enterTeamMatesView: PropTypes.func.isRequired,
+    leaveTeamMatesView: PropTypes.func.isRequired
   })
 };
 

@@ -101,7 +101,7 @@ class EarningGraph extends Component {
       // in render():
       <div className="row">
         <div className="col-md-8 col-md-offset-2">
-          <EarningGraphComponent
+          <EarningGraph
             labels={this.state.labels}
             datasets={this.state.datasets}
           />

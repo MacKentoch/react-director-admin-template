@@ -9,6 +9,7 @@ import EarningGraphConnected from './earningGraph/EarningGraph';
 import NotificationsConnected from './notifications/Notifications';
 import WorkProgressConnected from './workProgress/WorkProgress';
 import TwitterFeedConnected from './twitterFeed/TwitterFeed';
+import TeamMatesViewConnected from './teamMates/TeamMates';
 
 export {
   App,
@@ -21,5 +22,6 @@ export {
   EarningGraphConnected,
   NotificationsConnected,
   WorkProgressConnected,
-  TwitterFeedConnected
+  TwitterFeedConnected,
+  TeamMatesViewConnected
 };

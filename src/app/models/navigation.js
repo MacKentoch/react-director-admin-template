@@ -52,6 +52,11 @@ export const navigation = {
           faIconName: 'fa-twitter'
         },
         {
+          name: 'Team Mates',
+          linkTo: '/Dashboard/teamMates',
+          faIconName: 'fa-user'
+        },
+        {
           name: 'Todo list',
           linkTo: '/Dashboard/todoList',
           faIconName: 'fa-check'

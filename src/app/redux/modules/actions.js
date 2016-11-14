@@ -41,7 +41,10 @@ import {
   leaveWorkProgress,
 
   enterTwitterFeed,
-  leaveTwitterFeed
+  leaveTwitterFeed,
+
+  enterTeamMatesView,
+  leaveTeamMatesView
 }                                     from './views';
 
 
@@ -77,5 +80,7 @@ export {
   enterWorkProgress,
   leaveWorkProgress,
   enterTwitterFeed,
-  leaveTwitterFeed
+  leaveTwitterFeed,
+  enterTeamMatesView,
+  leaveTeamMatesView
 };
