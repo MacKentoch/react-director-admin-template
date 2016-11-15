@@ -11,11 +11,15 @@ const TodoList = () => {
       <div className="panel-body">
         <div className="task-content">
           <ul className="task-list">
-              <TodoListItem />
+              <TodoListItem
+                label="Director is Modern Dashboard"
+                done={false}
+                statusLabel="2 days"
+              />
               <li>
                 <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey"/>
+                  {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
+                  <input type="checkbox" className="flat-grey"/>
                 </div>
                 <div className="task-title">
                   <span className="task-title-sp">Fully Responsive & Bootstrap 3.0.2 Compatible</span>

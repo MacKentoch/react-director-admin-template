@@ -1,31 +1,35 @@
-import React, { PropTypes } from 'react';
+/* eslint no-console:0 */
 
-const TodoListItem = ({}) => {
+import React, { PropTypes }     from 'react';
+import TodoListItemButtonEdit   from './todoListItemButtonEdit/TodoListItemButtonEdit';
+import TodoListItemButtonValid  from './todoListItemButtonValid/TodoListItemButtonValid';
+import TodoListItemButtonCancel from './todoListItemButtonCancel/TodoListItemButtonCancel';
+
+
+const TodoListItem = ({label, done, statusLabel}) => {
   return (
     <li>
       <div className="task-checkbox">
         <input
           type="checkbox"
+          checked={done}
           className="flat-grey list-child"
         />
       </div>
       <div className="task-title">
+
         <span className="task-title-sp">
-          Director is Modern Dashboard
+          {label}
         </span>
+
         <span className="label label-success">
-          2 Days
+          {statusLabel}
         </span>
+
         <div className="pull-right hidden-phone">
-          <button className="btn btn-default btn-xs">
-            <i className="fa fa-check"></i>
-          </button>
-          <button className="btn btn-default btn-xs">
-            <i className="fa fa-pencil"></i>
-          </button>
-          <button className="btn btn-default btn-xs">
-            <i className="fa fa-times"></i>
-          </button>
+          <TodoListItemButtonEdit onClick={() => console.log('TodoListItemButtonEdit onClick event')} />
+          <TodoListItemButtonValid onClick={() => console.log('TodoListItemButtonValid onClick event')} />
+          <TodoListItemButtonCancel onClick={() => console.log('TodoListItemButtonCancel onClick event')} />
         </div>
       </div>
     </li>
@@ -33,7 +37,15 @@ const TodoListItem = ({}) => {
 };
 
 TodoListItem.propTypes = {
-  
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  label: PropTypes.string,
+  done: PropTypes.bool,
+  statusLabel: PropTypes.string
+};
+
+TodoListItem.defaultProps = {
+  label: '',
+  done: false
 };
 
 export default TodoListItem;
