@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const WorkProgressConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(WorkProgress);
-
-export default WorkProgressConnected;

@@ -2,7 +2,7 @@ import React from 'react';
 import TodoListItem from './todoListItem/TodoListItem';
 
 
-const TodoList = () => {
+const TodoListDemo = () => {
   return (
     <section className="panel tasks-widget">
       <header className="panel-heading">
@@ -117,4 +117,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export default TodoListDemo;

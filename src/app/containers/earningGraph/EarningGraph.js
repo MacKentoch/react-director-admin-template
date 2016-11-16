@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const EarningGraphConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(EarningGraph);
-
-export default EarningGraphConnected;

@@ -9,7 +9,7 @@ import {
   Notifications,
   WorkProgress,
   TwitterFeed,
-  TodoList,
+  TodoListDemo,
   TeamMatesDemo
 }                         from '../../components';
 import shallowCompare     from 'react-addons-shallow-compare';
@@ -139,7 +139,7 @@ class Home extends Component {
             />
           </div>
           <div className="col-md-7">
-            <TodoList />
+            <TodoListDemo />
           </div>
         </div>
 

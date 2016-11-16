@@ -1,46 +1,104 @@
 /* eslint no-console:0 */
 
-import React, { PropTypes }     from 'react';
-import TodoListItemButtonEdit   from './todoListItemButtonEdit/TodoListItemButtonEdit';
-import TodoListItemButtonValid  from './todoListItemButtonValid/TodoListItemButtonValid';
-import TodoListItemButtonCancel from './todoListItemButtonCancel/TodoListItemButtonCancel';
+import React, {
+  Component,
+  PropTypes
+}                               from 'react';
+import shallowCompare           from 'react-addons-shallow-compare';
+import TodoListItemButtonEdit   from '../todoListItemButtonEdit/TodoListItemButtonEdit';
+import TodoListItemButtonValid  from '../todoListItemButtonValid/TodoListItemButtonValid';
+import TodoListItemButtonCancel from '../todoListItemButtonCancel/TodoListItemButtonCancel';
 
 
-const TodoListItem = ({label, done, statusLabel}) => {
-  return (
-    <li>
-      <div className="task-checkbox">
-        <input
-          type="checkbox"
-          checked={done}
-          className="flat-grey list-child"
-        />
-      </div>
-      <div className="task-title">
+class TodoListItem extends Component {
+  state = {
+    isChecked: false,
+    isEditing: false
+  };
 
-        <span className="task-title-sp">
-          {label}
-        </span>
+  componentDidMount() {
+    const { done } = this.props;
+    this.setCheckedProp(done);
+  }
 
-        <span className="label label-success">
-          {statusLabel}
-        </span>
+  componentWillReceiveProps(nextProps) {
+    const { done } = this.props;
+    if (nextProps.done !== done) {
+      this.setCheckedProp(nextProps.done);
+    }
+  }
 
-        <div className="pull-right hidden-phone">
-          <TodoListItemButtonEdit onClick={() => console.log('TodoListItemButtonEdit onClick event')} />
-          <TodoListItemButtonValid onClick={() => console.log('TodoListItemButtonValid onClick event')} />
-          <TodoListItemButtonCancel onClick={() => console.log('TodoListItemButtonCancel onClick event')} />
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState);
+  }
+
+  render() {
+    const { label, statusLabel } = this.props;
+    const { isChecked, isEditing } = this.state;
+
+    return (
+      <li>
+        <div className="task-checkbox">
+          <input
+            type="checkbox"
+            checked={isChecked}
+            className="flat-grey list-child"
+          />
         </div>
-      </div>
-    </li>
-  );
-};
+        <div className="task-title">
+
+          <span className="task-title-sp">
+            {label}
+          </span>
+
+          <span className="label label-success">
+            {statusLabel}
+          </span>
+
+          <div className="pull-right hidden-phone">
+            {
+              isEditing
+              ? <div>
+                  <TodoListItemButtonValid onClick={this.handlesOnListValidEdit} />
+                  <TodoListItemButtonCancel onClick={this.handlesOnListCancelEdit} />
+                </div>
+              : <TodoListItemButtonEdit onClick={this.handlesOnListEdit} />
+            }
+          </div>
+        </div>
+      </li>
+    );
+  }
+
+  setCheckedProp = (checkedValue) => {
+    if (checkedValue !== this.state.isChecked) {
+      this.setState({ isChecked: checkedValue });
+    }
+  }
+
+  handlesOnListEdit = () => {
+    this.setState({ isEditing: true});
+  }
+
+  handlesOnListCancelEdit = () => {
+    this.setState({ isEditing: false});
+  }
+
+  handlesOnListValidEdit = () => {
+    const { onListValidEdit } = this.props;
+    const { isChecked } = this.state;
+
+    onListValidEdit(isChecked);
+    this.setState({ isEditing: false});
+  }
+}
 
 TodoListItem.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   label: PropTypes.string,
   done: PropTypes.bool,
-  statusLabel: PropTypes.string
+  statusLabel: PropTypes.string,
+  onListValidEdit: PropTypes.func
 };
 
 TodoListItem.defaultProps = {

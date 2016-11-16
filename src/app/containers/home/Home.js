@@ -30,9 +30,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const HomeConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home);
-
-export default HomeConnected;

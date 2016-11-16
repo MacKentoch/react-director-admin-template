@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const TeamMatesViewConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(TeamMatesView);
-
-export default TeamMatesViewConnected;

@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const TwitterFeedConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(TwitterFeed);
-
-export default TwitterFeedConnected;

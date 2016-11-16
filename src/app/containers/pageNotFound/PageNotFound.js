@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const PageNotFoundConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(PageNotFound);
-
-export default PageNotFoundConnected;

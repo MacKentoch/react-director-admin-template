@@ -1,6 +1,6 @@
 import Header from './header/Header.js';
 import { AsideLeft, AsideRight } from './aside';
-import TodoList from './todoList/TodoList';
+import TodoListDemo from './todoList/TodoListDemo';
 import EarningGraph from './earningGraph/EarningGraph';
 import Footer from './footer/Footer';
 import Notifications from './notifications/Notifications';
@@ -40,7 +40,7 @@ export {
   Header,
   AsideLeft,
   AsideRight,
-  TodoList,
+  TodoListDemo,
   EarningGraph,
   Footer,
   Notifications, // as demo implementation

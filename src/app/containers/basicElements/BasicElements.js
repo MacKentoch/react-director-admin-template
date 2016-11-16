@@ -21,9 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const BasicElementsConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BasicElements);
-
-export default BasicElementsConnected;

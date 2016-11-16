@@ -21,9 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const GeneralConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(General);
-
-export default GeneralConnected;

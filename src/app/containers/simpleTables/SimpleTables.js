@@ -21,9 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const SimpleTablesConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(SimpleTables);
-
-export default SimpleTablesConnected;

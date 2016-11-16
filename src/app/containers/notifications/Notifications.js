@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const NotificationsConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Notifications);
-
-export default NotificationsConnected;

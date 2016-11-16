@@ -20,9 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const StatsCardConnected = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(StatsCard);
-
-export default StatsCardConnected;
