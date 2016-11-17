@@ -33,7 +33,7 @@ class TodoListItem extends Component {
   }
 
   render() {
-    const { label, statusLabel } = this.props;
+    const { label, statusLabel, statusLabelStyle } = this.props;
     const { isChecked, isEditing } = this.state;
 
     return (
@@ -51,7 +51,7 @@ class TodoListItem extends Component {
             {label}
           </span>
 
-          <span className="label label-success">
+          <span className={`label ${statusLabelStyle}`}>
             {statusLabel}
           </span>
 
@@ -98,11 +98,13 @@ TodoListItem.propTypes = {
   label: PropTypes.string,
   done: PropTypes.bool,
   statusLabel: PropTypes.string,
+  statusLabelStyle: PropTypes.oneOf(['label-success', 'label-danger', 'label-warning', 'label-primary', 'label-inverse']),
   onListValidEdit: PropTypes.func
 };
 
 TodoListItem.defaultProps = {
   label: '',
+  statusLabelStyle: 'label-success',
   done: false
 };
 

@@ -11,101 +11,48 @@ const TodoListDemo = () => {
       <div className="panel-body">
         <div className="task-content">
           <ul className="task-list">
-              <TodoListItem
-                label="Director is Modern Dashboard"
-                done={false}
-                statusLabel="2 days"
-              />
-              <li>
-                <div className="task-checkbox">
-                  {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                  <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Fully Responsive & Bootstrap 3.0.2 Compatible</span>
-                  <span className="label label-danger">Done</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Latest Design Concept</span>
-                  <span className="label label-warning">Company</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Write well documentation for this theme</span>
-                  <span className="label label-primary">3 Days</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Don't bother to download this Dashbord</span>
-                  <span className="label label-inverse">Now</span>
-                  <div className="pull-right">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="task-checkbox">
-                    {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                    <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Give feedback for the template</span>
-                  <span className="label label-success">2 Days</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="task-checkbox">
-                  {/* <!-- <input type="checkbox" className="list-child" value=""  /> --> */}
-                  <input type="checkbox" className="flat-grey"/>
-                </div>
-                <div className="task-title">
-                  <span className="task-title-sp">Tell your friends about this admin template</span>
-                  <span className="label label-danger">Now</span>
-                  <div className="pull-right hidden-phone">
-                    <button className="btn btn-default btn-xs"><i className="fa fa-check"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-pencil"></i></button>
-                    <button className="btn btn-default btn-xs"><i className="fa fa-times"></i></button>
-                  </div>
-              </div>
-            </li>
+            <TodoListItem
+              label="Director is Modern Dashboard"
+              done={false}
+              statusLabel="2 days"
+              statusLabelStyle="label-success"
+            />
+            <TodoListItem
+              label="Fully Responsive & Bootstrap 3.0.2 Compatible"
+              done={false}
+              statusLabel="Done"
+              statusLabelStyle="label-danger"
+            />
+            <TodoListItem
+              label="Latest Design Concept"
+              done={false}
+              statusLabel="Company"
+              statusLabelStyle="label-warning"
+            />
+            <TodoListItem
+              label="Write well documentation for this theme"
+              done={false}
+              statusLabel="3 Days"
+              statusLabelStyle="label-primary"
+            />
+            <TodoListItem
+              label="Don't bother to download this Dashbord"
+              done={false}
+              statusLabel="Now"
+              statusLabelStyle="label-inverse"
+            />
+            <TodoListItem
+              label="Give feedback for the template"
+              done={false}
+              statusLabel="2 Days"
+              statusLabelStyle="label-success"
+            />
+            <TodoListItem
+              label="Tell your friends about this admin template"
+              done={false}
+              statusLabel="Now"
+              statusLabelStyle="label-danger"
+            />
           </ul>
         </div>
        <div className=" add-task-row">
