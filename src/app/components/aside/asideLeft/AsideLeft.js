@@ -61,6 +61,7 @@ const AsideLeft = (props) => {
                 return (
                   <Menu
                     key={menuIdx}
+                    initialCollapseState={menuIdx === 0 ? false : null}
                     headerTitle={group}
                     headerBackColor="#283744"
                     activeView={currentView}

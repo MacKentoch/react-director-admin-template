@@ -12,6 +12,13 @@ class Menu extends Component {
     isCollapsed: true
   };
 
+  componentDidMount() {
+    const { initialCollapseState } = this.props;
+    if (typeof initialCollapseState === 'boolean') {
+      this.setInitialCollapse(initialCollapseState);
+    }
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -45,6 +52,10 @@ class Menu extends Component {
     );
   }
 
+  setInitialCollapse = (value) => {
+    this.setState({ isCollapsed: value });
+  }
+
   handlesCollapseClick = (evt) => {
     evt.preventDefault();
     const { isCollapsed } = this.state;
@@ -63,7 +74,8 @@ Menu.propTypes = {
       faIconName: PropTypes.string.isRequired,
       itemCount: PropTypes.number
     })
-  ).isRequired
+  ).isRequired,
+  initialCollapseState: PropTypes.bool
 };
 
 Menu.defaultProps = {

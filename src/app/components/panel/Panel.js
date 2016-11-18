@@ -5,10 +5,11 @@ const Panel = ({
   title,
   bodyBackGndColor,
   bodyCustomClass,
+  sectionCustomClass,
   children
 }) => {
   return (
-    <section className="panel">
+    <section className={`panel ${sectionCustomClass}`}>
       {
         hasTitle &&
         <header className="panel-heading">
@@ -29,12 +30,14 @@ Panel.propTypes = {
   title: PropTypes.string,
   bodyBackGndColor: PropTypes.string,
   bodyCustomClass: PropTypes.string,
+  sectionCustomClass: PropTypes.string,
   children: PropTypes.node
 };
 
 Panel.defaultProps = {
   hasTitle: true,
   title: 'no title set',
+  sectionCustomClass: '',
   bodyBackGndColor: '#FFF'
 };
 
