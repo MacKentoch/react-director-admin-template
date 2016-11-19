@@ -10,6 +10,7 @@ import NotificationsConnected from './notifications/Notifications';
 import WorkProgressConnected from './workProgress/WorkProgress';
 import TwitterFeedConnected from './twitterFeed/TwitterFeed';
 import TeamMatesViewConnected from './teamMates/TeamMates';
+import TodoListViewConnected from './todoListView/TodoListView';
 
 export {
   App,
@@ -23,5 +24,6 @@ export {
   NotificationsConnected,
   WorkProgressConnected,
   TwitterFeedConnected,
-  TeamMatesViewConnected
+  TeamMatesViewConnected,
+  TodoListViewConnected
 };

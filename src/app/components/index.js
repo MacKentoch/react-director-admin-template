@@ -35,6 +35,13 @@ import {
   TeamMember,
   TeamMateAddButton
 } from './teamMates';
+import {
+  TodoList,
+  TodoListItem,
+  TodoListCommands,
+  TodoListAddTask,
+  TodoListSeeAllTask
+} from './todoList';
 
 export {
   Header,
@@ -69,5 +76,11 @@ export {
   // teamMates
   TeamMates,
   TeamMember,
-  TeamMateAddButton
+  TeamMateAddButton,
+  // todoList:
+  TodoList,
+  TodoListItem,
+  TodoListCommands,
+  TodoListAddTask,
+  TodoListSeeAllTask
 };

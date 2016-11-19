@@ -22,6 +22,8 @@ const ENTER_TWITTER_FEED_VIEW = 'ENTER_TWITTER_FEED_VIEW';
 const LEAVE_TWITTER_FEED_VIEW = 'LEAVE_TWITTER_FEED_VIEW';
 const ENTER_TEAM_MATES_VIEW = 'ENTER_TEAM_MATES_VIEW';
 const LEAVE_TEAM_MATES_VIEW = 'LEAVE_TEAM_MATES_VIEW';
+const ENTER_TODO_LIST_VIEW = 'ENTER_TODO_LIST_VIEW';
+const LEAVE_TODO_LIST_VIEW = 'LEAVE_TODO_LIST_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -43,6 +45,7 @@ export default function views(state = initialState, action) {
   case ENTER_WORK_PROGRESS_VIEW:
   case ENTER_TWITTER_FEED_VIEW:
   case ENTER_TEAM_MATES_VIEW:
+  case ENTER_TODO_LIST_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -65,6 +68,7 @@ export default function views(state = initialState, action) {
   case LEAVE_WORK_PROGRESS_VIEW:
   case LEAVE_TWITTER_FEED_VIEW:
   case LEAVE_TEAM_MATES_VIEW:
+  case LEAVE_TODO_LIST_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -275,6 +279,24 @@ export function leaveTeamMatesView(time = moment().format()) {
   return {
     type:         LEAVE_TEAM_MATES_VIEW,
     currentView:  'TeamMatesView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterTodoListView(time = moment().format()) {
+  return {
+    type:         ENTER_TODO_LIST_VIEW,
+    currentView:  'TodoListView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveTodoListView(time = moment().format()) {
+  return {
+    type:         LEAVE_TODO_LIST_VIEW,
+    currentView:  'TodoListView',
     enterTime:    null,
     leaveTime:    time
   };

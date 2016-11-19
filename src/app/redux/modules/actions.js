@@ -44,7 +44,10 @@ import {
   leaveTwitterFeed,
 
   enterTeamMatesView,
-  leaveTeamMatesView
+  leaveTeamMatesView,
+
+  enterTodoListView,
+  leaveTodoListView
 }                                     from './views';
 
 
@@ -82,5 +85,7 @@ export {
   enterTwitterFeed,
   leaveTwitterFeed,
   enterTeamMatesView,
-  leaveTeamMatesView
+  leaveTeamMatesView,
+  enterTodoListView,
+  leaveTodoListView
 };
