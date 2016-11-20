@@ -5,8 +5,10 @@ import React, {
 import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import {
+  Panel,
   Breadcrumb,
-  Stat
+  Stat,
+  ProgressBar
 }                     from '../../components';
 
 class General extends Component {
@@ -102,83 +104,76 @@ class General extends Component {
             <div className="row">
               <div className="col-md-12">
                 {/* <!--progress bar start--> */}
-                <section className="panel">
-                  <header className="panel-heading">
-                    Basic Progress Bars
-                  </header>
-                  <div className="panel-body">
-                    <p>
-                      <code>
-                        .progress
-                      </code>
-                    </p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar progress-bar-primary progress-bar-striped"
-                        role="progressbar"
-                        aria-valuenow="40"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={{width: '40%'}}>
-                        <span className="sr-only">
-                          40% Complete (success)
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Class:
-                      <code>
-                        .sm
-                      </code>
-                    </p>
-                    <div className="progress progress-sm active">
-                      <div
-                        className="progress-bar progress-bar-success progress-bar-striped"
-                        role="progressbar"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={{width: '20%'}}>
-                        <span className="sr-only">
-                          20% Complete
-                        </span>
-                      </div>
-                    </div>
-                    <p>
-                      Class:
-                      <code>
-                        .xs
-                      </code>
-                    </p>
-                    <div className="progress progress-xs">
-                      <div
-                        className="progress-bar progress-bar-warning progress-bar-striped"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={{width: '60%'}}>
-                        <span className="sr-only">
-                          60% Complete (warning)
-                        </span>
-                      </div>
-                    </div>
-                    <p>Class: <code>.xxs</code></p>
-                    <div className="progress progress-xxs">
-                      <div
-                        className="progress-bar progress-bar-danger progress-bar-striped"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={{width: '60%'}}>
-                        <span className="sr-only">
-                          60% Complete (warning)
-                        </span>
-                      </div>
+                <Panel
+                  title="Basic Progress Bars"
+                  hasTitle={true}>
+                  <p>
+                    <code>
+                      .progress
+                    </code>
+                  </p>
+                  <ProgressBar
+                    barSize="progress"
+                    barStriped={false}
+                    barStyle="primary"
+                    active={false}
+                    valueNow={40}
+                    valueMin={0}
+                    valueMax={100}
+                    screenReadersText={`${40}% Complete (success)`}
+                  />
+                  <p>
+                    Class:
+                    <code>
+                      .sm
+                    </code>
+                  </p>
+                  <ProgressBar
+                    barSize="sm"
+                    barStriped={false}
+                    barStyle="success"
+                    active={true}
+                    valueNow={20}
+                    valueMin={0}
+                    valueMax={100}
+                    screenReadersText={`${20}% Complete`}
+                  />
+                  <p>
+                    Class:
+                    <code>
+                      .xs
+                    </code>
+                  </p>
+                  <div className="progress progress-xs">
+                    <div
+                      className="progress-bar progress-bar-warning progress-bar-striped"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style={{width: '60%'}}>
+                      <span className="sr-only">
+                        60% Complete (warning)
+                      </span>
                     </div>
                   </div>
-              </section>
+                  <p>Class: <code>.xxs</code></p>
+                  <div className="progress progress-xxs">
+                    <div
+                      className="progress-bar progress-bar-danger progress-bar-striped"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style={{width: '60%'}}>
+                      <span className="sr-only">
+                        60% Complete (warning)
+                      </span>
+                    </div>
+                  </div>
+
+                </Panel>
+
               {/* <!--progress bar end--> */}
             </div>
           </div>
