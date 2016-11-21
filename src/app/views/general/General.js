@@ -114,7 +114,7 @@ class General extends Component {
                   </p>
                   <ProgressBar
                     barSize="progress"
-                    barStriped={false}
+                    barStriped={true}
                     barStyle="primary"
                     active={false}
                     valueNow={40}
@@ -130,7 +130,7 @@ class General extends Component {
                   </p>
                   <ProgressBar
                     barSize="sm"
-                    barStriped={false}
+                    barStriped={true}
                     barStyle="success"
                     active={true}
                     valueNow={20}
@@ -144,164 +144,153 @@ class General extends Component {
                       .xs
                     </code>
                   </p>
-                  <div className="progress progress-xs">
-                    <div
-                      className="progress-bar progress-bar-warning progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '60%'}}>
-                      <span className="sr-only">
-                        60% Complete (warning)
-                      </span>
-                    </div>
-                  </div>
-                  <p>Class: <code>.xxs</code></p>
-                  <div className="progress progress-xxs">
-                    <div
-                      className="progress-bar progress-bar-danger progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '60%'}}>
-                      <span className="sr-only">
-                        60% Complete (warning)
-                      </span>
-                    </div>
-                  </div>
-
-                </Panel>
-
-              {/* <!--progress bar end--> */}
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-12">
-              {/* <!--progress bar start--> */}
-              <section className="panel">
-                <header className="panel-heading">
-                  Striped Progress Bars
-                </header>
-                <div className="panel-body">
-                  <p>
-                    <code>
-                      .progress
-                    </code>
-                  </p>
-                  <div className="progress progress-striped">
-                    <div
-                      className="progress-bar progress-bar-primary progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="40"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '40%'}}>
-                      <span className="sr-only">
-                        40% Complete (success)
-                      </span>
-                    </div>
-                  </div>
-                  <p>Class: <code>.sm</code></p>
-                  <div className="progress progress-striped progress-sm active">
-                    <div
-                      className="progress-bar progress-bar-success progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="20"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '20%'}}>
-                      <span className="sr-only">
-                        20% Complete
-                      </span>
-                    </div>
-                  </div>
-                  <p>
-                    Class:
-                    <code>
-                      .xs
-                    </code>
-                  </p>
-                  <div className="progress progress-striped progress-xs">
-                    <div
-                      className="progress-bar progress-bar-warning progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '60%'}}>
-                      <span className="sr-only">
-                        60% Complete (warning)
-                      </span>
-                    </div>
-                  </div>
+                  <ProgressBar
+                    barSize="xs"
+                    barStriped={true}
+                    barStyle="warning"
+                    active={false}
+                    valueNow={60}
+                    valueMin={0}
+                    valueMax={100}
+                    screenReadersText={`${60}% Complete (warning)`}
+                  />
                   <p>
                     Class:
                     <code>
                       .xxs
                     </code>
                   </p>
-                  <div className="progress progress-striped progress-xxs">
-                    <div
-                      className="progress-bar progress-bar-danger progress-bar-striped"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style={{width: '60%'}}>
-                      <span className="sr-only">
-                        60% Complete (warning)
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                  <ProgressBar
+                    barSize="xxs"
+                    barStriped={true}
+                    barStyle="danger"
+                    active={false}
+                    valueNow={60}
+                    valueMin={0}
+                    valueMax={100}
+                    screenReadersText={`${60}% Complete (warning)`}
+                  />
+                </Panel>
+              {/* <!--progress bar end--> */}
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              {/* <!--progress bar start--> */}
+              <Panel
+                title="Striped Progress Bars"
+                hasTitle={true}>
+                <p>
+                  <code>
+                    .progress
+                  </code>
+                </p>
+                <ProgressBar
+                  barSize="progress"
+                  barStriped={true}
+                  barStyle="primary"
+                  active={false}
+                  valueNow={40}
+                  valueMin={0}
+                  valueMax={100}
+                  screenReadersText={`${40}% Complete (success)`}
+                />
+                <p>
+                  Class:
+                  <code>
+                    .sm
+                  </code>
+                </p>
+                <ProgressBar
+                  barSize="sm"
+                  barStriped={true}
+                  barStyle="success"
+                  active={true}
+                  valueNow={20}
+                  valueMin={0}
+                  valueMax={100}
+                  screenReadersText={`${20}% Complete`}
+                />
+                <p>
+                  Class:
+                  <code>
+                    .xs
+                  </code>
+                </p>
+                <ProgressBar
+                  barSize="xs"
+                  barStriped={true}
+                  barStyle="warning"
+                  active={false}
+                  valueNow={60}
+                  valueMin={0}
+                  valueMax={100}
+                  screenReadersText={`${60}% Complete (warning)`}
+                />
+                <p>
+                  Class:
+                  <code>
+                    .xxs
+                  </code>
+                </p>
+                <ProgressBar
+                  barSize="xxs"
+                  barStriped={true}
+                  barStyle="danger"
+                  active={false}
+                  valueNow={60}
+                  valueMin={0}
+                  valueMax={100}
+                  screenReadersText={`${60}% Complete (warning)`}
+                />
+              </Panel>
               {/* <!--progress bar end--> */}
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
               {/* <!--tooltips start--> */}
-              <section className="panel">
-                <div className="panel-body btn-gap">
-                  <button
-                    title=""
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    className="btn btn-default tooltips"
-                    type="button" data-original-title="Tooltip on top">
-                    Tooltip on top
-                  </button>
-                  <button
-                    title=""
-                    data-placement="left"
-                    data-toggle="tooltip"
-                    className="btn btn-default tooltips"
-                    type="button"
-                    data-original-title="Tooltip on left">
-                    left
-                  </button>
-                  <button
-                    title=""
-                    data-placement="bottom"
-                    data-toggle="tooltip "
-                    className="btn btn-default tooltips"
-                    type="button"
-                    data-original-title="Tooltip on bottom">
-                    bottom
-                  </button>
-                  <button
-                    title=""
-                    data-placement="right"
-                    data-toggle="tooltip"
-                    className="btn btn-default tooltips"
-                    type="button"
-                    data-original-title="Tooltip on right">
-                    right
-                  </button>
-                </div>
-              </section>
+              <Panel
+                title="Striped Progress Bars"
+                hasTitle={false}
+                bodyCustomClass="btn-gap">
+                <button
+                  title=""
+                  data-placement="top"
+                  data-toggle="tooltip"
+                  className="btn btn-default tooltips"
+                  type="button"
+                  data-original-title="Tooltip on top">
+                  Tooltip on top
+                </button>
+                <button
+                  title=""
+                  data-placement="left"
+                  data-toggle="tooltip"
+                  className="btn btn-default tooltips"
+                  type="button"
+                  data-original-title="Tooltip on left">
+                  left
+                </button>
+                <button
+                  title=""
+                  data-placement="bottom"
+                  data-toggle="tooltip "
+                  className="btn btn-default tooltips"
+                  type="button"
+                  data-original-title="Tooltip on bottom">
+                  bottom
+                </button>
+                <button
+                  title=""
+                  data-placement="right"
+                  data-toggle="tooltip"
+                  className="btn btn-default tooltips"
+                  type="button"
+                  data-original-title="Tooltip on right">
+                  right
+                </button>
+              </Panel>
               {/* <!--tooltips end--> */}
             </div>
           </div>
@@ -313,7 +302,7 @@ class General extends Component {
                   Pagination
                 </header>
                 <div className="panel-body">
-                  <div>
+                  <div className="text-center">
                     <ul className="pagination pagination-lg">
                       <li><a href="#">«</a></li>
                       <li><a href="#">1</a></li>
@@ -335,8 +324,8 @@ class General extends Component {
                       <li><a href="#">»</a></li>
                     </ul>
                   </div>
-                  <div>
-                    <ul className="pagination pagination-sm pull-right">
+                  <div className="text-center">
+                    <ul className="pagination pagination-sm">
                       <li><a href="#">«</a></li>
                       <li><a href="#">1</a></li>
                       <li><a href="#">2</a></li>
@@ -346,35 +335,40 @@ class General extends Component {
                       <li><a href="#">»</a></li>
                     </ul>
                   </div>
+
+                  <div>
+                    <h3>Default Example</h3>
+                    <nav>
+                      <ul className="pager">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3>Aligned links</h3>
+                    <nav>
+                      <ul className="pager">
+                        <li className="previous">
+                          <a href="#">
+                            <span aria-hidden="true">
+                              &larr;
+                            </span>
+                            Older
+                          </a>
+                        </li>
+                        <li className="next">
+                          <a href="#">
+                            Newer
+                            <span aria-hidden="true">
+                              &rarr;
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-                <h3>Default Example</h3>
-                <nav>
-                  <ul className="pager">
-                    <li><a href="#">Previous</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>
-                </nav>
-                <h3>Aligned links</h3>
-                <nav>
-                  <ul className="pager">
-                    <li className="previous">
-                      <a href="#">
-                        <span aria-hidden="true">
-                          &larr;
-                        </span>
-                        Older
-                      </a>
-                    </li>
-                    <li className="next">
-                      <a href="#">
-                        Newer
-                        <span aria-hidden="true">
-                          &rarr;
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
             </section>
             {/* <!--pagination end--> */}
           </div>
