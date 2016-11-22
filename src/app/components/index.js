@@ -43,6 +43,7 @@ import {
   TodoListSeeAllTask
 } from './todoList';
 import ProgressBar from './progressBar/ProgressBar';
+import ToolTip from './toolTip';
 
 export {
   Header,
@@ -65,6 +66,7 @@ export {
   Breadcrumb,
   Stat,
   ProgressBar,
+  ToolTip,
   // table
   Table,
   TableHeader,

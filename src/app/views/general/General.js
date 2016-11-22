@@ -8,8 +8,16 @@ import {
   Panel,
   Breadcrumb,
   Stat,
-  ProgressBar
+  ProgressBar,
+  ToolTip
 }                     from '../../components';
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
+import Tooltip        from 'react-bootstrap/lib/Tooltip';
+
+const tooltip = (
+  <Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>
+);
+
 
 class General extends Component {
 
@@ -251,45 +259,58 @@ class General extends Component {
             <div className="col-md-12">
               {/* <!--tooltips start--> */}
               <Panel
-                title="Striped Progress Bars"
+                title="Tooltips"
                 hasTitle={false}
                 bodyCustomClass="btn-gap">
-                <button
-                  title=""
-                  data-placement="top"
-                  data-toggle="tooltip"
-                  className="btn btn-default tooltips"
-                  type="button"
-                  data-original-title="Tooltip on top">
-                  Tooltip on top
-                </button>
-                <button
-                  title=""
-                  data-placement="left"
-                  data-toggle="tooltip"
-                  className="btn btn-default tooltips"
-                  type="button"
-                  data-original-title="Tooltip on left">
-                  left
-                </button>
-                <button
-                  title=""
-                  data-placement="bottom"
-                  data-toggle="tooltip "
-                  className="btn btn-default tooltips"
-                  type="button"
-                  data-original-title="Tooltip on bottom">
-                  bottom
-                </button>
-                <button
-                  title=""
-                  data-placement="right"
-                  data-toggle="tooltip"
-                  className="btn btn-default tooltips"
-                  type="button"
-                  data-original-title="Tooltip on right">
-                  right
-                </button>
+
+                <ToolTip
+                  toolTipId={'tooltipTop'}
+                  toolTipContent={<span>Tooltip on top</span>}
+                  tooltipPlacement={'top'}>
+                  <button
+                    title=""
+                    className="btn btn-default tooltips"
+                    type="button">
+                    Tooltip on top
+                  </button>
+                </ToolTip>
+
+                <ToolTip
+                  toolTipId={'tooltipLeft'}
+                  toolTipContent={<span>Tooltip on left</span>}
+                  tooltipPlacement={'left'}>
+                  <button
+                    title=""
+                    className="btn btn-default tooltips"
+                    type="button">
+                    left
+                  </button>
+                </ToolTip>
+
+                <ToolTip
+                  toolTipId={'tooltipBottom'}
+                  toolTipContent={<span>Tooltip on bottom</span>}
+                  tooltipPlacement={'bottom'}>
+                  <button
+                    title=""
+                    className="btn btn-default tooltips"
+                    type="button">
+                    bottom
+                  </button>
+                </ToolTip>
+
+                <ToolTip
+                  toolTipId={'tooltipRight'}
+                  toolTipContent={<span>Tooltip on right</span>}
+                  tooltipPlacement={'right'}>
+                  <button
+                    title=""
+                    className="btn btn-default tooltips"
+                    type="button">
+                    right
+                  </button>
+                </ToolTip>
+
               </Panel>
               {/* <!--tooltips end--> */}
             </div>
