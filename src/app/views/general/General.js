@@ -9,14 +9,11 @@ import {
   Breadcrumb,
   Stat,
   ProgressBar,
-  ToolTip
+  ToolTip,
+  Pagination
 }                     from '../../components';
-import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import Tooltip        from 'react-bootstrap/lib/Tooltip';
-
-const tooltip = (
-  <Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>
-);
+// import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
+// import Tooltip        from 'react-bootstrap/lib/Tooltip';
 
 
 class General extends Component {
@@ -324,39 +321,22 @@ class General extends Component {
                 </header>
                 <div className="panel-body">
                   <div className="text-center">
-                    <ul className="pagination pagination-lg">
-                      <li><a href="#">«</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">»</a></li>
-                    </ul>
+                    <Pagination
+                      size="large"
+                      numberOfPagination={5}
+                    />
                   </div>
                   <div className="text-center">
-                    <ul className="pagination">
-                      <li><a href="#">«</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">»</a></li>
-                    </ul>
+                    <Pagination
+                      numberOfPagination={5}
+                    />
                   </div>
                   <div className="text-center">
-                    <ul className="pagination pagination-sm">
-                      <li><a href="#">«</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">»</a></li>
-                    </ul>
+                    <Pagination
+                      size="small"
+                      numberOfPagination={5}
+                    />
                   </div>
-
                   <div>
                     <h3>Default Example</h3>
                     <nav>

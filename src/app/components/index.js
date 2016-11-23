@@ -44,6 +44,7 @@ import {
 } from './todoList';
 import ProgressBar from './progressBar/ProgressBar';
 import ToolTip from './toolTip';
+import Pagination from './pagination/Pagination';
 
 export {
   Header,
@@ -67,6 +68,7 @@ export {
   Stat,
   ProgressBar,
   ToolTip,
+  Pagination,
   // table
   Table,
   TableHeader,
