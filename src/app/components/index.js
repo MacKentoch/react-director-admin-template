@@ -45,6 +45,7 @@ import {
 import ProgressBar from './progressBar/ProgressBar';
 import ToolTip from './toolTip';
 import Pagination from './pagination/Pagination';
+import Pager from './pager/Pager';
 
 export {
   Header,
@@ -69,6 +70,7 @@ export {
   ProgressBar,
   ToolTip,
   Pagination,
+  Pager,
   // table
   Table,
   TableHeader,

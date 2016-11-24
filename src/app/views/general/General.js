@@ -10,7 +10,8 @@ import {
   Stat,
   ProgressBar,
   ToolTip,
-  Pagination
+  Pagination,
+  Pager
 }                     from '../../components';
 // import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 // import Tooltip        from 'react-bootstrap/lib/Tooltip';
@@ -315,62 +316,57 @@ class General extends Component {
           <div className="row">
             <div className="col-md-12">
               {/* <!--pagination start--> */}
-              <section className="panel">
-                <header className="panel-heading">
-                  Pagination
-                </header>
-                <div className="panel-body">
-                  <div className="text-center">
-                    <Pagination
-                      size="large"
-                      numberOfPagination={5}
-                    />
-                  </div>
-                  <div className="text-center">
-                    <Pagination
-                      numberOfPagination={5}
-                    />
-                  </div>
-                  <div className="text-center">
-                    <Pagination
-                      size="small"
-                      numberOfPagination={5}
-                    />
-                  </div>
-                  <div>
-                    <h3>Default Example</h3>
-                    <nav>
-                      <ul className="pager">
-                        <li><a href="#">Previous</a></li>
-                        <li><a href="#">Next</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div>
-                    <h3>Aligned links</h3>
-                    <nav>
-                      <ul className="pager">
-                        <li className="previous">
-                          <a href="#">
-                            <span aria-hidden="true">
-                              &larr;
-                            </span>
-                            Older
-                          </a>
-                        </li>
-                        <li className="next">
-                          <a href="#">
-                            Newer
-                            <span aria-hidden="true">
-                              &rarr;
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
+              <Panel
+                title="Pagination"
+                hasTitle={true}>
+                <div className="text-center">
+                  <Pagination
+                    size="large"
+                    numberOfPagination={5}
+                  />
                 </div>
-            </section>
+                <div className="text-center">
+                  <Pagination
+                    numberOfPagination={5}
+                  />
+                </div>
+                <div className="text-center">
+                  <Pagination
+                    size="small"
+                    numberOfPagination={5}
+                  />
+                </div>
+                <div>
+                  <h3>Default Example</h3>
+                  <Pager
+                    aligned={false}
+                    previous={'Previous'}
+                    next={'Next'}
+                  />
+                </div>
+                <div>
+                  <h3>Aligned links</h3>
+                  <Pager
+                    aligned={true}
+                    previous={
+                      <div>
+                        <span aria-hidden="true">
+                          &larr;
+                        </span>
+                        Older
+                      </div>
+                    }
+                    next={
+                      <div>
+                        Newer
+                        <span aria-hidden="true">
+                          &rarr;
+                        </span>
+                      </div>
+                    }
+                  />
+                </div>
+              </Panel>
             {/* <!--pagination end--> */}
           </div>
         </div>
