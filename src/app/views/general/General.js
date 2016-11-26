@@ -11,11 +11,12 @@ import {
   ProgressBar,
   ToolTip,
   Pagination,
-  Pager
+  Pager,
+  TabPanel,
+  TabPanelHeader,
+  TabPanelBody,
+  TabPanelBodyContent
 }                     from '../../components';
-// import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-// import Tooltip        from 'react-bootstrap/lib/Tooltip';
-
 
 class General extends Component {
 
@@ -373,6 +374,29 @@ class General extends Component {
       </div>
       <div className="col-lg-6">
         {/* <!--tab nav start--> */}
+
+        <TabPanel>
+          <TabPanelHeader tabItems={
+            [
+              {name: 'Home', tablink: 'home', isActive: true},
+              {name: 'About', tablink: 'about', isActive: false},
+              {name: 'Profile', tablink: 'profile', isActive: false},
+              {name: 'Contact', tablink: 'contact', isActive: false}
+            ]
+          }/>
+          <TabPanelBody>
+            <TabPanelBodyContent id="home">
+              &nbsp;Home
+            </TabPanelBodyContent>
+            <TabPanelBodyContent id="about">
+              &nbsp;About
+            </TabPanelBodyContent>
+            <TabPanelBodyContent id="profile">
+              &nbsp;Profile
+            </TabPanelBodyContent>
+          </TabPanelBody>
+        </TabPanel>
+
         <section className="panel general">
           <header className="panel-heading tab-bg-dark-navy-blue">
             <ul className="nav nav-tabs">

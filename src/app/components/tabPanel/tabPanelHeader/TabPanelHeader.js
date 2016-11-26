@@ -42,7 +42,7 @@ TabPanelHeader.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       tablink: PropTypes.string.isRequired,
-      isActive: PropTypes.string.isRequired
+      isActive: PropTypes.bool.isRequired
     }).isRequired
   ).isRequired
 };

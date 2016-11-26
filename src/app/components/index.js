@@ -46,6 +46,13 @@ import ProgressBar from './progressBar/ProgressBar';
 import ToolTip from './toolTip';
 import Pagination from './pagination/Pagination';
 import Pager from './pager/Pager';
+import {
+  TabPanel,
+  TabPanelHeader,
+  TabPanelBody,
+  TabPanelBodyContent,
+  TabPanelDemo
+} from './tabPanel';
 
 export {
   Header,
@@ -71,6 +78,11 @@ export {
   ToolTip,
   Pagination,
   Pager,
+  TabPanel,
+  TabPanelHeader,
+  TabPanelBody,
+  TabPanelBodyContent,
+  TabPanelDemo,
   // table
   Table,
   TableHeader,
