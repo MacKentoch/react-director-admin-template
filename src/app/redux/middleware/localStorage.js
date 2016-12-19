@@ -61,7 +61,7 @@ function isPermanentStoreObject(object) {
       objectHasProperty.call(object, 'required') && typeof object.required === 'boolean' &&
       objectHasProperty.call(object, 'storeKey') && typeof object.storeKey === 'string' && storeKeyIsValid(object.storeKey) &&
       objectHasProperty.call(object, 'storeValue') &&
-      objectHasProperty.call(object, 'ReadOrWrite') && typeof object.required === 'boolean'
+      objectHasProperty.call(object, 'ReadOrWrite') && typeof object.ReadOrWrite === 'boolean'
      ) {
     return true;
   }

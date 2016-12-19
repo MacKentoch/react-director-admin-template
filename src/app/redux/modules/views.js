@@ -24,6 +24,8 @@ const ENTER_TEAM_MATES_VIEW = 'ENTER_TEAM_MATES_VIEW';
 const LEAVE_TEAM_MATES_VIEW = 'LEAVE_TEAM_MATES_VIEW';
 const ENTER_TODO_LIST_VIEW = 'ENTER_TODO_LIST_VIEW';
 const LEAVE_TODO_LIST_VIEW = 'LEAVE_TODO_LIST_VIEW';
+const ENTER_BREADCRUMB_VIEW = 'ENTER_BREADCRUMB_VIEW';
+const LEAVE_BREADCRUMB_VIEW = 'LEAVE_BREADCRUMB_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -46,6 +48,7 @@ export default function views(state = initialState, action) {
   case ENTER_TWITTER_FEED_VIEW:
   case ENTER_TEAM_MATES_VIEW:
   case ENTER_TODO_LIST_VIEW:
+  case ENTER_BREADCRUMB_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -69,6 +72,7 @@ export default function views(state = initialState, action) {
   case LEAVE_TWITTER_FEED_VIEW:
   case LEAVE_TEAM_MATES_VIEW:
   case LEAVE_TODO_LIST_VIEW:
+  case LEAVE_BREADCRUMB_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -297,6 +301,24 @@ export function leaveTodoListView(time = moment().format()) {
   return {
     type:         LEAVE_TODO_LIST_VIEW,
     currentView:  'TodoListView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterBreadcrumb(time = moment().format()) {
+  return {
+    type:         ENTER_BREADCRUMB_VIEW,
+    currentView:  'BreadcrumbView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveBreadcrumb(time = moment().format()) {
+  return {
+    type:         LEAVE_BREADCRUMB_VIEW,
+    currentView:  'BreadcrumbView',
     enterTime:    null,
     leaveTime:    time
   };

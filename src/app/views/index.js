@@ -11,6 +11,7 @@ import WorkProgress       from './workProgress/WorkProgress';
 import TwitterFeed        from './twitterFeed/TwitterFeed';
 import TeamMatesView      from './teamMates/TeamMates';
 import TodoListView       from './todoList/TodoListView';
+import Breadcrumb         from './breadcrumb/Breadcrumb';
 
 export {
   Home,
@@ -25,5 +26,6 @@ export {
   WorkProgress,
   TwitterFeed,
   TeamMatesView,
-  TodoListView
+  TodoListView,
+  Breadcrumb
 };

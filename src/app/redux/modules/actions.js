@@ -47,7 +47,10 @@ import {
   leaveTeamMatesView,
 
   enterTodoListView,
-  leaveTodoListView
+  leaveTodoListView,
+
+  enterBreadcrumb,
+  leaveBreadcrumb
 }                                     from './views';
 
 
@@ -87,5 +90,7 @@ export {
   enterTeamMatesView,
   leaveTeamMatesView,
   enterTodoListView,
-  leaveTodoListView
+  leaveTodoListView,
+  enterBreadcrumb,
+  leaveBreadcrumb
 };

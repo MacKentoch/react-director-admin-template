@@ -11,6 +11,7 @@ import WorkProgressConnected from './workProgress/WorkProgress';
 import TwitterFeedConnected from './twitterFeed/TwitterFeed';
 import TeamMatesViewConnected from './teamMates/TeamMates';
 import TodoListViewConnected from './todoListView/TodoListView';
+import BreadcrumbViewConnected from './breadcrumb/Breadcrumb';
 
 export {
   App,
@@ -25,5 +26,6 @@ export {
   WorkProgressConnected,
   TwitterFeedConnected,
   TeamMatesViewConnected,
-  TodoListViewConnected
+  TodoListViewConnected,
+  BreadcrumbViewConnected
 };

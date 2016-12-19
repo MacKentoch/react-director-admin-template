@@ -22,7 +22,8 @@ import {
   WorkProgressConnected,
   TwitterFeedConnected,
   TeamMatesViewConnected,
-  TodoListViewConnected
+  TodoListViewConnected,
+  BreadcrumbViewConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -50,6 +51,7 @@ export const Routes = () => {
             <Route path="/basicElements" component={BasicElementsConnected} />
 
             <Route path="/general" component={GeneralConnected} />
+            <Route path="/general/breadcrumb" component={BreadcrumbViewConnected} />
 
             <Route path="*" component={PageNotFoundConnected} />
           </Route>
