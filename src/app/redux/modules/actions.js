@@ -50,7 +50,10 @@ import {
   leaveTodoListView,
 
   enterBreadcrumb,
-  leaveBreadcrumb
+  leaveBreadcrumb,
+
+  enterStat,
+  leaveStat
 }                                     from './views';
 
 
@@ -92,5 +95,7 @@ export {
   enterTodoListView,
   leaveTodoListView,
   enterBreadcrumb,
-  leaveBreadcrumb
+  leaveBreadcrumb,
+  enterStat,
+  leaveStat
 };

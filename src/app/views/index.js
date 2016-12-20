@@ -12,6 +12,7 @@ import TwitterFeed        from './twitterFeed/TwitterFeed';
 import TeamMatesView      from './teamMates/TeamMates';
 import TodoListView       from './todoList/TodoListView';
 import Breadcrumb         from './breadcrumb/Breadcrumb';
+import Stat               from './stat/Stat';
 
 export {
   Home,
@@ -27,5 +28,6 @@ export {
   TwitterFeed,
   TeamMatesView,
   TodoListView,
-  Breadcrumb
+  Breadcrumb,
+  Stat
 };

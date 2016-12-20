@@ -80,37 +80,37 @@ export const navigation = {
         },
         {
           name: 'Stat',
-          linkTo: '/Dashboard/stat',
+          linkTo: '/general/stat',
           faIconName: 'fa-bar-chart'
         },
         {
           name: 'Basic progress bars',
-          linkTo: '/Dashboard/basicProgressBars',
+          linkTo: '/general/basicProgressBars',
           faIconName: 'fa-tasks'
         },
         {
           name: 'Tab panels',
-          linkTo: '/Dashboard/tabPanels',
+          linkTo: '/general/tabPanels',
           faIconName: 'fa-columns'
         },
         {
           name: 'Striped progress bar',
-          linkTo: '/Dashboard/stripedProgressBars',
+          linkTo: '/general/stripedProgressBars',
           faIconName: 'fa-tasks'
         },
         {
           name: 'Alerts',
-          linkTo: '/Dashboard/alerts',
+          linkTo: '/general/alerts',
           faIconName: 'fa-exclamation-triangle'
         },
         {
           name: 'Pagination',
-          linkTo: '/Dashboard/pagination',
+          linkTo: '/general/pagination',
           faIconName: 'fa-sort'
         },
         {
           name: 'Default buttons',
-          linkTo: '/Dashboard/defaultButtons',
+          linkTo: '/general/defaultButtons',
           faIconName: 'fa-hand-o-up'
         }
       ]
