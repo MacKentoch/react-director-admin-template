@@ -13,6 +13,7 @@ import TeamMatesViewConnected from './teamMates/TeamMates';
 import TodoListViewConnected from './todoListView/TodoListView';
 import BreadcrumbViewConnected from './breadcrumb/Breadcrumb';
 import StatViewConnected from './stat/Stat';
+import BasicProgressBarConnected from './basicProgressBar/BasicProgressBar';
 
 export {
   App,
@@ -29,5 +30,6 @@ export {
   TeamMatesViewConnected,
   TodoListViewConnected,
   BreadcrumbViewConnected,
-  StatViewConnected
+  StatViewConnected,
+  BasicProgressBarConnected
 };

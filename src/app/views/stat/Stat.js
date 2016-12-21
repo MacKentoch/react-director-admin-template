@@ -41,7 +41,7 @@ class Stat extends Component {
   }
 
   render() {
-    const { animated, viewEnters, path } = this.state;
+    const { animated, viewEnters } = this.state;
 
     const source = `
       // import

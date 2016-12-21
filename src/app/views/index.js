@@ -13,6 +13,7 @@ import TeamMatesView      from './teamMates/TeamMates';
 import TodoListView       from './todoList/TodoListView';
 import Breadcrumb         from './breadcrumb/Breadcrumb';
 import Stat               from './stat/Stat';
+import BasicProgressBar   from './basicProgressBar/BasicProgressBar';
 
 export {
   Home,
@@ -29,5 +30,6 @@ export {
   TeamMatesView,
   TodoListView,
   Breadcrumb,
-  Stat
+  Stat,
+  BasicProgressBar
 };

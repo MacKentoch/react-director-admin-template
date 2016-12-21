@@ -24,7 +24,8 @@ import {
   TeamMatesViewConnected,
   TodoListViewConnected,
   BreadcrumbViewConnected,
-  StatViewConnected
+  StatViewConnected,
+  BasicProgressBarConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -54,6 +55,7 @@ export const Routes = () => {
             <Route path="/general" component={GeneralConnected} />
             <Route path="/general/breadcrumb" component={BreadcrumbViewConnected} />
             <Route path="/general/stat" component={StatViewConnected} />
+            <Route path="/general/basicProgressBars" component={BasicProgressBarConnected} />
 
             <Route path="*" component={PageNotFoundConnected} />
           </Route>

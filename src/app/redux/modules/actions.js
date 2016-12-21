@@ -53,7 +53,10 @@ import {
   leaveBreadcrumb,
 
   enterStat,
-  leaveStat
+  leaveStat,
+
+  enterBasicProgressBar,
+  leaveBasicProgressBar
 }                                     from './views';
 
 
@@ -97,5 +100,7 @@ export {
   enterBreadcrumb,
   leaveBreadcrumb,
   enterStat,
-  leaveStat
+  leaveStat,
+  enterBasicProgressBar,
+  leaveBasicProgressBar
 };
