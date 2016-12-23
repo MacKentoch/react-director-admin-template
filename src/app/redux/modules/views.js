@@ -30,6 +30,8 @@ const ENTER_STAT_VIEW = 'ENTER_STAT_VIEW';
 const LEAVE_STAT_VIEW = 'LEAVE_STAT_VIEW';
 const ENTER_BASIC_PROGRESS_BAR_VIEW = 'ENTER_BASIC_PROGRESS_BAR_VIEW';
 const LEAVE_BASIC_PROGRESS_BAR_VIEW = 'LEAVE_BASIC_PROGRESS_BAR_VIEW';
+const ENTER_TAB_PANEL_VIEW = 'ENTER_TAB_PANEL_VIEW';
+const LEAVE_TAB_PANEL_VIEW = 'LEAVE_TAB_PANEL_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -55,6 +57,7 @@ export default function views(state = initialState, action) {
   case ENTER_BREADCRUMB_VIEW:
   case ENTER_STAT_VIEW:
   case ENTER_BASIC_PROGRESS_BAR_VIEW:
+  case ENTER_TAB_PANEL_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -81,6 +84,7 @@ export default function views(state = initialState, action) {
   case LEAVE_BREADCRUMB_VIEW:
   case LEAVE_STAT_VIEW:
   case LEAVE_BASIC_PROGRESS_BAR_VIEW:
+  case LEAVE_TAB_PANEL_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -363,6 +367,24 @@ export function leaveBasicProgressBar(time = moment().format()) {
   return {
     type:         LEAVE_BASIC_PROGRESS_BAR_VIEW,
     currentView:  'BasicProgressBarView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterTabPanel(time = moment().format()) {
+  return {
+    type:         ENTER_TAB_PANEL_VIEW,
+    currentView:  'TabPanel',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveTabPanel(time = moment().format()) {
+  return {
+    type:         LEAVE_TAB_PANEL_VIEW,
+    currentView:  'TabPanel',
     enterTime:    null,
     leaveTime:    time
   };

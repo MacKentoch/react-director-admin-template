@@ -14,6 +14,7 @@ import TodoListViewConnected from './todoListView/TodoListView';
 import BreadcrumbViewConnected from './breadcrumb/Breadcrumb';
 import StatViewConnected from './stat/Stat';
 import BasicProgressBarConnected from './basicProgressBar/BasicProgressBar';
+import TabPanelConnected from './tabPanel/TabPanel';
 
 export {
   App,
@@ -31,5 +32,6 @@ export {
   TodoListViewConnected,
   BreadcrumbViewConnected,
   StatViewConnected,
-  BasicProgressBarConnected
+  BasicProgressBarConnected,
+  TabPanelConnected
 };

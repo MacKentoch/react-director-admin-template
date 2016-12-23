@@ -14,6 +14,7 @@ import TodoListView       from './todoList/TodoListView';
 import Breadcrumb         from './breadcrumb/Breadcrumb';
 import Stat               from './stat/Stat';
 import BasicProgressBar   from './basicProgressBar/BasicProgressBar';
+import TabPanel           from './tabPanel/TabPanel';
 
 export {
   Home,
@@ -31,5 +32,6 @@ export {
   TodoListView,
   Breadcrumb,
   Stat,
-  BasicProgressBar
+  BasicProgressBar,
+  TabPanel
 };

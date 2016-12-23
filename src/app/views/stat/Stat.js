@@ -108,7 +108,7 @@ class Stat extends Component {
       <div className="row">
         <div className="col-xs-12">
           <Panel
-            title="Breadcrumb"
+            title="Stat"
             hasTitle={true}
             bodyBackGndColor={'#F4F5F6'}>
 

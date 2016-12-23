@@ -56,7 +56,10 @@ import {
   leaveStat,
 
   enterBasicProgressBar,
-  leaveBasicProgressBar
+  leaveBasicProgressBar,
+
+  enterTabPanel,
+  leaveTabPanel
 }                                     from './views';
 
 
@@ -102,5 +105,7 @@ export {
   enterStat,
   leaveStat,
   enterBasicProgressBar,
-  leaveBasicProgressBar
+  leaveBasicProgressBar,
+  enterTabPanel,
+  leaveTabPanel
 };
