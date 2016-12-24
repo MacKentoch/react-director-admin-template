@@ -37,6 +37,9 @@ let config = {
   plugins: [
     getImplicitGlobals(),
     setNodeEnv()
+    // webpack.optimize.DedupePlugin()
+    // webpack.optimize.UglifyJsPlugin(),
+    // webpack.optimize.AggressiveMergingPlugin()
   ],
   postcss: function () {
     return [precss, autoprefixer];
