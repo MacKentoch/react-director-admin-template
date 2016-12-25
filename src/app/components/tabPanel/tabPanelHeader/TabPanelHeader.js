@@ -5,24 +5,34 @@ import cx from 'classnames';
 const TabPanelHeader = ({tabItems}) => {
   const oneTabAtLeastIsActive = tabItems.some(item => item.isActive === true);
 
+  let tabItemsToDisplay = [...tabItems];
+  if (!oneTabAtLeastIsActive) {
+    tabItemsToDisplay = tabItems.map((item, itemIdx) => {
+      if (itemIdx === 0) {
+        return {
+          ...item,
+          isActive: true
+        };
+      }
+      return item;
+    });
+  }
+
   return (
       <header className="panel-heading tab-bg-dark-navy-blue">
         <ul className="nav nav-tabs">
           {
-            tabItems.map(
+            tabItemsToDisplay.map(
               (item, itemIdx) => {
                 const { name, tablink, isActive } = item;
 
                 return (
                   <li
                     key={itemIdx}
-                    className={
-                      cx({
-                        active: isActive || (!oneTabAtLeastIsActive && itemIdx === 0)
-                      })
-                    }>
+                    className={ cx({ active: isActive }) }>
                     <a
                       data-toggle="tab"
+                      aria-expanded={isActive === true ? 'true' : 'false'}
                       href={`#${tablink}`}>
                       &nbsp;
                       {name}

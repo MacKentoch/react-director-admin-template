@@ -373,91 +373,53 @@ class General extends Component {
         </div>
       </div>
       <div className="col-lg-6">
-        {/* <!--tab nav start--> */}
-
         <TabPanel>
           <TabPanelHeader tabItems={
             [
-              {name: 'Home', tablink: 'home', isActive: true},
-              {name: 'About', tablink: 'about', isActive: false},
-              {name: 'Profile', tablink: 'profile', isActive: false},
-              {name: 'Contact', tablink: 'contact', isActive: false}
+              {name: 'Home', tablink: 'home1', isActive: true},
+              {name: 'About', tablink: 'about1', isActive: false},
+              {name: 'Profile', tablink: 'profile1', isActive: false}
             ]
           }/>
           <TabPanelBody>
-            <TabPanelBodyContent id="home">
+            <TabPanelBodyContent id="home1">
               &nbsp;Home
             </TabPanelBodyContent>
-            <TabPanelBodyContent id="about">
+            <TabPanelBodyContent id="about1">
               &nbsp;About
             </TabPanelBodyContent>
-            <TabPanelBodyContent id="profile">
+            <TabPanelBodyContent id="profile1">
               &nbsp;Profile
             </TabPanelBodyContent>
           </TabPanelBody>
         </TabPanel>
 
-        <section className="panel general">
-          <header className="panel-heading tab-bg-dark-navy-blue">
-            <ul className="nav nav-tabs">
-              <li className="active">
-                <a
-                  data-toggle="tab"
-                  href="#home">
-                  &nbsp;Home
-                </a>
-              </li>
-              <li className="">
-                <a
-                  data-toggle="tab"
-                  href="#about">
-                  &nbsp;About
-                </a>
-              </li>
-              <li className="">
-                <a
-                  data-toggle="tab"
-                  href="#profile">
-                  &nbsp;Profile
-                </a>
-              </li>
-              <li className="">
-                <a
-                  data-toggle="tab"
-                  href="#contact">
-                  &nbsp;Contact
-                </a>
-              </li>
-            </ul>
-          </header>
-          <div className="panel-body">
-            <div className="tab-content">
-              <div
-                id="home"
-                className="tab-pane active">
-                &nbsp;Home
-              </div>
-              <div
-                id="about"
-                className="tab-pane">
-                &nbsp;About
-              </div>
-              <div
-                id="profile"
-                className="tab-pane">
-                &nbsp;Profile
-              </div>
-              <div
-                id="contact"
-                className="tab-pane">
-                &nbsp;Contact
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* <!--tab nav start--> */}
-        {/* <!--tab nav start--> */}
-        <section className="panel general">
+        <TabPanel>
+          <TabPanelHeader tabItems={
+            [
+              {name: 'Home', tablink: 'home2', isActive: true},
+              {name: 'About', tablink: 'about2', isActive: false},
+              {name: 'Contact', tablink: 'contact2', isActive: false}
+            ]
+          }/>
+          <TabPanelBody>
+            <TabPanelBodyContent id="home2">
+              <i className="fa fa-home"></i>
+              &nbsp;Home
+            </TabPanelBodyContent>
+            <TabPanelBodyContent id="about2">
+              <i className="fa fa-user"></i>
+              &nbsp;About
+            </TabPanelBodyContent>
+            <TabPanelBodyContent id="contact2">
+              <i className="fa fa-envelope-o"></i>
+              &nbsp;Contact
+            </TabPanelBodyContent>
+          </TabPanelBody>
+        </TabPanel>
+
+
+        {/* <section className="panel general">
           <header className="panel-heading tab-bg-dark-navy-blue">
             <ul className="nav nav-tabs">
               <li>
@@ -465,6 +427,7 @@ class General extends Component {
                   data-toggle="tab"
                   href="#home-2">
                   <i className="fa fa-home"></i>
+                  &nbsp;Home
                 </a>
               </li>
               <li className="active">
@@ -504,7 +467,7 @@ class General extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* <!--tab nav end--> */}
         {/* <!--tab nav start--> */}
         <section className="panel">
