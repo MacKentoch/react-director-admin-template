@@ -53,6 +53,7 @@ import {
   TabPanelBodyContent,
   TabPanelDemo
 } from './tabPanel';
+import Alert from './alert/Alert';
 
 export {
   Header,
@@ -102,5 +103,7 @@ export {
   TodoListItem,
   TodoListCommands,
   TodoListAddTask,
-  TodoListSeeAllTask
+  TodoListSeeAllTask,
+  // Alert:
+  Alert
 };

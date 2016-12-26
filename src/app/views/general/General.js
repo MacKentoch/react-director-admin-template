@@ -15,7 +15,8 @@ import {
   TabPanel,
   TabPanelHeader,
   TabPanelBody,
-  TabPanelBodyContent
+  TabPanelBodyContent,
+  Alert
 }                     from '../../components';
 
 class General extends Component {
@@ -524,51 +525,39 @@ class General extends Component {
               {/* <!--notification start--> */}
               <section className="panel">
                 <div className="panel-body">
-                  <div className="alert alert-block alert-danger ">
-                    <button
-                      data-dismiss="alert"
-                      className="close close-sm"
-                      type="button">
-                      <i className="fa fa-times"></i>
-                    </button>
+
+                  <Alert
+                    type="danger">
                     <strong>
                       Oh snap!
                     </strong>
                     Change a few things up and try submitting again.
-                  </div>
-                  <div className="alert alert-success ">
-                    <button
-                      data-dismiss="alert"
-                      className="close close-sm"
-                      type="button">
-                      <i className="fa fa-times"></i>
-                    </button>
+                  </Alert>
+
+                  <Alert
+                    type="success">
                     <strong>
                       Well done!
                     </strong>
                     You successfully read this important alert message.
-                  </div>
-                  <div className="alert alert-info ">
-                    <button
-                      data-dismiss="alert"
-                      className="close close-sm"
-                      type="button">
-                      <i className="fa fa-times"></i>
-                    </button>
+                  </Alert>
+
+                  <Alert
+                    type="info">
                     <strong>
                       Heads up!
                     </strong>
                     This alert needs your attention, but it's not super important.
-                  </div>
-                  <div className="alert alert-warning ">
-                    <button data-dismiss="alert" className="close close-sm" type="button">
-                      <i className="fa fa-times"></i>
-                    </button>
+                  </Alert>
+
+                  <Alert
+                    type="warning">
                     <strong>
                       Warning!
                     </strong>
                     Best check yo self, you're not looking too good.
-                  </div>
+                  </Alert>
+
                 </div>
               </section>
               {/* <!--notification end--> */}
