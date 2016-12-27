@@ -54,6 +54,7 @@ import {
   TabPanelDemo
 } from './tabPanel';
 import Alert from './alert/Alert';
+import Button from './button/Button';
 
 export {
   Header,
@@ -105,5 +106,7 @@ export {
   TodoListAddTask,
   TodoListSeeAllTask,
   // Alert:
-  Alert
+  Alert,
+  // Button:
+  Button
 };

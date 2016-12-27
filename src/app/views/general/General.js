@@ -16,7 +16,8 @@ import {
   TabPanelHeader,
   TabPanelBody,
   TabPanelBodyContent,
-  Alert
+  Alert,
+  Button
 }                     from '../../components';
 
 class General extends Component {
@@ -523,9 +524,9 @@ class General extends Component {
           <div className="row">
             <div className="col-md-12">
               {/* <!--notification start--> */}
-              <section className="panel">
-                <div className="panel-body">
-
+                <Panel
+                  title="Alerts"
+                  hasTitle={true}>
                   <Alert
                     type="danger">
                     <strong>
@@ -557,124 +558,120 @@ class General extends Component {
                     </strong>
                     Best check yo self, you're not looking too good.
                   </Alert>
-
-                </div>
-              </section>
+                </Panel>
               {/* <!--notification end--> */}
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
-              <section className="panel">
-                <header className="panel-heading">
-                  Default Buttons
-                </header>
-                <div className="panel-body">
-                  <button
-                    type="button"
-                    className="btn btn-default">
-                    Default
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-primary">
+              <Panel
+                title="Default Buttons"
+                hasTitle={true}>
+                <Button
+                  type="default"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Default
+                </Button>
+                <Button
+                  type="primary"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Primary
+                </Button>
+                <Button
+                  type="success"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Success
+                </Button>
+                <Button
+                  type="info"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Info
+                </Button>
+                <Button
+                  type="warning"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Warning
+                </Button>
+                <Button
+                  type="danger"
+                  onClick={ () => console.log('it should handle onClick callback') }>
+                  Danger
+                </Button>
+
+                <p className="text-muted text-center">
+                  Labels
+                </p>
+                <p className="text-center">
+                  <span className="label label-default">
+                    label
+                  </span>
+                  <span className="label label-primary">
                     Primary
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-success">
+                  </span>
+                  <span className="label label-success">
                     Success
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-info">
+                  </span>
+                  <span className="label label-info">
                     Info
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-warning">
+                  </span>
+                  <span className="label label-inverse">
+                    Inverse
+                  </span>
+                  <span className="label label-warning">
                     Warning
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-danger">
+                  </span>
+                  <span className="label label-danger">
                     Danger
-                  </button>
-                  <p className="text-muted text-center">
-                    Labels
-                  </p>
-                  <p className="text-center">
-                    <span className="label label-default">
-                      label
-                    </span>
-                    <span className="label label-primary">
-                      Primary
-                    </span>
-                    <span className="label label-success">
-                      Success
-                    </span>
-                    <span className="label label-info">
-                      Info
-                    </span>
-                    <span className="label label-inverse">
-                      Inverse
-                    </span>
-                    <span className="label label-warning">
-                      Warning
-                    </span>
-                    <span className="label label-danger">
-                      Danger
-                    </span>
-                  </p>
-                  <p className="text-muted text-center">
-                    Badges
-                  </p>
-                  <p className="m-bot-none text-center">
-                    <span className="badge"
-                      >5
-                    </span>
-                    <span className="badge badge-primary">
-                      10
-                    </span>
-                    <span className="badge badge-success">
-                      15
-                    </span>
-                    <span className="badge badge-info">
-                      20
-                    </span>
-                    <span className="badge badge-inverse">
-                      25
-                    </span>
-                    <span className="badge badge-warning">
-                      30
-                    </span>
-                    <span className="badge badge-danger">
-                      35
-                    </span>
-                  </p>
-                  <h3>
-                    Modals
-                  </h3>
-                  <a
-                    className="btn btn-success"
-                    data-toggle="modal"
-                    href="#myModalGeneral">
-                    Dialog
-                  </a>
-                  <a
-                    className="btn btn-warning"
-                    data-toggle="modal"
-                    href="#myModalGeneral2">
-                    Confirm
-                  </a>
-                  <a
-                    className="btn btn-danger"
-                    data-toggle="modal"
-                    href="#myModalGeneral3">
-                    Alert !
-                  </a>
-                </div>
-              </section>
+                  </span>
+                </p>
+                <p className="text-muted text-center">
+                  Badges
+                </p>
+                <p className="m-bot-none text-center">
+                  <span className="badge"
+                    >5
+                  </span>
+                  <span className="badge badge-primary">
+                    10
+                  </span>
+                  <span className="badge badge-success">
+                    15
+                  </span>
+                  <span className="badge badge-info">
+                    20
+                  </span>
+                  <span className="badge badge-inverse">
+                    25
+                  </span>
+                  <span className="badge badge-warning">
+                    30
+                  </span>
+                  <span className="badge badge-danger">
+                    35
+                  </span>
+                </p>
+                <h3>
+                  Modals
+                </h3>
+                <a
+                  className="btn btn-success"
+                  data-toggle="modal"
+                  href="#myModalGeneral">
+                  Dialog
+                </a>
+                <a
+                  className="btn btn-warning"
+                  data-toggle="modal"
+                  href="#myModalGeneral2">
+                  Confirm
+                </a>
+                <a
+                  className="btn btn-danger"
+                  data-toggle="modal"
+                  href="#myModalGeneral3">
+                  Alert !
+                </a>
+              </Panel>
             </div>
           </div>
         </div>
