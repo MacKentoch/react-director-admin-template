@@ -17,7 +17,8 @@ import {
   TabPanelBody,
   TabPanelBodyContent,
   Alert,
-  Button
+  Button,
+  Label
 }                     from '../../components';
 
 class General extends Component {
@@ -602,27 +603,34 @@ class General extends Component {
                   Labels
                 </p>
                 <p className="text-center">
-                  <span className="label label-default">
-                    label
-                  </span>
-                  <span className="label label-primary">
-                    Primary
-                  </span>
-                  <span className="label label-success">
-                    Success
-                  </span>
-                  <span className="label label-info">
-                    Info
-                  </span>
-                  <span className="label label-inverse">
-                    Inverse
-                  </span>
-                  <span className="label label-warning">
-                    Warning
-                  </span>
-                  <span className="label label-danger">
-                    Danger
-                  </span>
+                  <Label
+                    type="default"
+                    text="label"
+                  />
+                  <Label
+                    type="primary"
+                    text="Primary"
+                  />
+                  <Label
+                    type="success"
+                    text="Success"
+                  />
+                  <Label
+                    type="info"
+                    text="Info"
+                  />
+                  <Label
+                    type="inverse"
+                    text="Inverse"
+                  />
+                  <Label
+                    type="warning"
+                    text="Warning"
+                  />
+                  <Label
+                    type="danger"
+                    text="Danger"
+                  />
                 </p>
                 <p className="text-muted text-center">
                   Badges

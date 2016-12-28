@@ -55,6 +55,7 @@ import {
 } from './tabPanel';
 import Alert from './alert/Alert';
 import Button from './button/Button';
+import Label from './label/label';
 
 export {
   Header,
@@ -108,5 +109,7 @@ export {
   // Alert:
   Alert,
   // Button:
-  Button
+  Button,
+  // Label:
+  Label
 };
