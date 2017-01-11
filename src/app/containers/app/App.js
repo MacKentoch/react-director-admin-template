@@ -95,8 +95,8 @@ App.propTypes = {
   location:   PropTypes.object,
 
   sideMenuIsCollapsed: PropTypes.bool,
-  userInfos: PropTypes.shape({
-    login: PropTypes.string,
+  userInfos:  PropTypes.shape({
+    login:    PropTypes.string,
     firstname: PropTypes.string,
     lastname: PropTypes.string,
     picture: PropTypes.string,
