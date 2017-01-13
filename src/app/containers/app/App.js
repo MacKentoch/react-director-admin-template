@@ -18,9 +18,9 @@ import { navigation }         from '../../models';
 class App extends Component {
 
   state = {
-    appName: appConfig.APP_NAME,
+    appName:          appConfig.APP_NAME,
     connectionStatus: appConfig.CONNECTION_STATUS,
-    helloWord: appConfig.HELLO_WORD
+    helloWord:        appConfig.HELLO_WORD
   };
 
   componentDidMount() {
@@ -96,20 +96,20 @@ App.propTypes = {
 
   sideMenuIsCollapsed: PropTypes.bool,
   userInfos:  PropTypes.shape({
-    login:    PropTypes.string,
-    firstname: PropTypes.string,
-    lastname: PropTypes.string,
-    picture: PropTypes.string,
+    login:       PropTypes.string,
+    firstname:   PropTypes.string,
+    lastname:    PropTypes.string,
+    picture:     PropTypes.string,
     showPicture: PropTypes.bool
   }),
   userIsConnected: PropTypes.bool,
-  currentView: PropTypes.string,
+  currentView:     PropTypes.string,
 
   actions: PropTypes.shape({
     enterHome: PropTypes.func,
     leaveHome: PropTypes.func,
     fetchEarningGraphDataIfNeeded: PropTypes.func,
-    fetchUserInfoDataIfNeeded: PropTypes.func,
+    fetchUserInfoDataIfNeeded:     PropTypes.func,
     openSideMenu:   PropTypes.func,
     closeSideMenu:  PropTypes.func,
     toggleSideMenu: PropTypes.func
@@ -118,10 +118,10 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    currentView:          state.views.currentView,
-    sideMenuIsCollapsed:  state.sideMenu.isCollapsed,
-    userInfos:            state.userInfos.data,
-    userIsConnected:      state.userInfos.isConnected
+    currentView:         state.views.currentView,
+    sideMenuIsCollapsed: state.sideMenu.isCollapsed,
+    userInfos:           state.userInfos.data,
+    userIsConnected:     state.userInfos.isConnected
   };
 };
 

@@ -25,8 +25,25 @@
 }
 
 .left-side {
+  z-index: 10;
   transform: translateX(0) !important; // translate to MINUS sideMenu width
 }
 .left-side.collapse-left {
     transform: translateX(-220px) !important; // translate to MINUS sideMenu width
+}
+
+@media screen and (max-width: 990px) {
+  .aside-left {
+    position: fixed;
+  }
+
+  .left-side {
+    z-index: 100;
+    margin-top: 50px;
+    transform: translateX(220px) !important;
+  }
+
+  .left-side.collapse-left {
+      transform: translateX(0px) !important;
+  }
 }
