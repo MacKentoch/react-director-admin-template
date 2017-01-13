@@ -1,6 +1,6 @@
 {
   "name": "react-director-admin-template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ReactJS version of Director Responsive Admin Template Free",
   "main": "src/index.js",
   "scripts": {
