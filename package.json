@@ -5,11 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "NODE_ENV=dev webpack",
-    "prod": "NODE_ENV=production webpack -p --config webpack.production.config.babel.js ",
+    "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "prod-server": "node src/server",
     "start": "NODE_ENV=dev babel-node --presets es2015 ./server.hot.reload.js",
     "dev-win": "env NODE_ENV=dev webpack",
-    "prod-win": "env NODE_ENV=production webpack -p --config webpack.production.config.babel.js ",
+    "prod-win": "env NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "start-win": "env NODE_ENV=dev babel-node --presets es2015 ./server.hot.reload.js"
   },
   "keywords": [
@@ -45,6 +45,7 @@
     "eslint": "^2.6.0",
     "eslint-plugin-react": "^4.2.3",
     "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
@@ -88,7 +89,7 @@
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.6",
     "react-svg-morph": "^0.1.9",
-    "react-tap-event-plugin": "^1.0.0",
+    "react-tap-event-plugin": "^2.0.1",
     "recharts": "^0.15.2",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
