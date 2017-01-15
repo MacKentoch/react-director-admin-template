@@ -41,6 +41,8 @@ npm run dev-win
 
 ### dev : hot reload mode (*+ redux-devtools*)
 
+Development mode = best dev experience (*hot reload, redux dev tools...*).
+
 *General case:*
 ```bash
 npm run start
@@ -50,6 +52,7 @@ npm run start
 ```bash
 npm run start-win
 ```
+> Then go to localhost:3000
 
 ##### Note : redux-devtools shortcuts
 - `ctrl+h`: to toggle devtools panel
@@ -66,6 +69,17 @@ npm run prod
 npm run prod-win
 ```
 
+### run production 
+
+In `Development` ReactJS is `not optimized at all` (*you may even find the application to be slow*). 
+
+*ReactJS shows its real power and is `amazing fast` when bundled in `production`.*
+
+*General case:*
+```bash
+npm run prod-server
+```
+> Then go to localhost:8081
 
 ## License
 
