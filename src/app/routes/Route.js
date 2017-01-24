@@ -40,26 +40,26 @@ export const Routes = () => {
       <div>
         <Router history={syncedHistory}>
           <Route path="/" component={App} >
-            <IndexRoute component={HomeConnected} />
-            <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
-            <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />
-            <Route path="/Dashboard/notifications" component={NotificationsConnected} />
-            <Route path="/Dashboard/workProgress" component={WorkProgressConnected} />
-            <Route path="/Dashboard/twitterFeed" component={TwitterFeedConnected} />
-            <Route path="/Dashboard/teamMates" component={TeamMatesViewConnected} />
-            <Route path="/Dashboard/todoList" component={TodoListViewConnected} />
+            <IndexRoute component={HomeConnected} onEnter={scrollToTop} />
+            <Route path="/Dashboard/statsCard" component={StatsCardConnected} onEnter={scrollToTop} />
+            <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} onEnter={scrollToTop}  />
+            <Route path="/Dashboard/notifications" component={NotificationsConnected} onEnter={scrollToTop}  />
+            <Route path="/Dashboard/workProgress" component={WorkProgressConnected} onEnter={scrollToTop} />
+            <Route path="/Dashboard/twitterFeed" component={TwitterFeedConnected} onEnter={scrollToTop}  />
+            <Route path="/Dashboard/teamMates" component={TeamMatesViewConnected} onEnter={scrollToTop}  />
+            <Route path="/Dashboard/todoList" component={TodoListViewConnected} onEnter={scrollToTop}  />
 
-            <Route path="/simpleTables" component={SimpleTablesConnected} />
+            <Route path="/simpleTables" component={SimpleTablesConnected} onEnter={scrollToTop} />
 
-            <Route path="/basicElements" component={BasicElementsConnected} />
+            <Route path="/basicElements" component={BasicElementsConnected} onEnter={scrollToTop}  />
 
-            <Route path="/general" component={GeneralConnected} />
-            <Route path="/general/breadcrumb" component={BreadcrumbViewConnected} />
-            <Route path="/general/stat" component={StatViewConnected} />
-            <Route path="/general/basicProgressBars" component={BasicProgressBarConnected} />
-            <Route path="/general/tabPanels" component={TabPanelConnected} />
+            <Route path="/general" component={GeneralConnected} onEnter={scrollToTop} />
+            <Route path="/general/breadcrumb" component={BreadcrumbViewConnected} onEnter={scrollToTop}  />
+            <Route path="/general/stat" component={StatViewConnected} onEnter={scrollToTop}  />
+            <Route path="/general/basicProgressBars" component={BasicProgressBarConnected} onEnter={scrollToTop}  />
+            <Route path="/general/tabPanels" component={TabPanelConnected} onEnter={scrollToTop} />
 
-            <Route path="*" component={PageNotFoundConnected} />
+            <Route path="*" component={PageNotFoundConnected} onEnter={scrollToTop}  />
           </Route>
         </Router>
         { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
@@ -67,3 +67,8 @@ export const Routes = () => {
     </Provider>
   );
 };
+
+function scrollToTop() {
+  console.log('on route enter');
+  window.scrollTo(0, 0);
+}
