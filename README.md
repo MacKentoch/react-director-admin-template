@@ -3,6 +3,8 @@ ReactJS version of Director Responsive Admin Template Free
 
 Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin-template/) for giving us the original template for free :clap:.
 
+## Preview
+![preview](https://raw.githubusercontent.com/MacKentoch/react-director-admin-template/master/preview/preview.png)
 
 ## Content
 
@@ -69,9 +71,9 @@ npm run prod
 npm run prod-win
 ```
 
-### run production 
+### run production
 
-In `Development` ReactJS is `not optimized at all` (*you may even find the application to be slow*). 
+In `Development` ReactJS is `not optimized at all` (*you may even find the application to be slow*).
 
 *ReactJS shows its real power and is `amazing fast` when bundled in `production`.*
 
