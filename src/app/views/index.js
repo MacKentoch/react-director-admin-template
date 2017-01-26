@@ -15,6 +15,7 @@ import Breadcrumb         from './breadcrumb/Breadcrumb';
 import Stat               from './stat/Stat';
 import BasicProgressBar   from './basicProgressBar/BasicProgressBar';
 import TabPanel           from './tabPanel/TabPanel';
+import StripedProgressBar   from './stripedProgressBar/StripedProgressBar';
 
 export {
   Home,
@@ -33,5 +34,6 @@ export {
   Breadcrumb,
   Stat,
   BasicProgressBar,
-  TabPanel
+  TabPanel,
+  StripedProgressBar
 };

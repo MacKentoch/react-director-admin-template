@@ -15,6 +15,7 @@ import BreadcrumbViewConnected from './breadcrumb/Breadcrumb';
 import StatViewConnected from './stat/Stat';
 import BasicProgressBarConnected from './basicProgressBar/BasicProgressBar';
 import TabPanelConnected from './tabPanel/TabPanel';
+import StripedProgressBarConnected from './stripedProgressBar/StripedProgressBar';
 
 export {
   App,
@@ -33,5 +34,6 @@ export {
   BreadcrumbViewConnected,
   StatViewConnected,
   BasicProgressBarConnected,
-  TabPanelConnected
+  TabPanelConnected,
+  StripedProgressBarConnected
 };

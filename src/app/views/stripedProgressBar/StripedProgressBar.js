@@ -11,7 +11,7 @@ import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class BasicProgressBar extends Component {
+class StripedProgressBar extends Component {
 
   state = {
     animated: true,
@@ -19,8 +19,8 @@ class BasicProgressBar extends Component {
   };
 
   componentWillMount() {
-    const { actions: { enterBasicProgressBar } } = this.props;
-    enterBasicProgressBar();
+    const { actions: { enterStripedProgressBar } } = this.props;
+    enterStripedProgressBar();
   }
 
   componentDidMount() {
@@ -35,8 +35,8 @@ class BasicProgressBar extends Component {
   }
 
   componentWillUnmount() {
-    const { actions: { leaveBasicProgressBar } } = this.props;
-    leaveBasicProgressBar();
+    const { actions: { leaveStripedProgressBar } } = this.props;
+    leaveStripedProgressBar();
     clearTimeout(this.enterAnimationTimer);
   }
 
@@ -60,7 +60,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBar
               barSize="progress"
-              barStriped={false}
+              barStriped={true}
               barStyle="primary"
               active={false}
               valueNow={40}
@@ -76,7 +76,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBar
               barSize="sm"
-              barStriped={false}
+              barStriped={true}
               barStyle="success"
               active={true}
               valueNow={20}
@@ -92,7 +92,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBar
               barSize="xs"
-              barStriped={false}
+              barStriped={true}
               barStyle="warning"
               active={false}
               valueNow={60}
@@ -108,7 +108,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBar
               barSize="xxs"
-              barStriped={false}
+              barStriped={true}
               barStyle="danger"
               active={false}
               valueNow={60}
@@ -134,7 +134,7 @@ class BasicProgressBar extends Component {
       <div className="row">
         <div className="col-xs-12">
           <Panel
-            title="Basic Progress Bars"
+            title="Striped Progress Bars"
             hasTitle={true}>
             <p>
               <code>
@@ -143,7 +143,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBarComponent
               barSize="progress"
-              barStriped={false}
+              barStriped={true}
               barStyle="primary"
               active={false}
               valueNow={40}
@@ -159,7 +159,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBarComponent
               barSize="sm"
-              barStriped={false}
+              barStriped={true}
               barStyle="success"
               active={true}
               valueNow={20}
@@ -175,7 +175,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBarComponent
               barSize="xs"
-              barStriped={false}
+              barStriped={true}
               barStyle="warning"
               active={false}
               valueNow={60}
@@ -191,7 +191,7 @@ class BasicProgressBar extends Component {
             </p>
             <ProgressBarComponent
               barSize="xxs"
-              barStriped={false}
+              barStriped={true}
               barStyle="danger"
               active={false}
               valueNow={60}
@@ -219,11 +219,11 @@ class BasicProgressBar extends Component {
   }
 }
 
-BasicProgressBar.propTypes= {
+StripedProgressBar.propTypes= {
   actions: PropTypes.shape({
-    enterBasicProgressBar: PropTypes.func.isRequired,
-    leaveBasicProgressBar: PropTypes.func.isRequired
+    enterStripedProgressBar: PropTypes.func.isRequired,
+    leaveStripedProgressBar: PropTypes.func.isRequired
   })
 };
 
-export default BasicProgressBar;
+export default StripedProgressBar;
