@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as actions           from '../../redux/modules/actions';
-import { AlertView }              from '../../views';
+import { AlertView }          from '../../views';
 
 const mapStateToProps = (state) => {
   return {
