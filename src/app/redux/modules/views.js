@@ -34,7 +34,8 @@ const ENTER_TAB_PANEL_VIEW = 'ENTER_TAB_PANEL_VIEW';
 const LEAVE_TAB_PANEL_VIEW = 'LEAVE_TAB_PANEL_VIEW';
 const ENTER_STRIPED_PROGRESS_BAR_VIEW = 'ENTER_STRIPED_PROGRESS_BAR_VIEW';
 const LEAVE_STRIPED_PROGRESS_BAR_VIEW = 'LEAVE_STRIPED_PROGRESS_BAR_VIEW';
-
+const ENTER_ALERT_VIEW = 'ENTER_ALERT_VIEW';
+const LEAVE_ALERT_VIEW = 'LEAVE_ALERT_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -62,6 +63,7 @@ export default function views(state = initialState, action) {
   case ENTER_BASIC_PROGRESS_BAR_VIEW:
   case ENTER_TAB_PANEL_VIEW:
   case ENTER_STRIPED_PROGRESS_BAR_VIEW:
+  case ENTER_ALERT_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -90,6 +92,7 @@ export default function views(state = initialState, action) {
   case LEAVE_BASIC_PROGRESS_BAR_VIEW:
   case LEAVE_TAB_PANEL_VIEW:
   case LEAVE_STRIPED_PROGRESS_BAR_VIEW:
+  case LEAVE_ALERT_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -408,6 +411,24 @@ export function leaveStripedProgressBar(time = moment().format()) {
   return {
     type:         LEAVE_STRIPED_PROGRESS_BAR_VIEW,
     currentView:  'StripedProgressBarView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterAlert(time = moment().format()) {
+  return {
+    type:         ENTER_ALERT_VIEW,
+    currentView:  'AlertView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveAlert(time = moment().format()) {
+  return {
+    type:         LEAVE_ALERT_VIEW,
+    currentView:  'AlertView',
     enterTime:    null,
     leaveTime:    time
   };

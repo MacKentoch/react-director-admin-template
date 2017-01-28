@@ -62,7 +62,10 @@ import {
   leaveTabPanel,
 
   enterStripedProgressBar,
-  leaveStripedProgressBar
+  leaveStripedProgressBar,
+
+  enterAlert,
+  leaveAlert
 }                                     from './views';
 
 
@@ -112,5 +115,7 @@ export {
   enterTabPanel,
   leaveTabPanel,
   enterStripedProgressBar,
-  leaveStripedProgressBar
+  leaveStripedProgressBar,
+  enterAlert,
+  leaveAlert
 };

@@ -27,7 +27,8 @@ import {
   StatViewConnected,
   BasicProgressBarConnected,
   TabPanelConnected,
-  StripedProgressBarConnected
+  StripedProgressBarConnected,
+  AlertConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
 import DevTools                 from '../redux/devTools/DevTools.jsx';
@@ -60,6 +61,7 @@ export const Routes = () => {
             <Route path="/general/basicProgressBars" component={BasicProgressBarConnected} onEnter={scrollToTop}  />
             <Route path="/general/tabPanels" component={TabPanelConnected} onEnter={scrollToTop} />
             <Route path="/general/stripedProgressBars" component={StripedProgressBarConnected} onEnter={scrollToTop}  />
+            <Route path="/general/alerts" component={AlertConnected} onEnter={scrollToTop}  />
 
             <Route path="*" component={PageNotFoundConnected} onEnter={scrollToTop}  />
           </Route>

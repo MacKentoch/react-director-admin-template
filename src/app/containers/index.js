@@ -16,6 +16,7 @@ import StatViewConnected from './stat/Stat';
 import BasicProgressBarConnected from './basicProgressBar/BasicProgressBar';
 import TabPanelConnected from './tabPanel/TabPanel';
 import StripedProgressBarConnected from './stripedProgressBar/StripedProgressBar';
+import AlertConnected from './alert/Alert';
 
 export {
   App,
@@ -35,5 +36,6 @@ export {
   StatViewConnected,
   BasicProgressBarConnected,
   TabPanelConnected,
-  StripedProgressBarConnected
+  StripedProgressBarConnected,
+  AlertConnected
 };

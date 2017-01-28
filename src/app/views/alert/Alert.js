@@ -19,8 +19,8 @@ class AlertView extends Component {
   };
 
   componentWillMount() {
-    const { actions: { enterBasicProgressBar } } = this.props;
-    enterBasicProgressBar();
+    const { actions: { enterAlert } } = this.props;
+    enterAlert();
   }
 
   componentDidMount() {
@@ -35,8 +35,8 @@ class AlertView extends Component {
   }
 
   componentWillUnmount() {
-    const { actions: { leaveBasicProgressBar } } = this.props;
-    leaveBasicProgressBar();
+    const { actions: { leaveAlert } } = this.props;
+    leaveAlert();
     clearTimeout(this.enterAnimationTimer);
   }
 
@@ -155,8 +155,8 @@ class AlertView extends Component {
 
 AlertView.propTypes= {
   actions: PropTypes.shape({
-    enterBasicProgressBar: PropTypes.func.isRequired,
-    leaveBasicProgressBar: PropTypes.func.isRequired
+    enterAlert: PropTypes.func.isRequired,
+    leaveAlert: PropTypes.func.isRequired
   })
 };
 
