@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   Alert as AlertComponent
 }                         from '../../components';
@@ -13,21 +13,9 @@ import Highlight          from 'react-highlight';
 
 class AlertView extends Component {
 
-  state = {
-    animated: true,
-    viewEnters: false
-  };
-
   componentWillMount() {
     const { actions: { enterAlert } } = this.props;
     enterAlert();
-  }
-
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -37,12 +25,9 @@ class AlertView extends Component {
   componentWillUnmount() {
     const { actions: { leaveAlert } } = this.props;
     leaveAlert();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const { animated, viewEnters } = this.state;
-
     const source = `
       // in render():
       <div className="row">
@@ -87,68 +72,61 @@ class AlertView extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Basic Progress Bars"
-            hasTitle={true}>
-            <AlertComponent
-              type="danger">
-              <strong>
-                Oh snap!
-              </strong>
-              Change a few things up and try submitting again.
-            </AlertComponent>
+      <AnimatedView>
+        {/* preview: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Basic Progress Bars"
+              hasTitle={true}>
+              <AlertComponent
+                type="danger">
+                <strong>
+                  Oh snap!
+                </strong>
+                Change a few things up and try submitting again.
+              </AlertComponent>
 
-            <AlertComponent
-              type="success">
-              <strong>
-                Well done!
-              </strong>
-              You successfully read this important alert message.
-            </AlertComponent>
+              <AlertComponent
+                type="success">
+                <strong>
+                  Well done!
+                </strong>
+                You successfully read this important alert message.
+              </AlertComponent>
 
-            <AlertComponent
-              type="info">
-              <strong>
-                Heads up!
-              </strong>
-              This alert needs your attention, but it's not super important.
-            </AlertComponent>
+              <AlertComponent
+                type="info">
+                <strong>
+                  Heads up!
+                </strong>
+                This alert needs your attention, but it's not super important.
+              </AlertComponent>
 
-            <AlertComponent
-              type="warning">
-              <strong>
-                Warning!
-              </strong>
-              Best check yo self, you're not looking too good.
-            </AlertComponent>
+              <AlertComponent
+                type="warning">
+                <strong>
+                  Warning!
+                </strong>
+                Best check yo self, you're not looking too good.
+              </AlertComponent>
 
-          </Panel>
+            </Panel>
+          </div>
         </div>
-      </div>
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }

@@ -56,9 +56,11 @@ import {
 import Alert from './alert/Alert';
 import Button from './button/Button';
 import Label from './label/label';
+import AnimatedView from './animatedView/AnimatedView';
 
 export {
   Header,
+  AnimatedView,
   AsideLeft,
   AsideRight,
   TodoListDemo,

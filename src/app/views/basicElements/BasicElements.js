@@ -2,29 +2,16 @@ import React, {
   PropTypes,
   Component
 }                     from 'react';
-import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import {
+  AnimatedView,
   BasicForms
 }                     from '../../components';
 
 class BasicElements extends Component {
-
-  state = {
-    animated: true,
-    viewEnters: false
-  };
-
   componentWillMount() {
     const { actions: { enterBasicElements } } = this.props;
     enterBasicElements();
-  }
-
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      ()=>this.setState({viewEnters: true}),
-      500
-    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -34,23 +21,16 @@ class BasicElements extends Component {
   componentWillUnmount() {
     const { actions: { leaveBasicElements } } = this.props;
     leaveBasicElements();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
     return(
-      <section className={
-        cx({
-          'content':        true,
-          'animatedViews':  this.state.animated,
-          'invisible':      !this.state.viewEnters,
-          'view-enter':     this.state.viewEnters
-        })}>
+      <AnimatedView>
         <div className="row">
           <div className="col-lg-6">
             <BasicForms />
           </div>
-          
+
           <div className="col-lg-6">
             <section className="panel">
               <header className="panel-heading">
@@ -990,7 +970,7 @@ class BasicElements extends Component {
             </section>
           </div>
         </div>
-      </section>
+      </AnimatedView>
     );
   }
 }
