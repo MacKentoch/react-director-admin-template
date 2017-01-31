@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   EarningGraph as EarningGraphComponent
 }                         from '../../components';
@@ -14,8 +14,6 @@ import Highlight          from 'react-highlight';
 class EarningGraph extends Component {
 
   state = {
-    animated: true,
-    viewEnters: false,
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
@@ -46,13 +44,6 @@ class EarningGraph extends Component {
     enterEarningGraph();
   }
 
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -60,12 +51,10 @@ class EarningGraph extends Component {
   componentWillUnmount() {
     const { actions: { leaveEarningGraph } } = this.props;
     leaveEarningGraph();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const {} = this.props;
-    const { animated, viewEnters } = this.state;
+    const {labels, datasets} = this.state;
 
     const source = `
       // import
@@ -110,45 +99,38 @@ class EarningGraph extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Earning graph"
-            hasTitle={true}
-            bodyBackGndColor={'#F4F5F6'}>
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2">
-                <EarningGraphComponent
-                  labels={this.state.labels}
-                  datasets={this.state.datasets}
-                />
+      <AnimatedView>
+        {/* preview: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Earning graph"
+              hasTitle={true}
+              bodyBackGndColor={'#F4F5F6'}>
+              <div className="row">
+                <div className="col-md-8 col-md-offset-2">
+                  <EarningGraphComponent
+                    labels={labels}
+                    datasets={datasets}
+                  />
+                </div>
               </div>
-            </div>
-          </Panel>
+            </Panel>
+          </div>
         </div>
-      </div>
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }
