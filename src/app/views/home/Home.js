@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   StatsCard,
   EarningGraph,
   Notifications,
@@ -16,11 +16,6 @@ import shallowCompare     from 'react-addons-shallow-compare';
 
 
 class Home extends Component {
-
-  state = {
-    animated: true,
-    viewEnters: false
-  };
 
   componentWillMount() {
     const { actions: { enterHome } } = this.props;
@@ -35,11 +30,6 @@ class Home extends Component {
       }
     } = this.props;
 
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-
     fetchEarningGraphDataIfNeeded();
     fetchTeamMatesDataIfNeeded();
   }
@@ -51,7 +41,6 @@ class Home extends Component {
   componentWillUnmount() {
     const { actions: { leaveHome } } = this.props;
     leaveHome();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
@@ -62,17 +51,8 @@ class Home extends Component {
       earningGraphDatasets
     } = this.props;
 
-    const { animated, viewEnters } = this.state;
-
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
+      <AnimatedView>
         <div
           className="row"
           style={{marginBottom: '5px'}}>
@@ -143,7 +123,7 @@ class Home extends Component {
           </div>
         </div>
 
-      </section>
+      </AnimatedView>
     );
   }
 }

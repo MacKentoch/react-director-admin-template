@@ -2,27 +2,13 @@ import React, {
   PropTypes,
   Component
 }                       from 'react';
-import cx               from 'classnames';
 import shallowCompare   from 'react-addons-shallow-compare';
-
+import { AnimatedView } from '../../components/animatedView/AnimatedView';
 
 class SimpleTables extends Component {
-
-  state = {
-    animated: true,
-    viewEnters: false
-  };
-
   componentWillMount() {
     const { actions: {  enterSimpleTables } } = this.props;
     enterSimpleTables();
-  }
-
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      ()=>this.setState({viewEnters: true}),
-      500
-    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -32,21 +18,11 @@ class SimpleTables extends Component {
   componentWillUnmount() {
     const { actions: {  leaveSimpleTables } } = this.props;
     leaveSimpleTables();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const { animated, viewEnters } = this.state;
-
     return(
-      <section className={
-        cx({
-          'content':        true,
-          'animatedViews':  animated,
-          'invisible':      !viewEnters,
-          'view-enter':     viewEnters
-        })
-      }>
+      <AnimatedView>
         <div className="row">
           <div className="col-md-6">
             <div className="panel">
@@ -422,7 +398,7 @@ class SimpleTables extends Component {
               </div>
             </div>
           </div>
-      </section>
+      </AnimatedView>
     );
   }
 }

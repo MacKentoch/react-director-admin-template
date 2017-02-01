@@ -1,10 +1,11 @@
+/* eslint no-console:0 */
 import React, {
   PropTypes,
   Component
 }                     from 'react';
-import cx             from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
 import {
+  AnimatedView,
   Panel,
   Breadcrumb,
   Stat,
@@ -22,21 +23,8 @@ import {
 }                     from '../../components';
 
 class General extends Component {
-
-  state = {
-    animated: true,
-    viewEnters: false
-  };
-
   componentWillMount() {
     this.props.actions.enterGeneral();
-  }
-
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      ()=>this.setState({viewEnters: true}),
-      500
-    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -45,18 +33,11 @@ class General extends Component {
 
   componentWillUnmount() {
     this.props.actions.leaveGeneral();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
     return(
-      <section className={
-        cx({
-          'content':        true,
-          'animatedViews':  this.state.animated,
-          'invisible':      !this.state.viewEnters,
-          'view-enter':     this.state.viewEnters
-        })}>
+      <AnimatedView>
         <div className="row">
           <div className="col-md-12">
             <Breadcrumb
@@ -684,8 +665,7 @@ class General extends Component {
           </div>
         </div>
       </div>
-    </section>
-
+    </AnimatedView>
     );
   }
 }

@@ -1,15 +1,12 @@
 import React, {
   PropTypes,
   Component
-}                     from 'react';
-import cx             from 'classnames';
-import shallowCompare from 'react-addons-shallow-compare';
+}                       from 'react';
+import shallowCompare   from 'react-addons-shallow-compare';
+import { AnimatedView } from '../../components/animatedView/AnimatedView';
 
 
 class PageNotFound extends Component {
-  state = {
-    animated: true
-  };
 
   componentDidMount() {
     const  { actions } =  this.props;
@@ -26,16 +23,8 @@ class PageNotFound extends Component {
   }
 
   render() {
-    const { animated } = this.state;
-
     return(
-      <section
-        className={
-          cx({
-            'content': true,
-            'animatedViews': animated,
-            'view-enter': animated
-          })}>
+      <AnimatedView>
         <div className="row">
           <div className="col-md-12">
             <h2>
@@ -48,7 +37,7 @@ class PageNotFound extends Component {
             </h2>
           </div>
         </div>
-      </section>
+      </AnimatedView>
     );
   }
 }
