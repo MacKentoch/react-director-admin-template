@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   TabPanel as TabPanelComponent,
   TabPanelHeader as TabPanelHeaderComponent,
@@ -17,8 +17,6 @@ import Highlight          from 'react-highlight';
 class TabPanel extends Component {
 
   state = {
-    animated: true,
-    viewEnters: false,
     mockHeader: [
       {name: 'Home', tablink: 'home', isActive: true},
       {name: 'About', tablink: 'about', isActive: false},
@@ -32,13 +30,6 @@ class TabPanel extends Component {
     enterTabPanel();
   }
 
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -46,11 +37,10 @@ class TabPanel extends Component {
   componentWillUnmount() {
     const { actions: { leaveTabPanel } } = this.props;
     leaveTabPanel();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
-    const { animated, viewEnters, mockHeader } = this.state;
+    const { mockHeader } = this.state;
 
     const source = `
       // import
@@ -89,51 +79,50 @@ class TabPanel extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      <div className="row">
-        <div className="col-xs-6 col-xs-offset-3">
-          <Panel
-            title="TabPanel"
-            hasTitle={true}
-            bodyBackGndColor={'#F4F5F6'}>
-            <TabPanelComponent>
-              <TabPanelHeaderComponent tabItems={mockHeader}/>
-              <TabPanelBodyComponent>
-                <TabPanelBodyContentComponent id="home">
-                  &nbsp;Home
-                </TabPanelBodyContentComponent>
-                <TabPanelBodyContentComponent id="about">
-                  &nbsp;About
-                </TabPanelBodyContentComponent>
-                <TabPanelBodyContentComponent id="profile">
-                  &nbsp;Profile
-                </TabPanelBodyContentComponent>
-              </TabPanelBodyComponent>
-            </TabPanelComponent>
-          </Panel>
+      <AnimatedView>
+        {/* preview: */}
+        <div className="row">
+          <div className="col-xs-6 col-xs-offset-3">
+            <Panel
+              title="TabPanel"
+              hasTitle={true}
+              bodyBackGndColor={'#F4F5F6'}>
+              <TabPanelComponent>
+                <TabPanelHeaderComponent tabItems={mockHeader}/>
+                <TabPanelBodyComponent>
+                  <TabPanelBodyContentComponent id="home" isActive>
+                    <h3>
+                      Home
+                    </h3>
+                  </TabPanelBodyContentComponent>
+                  <TabPanelBodyContentComponent id="about">
+                    <h3>
+                      About
+                    </h3>
+                  </TabPanelBodyContentComponent>
+                  <TabPanelBodyContentComponent id="profile">
+                    <h3>
+                      Profile
+                    </h3>
+                  </TabPanelBodyContentComponent>
+                </TabPanelBodyComponent>
+              </TabPanelComponent>
+            </Panel>
+          </div>
         </div>
-      </div>
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }
