@@ -3,7 +3,7 @@ import React, {
   Component
 }                       from 'react';
 import shallowCompare   from 'react-addons-shallow-compare';
-import { AnimatedView } from '../../components/animatedView/AnimatedView';
+import AnimatedView     from '../../components/animatedView/AnimatedView';
 
 
 class PageNotFound extends Component {
@@ -30,7 +30,7 @@ class PageNotFound extends Component {
             <h2>
               <i
                 className="fa fa-frown-o"
-                ariaHidden="true">
+                aria-hidden="true">
               </i>
               &nbsp;
               Sorry... This page does not exist

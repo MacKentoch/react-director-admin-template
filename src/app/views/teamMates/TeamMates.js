@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   TeamMates,
   TeamMember,
@@ -16,8 +16,6 @@ import Highlight          from 'react-highlight';
 class TeamMatesView extends Component {
 
   state = {
-    animated: true,
-    viewEnters: false,
     members: [
       {
         picture: './public/img/26115.jpg',
@@ -61,14 +59,7 @@ class TeamMatesView extends Component {
     const { actions: { enterTeamMatesView } } = this.props;
     enterTeamMatesView();
   }
-
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-  }
-
+  
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -80,11 +71,7 @@ class TeamMatesView extends Component {
   }
 
   render() {
-    const {
-      animated,
-      viewEnters,
-      members
-    } = this.state;
+    const { members } = this.state;
 
     const source = `
       // import
@@ -163,55 +150,48 @@ class TeamMatesView extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            hasTitle={true}
-            title={'Teammates'}>
-            <TeamMates>
-              {
-                members.map(
-                  (member, memberIndex) => {
-                    return (
-                      <TeamMember
-                        key={memberIndex}
-                        picture={member.picture}
-                        firstname={member.firstname}
-                        lastname={member.lastname}
-                        profile={member.profile}
-                        profileColor={member.profileColor}
-                      />
-                    );
-                  }
-                )
-              }
-            </TeamMates>
-            <TeamMateAddButton />
-          </Panel>
+      <AnimatedView>
+        {/* preview: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              hasTitle={true}
+              title={'Teammates'}>
+              <TeamMates>
+                {
+                  members.map(
+                    (member, memberIndex) => {
+                      return (
+                        <TeamMember
+                          key={memberIndex}
+                          picture={member.picture}
+                          firstname={member.firstname}
+                          lastname={member.lastname}
+                          profile={member.profile}
+                          profileColor={member.profileColor}
+                        />
+                      );
+                    }
+                  )
+                }
+              </TeamMates>
+              <TeamMateAddButton />
+            </Panel>
+          </div>
         </div>
-      </div>
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }

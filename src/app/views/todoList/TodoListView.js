@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   TodoList,
   TodoListItem,
@@ -11,15 +11,12 @@ import {
   TodoListAddTask,
   TodoListSeeAllTask
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
-
+import shallowCompare     from 'react-addons-shallow-compare';
 
 class TodoListView extends Component {
 
   state = {
-    animated: true,
-    viewEnters: false,
     todos: [
       {
         label: 'Director is Modern Dashboard',
@@ -71,13 +68,6 @@ class TodoListView extends Component {
     enterTodoListView();
   }
 
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -89,11 +79,7 @@ class TodoListView extends Component {
   }
 
   render() {
-    const {
-      animated,
-      viewEnters,
-      todos
-    } = this.state;
+    const { todos } = this.state;
 
     const source = `
       // import
@@ -184,58 +170,51 @@ class TodoListView extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      <div className="row">
-        <div className="col-xs-8 col-xs-offset-2">
-          <Panel
-            hasTitle={true}
-            title={'Todo list'}
-            sectionCustomClass="tasks-widget">
-            <TodoList>
-              {
-                todos.map(
-                  ({label, done, statusLabel, statusLevel}, todoIdx) => {
-                    return (
-                      <TodoListItem
-                        key={todoIdx}
-                        label={label}
-                        done={done}
-                        statusLabel={statusLabel}
-                        statusLabelStyle={statusLevel}
-                      />
-                    );
-                  }
-                )
-              }
-            </TodoList>
-           <TodoListCommands>
-             <TodoListAddTask />
-             <TodoListSeeAllTask />
-           </TodoListCommands>
-         </Panel>
+      <AnimatedView>
+        {/* preview: */}
+        <div className="row">
+          <div className="col-xs-8 col-xs-offset-2">
+            <Panel
+              hasTitle={true}
+              title={'Todo list'}
+              sectionCustomClass="tasks-widget">
+              <TodoList>
+                {
+                  todos.map(
+                    ({label, done, statusLabel, statusLevel}, todoIdx) => {
+                      return (
+                        <TodoListItem
+                          key={todoIdx}
+                          label={label}
+                          done={done}
+                          statusLabel={statusLabel}
+                          statusLabelStyle={statusLevel}
+                        />
+                      );
+                    }
+                  )
+                }
+              </TodoList>
+             <TodoListCommands>
+               <TodoListAddTask />
+               <TodoListSeeAllTask />
+             </TodoListCommands>
+           </Panel>
+          </div>
         </div>
-      </div>
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }

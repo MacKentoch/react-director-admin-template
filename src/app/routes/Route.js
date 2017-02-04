@@ -73,6 +73,5 @@ export const Routes = () => {
 };
 
 function scrollToTop() {
-  console.log('on route enter');
   window.scrollTo(0, 0);
 }
