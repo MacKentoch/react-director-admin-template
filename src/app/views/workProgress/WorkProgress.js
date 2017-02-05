@@ -2,8 +2,8 @@ import React, {
   PropTypes,
   Component
 }                         from 'react';
-import cx                 from 'classnames';
 import {
+  AnimatedView,
   Panel,
   Table,
   TableHeader,
@@ -18,8 +18,6 @@ import Highlight          from 'react-highlight';
 class WorkProgress extends Component {
 
   state = {
-    animated: true,
-    viewEnters: false,
     headers: ['#', 'Project', 'Manager', 'Deadline', 'Status', 'Progress'],
     content: [
       ['1', 'Facebook', 'Mark', '10/10/2014', <span className="label label-danger">in progress</span>, <span className="badge badge-info">50%</span>],
@@ -37,13 +35,6 @@ class WorkProgress extends Component {
     enterWorkProgress();
   }
 
-  componentDidMount() {
-    this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
-      500
-    );
-  }
-
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -51,13 +42,10 @@ class WorkProgress extends Component {
   componentWillUnmount() {
     const { actions: { leaveWorkProgress } } = this.props;
     leaveWorkProgress();
-    clearTimeout(this.enterAnimationTimer);
   }
 
   render() {
     const {
-      animated,
-      viewEnters,
       headers,
       content
     } = this.state;
@@ -92,76 +80,65 @@ class WorkProgress extends Component {
       `;
 
     return(
-      <section className={
-        cx({
-          'content':       true,
-          'animatedViews': animated,
-          'invisible':     !viewEnters,
-          'view-enter':    viewEnters
-        })
-      }>
-      {/* preview: */}
-      {/* <div className="row">
-        <div className="col-xs-12"> */}
-          <Panel
-            title="Work Progress"
-            hasTitle={true}
-            bodyBackGndColor={'#F4F5F6'}
-            bodyCustomClass="table-responsive">
-            <Table>
-              <TableHeader>
-                {
-                  headers.map(
-                    (header, headerIdx) => {
-                      return (
-                        <TableCol key={headerIdx}>
-                          {header}
-                        </TableCol>
-                      );
-                    }
-                  )
-                }
-              </TableHeader>
-              <TableBody>
-                {
-                  content.map(
-                    (contentRow, contentRowIdx) => {
-                      return (
-                        <TableRow key={contentRowIdx}>
-                          {
-                            contentRow.map(
-                              (contentColumn, contentColumnIdx) => {
-                                return (
-                                  <TableCol key={contentColumnIdx}>
-                                    {contentColumn}
-                                  </TableCol>
-                                );
-                              }
-                            )
-                          }
-                        </TableRow>
-                      );
-                    }
-                  )
-                }
-              </TableBody>
-            </Table>
-          </Panel>
-        {/* </div>
-      </div> */}
-      {/* source: */}
-      <div className="row">
-        <div className="col-xs-12">
-          <Panel
-            title="Source"
-            hasTitle={true}>
-            <Highlight className="javascript">
-              {source}
-            </Highlight>
-          </Panel>
+      <AnimatedView>
+        {/* preview: */}
+        <Panel
+          title="Work Progress"
+          hasTitle={true}
+          bodyBackGndColor={'#F4F5F6'}
+          bodyCustomClass="table-responsive">
+          <Table>
+            <TableHeader>
+              {
+                headers.map(
+                  (header, headerIdx) => {
+                    return (
+                      <TableCol key={headerIdx}>
+                        {header}
+                      </TableCol>
+                    );
+                  }
+                )
+              }
+            </TableHeader>
+            <TableBody>
+              {
+                content.map(
+                  (contentRow, contentRowIdx) => {
+                    return (
+                      <TableRow key={contentRowIdx}>
+                        {
+                          contentRow.map(
+                            (contentColumn, contentColumnIdx) => {
+                              return (
+                                <TableCol key={contentColumnIdx}>
+                                  {contentColumn}
+                                </TableCol>
+                              );
+                            }
+                          )
+                        }
+                      </TableRow>
+                    );
+                  }
+                )
+              }
+            </TableBody>
+          </Table>
+        </Panel>
+        {/* source: */}
+        <div className="row">
+          <div className="col-xs-12">
+            <Panel
+              title="Source"
+              hasTitle={true}>
+              <Highlight className="javascript">
+                {source}
+              </Highlight>
+            </Panel>
+          </div>
         </div>
-      </div>
-      </section>
+      </AnimatedView>
     );
   }
 }
