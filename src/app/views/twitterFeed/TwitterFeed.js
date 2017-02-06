@@ -3,7 +3,7 @@ import React, {
   Component
 }                         from 'react';
 import {
-  AnimatedView
+  AnimatedView,
   Panel,
   Tweet,
   WriteNewTweet,

@@ -13,7 +13,7 @@ class AnimatedView extends Component {
     const { delay } = this.props;
 
     this.enterAnimationTimer = setTimeout(
-      () => this.setState({viewEnters: true}),
+      () => this.setState({ viewEnters: true }),
       delay
     );
   }
@@ -31,9 +31,8 @@ class AnimatedView extends Component {
         className={
           cx({
             'content':       true,
-            'animatedViews': animated,
-            'invisible':     !viewEnters,
-            'view-enter':    viewEnters
+            'invisible':     !viewEnters && animated,
+            'view-enter':    viewEnters && animated
           })
         }>
       { children }
