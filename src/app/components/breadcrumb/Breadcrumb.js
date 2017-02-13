@@ -5,8 +5,8 @@ const Breadcrumb = ({ path }) => {
   return (
     <ul className="breadcrumb">
     {
-        path.length === 0 &&
-        <div></div>
+      path.length === 0 &&
+      <div></div>
     }
     {
       path.length > 0 &&

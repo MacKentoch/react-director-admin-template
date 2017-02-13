@@ -1,16 +1,23 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                     from 'react';
 import Chart          from 'chart.js';
 import {
   earningGraphMockData
 }                     from '../../models';
-import shallowCompare from 'react-addons-shallow-compare';
 import Panel          from '../panel/Panel';
 
 
-class EarningGraph extends Component {
+class EarningGraph extends PureComponent {
+  static propTypes = {
+    labels:   PropTypes.array,
+    datasets: PropTypes.array
+  };
+
+  static defaultProps = {
+    data: earningGraphMockData
+  };
 
   componentDidMount() {
     const { labels, datasets } = this.props;
@@ -28,19 +35,13 @@ class EarningGraph extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
-  }
-
   render() {
     return (
       <Panel
         hasTitle={true}
         title={'Earning Graph'}>
         <canvas
-          ref={ (ref)=>{
-            this.linechart = ref;
-          } }
+          ref={this.getCanvaRef}
           id="linechart"
           width="600"
           height="330" >
@@ -49,6 +50,8 @@ class EarningGraph extends Component {
     );
   }
 
+  getCanvaRef = ref => (this.linechart = ref)
+
   drawChart(data) {
     // BAR CHART
     const options = {
@@ -56,21 +59,15 @@ class EarningGraph extends Component {
       maintainAspectRatio: true
     };
 
-    this.chart = new Chart(this.linechart.getContext('2d'), {
-      type: 'line',
-      data,
-      options
-    });
+    this.chart = new Chart(
+      this.linechart.getContext('2d'),
+      {
+        type: 'line',
+        data,
+        options
+      }
+    );
   }
 }
-
-EarningGraph.propTypes = {
-  labels: PropTypes.array,
-  datasets: PropTypes.array
-};
-
-EarningGraph.defaultProps = {
-  data: earningGraphMockData
-};
 
 export default EarningGraph;

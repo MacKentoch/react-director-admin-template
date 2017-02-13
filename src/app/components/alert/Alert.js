@@ -19,14 +19,14 @@ const Alert = ({ type, children }) => {
         data-dismiss="alert"
         className="close close-sm"
         type="button">
-        <i className="fa fa-times"></i>
+        <i className="fa fa-times" />
       </button>
       { children }
     </div>
   );
 };
 
-Alert.PropTypes = {
+Alert.propTypes = {
   children: PropTypes.node,
   type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
 };

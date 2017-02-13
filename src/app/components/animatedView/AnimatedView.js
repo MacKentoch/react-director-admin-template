@@ -30,9 +30,9 @@ class AnimatedView extends Component {
       <section
         className={
           cx({
-            'content':       true,
-            'invisible':     !viewEnters && animated,
-            'view-enter':    viewEnters && animated
+            'content':    true,
+            'invisible':  !viewEnters && animated,
+            'view-enter': viewEnters && animated
           })
         }>
       { children }

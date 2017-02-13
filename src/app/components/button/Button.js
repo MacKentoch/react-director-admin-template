@@ -12,9 +12,9 @@ const Button = ({ type, onClick, children }) => {
           'btn-default': type === 'default',
           'btn-primary': type === 'primary',
           'btn-success': type === 'success',
-          'btn-info': type === 'info',
+          'btn-info':    type === 'info',
           'btn-warning': type === 'warning',
-          'btn-danger': type === 'danger'
+          'btn-danger':  type === 'danger'
         })
       }>
       {  children }
@@ -22,7 +22,7 @@ const Button = ({ type, onClick, children }) => {
   );
 };
 
-Button.PropTypes = {
+Button.propTypes = {
   children: PropTypes.node,
   type: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
   onClick: PropTypes.func

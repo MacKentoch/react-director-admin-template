@@ -21,7 +21,7 @@ const Label = ({ type, text }) => {
   );
 };
 
-Label.PropTypes = {
+Label.propTypes = {
   text: PropTypes.string,
   type: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'inverse', 'warning', 'danger'])
 };

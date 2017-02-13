@@ -1,5 +1,5 @@
 import React, {
-  Component
+  PureComponent
 }                 from 'react';
 import moment     from 'moment';
 
@@ -7,24 +7,21 @@ const CENTIEME_SEC = 1000;
 const DATE_FORMAT  = 'MM/DD/YYYY';
 const TIME_FORMAT  = 'HH:mm:ss';
 
-class Horloge extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: moment().format('DD/MM/YYYY'),
-      time: moment().format('HH:MM:SS')
-    };
-  }
+class Horloge extends PureComponent {
+  state = {
+    date: moment().format('DD/MM/YYYY'),
+    time: moment().format('HH:MM:SS')
+  };
 
   componentDidMount() {
-    this.horloge = window.setInterval(
-      ()=>this.ticTac(),
+    this.horloge = setInterval(
+      () => this.ticTac(),
       CENTIEME_SEC
     );
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.horloge);
+    clearInterval(this.horloge);
     this.horloge = null;
   }
 

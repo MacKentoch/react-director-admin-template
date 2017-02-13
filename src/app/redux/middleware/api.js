@@ -18,6 +18,8 @@ export default store => next => action => {
   const { url, types, authenticated, options } = callAPI;
   const [ requestType, successType, errorType ] = types;
 
+  store.dispatch({type: requestType});
+  
   return callApi(url, options, authenticated)
           .then(
             response => next({
