@@ -17,6 +17,7 @@ import BasicProgressBar   from './basicProgressBar/BasicProgressBar';
 import TabPanel           from './tabPanel/TabPanel';
 import StripedProgressBar from './stripedProgressBar/StripedProgressBar';
 import AlertView          from './alert/Alert';
+import PaginationView     from './pagination/Pagination';
 
 export {
   Home,
@@ -37,5 +38,6 @@ export {
   BasicProgressBar,
   TabPanel,
   StripedProgressBar,
-  AlertView
+  AlertView,
+  PaginationView
 };

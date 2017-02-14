@@ -65,7 +65,10 @@ import {
   leaveStripedProgressBar,
 
   enterAlert,
-  leaveAlert
+  leaveAlert,
+
+  enterPagination,
+  leavePagination
 }                                     from './views';
 
 
@@ -117,5 +120,7 @@ export {
   enterStripedProgressBar,
   leaveStripedProgressBar,
   enterAlert,
-  leaveAlert
+  leaveAlert,
+  enterPagination,
+  leavePagination
 };

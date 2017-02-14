@@ -17,6 +17,7 @@ import BasicProgressBarConnected from './basicProgressBar/BasicProgressBar';
 import TabPanelConnected from './tabPanel/TabPanel';
 import StripedProgressBarConnected from './stripedProgressBar/StripedProgressBar';
 import AlertConnected from './alert/Alert';
+import PaginationViewConnected from './pagination/Pagination';
 
 export {
   App,
@@ -37,5 +38,6 @@ export {
   BasicProgressBarConnected,
   TabPanelConnected,
   StripedProgressBarConnected,
-  AlertConnected
+  AlertConnected,
+  PaginationViewConnected
 };

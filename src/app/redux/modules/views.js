@@ -36,6 +36,8 @@ const ENTER_STRIPED_PROGRESS_BAR_VIEW = 'ENTER_STRIPED_PROGRESS_BAR_VIEW';
 const LEAVE_STRIPED_PROGRESS_BAR_VIEW = 'LEAVE_STRIPED_PROGRESS_BAR_VIEW';
 const ENTER_ALERT_VIEW = 'ENTER_ALERT_VIEW';
 const LEAVE_ALERT_VIEW = 'LEAVE_ALERT_VIEW';
+const ENTER_PAGINATION_VIEW = 'ENTER_PAGINATION_VIEW';
+const LEAVE_PAGINATION_VIEW = 'LEAVE_PAGINATION_VIEW';
 
 const initialState = {
   currentView:  'home',
@@ -64,6 +66,7 @@ export default function views(state = initialState, action) {
   case ENTER_TAB_PANEL_VIEW:
   case ENTER_STRIPED_PROGRESS_BAR_VIEW:
   case ENTER_ALERT_VIEW:
+  case ENTER_PAGINATION_VIEW:
     // can't enter if you are already inside
     if (state.currentView !== action.currentView) {
       return {
@@ -93,6 +96,7 @@ export default function views(state = initialState, action) {
   case LEAVE_TAB_PANEL_VIEW:
   case LEAVE_STRIPED_PROGRESS_BAR_VIEW:
   case LEAVE_ALERT_VIEW:
+  case LEAVE_PAGINATION_VIEW:
     // can't leave if you aren't already inside
     if (state.currentView === action.currentView) {
       return {
@@ -429,6 +433,24 @@ export function leaveAlert(time = moment().format()) {
   return {
     type:         LEAVE_ALERT_VIEW,
     currentView:  'AlertView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterPagination(time = moment().format()) {
+  return {
+    type:         ENTER_PAGINATION_VIEW,
+    currentView:  'PaginationView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leavePagination(time = moment().format()) {
+  return {
+    type:         LEAVE_PAGINATION_VIEW,
+    currentView:  'PaginationView',
     enterTime:    null,
     leaveTime:    time
   };

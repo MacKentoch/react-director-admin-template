@@ -1,9 +1,8 @@
 /* eslint no-console:0 */
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 import {
   AnimatedView,
   Panel,
@@ -22,13 +21,9 @@ import {
   Label
 }                     from '../../components';
 
-class General extends Component {
+class General extends PureComponent {
   componentWillMount() {
     this.props.actions.enterGeneral();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
