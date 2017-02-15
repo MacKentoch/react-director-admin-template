@@ -1,21 +1,23 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 import {
   AnimatedView,
   BasicForms
 }                     from '../../components';
 
-class BasicElements extends Component {
+class BasicElements extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterBasicElements: PropTypes.func,
+      leaveBasicElements: PropTypes.func
+    })
+  };
+
   componentWillMount() {
     const { actions: { enterBasicElements } } = this.props;
     enterBasicElements();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -974,12 +976,5 @@ class BasicElements extends Component {
     );
   }
 }
-
-BasicElements.propTypes= {
-  actions: PropTypes.shape({
-    enterBasicElements: PropTypes.func,
-    leaveBasicElements: PropTypes.func
-  })
-};
 
 export default BasicElements;

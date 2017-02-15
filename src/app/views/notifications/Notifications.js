@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -8,18 +8,20 @@ import {
   NotificationPanel,
   Notification
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class Notifications extends Component {
+class Notifications extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterNotifications: PropTypes.func.isRequired,
+      leaveNotifications: PropTypes.func.isRequired
+    })
+  };
+
   componentWillMount() {
     const { actions: { enterNotifications } } = this.props;
     enterNotifications();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -167,12 +169,5 @@ class Notifications extends Component {
     );
   }
 }
-
-Notifications.propTypes= {
-  actions: PropTypes.shape({
-    enterNotifications: PropTypes.func.isRequired,
-    leaveNotifications: PropTypes.func.isRequired
-  })
-};
 
 export default Notifications;

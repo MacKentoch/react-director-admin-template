@@ -18,6 +18,9 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 
 ## Usage
 
+### Prerequisite
+
+> Ensure to have NodeJS v6.x MINIMUM.
 
 ### Install
 ```bash

@@ -22,6 +22,13 @@ import {
 }                     from '../../components';
 
 class General extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterGeneral: PropTypes.func,
+      leaveGeneral: PropTypes.func
+    })
+  };
+
   componentWillMount() {
     this.props.actions.enterGeneral();
   }
@@ -664,12 +671,5 @@ class General extends PureComponent {
     );
   }
 }
-
-General.propTypes= {
-  actions: PropTypes.shape({
-    enterGeneral: PropTypes.func,
-    leaveGeneral: PropTypes.func
-  })
-};
 
 export default General;

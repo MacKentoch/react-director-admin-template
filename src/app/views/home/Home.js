@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -12,10 +12,29 @@ import {
   TodoListDemo,
   TeamMatesDemo
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 
 
-class Home extends Component {
+class Home extends PureComponent {
+  static propTypes= {
+    earningGraphLabels: PropTypes.array,
+    earningGraphDatasets: PropTypes.array,
+    teamMatesIsFetching: PropTypes.bool,
+    teamMates: PropTypes.arrayOf(
+      PropTypes.shape({
+        picture: PropTypes.string,
+        firstname: PropTypes.string,
+        lastname: PropTypes.string,
+        profile: PropTypes.string,
+        profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
+      })
+    ),
+    actions: PropTypes.shape({
+      enterHome: PropTypes.func,
+      leaveHome: PropTypes.func,
+      fetchEarningGraphDataIfNeeded: PropTypes.func,
+      fetchTeamMatesDataIfNeeded: PropTypes.func
+    })
+  };
 
   componentWillMount() {
     const { actions: { enterHome } } = this.props;
@@ -32,10 +51,6 @@ class Home extends Component {
 
     fetchEarningGraphDataIfNeeded();
     fetchTeamMatesDataIfNeeded();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -127,26 +142,5 @@ class Home extends Component {
     );
   }
 }
-
-Home.propTypes= {
-  earningGraphLabels: PropTypes.array,
-  earningGraphDatasets: PropTypes.array,
-  teamMatesIsFetching: PropTypes.bool,
-  teamMates: PropTypes.arrayOf(
-    PropTypes.shape({
-      picture: PropTypes.string,
-      firstname: PropTypes.string,
-      lastname: PropTypes.string,
-      profile: PropTypes.string,
-      profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
-    })
-  ),
-  actions: PropTypes.shape({
-    enterHome: PropTypes.func,
-    leaveHome: PropTypes.func,
-    fetchEarningGraphDataIfNeeded: PropTypes.func,
-    fetchTeamMatesDataIfNeeded: PropTypes.func
-  })
-};
 
 export default Home;

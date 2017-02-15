@@ -1,20 +1,21 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                       from 'react';
-import shallowCompare   from 'react-addons-shallow-compare';
 import AnimatedView     from '../../components/animatedView/AnimatedView';
 
 
-class PageNotFound extends Component {
+class PageNotFound extends PureComponent {
+  static propTypes = {
+    actions: PropTypes.shape({
+      enterPageNotFound: PropTypes.func.isRequired,
+      leavePageNotFound: PropTypes.func.isRequired
+    })
+  };
 
   componentDidMount() {
     const  { actions } =  this.props;
     actions.enterPageNotFound();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -41,12 +42,5 @@ class PageNotFound extends Component {
     );
   }
 }
-
-PageNotFound.propTypes = {
-  actions: PropTypes.shape({
-    enterPageNotFound: PropTypes.func.isRequired,
-    leavePageNotFound: PropTypes.func.isRequired
-  })
-};
 
 export default PageNotFound;

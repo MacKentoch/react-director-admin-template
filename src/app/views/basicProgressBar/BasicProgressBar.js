@@ -1,24 +1,26 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   ProgressBar as ProgressBarComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class BasicProgressBar extends Component {
+class BasicProgressBar extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterBasicProgressBar: PropTypes.func.isRequired,
+      leaveBasicProgressBar: PropTypes.func.isRequired
+    })
+  };
+
   componentWillMount() {
     const { actions: { enterBasicProgressBar } } = this.props;
     enterBasicProgressBar();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -195,12 +197,5 @@ class BasicProgressBar extends Component {
     );
   }
 }
-
-BasicProgressBar.propTypes= {
-  actions: PropTypes.shape({
-    enterBasicProgressBar: PropTypes.func.isRequired,
-    leaveBasicProgressBar: PropTypes.func.isRequired
-  })
-};
 
 export default BasicProgressBar;

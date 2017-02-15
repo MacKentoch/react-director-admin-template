@@ -1,25 +1,26 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   Alert as AlertComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class AlertView extends Component {
+class AlertView extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterAlert: PropTypes.func.isRequired,
+      leaveAlert: PropTypes.func.isRequired
+    })
+  };
 
   componentWillMount() {
     const { actions: { enterAlert } } = this.props;
     enterAlert();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -130,12 +131,5 @@ class AlertView extends Component {
     );
   }
 }
-
-AlertView.propTypes= {
-  actions: PropTypes.shape({
-    enterAlert: PropTypes.func.isRequired,
-    leaveAlert: PropTypes.func.isRequired
-  })
-};
 
 export default AlertView;

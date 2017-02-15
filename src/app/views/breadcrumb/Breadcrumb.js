@@ -1,27 +1,28 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   Breadcrumb as BreadcrumbComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class Breadcrumb extends Component {
+class Breadcrumb extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterBreadcrumb: PropTypes.func.isRequired,
+      leaveBreadcrumb: PropTypes.func.isRequired
+    })
+  };
 
   state = { path: ['home', 'breadcrumb'] };
 
   componentWillMount() {
     const { actions: { enterBreadcrumb } } = this.props;
     enterBreadcrumb();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
@@ -82,12 +83,5 @@ class Breadcrumb extends Component {
     );
   }
 }
-
-Breadcrumb.propTypes= {
-  actions: PropTypes.shape({
-    enterBreadcrumb: PropTypes.func.isRequired,
-    leaveBreadcrumb: PropTypes.func.isRequired
-  })
-};
 
 export default Breadcrumb;

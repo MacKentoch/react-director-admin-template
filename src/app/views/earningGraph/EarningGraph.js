@@ -1,17 +1,22 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   EarningGraph as EarningGraphComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class EarningGraph extends Component {
+class EarningGraph extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterEarningGraph: PropTypes.func.isRequired,
+      leaveEarningGraph: PropTypes.func.isRequired
+    })
+  };
 
   state = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -44,9 +49,6 @@ class EarningGraph extends Component {
     enterEarningGraph();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
-  }
 
   componentWillUnmount() {
     const { actions: { leaveEarningGraph } } = this.props;
@@ -134,12 +136,5 @@ class EarningGraph extends Component {
     );
   }
 }
-
-EarningGraph.propTypes= {
-  actions: PropTypes.shape({
-    enterEarningGraph: PropTypes.func.isRequired,
-    leaveEarningGraph: PropTypes.func.isRequired
-  })
-};
 
 export default EarningGraph;
