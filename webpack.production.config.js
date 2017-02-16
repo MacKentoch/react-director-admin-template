@@ -22,7 +22,7 @@ const config = {
       'redux-logger',
       'redux-thunk',
       'react-tap-event-plugin',
-      'jquery', 
+      'jquery',
       'bootstrap/dist/js/bootstrap.min.js',
       path.resolve(__dirname, 'src/app/vendors/js/jquery-ui-1.10.3.min.js'),
       path.resolve(__dirname, 'src/app/vendors/js/plugins/fullcalendar/fullcalendar.js')
@@ -42,7 +42,7 @@ const config = {
       loader: SPLIT_STYLE ? ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader') : 'style!css!postcss'
     }, {
       test: /\.scss$/,
-      loader: SPLIT_STYLE ? ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader') : 'style!css!postcss!sass' 
+      loader: SPLIT_STYLE ? ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader') : 'style!css!postcss!sass'
     }, {
       test: /\.json$/,
       loader: 'json'
@@ -61,7 +61,7 @@ const config = {
     new webpack.optimize.AggressiveMergingPlugin(),
     uglify()
   ],
-  postcss: function () {
+  postcss() {
     return [precss, autoprefixer];
   }
 };
