@@ -32,7 +32,6 @@ import {
   PaginationViewConnected
 }                               from '../containers';
 import configureStore           from '../redux/store/configureStore';
-import DevTools                 from '../redux/devTools/DevTools.jsx';
 
 const store         = configureStore();
 const syncedHistory = syncHistoryWithStore(hashHistory, store);
@@ -68,7 +67,6 @@ export const Routes = () => {
             <Route path="*" component={PageNotFoundConnected} onEnter={scrollToTop}  />
           </Route>
         </Router>
-        { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
       </div>
     </Provider>
   );

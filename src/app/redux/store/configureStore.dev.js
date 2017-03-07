@@ -3,11 +3,9 @@ import {
   compose,
   applyMiddleware
 }                               from 'redux';
-import { persistState }         from 'redux-devtools';
 import createLogger             from 'redux-logger';
 import thunkMiddleware          from 'redux-thunk';
 import reducer                  from '../modules/reducers';
-import DevTools                 from '../devTools/DevTools.jsx';
 import { localStorageManager }  from '../middleware';
 
 
@@ -17,16 +15,19 @@ const loggerMiddleware = createLogger({
 });
 
 // createStore : enhancer
-const enhancer = compose(
-  applyMiddleware(localStorageManager, thunkMiddleware, loggerMiddleware),
-  persistState(getDebugSessionKey()),
-  DevTools.instrument()
-);
+// NOTE: if redux devtools extension is not installed, we just keep using Redux compose
+const composeEnhancers =  typeof window === 'object' &&  // for universal ("isomorphic") apps
+                          window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+                          ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+                            // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+                            // see: https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/API/Arguments.md
+                          })
+                          : compose;
 
-function getDebugSessionKey() {
-  const matches = window.location.href.match(/[?&]debug_session=([^&]+)\b/);
-  return (matches && matches.length > 0)? matches[1] : null;
-}
+// createStore : enhancer
+const enhancer = composeEnhancers(
+  applyMiddleware(localStorageManager, thunkMiddleware, loggerMiddleware)
+);
 
 export default function configureStore(initialState) {
   const store = createStore(reducer, initialState, enhancer);

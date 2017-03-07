@@ -4207,13 +4207,6 @@ redux-devtools-dock-monitor@^1.1.1:
     react-dock "^0.2.1"
     react-pure-render "^1.0.2"
 
-redux-devtools-instrument@^1.0.1:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/redux-devtools-instrument/-/redux-devtools-instrument-1.8.0.tgz#db1840ed3d8152af6792913698e3424c119de9aa"
-  dependencies:
-    lodash "^4.2.0"
-    symbol-observable "^1.0.2"
-
 redux-devtools-log-monitor@^1.0.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.2.0.tgz#136a202f999c659a13fbb5c50793106e80722311"
@@ -4228,13 +4221,6 @@ redux-devtools-themes@^1.0.0:
   resolved "https://registry.yarnpkg.com/redux-devtools-themes/-/redux-devtools-themes-1.0.0.tgz#c482dce3c5373976045f40134907d9dcb3ae3d5d"
   dependencies:
     base16 "^1.0.0"
-
-redux-devtools@^3.2.0:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/redux-devtools/-/redux-devtools-3.3.2.tgz#f427f71964e2b3785b68834b6e4fe99d8da75b5e"
-  dependencies:
-    lodash "^4.2.0"
-    redux-devtools-instrument "^1.0.1"
 
 redux-logger@^2.8.1:
   version "2.8.1"

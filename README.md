@@ -12,7 +12,7 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 
 - Director template (see [original one here]((http://web-apps.ninja/director-free-responsive-admin-template/)))
 - ReactJS
-- Redux (*+ hot reload + devTools*)
+- Redux (*+ hot reload + redux devtools extension*)
   - since v0.2.0: adopted redux ducks (*for clarity*)
 - *...more content coming soon*
 
@@ -27,7 +27,7 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 npm install
 ```
 
-### bundle dev mode (*+ redux-devtools*)
+### bundle dev mode
 
 *General case:*
 ```bash
@@ -39,13 +39,9 @@ npm run dev
 npm run dev-win
 ```
 
-##### Note : redux-devtools shortcuts
-- `ctrl+h`: to toggle devtools panel
-- `ctrl+q`: to change devtools panel position (*by default: on the right*)
+### dev : hot reload mode
 
-### dev : hot reload mode (*+ redux-devtools*)
-
-Development mode = best dev experience (*hot reload, redux dev tools...*).
+Development mode = best dev experience (*hot reload, redux devtools extension...*).
 
 *General case:*
 ```bash
@@ -57,10 +53,6 @@ npm run start
 npm run start-win
 ```
 > Then go to localhost:3000
-
-##### Note : redux-devtools shortcuts
-- `ctrl+h`: to toggle devtools panel
-- `ctrl+q`: to change devtools panel position (*by default: on the right*)
 
 ### bundle production mode
 
