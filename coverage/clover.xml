@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1489035901940" clover="3.2.0">
+  <project timestamp="1489035901940" name="All files">
+    <metrics statements="19" coveredstatements="17" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="5" elements="32" coveredelements="26" complexity="0" loc="19" ncloc="19" packages="3" files="3" classes="3">
+      <package name="alert">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="animatedView">
+        <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
+        <file name="AnimatedView.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/animatedView/AnimatedView.js">
+          <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="aside.asideLeft.menu.menuHeader">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <file name="MenuHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

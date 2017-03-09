@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
     "dev": "NODE_ENV=dev webpack",
     "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js ",
     "prod-server": "node src/server",
