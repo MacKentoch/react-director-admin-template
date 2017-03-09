@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedView component renders as expected 1`] = `
+<div>
+  <ul
+    className="list-inline sidebar-menu__group-container"
+    onClick={[Function]}
+  >
+    <li
+      style={
+        Object {
+          "backgroundColor": "#F1F2F3",
+          "width": "100%",
+        }
+      }
+    >
+      <a
+        className="btn"
+        style={
+          Object {
+            "paddinLeft": "0px !important",
+            "width": "100%",
+          }
+        }
+      >
+        <span
+          className="pull-left sidebar-menu__group-title"
+        >
+          menuHeaderTitle
+        </span>
+        <i
+          aria-hidden="true"
+          className="fa fa-angle-up fa-1x pull-right"
+          style={
+            Object {
+              "WebkitTransform": "rotate(0deg)",
+              "transform": "rotate(0deg)",
+            }
+          }
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;

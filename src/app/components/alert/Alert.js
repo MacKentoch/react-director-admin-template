@@ -35,4 +35,6 @@ Alert.defaultProps = {
   type: 'info'
 };
 
+Alert.displayName = 'Alert';
+
 export default Alert;

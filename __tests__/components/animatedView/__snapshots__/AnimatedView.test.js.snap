@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedView component renders as expected 1`] = `
+<div>
+  <section
+    className="content invisible"
+  >
+    <p>
+      An animated view content
+    </p>
+  </section>
+</div>
+`;

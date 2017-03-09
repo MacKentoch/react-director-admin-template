@@ -4,7 +4,7 @@
   "description": "ReactJS version of Director Responsive Admin Template Free",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "dev": "NODE_ENV=dev webpack",
@@ -97,6 +97,7 @@
     "react-router-redux": "^4.0.8",
     "react-svg-morph": "^0.1.10",
     "react-tap-event-plugin": "^2.0.1",
+    "react-test-renderer": "^15.4.2",
     "recharts": "^0.20.6",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
