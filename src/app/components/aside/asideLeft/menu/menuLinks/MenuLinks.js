@@ -1,16 +1,11 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                       from 'react';
-import shallowCompare   from 'react-addons-shallow-compare';
 import ViewLink         from './viewLink/ViewLink';
 
 
-class MenuLinks extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
-  }
-
+class MenuLinks extends PureComponent {
   render() {
     const { activeView, views } = this.props;
     return (
