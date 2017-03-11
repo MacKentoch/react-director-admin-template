@@ -1,17 +1,11 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 
-class SearchForm extends Component {
-
+class SearchForm extends PureComponent {
   componentDidMount() {
     this.searchinput.focus();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   render() {

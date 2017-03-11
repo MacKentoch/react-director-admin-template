@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489037917966" clover="3.2.0">
-  <project timestamp="1489037917966" name="All files">
+<coverage generated="1489120673259" clover="3.2.0">
+  <project timestamp="1489120673259" name="All files">
     <metrics statements="27" coveredstatements="25" conditionals="10" coveredconditionals="8" methods="10" coveredmethods="8" elements="47" coveredelements="41" complexity="0" loc="27" ncloc="27" packages="5" files="5" classes="5">
       <package name="alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -53,10 +53,10 @@
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="ViewLink.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/viewLink/ViewLink.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="2" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
         </file>
       </package>
     </metrics>

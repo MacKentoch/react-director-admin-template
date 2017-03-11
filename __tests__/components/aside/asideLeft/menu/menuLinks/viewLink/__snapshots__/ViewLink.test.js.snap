@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewLink component renders as expected 1`] = `
+<div>
+  <li
+    className="active"
+  >
+    <a
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <i
+        className="fa fa-home"
+        style={
+          Object {
+            "marginLeft": "10px",
+          }
+        }
+      />
+      <span
+        style={
+          Object {
+            "fontSize": "13px",
+          }
+        }
+      >
+        view1
+      </span>
+      <span
+        className="label label-primary pull-right"
+      >
+        1
+      </span>
+    </a>
+  </li>
+</div>
+`;
