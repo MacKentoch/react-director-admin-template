@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm component renders as expected 1`] = `
+<form
+  className="sidebar-form"
+  onKeyPress={[Function]}
+>
+  <div
+    className="input-group"
+  >
+    <input
+      className="form-control"
+      name="searchinput"
+      placeholder="Search..."
+      type="text"
+    />
+    <span
+      className="input-group-btn"
+    >
+      <button
+        className="btn btn-flat"
+        id="search-btn"
+        name="search"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-search"
+        />
+      </button>
+    </span>
+  </div>
+</form>
+`;

@@ -38,12 +38,6 @@ class SearchForm extends PureComponent {
     this.searchinput = ref;
   }
 
-  handlesButtonPress = (event) => {
-    event.preventDefault();
-    const { onSearchSubmit } = this.props;
-    onSearchSubmit(this.searchinput.value.trim());
-  }
-
   handlesFormKeyPress = (event) => {
     if (event.charCode === 13) {
       event.preventDefault();

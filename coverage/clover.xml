@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489120673259" clover="3.2.0">
-  <project timestamp="1489120673259" name="All files">
-    <metrics statements="27" coveredstatements="25" conditionals="10" coveredconditionals="8" methods="10" coveredmethods="8" elements="47" coveredelements="41" complexity="0" loc="27" ncloc="27" packages="5" files="5" classes="5">
+<coverage generated="1489260082327" clover="3.2.0">
+  <project timestamp="1489260082327" name="All files">
+    <metrics statements="35" coveredstatements="33" conditionals="12" coveredconditionals="9" methods="14" coveredmethods="12" elements="61" coveredelements="54" complexity="0" loc="35" ncloc="35" packages="6" files="6" classes="6">
       <package name="alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -57,6 +57,20 @@
           <line num="6" count="3" type="stmt"/>
           <line num="30" count="2" type="stmt"/>
           <line num="38" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="aside.asideLeft.searchForm">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <file name="SearchForm.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/searchForm/SearchForm.js">
+          <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>
