@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPanel component renders as expected 1`] = `
+<div
+  className="user-panel"
+>
+  <div
+    className="pull-left image"
+  >
+    <img
+      alt="User Image"
+      className="img-circle"
+      src="./public/img/26115.jpg"
+    />
+  </div>
+  <div
+    className="pull-left info"
+  >
+    <p>
+      Hi JohnDoe
+    </p>
+    <a
+      href="#"
+    >
+      <i
+        className="fa fa-circle text-success"
+      />
+      online
+    </a>
+  </div>
+</div>
+`;

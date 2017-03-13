@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489260082327" clover="3.2.0">
-  <project timestamp="1489260082327" name="All files">
-    <metrics statements="35" coveredstatements="33" conditionals="12" coveredconditionals="9" methods="14" coveredmethods="12" elements="61" coveredelements="54" complexity="0" loc="35" ncloc="35" packages="6" files="6" classes="6">
-      <package name="alert">
+<coverage generated="1489296437948" clover="3.2.0">
+  <project timestamp="1489296437948" name="All files">
+    <metrics statements="40" coveredstatements="38" conditionals="22" coveredconditionals="17" methods="15" coveredmethods="13" elements="77" coveredelements="68" complexity="0" loc="40" ncloc="40" packages="8" files="8" classes="8">
+      <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -13,7 +13,7 @@
           <line num="38" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="animatedView">
+      <package name="components.animatedView">
         <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
         <file name="AnimatedView.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/animatedView/AnimatedView.js">
           <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
@@ -29,7 +29,7 @@
           <line num="49" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="aside.asideLeft.menu.menuHeader">
+      <package name="components.aside.asideLeft.menu.menuHeader">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <file name="MenuHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
@@ -39,7 +39,7 @@
           <line num="44" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="aside.asideLeft.menu.menuLinks">
+      <package name="components.aside.asideLeft.menu.menuLinks">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="MenuLinks.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/MenuLinks.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -49,7 +49,7 @@
           <line num="34" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="aside.asideLeft.menu.menuLinks.viewLink">
+      <package name="components.aside.asideLeft.menu.menuLinks.viewLink">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="ViewLink.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/viewLink/ViewLink.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -59,7 +59,7 @@
           <line num="38" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="aside.asideLeft.searchForm">
+      <package name="components.aside.asideLeft.searchForm">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
         <file name="SearchForm.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/searchForm/SearchForm.js">
           <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
@@ -71,6 +71,23 @@
           <line num="44" count="1" type="stmt"/>
           <line num="45" count="1" type="stmt"/>
           <line num="50" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.aside.asideLeft.userPanel">
+        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <file name="UserPanel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/userPanel/UserPanel.js">
+          <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="models">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="userInfosMock.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/models/userInfosMock.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>
