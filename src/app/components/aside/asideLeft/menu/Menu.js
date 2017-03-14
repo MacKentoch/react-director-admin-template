@@ -1,13 +1,12 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 import Collapse       from 'react-collapse';
 import MenuHeader     from './menuHeader/MenuHeader';
 import MenuLinks      from './menuLinks/MenuLinks';
 
-class Menu extends Component {
+class Menu extends PureComponent {
   state = {
     isCollapsed: true
   };
@@ -17,10 +16,6 @@ class Menu extends Component {
     if (typeof initialCollapseState === 'boolean') {
       this.setInitialCollapse(initialCollapseState);
     }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   render() {
