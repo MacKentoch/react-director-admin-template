@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
+    "test:update": "NODE_ENV=test jest -u",
     "test:watch": "NODE_ENV=test jest --watch",
     "test:coverage": "NODE_ENV=test jest --coverage",
     "dev": "NODE_ENV=dev webpack",

@@ -54,7 +54,6 @@ const AsideLeft = (props) => {
           <SearchForm
             onSearchSubmit={(value) => console.log('searching: ', value)}
           />
-
           {
             sideMenu.map(
               ({id, group, menus}, menuIdx) => {
@@ -71,38 +70,7 @@ const AsideLeft = (props) => {
               }
             )
           }
-{/*
-          <ul className="sidebar-menu">
-            <li className={currentView === 'Home' ? 'active' : '' }>
-              <Link to="/">
-                <i className="fa fa-dashboard"></i>
-                <span>Dashboard</span>
-              </Link>
-            </li>
-            <li className={currentView === 'General' ? 'active' : '' }>
-              <Link
-                to="/general">
-                <i className="fa fa-gavel"></i>
-                <span>General</span>
-              </Link>
-            </li>
-            <li className={currentView === 'BasicElements' ? 'active' : '' }>
-              <Link
-                to="/basicElements">
-                <i className="fa fa-globe"></i>
-                <span>Basic Elements</span>
-              </Link>
-            </li>
-            <li className={currentView === 'SimpleTables' ? 'active' : '' }>
-              <Link
-                to="/simpleTables">
-                <i className="fa fa-glass"></i>
-                <span>Simple tables</span>
-              </Link>
-            </li>
-          </ul> */}
         </section>
-
     </aside>
 
   );

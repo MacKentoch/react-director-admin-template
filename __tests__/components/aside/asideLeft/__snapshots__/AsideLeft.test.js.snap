@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsideLeft component renders as expected 1`] = `
+<div>
+  <aside
+    className="no-print left-side aside-left--fixed sidebar-offcanvas sidebar-animated collapse-left"
+    style={
+      Object {
+        "height": "100%",
+        "overflow": "auto",
+        "position": "fixed",
+      }
+    }
+  >
+    <section
+      className="sidebar"
+    >
+      <div
+        className="user-panel"
+      >
+        <div
+          className="pull-left image"
+        >
+          <img
+            alt="User Image"
+            className="img-circle"
+            src={undefined}
+          />
+        </div>
+        <div
+          className="pull-left info"
+        >
+          <p>
+            Hello Jane
+          </p>
+          <a
+            href="#"
+          >
+            <i
+              className="fa fa-circle text-default"
+            />
+            Disconnected
+          </a>
+        </div>
+      </div>
+      <Horloge />
+      <form
+        className="sidebar-form"
+        onKeyPress={[Function]}
+      >
+        <div
+          className="input-group"
+        >
+          <input
+            className="form-control"
+            name="searchinput"
+            placeholder="Search..."
+            type="text"
+          />
+          <span
+            className="input-group-btn"
+          >
+            <button
+              className="btn btn-flat"
+              id="search-btn"
+              name="search"
+              onClick={[Function]}
+            >
+              <i
+                className="fa fa-search"
+              />
+            </button>
+          </span>
+        </div>
+      </form>
+      <div>
+        <ul
+          className="list-inline sidebar-menu__group-container"
+          onClick={[Function]}
+        >
+          <li
+            style={
+              Object {
+                "backgroundColor": "#283744",
+                "width": "100%",
+              }
+            }
+          >
+            <a
+              className="btn"
+              style={
+                Object {
+                  "paddinLeft": "0px !important",
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="pull-left sidebar-menu__group-title"
+              >
+                Dashboard  
+              </span>
+              <i
+                aria-hidden="true"
+                className="fa fa-angle-up fa-1x pull-right"
+                style={
+                  Object {
+                    "WebkitTransform": "rotate(180deg)",
+                    "transform": "rotate(180deg)",
+                  }
+                }
+              />
+            </a>
+          </li>
+        </ul>
+        <div
+          style={
+            Object {
+              "height": "auto",
+            }
+          }
+        >
+          <div>
+            <ul
+              className="sidebar-menu sidebar-menu__marginTop"
+            >
+              <li
+                className="active"
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-eye"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Dashboard preview
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-check-square-o"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    StatsCard
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-area-chart"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    EarningGraph
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-bell"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Notifications
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-briefcase"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Work progress
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-twitter"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Twitter feed
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-user"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Team Mates
+                  </span>
+                </a>
+              </li>
+              <li
+                className=""
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <i
+                    className="fa fa-check"
+                    style={
+                      Object {
+                        "marginLeft": "10px",
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "13px",
+                      }
+                    }
+                  >
+                    Todo list
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul
+          className="list-inline sidebar-menu__group-container"
+          onClick={[Function]}
+        >
+          <li
+            style={
+              Object {
+                "backgroundColor": "#283744",
+                "width": "100%",
+              }
+            }
+          >
+            <a
+              className="btn"
+              style={
+                Object {
+                  "paddinLeft": "0px !important",
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="pull-left sidebar-menu__group-title"
+              >
+                General
+              </span>
+              <i
+                aria-hidden="true"
+                className="fa fa-angle-up fa-1x pull-right"
+                style={
+                  Object {
+                    "WebkitTransform": "rotate(180deg)",
+                    "transform": "rotate(180deg)",
+                  }
+                }
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul
+          className="list-inline sidebar-menu__group-container"
+          onClick={[Function]}
+        >
+          <li
+            style={
+              Object {
+                "backgroundColor": "#283744",
+                "width": "100%",
+              }
+            }
+          >
+            <a
+              className="btn"
+              style={
+                Object {
+                  "paddinLeft": "0px !important",
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="pull-left sidebar-menu__group-title"
+              >
+                BasicElements
+              </span>
+              <i
+                aria-hidden="true"
+                className="fa fa-angle-up fa-1x pull-right"
+                style={
+                  Object {
+                    "WebkitTransform": "rotate(180deg)",
+                    "transform": "rotate(180deg)",
+                  }
+                }
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul
+          className="list-inline sidebar-menu__group-container"
+          onClick={[Function]}
+        >
+          <li
+            style={
+              Object {
+                "backgroundColor": "#283744",
+                "width": "100%",
+              }
+            }
+          >
+            <a
+              className="btn"
+              style={
+                Object {
+                  "paddinLeft": "0px !important",
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="pull-left sidebar-menu__group-title"
+              >
+                SimpleTables
+              </span>
+              <i
+                aria-hidden="true"
+                className="fa fa-angle-up fa-1x pull-right"
+                style={
+                  Object {
+                    "WebkitTransform": "rotate(180deg)",
+                    "transform": "rotate(180deg)",
+                  }
+                }
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </aside>
+</div>
+`;

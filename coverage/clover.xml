@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489380751083" clover="3.2.0">
-  <project timestamp="1489380751084" name="All files">
-    <metrics statements="53" coveredstatements="48" conditionals="24" coveredconditionals="19" methods="19" coveredmethods="16" elements="96" coveredelements="83" complexity="0" loc="53" ncloc="53" packages="9" files="10" classes="10">
+<coverage generated="1489467106737" clover="3.2.0">
+  <project timestamp="1489467106737" name="All files">
+    <metrics statements="61" coveredstatements="55" conditionals="26" coveredconditionals="24" methods="22" coveredmethods="18" elements="109" coveredelements="97" complexity="0" loc="61" ncloc="61" packages="10" files="11" classes="11">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -29,83 +29,97 @@
           <line num="49" count="1" type="stmt"/>
         </file>
       </package>
+      <package name="components.aside.asideLeft">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <file name="AsideLeft.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/AsideLeft.js">
+          <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="60" count="4" type="stmt"/>
+          <line num="79" count="1" type="stmt"/>
+          <line num="107" count="1" type="stmt"/>
+        </file>
+      </package>
       <package name="components.aside.asideLeft.menu">
-        <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
         <file name="Menu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/Menu.js">
-          <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="27" count="2" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="30" count="2" type="stmt"/>
-          <line num="51" count="1" type="stmt"/>
+          <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+          <line num="15" count="5" type="stmt"/>
+          <line num="16" count="5" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="27" count="7" type="stmt"/>
+          <line num="28" count="7" type="stmt"/>
+          <line num="30" count="7" type="stmt"/>
+          <line num="51" count="2" type="stmt"/>
           <line num="55" count="0" type="stmt"/>
           <line num="56" count="0" type="stmt"/>
           <line num="57" count="0" type="stmt"/>
-          <line num="61" count="1" type="stmt"/>
-          <line num="76" count="1" type="stmt"/>
+          <line num="61" count="2" type="stmt"/>
+          <line num="76" count="2" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.menu.menuHeader">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="MenuHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="8" count="3" type="stmt"/>
-          <line num="25" count="3" type="stmt"/>
-          <line num="44" count="2" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="25" count="8" type="stmt"/>
+          <line num="44" count="3" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.menu.menuLinks">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="MenuLinks.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/MenuLinks.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="10" count="2" type="stmt"/>
-          <line num="11" count="2" type="stmt"/>
-          <line num="16" count="10" type="stmt"/>
-          <line num="34" count="2" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
+          <line num="11" count="6" type="stmt"/>
+          <line num="16" count="29" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.menu.menuLinks.viewLink">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="ViewLink.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/viewLink/ViewLink.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="5" count="3" type="stmt"/>
-          <line num="6" count="11" type="stmt"/>
-          <line num="30" count="3" type="stmt"/>
-          <line num="38" count="3" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="30" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
+          <line num="38" count="4" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.searchForm">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
         <file name="SearchForm.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/searchForm/SearchForm.js">
           <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="12" count="2" type="stmt"/>
-          <line num="38" count="2" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
           <line num="42" count="1" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
           <line num="44" count="1" type="stmt"/>
           <line num="45" count="1" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.userPanel">
-        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <file name="UserPanel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/userPanel/UserPanel.js">
-          <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="41" count="1" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="41" count="2" type="stmt"/>
+          <line num="53" count="2" type="stmt"/>
         </file>
       </package>
       <package name="models">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="navigation.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/models/navigation.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
+          <line num="1" count="2" type="stmt"/>
         </file>
         <file name="userInfosMock.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/models/userInfosMock.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
