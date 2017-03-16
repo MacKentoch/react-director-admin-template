@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/alert/Alert.js</title>
+    <title>Code coverage report for components/aside/asideRight/AsideRight.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">components/alert</a> Alert.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">components/aside/asideRight</a> AsideRight.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -73,17 +73,7 @@
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+31</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -101,11 +91,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,54 +101,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
 import cx from 'classnames';
 &nbsp;
 &nbsp;
-const Alert = ({ type, children }) =&gt; {
+const AsideRight = ({children, isAnimated, isExpanded}) =&gt; {
   return (
-    &lt;div
-      className={
-        cx({
-          alert: true,
-          'alert-block': true,
-          'alert-danger': type === 'danger',
-          'alert-info': type === 'info',
-          'alert-warning': type === 'warning',
-          'alert-success': type === 'success'
-        })
-      }&gt;
-      &lt;button
-        data-dismiss="alert"
-        className="close close-sm"
-        type="button"&gt;
-        &lt;i className="fa fa-times" /&gt;
-      &lt;/button&gt;
+    &lt;aside className={
+      cx({
+        'right-side': true,
+        'right-side--top-margin': true,
+        'aside-right-animated': isAnimated,
+        'strech': isExpanded
+      })}&gt;
       { children }
-    &lt;/div&gt;
+    &lt;/aside&gt;
   );
 };
 &nbsp;
-Alert.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+AsideRight.propTypes = {
+  children: PropTypes.node.isRequired,
+  isAnimated: PropTypes.bool.isRequired,
+  isExpanded: PropTypes.bool.isRequired
 };
 &nbsp;
-Alert.defaultProps = {
-  type: 'info'
+AsideRight.defaultProps = {
+  isAnimated: true,
+  isExpanded: false
 };
 &nbsp;
-Alert.displayName = 'Alert';
-&nbsp;
-export default Alert;
+export default AsideRight;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -172,7 +142,7 @@ export default Alert;
   generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 15 2017 05:41:32 GMT+0100 (CET)
 </div>
 </div>
-<script src="../../prettify.js"></script>
+<script src="../../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -180,6 +150,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../sorter.js"></script>
+<script src="../../../sorter.js"></script>
 </body>
 </html>

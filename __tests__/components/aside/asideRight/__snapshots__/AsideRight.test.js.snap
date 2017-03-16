@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsideRight component renders as expected 1`] = `
+<div>
+  <aside
+    className="right-side right-side--top-margin aside-right-animated strech"
+  >
+    <p>
+      Aside right children
+    </p>
+  </aside>
+</div>
+`;

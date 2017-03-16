@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489467106737" clover="3.2.0">
-  <project timestamp="1489467106737" name="All files">
-    <metrics statements="61" coveredstatements="55" conditionals="26" coveredconditionals="24" methods="22" coveredmethods="18" elements="109" coveredelements="97" complexity="0" loc="61" ncloc="61" packages="10" files="11" classes="11">
+<coverage generated="1489552892447" clover="3.2.0">
+  <project timestamp="1489552892447" name="All files">
+    <metrics statements="65" coveredstatements="59" conditionals="26" coveredconditionals="24" methods="23" coveredmethods="19" elements="114" coveredelements="102" complexity="0" loc="65" ncloc="65" packages="11" files="12" classes="12">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -113,6 +113,16 @@
           <line num="4" count="2" type="stmt"/>
           <line num="41" count="2" type="stmt"/>
           <line num="53" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.aside.asideRight">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="AsideRight.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/aside/asideRight/AsideRight.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
         </file>
       </package>
       <package name="models">
