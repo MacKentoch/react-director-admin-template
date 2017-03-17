@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489552892447" clover="3.2.0">
-  <project timestamp="1489552892447" name="All files">
-    <metrics statements="65" coveredstatements="59" conditionals="26" coveredconditionals="24" methods="23" coveredmethods="19" elements="114" coveredelements="102" complexity="0" loc="65" ncloc="65" packages="11" files="12" classes="12">
+<coverage generated="1489639119013" clover="3.2.0">
+  <project timestamp="1489639119013" name="All files">
+    <metrics statements="73" coveredstatements="67" conditionals="28" coveredconditionals="26" methods="25" coveredmethods="21" elements="126" coveredelements="114" complexity="0" loc="73" ncloc="73" packages="13" files="14" classes="14">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -123,6 +123,26 @@
           <line num="6" count="1" type="stmt"/>
           <line num="19" count="1" type="stmt"/>
           <line num="25" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.basicForms">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="BasicForms.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/basicForms/BasicForms.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="73" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.panel">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <file name="Panel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/panel/Panel.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
         </file>
       </package>
       <package name="models">

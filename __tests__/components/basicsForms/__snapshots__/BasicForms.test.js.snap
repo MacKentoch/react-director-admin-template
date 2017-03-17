@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicForms component renders as expected 1`] = `
+<div>
+  <section
+    className="panel "
+  >
+    <header
+      className="panel-heading"
+    >
+      basic form header title
+    </header>
+    <div
+      className="panel-body undefined"
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+        }
+      }
+    >
+      <form
+        role="form"
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="exampleInputEmail1"
+          >
+            Email address
+          </label>
+          <input
+            className="form-control"
+            id="exampleInputEmail1"
+            placeholder="Enter email"
+            type="email"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="exampleInputPassword1"
+          >
+            Password
+          </label>
+          <input
+            className="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            type="password"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="exampleInputFile"
+          >
+            File input
+          </label>
+          <input
+            id="exampleInputFile"
+            type="file"
+          />
+          <p
+            className="help-block"
+          >
+            Example block-level help text here.
+          </p>
+        </div>
+        <div
+          className="checkbox"
+        >
+          <label>
+            <input
+              type="checkbox"
+            />
+            Check me out
+          </label>
+        </div>
+        <button
+          className="btn btn-info"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+`;
