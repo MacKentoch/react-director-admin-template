@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489639119013" clover="3.2.0">
-  <project timestamp="1489639119013" name="All files">
-    <metrics statements="73" coveredstatements="67" conditionals="28" coveredconditionals="26" methods="25" coveredmethods="21" elements="126" coveredelements="114" complexity="0" loc="73" ncloc="73" packages="13" files="14" classes="14">
+<coverage generated="1489814586928" clover="3.2.0">
+  <project timestamp="1489814586929" name="All files">
+    <metrics statements="86" coveredstatements="79" conditionals="38" coveredconditionals="33" methods="28" coveredmethods="24" elements="152" coveredelements="136" complexity="0" loc="86" ncloc="86" packages="15" files="16" classes="16">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -133,6 +133,31 @@
           <line num="7" count="1" type="stmt"/>
           <line num="69" count="1" type="stmt"/>
           <line num="73" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.breadcrumb">
+        <metrics statements="9" coveredstatements="8" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <file name="Breadcrumb.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/breadcrumb/Breadcrumb.js">
+          <metrics statements="9" coveredstatements="8" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.button">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Button.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/button/Button.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb component renders as expected 1`] = `
+<div>
+  <ul
+    className="breadcrumb"
+  >
+    <li>
+      <a
+        href="#"
+      >
+        <i
+          className="fa fa-home"
+        />
+         
+        path1
+      </a>
+    </li>
+    <li
+      className="active"
+    >
+      subpath1
+    </li>
+  </ul>
+</div>
+`;

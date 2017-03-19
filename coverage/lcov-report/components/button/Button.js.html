@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/animatedView/AnimatedView.js</title>
+    <title>Code coverage report for components/button/Button.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">components/animatedView</a> AnimatedView.js
+      <a href="../../index.html">All files</a> / <a href="index.html">components/button</a> Button.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/10</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/4</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/10</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -78,53 +78,16 @@
 33
 34
 35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+36</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,64 +107,47 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
 import cx from 'classnames';
 &nbsp;
-const ANIMATION_DELAY_MS = 500;
+const Button = ({ type, onClick, children }) =&gt; {
+  return (
+    &lt;button
+      type="button"
+      onClick={ onClick }
+      className={
+        cx({
+          btn: true,
+          'btn-default': type === 'default',
+          'btn-primary': type === 'primary',
+          'btn-success': type === 'success',
+          'btn-info':    type === 'info',
+          'btn-warning': type === 'warning',
+          'btn-danger':  type === 'danger'
+        })
+      }&gt;
+      {  children }
+    &lt;/button&gt;
+  );
+};
 &nbsp;
-class AnimatedView extends Component {
-  state = {
-    animated: true,
-    viewEnters: false
-  };
-&nbsp;
-  componentDidMount() {
-    const { delay } = this.props;
-&nbsp;
-    this.enterAnimationTimer = setTimeout(
-<span class="fstat-no" title="function not covered" >      ()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ viewEnters: true }),</span>
-      delay
-    );
-  }
-&nbsp;
-<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
-<span class="cstat-no" title="statement not covered" >    clearTimeout(this.enterAnimationTimer);</span>
-  }
-&nbsp;
-  render() {
-    const { animated, viewEnters } = this.state;
-    const { children } = this.props;
-&nbsp;
-    return (
-      &lt;section
-        className={
-          cx({
-            'content':    true,
-            'invisible':  !viewEnters &amp;&amp; animated,
-            'view-enter': viewEnters &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >animated</span>
-          })
-        }&gt;
-      { children }
-    &lt;/section&gt;
-    );
-  }
-}
-&nbsp;
-AnimatedView.propTypes = {
+Button.propTypes = {
   children: PropTypes.node,
-  delay: PropTypes.number
+  type: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
+  onClick: PropTypes.func
 };
 &nbsp;
-AnimatedView.defaultProps = {
-  delay: ANIMATION_DELAY_MS
+Button.defaultProps = {
+  type: 'default'
 };
 &nbsp;
-export default AnimatedView;
+export default Button;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

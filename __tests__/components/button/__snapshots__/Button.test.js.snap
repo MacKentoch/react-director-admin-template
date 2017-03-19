@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component renders as expected 1`] = `
+<div>
+  <button
+    className="btn btn-default"
+    onClick={undefined}
+    type="button"
+  >
+    <p>
+      a button
+    </p>
+  </button>
+</div>
+`;
