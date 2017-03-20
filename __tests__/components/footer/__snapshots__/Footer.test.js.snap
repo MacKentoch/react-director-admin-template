@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders as expected 1`] = `
+<div>
+  <div
+    className="footer-main"
+  >
+    react Director Admin Template
+  </div>
+</div>
+`;
