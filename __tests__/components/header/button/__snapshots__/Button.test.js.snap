@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component renders as expected 1`] = `
+<div>
+  <a
+    className="navbar-btn sidebar-toggle"
+    data-toggle="offcanvas"
+    href="#"
+    onClick={[Function]}
+    role="button"
+  >
+    <span
+      className="sr-only"
+    >
+      Toggle navigation
+    </span>
+    <span
+      className="icon-bar"
+    />
+    <span
+      className="icon-bar"
+    />
+    <span
+      className="icon-bar"
+    />
+  </a>
+</div>
+`;
