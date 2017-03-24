@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskMenu component renders as expected 1`] = `
+<div>
+  <li
+    className="dropdown tasks-menu"
+  >
+    <a
+      className="dropdown-toggle"
+      data-toggle="dropdown"
+      href="#"
+    >
+      <i
+        className="fa fa-tasks"
+      />
+      <span
+        className="label label-danger"
+      >
+        9
+      </span>
+    </a>
+    <ul
+      className="dropdown-menu"
+    >
+      <li
+        className="header"
+      >
+        You have 9 tasks
+      </li>
+      <li>
+        <ul
+          className="menu"
+        >
+          <li>
+            <a
+              href="#"
+            >
+              <h3>
+                Design some buttons
+                <small
+                  className="pull-right"
+                >
+                  20%
+                </small>
+              </h3>
+              <div
+                className="progress progress-striped xs"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="20"
+                  className="progress-bar progress-bar-success"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    20% Complete
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              <h3>
+                Create a nice theme
+                <small
+                  className="pull-right"
+                >
+                  40%
+                </small>
+              </h3>
+              <div
+                className="progress progress-striped xs"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="20"
+                  className="progress-bar progress-bar-danger"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    40% Complete
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              <h3>
+                Some task I need to do
+                <small
+                  className="pull-right"
+                >
+                  60%
+                </small>
+              </h3>
+              <div
+                className="progress progress-striped xs"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="20"
+                  className="progress-bar progress-bar-info"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    60% Complete
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              <h3>
+                Make beautiful transitions
+                <small
+                  className="pull-right"
+                >
+                  80%
+                </small>
+              </h3>
+              <div
+                className="progress progress-striped xs"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="20"
+                  className="progress-bar progress-bar-warning"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <span
+                    className="sr-only"
+                  >
+                    80% Complete
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li
+        className="footer"
+      >
+        <a
+          href="#"
+        >
+          View all tasks
+        </a>
+      </li>
+    </ul>
+  </li>
+</div>
+`;

@@ -104,5 +104,10 @@
     "redux-thunk": "^2.2.0",
     "superagent": "^1.8.3",
     "whatwg-fetch": "^1.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.*[.](gif|ttf|eot|svg)$": "RelativeImageStub"
+    }
   }
 }

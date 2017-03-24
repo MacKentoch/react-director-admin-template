@@ -72,7 +72,7 @@ const MessageMenu = () => {
                     />
                   </div>
                   <h4>
-                      Developers
+                    Developers
                   </h4>
                   <p>Why not buy a new awesome theme?</p>
                   <small className="pull-right">
@@ -112,7 +112,7 @@ const MessageMenu = () => {
                     />
                   </div>
                   <h4>
-                      Reviewers
+                    Reviewers
                   </h4>
                   <p>
                     Why not buy a new awesome theme?
