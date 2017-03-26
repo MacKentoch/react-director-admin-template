@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/alert/Alert.js</title>
+    <title>Code coverage report for components/header/button/Button.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">components/alert</a> Alert.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">components/header/button</a> Button.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>3/3</span>
       </div>
     </div>
   </div>
@@ -66,29 +66,10 @@
 21
 22
 23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+24</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -103,66 +84,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
-import cx from 'classnames';
 &nbsp;
-&nbsp;
-const Alert = ({ type, children }) =&gt; {
+const Button = ({toggleSideMenu}) =&gt; {
   return (
-    &lt;div
-      className={
-        cx({
-          alert: true,
-          'alert-block': true,
-          'alert-danger': type === 'danger',
-          'alert-info': type === 'info',
-          'alert-warning': type === 'warning',
-          'alert-success': type === 'success'
-        })
-      }&gt;
-      &lt;button
-        data-dismiss="alert"
-        className="close close-sm"
-        type="button"&gt;
-        &lt;i className="fa fa-times" /&gt;
-      &lt;/button&gt;
-      { children }
-    &lt;/div&gt;
+    &lt;a
+      href="#"
+      onClick={toggleSideMenu}
+      className="navbar-btn sidebar-toggle"
+      data-toggle="offcanvas"
+      role="button"&gt;
+      &lt;span className="sr-only"&gt;Toggle navigation&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+      &lt;span className="icon-bar"&gt;&lt;/span&gt;
+    &lt;/a&gt;
   );
 };
 &nbsp;
-Alert.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+Button.propTypes = {
+  toggleSideMenu: PropTypes.func.isRequired
 };
 &nbsp;
-Alert.defaultProps = {
-  type: 'info'
-};
-&nbsp;
-Alert.displayName = 'Alert';
-&nbsp;
-export default Alert;
+export default Button;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -172,7 +121,7 @@ export default Alert;
   generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Mar 25 2017 07:51:10 GMT+0100 (CET)
 </div>
 </div>
-<script src="../../prettify.js"></script>
+<script src="../../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -180,6 +129,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../sorter.js"></script>
+<script src="../../../sorter.js"></script>
 </body>
 </html>

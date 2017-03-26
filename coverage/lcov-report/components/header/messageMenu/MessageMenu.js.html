@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for models/navigation.js</title>
+    <title>Code coverage report for components/header/messageMenu/MessageMenu.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">models</a> navigation.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">components/header/messageMenu</a> MessageMenu.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
     </div>
   </div>
@@ -181,13 +181,10 @@
 136
 137
 138
-139
-140
-141
-142
-143
-144</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+139</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -322,156 +319,144 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const navigation = {
-  brand:      'reactDirectorAdmin',
-  leftLinks:  [],
-  rightLinks: [
-    {
-      label:      'Home',
-      link:       '/',
-      view:       'home',
-      isRouteBtn: true
-    },
-    {
-      label:      'About',
-      link:       '/about',
-      view:       'about',
-      isRouteBtn: true
-    }
-  ],
-  sideMenu: [
-    // group menu #1
-    {
-      id: 1,
-      group: 'Dashboard  ',
-      menus: [
-        {
-          name: 'Dashboard preview',
-          linkTo: '/',
-          faIconName: 'fa-eye'
-        },
-        {
-          name: 'StatsCard',
-          linkTo: '/Dashboard/statsCard',
-          faIconName: 'fa-check-square-o'
-        },
-        {
-          name: 'EarningGraph',
-          linkTo: '/Dashboard/earningGraph',
-          faIconName: 'fa-area-chart'
-        },
-        {
-          name: 'Notifications',
-          linkTo: '/Dashboard/notifications',
-          faIconName: 'fa-bell'
-        },
-        {
-          name: 'Work progress',
-          linkTo: '/Dashboard/workProgress',
-          faIconName: 'fa-briefcase'
-        },
-        {
-          name: 'Twitter feed',
-          linkTo: '/Dashboard/twitterFeed',
-          faIconName: 'fa-twitter'
-        },
-        {
-          name: 'Team Mates',
-          linkTo: '/Dashboard/teamMates',
-          faIconName: 'fa-user'
-        },
-        {
-          name: 'Todo list',
-          linkTo: '/Dashboard/todoList',
-          faIconName: 'fa-check'
-        }
-      ]
-    },
-    // group menu #2
-    {
-      id: 2,
-      group: 'General',
-      menus: [
-        {
-          name: 'General preview',
-          linkTo: '/general',
-          faIconName: 'fa-eye'
-        },
-        {
-          name: 'Breadcrumb',
-          linkTo: '/general/breadcrumb',
-          faIconName: 'fa-bars'
-        },
-        {
-          name: 'Stat',
-          linkTo: '/general/stat',
-          faIconName: 'fa-bar-chart'
-        },
-        {
-          name: 'Basic progress bars',
-          linkTo: '/general/basicProgressBars',
-          faIconName: 'fa-tasks'
-        },
-        {
-          name: 'Tab panels',
-          linkTo: '/general/tabPanels',
-          faIconName: 'fa-columns'
-        },
-        {
-          name: 'Striped progress bar',
-          linkTo: '/general/stripedProgressBars',
-          faIconName: 'fa-tasks'
-        },
-        {
-          name: 'Alerts',
-          linkTo: '/general/alerts',
-          faIconName: 'fa-exclamation-triangle'
-        },
-        {
-          name: 'Pagination',
-          linkTo: '/general/pagination',
-          faIconName: 'fa-sort'
-        },
-        {
-          name: 'Default buttons',
-          linkTo: '/general/defaultButtons',
-          faIconName: 'fa-hand-o-up'
-        }
-      ]
-    },
-    // group menu #3
-    {
-      id: 3,
-      group: 'BasicElements',
-      menus: [
-        {
-          name: 'Basic Elements preview',
-          linkTo: '/basicElements',
-          faIconName: 'fa-eye'
-        }
-      ]
-    },
-    // group menu #4
-    {
-      id: 4,
-      group: 'SimpleTables',
-      menus: [
-        {
-          name: 'Simple tables preview',
-          linkTo: '/simpleTables',
-          faIconName: 'fa-eye'
-        }
-      ]
-    }
-  ]
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+&nbsp;
+const MessageMenu = () =&gt; {
+  return (
+    &lt;li className="dropdown messages-menu"&gt;
+        &lt;a
+          href="#"
+          className="dropdown-toggle"
+          data-toggle="dropdown"&gt;
+          &lt;i className="fa fa-envelope"&gt;&lt;/i&gt;
+          &lt;span className="label label-success"&gt;
+            4
+          &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul className="dropdown-menu"&gt;
+          &lt;li className="header"&gt;
+            You have 4 messages
+          &lt;/li&gt;
+          &lt;li&gt;
+            {/* &lt;!-- inner menu: contains the actual data --&gt; */}
+            &lt;ul className="menu"&gt;
+              &lt;li&gt;
+                {/* &lt;!-- start message --&gt; */}
+                &lt;a href="#"&gt;
+                  &lt;div className="pull-left"&gt;
+                    &lt;img
+                      src={require('../../../vendors/img/26115.jpg')}
+                      className="img-circle"
+                      alt="User Image"/&gt;
+                  &lt;/div&gt;
+                  &lt;h4&gt;
+                      Support Team
+                  &lt;/h4&gt;
+                  &lt;p&gt;
+                    Why not buy a new awesome theme?
+                  &lt;/p&gt;
+                  &lt;small className="pull-right"&gt;
+                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                      5 mins
+                  &lt;/small&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              {/* &lt;!-- end message --&gt; */}
+              &lt;li&gt;
+                &lt;a href="#"&gt;
+                  &lt;div className="pull-left"&gt;
+                    &lt;img
+                      src={require('../../../vendors/img/26115.jpg')}
+                      className="img-circle"
+                      alt="user image"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;h4&gt;
+                      Director Design Team
+                  &lt;/h4&gt;
+                  &lt;p&gt;
+                    Why not buy a new awesome theme?
+                  &lt;/p&gt;
+                  &lt;small className="pull-right"&gt;
+                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                      2 hours
+                  &lt;/small&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="#"&gt;
+                  &lt;div className="pull-left"&gt;
+                    &lt;img
+                      src={require('../../../vendors/img/avatar.png')}
+                      className="img-circle"
+                      alt="user image"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;h4&gt;
+                    Developers
+                  &lt;/h4&gt;
+                  &lt;p&gt;Why not buy a new awesome theme?&lt;/p&gt;
+                  &lt;small className="pull-right"&gt;
+                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                      Today
+                  &lt;/small&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="#"&gt;
+                  &lt;div className="pull-left"&gt;
+                    &lt;img
+                      src={require('../../../vendors/img/26115.jpg')}
+                      className="img-circle"
+                      alt="user image"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;h4&gt;
+                      Sales Department
+                  &lt;/h4&gt;
+                  &lt;p&gt;
+                    Why not buy a new awesome theme?
+                  &lt;/p&gt;
+                  &lt;small className="pull-right"&gt;
+                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                      Yesterday
+                  &lt;/small&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href="#"&gt;
+                  &lt;div className="pull-left"&gt;
+                    &lt;img
+                      src={require('../../../vendors/img/avatar.png')}
+                      className="img-circle"
+                      alt="user image"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;h4&gt;
+                    Reviewers
+                  &lt;/h4&gt;
+                  &lt;p&gt;
+                    Why not buy a new awesome theme?
+                  &lt;/p&gt;
+                  &lt;small className="pull-right"&gt;
+                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                      2 days
+                  &lt;/small&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li className="footer"&gt;
+            &lt;a href="#"&gt;
+              See All Messages
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+  );
 };
+&nbsp;
+export default MessageMenu;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -481,7 +466,7 @@
   generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Mar 25 2017 07:51:10 GMT+0100 (CET)
 </div>
 </div>
-<script src="../prettify.js"></script>
+<script src="../../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -489,6 +474,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../sorter.js"></script>
+<script src="../../../sorter.js"></script>
 </body>
 </html>

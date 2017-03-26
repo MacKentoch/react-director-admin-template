@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1489814586928" clover="3.2.0">
-  <project timestamp="1489814586929" name="All files">
-    <metrics statements="86" coveredstatements="79" conditionals="38" coveredconditionals="33" methods="28" coveredmethods="24" elements="152" coveredelements="136" complexity="0" loc="86" ncloc="86" packages="15" files="16" classes="16">
+<coverage generated="1490424670435" clover="3.2.0">
+  <project timestamp="1490424670435" name="All files">
+    <metrics statements="107" coveredstatements="100" conditionals="38" coveredconditionals="33" methods="35" coveredmethods="31" elements="180" coveredelements="164" complexity="0" loc="107" ncloc="107" packages="22" files="23" classes="23">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -158,6 +158,69 @@
           <line num="5" count="2" type="stmt"/>
           <line num="25" count="1" type="stmt"/>
           <line num="31" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.footer">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Footer.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/footer/Footer.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.header">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Header.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/Header.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.header.button">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Button.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/button/Button.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.header.messageMenu">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="MessageMenu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/messageMenu/MessageMenu.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.header.taskMenu">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TaskMenu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/taskMenu/TaskMenu.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.header.userMenu">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="UserMenu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/userMenu/UserMenu.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="76" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.jumbotron">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Jumbotron.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/jumbotron/Jumbotron.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">
