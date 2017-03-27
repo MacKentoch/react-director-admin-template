@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label component renders as expected 1`] = `
+<div>
+  <span
+    className="label label-primary"
+  >
+    text label
+  </span>
+</div>
+`;

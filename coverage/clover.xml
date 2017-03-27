@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1490424670435" clover="3.2.0">
-  <project timestamp="1490424670435" name="All files">
-    <metrics statements="107" coveredstatements="100" conditionals="38" coveredconditionals="33" methods="35" coveredmethods="31" elements="180" coveredelements="164" complexity="0" loc="107" ncloc="107" packages="22" files="23" classes="23">
+<coverage generated="1490556255771" clover="3.2.0">
+  <project timestamp="1490556255771" name="All files">
+    <metrics statements="111" coveredstatements="104" conditionals="38" coveredconditionals="33" methods="36" coveredmethods="32" elements="185" coveredelements="169" complexity="0" loc="111" ncloc="111" packages="23" files="24" classes="24">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -201,7 +201,7 @@
         <file name="TaskMenu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/taskMenu/TaskMenu.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="3" count="2" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
         </file>
       </package>
       <package name="components.header.userMenu">
@@ -209,8 +209,8 @@
         <file name="UserMenu.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/header/userMenu/UserMenu.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="3" count="2" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
           <line num="76" count="2" type="stmt"/>
         </file>
       </package>
@@ -221,6 +221,16 @@
           <line num="3" count="1" type="stmt"/>
           <line num="4" count="1" type="stmt"/>
           <line num="11" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.label">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="label.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/label/label.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">

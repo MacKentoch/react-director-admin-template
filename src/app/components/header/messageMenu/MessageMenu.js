@@ -17,10 +17,8 @@ const MessageMenu = () => {
             You have 4 messages
           </li>
           <li>
-            {/* <!-- inner menu: contains the actual data --> */}
             <ul className="menu">
               <li>
-                {/* <!-- start message --> */}
                 <a href="#">
                   <div className="pull-left">
                     <img
@@ -40,7 +38,6 @@ const MessageMenu = () => {
                   </small>
                 </a>
               </li>
-              {/* <!-- end message --> */}
               <li>
                 <a href="#">
                   <div className="pull-left">

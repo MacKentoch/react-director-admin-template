@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/alert/Alert.js</title>
+    <title>Code coverage report for components/label/label.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">components/alert</a> Alert.js
+      <a href="../../index.html">All files</a> / <a href="index.html">components/label</a> label.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -77,22 +77,11 @@
 32
 33
 34
-35
-36
-37
-38
-39
-40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+35</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,49 +109,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
 import cx from 'classnames';
 &nbsp;
-&nbsp;
-const Alert = ({ type, children }) =&gt; {
+const Label = ({ type, text }) =&gt; {
   return (
-    &lt;div
+    &lt;span
       className={
         cx({
-          alert: true,
-          'alert-block': true,
-          'alert-danger': type === 'danger',
-          'alert-info': type === 'info',
-          'alert-warning': type === 'warning',
-          'alert-success': type === 'success'
+          label: true,
+          'label-default': type === 'default',
+          'label-primary': type === 'primary',
+          'label-success': type === 'success',
+          'label-info': type === 'info',
+          'label-warning': type === 'warning',
+          'label-danger': type === 'danger',
+          'label-inverse': type === 'inverse'
         })
       }&gt;
-      &lt;button
-        data-dismiss="alert"
-        className="close close-sm"
-        type="button"&gt;
-        &lt;i className="fa fa-times" /&gt;
-      &lt;/button&gt;
-      { children }
-    &lt;/div&gt;
+      {  text }
+    &lt;/span&gt;
   );
 };
 &nbsp;
-Alert.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+Label.propTypes = {
+  text: PropTypes.string,
+  type: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'inverse', 'warning', 'danger'])
 };
 &nbsp;
-Alert.defaultProps = {
-  type: 'info'
+Label.defaultProps = {
+  text: '',
+  type: 'default'
 };
 &nbsp;
-Alert.displayName = 'Alert';
-&nbsp;
-export default Alert;
+export default Label;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
