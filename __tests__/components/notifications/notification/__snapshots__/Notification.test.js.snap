@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification component renders as expected 1`] = `
+<div>
+  <div
+    className="alert alert-success"
+  >
+    <button
+      className="close close-sm"
+      data-dismiss="alert"
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+    <p>
+      a notification
+    </p>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1490556255771" clover="3.2.0">
-  <project timestamp="1490556255771" name="All files">
-    <metrics statements="111" coveredstatements="104" conditionals="38" coveredconditionals="33" methods="36" coveredmethods="32" elements="185" coveredelements="169" complexity="0" loc="111" ncloc="111" packages="23" files="24" classes="24">
+<coverage generated="1490584533950" clover="3.2.0">
+  <project timestamp="1490584533950" name="All files">
+    <metrics statements="115" coveredstatements="108" conditionals="38" coveredconditionals="33" methods="37" coveredmethods="33" elements="190" coveredelements="174" complexity="0" loc="115" ncloc="115" packages="24" files="25" classes="25">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -231,6 +231,16 @@
           <line num="5" count="1" type="stmt"/>
           <line num="24" count="1" type="stmt"/>
           <line num="29" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.notifications.notification">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Notification.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/notifications/notification/Notification.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">
