@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationPanel component renders as expected 1`] = `
+<div>
+  <section
+    className="panel"
+  >
+    <header
+      className="panel-heading"
+    >
+      notification panel
+    </header>
+    <div
+      className="panel-body notification--body-container"
+      id="noti-box"
+    >
+      <p>
+        notification panel children
+      </p>
+    </div>
+  </section>
+</div>
+`;
