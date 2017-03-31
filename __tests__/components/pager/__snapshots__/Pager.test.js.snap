@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component renders as expected 1`] = `
+<div>
+  <nav>
+    <ul
+      className="pager"
+    >
+      <li
+        className="previous"
+      >
+        <a
+          href="#"
+        >
+          <p>
+            previous
+          </p>
+        </a>
+      </li>
+      <li
+        className="next"
+      >
+        <a
+          href="#"
+        >
+          <p>
+            next
+          </p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
