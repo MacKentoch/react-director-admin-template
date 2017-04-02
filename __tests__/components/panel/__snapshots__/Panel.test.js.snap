@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel component renders as expected 1`] = `
+<div>
+  <section
+    className="panel "
+  >
+    <header
+      className="panel-heading"
+    >
+      a title
+    </header>
+    <div
+      className="panel-body "
+      style={
+        Object {
+          "backgroundColor": "#F1F2F3",
+        }
+      }
+    >
+      <p>
+        panel children
+      </p>
+    </div>
+  </section>
+</div>
+`;
