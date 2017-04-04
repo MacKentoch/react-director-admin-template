@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stat component renders as expected 1`] = `
+<div>
+  <div
+    className="stat"
+  >
+    <div
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <span
+        className="fa-stack fa-lg fa-3x"
+      >
+        <i
+          className="fa fa-circle fa-stack-2x"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        />
+        <i
+          className="fa fa-user  fa-stack-1x fa-inverse"
+          style={
+            Object {
+              "color": "#E2E2E2",
+            }
+          }
+        />
+      </span>
+    </div>
+    <h5
+      className="stat-info"
+    >
+      stat label
+    </h5>
+  </div>
+</div>
+`;
