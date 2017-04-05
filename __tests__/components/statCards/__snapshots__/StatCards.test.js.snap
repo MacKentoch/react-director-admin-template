@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsCard component renders as expected 1`] = `
+<div>
+  <div
+    className="sm-st clearfix"
+  >
+    <span
+      className="sm-st-icon st-violet"
+    >
+      <i
+        className="fa fa-hand-peace-o"
+      />
+    </span>
+    <div
+      className="sm-st-info"
+    >
+      <span>
+        10
+      </span>
+      <div>
+        stat label
+      </div>
+    </div>
+  </div>
+</div>
+`;
