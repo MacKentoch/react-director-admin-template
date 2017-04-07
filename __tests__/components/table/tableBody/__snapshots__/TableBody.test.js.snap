@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBody component renders as expected 1`] = `
+<div>
+  <tbody>
+    <p>
+      table body children here
+    </p>
+  </tbody>
+</div>
+`;

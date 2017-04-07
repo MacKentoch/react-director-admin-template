@@ -2,16 +2,16 @@
 'use strict';
 
 import React              from 'react';
-import TableBody          from '../../../../src/app/components/table/tableBody/TableBody';
+import TableCol           from '../../../../src/app/components/table/tableCol/TableCol';
 import renderer           from 'react-test-renderer';
 
-describe('TableBody component', () => {
+describe('TableCol component', () => {
   it('renders as expected', () => {
     const component = renderer.create(
       <div>
-        <TableBody>
-          <p>table body children here</p>
-        </TableBody>
+        <TableCol>
+          <p>table col children here</p>
+        </TableCol>
       </div>
     ).toJSON();
     expect(component).toMatchSnapshot();

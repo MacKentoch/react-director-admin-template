@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableCol component renders as expected 1`] = `
+<div>
+  <td>
+    <p>
+      table col children here
+    </p>
+  </td>
+</div>
+`;
