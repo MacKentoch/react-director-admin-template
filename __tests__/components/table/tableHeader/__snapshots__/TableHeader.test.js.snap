@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeader component renders as expected 1`] = `
+<div>
+  <thead>
+    <tr>
+      <p>
+        table header children here
+      </p>
+    </tr>
+  </thead>
+</div>
+`;
