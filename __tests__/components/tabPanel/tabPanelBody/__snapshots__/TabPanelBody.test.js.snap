@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabPanelBody component renders as expected 1`] = `
+<div>
+  <div
+    className="panel-body"
+  >
+    <div
+      className="tab-content"
+    >
+      <p>
+        TabPanelBody children here
+      </p>
+    </div>
+  </div>
+</div>
+`;
