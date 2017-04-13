@@ -28,23 +28,3 @@ TabPanelBodyContent.defaultProps = {
 };
 
 export default TabPanelBodyContent;
-
-// {/* <div>
-//   {
-//     React.Children.map(
-//       (child, childIdx) => (
-//         <div
-//           key={childIdx}
-//           id={id}
-//           className={
-//             cx({
-//               'tab-pane': true,
-//               active:     childIdx === 0
-//             })
-//           }>
-//           {children}
-//         </div>
-//       )
-//     )
-//   }
-// </div> */}
