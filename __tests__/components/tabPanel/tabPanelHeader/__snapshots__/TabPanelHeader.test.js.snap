@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabPanelHeader component renders as expected 1`] = `
+<div>
+  <header
+    className="panel-heading tab-bg-dark-navy-blue"
+  >
+    <ul
+      className="nav nav-tabs"
+    >
+      <li
+        className="active"
+      >
+        <a
+          aria-expanded="true"
+          data-toggle="tab"
+          href="#/item1"
+        >
+           
+          item1
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          aria-expanded="false"
+          data-toggle="tab"
+          href="#/item2"
+        >
+           
+          item2
+        </a>
+      </li>
+    </ul>
+  </header>
+</div>
+`;
