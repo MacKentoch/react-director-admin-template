@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabPanelDemo component renders as expected 1`] = `
+<div>
+  <section
+    className="panel general"
+  >
+    <header
+      className="panel-heading tab-bg-dark-navy-blue"
+    >
+      <ul
+        className="nav nav-tabs"
+      >
+        <li
+          className="active"
+        >
+          <a
+            aria-expanded="true"
+            data-toggle="tab"
+            href="#home"
+          >
+             
+            Home
+          </a>
+        </li>
+        <li
+          className=""
+        >
+          <a
+            aria-expanded="false"
+            data-toggle="tab"
+            href="#about"
+          >
+             
+            About
+          </a>
+        </li>
+        <li
+          className=""
+        >
+          <a
+            aria-expanded="false"
+            data-toggle="tab"
+            href="#profile"
+          >
+             
+            Profile
+          </a>
+        </li>
+        <li
+          className=""
+        >
+          <a
+            aria-expanded="false"
+            data-toggle="tab"
+            href="#contact"
+          >
+             
+            Contact
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div
+      className="panel-body"
+    >
+      <div
+        className="tab-content"
+      >
+        <div
+          className="tab-pane"
+          id="home"
+        >
+           Home
+        </div>
+        <div
+          className="tab-pane"
+          id="about"
+        >
+           About
+        </div>
+        <div
+          className="tab-pane"
+          id="profile"
+        >
+           Profile
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import TabPanel from './tabPanel/TabPanel';
 import TabPanelHeader from './tabPanelHeader/TabPanelHeader';
 import TabPanelBody from './tabPanelBody/TabPanelBody';
