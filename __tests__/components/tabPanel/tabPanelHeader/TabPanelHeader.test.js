@@ -2,7 +2,7 @@
 'use strict';
 
 import React                from 'react';
-import TabPanelHeader       from '../../../../src/app/components/tabPanel/TabPanelHeader/tabPanelHeader';
+import TabPanelHeader       from '../../../../src/app/components/tabPanel/tabPanelHeader/tabPanelHeader';
 import renderer             from 'react-test-renderer';
 
 describe('TabPanelHeader component', () => {
@@ -19,7 +19,7 @@ describe('TabPanelHeader component', () => {
           tablink: '/item2',
           isActive: false
         }
-      ] 
+      ]
     };
     const component = renderer.create(
       <div>

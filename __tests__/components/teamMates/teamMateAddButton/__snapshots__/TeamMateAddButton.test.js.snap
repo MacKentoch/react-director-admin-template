@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMateAddButton component renders as expected 1`] = `
+<div>
+  <div
+    className="panel-footer bg-white"
+  >
+    <button
+      className="btn btn-primary btn-addon btn-sm"
+      onClick={undefined}
+    >
+      <i
+        className="fa fa-plus"
+      />
+      Add Teammate
+    </button>
+  </div>
+</div>
+`;

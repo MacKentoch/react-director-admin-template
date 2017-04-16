@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1490584533950" clover="3.2.0">
-  <project timestamp="1490584533950" name="All files">
-    <metrics statements="115" coveredstatements="108" conditionals="38" coveredconditionals="33" methods="37" coveredmethods="33" elements="190" coveredelements="174" complexity="0" loc="115" ncloc="115" packages="24" files="25" classes="25">
+<coverage generated="1492230458035" clover="3.2.0">
+  <project timestamp="1492230458035" name="All files">
+    <metrics statements="188" coveredstatements="177" conditionals="46" coveredconditionals="37" methods="60" coveredmethods="55" elements="294" coveredelements="269" complexity="0" loc="188" ncloc="188" packages="42" files="43" classes="43">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -233,24 +233,205 @@
           <line num="29" count="1" type="stmt"/>
         </file>
       </package>
+      <package name="components.notifications">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Notifications.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/notifications/Notifications.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+      </package>
       <package name="components.notifications.notification">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Notification.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/notifications/notification/Notification.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.notifications.notificationPanel">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="NotificationPanel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/notifications/notificationPanel/NotificationPanel.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.pager">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Pager.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/pager/Pager.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.pagination">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="Pagination.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/pagination/Pagination.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
           <line num="7" count="1" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="Panel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/panel/Panel.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="37" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.progressBar">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="ProgressBar.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/progressBar/ProgressBar.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.stat">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <file name="Stat.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/stat/Stat.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.statsCard">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="StatsCard.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/statsCard/StatsCard.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TabPanelDemo.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanelDemo.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel.TabPanelBodyContent">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="tabPanelBodyContent.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanelBodyContent/tabPanelBodyContent.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel.TabPanelHeader">
+        <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
+        <file name="tabPanelHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanelHeader/tabPanelHeader.js">
+          <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="29" count="6" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel.tabPanel">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TabPanel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanel/TabPanel.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel.tabPanelBody">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TabPanelBody.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanelBody/TabPanelBody.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.table">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Table.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/table/Table.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
           <line num="11" count="1" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
-          <line num="37" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.table.tableBody">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TableBody.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/table/tableBody/TableBody.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.table.tableCol">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TableCol.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/table/tableCol/TableCol.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.table.tableHeader">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TableHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/table/tableHeader/TableHeader.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.table.tableRow">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TableRow.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/table/tableRow/TableRow.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.teamMates.teamMateAddButton">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TeamMateAddButton.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMateAddButton/TeamMateAddButton.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
         </file>
       </package>
       <package name="models">
