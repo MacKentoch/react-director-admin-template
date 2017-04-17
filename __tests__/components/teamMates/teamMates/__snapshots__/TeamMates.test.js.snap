@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMates component renders as expected 1`] = `
+<div>
+  <ul
+    className="list-group teammates"
+  >
+    <p>
+      TeamMates children here
+    </p>
+  </ul>
+</div>
+`;
