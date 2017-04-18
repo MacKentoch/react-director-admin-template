@@ -2,7 +2,7 @@
 'use strict';
 
 import React              from 'react';
-import TeamMates          from '../../../../src/app/components/teamMates/teamMates/teamMates';
+import TeamMates          from '../../../../src/app/components/teamMates/teamMates/TeamMates';
 import renderer           from 'react-test-renderer';
 
 describe('TeamMates component', () => {

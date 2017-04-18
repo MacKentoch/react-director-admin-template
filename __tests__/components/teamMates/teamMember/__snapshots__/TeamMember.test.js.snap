@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMember component renders as expected 1`] = `
+<div>
+  <li
+    className="list-group-item"
+  >
+    <a
+      href=""
+    >
+      <img
+        height="50"
+        src={undefined}
+        width="50"
+      />
+    </a>
+    <span
+      className="pull-right label label-info inline m-t-15"
+    >
+      user
+    </span>
+    <a
+      href=""
+    >
+      firstname lastname
+    </a>
+  </li>
+</div>
+`;
