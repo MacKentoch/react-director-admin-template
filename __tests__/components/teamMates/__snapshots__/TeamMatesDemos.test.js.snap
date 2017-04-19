@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMatesDemo component renders as expected 1`] = `
+<div>
+  <section
+    className="panel "
+  >
+    <header
+      className="panel-heading"
+    >
+      Teammates
+    </header>
+    <div
+      className="panel-body undefined"
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+        }
+      }
+    >
+      <ul
+        className="list-group teammates"
+      >
+        <li
+          className="list-group-item"
+        >
+          <a
+            href=""
+          >
+            <img
+              height="50"
+              src={undefined}
+              width="50"
+            />
+          </a>
+          <span
+            className="pull-right label label-info inline m-t-15"
+          >
+            user1
+          </span>
+          <a
+            href=""
+          >
+            firstname1 lastname1
+          </a>
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <a
+            href=""
+          >
+            <img
+              height="50"
+              src={undefined}
+              width="50"
+            />
+          </a>
+          <span
+            className="pull-right label label-success inline m-t-15"
+          >
+            user2
+          </span>
+          <a
+            href=""
+          >
+            firstname2 lastname2
+          </a>
+        </li>
+      </ul>
+      <div
+        className="panel-footer bg-white"
+      >
+        <button
+          className="btn btn-primary btn-addon btn-sm"
+          onClick={undefined}
+        >
+          <i
+            className="fa fa-plus"
+          />
+          Add Teammate
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+`;
