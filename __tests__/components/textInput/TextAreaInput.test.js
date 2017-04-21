@@ -2,10 +2,10 @@
 'use strict';
 
 import React              from 'react';
-import TelephoneInput     from '../../../src/app/components/textInput/TelephoneInput';
+import TextAreaInput      from '../../../src/app/components/textInput/TextAreaInput';
 import renderer           from 'react-test-renderer';
 
-describe('TelephoneInput component', () => {
+describe('TextAreaInput component', () => {
   const mockProps = {
     label:    'test',
     id:       1,
@@ -16,7 +16,7 @@ describe('TelephoneInput component', () => {
   it('renders as expected', () => {
     const component = renderer.create(
       <div>
-        <TelephoneInput {...mockProps}/>
+        <TextAreaInput {...mockProps}/>
       </div>
     ).toJSON();
     expect(component).toMatchSnapshot();
