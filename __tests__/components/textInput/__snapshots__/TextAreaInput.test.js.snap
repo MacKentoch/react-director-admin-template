@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextAreaInput component renders as expected 1`] = `
+<div>
+  <div
+    className="form-group"
+  >
+    <label
+      className="control-label"
+      htmlFor={1}
+    >
+      test
+    </label>
+    <div>
+      <textarea
+        className="form-control"
+        defaultValue=""
+        id={1}
+        onInput={[Function]}
+        rows={3}
+      />
+    </div>
+  </div>
+</div>
+`;

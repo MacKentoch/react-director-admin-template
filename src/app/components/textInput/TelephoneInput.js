@@ -9,6 +9,18 @@ const telephoneRegex = /^(\+33|0033|0)([0-9])[0-9]{8}$/g;
 
 
 class TelephoneInput extends Component {
+  static propTypes = {
+    label:    PropTypes.string.isRequired,
+    id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    value:    PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    delay:    PropTypes.number
+  };
+
+  static defaultProps = {
+    delay: 200
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -100,17 +112,5 @@ class TelephoneInput extends Component {
     );
   }
 }
-
-TelephoneInput.propTypes = {
-  label:    PropTypes.string.isRequired,
-  id:       PropTypes.string.isRequired,
-  value:    PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  delay:    PropTypes.number
-};
-
-TelephoneInput.defaultProps = {
-  delay: 200
-};
 
 export default TelephoneInput;

@@ -6,6 +6,20 @@ import shallowCompare from 'react-addons-shallow-compare';
 
 
 class TextAreaInput extends Component {
+  static propTypes = {
+    label:    PropTypes.string.isRequired,
+    id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    value:    PropTypes.string.isRequired,
+    nbrows:   PropTypes.number,
+    onChange: PropTypes.func.isRequired,
+    delay:    PropTypes.number
+  };
+
+  static defaultProps = {
+    nbrows: 3,
+    delay: 200
+  };
+
   constructor(props) {
     super(props);
     this.state = { stateValue: '' };
@@ -80,19 +94,5 @@ class TextAreaInput extends Component {
     );
   }
 }
-
-TextAreaInput.propTypes = {
-  label:    PropTypes.string.isRequired,
-  id:       PropTypes.string.isRequired,
-  value:    PropTypes.string.isRequired,
-  nbrows:   PropTypes.number,
-  onChange: PropTypes.func.isRequired,
-  delay:    PropTypes.number
-};
-
-TextAreaInput.defaultProps = {
-  nbrows: 3,
-  delay: 200
-};
 
 export default TextAreaInput;

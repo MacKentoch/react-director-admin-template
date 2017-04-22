@@ -5,6 +5,18 @@ import React, {
 import shallowCompare from 'react-addons-shallow-compare';
 
 class TextInput extends Component {
+  static propTypes = {
+    label:    PropTypes.string.isRequired,
+    id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    value:    PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    delay:    PropTypes.number
+  };
+
+  static defaultProps = {
+    delay: 200
+  };
+
   constructor(props) {
     super(props);
     this.state = { stateValue: '' };
@@ -79,17 +91,5 @@ class TextInput extends Component {
     );
   }
 }
-
-TextInput.propTypes = {
-  label:    PropTypes.string.isRequired,
-  id:       PropTypes.string.isRequired,
-  value:    PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  delay:    PropTypes.number
-};
-
-TextInput.defaultProps = {
-  delay: 200
-};
 
 export default TextInput;
