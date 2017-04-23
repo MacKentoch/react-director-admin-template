@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1492230458035" clover="3.2.0">
-  <project timestamp="1492230458035" name="All files">
-    <metrics statements="188" coveredstatements="177" conditionals="46" coveredconditionals="37" methods="60" coveredmethods="55" elements="294" coveredelements="269" complexity="0" loc="188" ncloc="188" packages="42" files="43" classes="43">
+<coverage generated="1492837552645" clover="3.2.0">
+  <project timestamp="1492837552645" name="All files">
+    <metrics statements="282" coveredstatements="217" conditionals="70" coveredconditionals="37" methods="90" coveredmethods="66" elements="442" coveredelements="320" complexity="0" loc="282" ncloc="282" packages="47" files="50" classes="50">
       <package name="components.alert">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
@@ -287,10 +287,10 @@
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="Panel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/panel/Panel.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="3" count="2" type="stmt"/>
-          <line num="11" count="2" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="37" count="2" type="stmt"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
         </file>
       </package>
       <package name="components.progressBar">
@@ -344,24 +344,6 @@
           <line num="26" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="components.tabPanel.TabPanelHeader">
-        <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
-        <file name="tabPanelHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanelHeader/tabPanelHeader.js">
-          <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
-          <line num="5" count="2" type="stmt"/>
-          <line num="6" count="2" type="stmt"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="9" count="2" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="21" count="2" type="stmt"/>
-          <line num="27" count="6" type="stmt"/>
-          <line num="29" count="6" type="stmt"/>
-          <line num="50" count="2" type="stmt"/>
-        </file>
-      </package>
       <package name="components.tabPanel.tabPanel">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TabPanel.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanel/TabPanel.js">
@@ -378,6 +360,24 @@
           <line num="3" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
           <line num="13" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.tabPanel.tabPanelHeader">
+        <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
+        <file name="TabPanelHeader.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanelHeader/TabPanelHeader.js">
+          <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="29" count="6" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
         </file>
       </package>
       <package name="components.table">
@@ -425,13 +425,143 @@
           <line num="11" count="1" type="stmt"/>
         </file>
       </package>
+      <package name="components.teamMates">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="TeamMatesDemo.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/teamMates/TeamMatesDemo.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+        </file>
+      </package>
       <package name="components.teamMates.teamMateAddButton">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TeamMateAddButton.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMateAddButton/TeamMateAddButton.js">
           <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.teamMates.teamMates">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TeamMates.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMates/TeamMates.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.teamMates.teamMember">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TeamMember.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMember/TeamMember.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="2" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.textInput">
+        <metrics statements="77" coveredstatements="23" conditionals="24" coveredconditionals="0" methods="25" coveredmethods="6"/>
+        <file name="TelephoneInput.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/textInput/TelephoneInput.js">
+          <metrics statements="29" coveredstatements="9" conditionals="8" coveredconditionals="0" methods="9" coveredmethods="2"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="95" count="0" type="stmt"/>
+          <line num="96" count="0" type="stmt"/>
+          <line num="97" count="0" type="stmt"/>
+          <line num="98" count="0" type="stmt"/>
+          <line num="102" count="0" type="stmt"/>
+          <line num="104" count="0" type="stmt"/>
+          <line num="105" count="0" type="stmt"/>
+          <line num="106" count="0" type="stmt"/>
+          <line num="109" count="0" type="stmt"/>
+          <line num="110" count="0" type="stmt"/>
+        </file>
+        <file name="TextAreaInput.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/textInput/TextAreaInput.js">
+          <metrics statements="24" coveredstatements="7" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="2"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="79" count="0" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="86" count="0" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="92" count="0" type="stmt"/>
+        </file>
+        <file name="TextInput.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/textInput/TextInput.js">
+          <metrics statements="24" coveredstatements="7" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="2"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="75" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="81" count="0" type="stmt"/>
+          <line num="83" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="components.todoList.todoList">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="TodoList.js" path="/Users/kentor/GitProjects/react-director-admin-template/src/app/components/todoList/todoList/TodoList.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
         </file>
       </package>
       <package name="models">

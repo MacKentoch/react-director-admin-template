@@ -2,7 +2,7 @@
 'use strict';
 
 import React                from 'react';
-import TabPanelHeader       from '../../../../src/app/components/tabPanel/tabPanelHeader/tabPanelHeader';
+import TabPanelHeader       from '../../../../src/app/components/tabPanel/tabPanelHeader/TabPanelHeader';
 import renderer             from 'react-test-renderer';
 
 describe('TabPanelHeader component', () => {
