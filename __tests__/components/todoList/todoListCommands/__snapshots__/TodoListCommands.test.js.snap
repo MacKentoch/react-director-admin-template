@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListCommands component renders as expected 1`] = `
+<div>
+  <div
+    className=" add-task-row"
+  >
+    <p>
+      todo list children
+    </p>
+  </div>
+</div>
+`;
