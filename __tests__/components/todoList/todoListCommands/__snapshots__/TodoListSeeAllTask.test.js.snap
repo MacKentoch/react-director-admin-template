@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListSeeAllTask component renders as expected 1`] = `
+<div>
+  <a
+    className="btn btn-default btn-sm pull-right"
+    href="#"
+  >
+    See All Tasks
+  </a>
+</div>
+`;
