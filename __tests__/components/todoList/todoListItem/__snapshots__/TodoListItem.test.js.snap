@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListItem component renders as expected 1`] = `
+<div>
+  <li>
+    <div
+      className="task-checkbox"
+    >
+      <input
+        checked={false}
+        className="flat-grey list-child"
+        type="checkbox"
+      />
+    </div>
+    <div
+      className="task-title"
+    >
+      <span
+        className="task-title-sp"
+      >
+        todo
+      </span>
+      <span
+        className="label label-warning"
+      >
+        not done
+      </span>
+      <div
+        className="pull-right hidden-phone"
+      >
+        <button
+          className="btn btn-default btn-xs"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-pencil"
+          />
+        </button>
+      </div>
+    </div>
+  </li>
+</div>
+`;

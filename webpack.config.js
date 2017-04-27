@@ -8,6 +8,8 @@ const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
 const vendorsDir      = path.resolve(__dirname, 'src/app/vendors');
 
 const config = {
+  devtool: '#eval-source-map', // VSCode debugger + source map = THUMBS UP!
+  debug: true,
   entry: [
     path.resolve(__dirname, 'src/app/index.js')
   ],

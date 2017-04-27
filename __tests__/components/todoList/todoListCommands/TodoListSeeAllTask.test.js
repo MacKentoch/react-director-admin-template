@@ -1,9 +1,9 @@
 
 'use strict';
 
-import React              from 'react';
+import React                from 'react';
 import TodoListSeeAllTask   from '../../../../src/app/components/todoList/TodoListCommands/TodoListSeeAllTask';
-import renderer           from 'react-test-renderer';
+import renderer             from 'react-test-renderer';
 
 describe('TodoListSeeAllTask component', () => {
   it('renders as expected', () => {

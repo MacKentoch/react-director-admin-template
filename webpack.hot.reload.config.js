@@ -7,7 +7,8 @@ const assetsDir   = path.resolve(__dirname, 'public/assets');
 const vendorsDir  = path.resolve(__dirname, 'src/app/vendors');
 
 const config = {
-  devtool: 'eval',
+  devtool: '#eval-source-map', // 'eval',
+  debug: true,
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
