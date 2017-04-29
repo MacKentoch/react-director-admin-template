@@ -13,9 +13,8 @@ import {
   TeamMatesDemo
 }                         from '../../components';
 
-
 class Home extends PureComponent {
-  static propTypes= {
+  static propTypes = {
     earningGraphLabels: PropTypes.array,
     earningGraphDatasets: PropTypes.array,
     teamMatesIsFetching: PropTypes.bool,

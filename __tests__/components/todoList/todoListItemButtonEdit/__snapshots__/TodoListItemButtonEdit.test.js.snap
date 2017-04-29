@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListItemButtonEdit component renders as expected 1`] = `
+<div>
+  <button
+    className="btn btn-default btn-xs"
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-pencil"
+    />
+  </button>
+</div>
+`;
