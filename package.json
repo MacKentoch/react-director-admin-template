@@ -14,7 +14,8 @@
     "start": "NODE_ENV=dev node ./server.hot.reload.js",
     "dev-win": "env NODE_ENV=dev webpack",
     "prod-win": "env NODE_ENV=production webpack -p --config webpack.production.js ",
-    "start-win": "env NODE_ENV=dev node ./server.hot.reload.js"
+    "start-win": "env NODE_ENV=dev node ./server.hot.reload.js",
+    "flow": "flow"
   },
   "keywords": [
     "director",
@@ -40,6 +41,7 @@
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.1",
     "babel-preset-es2015": "^6.22.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
@@ -58,6 +60,7 @@
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.9",
     "redux-logger": "^2.8.1",
+    "remove-flow-types-loader": "^1.0.0",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const assetsDir       = path.resolve(__dirname, 'docs/public/assets');
 const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
 const vendorsDir      = path.resolve(__dirname, 'src/app/vendors');
+const srcDir          = path.resolve(__dirname, 'src/app');
 
 const SPLIT_STYLE = true;
 
@@ -33,6 +34,12 @@ const config = {
     filename: 'app.bundle.js'
   },
   module: {
+    preLoaders: [{
+      test: /\.jsx?$/,
+      loader: 'remove-flow-types',
+      include: srcDir,
+      exclude: [nodeModulesDir, vendorsDir]
+    }],
     loaders: [{
       test: /\.jsx?$/,
       exclude: [nodeModulesDir, vendorsDir],

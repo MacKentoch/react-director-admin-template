@@ -3,9 +3,10 @@ const path         = require('path');
 const autoprefixer = require('autoprefixer');
 const precss       = require('precss');
 
-const assetsDir       = path.resolve(__dirname, 'public/assets');
+const assetsDir       = path.resolve(__dirname, 'docs/public/assets');
 const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
 const vendorsDir      = path.resolve(__dirname, 'src/app/vendors');
+const srcDir          = path.resolve(__dirname, 'src/app');
 
 const config = {
   devtool: '#eval-source-map', // VSCode debugger + source map = THUMBS UP!
@@ -18,6 +19,12 @@ const config = {
     filename: 'bundle.js'
   },
   module: {
+    preLoaders: [{
+      test: /\.jsx?$/,
+      loader: 'remove-flow-types',
+      include: srcDir,
+      exclude: [nodeModulesDir, vendorsDir]
+    }],
     loaders: [{
       test: /\.jsx?$/,
       loader: 'babel',
