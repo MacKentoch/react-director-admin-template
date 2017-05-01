@@ -16,7 +16,7 @@ const config = {
   ],
   output: {
     path: assetsDir,
-    filename: 'bundle.js'
+    filename: 'app.bundle.js'
   },
   module: {
     preLoaders: [{

@@ -8,7 +8,6 @@ import thunkMiddleware          from 'redux-thunk';
 import reducer                  from '../modules/reducers';
 import { localStorageManager }  from '../middleware';
 
-
 const loggerMiddleware = createLogger({
   level     : 'info',
   collapsed : true

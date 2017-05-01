@@ -1,4 +1,22 @@
 {
   "name": "react-director-admin-template",
-  "dependencies": {}
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20170104200836"
+  },
+  "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20161016142654",
+    "bootstrap": "registry:dt/bootstrap#3.3.5+20160726204056",
+    "classnames": "registry:dt/classnames#0.0.0+20161113184211",
+    "jest": "registry:dt/jest#19.2.0+20170312200138",
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111",
+    "js-base64": "registry:dt/js-base64#2.1.9+20161025033459",
+    "moment": "registry:dt/moment#2.11.1+20161010105546",
+    "react-router": "registry:dt/react-router#4.0.0+20170323201651",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "redux-thunk": "registry:dt/redux-thunk#2.1.0+20160703120921",
+    "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161004182750"
+  },
+  "globalDevDependencies": {
+    "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20170117213337"
+  }
 }

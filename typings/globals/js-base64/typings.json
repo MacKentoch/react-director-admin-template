@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/62e37b17e1ec502ad642903d745d1b1ac8ff74d6/js-base64/index.d.ts",
+    "raw": "registry:dt/js-base64#2.1.9+20161025033459",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/62e37b17e1ec502ad642903d745d1b1ac8ff74d6/js-base64/index.d.ts"
+  }
+}

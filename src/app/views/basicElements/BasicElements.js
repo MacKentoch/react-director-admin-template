@@ -1,3 +1,5 @@
+// @flow
+
 import React, {
   PropTypes,
   PureComponent
@@ -8,7 +10,7 @@ import {
 }                     from '../../components';
 
 class BasicElements extends PureComponent {
-  static propTypes= {
+  static propTypes = {
     actions: PropTypes.shape({
       enterBasicElements: PropTypes.func,
       leaveBasicElements: PropTypes.func
