@@ -7,7 +7,6 @@ import renderer       from 'react-test-renderer';
 describe('AnimatedView component', () => {
   it('renders as expected', () => {
     const onClick = jest.fn();
-
     const component = renderer.create(
       <div>
         <MenuHeader
