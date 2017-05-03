@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListTweetsContainer component renders as expected 1`] = `
+<div>
+  <ul
+    className="media-list"
+  >
+    <p>
+      ListTweetsContainer children
+    </p>
+  </ul>
+</div>
+`;
