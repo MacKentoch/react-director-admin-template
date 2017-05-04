@@ -8,6 +8,7 @@ import renderer     from 'react-test-renderer';
 describe('Tooltip component', () => {
   const mockProps = {
     toolTipId: 1,
+    toolTipContent: (<p>tooltip content</p>),
     tooltipPlacement: 'left'
   };
   it('renders as expected', () => {

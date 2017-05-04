@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tweet component renders as expected 1`] = `
+<div>
+  <li
+    className="media"
+  >
+    <a
+      className="pull-left"
+      href="#"
+    >
+      <img
+        alt="Avatar"
+        className="img-circle"
+        height="64"
+        src=""
+        width="64"
+      />
+    </a>
+    <div
+      className="media-body"
+    >
+      <span
+        className="text-muted pull-right"
+      >
+        <small>
+          <em>
+            12:21
+          </em>
+        </small>
+      </span>
+      <a
+        href="#"
+      >
+        <strong>
+          Mackentoch
+        </strong>
+      </a>
+      <p>
+        Tweet content
+      </p>
+    </div>
+  </li>
+</div>
+`;
