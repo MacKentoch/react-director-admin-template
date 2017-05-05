@@ -56,6 +56,5 @@ exports[`WriteNewTweet component renders as expected 1`] = `
       </div>
     </form>
   </div>
-  &gt;
 </div>
 `;

@@ -8,7 +8,7 @@ describe('WriteNewTweet component', () => {
   it('renders as expected', () => {
     const component = renderer.create(
       <div>
-        <WriteNewTweet />>
+        <WriteNewTweet />
       </div>
     ).toJSON();
     expect(component).toMatchSnapshot();
