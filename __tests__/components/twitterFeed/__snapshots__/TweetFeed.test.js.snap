@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TweetFeed component renders as expected 1`] = `
+<div>
+  <section
+    className="panel "
+  >
+    <header
+      className="panel-heading"
+    >
+      Twitter Feed
+    </header>
+    <div
+      className="panel-body undefined"
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+        }
+      }
+    >
+      <div
+        className="twt-area"
+      >
+        <form
+          action="#"
+          method="post"
+        >
+          <textarea
+            className="form-control"
+            name="profile-tweet"
+            placeholder="Share something on Twitter.."
+            rows="3"
+          />
+          <div
+            className="clearfix"
+          >
+            <button
+              className="btn btn-sm btn-primary pull-right"
+              type="submit"
+            >
+              <i
+                className="fa fa-twitter"
+              />
+              Tweet
+            </button>
+            <a
+              className="btn btn-link btn-icon fa fa-location-arrow"
+              data-original-title="Add Location"
+              data-placement="bottom"
+              data-toggle="tooltip"
+              href="#"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+              title=""
+            />
+            <a
+              className="btn btn-link btn-icon fa fa-camera"
+              data-original-title="Add Photo"
+              data-placement="bottom"
+              data-toggle="tooltip"
+              href="#"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+              title=""
+            />
+          </div>
+        </form>
+      </div>
+      <ul
+        className="media-list"
+      >
+        <li
+          className="media"
+        >
+          <a
+            className="pull-left"
+            href="#"
+          >
+            <img
+              alt="Avatar"
+              className="img-circle"
+              height="64"
+              src={
+                Object {
+                  "default": "test-file-stub",
+                }
+              }
+              width="64"
+            />
+          </a>
+          <div
+            className="media-body"
+          >
+            <span
+              className="text-muted pull-right"
+            >
+              <small>
+                <em>
+                  30 min ago
+                </em>
+              </small>
+            </span>
+            <a
+              href="#"
+            >
+              <strong>
+                John Doe
+              </strong>
+            </a>
+            <demoTweetMessage />
+          </div>
+        </li>
+        <li
+          className="media"
+        >
+          <a
+            className="pull-left"
+            href="#"
+          >
+            <img
+              alt="Avatar"
+              className="img-circle"
+              height="64"
+              src={
+                Object {
+                  "default": "test-file-stub",
+                }
+              }
+              width="64"
+            />
+          </a>
+          <div
+            className="media-body"
+          >
+            <span
+              className="text-muted pull-right"
+            >
+              <small>
+                <em>
+                  35 min ago
+                </em>
+              </small>
+            </span>
+            <a
+              href="#"
+            >
+              <strong>
+                John Doe
+              </strong>
+            </a>
+            <demoTweetMessage />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+`;
