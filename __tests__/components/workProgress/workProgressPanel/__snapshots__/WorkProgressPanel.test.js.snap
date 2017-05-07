@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkProgressPanel component renders as expected 1`] = `
+<div>
+  <section
+    className="panel"
+  >
+    <header
+      className="panel-heading"
+    >
+      a title for test
+    </header>
+    <div
+      className="panel-body table-responsive"
+    >
+      <p>
+        a work workProgress child
+      </p>
+    </div>
+  </section>
+</div>
+`;
