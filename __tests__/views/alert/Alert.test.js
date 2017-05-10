@@ -27,4 +27,8 @@ describe('Alert view', () => {
   it('renders as expected', () => {
     expect(component).toMatchSnapshot();
   });
+
+  // it('triggers enterAlert on mount', () => {
+  //   expect(mockEnterAlert.mock.calls.length).toBe(1);
+  // });
 });
