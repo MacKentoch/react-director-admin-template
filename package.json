@@ -72,7 +72,7 @@
   "dependencies": {
     "animate.css": "^3.5.1",
     "axios": "^0.15.3",
-    "babel-jest": "^19.0.0",
+    "babel-jest": "^20.0.3",
     "babel-polyfill": "^6.22.0",
     "better-react-spinkit": "^2.0.0-4",
     "bootstrap": "^3.3.6",
@@ -82,7 +82,7 @@
     "enzyme-to-json": "^1.5.0",
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
-    "jest": "^19.0.2",
+    "jest": "^20.0.3",
     "jquery": "^2.2.1",
     "js-base64": "^2.1.9",
     "moment": "^2.17.1",

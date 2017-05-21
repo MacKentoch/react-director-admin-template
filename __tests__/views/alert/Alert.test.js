@@ -21,7 +21,9 @@ describe('Alert view', () => {
   };
 
   const component = renderer.create(
-    <Alert {...mockProps} />
+    <div>
+      <Alert {...mockProps} />
+    </div>
   ).toJSON();
 
   it('renders as expected', () => {

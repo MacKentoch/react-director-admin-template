@@ -3,6 +3,7 @@
 [include]
 
 [libs]
+./interfaces/global.js
 
 [options]
 module.name_mapper='^.*\.css$' -> 'css-module-flow'
