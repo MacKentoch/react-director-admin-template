@@ -1,5 +1,5 @@
-// flow-typed signature: 4109fee535b1f5c38bd1a24450044e0f
-// flow-typed version: 2b435bb71a/enzyme_v2.3.x/flow_>=v0.28.x
+// flow-typed signature: a66d63ce84b8c546ae8bc484f7b4c4bc
+// flow-typed version: 778b20e026/enzyme_v2.3.x/flow_>=v0.28.x
 
 declare module 'enzyme' {
   declare type PredicateFunction<T: Wrapper> = (wrapper: T) => boolean;
@@ -47,7 +47,7 @@ declare module 'enzyme' {
     prop(key: string): any;
     key(): string;
     simulate(event: string, ...args: Array<any>): this;
-    setState(state: Object): this;
+    setState(state: Object, callback?: Function): this,
     setProps(props: Object): this;
     setContext(context: Object): this;
     instance(): React$Component<any, any, any>;
