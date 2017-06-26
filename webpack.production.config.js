@@ -18,7 +18,6 @@ const config = {
       'react',
       'react-dom',
       'redux',
-      'redux-devtools',
       'react-router-redux',
       'redux-logger',
       'redux-thunk',
