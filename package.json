@@ -4,15 +4,15 @@
   "description": "ReactJS version of Director Responsive Admin Template Free",
   "main": "src/index.js",
   "scripts": {
+    "flow": "flow",
     "test": "cross-env NODE_ENV=test jest",
     "test:update": "cross-env NODE_ENV=test jest -u",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
+    "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js",
     "dev": "cross-env NODE_ENV=dev webpack",
     "prod": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js ",
-    "prod-server": "node src/server",
-    "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js",
-    "flow": "flow"
+    "prod-server": "npm run prod && node src/server"
   },
   "keywords": [
     "director",
@@ -43,6 +43,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.23.0",
+    "chalk": "^1.1.3",
     "css-loader": "^0.26.1",
     "css-module-flow": "^1.0.0",
     "eslint": "^2.6.0",
