@@ -10,8 +10,9 @@
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js",
-    "dev": "cross-env NODE_ENV=dev webpack",
-    "prod": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js ",
+    "dev": "cross-env NODE_ENV=dev webpack --config webpack.dev.config.js",
+    "prod": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "dev-server": "npm run dev && node src/server",
     "prod-server": "npm run prod && node src/server"
   },
   "keywords": [
