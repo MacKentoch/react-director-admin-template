@@ -1,24 +1,19 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   ProgressBar as ProgressBarComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class StripedProgressBar extends Component {
+class StripedProgressBar extends PureComponent {
   componentWillMount() {
     const { actions: { enterStripedProgressBar } } = this.props;
     enterStripedProgressBar();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

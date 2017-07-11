@@ -1,16 +1,15 @@
 /* eslint no-console:0 */
 
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                               from 'react';
-import shallowCompare           from 'react-addons-shallow-compare';
 import TodoListItemButtonEdit   from '../todoListItemButtonEdit/TodoListItemButtonEdit';
 import TodoListItemButtonValid  from '../todoListItemButtonValid/TodoListItemButtonValid';
 import TodoListItemButtonCancel from '../todoListItemButtonCancel/TodoListItemButtonCancel';
 
 
-class TodoListItem extends Component {
+class TodoListItem extends PureComponent {
   state = {
     isChecked: false,
     isEditing: false
@@ -26,10 +25,6 @@ class TodoListItem extends Component {
     if (nextProps.done !== done) {
       this.setCheckedProp(nextProps.done);
     }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   render() {

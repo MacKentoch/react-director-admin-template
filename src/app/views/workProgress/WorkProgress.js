@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -11,11 +11,10 @@ import {
   TableRow,
   TableCol
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class WorkProgress extends Component {
+class WorkProgress extends PureComponent {
 
   state = {
     headers: ['#', 'Project', 'Manager', 'Deadline', 'Status', 'Progress'],
@@ -33,10 +32,6 @@ class WorkProgress extends Component {
   componentWillMount() {
     const { actions: { enterWorkProgress } } = this.props;
     enterWorkProgress();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

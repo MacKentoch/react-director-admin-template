@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -9,19 +9,14 @@ import {
   WriteNewTweet,
   ListTweetsContainer
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class TwitterFeed extends Component {
+class TwitterFeed extends PureComponent {
 
   componentWillMount() {
     const { actions: { enterTwitterFeed } } = this.props;
     enterTwitterFeed();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

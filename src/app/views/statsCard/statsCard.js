@@ -1,24 +1,19 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
   Panel,
   StatsCard as StatsCardComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class StatsCard extends Component {
+class StatsCard extends PureComponent {
   componentWillMount() {
     const { actions: { enterStatsCard } } = this.props;
     enterStatsCard();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

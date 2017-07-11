@@ -1,52 +1,68 @@
 const webpack      = require('webpack');
 const path         = require('path');
-const autoprefixer = require('autoprefixer');
-const precss       = require('precss');
 
 const assetsDir   = path.resolve(__dirname, 'public/assets');
 const vendorsDir  = path.resolve(__dirname, 'src/app/vendors');
+const srcInclude  = path.join(__dirname, 'src/app');
+const indexFile   = path.join(__dirname, 'src/app/index.js');
 
 const config = {
-  devtool: '#eval-source-map', // 'eval',
-  debug: true,
+  devtool: 'cheap-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    path.resolve(__dirname, 'src/app/index.js')
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    indexFile
   ],
   output: {
     path: assetsDir,
     filename: 'bundle.js',
     publicPath: '/public/assets/'
   },
+  module: {
+    rules: [
+      {
+        test:     /\.jsx?$/,
+        exclude:  [vendorsDir],
+        include:  srcInclude,
+        loaders:  ['babel-loader']
+      },
+      {
+        test: /\.css$/,
+        use:  [
+          'style-loader',
+          {loader: 'css-loader', options: { importLoaders: 1 }},
+          'postcss-loader'
+        ]
+      },
+      {
+        test:  /\.scss$/,
+        use:  [
+          'style-loader',
+          {loader: 'css-loader', options: { importLoaders: 1 }},
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
+        use: [
+          {
+            loader:  'url-loader',
+            options: {
+              limit: 100000,
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      }
+    ]
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     getImplicitGlobals(),
     setNodeEnv()
-  ],
-  postcss() {
-    return [precss, autoprefixer];
-  },
-  module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel'],
-      exclude: [vendorsDir],
-      include: path.join(__dirname, 'src/app')
-    },  {
-      test: /\.scss$/,
-      loader: 'style!css!postcss!sass'
-    }, {
-      test: /\.css$/,
-      loader: 'style!css!postcss'
-    }, {
-      test: /\.json$/,
-      loader: 'json'
-    }, {
-      test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
-      loader: 'url?limit=100000@name=[name][ext]'
-    }]
-  }
+  ]
 };
 /*
 * here using hoisting so don't use `var NAME = function()...`

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import cx                   from 'classnames';
-import { Link }             from 'react-router';
+import { Link }             from 'react-router-dom';
 
 const ViewLink = ({isActive, linkTo, viewName, itemCount, faIconName}) => {
   return (

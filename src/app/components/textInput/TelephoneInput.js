@@ -1,14 +1,13 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 import cx             from 'classnames';
 
 const telephoneRegex = /^(\+33|0033|0)([0-9])[0-9]{8}$/g;
 
 
-class TelephoneInput extends Component {
+class TelephoneInput extends PureComponent {
   static propTypes = {
     label:    PropTypes.string.isRequired,
     id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -39,10 +38,6 @@ class TelephoneInput extends Component {
     if ((value !== stateValue) && stateValue.length === 0) {
       this.setState({stateValue: value});
     }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

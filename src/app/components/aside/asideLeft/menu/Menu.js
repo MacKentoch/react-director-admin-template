@@ -36,8 +36,7 @@ class Menu extends PureComponent {
           backColor={headerBackColor}
         />
         <Collapse
-          isOpened={!isCollapsed}
-          keepCollapsedContent={false}>
+          isOpened={!isCollapsed}>
           <MenuLinks
             activeView={activeView}
             views={views}

@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -9,11 +9,10 @@ import {
   TeamMember,
   TeamMateAddButton
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class TeamMatesView extends Component {
+class TeamMatesView extends PureComponent {
 
   state = {
     members: [
@@ -58,10 +57,6 @@ class TeamMatesView extends Component {
   componentWillMount() {
     const { actions: { enterTeamMatesView } } = this.props;
     enterTeamMatesView();
-  }
-  
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

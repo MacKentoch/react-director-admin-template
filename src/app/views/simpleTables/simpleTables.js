@@ -1,18 +1,13 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                       from 'react';
-import shallowCompare   from 'react-addons-shallow-compare';
 import { AnimatedView } from '../../components/animatedView/AnimatedView';
 
-class SimpleTables extends Component {
+class SimpleTables extends PureComponent {
   componentWillMount() {
     const { actions: {  enterSimpleTables } } = this.props;
     enterSimpleTables();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

@@ -1,11 +1,10 @@
 import React, {
-  Component,
+  PureComponent,
   PropTypes
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
 
 
-class TextAreaInput extends Component {
+class TextAreaInput extends PureComponent {
   static propTypes = {
     label:    PropTypes.string.isRequired,
     id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -35,10 +34,6 @@ class TextAreaInput extends Component {
     if ((value !== stateValue) && stateValue.length === 0) {
       this.setState({stateValue: value});
     }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

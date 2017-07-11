@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -10,11 +10,10 @@ import {
   TabPanelBody as TabPanelBodyComponent,
   TabPanelBodyContent as TabPanelBodyContentComponent
 }                         from '../../components';
-import shallowCompare     from 'react-addons-shallow-compare';
 import Highlight          from 'react-highlight';
 
 
-class TabPanel extends Component {
+class TabPanel extends PureComponent {
 
   state = {
     mockHeader: [
@@ -28,10 +27,6 @@ class TabPanel extends Component {
   componentWillMount() {
     const { actions: { enterTabPanel } } = this.props;
     enterTabPanel();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {

@@ -4,6 +4,8 @@ import React, {
 }                             from 'react';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
+import MainRoutes             from '../../routes/MainRoutes';
+import { withRouter }         from 'react-router';
 import * as actions           from '../../redux/modules/actions';
 import {
   Header,
@@ -16,6 +18,34 @@ import { appConfig }          from '../../config';
 import { navigation }         from '../../models';
 
 class App extends Component {
+
+  static propTypes = {
+    // react-router 4:
+    match:    PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history:  PropTypes.object.isRequired,
+
+    sideMenuIsCollapsed: PropTypes.bool,
+    userInfos:  PropTypes.shape({
+      login:       PropTypes.string,
+      firstname:   PropTypes.string,
+      lastname:    PropTypes.string,
+      picture:     PropTypes.string,
+      showPicture: PropTypes.bool
+    }),
+    userIsConnected: PropTypes.bool,
+    currentView:     PropTypes.string,
+
+    actions: PropTypes.shape({
+      enterHome: PropTypes.func,
+      leaveHome: PropTypes.func,
+      fetchEarningGraphDataIfNeeded: PropTypes.func,
+      fetchUserInfoDataIfNeeded:     PropTypes.func,
+      openSideMenu:   PropTypes.func,
+      closeSideMenu:  PropTypes.func,
+      toggleSideMenu: PropTypes.func
+    })
+  };
 
   state = {
     appName:          appConfig.APP_NAME,
@@ -38,7 +68,7 @@ class App extends Component {
   render() {
     const { appName, connectionStatus, helloWord } = this.state;
     const { userInfos, userIsConnected } = this.props;
-    const { sideMenuIsCollapsed, currentView, children } = this.props;
+    const { sideMenuIsCollapsed, currentView } = this.props;
 
     const userFullName = `${userInfos.firstname} ${userInfos.lastname.toUpperCase()}`;
     return (
@@ -69,9 +99,7 @@ class App extends Component {
           <AsideRight
             isAnimated={true}
             isExpanded={sideMenuIsCollapsed}>
-            <div>
-              { children }
-            </div>
+            <MainRoutes />
           </AsideRight>
         </div>
         {/* <Footer /> */}
@@ -87,34 +115,6 @@ class App extends Component {
     toggleSideMenu();
   }
 }
-
-App.propTypes = {
-  dispatch:   PropTypes.func,
-  children:   PropTypes.node.isRequired,
-  history:    PropTypes.object,
-  location:   PropTypes.object,
-
-  sideMenuIsCollapsed: PropTypes.bool,
-  userInfos:  PropTypes.shape({
-    login:       PropTypes.string,
-    firstname:   PropTypes.string,
-    lastname:    PropTypes.string,
-    picture:     PropTypes.string,
-    showPicture: PropTypes.bool
-  }),
-  userIsConnected: PropTypes.bool,
-  currentView:     PropTypes.string,
-
-  actions: PropTypes.shape({
-    enterHome: PropTypes.func,
-    leaveHome: PropTypes.func,
-    fetchEarningGraphDataIfNeeded: PropTypes.func,
-    fetchUserInfoDataIfNeeded:     PropTypes.func,
-    openSideMenu:   PropTypes.func,
-    closeSideMenu:  PropTypes.func,
-    toggleSideMenu: PropTypes.func
-  })
-};
 
 const mapStateToProps = (state) => {
   return {
@@ -133,7 +133,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

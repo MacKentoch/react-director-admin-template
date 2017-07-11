@@ -1,6 +1,6 @@
 import React, {
   PropTypes,
-  Component
+  PureComponent
 }                         from 'react';
 import {
   AnimatedView,
@@ -12,9 +12,8 @@ import {
   TodoListSeeAllTask
 }                         from '../../components';
 import Highlight          from 'react-highlight';
-import shallowCompare     from 'react-addons-shallow-compare';
 
-class TodoListView extends Component {
+class TodoListView extends PureComponent {
 
   state = {
     todos: [
@@ -66,10 +65,6 @@ class TodoListView extends Component {
   componentWillMount() {
     const { actions: { enterTodoListView } } = this.props;
     enterTodoListView();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState);
   }
 
   componentWillUnmount() {
