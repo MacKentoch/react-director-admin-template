@@ -5,7 +5,7 @@ import injectTpEventPlugin  from 'react-tap-event-plugin';
 import Root                 from './Root';
 
 import 'babel-polyfill';
-import 'animate.css';
+// import 'animate.css';
 import 'jquery';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.css';

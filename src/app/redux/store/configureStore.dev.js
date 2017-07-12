@@ -30,8 +30,10 @@ const enhancer = composeEnhancers(
 
 export default function configureStore(initialState) {
   const store = createStore(reducer, initialState, enhancer);
-  module.hot.accept('../modules/reducers', () =>
-    store.replaceReducer(require('../modules/reducers').default)
-  );
+  if (module.hot) {
+    module.hot.accept('../modules/reducers', () =>
+      store.replaceReducer(require('../modules/reducers').default)
+    );
+  }
   return store;
 }

@@ -12,10 +12,9 @@ import configureStore           from './redux/store/configureStore';
 import { createBrowserHistory } from 'history';
 import App                      from './containers/app/App';
 
-const store           = configureStore();
+const store           = configureStore({});
 const history         = createBrowserHistory();
 const syncedHistory   = syncHistoryWithStore(history, store);
-
 
 class Root extends Component {
   render() {
