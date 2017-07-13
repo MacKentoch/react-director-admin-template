@@ -1,3 +1,5 @@
+// @flow weak
+
 import React, { PropTypes } from 'react';
 import UserMenu from './userMenu/UserMenu';
 import TaskMenu from './taskMenu/TaskMenu';

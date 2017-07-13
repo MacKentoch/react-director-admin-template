@@ -19,7 +19,7 @@ export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELA
  );
 };
 
-export const fetchMockUserInfosData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
+export const fetchMockUserInfosData = async (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
   return new Promise(
     resolve => {
       setTimeout(

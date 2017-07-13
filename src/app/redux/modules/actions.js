@@ -1,3 +1,5 @@
+// flow weak
+
 // earningGraph:
 import {fetchEarningGraphDataIfNeeded} from './earningGraph';
 // sideMenu:

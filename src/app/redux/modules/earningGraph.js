@@ -1,3 +1,5 @@
+// flow weak
+
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
 
@@ -20,10 +22,29 @@ const REQUEST_EARNING_GRAPH_DATA   = 'REQUEST_EARNING_GRAPH_DATA';
 const RECEIVED_EARNING_GRAPH_DATA  = 'RECEIVED_EARNING_GRAPH_DATA';
 const ERROR_EARNING_GRAPH_DATA     = 'ERROR_EARNING_GRAPH_DATA';
 
+type EarningGraphDataset = {
+  label:        string,
+  fillColor:    string,
+  strokeColor:  string,
+  pointColor:   string,
+  pointStrokeColor:     string,
+  pointHighlightFill:   string,
+  pointHighlightStroke: string,
+  data: Array<number>
+}
+
+
+type EarningGraphState = {
+  isFetching: boolean,
+  labels:     Array<string>,
+  datasets:   Array<EarningGraphDataset>,
+  time:       string
+};
+
 /*
   reducer
  */
-const initialState = {
+const initialState: EarningGraphState = {
   isFetching: false,
   labels:     [],
   datasets:   [],
