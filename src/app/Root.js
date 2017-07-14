@@ -3,18 +3,23 @@
 import React, {
   Component
 }                               from 'react';
+// static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
 import {
-  BrowserRouter as Router,
-  // HashRouter as Router
+  // BrowserRouter as Router,
+  HashRouter as Router
 }                               from 'react-router-dom';
+// static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
+import {
+ // createBrowserHistory as createHistory,
+ createHashHistory as createHistory,
+}                              from 'history';
 import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore           from './redux/store/configureStore';
-import { createBrowserHistory } from 'history';
 import App                      from './containers/app/App';
 
 const store           = configureStore();
-const history         = createBrowserHistory();
+const history         = createHistory();
 const syncedHistory   = syncHistoryWithStore(history, store);
 
 class Root extends Component {

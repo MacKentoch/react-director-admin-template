@@ -3,7 +3,7 @@ import React from 'react';
 import {
  Route,
  Switch
-}                               from 'react-router';
+}                               from 'react-router-dom';
 import {
   HomeConnected,
   SimpleTablesConnected,
@@ -29,7 +29,7 @@ import {
 export const MainRoutes = () => {
   return (
     <Switch>
-      <Route exact component={HomeConnected} />
+      <Route exact path="/" component={HomeConnected} />
       <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
       <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />
       <Route path="/Dashboard/notifications" component={NotificationsConnected} />
@@ -51,7 +51,7 @@ export const MainRoutes = () => {
       <Route path="/general/alerts" component={AlertConnected} />
       <Route path="/general/pagination" component={PaginationViewConnected} />
 
-      <Route path="*" component={PageNotFoundConnected} />
+      <Route component={PageNotFoundConnected} />
     </Switch>
   );
 };

@@ -27,7 +27,11 @@ const composeEnhancers =  typeof window === 'object' &&  // for universal ("isom
 
 // createStore : enhancer
 const enhancer = composeEnhancers(
-  applyMiddleware(localStorageManager, thunkMiddleware, loggerMiddleware)
+  applyMiddleware(
+    localStorageManager,
+    thunkMiddleware,
+    loggerMiddleware
+  )
 );
 
 export default function configureStore(initialState) {

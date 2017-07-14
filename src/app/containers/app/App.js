@@ -4,8 +4,6 @@ import React, {
 }                             from 'react';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
-import MainRoutes             from '../../routes/MainRoutes';
-import { withRouter }         from 'react-router';
 import * as actions           from '../../redux/modules/actions';
 import {
   Header,
@@ -16,6 +14,9 @@ import {
 import { Modals }             from '../../views';
 import { appConfig }          from '../../config';
 import { navigation }         from '../../models';
+import MainRoutes             from '../../routes/MainRoutes';
+// import { withRouter }         from 'react-router';
+import { NavLink, withRouter }            from 'react-router-dom';
 
 class App extends Component {
 
@@ -100,6 +101,9 @@ class App extends Component {
             isAnimated={true}
             isExpanded={sideMenuIsCollapsed}>
             <MainRoutes />
+            <NavLink to="/Dashboard/statsCard" >
+              TEST
+            </NavLink>
           </AsideRight>
         </div>
         {/* <Footer /> */}
