@@ -1,13 +1,27 @@
-import React, { Component, PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
+
+import React, { Component } from 'react';
+import PropTypes            from 'prop-types';
+import cx                   from 'classnames';
 
 const ANIMATION_DELAY_MS = 500;
 
 class AnimatedView extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    delay:    PropTypes.number
+  };
+
+  static defaultProps = {
+    delay: ANIMATION_DELAY_MS
+  };
+
   state = {
-    animated: true,
+    animated:   true,
     viewEnters: false
   };
+
+  enterAnimationTimer = null; // timer
 
   componentDidMount() {
     const { delay } = this.props;
@@ -40,14 +54,5 @@ class AnimatedView extends Component {
     );
   }
 }
-
-AnimatedView.propTypes = {
-  children: PropTypes.node,
-  delay: PropTypes.number
-};
-
-AnimatedView.defaultProps = {
-  delay: ANIMATION_DELAY_MS
-};
 
 export default AnimatedView;

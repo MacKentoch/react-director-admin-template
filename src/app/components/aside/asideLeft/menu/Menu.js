@@ -1,12 +1,33 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 import Collapse       from 'react-collapse';
 import MenuHeader     from './menuHeader/MenuHeader';
 import MenuLinks      from './menuLinks/MenuLinks';
 
 class Menu extends PureComponent {
+  static propTypes = {
+    headerTitle:      PropTypes.string.isRequired,
+    headerBackColor:  PropTypes.string,
+    activeView:       PropTypes.string.isRequired,
+    views: PropTypes.arrayOf(
+      PropTypes.shape({
+        name:       PropTypes.string.isRequired,
+        linkTo:     PropTypes.string.isRequired,
+        faIconName: PropTypes.string.isRequired,
+        itemCount:  PropTypes.number
+      })
+    ).isRequired,
+    initialCollapseState: PropTypes.bool
+  };
+
+  static defaultProps = {
+    headerBackColor: '#283744'
+  };
+
   state = {
     isCollapsed: true
   };
@@ -56,24 +77,5 @@ class Menu extends PureComponent {
     this.setState({ isCollapsed: !isCollapsed });
   }
 }
-
-Menu.propTypes = {
-  headerTitle: PropTypes.string.isRequired,
-  headerBackColor: PropTypes.string,
-  activeView: PropTypes.string.isRequired,
-  views: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      linkTo: PropTypes.string.isRequired,
-      faIconName: PropTypes.string.isRequired,
-      itemCount: PropTypes.number
-    })
-  ).isRequired,
-  initialCollapseState: PropTypes.bool
-};
-
-Menu.defaultProps = {
-  headerBackColor: '#283744'
-};
 
 export default Menu;

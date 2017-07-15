@@ -1,13 +1,31 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                       from 'react';
+import PropTypes        from 'prop-types';
 import ViewLink         from './viewLink/ViewLink';
 
 
 class MenuLinks extends PureComponent {
+  static propTypes = {
+    activeView: PropTypes.string.isRequired,
+    views:      PropTypes.arrayOf(
+      PropTypes.shape({
+        name:       PropTypes.string.isRequired,
+        linkTo:     PropTypes.string.isRequired,
+        faIconName: PropTypes.string.isRequired,
+        itemCount:  PropTypes.number
+      })
+    ).isRequired
+  };
+
   render() {
-    const { activeView, views } = this.props;
+    const {
+      activeView,
+      views
+    } = this.props;
+
     return (
       <ul className="sidebar-menu sidebar-menu__marginTop">
         {
@@ -30,17 +48,5 @@ class MenuLinks extends PureComponent {
     );
   }
 }
-
-MenuLinks.propTypes = {
-  activeView: PropTypes.string.isRequired,
-  views: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      linkTo: PropTypes.string.isRequired,
-      faIconName: PropTypes.string.isRequired,
-      itemCount: PropTypes.number
-    })
-  ).isRequired
-};
 
 export default MenuLinks;

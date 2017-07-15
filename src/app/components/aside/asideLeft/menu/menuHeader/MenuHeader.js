@@ -1,10 +1,18 @@
-import React, { PropTypes } from 'react';
+// @flow weak
+
+import React            from 'react';
+import PropTypes        from 'prop-types';
 import {
   Motion,
   spring
-}                           from 'react-motion';
+}                       from 'react-motion';
 
-const MenuHeader = ({title, backColor, isCollapsed, onClick}) => {
+const MenuHeader = ({
+  title,
+  backColor,
+  isCollapsed,
+  onClick
+}) => {
   return (
     <ul
       className="list-inline sidebar-menu__group-container"
@@ -26,8 +34,8 @@ const MenuHeader = ({title, backColor, isCollapsed, onClick}) => {
                   <i
                     className="fa fa-angle-up fa-1x pull-right"
                     style={{
-                      WebkitTransform: `rotate(${deg}deg)`,
-                      transform: `rotate(${deg}deg)`
+                      WebkitTransform:  `rotate(${deg}deg)`,
+                      transform:        `rotate(${deg}deg)`
                     }}
                     aria-hidden="true">
                   </i>
@@ -42,10 +50,10 @@ const MenuHeader = ({title, backColor, isCollapsed, onClick}) => {
 };
 
 MenuHeader.propTypes = {
-  backColor: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  isCollapsed: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
+  backColor:    PropTypes.string.isRequired,
+  title:        PropTypes.string.isRequired,
+  isCollapsed:  PropTypes.bool.isRequired,
+  onClick:      PropTypes.func.isRequired
 };
 
 export default MenuHeader;

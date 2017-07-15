@@ -1,8 +1,13 @@
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
 
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
 
-const Alert = ({ type, children }) => {
+const Alert = ({
+  type,
+  children
+}) => {
   return (
     <div
       className={
@@ -28,7 +33,7 @@ const Alert = ({ type, children }) => {
 
 Alert.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+  type:     PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
 };
 
 Alert.defaultProps = {

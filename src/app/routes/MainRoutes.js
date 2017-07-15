@@ -7,7 +7,6 @@ import {
 import {
   HomeConnected,
   SimpleTablesConnected,
-  BasicElementsConnected,
   GeneralConnected,
   PageNotFoundConnected,
   StatsCardConnected,
@@ -22,9 +21,10 @@ import {
   BasicProgressBarConnected,
   TabPanelConnected,
   StripedProgressBarConnected,
-  AlertConnected,
   PaginationViewConnected
 }                               from '../containers';
+import AlertConnected           from '../views/alert';
+import BasicElementsConnected   from '../views/basicElements';
 
 export const MainRoutes = () => {
   return (
