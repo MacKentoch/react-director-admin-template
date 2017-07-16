@@ -1,7 +1,14 @@
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
 
-const Button = ({ type, onClick, children }) => {
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
+
+const Button = ({
+  type,
+  onClick,
+  children
+}) => {
   return (
     <button
       type="button"
@@ -24,8 +31,8 @@ const Button = ({ type, onClick, children }) => {
 
 Button.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
-  onClick: PropTypes.func
+  type:     PropTypes.oneOf(['default', 'primary', 'success', 'info', 'warning', 'danger']),
+  onClick:  PropTypes.func
 };
 
 Button.defaultProps = {

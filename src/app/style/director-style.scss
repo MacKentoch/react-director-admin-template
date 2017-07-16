@@ -1,0 +1,268 @@
+// vars
+$BODY_BACKGROUND_COLOR: #F1F2F3;
+$FONT_FAMILLY: 'Lato', sans-serif;
+
+
+$LINK_COLOR: #3c8dbc;
+$LINK_SELECTED_COLOR: #72afd2;
+
+$LEFT_SIDE_BAR_WIDTH: 220px;
+$HEADER_HEIGHT : 50px;
+
+$CONTENT_BACKGROUND_COLOR: #f0f3f4;
+$CONTENT_PADDING: 20px 15px; 
+
+$PAGE_HEADER_FONT_SIZE: 22px;
+$PAGE_HEADER_SMALL_COLOR: #666;
+
+// mixins:
+@mixin html-body {
+  overflow-x: hidden!important;
+  font-family: $FONT_FAMILLY;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background: $BODY_BACKGROUND_COLOR;
+}
+
+@mixin link-selected($color) {
+  outline: none;
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin layout-two-col-template {
+  min-height: 100%;
+  display: block;
+}
+
+// theme:
+html {
+  @include html-body();
+}
+
+body {
+  @include html-body();
+
+  /* Header */
+  section {
+    div {
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+      }
+    }
+  }
+
+  /*
+      By default the layout is not fixed but if you add the class .fixed to the body element
+      the sidebar and the navbar will automatically become poisitioned fixed
+  */
+  .fixed {
+    > .header {
+      position: fixed;
+    }
+
+    .left-side {
+      position: fixed;
+    }
+
+    .navbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+    }
+
+    > .header {
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .wrapper {
+      margin: {
+        top: $HEADER_HEIGHT;
+      }
+    }
+  }
+}
+
+a {
+  color:$LINK_COLOR;
+
+  &:hover {
+    @include link-selected($LINK_SELECTED_COLOR);
+  }
+  
+  &:active {
+    @include link-selected($LINK_SELECTED_COLOR);
+  }
+  
+  &:focus {
+    @include link-selected($LINK_SELECTED_COLOR);
+  }
+}
+
+/* Layouts */
+.wrapper {
+  min-height: 100%;
+
+  &:before {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/*right side - contins main content*/
+.right-side {
+  /* Define 2 column template */
+  @include layout-two-col-template();
+  background: {
+    color: $BODY_BACKGROUND_COLOR;
+  }
+  margin-left: $LEFT_SIDE_BAR_WIDTH;
+}
+
+/*left side - contains sidebar*/
+.left-side {
+  /* Define 2 column template */
+  @include layout-two-col-template();
+  position: absolute;
+  width: $LEFT_SIDE_BAR_WIDTH;
+  top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .left-side {
+    top: $HEADER_HEIGHT;
+
+    /* Left side collapse */
+    .collapse-left {
+      left: -$LEFT_SIDE_BAR_WIDTH;
+    }
+  }
+  /*Right side strech mode*/
+  .right-side {
+    .strech {
+      margin: {
+        left: 0;
+      }
+
+      > .content-header {
+        margin: {
+          top: 0px;
+        }
+      }
+    } 
+  }
+}
+/*Give content full width on xs screens*/
+@media screen and (max-width: 992px) {
+  .right-side {
+    margin: {
+      left: 0;
+    }
+  }
+}
+
+/* Content */
+.content {
+  padding: $CONTENT_PADDING;
+  background:$CONTENT_BACKGROUND_COLOR;
+  overflow: auto;
+}
+
+/* Utility */
+/* H1 - H6 font */
+h1 {
+  font-family: $FONT_FAMILLY;
+}
+h2 {
+  font-family: $FONT_FAMILLY;
+}
+h3 {
+  font-family: $FONT_FAMILLY;
+}
+h4 {
+  font-family: $FONT_FAMILLY;
+}
+h5 {
+  font-family: $FONT_FAMILLY;
+}
+h6 {
+  font-family: $FONT_FAMILLY;
+}
+.h1 {
+  font-family: $FONT_FAMILLY;
+}
+.h2 {
+  font-family: $FONT_FAMILLY;
+}
+.h3 {
+  font-family: $FONT_FAMILLY;
+}
+.h4 {
+  font-family: $FONT_FAMILLY;
+}
+.h5 {
+  font-family: $FONT_FAMILLY;
+}
+.h6 {
+  font-family: $FONT_FAMILLY;
+}
+
+/* Page Header */
+.page-header {
+  margin: 10px 0 20px 0;
+  font: {
+    size: $PAGE_HEADER_FONT_SIZE;
+  }
+
+  > small {
+    color: $PAGE_HEADER_SMALL_COLOR;
+    display: block;
+    margin: {
+      top: 5px;
+    }
+  }
+}
+
+/* All images should be responsive */
+img {
+  max-width: 100% !important;
+}
+.sort-highlight {
+  background: #f4f4f4;
+  border: 1px dashed #ddd;
+  margin: {
+    bottom: 10px;
+  }
+}
+
+/* 10px padding and margins */
+.pad {
+  padding: 20px 10px 10px;
+}
+.margin {
+  margin: 10px;
+}
+.pad-20 {
+  padding: 20px;
+}
+
+/* Display inline */
+.inline {
+  display: inline;
+  width: auto;
+}

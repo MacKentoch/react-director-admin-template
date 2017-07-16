@@ -1,23 +1,28 @@
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
+
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
 
 
-const AsideRight = ({children, isAnimated, isExpanded}) => {
-  return (
-    <aside className={
-      cx({
-        'right-side': true,
-        'right-side--top-margin': true,
-        'aside-right-animated': isAnimated,
-        'strech': isExpanded
-      })}>
-      { children }
-    </aside>
-  );
-};
+const AsideRight = ({
+  children,
+  isAnimated,
+  isExpanded
+}) => (
+  <aside className={
+    cx({
+      'right-side':             true,
+      'right-side--top-margin': true,
+      'aside-right-animated':   isAnimated,
+      'strech':                 isExpanded
+    })}>
+    { children }
+  </aside>
+);
 
 AsideRight.propTypes = {
-  children: PropTypes.node.isRequired,
+  children:   PropTypes.node.isRequired,
   isAnimated: PropTypes.bool.isRequired,
   isExpanded: PropTypes.bool.isRequired
 };

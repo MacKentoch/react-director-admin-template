@@ -1,3 +1,5 @@
+// @flow weak
+
 import React, {
   PureComponent
 }                 from 'react';
@@ -12,6 +14,8 @@ class Horloge extends PureComponent {
     date: moment().format('DD/MM/YYYY'),
     time: moment().format('HH:MM:SS')
   };
+
+  horloge = null;
 
   componentDidMount() {
     this.horloge = setInterval(

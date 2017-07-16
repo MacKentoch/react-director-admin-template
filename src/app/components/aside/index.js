@@ -1,7 +1,4 @@
-import AsideLeft  from './asideLeft/AsideLeft';
-import AsideRight from './asideright/AsideRight';
+// @flow weak
 
-export {
-  AsideLeft,
-  AsideRight
-};
+export { default as AsideLeft }   from './asideLeft/AsideLeft';
+export { default as AsideRight }  from './asideright/AsideRight';

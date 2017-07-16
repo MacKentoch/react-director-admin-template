@@ -1,7 +1,13 @@
-import React, {PropTypes} from 'react';
-import cx from 'classnames';
+// @flow weak
 
-const Pagination = ({size, numberOfPagination}) => {
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
+
+const Pagination = ({
+  size,
+  numberOfPagination
+}) => {
   const arrayOfPaginationIndexes = [...Array(numberOfPagination)].map((_, y) =>  y + 1);
 
   return (
@@ -41,12 +47,12 @@ const Pagination = ({size, numberOfPagination}) => {
 };
 
 Pagination.propTypes = {
-  size: PropTypes.oneOf(['large', 'default', 'small']),
+  size:               PropTypes.oneOf(['large', 'default', 'small']),
   numberOfPagination: PropTypes.number.isRequired
 };
 
 Pagination.defaultProps = {
-  size: 'default',
+  size:               'default',
   numberOfPagination: 5
 };
 

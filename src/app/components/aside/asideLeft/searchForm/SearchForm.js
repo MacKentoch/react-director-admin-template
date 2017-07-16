@@ -1,9 +1,17 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 
 class SearchForm extends PureComponent {
+  static propTypes = {
+    onSearchSubmit: PropTypes.func
+  };
+
+  searchinput = null;
+
   componentDidMount() {
     this.searchinput.focus();
   }
@@ -34,9 +42,7 @@ class SearchForm extends PureComponent {
     );
   }
 
-  getRef = (ref) => {
-    this.searchinput = ref;
-  }
+  getRef = (ref) => (this.searchinput = ref)
 
   handlesFormKeyPress = (event) => {
     if (event.charCode === 13) {
@@ -46,9 +52,5 @@ class SearchForm extends PureComponent {
     }
   }
 }
-
-SearchForm.propTypes = {
-  onSearchSubmit: PropTypes.func
-};
 
 export default SearchForm;

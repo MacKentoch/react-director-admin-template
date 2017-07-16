@@ -1,7 +1,9 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 import Chart          from 'chart.js';
 import {
   earningGraphMockData
@@ -18,6 +20,9 @@ class EarningGraph extends PureComponent {
   static defaultProps = {
     data: earningGraphMockData
   };
+
+  chart = null;
+  linechart = null;
 
   componentDidMount() {
     const { labels, datasets } = this.props;

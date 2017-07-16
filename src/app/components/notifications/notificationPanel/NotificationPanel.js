@@ -1,22 +1,26 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const NotificationPanel = ({title, children}) => {
-  return (
-    <section className="panel">
-      <header className="panel-heading">
-        {title}
-      </header>
-      <div
-        className="panel-body notification--body-container"
-        id="noti-box">
-        {children}
-      </div>
-    </section>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const NotificationPanel = ({
+  title,
+  children
+}) => (
+  <section className="panel">
+    <header className="panel-heading">
+      {title}
+    </header>
+    <div
+      className="panel-body notification--body-container"
+      id="noti-box">
+      { children }
+    </div>
+  </section>
+);
 
 NotificationPanel.propTypes = {
-  title: PropTypes.string,
+  title:    PropTypes.string,
   children: PropTypes.node.isRequired
 };
 

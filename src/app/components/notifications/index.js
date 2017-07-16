@@ -1,7 +1,4 @@
-import NotificationPanel  from './notificationPanel/NotificationPanel';
-import Notification       from './notification/Notification';
+// @flow weak
 
-export {
-  NotificationPanel,
-  Notification
-};
+export { default as NotificationPanel } from './notificationPanel/NotificationPanel';
+export { default as Notification }      from './notification/Notification';

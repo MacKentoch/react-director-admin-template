@@ -10,31 +10,29 @@ const ViewLink = ({
   linkTo, 
   viewName, 
   itemCount, 
-  faIconName}
-) => {
-  return (
-    <li
-      className={cx({'active': isActive})}
-      >
-      <Link
-        to={linkTo}>
-        <i
-          className={`fa ${faIconName}`}
-          style={{marginLeft: '10px'}}>
-        </i>
-        <span style={{fontSize: '13px'}}>
-          {viewName}
+  faIconName
+}) => (
+  <li
+    className={cx({'active': isActive})}
+    >
+    <Link
+      to={linkTo}>
+      <i
+        className={`fa ${faIconName}`}
+        style={{marginLeft: '10px'}}>
+      </i>
+      <span style={{fontSize: '13px'}}>
+        {viewName}
+      </span>
+      {
+        itemCount > 0 &&
+        <span className="label label-primary pull-right">
+          {itemCount}
         </span>
-        {
-          itemCount > 0 &&
-          <span className="label label-primary pull-right">
-            {itemCount}
-          </span>
-        }
-      </Link>
-    </li>
-  );
-};
+      }
+    </Link>
+  </li>
+);
 
 ViewLink.propTypes = {
   isActive:   PropTypes.bool,
