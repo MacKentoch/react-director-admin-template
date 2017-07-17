@@ -1,117 +1,61 @@
-import Header from './header/Header.js';
-import { AsideLeft, AsideRight } from './aside';
-import TodoListDemo from './todoList/TodoListDemo';
-import EarningGraph from './earningGraph/EarningGraph';
-import Footer from './footer/Footer';
-import Notifications from './notifications/Notifications';
-import {
+// @flow weak
+
+export { default as Header }          from './header/Header.js';
+export { AsideLeft, AsideRight }      from './aside';
+export { default as TodoListDemo }    from './todoList/TodoListDemo';
+export { default as EarningGraph }    from './earningGraph/EarningGraph';
+export { default as Footer }          from './footer/Footer';
+export { default as  Notifications }  from './notifications/Notifications';
+export {
   NotificationPanel,
   Notification
-}  from './notifications';
-import TeamMatesDemo from './teamMates/TeamMatesDemo';
-import TwitterFeed from './twitterFeed/TwitterFeed';
-import WorkProgress from './workProgress/WorkProgress';
-import StatsCard from './statsCard/StatsCard';
-import Jumbotron from './jumbotron/Jumbotron';
-import BasicForms from './basicForms/BasicForms';
-import Panel from './panel/Panel';
-import Horloge from './horloge/Horloge';
-import Breadcrumb from './breadcrumb/Breadcrumb';
-import Stat from './stat/Stat';
-import {
+}                                     from './notifications';
+export { default as TeamMatesDemo }   from './teamMates/TeamMatesDemo';
+export { default as TwitterFeed }     from './twitterFeed/TwitterFeed';
+export { default as  WorkProgress }   from './workProgress/WorkProgress';
+export { default as StatsCard }       from './statsCard/StatsCard';
+export { default as Jumbotron }       from './jumbotron/Jumbotron';
+export { default as  BasicForms }     from './basicForms/BasicForms';
+export { default as Panel }           from './panel/Panel';
+export { default as Horloge }         from './horloge/Horloge';
+export { default as Breadcrumb }      from './breadcrumb/Breadcrumb';
+export { default as Stat }            from './stat/Stat';
+export {
   Table,
   TableHeader,
   TableBody,
   TableRow,
   TableCol
-} from './table';
-import {
+}                                     from './table';
+export {
   Tweet,
   WriteNewTweet,
   ListTweetsContainer
-} from './twitterFeed';
-import {
+}                                     from './twitterFeed';
+export {
   TeamMates,
   TeamMember,
   TeamMateAddButton
-} from './teamMates';
-import {
+}                                     from './teamMates';
+export {
   TodoList,
   TodoListItem,
   TodoListCommands,
   TodoListAddTask,
   TodoListSeeAllTask
-} from './todoList';
-import ProgressBar from './progressBar/ProgressBar';
-import ToolTip from './toolTip';
-import Pagination from './pagination/Pagination';
-import Pager from './pager/Pager';
-import {
+}                                     from './todoList';
+export { default as ProgressBar }     from './progressBar/ProgressBar';
+export { default as ToolTip }         from './toolTip';
+export { default as Pagination }      from './pagination/Pagination';
+export { default as Pager }           from './pager/Pager';
+export {
   TabPanel,
   TabPanelHeader,
   TabPanelBody,
   TabPanelBodyContent,
   TabPanelDemo
-} from './tabPanel';
-import Alert from './alert/Alert';
-import Button from './button/Button';
-import Label from './label/label';
-import AnimatedView from './animatedView/AnimatedView';
-
-export {
-  Header,
-  AnimatedView,
-  AsideLeft,
-  AsideRight,
-  TodoListDemo,
-  EarningGraph,
-  Footer,
-  Notifications, // as demo implementation
-  NotificationPanel,
-  Notification,
-  TeamMatesDemo,
-  TwitterFeed,
-  WorkProgress,
-  StatsCard,
-  Jumbotron,
-  BasicForms,
-  Panel,
-  Horloge,
-  Breadcrumb,
-  Stat,
-  ProgressBar,
-  ToolTip,
-  Pagination,
-  Pager,
-  TabPanel,
-  TabPanelHeader,
-  TabPanelBody,
-  TabPanelBodyContent,
-  TabPanelDemo,
-  // table
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableCol,
-  // twitterFeed
-  Tweet,
-  WriteNewTweet,
-  ListTweetsContainer,
-  // teamMates
-  TeamMates,
-  TeamMember,
-  TeamMateAddButton,
-  // todoList:
-  TodoList,
-  TodoListItem,
-  TodoListCommands,
-  TodoListAddTask,
-  TodoListSeeAllTask,
-  // Alert:
-  Alert,
-  // Button:
-  Button,
-  // Label:
-  Label
-};
+}                                     from './tabPanel';
+export { default as Alert }           from './alert/Alert';
+export { default as Button }          from './button/Button';
+export { default as Label }           from './label/label';
+export { default as AnimatedView }    from './animatedView/AnimatedView';

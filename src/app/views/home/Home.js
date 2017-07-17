@@ -1,9 +1,9 @@
-// flow
+// flow weak
 
 import React, {
-  PropTypes,
   PureComponent
 }                         from 'react';
+import PropTypes          from 'prop-types';
 import {
   AnimatedView,
   StatsCard,
@@ -17,23 +17,23 @@ import {
 
 class Home extends PureComponent {
   static propTypes = {
-    earningGraphLabels: PropTypes.array,
+    earningGraphLabels:   PropTypes.array,
     earningGraphDatasets: PropTypes.array,
-    teamMatesIsFetching: PropTypes.bool,
-    teamMates: PropTypes.arrayOf(
+    teamMatesIsFetching:  PropTypes.bool,
+    teamMates:            PropTypes.arrayOf(
       PropTypes.shape({
-        picture: PropTypes.string,
-        firstname: PropTypes.string,
-        lastname: PropTypes.string,
-        profile: PropTypes.string,
+        picture:      PropTypes.string,
+        firstname:    PropTypes.string,
+        lastname:     PropTypes.string,
+        profile:      PropTypes.string,
         profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
       })
     ),
     actions: PropTypes.shape({
       enterHome: PropTypes.func,
       leaveHome: PropTypes.func,
-      fetchEarningGraphDataIfNeeded: PropTypes.func,
-      fetchTeamMatesDataIfNeeded: PropTypes.func
+      fetchEarningGraphDataIfNeeded:  PropTypes.func,
+      fetchTeamMatesDataIfNeeded:     PropTypes.func
     })
   };
 

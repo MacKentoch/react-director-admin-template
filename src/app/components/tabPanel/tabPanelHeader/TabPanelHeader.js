@@ -1,8 +1,13 @@
 
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
 
-const TabPanelHeader = ({tabItems}) => {
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
+
+const TabPanelHeader = ({
+  tabItems
+}) => {
   const oneTabAtLeastIsActive = tabItems.some(item => item.isActive === true);
 
   let tabItemsToDisplay = [...tabItems];
@@ -50,8 +55,8 @@ const TabPanelHeader = ({tabItems}) => {
 TabPanelHeader.propTypes = {
   tabItems: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      tablink: PropTypes.string.isRequired,
+      name:     PropTypes.string.isRequired,
+      tablink:  PropTypes.string.isRequired,
       isActive: PropTypes.bool.isRequired
     }).isRequired
   ).isRequired

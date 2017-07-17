@@ -1,8 +1,10 @@
+// @flow weak
+
 /* eslint no-console:0 */
 import React, {
-  PropTypes,
   PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 import {
   AnimatedView,
   Panel,

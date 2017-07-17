@@ -1,9 +1,15 @@
-'use strict';
+// @flow weak
 
-import React, { PropTypes } from 'react';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 
-const TeamMember = (props) => {
-  const { picture, firstname, lastname, profile, profileColor } = props;
+const TeamMember = ({
+  picture,
+  firstname,
+  lastname,
+  profile,
+  profileColor 
+}) => {
   const profileClass = `pull-right label label-${profileColor} inline m-t-15`;
   return (
     <li className="list-group-item">
@@ -25,17 +31,17 @@ const TeamMember = (props) => {
 };
 
 TeamMember.propTypes = {
-  picture: PropTypes.string,
-  firstname: PropTypes.string,
-  lastname: PropTypes.string,
-  profile: PropTypes.string,
+  picture:      PropTypes.string,
+  firstname:    PropTypes.string,
+  lastname:     PropTypes.string,
+  profile:      PropTypes.string,
   profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
 };
 
 TeamMember.defaultProps = {
-  firstname: '',
-  lastname: '',
-  profile: '',
+  firstname:    '',
+  lastname:     '',
+  profile:      '',
   profileColor: 'info'
 };
 

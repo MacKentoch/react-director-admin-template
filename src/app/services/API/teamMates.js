@@ -1,3 +1,5 @@
+// @flow weak
+
 import { appConfig }  from '../../config';
 import {
   defaultOptions,

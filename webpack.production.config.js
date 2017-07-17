@@ -12,7 +12,10 @@ const SPLIT_STYLE = true;
 const config = {
   devtool: '#source-map',
   entry: {
-    app: indexFile,
+    app: [
+      'babel-polyfill',
+      indexFile
+    ],
     vendor: [
       'prop-types',
       'react',
@@ -113,8 +116,7 @@ const config = {
     new webpack.optimize.CommonsChunkPlugin({
       name:     'vendor',
       filename: 'app.vendor.bundle.js' 
-    }),
-    uglify()
+    })
   ]
 };
 
@@ -133,32 +135,6 @@ function setNodeEnv() {
     'process.env': {
       'NODE_ENV': JSON.stringify('dev')
     }
-  });
-}
-
-function uglify() {
-  return new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true,
-    minimize: true,
-    // Don't beautify output (enable for neater output)
-    beautify: false,
-    // Eliminate comments
-    comments: true,
-    // Compression specific options
-    compress: {
-      warnings: false,
-      // Drop `console` statements
-      'drop_console': true
-    },
-    // // Mangling specific options
-    // mangle: {
-    //   // Don't mangle $
-    //   except: ['$'],
-    //   // Don't care about IE8
-    //   'screw_ie8': true,
-    //   // Don't mangle function names
-    //   'keep_fnames': false
-    // }
   });
 }
 

@@ -1,14 +1,16 @@
-import React, {PropTypes} from 'react';
+// @flow weak
+import React        from 'react';
+import PropTypes    from 'prop-types';
 
-const TodoList = ({children}) => {
-  return (
-    <div className="task-content">
-      <ul className="task-list">
-        {children}
-      </ul>
-    </div>
-  );
-};
+const TodoList = ({
+  children
+}) => (
+  <div className="task-content">
+    <ul className="task-list">
+      {children}
+    </ul>
+  </div>
+);
 
 TodoList.propTypes = {
   children: PropTypes.node.isRequired

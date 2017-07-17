@@ -1,13 +1,7 @@
-import TodoList           from './todoList/TodoList';
-import TodoListItem       from './todoListItem/TodoListItem';
-import TodoListCommands   from './todoListCommands/TodoListCommands';
-import TodoListAddTask    from './todoListCommands/TodoListAddTask';
-import TodoListSeeAllTask from './todoListCommands/TodoListSeeAllTask';
+// @flow weak
 
-export {
-  TodoList,
-  TodoListItem,
-  TodoListCommands,
-  TodoListAddTask,
-  TodoListSeeAllTask
-};
+export { default as TodoList }            from './todoList/TodoList';
+export { default as TodoListItem }        from './todoListItem/TodoListItem';
+export { default as TodoListCommands }    from './todoListCommands/TodoListCommands';
+export { default as TodoListAddTask }     from './todoListCommands/TodoListAddTask';
+export { default as TodoListSeeAllTask }  from './todoListCommands/TodoListSeeAllTask';

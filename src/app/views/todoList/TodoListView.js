@@ -1,7 +1,9 @@
+// @flow weak
+
 import React, {
-  PropTypes,
   PureComponent
 }                         from 'react';
+import PropTypes          from 'prop-types';
 import {
   AnimatedView,
   Panel,
@@ -14,7 +16,8 @@ import {
 import Highlight          from 'react-highlight';
 
 class TodoListView extends PureComponent {
-
+  enterAnimationTimer = null;
+  
   state = {
     todos: [
       {

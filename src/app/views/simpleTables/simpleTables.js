@@ -1,8 +1,10 @@
+// @flow weak
+
 import React, {
-  PropTypes,
   PureComponent
 }                       from 'react';
-import { AnimatedView } from '../../components/animatedView/AnimatedView';
+import PropTypes        from 'prop-types';
+import { AnimatedView } from '../../components';
 
 class SimpleTables extends PureComponent {
   componentWillMount() {

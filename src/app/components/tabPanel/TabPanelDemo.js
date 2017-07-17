@@ -1,8 +1,10 @@
-import React from 'react';
-import TabPanel from './tabPanel/TabPanel';
-import TabPanelHeader from './tabPanelHeader/TabPanelHeader';
-import TabPanelBody from './tabPanelBody/TabPanelBody';
-import TabPanelBodyContent from './tabPanelBodyContent/TabPanelBodyContent';
+// @flow weak
+
+import React                from 'react';
+import TabPanel             from './tabPanel/TabPanel';
+import TabPanelHeader       from './tabPanelHeader/TabPanelHeader';
+import TabPanelBody         from './tabPanelBody/TabPanelBody';
+import TabPanelBodyContent  from './tabPanelBodyContent/TabPanelBodyContent';
 
 const mockHeader = [
   {name: 'Home', tablink: 'home', isActive: true},
@@ -28,10 +30,6 @@ const TabPanelDemo = () => {
       </TabPanelBody>
     </TabPanel>
   );
-};
-
-TabPanelDemo.propTypes = {
-
 };
 
 export default TabPanelDemo;

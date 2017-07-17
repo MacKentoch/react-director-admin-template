@@ -1,14 +1,17 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const TodoListItemButtonEdit = ({onClick}) => {
-  return (
-    <button
-      className="btn btn-default btn-xs"
-      onClick={onClick}>
-      <i className="fa fa-pencil"></i>
-    </button>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const TodoListItemButtonEdit = ({
+  onClick
+}) => (
+  <button
+    className="btn btn-default btn-xs"
+    onClick={onClick}>
+    <i className="fa fa-pencil"></i>
+  </button>
+);
 
 TodoListItemButtonEdit.propTypes = {
   onClick: PropTypes.func

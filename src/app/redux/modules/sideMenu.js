@@ -1,3 +1,5 @@
+// @flow weak
+
 import moment         from 'moment';
 
 const SIDEMU_IS_COLLAPSED_KEY = 'SIDEMENU_IS_OPENED_KEY';

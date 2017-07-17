@@ -7,3 +7,5 @@
 
 [options]
 module.name_mapper='^.*\.css$' -> 'css-module-flow'
+module.system=haste
+strip_root=true

@@ -1,6 +1,8 @@
+// @flow weak
+
 const objectHasProperty = Object.prototype.hasOwnProperty;
-const jsonStringify = JSON.stringify;
-const jsonParse = JSON.parse;
+const jsonStringify     = JSON.stringify;
+const jsonParse         = JSON.parse;
 /*
     localStorageManager middleware (READ or WRITE to localStorage)
       -> does not delete: do it on your own
@@ -29,7 +31,8 @@ export const localStorageManager = store => next => action => {
         next({ ...action, permanentStore: {...permanentStore} });
       } else {
         // read localStorage and set action.permanentStore.value to read value from localStorage
-        permanentStore.storeValue = jsonParse(localStorage.getItem(key));
+        const item: string = localStorage.getItem(key) || '';
+        permanentStore.storeValue = jsonParse(item);
         next({ ...action, permanentStore: {...permanentStore} });
       }
     } else {

@@ -1,12 +1,15 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const TableBody = ({children}) => {
-  return (
-    <tbody>
-      {children}
-    </tbody>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const TableBody = ({
+  children
+}) => (
+  <tbody>
+    {children}
+  </tbody>
+);
 
 TableBody.propTypes = {
   children: PropTypes.node.isRequired

@@ -1,15 +1,13 @@
-import React from 'react';
+// @flow weak
 
-const TodoListAddTask = ({}) => {
-  return (
-    <a
-      className="btn btn-success btn-sm pull-left"
-      href="#">
-      Add New Tasks
-    </a>
-  );
-};
+import React        from 'react';
 
-TodoListAddTask.propTypes = {};
+const TodoListAddTask = () => (
+  <a
+    className="btn btn-success btn-sm pull-left"
+    href="#">
+    Add New Tasks
+  </a>
+);
 
 export default TodoListAddTask;

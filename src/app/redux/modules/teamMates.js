@@ -1,3 +1,5 @@
+// @flow weak
+
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
 import moment               from 'moment';
@@ -17,7 +19,7 @@ const ERROR_TEAM_MATES_DATA     = 'ERROR_TEAM_MATES_DATA';
 
 const initialState = {
   isFetching: false,
-  data:   [],
+  data:       [],
   time:       null
 };
 

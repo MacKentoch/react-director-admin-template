@@ -1,7 +1,9 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 
 class TextInput extends PureComponent {
   static propTypes = {
@@ -16,13 +18,9 @@ class TextInput extends PureComponent {
     delay: 200
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { stateValue: '' };
-    this.handlesOnChange = this.handlesOnChange.bind(this);
+  state = { stateValue: '' };
 
-    this.timer = null;
-  }
+  timer = null;
 
   componentWillReceiveProps(nextProps) {
     const { stateValue } = this.state;
@@ -66,7 +64,7 @@ class TextInput extends PureComponent {
     );
   }
 
-  handlesOnChange(event) {
+  handlesOnChange = (event) => {
     event.preventDefault();
     this.setState({stateValue: event.target.value});
     this.setTimerBeforeCallback(event.target.value);

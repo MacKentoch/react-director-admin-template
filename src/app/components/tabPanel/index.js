@@ -1,13 +1,7 @@
-import TabPanel from './tabPanel/TabPanel';
-import TabPanelHeader from './tabPanelHeader/TabPanelHeader';
-import TabPanelBody from './tabPanelBody/TabPanelBody';
-import TabPanelBodyContent from './tabPanelBodyContent/TabPanelBodyContent';
-import TabPanelDemo from './TabPanelDemo';
+// @flow weak
 
-export {
-  TabPanel,
-  TabPanelHeader,
-  TabPanelBody,
-  TabPanelBodyContent,
-  TabPanelDemo
-};
+export { default as TabPanel }            from './tabPanel/TabPanel';
+export { default as TabPanelHeader }      from './tabPanelHeader/TabPanelHeader';
+export { default as TabPanelBody }        from './tabPanelBody/TabPanelBody';
+export { default as TabPanelBodyContent } from './tabPanelBodyContent/TabPanelBodyContent';
+export { default as TabPanelDemo }        from './TabPanelDemo';

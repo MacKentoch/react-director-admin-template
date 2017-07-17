@@ -1,14 +1,17 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const TableHeader = ({children}) => {
-  return (
-    <thead>
-      <tr>
-        {children}
-      </tr>
-    </thead>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const TableHeader = ({
+  children
+}) => (
+  <thead>
+    <tr>
+      {children}
+    </tr>
+  </thead>
+);
 
 TableHeader.propTypes = {
   children: PropTypes.node.isRequired

@@ -1,3 +1,5 @@
+// @flow weak
+
 import moment               from 'moment';
 import { appConfig }        from '../../config';
 import {
@@ -12,17 +14,17 @@ const RECEIVED_USER_INFOS_DATA  = 'RECEIVED_USER_INFOS_DATA';
 const ERROR_USER_INFOS_DATA     = 'ERROR_USER_INFOS_DATA';
 
 type UserInfoData = {
-  login:      string,
+  login:     ?string,
   firstname:  string,
   lastname:   string,
-  picture:    string
-}
+  picture:   ?string
+};
 
 type UserInfoState = {
   isFetching:   boolean,
   data:         UserInfoData,
   isConnected:  boolean,
-  time:         string
+  time:         ?string
 };
 
 const initialState: UserInfoState = {
@@ -74,7 +76,7 @@ export default function userInfos(
 
 export function fetchUserInfoDataIfNeeded() {
   return (
-    dispatch: () => any,
+    dispatch: (action: any) => any,
     getState: () => any
   ) => {
     if (shouldFetchUserInfoData(getState())) {

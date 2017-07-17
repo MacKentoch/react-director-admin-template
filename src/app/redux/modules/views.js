@@ -1,3 +1,5 @@
+// @flow weak
+
 import moment from 'moment';
 
 const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';

@@ -1,11 +1,12 @@
+// @flow weak
+
 import React, {
-  PureComponent,
-  PropTypes
+  PureComponent
 }                     from 'react';
+import PropTypes      from 'prop-types';
 import cx             from 'classnames';
 
 const telephoneRegex = /^(\+33|0033|0)([0-9])[0-9]{8}$/g;
-
 
 class TelephoneInput extends PureComponent {
   static propTypes = {
@@ -20,16 +21,12 @@ class TelephoneInput extends PureComponent {
     delay: 200
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      valid: true,
-      stateValue: ''
-    };
-    this.handlesOnChange = this.handlesOnChange.bind(this);
+  state = {
+    valid:      true,
+    stateValue: ''
+  };
 
-    this.timer = null;
-  }
+  timer = null;
 
   componentWillReceiveProps(nextProps) {
     const { stateValue } = this.state;
@@ -86,7 +83,7 @@ class TelephoneInput extends PureComponent {
     this.setState({ valid: isValid });
   }
 
-  handlesOnChange(event) {
+  handlesOnChange = (event) => {
     event.preventDefault();
     this.setState({stateValue: event.target.value});
     this.checkIsValidTelephone(event.target.value);

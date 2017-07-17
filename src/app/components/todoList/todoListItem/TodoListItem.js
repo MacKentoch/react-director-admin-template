@@ -1,15 +1,31 @@
+// @flow weak
 /* eslint no-console:0 */
 
 import React, {
   PureComponent,
-  PropTypes
 }                               from 'react';
+import PropTypes                from 'prop-types';
 import TodoListItemButtonEdit   from '../todoListItemButtonEdit/TodoListItemButtonEdit';
 import TodoListItemButtonValid  from '../todoListItemButtonValid/TodoListItemButtonValid';
 import TodoListItemButtonCancel from '../todoListItemButtonCancel/TodoListItemButtonCancel';
 
 
 class TodoListItem extends PureComponent {
+  static propTypes = {
+    id:               PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    label:            PropTypes.string,
+    done:             PropTypes.bool,
+    statusLabel:      PropTypes.string,
+    statusLabelStyle: PropTypes.oneOf(['label-success', 'label-danger', 'label-warning', 'label-primary', 'label-inverse']),
+    onListValidEdit:  PropTypes.func
+  };
+
+  static defaultProps = {
+    label:            '',
+    statusLabelStyle: 'label-success',
+    done:             false
+  };
+
   state = {
     isChecked: false,
     isEditing: false
@@ -87,20 +103,5 @@ class TodoListItem extends PureComponent {
     this.setState({ isEditing: false});
   }
 }
-
-TodoListItem.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  label: PropTypes.string,
-  done: PropTypes.bool,
-  statusLabel: PropTypes.string,
-  statusLabelStyle: PropTypes.oneOf(['label-success', 'label-danger', 'label-warning', 'label-primary', 'label-inverse']),
-  onListValidEdit: PropTypes.func
-};
-
-TodoListItem.defaultProps = {
-  label: '',
-  statusLabelStyle: 'label-success',
-  done: false
-};
 
 export default TodoListItem;

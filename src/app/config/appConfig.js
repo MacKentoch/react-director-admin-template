@@ -1,4 +1,4 @@
-'use strict';
+// @flow weak
 
 export const appConfig = {
   // dev mode to mock async data for instance

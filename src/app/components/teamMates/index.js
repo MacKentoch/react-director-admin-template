@@ -1,9 +1,5 @@
-import TeamMates            from './teamMates/TeamMates';
-import TeamMember           from './teamMember/TeamMember';
-import TeamMateAddButton    from './teamMateAddButton/TeamMateAddButton';
+// @flow weak
 
-export {
-  TeamMates,
-  TeamMember,
-  TeamMateAddButton
-};
+export { default as TeamMates }         from './teamMates/TeamMates';
+export { default as TeamMember }        from './teamMember/TeamMember';
+export { default as TeamMateAddButton } from './teamMateAddButton/TeamMateAddButton';

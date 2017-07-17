@@ -15,6 +15,22 @@ $CONTENT_PADDING: 20px 15px;
 $PAGE_HEADER_FONT_SIZE: 22px;
 $PAGE_HEADER_SMALL_COLOR: #666;
 
+$ALERT_DANGER_BACKGROUND_COLOR: #fad5d5;
+$ALERT_SUCCESS_BACKGROUND_COLOR: #cffabd;
+$ALERT_WARNING_BACKGROUND_COLOR: #fcf4c9;
+
+$BADGE_SUCCESS_BACKGROUND_COLOR: #27C24C;
+$BADGE_SUCCESS_COLOR: #DFF5E4;
+$BADGE_WARNING_BACKGROUND_COLOR: #FAD733;
+$BADGE_WARNING_COLOR: #FDF8E5;
+$BADGE_INFO_BACKGROUND_COLOR: #23B7E5;
+$BADGE_INFO_COLOR: #E3F6FC;
+$BADGE_DANGER_BACKGROUND_COLOR: #F05050;
+$BADGE_DANGER_COLOR: #FAE6E6;
+$BADGE_PRIMARY_BACKGROUND_COLOR: #4697ce;
+$BADGE_INVERSE_BACKGROUND_COLOR: #4f5259;
+$BADGE_INVERSE_COLOR: #DFE2F0;
+
 // mixins:
 @mixin html-body {
   overflow-x: hidden!important;
@@ -264,5 +280,44 @@ img {
 /* Display inline */
 .inline {
   display: inline;
-  width: auto;
+}
+
+/*alert*/
+.alert-danger {
+  background-color: $ALERT_DANGER_BACKGROUND_COLOR;
+}
+.alert-success {
+  background-color: $ALERT_SUCCESS_BACKGROUND_COLOR;
+}
+.alert-warning {
+  background-color: $ALERT_WARNING_BACKGROUND_COLOR;
+}
+
+/*badge colors*/
+.badge-success {
+  background-color: $BADGE_SUCCESS_BACKGROUND_COLOR;
+  color: $BADGE_SUCCESS_COLOR;
+}
+.badge-warning {
+  background-color: $BADGE_WARNING_BACKGROUND_COLOR;
+  color: $BADGE_WARNING_COLOR;
+}
+.badge-info {
+  background-color: $BADGE_INFO_BACKGROUND_COLOR;
+  color: $BADGE_INFO_COLOR;
+}
+.badge-danger {
+  background-color: $BADGE_DANGER_BACKGROUND_COLOR;
+  color: $BADGE_DANGER_COLOR;
+}
+.badge-primary {
+  background-color: $BADGE_PRIMARY_BACKGROUND_COLOR;
+}
+.badge-inverse {
+  background-color: $BADGE_INVERSE_BACKGROUND_COLOR;
+  color: $BADGE_INVERSE_COLOR;
+}
+.badge, .label {
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }

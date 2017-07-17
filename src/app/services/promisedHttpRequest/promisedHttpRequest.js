@@ -1,3 +1,5 @@
+// @flow weak
+
 import { getLocationOrigin } from '../fetchTools';
 
 const BASE_URL = getLocationOrigin();
@@ -6,12 +8,17 @@ export const promisedHttpRequest = (endpoint, options, onProgressCallback) => {
   request('GET', `${BASE_URL}/${endpoint}`, options, onProgressCallback);
 };
 
-function request(url, opts = {}, onProgress) {
+function request(
+  method: string = 'get',
+  url: string = '',
+  opts: any = {},
+  onProgress: () => any
+) {
   return new Promise(
     (res, rej) => {
       const xhr = new XMLHttpRequest();
 
-      xhr.open(opts.method || 'get', url);
+      xhr.open(opts.method || method, url);
 
       Object
         .keys(opts.headers || {})

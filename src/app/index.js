@@ -4,7 +4,6 @@ import React                from 'react';
 import {render}             from 'react-dom';
 import { AppContainer }     from 'react-hot-loader';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
-import 'babel-polyfill';
 import 'animate.css';
 import 'jquery';
 import 'font-awesome/css/font-awesome.min.css';

@@ -1,12 +1,14 @@
-import React from 'react';
-import WorkProgressPanel from './workProgressPanel/WorkProgressPanel';
+// @flow weak
+
+import React              from 'react';
+import WorkProgressPanel  from './workProgressPanel/WorkProgressPanel';
 import {
   Table,
   TableHeader,
   TableBody,
   TableRow,
   TableCol
-} from '../../components';
+}                         from '../../components';
 
 const headers = ['#', 'Project', 'Manager', 'Deadline', 'Status', 'Progress'];
 const content = [
@@ -19,49 +21,47 @@ const content = [
   ['7', 'Ghost', 'XXX', '01/11/2014', <span className="label label-info">in progress</span>, <span className="badge badge-success">95%</span>]
 ];
 
-const WorkProgress = () => {
-  return (
-    <WorkProgressPanel>
-      <Table>
-        <TableHeader>
-          {
-            headers.map(
-              (header, headerIdx) => {
-                return (
-                  <TableCol key={headerIdx}>
-                    {header}
-                  </TableCol>
-                );
-              }
-            )
-          }
-        </TableHeader>
-        <TableBody>
-          {
-            content.map(
-              (contentRow, contentRowIdx) => {
-                return (
-                  <TableRow key={contentRowIdx}>
-                    {
-                      contentRow.map(
-                        (contentColumn, contentColumnIdx) => {
-                          return (
-                            <TableCol key={contentColumnIdx}>
-                              {contentColumn}
-                            </TableCol>
-                          );
-                        }
-                      )
-                    }
-                  </TableRow>
-                );
-              }
-            )
-          }
-        </TableBody>
-      </Table>
-    </WorkProgressPanel>
-  );
-};
+const WorkProgress = () => (
+  <WorkProgressPanel>
+    <Table>
+      <TableHeader>
+        {
+          headers.map(
+            (header, headerIdx) => {
+              return (
+                <TableCol key={headerIdx}>
+                  {header}
+                </TableCol>
+              );
+            }
+          )
+        }
+      </TableHeader>
+      <TableBody>
+        {
+          content.map(
+            (contentRow, contentRowIdx) => {
+              return (
+                <TableRow key={contentRowIdx}>
+                  {
+                    contentRow.map(
+                      (contentColumn, contentColumnIdx) => {
+                        return (
+                          <TableCol key={contentColumnIdx}>
+                            {contentColumn}
+                          </TableCol>
+                        );
+                      }
+                    )
+                  }
+                </TableRow>
+              );
+            }
+          )
+        }
+      </TableBody>
+    </Table>
+  </WorkProgressPanel>
+);
 
 export default WorkProgress;

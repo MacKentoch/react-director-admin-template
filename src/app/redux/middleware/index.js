@@ -1,5 +1,3 @@
-import {localStorageManager} from './localStorage';
+// @flow weak
 
-export {
-  localStorageManager
-};
+export {localStorageManager} from './localStorage';

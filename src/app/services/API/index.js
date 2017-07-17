@@ -1,9 +1,5 @@
-import { getEarningGraphData } from './earningGraph';
-import { getTeamMatesData } from './teamMates';
-import { getUserInfoData } from './userInfos';
+// @flow weak
 
-export {
-  getEarningGraphData,
-  getTeamMatesData,
-  getUserInfoData
-};
+export { getEarningGraphData }  from './earningGraph';
+export { getTeamMatesData }     from './teamMates';
+export { getUserInfoData }      from './userInfos';

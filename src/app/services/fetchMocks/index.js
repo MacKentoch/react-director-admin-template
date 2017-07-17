@@ -1,3 +1,5 @@
+// @flow weak
+
 import { appConfig }    from '../../config';
 import {
   earningGraphMockData,
@@ -5,7 +7,9 @@ import {
   teamMatesMock
 }                       from '../../models';
 
-export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
+export const fetchMockEarningGraphData = (
+  timeToWait: number = appConfig.FAKE_ASYNC_DELAY
+): Promise<any> => {
   return new Promise(
     resolve => {
       setTimeout(
@@ -19,7 +23,9 @@ export const fetchMockEarningGraphData = (timeToWait = appConfig.FAKE_ASYNC_DELA
  );
 };
 
-export const fetchMockUserInfosData = async (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
+export const fetchMockUserInfosData = async (
+  timeToWait: number = appConfig.FAKE_ASYNC_DELAY
+): Promise<any> => {
   return new Promise(
     resolve => {
       setTimeout(
@@ -30,7 +36,9 @@ export const fetchMockUserInfosData = async (timeToWait = appConfig.FAKE_ASYNC_D
  );
 };
 
-export const fetchMockTeamMatesData = (timeToWait = appConfig.FAKE_ASYNC_DELAY) => {
+export const fetchMockTeamMatesData = (
+  timeToWait: number = appConfig.FAKE_ASYNC_DELAY
+): Promise<any> => {
   return new Promise(
     resolve => {
       setTimeout(

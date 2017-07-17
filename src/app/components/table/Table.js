@@ -1,12 +1,15 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const Table = ({children}) => {
-  return (
-    <table className="table table-hover">
-      {children}
-    </table>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const Table = ({
+  children
+}) => (
+  <table className="table table-hover">
+    {children}
+  </table>
+);
 
 Table.propTypes = {
   children: PropTypes.node.isRequired

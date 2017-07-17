@@ -1,12 +1,15 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const TabPanel = ({children}) => {
-  return (
-    <section className="panel general">
-      {children}
-    </section>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const TabPanel = ({
+  children
+}) => (
+  <section className="panel general">
+    {children}
+  </section>
+);
 
 TabPanel.propTypes = {
   children: PropTypes.node.isRequired

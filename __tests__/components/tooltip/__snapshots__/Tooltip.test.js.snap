@@ -3,7 +3,6 @@
 exports[`Tooltip component renders as expected 1`] = `
 <div>
   <p
-    aria-describedby={1}
     onBlur={[Function]}
     onClick={null}
     onFocus={[Function]}

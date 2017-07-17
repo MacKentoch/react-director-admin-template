@@ -1,12 +1,15 @@
-import React, { PropTypes } from 'react';
+// @flow weak
 
-const ListTweetsContainer = ({children}) => {
-  return (
-    <ul className="media-list">
-      {children}
-    </ul>
-  );
-};
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+const ListTweetsContainer = ({
+  children
+}) => (
+  <ul className="media-list">
+    {children}
+  </ul>
+);
 
 ListTweetsContainer.propTypes = {
   children: PropTypes.node.isRequired

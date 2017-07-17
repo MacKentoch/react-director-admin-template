@@ -1,7 +1,3 @@
-'use strict';
+// @flow weak
 
-import { appConfig } from './appConfig';
-
-export {
-  appConfig
-};
+export { appConfig } from './appConfig';

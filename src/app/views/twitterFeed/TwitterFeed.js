@@ -1,7 +1,9 @@
+// @flow weak
+
 import React, {
-  PropTypes,
   PureComponent
 }                         from 'react';
+import PropTypes          from 'prop-types';
 import {
   AnimatedView,
   Panel,
@@ -43,13 +45,13 @@ class TwitterFeed extends PureComponent {
           <Tweet
             time={'30 min ago'}
             author={'John Doe'}
-            authorAvatar={require('../../vendors/img/26115.jpg')}>
+            authorAvatar={require('../../img/26115.jpg')}>
             <demoTweetMessage />
           </Tweet>
           <Tweet
             time={'35 min ago'}
             author={'John Doe'}
-            authorAvatar={require('../../vendors/img/26115.jpg')}>
+            authorAvatar={require('../../img/26115.jpg')}>
             <demoTweetMessage />
           </Tweet>
         </ListTweetsContainer>
@@ -70,13 +72,13 @@ class TwitterFeed extends PureComponent {
                 <Tweet
                   time={'30 min ago'}
                   author={'John Doe'}
-                  authorAvatar={require('../../vendors/img/26115.jpg')}>
+                  authorAvatar={require('../../img/26115.jpg')}>
                   <demoTweetMessage />
                 </Tweet>
                 <Tweet
                   time={'35 min ago'}
                   author={'John Doe'}
-                  authorAvatar={require('../../vendors/img/26115.jpg')}>
+                  authorAvatar={require('../../img/26115.jpg')}>
                   <demoTweetMessage />
                 </Tweet>
               </ListTweetsContainer>

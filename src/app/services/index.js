@@ -1,5 +1,7 @@
+// @flow weak
+
 // fetchTools:
-import {
+export {
   defaultOptions,
   checkStatus,
   parseJSON,
@@ -7,31 +9,14 @@ import {
   encodeBase64
 }                             from './fetchTools';
 // fetchMocks:
-import {
+export {
   fetchMockEarningGraphData,
   fetchMockUserInfosData,
   fetchMockTeamMatesData
 }                             from './fetchMocks';
 // API:
-import {
+export {
   getEarningGraphData,
   getTeamMatesData,
   getUserInfoData
 }                             from './API';
-
-export {
-  // fetchTools:
-  defaultOptions,
-  checkStatus,
-  parseJSON,
-  getLocationOrigin,
-  encodeBase64,
-  // fetchMocks
-  fetchMockEarningGraphData,
-  fetchMockUserInfosData,
-  fetchMockTeamMatesData,
-  // API:
-  getEarningGraphData,
-  getTeamMatesData,
-  getUserInfoData
-};

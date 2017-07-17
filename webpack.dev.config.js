@@ -12,7 +12,10 @@ const SPLIT_STYLE = true;
 const config = {
   devtool: '#source-map',
   entry: {
-    app: indexFile,
+    app: [
+      'babel-polyfill',
+      indexFile
+    ],
     vendor: [
       'prop-types',
       'react',
