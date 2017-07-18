@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const assetsDir       = path.resolve(__dirname, 'docs/public/assets');
 const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
-const vendorsDir      = path.resolve(__dirname, 'src/app/vendors');
 const indexFile       = path.resolve(__dirname, 'src/app/index.js');
 
 const SPLIT_STYLE = true;
@@ -24,17 +23,14 @@ const config = {
       'react-dom',
       'react-height',
       'react-highlight',
-      'react-modal',
       'react-motion',
       'react-notification',
-      'react-prism',
       'react-redux',
       'react-router',
       'react-router-dom',
       'react-router-redux',
       'react-svg-morph',
       'react-tap-event-plugin',
-      'recharts',
       'redux',
       'redux-thunk',
       'axios',
@@ -46,8 +42,7 @@ const config = {
       'history',
       'jquery',
       'js-base64',
-      'moment',
-      'prismjs'
+      'moment'
     ]
   },
   output: {
@@ -58,7 +53,7 @@ const config = {
     rules: [
       {
         test:     /\.jsx?$/,
-        exclude:  [nodeModulesDir, vendorsDir],
+        exclude:  [nodeModulesDir],
         loader:   'babel-loader'
       },
       {
@@ -133,7 +128,7 @@ function getImplicitGlobals() {
 function setNodeEnv() {
   return new webpack.DefinePlugin({
     'process.env': {
-      'NODE_ENV': JSON.stringify('dev')
+      'NODE_ENV': JSON.stringify('production')
     }
   });
 }

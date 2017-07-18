@@ -31,6 +31,20 @@ $BADGE_PRIMARY_BACKGROUND_COLOR: #4697ce;
 $BADGE_INVERSE_BACKGROUND_COLOR: #4f5259;
 $BADGE_INVERSE_COLOR: #DFE2F0;
 
+$LABEL_PRIMARY_BACKGROUND_COLOR: #4697ce;
+$LABEL_DEFAULT_BACKGROUND_COLOR: #a1a1a1;
+$LABEL_SUCCESS_BACKGROUND_COLOR: #27C24C;
+$LABEL_SUCCESS_COLOR: #DFF5E4;
+$LABEL_INFO_BACKGROUND_COLOR: #23B7E5;
+$LABEL_INFO_COLOR: #E3F6FC;
+$LABEL_INVERSE_BACKGROUND_COLOR: #4f5259;
+$LABEL_INVERSE_COLOR: #DFE2F0;
+$LABEL_WARNING_BACKGROUND_COLOR: #FAD733;
+$LABEL_WARNING_COLOR: #FDF8E5;
+$LABEL_DANGER_BACKGROUND_COLOR: #F05050;
+$LABEL_DANGER_COLOR: #FAE6E6;
+
+
 // mixins:
 @mixin html-body {
   overflow-x: hidden!important;
@@ -293,7 +307,12 @@ img {
   background-color: $ALERT_WARNING_BACKGROUND_COLOR;
 }
 
-/*badge colors*/
+/*badge */
+.badge {
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
 .badge-success {
   background-color: $BADGE_SUCCESS_BACKGROUND_COLOR;
   color: $BADGE_SUCCESS_COLOR;
@@ -317,7 +336,37 @@ img {
   background-color: $BADGE_INVERSE_BACKGROUND_COLOR;
   color: $BADGE_INVERSE_COLOR;
 }
-.badge, .label {
+
+/*label*/
+.label {
   font-weight: bold;
   text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.label-primary {
+  background-color: $LABEL_PRIMARY_BACKGROUND_COLOR;
+}
+.label-default {
+  background-color: $LABEL_DEFAULT_BACKGROUND_COLOR;
+
+}
+.label-success {
+  background-color:$LABEL_SUCCESS_BACKGROUND_COLOR;
+  color: $LABEL_SUCCESS_COLOR;
+}
+.label-info {
+  background-color: $LABEL_INFO_BACKGROUND_COLOR;
+  color: $LABEL_INFO_COLOR;
+}
+.label-inverse {
+  background-color: $LABEL_INVERSE_BACKGROUND_COLOR;
+  color: $LABEL_INVERSE_COLOR;
+}
+.label-warning {
+  background-color: $LABEL_WARNING_BACKGROUND_COLOR;
+  color: $LABEL_WARNING_COLOR;
+}
+.label-danger {
+  background-color: $LABEL_DANGER_BACKGROUND_COLOR;
+  color: $LABEL_DANGER_COLOR;
 }
