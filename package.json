@@ -70,7 +70,7 @@
     "postcss-loader": "^2.0.6",
     "postcss-reporter": "^4.0.0",
     "precss": "^1.4.0",
-    "react-hot-loader": "3.0.0-beta.6",
+    "react-hot-loader": "3.0.0-beta-7",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.2.3",
     "remove-flow-types-loader": "^1.0.0",

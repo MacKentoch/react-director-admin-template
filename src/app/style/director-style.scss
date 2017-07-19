@@ -44,6 +44,36 @@ $LABEL_WARNING_COLOR: #FDF8E5;
 $LABEL_DANGER_BACKGROUND_COLOR: #F05050;
 $LABEL_DANGER_COLOR: #FAE6E6;
 
+$BG_COLOR_COLOR: #f9f9f9;
+$BG_WHITE_BACKGROUND_COLOR: #fff;
+$BG_GREY_BACKGROUND_COLOR: #eaeaec;
+$BG_BLACK_BACKGROUND_COLOR: #222222;
+$BG_RED_BACKGROUND_COLOR: #F05050;
+$BG_YELLOW_BACKGROUND_COLOR:#FAD733;
+$BG_AQUA_BACKGROUND_COLOR:#4FC1E9;
+$BG_BLUE_BACKGROUND_COLOR:#0073b7;
+$BG_LIGHT_BLUE_BACKGROUND_COLOR:#3c8dbc;
+$BG_GREEN_BACKGROUND_COLOR:#27C24C;
+$BG_NAVY_BACKGROUND_COLOR:#001f3f;
+$BG_TEAL_BACKGROUND_COLOR:#39cccc;
+$BG_OLIVE_BACKGROUND_COLOR:#3d9970;
+$BG_LIME_BACKGROUND_COLOR:#01ff70;
+$BG_ORANGE_BACKGROUND_COLOR:#ff851b;
+$BG_FUSHSIA_BACKGROUND_COLOR:#f012be;
+$BG_PURPLE_BACKGROUND_COLOR:#932ab6;
+$BG_MAROON_BACKGROUND_COLOR:#85144b;
+$BG_VIOLET_BACKGROUND_COLOR:#7266ba;
+$BG_TWITTER_BACKGROUND_COLOR:#00c7f7;
+$BG_FACEBOOK_BACKGROUND_COLOR:#335397;
+$BG_GOOGLE_PLUS_BACKGROUND_COLOR:#df4a32;
+
+$TEXT_AREA_BORDER_COLOR: #EEE;
+
+$TEAMMATES_LINK_COLOR: #505050;
+$TEAMMATES_LI_BODER_COLOR: #edf1f2;
+$TEAMMATES_LI_BODER_WIDTH: 1px;
+$TEAMMATES_LI_BODER_STYLE: solid;
+
 
 // mixins:
 @mixin html-body {
@@ -369,4 +399,160 @@ img {
 .label-danger {
   background-color: $LABEL_DANGER_BACKGROUND_COLOR;
   color: $LABEL_DANGER_COLOR;
+}
+
+/* Background colors */
+.bg-red {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_RED_BACKGROUND_COLOR !important;
+}
+.bg-yellow {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_YELLOW_BACKGROUND_COLOR !important;
+}
+.bg-aqua {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_AQUA_BACKGROUND_COLOR !important
+}
+.bg-blue {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_BLUE_BACKGROUND_COLOR !important;
+}
+.bg-light-blue {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_LIGHT_BLUE_BACKGROUND_COLOR !important;
+}
+.bg-green {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_GREEN_BACKGROUND_COLOR  !important;
+}
+.bg-navy {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_NAVY_BACKGROUND_COLOR !important;
+}
+.bg-teal {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_TEAL_BACKGROUND_COLOR !important;
+}
+.bg-olive {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_OLIVE_BACKGROUND_COLOR !important;
+}
+.bg-lime {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_LIME_BACKGROUND_COLOR !important;
+}
+.bg-orange {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_ORANGE_BACKGROUND_COLOR !important;
+}
+.bg-fuchsia {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_FUSHSIA_BACKGROUND_COLOR !important;
+}
+.bg-purple {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_PURPLE_BACKGROUND_COLOR !important;
+}
+.bg-maroon {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_MAROON_BACKGROUND_COLOR !important;
+}
+.bg-black {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_BLACK_BACKGROUND_COLOR !important;
+}
+.bg-violet {
+  color: $BG_COLOR_COLOR !important;
+  background-color: $BG_VIOLET_BACKGROUND_COLOR !important;
+}
+.bg-white {
+  background-color: $BG_WHITE_BACKGROUND_COLOR !important;
+}
+.bg-gray {
+  background-color: $BG_GREY_BACKGROUND_COLOR !important;
+}
+.bg-twitter {
+  background-color: $BG_TWITTER_BACKGROUND_COLOR;
+  color: white;
+}
+.bg-facebook {
+  background-color: $BG_FACEBOOK_BACKGROUND_COLOR;
+  color: white;
+}
+.bg-google-plus {
+  background-color: $BG_GOOGLE_PLUS_BACKGROUND_COLOR;
+  color: white;
+}
+
+.twt-area {
+  border: {
+    bottom: 1px dotted $TEXT_AREA_BORDER_COLOR;
+  }
+  margin: {
+    bottom: 5px;
+  }
+  padding: {
+    bottom: 3px;
+  }
+  textarea {
+    margin: {
+      bottom: 3px;
+    }
+  }
+}
+
+.m-lr-10 {
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+}
+.m-t-15 {
+  margin: {
+    top: 15px;
+  }
+}
+.m-b-5 {
+  margin: {
+    bottom: 5px;
+  }
+}
+.m-b-10 {
+  margin: {
+    bottom: 10px;
+  }
+}
+.m-b-15 {
+  margin: {
+    bottom: 15px;
+  }
+}
+.m-b-20 {
+  margin: {
+    bottom: 20px;
+  }
+}
+
+/* teammates  */
+
+.teammates {
+  a {
+    color:$TEAMMATES_LINK_COLOR;
+  }
+  img {
+    border: {
+      radius: 5px;
+    }
+    margin: {
+      right: 10px;
+    }
+  }
+  li {
+    border: {
+      width: $TEAMMATES_LI_BODER_WIDTH;
+      style: $TEAMMATES_LI_BODER_STYLE;
+      color: #edf1f2;
+    }
+  }
 }

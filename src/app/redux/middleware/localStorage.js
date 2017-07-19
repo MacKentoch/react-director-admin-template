@@ -31,7 +31,7 @@ export const localStorageManager = store => next => action => {
         next({ ...action, permanentStore: {...permanentStore} });
       } else {
         // read localStorage and set action.permanentStore.value to read value from localStorage
-        const item: string = localStorage.getItem(key) || '';
+        const item: string = localStorage.getItem(key) || 'false';
         permanentStore.storeValue = jsonParse(item);
         next({ ...action, permanentStore: {...permanentStore} });
       }
