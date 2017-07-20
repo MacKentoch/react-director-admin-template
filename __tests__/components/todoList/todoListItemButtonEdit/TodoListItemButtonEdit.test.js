@@ -3,7 +3,7 @@
 
 import React                    from 'react';
 import TodoListItemButtonEdit   from '../../../../src/app/components/todoList/todoListItemButtonEdit/TodoListItemButtonEdit';
-import renderer                 from 'react-test-renderer';
+import renderer                 from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 // import { mount }          from 'enzyme';
 
 describe('TodoListItemButtonEdit component', () => {

@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import TeamMatesDemo      from '../../../src/app/components/teamMates/TeamMatesDemo';
-import renderer           from 'react-test-renderer';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TeamMatesDemo component', () => {
   const mockProps = {

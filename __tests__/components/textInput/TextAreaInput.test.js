@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import TextAreaInput      from '../../../src/app/components/textInput/TextAreaInput';
-import renderer           from 'react-test-renderer';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TextAreaInput component', () => {
   const mockProps = {

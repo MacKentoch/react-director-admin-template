@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import TelephoneInput     from '../../../src/app/components/textInput/TelephoneInput';
-import renderer           from 'react-test-renderer';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TelephoneInput component', () => {
   const mockProps = {

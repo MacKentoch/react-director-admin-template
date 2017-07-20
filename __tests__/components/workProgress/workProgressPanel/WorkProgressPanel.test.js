@@ -2,7 +2,7 @@
 
 import React                from 'react';
 import WorkProgressPanel    from '../../../../src/app/components/workProgress/workProgressPanel/WorkProgressPanel';
-import renderer             from 'react-test-renderer';
+import renderer             from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('WorkProgressPanel component', () => {
   const mockProps = {

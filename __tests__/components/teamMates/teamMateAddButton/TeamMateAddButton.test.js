@@ -3,8 +3,8 @@
 
 import React              from 'react';
 import TeamMateAddButton  from '../../../../src/app/components/teamMates/teamMateAddButton/TeamMateAddButton';
-import renderer           from 'react-test-renderer';
-import { mount }          from 'enzyme';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+import { shallow }        from 'enzyme';
 
 describe('TeamMateAddButton component', () => {
   it('renders as expected', () => {
@@ -18,7 +18,7 @@ describe('TeamMateAddButton component', () => {
 
   it('should call onAdd postback on button click', () => {
     const onAddMock = jest.fn();
-    const TeamMateAddButtonComponent = mount(
+    const TeamMateAddButtonComponent = shallow(
       <TeamMateAddButton
         onAdd={onAddMock}
       />

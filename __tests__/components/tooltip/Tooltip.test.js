@@ -3,7 +3,7 @@
 
 import React        from 'react';
 import Tooltip      from '../../../src/app/components/toolTip';
-import renderer     from 'react-test-renderer';
+import renderer     from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('Tooltip component', () => {
   const mockProps = {

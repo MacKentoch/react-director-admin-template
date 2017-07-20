@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import TodoListItem       from '../../../../src/app/components/todoList/todoListItem/TodoListItem';
-import renderer           from 'react-test-renderer';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 // import { mount }          from 'enzyme';
 
 describe('TodoListItem component', () => {

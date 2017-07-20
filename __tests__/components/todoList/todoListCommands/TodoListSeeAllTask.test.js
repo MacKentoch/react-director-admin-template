@@ -3,7 +3,7 @@
 
 import React                from 'react';
 import TodoListSeeAllTask   from '../../../../src/app/components/todoList/TodoListCommands/TodoListSeeAllTask';
-import renderer             from 'react-test-renderer';
+import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TodoListSeeAllTask component', () => {
   it('renders as expected', () => {

@@ -3,7 +3,7 @@
 
 import React                from 'react';
 import TabPanelBodyContent  from '../../../../src/app/components/tabPanel/TabPanelBodyContent/tabPanelBodyContent';
-import renderer             from 'react-test-renderer';
+import renderer             from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TabPanelBodyContent component', () => {
   it('renders as expected', () => {
