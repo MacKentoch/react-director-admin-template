@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.03% </span>
+        <span class="strong">20.83% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/29</span>
+        <span class='fraction'>5/24</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">22.22% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/9</span>
+        <span class='fraction'>1/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.03% </span>
+        <span class="strong">20.83% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/29</span>
+        <span class='fraction'>5/24</span>
       </div>
     </div>
   </div>
@@ -151,31 +151,7 @@
 106
 107
 108
-109
-110
-111
-112
-113
-114
-115
-116
-117</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+109</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -184,13 +160,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,10 +188,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -275,17 +259,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {
-  Component,
-  PropTypes
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+&nbsp;
+import React, {
+  PureComponent
 }                     from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import PropTypes      from 'prop-types';
 import cx             from 'classnames';
 &nbsp;
 const telephoneRegex = /^(\+33|0033|0)([0-9])[0-9]{8}$/g;
 &nbsp;
-&nbsp;
-class TelephoneInput extends Component {
+class TelephoneInput extends PureComponent {
   static propTypes = {
     label:    PropTypes.string.isRequired,
     id:       PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -298,16 +282,12 @@ class TelephoneInput extends Component {
     delay: 200
   };
 &nbsp;
-  constructor(props) {
-    super(props);
-    this.state = {
-      valid: true,
-      stateValue: ''
-    };
-    this.handlesOnChange = this.handlesOnChange.bind(this);
+  state = {
+    valid:      true,
+    stateValue: ''
+  };
 &nbsp;
-    this.timer = null;
-  }
+  timer = null;
 &nbsp;
 <span class="fstat-no" title="function not covered" >  co</span>mponentWillReceiveProps(nextProps) {
     const { stateValue } = <span class="cstat-no" title="statement not covered" >this.state;</span>
@@ -316,10 +296,6 @@ class TelephoneInput extends Component {
 <span class="cstat-no" title="statement not covered" >    if ((value !== stateValue) &amp;&amp; stateValue.length === 0) {</span>
 <span class="cstat-no" title="statement not covered" >      this.setState({stateValue: value});</span>
     }
-  }
-&nbsp;
-<span class="fstat-no" title="function not covered" >  sh</span>ouldComponentUpdate(nextProps, nextState) {
-<span class="cstat-no" title="statement not covered" >    return shallowCompare(this, nextProps, nextState);</span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
@@ -368,7 +344,7 @@ class TelephoneInput extends Component {
 <span class="cstat-no" title="statement not covered" >    this.setState({ valid: isValid });</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ha</span>ndlesOnChange(event) {
+  handlesOnChange = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
 <span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
 <span class="cstat-no" title="statement not covered" >    this.setState({stateValue: event.target.value});</span>
 <span class="cstat-no" title="statement not covered" >    this.checkIsValidTelephone(event.target.value);</span>
@@ -397,7 +373,7 @@ export default TelephoneInput;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

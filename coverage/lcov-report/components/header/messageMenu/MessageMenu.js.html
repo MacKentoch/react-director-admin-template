@@ -180,8 +180,10 @@
 135
 136</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -311,141 +313,139 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
 &nbsp;
-const MessageMenu = () =&gt; {
-  return (
-    &lt;li className="dropdown messages-menu"&gt;
-        &lt;a
-          href="#"
-          className="dropdown-toggle"
-          data-toggle="dropdown"&gt;
-          &lt;i className="fa fa-envelope"&gt;&lt;/i&gt;
-          &lt;span className="label label-success"&gt;
-            4
-          &lt;/span&gt;
-        &lt;/a&gt;
-        &lt;ul className="dropdown-menu"&gt;
-          &lt;li className="header"&gt;
-            You have 4 messages
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;ul className="menu"&gt;
-              &lt;li&gt;
-                &lt;a href="#"&gt;
-                  &lt;div className="pull-left"&gt;
-                    &lt;img
-                      src={require('../../../vendors/img/26115.jpg')}
-                      className="img-circle"
-                      alt="User Image"/&gt;
-                  &lt;/div&gt;
-                  &lt;h4&gt;
-                      Support Team
-                  &lt;/h4&gt;
-                  &lt;p&gt;
-                    Why not buy a new awesome theme?
-                  &lt;/p&gt;
-                  &lt;small className="pull-right"&gt;
-                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
-                      5 mins
-                  &lt;/small&gt;
-                &lt;/a&gt;
-              &lt;/li&gt;
-              &lt;li&gt;
-                &lt;a href="#"&gt;
-                  &lt;div className="pull-left"&gt;
-                    &lt;img
-                      src={require('../../../vendors/img/26115.jpg')}
-                      className="img-circle"
-                      alt="user image"
-                    /&gt;
-                  &lt;/div&gt;
-                  &lt;h4&gt;
-                      Director Design Team
-                  &lt;/h4&gt;
-                  &lt;p&gt;
-                    Why not buy a new awesome theme?
-                  &lt;/p&gt;
-                  &lt;small className="pull-right"&gt;
-                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
-                      2 hours
-                  &lt;/small&gt;
-                &lt;/a&gt;
-              &lt;/li&gt;
-              &lt;li&gt;
-                &lt;a href="#"&gt;
-                  &lt;div className="pull-left"&gt;
-                    &lt;img
-                      src={require('../../../vendors/img/avatar.png')}
-                      className="img-circle"
-                      alt="user image"
-                    /&gt;
-                  &lt;/div&gt;
-                  &lt;h4&gt;
-                    Developers
-                  &lt;/h4&gt;
-                  &lt;p&gt;Why not buy a new awesome theme?&lt;/p&gt;
-                  &lt;small className="pull-right"&gt;
-                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
-                      Today
-                  &lt;/small&gt;
-                &lt;/a&gt;
-              &lt;/li&gt;
-              &lt;li&gt;
-                &lt;a href="#"&gt;
-                  &lt;div className="pull-left"&gt;
-                    &lt;img
-                      src={require('../../../vendors/img/26115.jpg')}
-                      className="img-circle"
-                      alt="user image"
-                    /&gt;
-                  &lt;/div&gt;
-                  &lt;h4&gt;
-                      Sales Department
-                  &lt;/h4&gt;
-                  &lt;p&gt;
-                    Why not buy a new awesome theme?
-                  &lt;/p&gt;
-                  &lt;small className="pull-right"&gt;
-                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
-                      Yesterday
-                  &lt;/small&gt;
-                &lt;/a&gt;
-              &lt;/li&gt;
-              &lt;li&gt;
-                &lt;a href="#"&gt;
-                  &lt;div className="pull-left"&gt;
-                    &lt;img
-                      src={require('../../../vendors/img/avatar.png')}
-                      className="img-circle"
-                      alt="user image"
-                    /&gt;
-                  &lt;/div&gt;
-                  &lt;h4&gt;
-                    Reviewers
-                  &lt;/h4&gt;
-                  &lt;p&gt;
-                    Why not buy a new awesome theme?
-                  &lt;/p&gt;
-                  &lt;small className="pull-right"&gt;
-                    &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
-                      2 days
-                  &lt;/small&gt;
-                &lt;/a&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li className="footer"&gt;
-            &lt;a href="#"&gt;
-              See All Messages
-            &lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-  );
-};
+import React      from 'react';
+&nbsp;
+const MessageMenu = () =&gt; (
+  &lt;li className="dropdown messages-menu"&gt;
+      &lt;a
+        href="#"
+        className="dropdown-toggle"
+        data-toggle="dropdown"&gt;
+        &lt;i className="fa fa-envelope"&gt;&lt;/i&gt;
+        &lt;span className="label label-success"&gt;
+          4
+        &lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul className="dropdown-menu"&gt;
+        &lt;li className="header"&gt;
+          You have 4 messages
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;ul className="menu"&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;
+                &lt;div className="pull-left"&gt;
+                  &lt;img
+                    src={require('../../../img/26115.jpg')}
+                    className="img-circle"
+                    alt="User Image"/&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;
+                    Support Team
+                &lt;/h4&gt;
+                &lt;p&gt;
+                  Why not buy a new awesome theme?
+                &lt;/p&gt;
+                &lt;small className="pull-right"&gt;
+                  &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                    5 mins
+                &lt;/small&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;
+                &lt;div className="pull-left"&gt;
+                  &lt;img
+                    src={require('../../../img/26115.jpg')}
+                    className="img-circle"
+                    alt="user image"
+                  /&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;
+                    Director Design Team
+                &lt;/h4&gt;
+                &lt;p&gt;
+                  Why not buy a new awesome theme?
+                &lt;/p&gt;
+                &lt;small className="pull-right"&gt;
+                  &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                    2 hours
+                &lt;/small&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;
+                &lt;div className="pull-left"&gt;
+                  &lt;img
+                    src={require('../../../img/avatar.png')}
+                    className="img-circle"
+                    alt="user image"
+                  /&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;
+                  Developers
+                &lt;/h4&gt;
+                &lt;p&gt;Why not buy a new awesome theme?&lt;/p&gt;
+                &lt;small className="pull-right"&gt;
+                  &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                    Today
+                &lt;/small&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;
+                &lt;div className="pull-left"&gt;
+                  &lt;img
+                    src={require('../../../img/26115.jpg')}
+                    className="img-circle"
+                    alt="user image"
+                  /&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;
+                    Sales Department
+                &lt;/h4&gt;
+                &lt;p&gt;
+                  Why not buy a new awesome theme?
+                &lt;/p&gt;
+                &lt;small className="pull-right"&gt;
+                  &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                    Yesterday
+                &lt;/small&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;
+                &lt;div className="pull-left"&gt;
+                  &lt;img
+                    src={require('../../../img/avatar.png')}
+                    className="img-circle"
+                    alt="user image"
+                  /&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;
+                  Reviewers
+                &lt;/h4&gt;
+                &lt;p&gt;
+                  Why not buy a new awesome theme?
+                &lt;/p&gt;
+                &lt;small className="pull-right"&gt;
+                  &lt;i className="fa fa-clock-o"&gt;&lt;/i&gt;
+                    2 days
+                &lt;/small&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li className="footer"&gt;
+          &lt;a href="#"&gt;
+            See All Messages
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/li&gt;
+);
 &nbsp;
 export default MessageMenu;
 &nbsp;</pre></td></tr>
@@ -454,7 +454,7 @@ export default MessageMenu;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

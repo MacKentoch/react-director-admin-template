@@ -14,13 +14,12 @@ const ViewLink = ({
 }) => (
   <li
     className={cx({'active': isActive})}
-    >
+  >
     <Link
       to={linkTo}>
       <i
         className={`fa ${faIconName}`}
-        style={{marginLeft: '10px'}}>
-      </i>
+        style={{marginLeft: '10px'}} />
       <span style={{fontSize: '13px'}}>
         {viewName}
       </span>

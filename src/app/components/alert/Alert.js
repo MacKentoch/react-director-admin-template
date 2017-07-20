@@ -11,12 +11,12 @@ const Alert = ({
   <div
     className={
       cx({
-        alert: true,
-        'alert-block': true,
-        'alert-danger': type === 'danger',
-        'alert-info': type === 'info',
-        'alert-warning': type === 'warning',
-        'alert-success': type === 'success'
+        alert:            true,
+        'alert-block':    true,
+        'alert-danger':   type === 'danger',
+        'alert-info':     type === 'info',
+        'alert-warning':  type === 'warning',
+        'alert-success':  type === 'success'
       })
     }>
     <button

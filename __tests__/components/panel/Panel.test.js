@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import Panel              from '../../../src/app/components/panel/Panel';
-import renderer           from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('Panel component', () => {
   it('renders as expected', () => {

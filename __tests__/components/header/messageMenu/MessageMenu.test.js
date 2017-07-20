@@ -3,7 +3,8 @@
 
 import React          from 'react';
 import MessageMenu    from '../../../../src/app/components/header/messageMenu/MessageMenu';
-import renderer       from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+
 // -------------------------------------------------
 // no more needed image assets hack see package.json better solution:
 // -------------------------------------------------

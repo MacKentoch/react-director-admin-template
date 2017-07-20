@@ -167,14 +167,10 @@
 122
 123
 124
-125
-126
-127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+125</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -297,128 +293,126 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 &nbsp;
-const TaskMenu = () =&gt; {
-  return (
-    &lt;li className="dropdown tasks-menu"&gt;
-        &lt;a
-          href="#"
-          className="dropdown-toggle"
-          data-toggle="dropdown"&gt;
-          &lt;i className="fa fa-tasks"&gt;&lt;/i&gt;
-          &lt;span className="label label-danger"&gt;
-            9
-          &lt;/span&gt;
-        &lt;/a&gt;
-        &lt;ul className="dropdown-menu"&gt;
-          &lt;li className="header"&gt;
-            You have 9 tasks
-          &lt;/li&gt;
-          &lt;li&gt;
-            {/* &lt;!-- inner menu: contains the actual data --&gt; */}
-            &lt;ul className="menu"&gt;
-                &lt;li&gt;
-                  {/* &lt;!-- Task item --&gt; */}
-                  &lt;a href="#"&gt;
-                    &lt;h3&gt;
-                      Design some buttons
-                      &lt;small className="pull-right"&gt;20%&lt;/small&gt;
-                    &lt;/h3&gt;
-                    &lt;div className="progress progress-striped xs"&gt;
-                      &lt;div
-                        className="progress-bar progress-bar-success"
-                        style={{width: '20%'}}
-                        role="progressbar"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"&gt;
-                        &lt;span className="sr-only"&gt;
-                          20% Complete
-                        &lt;/span&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                {/* &lt;!-- end task item --&gt; */}
-                &lt;li&gt;
-                  {/* &lt;!-- Task item --&gt; */}
-                  &lt;a href="#"&gt;
-                    &lt;h3&gt;
-                      Create a nice theme
-                      &lt;small className="pull-right"&gt;40%&lt;/small&gt;
-                    &lt;/h3&gt;
-                    &lt;div className="progress progress-striped xs"&gt;
-                      &lt;div
-                        className="progress-bar progress-bar-danger"
-                        style={{width: '40%'}}
-                        role="progressbar"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"&gt;
-                        &lt;span className="sr-only"&gt;
-                          40% Complete
-                        &lt;/span&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                {/* &lt;!-- end task item --&gt; */}
-                &lt;li&gt;
-                  {/* &lt;!-- Task item --&gt; */}
-                  &lt;a href="#"&gt;
-                    &lt;h3&gt;
-                      Some task I need to do
-                      &lt;small className="pull-right"&gt;60%&lt;/small&gt;
-                    &lt;/h3&gt;
-                    &lt;div className="progress progress-striped xs"&gt;
-                      &lt;div
-                        className="progress-bar progress-bar-info"
-                        style={{width: '60%'}}
-                        role="progressbar"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"&gt;
-                        &lt;span className="sr-only"&gt;
-                          60% Complete
-                        &lt;/span&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                {/* &lt;!-- end task item --&gt; */}
-                &lt;li&gt;
-                  {/* &lt;!-- Task item --&gt; */}
-                  &lt;a href="#"&gt;
-                    &lt;h3&gt;
-                      Make beautiful transitions
-                      &lt;small className="pull-right"&gt;80%&lt;/small&gt;
-                    &lt;/h3&gt;
-                    &lt;div className="progress progress-striped xs"&gt;
-                      &lt;div
-                        className="progress-bar progress-bar-warning"
-                        style={{width: '80%'}}
-                        role="progressbar"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"&gt;
-                        &lt;span className="sr-only"&gt;
-                          80% Complete
-                        &lt;/span&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                {/* &lt;!-- end task item --&gt; */}
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;li className="footer"&gt;
-          &lt;a href="#"&gt;
-            View all tasks
-          &lt;/a&gt;
+const TaskMenu = () =&gt; (
+  &lt;li className="dropdown tasks-menu"&gt;
+      &lt;a
+        href="#"
+        className="dropdown-toggle"
+        data-toggle="dropdown"&gt;
+        &lt;i className="fa fa-tasks"&gt;&lt;/i&gt;
+        &lt;span className="label label-danger"&gt;
+          9
+        &lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul className="dropdown-menu"&gt;
+        &lt;li className="header"&gt;
+          You have 9 tasks
         &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  );
-};
+        &lt;li&gt;
+          {/* &lt;!-- inner menu: contains the actual data --&gt; */}
+          &lt;ul className="menu"&gt;
+              &lt;li&gt;
+                {/* &lt;!-- Task item --&gt; */}
+                &lt;a href="#"&gt;
+                  &lt;h3&gt;
+                    Design some buttons
+                    &lt;small className="pull-right"&gt;20%&lt;/small&gt;
+                  &lt;/h3&gt;
+                  &lt;div className="progress progress-striped xs"&gt;
+                    &lt;div
+                      className="progress-bar progress-bar-success"
+                      style={{width: '20%'}}
+                      role="progressbar"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"&gt;
+                      &lt;span className="sr-only"&gt;
+                        20% Complete
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              {/* &lt;!-- end task item --&gt; */}
+              &lt;li&gt;
+                {/* &lt;!-- Task item --&gt; */}
+                &lt;a href="#"&gt;
+                  &lt;h3&gt;
+                    Create a nice theme
+                    &lt;small className="pull-right"&gt;40%&lt;/small&gt;
+                  &lt;/h3&gt;
+                  &lt;div className="progress progress-striped xs"&gt;
+                    &lt;div
+                      className="progress-bar progress-bar-danger"
+                      style={{width: '40%'}}
+                      role="progressbar"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"&gt;
+                      &lt;span className="sr-only"&gt;
+                        40% Complete
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              {/* &lt;!-- end task item --&gt; */}
+              &lt;li&gt;
+                {/* &lt;!-- Task item --&gt; */}
+                &lt;a href="#"&gt;
+                  &lt;h3&gt;
+                    Some task I need to do
+                    &lt;small className="pull-right"&gt;60%&lt;/small&gt;
+                  &lt;/h3&gt;
+                  &lt;div className="progress progress-striped xs"&gt;
+                    &lt;div
+                      className="progress-bar progress-bar-info"
+                      style={{width: '60%'}}
+                      role="progressbar"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"&gt;
+                      &lt;span className="sr-only"&gt;
+                        60% Complete
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              {/* &lt;!-- end task item --&gt; */}
+              &lt;li&gt;
+                {/* &lt;!-- Task item --&gt; */}
+                &lt;a href="#"&gt;
+                  &lt;h3&gt;
+                    Make beautiful transitions
+                    &lt;small className="pull-right"&gt;80%&lt;/small&gt;
+                  &lt;/h3&gt;
+                  &lt;div className="progress progress-striped xs"&gt;
+                    &lt;div
+                      className="progress-bar progress-bar-warning"
+                      style={{width: '80%'}}
+                      role="progressbar"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"&gt;
+                      &lt;span className="sr-only"&gt;
+                        80% Complete
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+              {/* &lt;!-- end task item --&gt; */}
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;li className="footer"&gt;
+        &lt;a href="#"&gt;
+          View all tasks
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+);
 &nbsp;
 export default TaskMenu;
 &nbsp;</pre></td></tr>
@@ -427,7 +421,7 @@ export default TaskMenu;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

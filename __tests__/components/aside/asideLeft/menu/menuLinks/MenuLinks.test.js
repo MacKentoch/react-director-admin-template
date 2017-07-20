@@ -1,8 +1,9 @@
 'use strict';
 
-import React          from 'react';
-import MenuLinks      from '../../../../../../src/app/components/aside/asideLeft/menu/menuLinks/MenuLinks';
-import renderer       from 'react-test-renderer';
+import React            from 'react';
+import MenuLinks        from '../../../../../../src/app/components/aside/asideLeft/menu/menuLinks/MenuLinks';
+import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+import { MemoryRouter } from 'react-router';
 
 let activeViewMock;
 let onClick;
@@ -21,11 +22,13 @@ describe('AnimatedView component', () => {
   it('renders as expected', () => {
     const component = renderer.create(
       <div>
-        <MenuLinks
-          activeView={activeViewMock}
-          views={mockViews}
-          onClick={onClick}
-        />
+        <MemoryRouter>
+          <MenuLinks
+            activeView={activeViewMock}
+            views={mockViews}
+            onClick={onClick}
+          />
+        </MemoryRouter>
       </div>
     ).toJSON();
     expect(component).toMatchSnapshot();

@@ -3,7 +3,7 @@
 
 import React          from 'react';
 import Button         from '../../../../src/app/components/header/button/Button';
-import renderer       from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('Button component', () => {
   const mockToggleSideMenu = jest.fn();

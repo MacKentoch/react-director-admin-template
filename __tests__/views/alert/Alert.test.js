@@ -2,35 +2,61 @@
 
 import React         from 'react';
 import Alert         from '../../../src/app/views/alert/Alert';
-import renderer      from 'react-test-renderer';
+import renderer      from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+import {
+  shallow
+}                    from 'enzyme';
 
-// jest.mock('react-dom', () => ({
-//   findDOMNode() { return null; },
-//   render() { return null; }
-// }));
+// react-highlight uses findDOMNode: 
+// -> jest will throw errors (no way to counter that...)
+jest.mock('react-highlight');
 
 describe('Alert view', () => {
-  const mockEnterAlert = jest.fn();
-  const mockLeaveAlert = jest.fn();
-
-  const mockProps = {
-    actions: {
-      enterAlert: mockEnterAlert,
-      leaveAlert: mockLeaveAlert
-    }
-  };
-
-  const component = renderer.create(
-    <div>
-      <Alert {...mockProps} />
-    </div>
-  ).toJSON();
-
   it('renders as expected', () => {
+    const props = {
+      actions: {
+        enterAlert: () => {},
+        leaveAlert: () => {}
+      }
+    };
+    const component = renderer.create(
+      <div>
+        <Alert {...props} />
+      </div>
+    ).toJSON();
     expect(component).toMatchSnapshot();
   });
 
-  // it('triggers enterAlert on mount', () => {
-  //   expect(mockEnterAlert.mock.calls.length).toBe(1);
-  // });
+
+  it('triggers enterAlert on mount', () => {
+    const mockEnterAlert = jest.fn();
+    const mockProps = {
+      actions: {
+        enterAlert: mockEnterAlert,
+        leaveAlert: () => {}
+      }
+    };
+    /* eslint-disable no-unused-vars */
+    const wrapper = shallow(
+      <Alert {...mockProps} />
+    );
+    // expect(mockEnterAlert).toBeCalled();
+    expect(mockEnterAlert.mock.calls.length).toBe(1);
+  });
+
+  it('triggers leaveAlert on unMount', () => {
+    const mockLeaveAlert = jest.fn();
+    const mockProps = {
+      actions: {
+        enterAlert: () => {},
+        leaveAlert: mockLeaveAlert
+      }
+    };
+    const wrapper = shallow(
+      <Alert {...mockProps} />
+    );
+    wrapper.unmount();
+    // expect(mockLeaveAlert).toBeCalled();
+    expect(mockLeaveAlert.mock.calls.length).toBe(1);
+  });
 });

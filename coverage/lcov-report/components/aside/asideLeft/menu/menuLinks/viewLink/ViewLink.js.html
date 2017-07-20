@@ -85,36 +85,27 @@
 40
 41
 42
-43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+43
+44
+45
+46
+47
+48
+49</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,46 +113,73 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
-import cx                   from 'classnames';
-import { Link }             from 'react-router';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
 &nbsp;
-const ViewLink = ({isActive, linkTo, viewName, itemCount, faIconName}) =&gt; {
-  return (
-    &lt;li
-      className={cx({'active': isActive})}
-      &gt;
-      &lt;Link
-        to={linkTo}&gt;
-        &lt;i
-          className={`fa ${faIconName}`}
-          style={{marginLeft: '10px'}}&gt;
-        &lt;/i&gt;
-        &lt;span style={{fontSize: '13px'}}&gt;
-          {viewName}
+import React            from 'react';
+import PropTypes        from 'prop-types';
+import cx               from 'classnames';
+import { Link }         from 'react-router-dom';
+&nbsp;
+const ViewLink = ({
+  isActive, 
+  linkTo, 
+  viewName, 
+  itemCount, 
+  faIconName
+}) =&gt; (
+  &lt;li
+    className={cx({'active': isActive})}
+  &gt;
+    &lt;Link
+      to={linkTo}&gt;
+      &lt;i
+        className={`fa ${faIconName}`}
+        style={{marginLeft: '10px'}} /&gt;
+      &lt;span style={{fontSize: '13px'}}&gt;
+        {viewName}
+      &lt;/span&gt;
+      {
+        itemCount &gt; 0 &amp;&amp;
+        &lt;span className="label label-primary pull-right"&gt;
+          {itemCount}
         &lt;/span&gt;
-        {
-          itemCount &gt; 0 &amp;&amp;
-          &lt;span className="label label-primary pull-right"&gt;
-            {itemCount}
-          &lt;/span&gt;
-        }
-      &lt;/Link&gt;
-    &lt;/li&gt;
-  );
-};
+      }
+    &lt;/Link&gt;
+  &lt;/li&gt;
+);
 &nbsp;
 ViewLink.propTypes = {
-  isActive: PropTypes.bool,
-  viewName: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired,
+  isActive:   PropTypes.bool,
+  viewName:   PropTypes.string.isRequired,
+  linkTo:     PropTypes.string.isRequired,
   faIconName: PropTypes.string.isRequired,
-  itemCount: PropTypes.number
+  itemCount:  PropTypes.number
 };
 &nbsp;
 ViewLink.defaultProps = {
@@ -175,7 +193,7 @@ export default ViewLink;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../../../../prettify.js"></script>

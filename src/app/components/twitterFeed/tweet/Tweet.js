@@ -40,7 +40,7 @@ const Tweet = ({
 Tweet.propTypes = {
   time:         PropTypes.string.isRequired,
   author:       PropTypes.string.isRequired,
-  authorAvatar: PropTypes.string.isRequired,
+  authorAvatar: PropTypes.any.isRequired,
   children:     PropTypes.node.isRequired
 };
 

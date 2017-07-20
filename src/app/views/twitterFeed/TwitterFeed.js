@@ -15,6 +15,12 @@ import Highlight          from 'react-highlight';
 
 
 class TwitterFeed extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterTwitterFeed: PropTypes.func.isRequired,
+      leaveTwitterFeed: PropTypes.func.isRequired
+    })
+  };
 
   componentWillMount() {
     const { actions: { enterTwitterFeed } } = this.props;
@@ -101,12 +107,5 @@ class TwitterFeed extends PureComponent {
     );
   }
 }
-
-TwitterFeed.propTypes= {
-  actions: PropTypes.shape({
-    enterTwitterFeed: PropTypes.func.isRequired,
-    leaveTwitterFeed: PropTypes.func.isRequired
-  })
-};
 
 export default TwitterFeed;

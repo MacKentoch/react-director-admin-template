@@ -94,13 +94,43 @@
 49
 50
 51
-52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -118,7 +148,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,73 +157,60 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+&nbsp;
+import React            from 'react';
+import PropTypes        from 'prop-types';
 import {
   Motion,
   spring
-}                           from 'react-motion';
+}                       from 'react-motion';
 &nbsp;
-const MenuHeader = ({title, backColor, isCollapsed, onClick}) =&gt; {
-  return (
-    &lt;ul
-      className="list-inline sidebar-menu__group-container"
-      onClick={onClick}&gt;
-      &lt;li style={{width: '100%', backgroundColor: backColor}}&gt;
-        &lt;a
-          className="btn"
-          style={{width: '100%', paddinLeft: '0px !important'}}&gt;
-          &lt;span className="pull-left sidebar-menu__group-title"&gt;
-            {title}
-          &lt;/span&gt;
-          &lt;Motion
-            style={{
-              deg: isCollapsed ? spring(0) : spring(180)
-            }} &gt;
-            {
-              ({ deg }) =&gt; {
-                return (
-                  &lt;i
-                    className="fa fa-angle-up fa-1x pull-right"
-                    style={{
-                      WebkitTransform: `rotate(${deg}deg)`,
-                      transform: `rotate(${deg}deg)`
-                    }}
-                    aria-hidden="true"&gt;
-                  &lt;/i&gt;
-                );
-              }
+const MenuHeader = ({
+  title,
+  backColor,
+  isCollapsed,
+  onClick
+}) =&gt; (
+  &lt;ul
+    className="list-inline sidebar-menu__group-container"
+    onClick={onClick}&gt;
+    &lt;li style={{width: '100%', backgroundColor: backColor}}&gt;
+      &lt;a
+        className="btn"
+        style={{width: '100%', paddinLeft: '0px !important'}}&gt;
+        &lt;span className="pull-left sidebar-menu__group-title"&gt;
+          {title}
+        &lt;/span&gt;
+        &lt;Motion
+          style={{
+            deg: isCollapsed ? spring(0) : spring(180)
+          }} &gt;
+          {
+            ({ deg }) =&gt; {
+              return (
+                &lt;i
+                  className="fa fa-angle-up fa-1x pull-right"
+                  style={{
+                    WebkitTransform:  `rotate(${deg}deg)`,
+                    transform:        `rotate(${deg}deg)`
+                  }}
+                  aria-hidden="true"&gt;
+                &lt;/i&gt;
+              );
             }
-          &lt;/Motion&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  );
-};
+          }
+        &lt;/Motion&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+);
 &nbsp;
 MenuHeader.propTypes = {
-  backColor: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  isCollapsed: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
+  backColor:    PropTypes.string.isRequired,
+  title:        PropTypes.string.isRequired,
+  isCollapsed:  PropTypes.bool.isRequired,
+  onClick:      PropTypes.func.isRequired
 };
 &nbsp;
 export default MenuHeader;
@@ -202,7 +220,7 @@ export default MenuHeader;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../../../prettify.js"></script>

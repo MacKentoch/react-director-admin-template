@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -93,18 +93,21 @@
 48
 49
 50
-51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,9 +132,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,50 +144,52 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+&nbsp;
+import React                from 'react';
+import PropTypes            from 'prop-types';
 import TeamMates            from './teamMates/TeamMates';
 import TeamMember           from './teamMember/TeamMember';
 import TeamMateAddButton    from './teamMateAddButton/TeamMateAddButton';
 import Panel                from '../panel/Panel';
 &nbsp;
 &nbsp;
-const TeamMatesDemo = (props) =&gt; {
-  const { members } = props;
-&nbsp;
-  return (
-    &lt;Panel
-      hasTitle={true}
-      title={'Teammates'}&gt;
-      &lt;TeamMates&gt;
-        {
-          members.map(
-            (member, memberIndex) =&gt; {
-              return (
-                &lt;TeamMember
-                  key={memberIndex}
-                  picture={member.picture}
-                  firstname={member.firstname}
-                  lastname={member.lastname}
-                  profile={member.profile}
-                  profileColor={member.profileColor}
-                /&gt;
-              );
-            }
-          )
-        }
-      &lt;/TeamMates&gt;
-      &lt;TeamMateAddButton /&gt;
-    &lt;/Panel&gt;
-  );
-};
+const TeamMatesDemo = ({
+  members
+}) =&gt; (
+  &lt;Panel
+    hasTitle={true}
+    title={'Teammates'}&gt;
+    &lt;TeamMates&gt;
+      {
+        members.map(
+          (member, memberIndex) =&gt; {
+            return (
+              &lt;TeamMember
+                key={memberIndex}
+                picture={member.picture}
+                firstname={member.firstname}
+                lastname={member.lastname}
+                profile={member.profile}
+                profileColor={member.profileColor}
+              /&gt;
+            );
+          }
+        )
+      }
+    &lt;/TeamMates&gt;
+    &lt;TeamMateAddButton /&gt;
+  &lt;/Panel&gt;
+);
 &nbsp;
 TeamMatesDemo.propTypes = {
-  members: PropTypes.arrayOf(
+  members:  PropTypes.arrayOf(
     PropTypes.shape({
-      picture: PropTypes.string,
-      firstname: PropTypes.string,
-      lastname: PropTypes.string,
-      profile: PropTypes.string,
+      picture:      PropTypes.string,
+      firstname:    PropTypes.string,
+      lastname:     PropTypes.string,
+      profile:      PropTypes.string,
       profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
     })
   )
@@ -199,7 +202,7 @@ export default TeamMatesDemo;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

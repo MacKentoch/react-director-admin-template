@@ -10,8 +10,8 @@ import {
 }                               from 'react-router-dom';
 // static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
 import {
- // createBrowserHistory as createHistory,
- createHashHistory as createHistory,
+// createBrowserHistory as createHistory,
+  createHashHistory as createHistory
 }                              from 'history';
 import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';

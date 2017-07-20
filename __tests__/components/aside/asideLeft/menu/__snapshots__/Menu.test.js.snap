@@ -42,13 +42,17 @@ exports[`Menu component renders as expected 1`] = `
     </li>
   </ul>
   <div
+    className="ReactCollapse--collapse"
     style={
       Object {
-        "height": "auto",
+        "height": 0,
+        "overflow": "hidden",
       }
     }
   >
-    <div>
+    <div
+      className="ReactCollapse--content"
+    >
       <ul
         className="sidebar-menu sidebar-menu__marginTop"
       >
@@ -56,8 +60,8 @@ exports[`Menu component renders as expected 1`] = `
           className="active"
         >
           <a
+            href="/"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-eye"
@@ -82,8 +86,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/statsCard"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-check-square-o"
@@ -108,8 +112,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/earningGraph"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-area-chart"
@@ -134,8 +138,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/notifications"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-bell"
@@ -160,8 +164,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/workProgress"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-briefcase"
@@ -186,8 +190,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/twitterFeed"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-twitter"
@@ -212,8 +216,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/teamMates"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-user"
@@ -238,8 +242,8 @@ exports[`Menu component renders as expected 1`] = `
           className=""
         >
           <a
+            href="/Dashboard/todoList"
             onClick={[Function]}
-            style={Object {}}
           >
             <i
               className="fa fa-check"

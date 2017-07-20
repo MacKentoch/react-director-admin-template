@@ -81,26 +81,19 @@
 36
 37
 38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+39
+40
+41
+42
+43
+44
+45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,46 +106,71 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint consistent-return: 0 */
-import React, { PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+/* eslint consistent-return: 0 */
 &nbsp;
-const Stat = ({ statFaIconName, statIconColor, statLabel, statIconSpin }) =&gt; {
-  return (
-    &lt;div className="stat"&gt;
-      &lt;div style={{textAlign: 'center'}}&gt;
-        &lt;span className="fa-stack fa-lg fa-3x"&gt;
-          &lt;i
-            className="fa fa-circle fa-stack-2x"
-            style={{color: '#FFFFFF'}}&gt;
-          &lt;/i&gt;
-          &lt;i
-            className={`fa ${statFaIconName} ${statIconSpin ? <span class="branch-0 cbranch-no" title="branch not covered" >'fa-spin' </span>: ''} fa-stack-1x fa-inverse`}
-            style={{color: statIconColor}}&gt;
-          &lt;/i&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;h5 className="stat-info"&gt;
-        {statLabel}
-      &lt;/h5&gt;
+import React      from 'react';
+import PropTypes  from 'prop-types';
+&nbsp;
+const Stat = ({
+  statFaIconName,
+  statIconColor,
+  statLabel,
+  statIconSpin
+}) =&gt; (
+  &lt;div className="stat"&gt;
+    &lt;div style={{textAlign: 'center'}}&gt;
+      &lt;span className="fa-stack fa-lg fa-3x"&gt;
+        &lt;i
+          className="fa fa-circle fa-stack-2x"
+          style={{color: '#FFFFFF'}}&gt;
+        &lt;/i&gt;
+        &lt;i
+          className={`fa ${statFaIconName} ${statIconSpin ? <span class="branch-0 cbranch-no" title="branch not covered" >'fa-spin' </span>: ''} fa-stack-1x fa-inverse`}
+          style={{color: statIconColor}}&gt;
+        &lt;/i&gt;
+      &lt;/span&gt;
     &lt;/div&gt;
-  );
-};
+    &lt;h5 className="stat-info"&gt;
+      {statLabel}
+    &lt;/h5&gt;
+  &lt;/div&gt;
+);
 &nbsp;
 Stat.propTypes = {
   statFaIconName: PropTypes.string.isRequired,
-  statIconColor: PropTypes.string,
-  statLabel: PropTypes.string.isRequired,
-  statIconSpin: PropTypes.bool.isRequired
+  statIconColor:  PropTypes.string,
+  statLabel:      PropTypes.string.isRequired,
+  statIconSpin:   PropTypes.bool.isRequired
 };
 &nbsp;
 Stat.defaultProps = {
-  statColor: '4A4A4A',
+  statColor:    '4A4A4A',
   statIconSpin: false
 };
 &nbsp;
@@ -163,7 +181,7 @@ export default Stat;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -1,7 +1,13 @@
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+// @flow weak
 
-const Label = ({ type, text }) => {
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import cx         from 'classnames';
+
+const Label = ({
+  type,
+  text
+}) => {
   return (
     <span
       className={

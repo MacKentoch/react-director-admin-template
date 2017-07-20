@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/8</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.5% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/8</span>
+        <span class='fraction'>5/6</span>
       </div>
     </div>
   </div>
@@ -150,12 +150,7 @@
 105
 106
 107
-108
-109
-110
-111
-112
-113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+108</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,15 +159,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,9 +175,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,9 +223,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,14 +251,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint no-console: 0 */
-import React, { PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+&nbsp;
+/* eslint no-console: 0 */
+import React      from 'react';
+import PropTypes  from 'prop-types';
 import cx         from 'classnames';
 import UserPanel  from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
@@ -276,106 +269,98 @@ import Horloge    from '../../horloge/Horloge';
 import Menu       from './menu/Menu';
 &nbsp;
 &nbsp;
-const AsideLeft = (props) =&gt; {
-  const {
-    connectionStatus,
-    userIsConnected,
-    username,
-    helloWord,
-    userPicture,
-    showPicture
-  } = props;
+const AsideLeft = ({
+  connectionStatus,
+  userIsConnected,
+  username,
+  helloWord,
+  userPicture,
+  showPicture,
+  isAnimated,
+  isCollapsed,
+  currentView,
+  sideMenu
+}) =&gt; (
+  &lt;aside className={
+    cx({
+      'no-print': true,
+      'left-side': true,
+      'aside-left--fixed': true,
+      'sidebar-offcanvas': true,
+      'sidebar-animated': isAnimated,
+      'collapse-left':    isCollapsed
+    })}
+    // add overflow to left sidebar:
+    style={{
+      height: '100%',
+      overflow: 'auto',
+      position: 'fixed'
+    }}&gt;
+      &lt;section className="sidebar"&gt;
+        &lt;UserPanel
+          hello={helloWord}
+          username={username}
+          connectionStatus={connectionStatus}
+          online={userIsConnected}
+          userPicture={userPicture}
+          showUserPicture={showPicture}
+        /&gt;
+        &lt;Horloge /&gt;
 &nbsp;
-  const {
-    isAnimated,
-    isCollapsed,
-    currentView,
-    sideMenu
-  } = props;
-&nbsp;
-  return (
-    &lt;aside className={
-      cx({
-        'no-print': true,
-        'left-side': true,
-        'aside-left--fixed': true,
-        'sidebar-offcanvas': true,
-        'sidebar-animated': isAnimated,
-        'collapse-left':    isCollapsed
-      })}
-      // add overflow to left sidebar:
-      style={{
-        height: '100%',
-        overflow: 'auto',
-        position: 'fixed'
-      }}&gt;
-        &lt;section className="sidebar"&gt;
-          &lt;UserPanel
-            hello={helloWord}
-            username={username}
-            connectionStatus={connectionStatus}
-            online={userIsConnected}
-            userPicture={userPicture}
-            showUserPicture={showPicture}
-          /&gt;
-          &lt;Horloge /&gt;
-&nbsp;
-          &lt;SearchForm
-            onSearchSubmit={<span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; <span class="cstat-no" title="statement not covered" >console.log('searching: ', value)}</span>
-          /&gt;
-          {
-            sideMenu.map(
-              ({id, group, menus}, menuIdx) =&gt; {
-                return (
-                  &lt;Menu
-                    key={menuIdx}
-                    initialCollapseState={menuIdx === 0 ? false : null}
-                    headerTitle={group}
-                    headerBackColor="#283744"
-                    activeView={currentView}
-                    views={menus}
-                  /&gt;
-                );
-              }
-            )
-          }
-        &lt;/section&gt;
-    &lt;/aside&gt;
-&nbsp;
-  );
-};
+        &lt;SearchForm
+          onSearchSubmit={<span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; <span class="cstat-no" title="statement not covered" >console.log('searching: ', value)}</span>
+        /&gt;
+        {
+          sideMenu.map(
+            ({id, group, menus}, menuIdx) =&gt; {
+              return (
+                &lt;Menu
+                  key={menuIdx}
+                  initialCollapseState={menuIdx === 0 ? false : null}
+                  headerTitle={group}
+                  headerBackColor="#283744"
+                  activeView={currentView}
+                  views={menus}
+                /&gt;
+              );
+            }
+          )
+        }
+      &lt;/section&gt;
+  &lt;/aside&gt;
+);
 &nbsp;
 AsideLeft.propTypes = {
-  isAnimated: PropTypes.bool,
-  isCollapsed: PropTypes.bool,
-  sideMenu: PropTypes.arrayOf(
+  isAnimated:   PropTypes.bool,
+  isCollapsed:  PropTypes.bool,
+  sideMenu:     PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      group: PropTypes.string.isRequired,
-      menus: PropTypes.arrayOf(
+      id:     PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+      group:  PropTypes.string.isRequired,
+      menus:  PropTypes.arrayOf(
         PropTypes.shape({
-          name: PropTypes.string.isRequired,
-          linkTo: PropTypes.string.isRequired,
+          name:       PropTypes.string.isRequired,
+          linkTo:     PropTypes.string.isRequired,
           faIconName: PropTypes.string.isRequired
         })
       )
     })
   ).isRequired,
-  currentView: PropTypes.string,
+  currentView:      PropTypes.string,
   connectionStatus: PropTypes.shape({
-    online: PropTypes.string,
+    online:       PropTypes.string,
     disconnected: PropTypes.string
   }),
-  userIsConnected: PropTypes.bool,
-  username: PropTypes.string,
-  userPicture: PropTypes.string,
-  showPicture: PropTypes.bool,
-  helloWord: PropTypes.string
+  userIsConnected:  PropTypes.bool,
+  username:         PropTypes.string,
+  userPicture:      PropTypes.string,
+  showPicture:      PropTypes.bool,
+  helloWord:        PropTypes.string
 };
 &nbsp;
 AsideLeft.defaultProps = {
-  isAnimated: false,
-  isCollapsed: false
+  isAnimated:   false,
+  isCollapsed:  false
 };
 &nbsp;
 export default AsideLeft;
@@ -385,7 +370,7 @@ export default AsideLeft;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

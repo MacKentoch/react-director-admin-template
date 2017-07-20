@@ -2,7 +2,7 @@
 
 import React          from 'react';
 import MenuHeader     from '../../../../../../src/app/components/aside/asideLeft/menu/menuHeader/MenuHeader';
-import renderer       from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('AnimatedView component', () => {
   it('renders as expected', () => {

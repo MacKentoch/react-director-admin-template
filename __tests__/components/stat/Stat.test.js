@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import Stat               from '../../../src/app/components/stat/Stat';
-import renderer           from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('Stat component', () => {
   it('renders as expected', () => {

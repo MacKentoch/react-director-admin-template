@@ -107,44 +107,15 @@
 62
 63
 64
-65</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -159,7 +130,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,66 +141,105 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
 &nbsp;
-const UserPanel = (props) =&gt; {
-  return (
-    &lt;div className="user-panel"&gt;
-      {
-        props.showUserPicture &amp;&amp;
-        &lt;div className="pull-left image"&gt;
-          &lt;img
-            src={props.userPicture}
-            className="img-circle"
-            alt="User Image"
-          /&gt;
-        &lt;/div&gt;
-      }
-      &lt;div className="pull-left info"&gt;
-        &lt;p&gt;
-          { `${props.hello} ${props.username}` }
-        &lt;/p&gt;
-        &lt;a
-          href="#"&gt;
-          { props.online &amp;&amp;
-            &lt;i className="fa fa-circle text-success"&gt;&lt;/i&gt;
-          }
-          { props.online &amp;&amp;
-            props.connectionStatus.online
-          }
-          {
-            !props.online &amp;&amp;
-            &lt;i className="fa fa-circle text-default"&gt;&lt;/i&gt;
-          }
-          { !props.online &amp;&amp;
-            props.connectionStatus.disconnected
-          }
-        &lt;/a&gt;
+import React      from 'react';
+import PropTypes  from 'prop-types';
+&nbsp;
+const UserPanel = (
+  props
+) =&gt; (
+  &lt;div className="user-panel"&gt;
+    {
+      props.showUserPicture &amp;&amp;
+      &lt;div className="pull-left image"&gt;
+        &lt;img
+          src={props.userPicture}
+          className="img-circle"
+          alt="User Image"
+        /&gt;
       &lt;/div&gt;
+    }
+    &lt;div className="pull-left info"&gt;
+      &lt;p&gt;
+        { `${props.hello} ${props.username}` }
+      &lt;/p&gt;
+      &lt;a
+        href="#"&gt;
+        { props.online &amp;&amp;
+          &lt;i className="fa fa-circle text-success"&gt;&lt;/i&gt;
+        }
+        { props.online &amp;&amp;
+          props.connectionStatus.online
+        }
+        {
+          !props.online &amp;&amp;
+          &lt;i className="fa fa-circle text-default"&gt;&lt;/i&gt;
+        }
+        { !props.online &amp;&amp;
+          props.connectionStatus.disconnected
+        }
+      &lt;/a&gt;
     &lt;/div&gt;
-  );
-};
+  &lt;/div&gt;
+);
 &nbsp;
 UserPanel.propTypes = {
-  hello: PropTypes.string,
-  username: PropTypes.string,
-  showUserPicture: PropTypes.bool,
-  userPicture: PropTypes.any,
+  hello:            PropTypes.string,
+  username:         PropTypes.string,
+  showUserPicture:  PropTypes.bool,
+  userPicture:      PropTypes.any,
   connectionStatus: PropTypes.shape({
-    online: PropTypes.string,
+    online:       PropTypes.string,
     disconnected: PropTypes.string
   }),
-  online: PropTypes.bool
+  online:           PropTypes.bool
 };
 &nbsp;
 UserPanel.defaultProps = {
-  hello: 'Hello',
+  hello:    'Hello',
   username: 'Jane',
   connectionStatus: {
-    online: 'Online',
+    online:       'Online',
     disconnected: 'Disconnected'
   },
-  online: false,
+  online:          false,
   showUserPicture: true
 };
 &nbsp;
@@ -241,7 +250,7 @@ export default UserPanel;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 22 2017 07:05:52 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jul 19 2017 21:59:28 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

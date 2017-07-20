@@ -3,7 +3,7 @@
 
 import React              from 'react';
 import TableBody          from '../../../../src/app/components/table/tableBody/TableBody';
-import renderer           from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TableBody component', () => {
   it('renders as expected', () => {

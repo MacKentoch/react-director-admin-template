@@ -74,6 +74,26 @@ $TEAMMATES_LI_BODER_COLOR: #edf1f2;
 $TEAMMATES_LI_BODER_WIDTH: 1px;
 $TEAMMATES_LI_BODER_STYLE: solid;
 
+$TEXT_PRIMARY_COLOR: #4697ce;
+$TEXT_INFO_COLOR: #63b7e6;
+$TEXT_SUCCESS_COLOR: #7dcc93;
+$TEXT_WARNING_COLOR: #e8db4f;
+$TEXT_RED_COLOR: #f56954;
+$TEXT_YELLOW_COLOR: #f39c12;
+$TEXT_AQUA_COLOR: #00c0ef;
+$TEXT_BLUE_COLOR: #0073b7;
+$TEXT_BLACK_COLOR: #222222;
+$TEXT_LIGHT_BLUE_COLOR: #3c8dbc;
+$TEXT_GREEN_COLOR: #00a65a;
+$TEXT_NAVY_COLOR: #001f3f;
+$TEXT_TEAL_COLOR: #39cccc;
+$TEXT_OLIVE_COLOR: #3d9970;
+$TEXT_LIME_COLOR: #01ff70;
+$TEXT_ORANGE_COLOR: #ff851b;
+$TEXT_FUCHSIA_COLOR: #f012be;
+$TEXT_PURPLE_COLOR: #932ab6;
+$TEXT_MAROON_COLOR: #85144b;
+
 
 // mixins:
 @mixin html-body {
@@ -535,7 +555,6 @@ img {
 }
 
 /* teammates  */
-
 .teammates {
   a {
     color:$TEAMMATES_LINK_COLOR;
@@ -556,3 +575,64 @@ img {
     }
   }
 }
+
+/* Text colors */
+.text-primary {
+  color: $TEXT_PRIMARY_COLOR;
+}
+.text-info {
+  color: $TEXT_INFO_COLOR;
+}
+.text-success {
+  color: $TEXT_SUCCESS_COLOR;
+}
+.text-warning {
+  color: $TEXT_WARNING_COLOR;
+}
+.text-red {
+  color: $TEXT_RED_COLOR !important;
+}
+.text-yellow {
+  color: $TEXT_YELLOW_COLOR !important;
+}
+.text-aqua {
+  color: $TEXT_AQUA_COLOR !important;
+}
+.text-blue {
+  color: $TEXT_BLUE_COLOR !important;
+}
+.text-black {
+  color: $TEXT_BLACK_COLOR !important;
+}
+.text-light-blue {
+  color: $TEXT_LIGHT_BLUE_COLOR !important;
+}
+.text-green {
+  color: $TEXT_GREEN_COLOR !important;
+}
+.text-navy {
+  color: $TEXT_NAVY_COLOR !important;
+}
+.text-teal {
+  color: $TEXT_TEAL_COLOR !important;
+}
+.text-olive {
+  color: $TEXT_OLIVE_COLOR !important;
+}
+.text-lime {
+  color: $TEXT_LIME_COLOR !important;
+}
+.text-orange {
+  color: $TEXT_ORANGE_COLOR !important;
+}
+.text-fuchsia {
+  color: $TEXT_FUCHSIA_COLOR !important;
+}
+.text-purple {
+  color: $TEXT_PURPLE_COLOR !important;
+}
+.text-maroon {
+  color: $TEXT_MAROON_COLOR !important;
+}
+
+/*slider css*/

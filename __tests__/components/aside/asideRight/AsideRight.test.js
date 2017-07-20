@@ -2,7 +2,7 @@
 
 import React          from 'react';
 import AsideRight     from '../../../../src/app/components/aside/asideRight/AsideRight';
-import renderer       from 'react-test-renderer';
+import renderer       from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 
 describe('AsideRight component', () => {

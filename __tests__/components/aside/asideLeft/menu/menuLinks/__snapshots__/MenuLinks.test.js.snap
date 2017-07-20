@@ -9,8 +9,8 @@ exports[`AnimatedView component renders as expected 1`] = `
       className="active"
     >
       <a
+        href="/view1"
         onClick={[Function]}
-        style={Object {}}
       >
         <i
           className="fa fa-home"
@@ -40,8 +40,8 @@ exports[`AnimatedView component renders as expected 1`] = `
       className=""
     >
       <a
+        href="/view2"
         onClick={[Function]}
-        style={Object {}}
       >
         <i
           className="fa fa-user"
