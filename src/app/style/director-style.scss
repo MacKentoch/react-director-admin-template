@@ -11,6 +11,7 @@ $BLUE: #4697ce;
 $GREEN: #27C24C;
 $YELLOW: #fad733;
 $AQUA: #00c0ef;
+$PURPLE: #7266ba;
 
 /*
   Styling vars
@@ -112,6 +113,8 @@ $TEXT_MAROON_COLOR: #85144b;
 
 $SLIDER_HANDLE_BORDER_COLOR: #86D4FC;
 
+$TABLE_STRIPED_BACKGROUND_COLOR: #f3f4f5;
+
 // mixins:
 @mixin html-body {
   overflow-x: hidden!important;
@@ -130,6 +133,14 @@ $SLIDER_HANDLE_BORDER_COLOR: #86D4FC;
 @mixin layout-two-col-template {
   min-height: 100%;
   display: block;
+}
+
+@mixin back-color-table-striped {
+  background-color: $TABLE_STRIPED_BACKGROUND_COLOR;
+}
+
+@mixin no-border {
+  border: 0;
 }
 
 // theme:
@@ -683,6 +694,12 @@ img {
   }
 }
 
+#purple {
+  .slider-selection {
+    background: $PURPLE;
+  }
+}
+
 .slider-handle {
   background: {
     color: $WHITE;
@@ -694,4 +711,80 @@ img {
   }
 }
 
-/*bg-violet*/
+/*Hide elements by display none only*/
+.hide {
+  display: none !important;
+}
+/* Remove borders */
+.no-border {
+  border: 0px !important;
+}
+/* Remove padding */
+.no-padding {
+  padding: 0px !important;
+}
+/* Remove margins */
+.no-margin {
+  margin: 0px !important;
+}
+/* Remove box shadow */
+.no-shadow {
+  box-shadow: none!important;
+}
+/* Don't display when printing */
+@media print {
+  .no-print {
+    display: none;
+  }
+  .left-side,
+  .header,
+  .content-header {
+    display: none;
+  }
+  .right-side {
+    margin: 0;
+  }
+}
+/* Remove border radius */
+.flat {
+  border-radius: 0 !important;
+}
+
+/* Change the color of the striped tables */
+// .table-striped > tbody > tr:nth-child(odd) > td,
+// .table-striped > tbody > tr:nth-child(odd) > th {
+//   @include back-color-table-striped();
+// }
+
+.table-striped {
+  & > tbody {
+    & > tr:nth-child(odd) {
+      td {
+        @include back-color-table-striped();
+      }
+      th {
+        @include back-color-table-striped();
+      }
+    }
+  }
+}
+
+// .table.no-border,
+// .table.no-border td,
+// .table.no-border th {
+//   border: 0;
+// }
+
+.table {
+  .no-border {
+    border: 0;
+    th {
+      border: 0;
+    } 
+    td {
+      border: 0;
+    }
+  }
+}
+
+/* .text-center in tables */
