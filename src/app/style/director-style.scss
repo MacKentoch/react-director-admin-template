@@ -785,6 +785,33 @@ img {
       border: 0;
     }
   }
+  /* .text-center in tables */
+  .text-center {
+    text-align: center;
+    td {
+      text-align: right;
+    }
+    th {
+      text-align: left;
+    }
+  }
 }
 
-/* .text-center in tables */
+.text-bold {
+  font-weight: 700;
+  .text-bold.table td {
+    font-weight: 700;
+  }
+  .text-bold.table th {
+    font-weight: 700;
+  }
+}
+
+.border-radius-none {
+  border-radius: 0 !important;
+}
+
+/*
+Gradient Background colors
+*/
+
