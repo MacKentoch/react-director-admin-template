@@ -9,4 +9,5 @@ cache:
     - node_modules
 before_script:
     - yarn install
-after_success: yarn run test:coverage
+script:
+  - yarn run test:coverage
