@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "flow": "node_modules/.bin/flow",
-    "test": "cross-env NODE_ENV=test jest",
+    "test": "./node_modules/.bin/jest --coverage",
     "test:update": "cross-env NODE_ENV=test jest -u",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
