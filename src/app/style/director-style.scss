@@ -8,10 +8,13 @@
 $RED: #f05050;
 $WHITE: #FFF;
 $BLUE: #4697ce;
+$MAIN_BLUE: #0073b7;
+$LIGHT_BLUE: #3c8dbc;
 $GREEN: #27C24C;
 $YELLOW: #fad733;
 $AQUA: #00c0ef;
 $PURPLE: #7266ba;
+$TEAL: #39cccc;
 
 /*
   Styling vars
@@ -20,7 +23,7 @@ $BODY_BACKGROUND_COLOR: #F1F2F3;
 $FONT_FAMILLY: 'Lato', sans-serif;
 
 
-$LINK_COLOR: #3c8dbc;
+$LINK_COLOR: $LIGHT_BLUE;
 $LINK_SELECTED_COLOR: #72afd2;
 
 $LEFT_SIDE_BAR_WIDTH: 220px;
@@ -68,11 +71,11 @@ $BG_BLACK_BACKGROUND_COLOR: #222222;
 $BG_RED_BACKGROUND_COLOR: $RED;
 $BG_YELLOW_BACKGROUND_COLOR:$YELLOW;
 $BG_AQUA_BACKGROUND_COLOR:#4FC1E9;
-$BG_BLUE_BACKGROUND_COLOR:#0073b7;
-$BG_LIGHT_BLUE_BACKGROUND_COLOR:#3c8dbc;
+$BG_BLUE_BACKGROUND_COLOR:$MAIN_BLUE;
+$BG_LIGHT_BLUE_BACKGROUND_COLOR:$LIGHT_BLUE;
 $BG_GREEN_BACKGROUND_COLOR:$GREEN;
 $BG_NAVY_BACKGROUND_COLOR:#001f3f;
-$BG_TEAL_BACKGROUND_COLOR:#39cccc;
+$BG_TEAL_BACKGROUND_COLOR:$TEAL;
 $BG_OLIVE_BACKGROUND_COLOR:#3d9970;
 $BG_LIME_BACKGROUND_COLOR:#01ff70;
 $BG_ORANGE_BACKGROUND_COLOR:#ff851b;
@@ -98,12 +101,12 @@ $TEXT_WARNING_COLOR: #e8db4f;
 $TEXT_RED_COLOR: #f56954;
 $TEXT_YELLOW_COLOR: #f39c12;
 $TEXT_AQUA_COLOR: $AQUA;
-$TEXT_BLUE_COLOR: #0073b7;
+$TEXT_BLUE_COLOR: $MAIN_BLUE;
 $TEXT_BLACK_COLOR: #222222;
-$TEXT_LIGHT_BLUE_COLOR: #3c8dbc;
+$TEXT_LIGHT_BLUE_COLOR: $LIGHT_BLUE;
 $TEXT_GREEN_COLOR: #00a65a;
 $TEXT_NAVY_COLOR: #001f3f;
-$TEXT_TEAL_COLOR: #39cccc;
+$TEXT_TEAL_COLOR: $TEAL;
 $TEXT_OLIVE_COLOR: #3d9970;
 $TEXT_LIME_COLOR: #01ff70;
 $TEXT_ORANGE_COLOR: #ff851b;
@@ -114,6 +117,11 @@ $TEXT_MAROON_COLOR: #85144b;
 $SLIDER_HANDLE_BORDER_COLOR: #86D4FC;
 
 $TABLE_STRIPED_BACKGROUND_COLOR: #f3f4f5;
+
+$TEAL_GRADIANT_SECONDARY_COLOR: #7adddd;
+$LIGHT_BLUE_GRADIANT_SECONDARY_COLOR: #67a8ce;
+$MAIN_BLUE_GRADIANT_SECONDARY_COLOR: #0089db;
+$AQUA_GRADIANT_SECONDARY_COLOR: #14d1ff;
 
 // mixins:
 @mixin html-body {
@@ -141,6 +149,14 @@ $TABLE_STRIPED_BACKGROUND_COLOR: #f3f4f5;
 
 @mixin no-border {
   border: 0;
+}
+
+@mixin background-linear-gradiant($color1, $color2) {
+  background: $color1 !important;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $color1), color-stop(1, $color2)) !important;
+  background: -ms-linear-gradient(bottom, $color1, $color2) !important;
+  background: -moz-linear-gradient(center bottom, $color1 0%, $color2 100%) !important;
+  background: -o-linear-gradient($color2, $color1) !important;
 }
 
 // theme:
@@ -814,4 +830,37 @@ img {
 /*
 Gradient Background colors
 */
+.bg-teal-gradient {
+  @include background-linear-gradiant($TEAL, $TEAL_GRADIANT_SECONDARY_COLOR);
+  color: $WHITE;
+}
 
+.bg-light-blue-gradient {
+  @include background-linear-gradiant($LIGHT_BLUE, $LIGHT_BLUE_GRADIANT_SECONDARY_COLOR);
+  color: $WHITE;
+}
+
+.bg-blue-gradient {
+  @include background-linear-gradiant($MAIN_BLUE, $MAIN_BLUE_GRADIANT_SECONDARY_COLOR);
+  color: $WHITE;
+}
+
+.bg-aqua-gradient {
+  @include background-linear-gradiant($AQUA, $AQUA_GRADIANT_SECONDARY_COLOR);
+  color: $WHITE;
+}
+
+.bg-yellow-gradient {
+  @include background-linear-gradiant(#f39c12, #f7bc60);
+  color: $WHITE;
+}
+
+.bg-purple-gradient {
+  @include background-linear-gradiant(#932ab6, #b959d9);
+  color: $WHITE;
+}
+
+.bg-green-gradient {
+  @include background-linear-gradiant(#00a65a, #00ca6d);
+  color: $WHITE;
+}
