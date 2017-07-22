@@ -9,5 +9,6 @@ cache:
     - node_modules
 before_script:
     - yarn install
+    - yarn global add jest
 script:
-  - yarn run test:coverage
+  - yarn run test
