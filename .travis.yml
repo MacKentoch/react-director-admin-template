@@ -12,3 +12,4 @@ before_script:
     - yarn global add jest
 script:
   - yarn run test
+  
