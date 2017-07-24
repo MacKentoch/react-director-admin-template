@@ -770,6 +770,8 @@ border-left: 1em solid rgb(238, 238, 238);
 border-top: 1.5em solid rgba(0, 0, 0, 0);
 content: '';
 }
+
+
 .right-side > .content-header > .breadcrumb > li > a {
   color: #444;
   text-decoration: none;
@@ -782,6 +784,7 @@ content: '';
 .right-side > .content-header > .breadcrumb > li + li:before {
   content: '>\00a0';
 }
+
 @media screen and (max-width: 767px) {
   .right-side > .content-header > .breadcrumb {
     position: relative;
@@ -809,6 +812,11 @@ content: '';
     float: right;
   }
 }
+
+/* //////////
+////////
+/////// */
+
 @media screen and (max-width: 560px) {
   body section div header {
     position: relative;

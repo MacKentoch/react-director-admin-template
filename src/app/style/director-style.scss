@@ -6,23 +6,30 @@
   General colors:
 */
 $RED: #f05050;
+$MAIN_RED: #f56954;
 $WHITE: #FFF;
 $BLUE: #4697ce;
 $MAIN_BLUE: #0073b7;
 $LIGHT_BLUE: #3c8dbc;
 $GREEN: #27C24C;
+$MAIN_GREEN: #00a65a;
 $YELLOW: #fad733;
 $MAIN_YELLOW: #f39c12;
 $AQUA: #00c0ef;
 $PURPLE: #7266ba;
 $TEAL: #39cccc;
 $PURPLE: #932ab6;
+$MAIN_BLACK: #222222;
+$MAIN_MAROON: #85144b;
+$DARK_BLACK: #000000;
 
 /*
   Styling vars
 */
 $BODY_BACKGROUND_COLOR: #F1F2F3;
 $FONT_FAMILLY: 'Lato', sans-serif;
+
+$NAV_BAR_A_LOGO_FONT_FAMILY: 'Kaushan Script', cursive;;
 
 
 $LINK_COLOR: $LIGHT_BLUE;
@@ -69,7 +76,7 @@ $LABEL_DANGER_COLOR: #FAE6E6;
 $BG_COLOR_COLOR: #f9f9f9;
 $BG_WHITE_BACKGROUND_COLOR: $WHITE;
 $BG_GREY_BACKGROUND_COLOR: #eaeaec;
-$BG_BLACK_BACKGROUND_COLOR: #222222;
+$BG_BLACK_BACKGROUND_COLOR: $MAIN_BLACK;
 $BG_RED_BACKGROUND_COLOR: $RED;
 $BG_YELLOW_BACKGROUND_COLOR:$YELLOW;
 $BG_AQUA_BACKGROUND_COLOR:#4FC1E9;
@@ -83,7 +90,7 @@ $BG_LIME_BACKGROUND_COLOR:#01ff70;
 $BG_ORANGE_BACKGROUND_COLOR:#ff851b;
 $BG_FUSHSIA_BACKGROUND_COLOR:#f012be;
 $BG_PURPLE_BACKGROUND_COLOR:$PURPLE;
-$BG_MAROON_BACKGROUND_COLOR:#85144b;
+$BG_MAROON_BACKGROUND_COLOR:$MAIN_MAROON;
 $BG_VIOLET_BACKGROUND_COLOR:#7266ba;
 $BG_TWITTER_BACKGROUND_COLOR:#00c7f7;
 $BG_FACEBOOK_BACKGROUND_COLOR:#335397;
@@ -100,13 +107,13 @@ $TEXT_PRIMARY_COLOR: $BLUE;
 $TEXT_INFO_COLOR: #63b7e6;
 $TEXT_SUCCESS_COLOR: #7dcc93;
 $TEXT_WARNING_COLOR: #e8db4f;
-$TEXT_RED_COLOR: #f56954;
+$TEXT_RED_COLOR: $MAIN_RED;
 $TEXT_YELLOW_COLOR: $MAIN_YELLOW;
 $TEXT_AQUA_COLOR: $AQUA;
 $TEXT_BLUE_COLOR: $MAIN_BLUE;
-$TEXT_BLACK_COLOR: #222222;
+$TEXT_BLACK_COLOR: $MAIN_BLACK;
 $TEXT_LIGHT_BLUE_COLOR: $LIGHT_BLUE;
-$TEXT_GREEN_COLOR: #00a65a;
+$TEXT_GREEN_COLOR: $MAIN_GREEN;
 $TEXT_NAVY_COLOR: #001f3f;
 $TEXT_TEAL_COLOR: $TEAL;
 $TEXT_OLIVE_COLOR: #3d9970;
@@ -114,7 +121,7 @@ $TEXT_LIME_COLOR: #01ff70;
 $TEXT_ORANGE_COLOR: #ff851b;
 $TEXT_FUCHSIA_COLOR: #f012be;
 $TEXT_PURPLE_COLOR: $PURPLE;
-$TEXT_MAROON_COLOR: #85144b;
+$TEXT_MAROON_COLOR: $MAIN_MAROON;
 
 $SLIDER_HANDLE_BORDER_COLOR: #86D4FC;
 
@@ -126,6 +133,11 @@ $MAIN_BLUE_GRADIANT_SECONDARY_COLOR: #0089db;
 $AQUA_GRADIANT_SECONDARY_COLOR: #14d1ff;
 $MAIN_YELLOW_GRADIANT_SECONDARY_COLOR: #f7bc60;
 $MAIN_PURPLE_GRADIANT_SECONDARY_COLOR :#b959d9;
+$MAIN_GREEN_GRADIANT_SECONDARY_COLOR: #00ca6d;
+$MAIN_RED_GRADIANT_SECONDARY_COLOR: #f89384;
+$MAIN_BLACK_GRADIANT_SECONDARY_COLOR: #3c3c3c;
+$MAIN_MAROON_GRADIANT_SECONDARY_COLOR: #85144b;
+
 
 // mixins:
 @mixin html-body {
@@ -175,14 +187,140 @@ body {
   section {
     div {
       header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // z-index: 1030;
+        position: relative;
+        max-height: 100px;
         z-index: 1030;
+
+        .navbar {
+          height: 50px;
+          margin-bottom: 0;
+          margin-left: 220px;
+
+          .nav {
+            & > li.user {
+               & > a {
+                & > .fa {
+                  margin-right: 5px;
+                }
+                & > .glyphicon {
+                  margin-right: 5px;
+                }
+                & > .ion {
+                  margin-right: 5px;
+                }
+               }
+            }
+            & > li {
+              & > a {
+                & > .label {
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 7px;
+                  right: 2px;
+                  font-size: 10px;
+                  font-weight: normal;
+                  width: 15px;
+                  height: 15px;
+                  line-height: 1.0em;
+                  text-align: center;
+                  padding: 2px;
+                }
+
+                &:hover {
+                  .label {
+                    top: 3px; 
+                  }
+                }
+              }
+            }
+          }
+
+          & > a.logo {
+            float: left;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            padding: 0 10px;
+            width: 220px;
+            font-family: $NAV_BAR_A_LOGO_FONT_FAMILY;
+            font-weight: 500;
+            height: 50px;
+            display: block;
+          }
+
+          .sidebar-toggle {
+            float: left;
+            padding: 9px 5px;
+            margin-top: 8px;
+            margin-right: 0;
+            margin-bottom: 8px;
+            margin-left: 5px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+
+            &:hover {
+              .icon-bar {
+                background: #f6f6f6;
+              }
+            }
+
+            .icon-bar {
+              display: block;
+              width: 22px;
+              height: 2px;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              border-radius: 4px;
+            }
+
+            .icon-bar + .icon-bar {
+              margin-top: 4px;
+            }
+          }
+        }
+
+        .logo {
+          .icon {
+            margin-right: 10px;
+          }
+        }
       }
     }
   }
+
+@media (max-width: 767px) {
+  .navbar {
+    margin: 0;
+    float: left;
+
+    .navbar-nav {
+      & > li {
+        float: left;
+
+        & > a {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .navbar-right {
+      float: right;
+    }
+  }  
+}
 
   /*
       By default the layout is not fixed but if you add the class .fixed to the body element
@@ -260,6 +398,74 @@ a {
     color: $BODY_BACKGROUND_COLOR;
   }
   margin-left: $LEFT_SIDE_BAR_WIDTH;
+
+  & > .content-header {
+    position: relative;
+    padding: 15px;
+
+    & > .breadcrumb {
+      float: right;
+      background: transparent;
+      margin-top: 0px;
+      margin-bottom: 0;
+      font-size: 12px;
+      padding: 7px 5px;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+
+      & > li {
+        & > a {
+          color: #444;
+          text-decoration: none;
+
+          & .fa {
+            margin-right: 5px;
+          }
+          & .glyphicon {
+            margin-right: 5px;
+          }
+          & .ion {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      & > li + li:before {
+        content: '>\00a0';
+      }
+    }
+
+    & > h1 {
+      margin: 0;
+      font-size: 24px;
+
+      & > small {
+        font-size: 15px;
+        display: inline-block;
+        padding-left: 4px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .right-side {
+    & > .content-header {
+      & > .breadcrumb {
+        position: relative;
+        margin-top: 5px;
+        top: 0;
+        right: 0;
+        float: none;
+        background: #efefef;
+      }
+    }
+  }
 }
 
 /*left side - contains sidebar*/
@@ -295,6 +501,60 @@ a {
     } 
   }
 }
+
+/* breadcrumb */
+.breadcrumb {
+  background-color: $WHITE;
+  a {
+    color: $DARK_BLACK;
+  }
+}
+
+/* breadcrumb-alt */
+.breadcrumb-alt {
+  overflow: hidden;
+  list-style: none;
+  margin: 0px 0px 20px;
+  padding: 0px;
+  width: 100%;
+
+  & > li {
+    float: left;
+    margin: 0px 25px 0px 0px;
+
+    & > a {
+      position: relative;
+      float: left;
+      background-color: rgb(238, 238, 238);
+      color: rgb(118, 118, 118);
+      font-size: 12px;
+      padding: 10px;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -1em;
+        margin-top: -1.6em;
+        border-color: rgb(238, 238, 238) rgb(238, 238, 238) rgb(238, 238, 238) rgba(0, 0, 0, 0);
+        border-style: solid;
+        border-width: 1.5em 0px 1.7em 1em;
+        content: '';
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -1em;
+        margin-top: -1.5em;
+        border-bottom: 1.5em solid rgba(0, 0, 0, 0);
+        border-left: 1em solid rgb(238, 238, 238);
+        border-top: 1.5em solid rgba(0, 0, 0, 0);
+        content: '';
+      }
+    }
+  }
+}
+
 /*Give content full width on xs screens*/
 @media screen and (max-width: 992px) {
   .right-side {
@@ -865,6 +1125,23 @@ Gradient Background colors
 }
 
 .bg-green-gradient {
-  @include background-linear-gradiant(#00a65a, #00ca6d);
+  @include background-linear-gradiant($MAIN_GREEN, $MAIN_GREEN_GRADIANT_SECONDARY_COLOR);
   color: $WHITE;
+}
+
+.bg-red-gradient {
+  @include background-linear-gradiant($MAIN_RED, $MAIN_RED_GRADIANT_SECONDARY_COLOR);
+  color: $WHITE;
+}
+
+.bg-black-gradient {
+  @include background-linear-gradiant($MAIN_BLACK, $MAIN_BLACK_GRADIANT_SECONDARY_COLOR);
+  color: #fff;
+}
+.bg-maroon-gradient {
+  @include background-linear-gradiant($MAIN_MAROON, $MAIN_MAROON_GRADIANT_SECONDARY_COLOR);
+  color: #fff;
+}
+.connectedSortable {
+  min-height: 100px;
 }
