@@ -299,6 +299,44 @@ body {
     }
   }
 
+@media screen and (max-width: 560px) {
+  body {
+    section {
+      div {
+        header {
+          position: relative;
+
+          .logo {
+            width: 100%;
+            float: none;
+            position: relative!important;
+          } 
+          .navbar {
+            width: 100%;
+            float: none;
+            position: relative!important;
+            margin: 0;
+          }
+        }
+      } 
+    }
+
+    .fixed {
+      & > .header {
+        position: fixed;    
+      }
+
+      & >.wrapper {
+        margin-top: 100px!important;
+      }
+
+      & > .sidebar-offcanvas {
+        margin-top: 100px!important;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .navbar {
     margin: 0;
@@ -1145,3 +1183,7 @@ Gradient Background colors
 .connectedSortable {
   min-height: 100px;
 }
+/*
+    Component: Sidebar
+--------------------------
+*/
