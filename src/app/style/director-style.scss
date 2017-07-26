@@ -1187,3 +1187,81 @@ Gradient Background colors
     Component: Sidebar
 --------------------------
 */
+.sidebar {
+  margin-bottom: 5px;
+
+  .sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      margin: 0;
+      padding: 0;
+
+      & > a {
+        padding: 12px 5px 12px 15px;
+        display: block;
+
+        & > .fa {
+          width: 20px;
+        }
+
+        & > .glyphicon {
+          width: 20px;
+        }
+
+        & > .ion {
+          width: 20px;
+        }
+      }
+    }
+
+    .treeview-menu {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      & > li {
+        margin: 0;
+
+        & > a {
+          padding: 8px 5px 8px 15px;
+          display: block;
+          font-size: 14px;
+          margin: 0px 0px;
+
+          & > .fa {
+            width: 20px;
+          }
+
+          & > .glyphicon {
+            width: 20px;
+          }
+
+          & > .ion {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-form {
+    input {
+      &:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-color: transparent!important;
+      }
+    }
+    
+  }
+}
+/*
+
+user-panel
+
+*/
