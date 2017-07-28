@@ -299,67 +299,6 @@ body {
     }
   }
 
-@media screen and (max-width: 560px) {
-  body {
-    section {
-      div {
-        header {
-          position: relative;
-
-          .logo {
-            width: 100%;
-            float: none;
-            position: relative!important;
-          } 
-          .navbar {
-            width: 100%;
-            float: none;
-            position: relative!important;
-            margin: 0;
-          }
-        }
-      } 
-    }
-
-    .fixed {
-      & > .header {
-        position: fixed;    
-      }
-
-      & >.wrapper {
-        margin-top: 100px!important;
-      }
-
-      & > .sidebar-offcanvas {
-        margin-top: 100px!important;
-      }
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .navbar {
-    margin: 0;
-    float: left;
-
-    .navbar-nav {
-      & > li {
-        float: left;
-
-        & > a {
-          padding-top: 15px;
-          padding-bottom: 15px;
-          line-height: 20px;
-        }
-      }
-    }
-
-    .navbar-right {
-      float: right;
-    }
-  }  
-}
-
   /*
       By default the layout is not fixed but if you add the class .fixed to the body element
       the sidebar and the navbar will automatically become poisitioned fixed
@@ -390,6 +329,24 @@ body {
         top: $HEADER_HEIGHT;
       }
     }
+
+    .sidebar-offcanvas {
+      margin-top: 50px;
+      left: -220px;
+    }
+
+    .row-offcanvas-left.active {
+      .navbar {
+        left: 220px !important;
+        right: 0;
+      }
+    }
+
+    .row-offcanvas-left.active {
+      .sidebar-offcanvas {
+        left: 0px;
+      }
+    }
   }
 }
 
@@ -399,11 +356,11 @@ a {
   &:hover {
     @include link-selected($LINK_SELECTED_COLOR);
   }
-  
+
   &:active {
     @include link-selected($LINK_SELECTED_COLOR);
   }
-  
+
   &:focus {
     @include link-selected($LINK_SELECTED_COLOR);
   }
@@ -491,21 +448,6 @@ a {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .right-side {
-    & > .content-header {
-      & > .breadcrumb {
-        position: relative;
-        margin-top: 5px;
-        top: 0;
-        right: 0;
-        float: none;
-        background: #efefef;
-      }
-    }
-  }
-}
-
 /*left side - contains sidebar*/
 .left-side {
   /* Define 2 column template */
@@ -513,31 +455,6 @@ a {
   position: absolute;
   width: $LEFT_SIDE_BAR_WIDTH;
   top: 0;
-}
-
-@media screen and (min-width: 992px) {
-  .left-side {
-    top: $HEADER_HEIGHT;
-
-    /* Left side collapse */
-    .collapse-left {
-      left: -$LEFT_SIDE_BAR_WIDTH;
-    }
-  }
-  /*Right side strech mode*/
-  .right-side {
-    .strech {
-      margin: {
-        left: 0;
-      }
-
-      > .content-header {
-        margin: {
-          top: 0px;
-        }
-      }
-    } 
-  }
 }
 
 /* breadcrumb */
@@ -589,15 +506,6 @@ a {
         border-top: 1.5em solid rgba(0, 0, 0, 0);
         content: '';
       }
-    }
-  }
-}
-
-/*Give content full width on xs screens*/
-@media screen and (max-width: 992px) {
-  .right-side {
-    margin: {
-      left: 0;
     }
   }
 }
@@ -1049,20 +957,7 @@ img {
 .no-shadow {
   box-shadow: none!important;
 }
-/* Don't display when printing */
-@media print {
-  .no-print {
-    display: none;
-  }
-  .left-side,
-  .header,
-  .content-header {
-    display: none;
-  }
-  .right-side {
-    margin: 0;
-  }
-}
+
 /* Remove border radius */
 .flat {
   border-radius: 0 !important;
@@ -1316,7 +1211,185 @@ user-panel
 }
 
 /*
-* Off Canvas
-* --------------------------------------------------
-*  Gives us the push menu effect
+    Dropdown menus
+----------------------------
 */
+/*Dropdowns in general*/
+
+
+
+/**
+  --------------------------------------------------
+    Media queries
+  --------------------------------------------------
+*/
+
+/*
+* Off Canvas
+*  -> Gives us the push menu effect
+*/
+
+@media screen and (max-width: 992px) {
+  .relative {
+    position: relative;
+  }
+
+  /*Give content full width on xs screens*/
+  .right-side {
+    margin: {
+      left: 0;
+    }
+  }
+
+  .row-offcanvas-right {
+    .sidebar-offcanvas {
+      right: -220px;
+    }
+
+    .active {
+      right: 220px;
+    }
+  }
+
+  .row-offcanvas-left {
+    .sidebar-offcanvas {
+      left: -220px;
+    }
+
+    .active {
+      left: 220px;
+    }
+  }
+  
+  .sidebar-offcanvas {
+    left: 0;
+  }
+
+  body.fixed .sidebar-offcanvas {
+    margin-top: 50px;
+    left: -220px;
+  }
+  body.fixed .row-offcanvas-left.active .navbar {
+    left: 220px !important;
+    right: 0;
+  }
+  body.fixed .row-offcanvas-left.active .sidebar-offcanvas {
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .left-side {
+    top: $HEADER_HEIGHT;
+
+    /* Left side collapse */
+    .collapse-left {
+      left: -$LEFT_SIDE_BAR_WIDTH;
+    }
+  }
+  /*Right side strech mode*/
+  .right-side {
+    .strech {
+      margin: {
+        left: 0;
+      }
+
+      > .content-header {
+        margin: {
+          top: 0px;
+        }
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .right-side {
+    & > .content-header {
+      & > .breadcrumb {
+        position: relative;
+        margin-top: 5px;
+        top: 0;
+        right: 0;
+        float: none;
+        background: #efefef;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    margin: 0;
+    float: left;
+
+    .navbar-nav {
+      & > li {
+        float: left;
+
+        & > a {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .navbar-right {
+      float: right;
+    }
+  }  
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    section {
+      div {
+        header {
+          position: relative;
+
+          .logo {
+            width: 100%;
+            float: none;
+            position: relative!important;
+          } 
+          .navbar {
+            width: 100%;
+            float: none;
+            position: relative!important;
+            margin: 0;
+          }
+        }
+      } 
+    }
+
+    .fixed {
+      & > .header {
+        position: fixed;    
+      }
+
+      & >.wrapper {
+        margin-top: 100px!important;
+      }
+
+      & > .sidebar-offcanvas {
+        margin-top: 100px!important;
+      }
+    }
+  }
+}
+
+/* Don't display when printing */
+@media print {
+  .no-print {
+    display: none;
+  }
+  .left-side,
+  .header,
+  .content-header {
+    display: none;
+  }
+  .right-side {
+    margin: 0;
+  }
+}
