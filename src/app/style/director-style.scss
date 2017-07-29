@@ -96,6 +96,8 @@ $BG_TWITTER_BACKGROUND_COLOR:#00c7f7;
 $BG_FACEBOOK_BACKGROUND_COLOR:#335397;
 $BG_GOOGLE_PLUS_BACKGROUND_COLOR:#df4a32;
 
+$DROPDOWN_MENU_RIGHHT_COLOR: #39435c;
+
 $TEXT_AREA_BORDER_COLOR: #EEE;
 
 $TEAMMATES_LINK_COLOR: #505050;
@@ -1211,11 +1213,55 @@ user-panel
 }
 
 /*
+----------------------------
     Dropdown menus
 ----------------------------
 */
 /*Dropdowns in general*/
+.dropdown-menu {
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2300;
 
+  & > li {
+    & > a {
+      &:hover {
+        background-color: $LIGHT_BLUE;
+        color: $BG_COLOR_COLOR;
+      }
+
+      & > .fa {
+        margin-right: 10px;
+      }
+
+      & > .glyphicon {
+        margin-right: 10px;
+      }
+
+      & > .ion {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.dropdown-menu-right {
+  & > li {
+    & > a {
+      &:hover {
+        background-color: $DROPDOWN_MENU_RIGHHT_COLOR;
+        color: $BG_COLOR_COLOR;
+      }
+    }
+  }
+}
+
+/*
+------------------------------------
+    Navbar custom dropdown menu
+------------------------------------
+*/
 
 
 /**
