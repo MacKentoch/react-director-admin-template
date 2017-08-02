@@ -3,8 +3,6 @@
 ReactJS version of Director Responsive Admin Template Free
 ==========
 
-Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin-template/) for giving us the original template for free :clap:.
-
 ## Preview
 ![preview](https://raw.githubusercontent.com/MacKentoch/react-director-admin-template/master/preview/preview.png)
 
@@ -12,12 +10,14 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 
 ## Content
 
-- Director template (see [original one here]((http://web-apps.ninja/director-free-responsive-admin-template/)))
+- admin template
 - ReactJS 15.6+
 - Redux
 - react-hot-reload 3+
 - React router 4
 - webpack 3
+- postcss
+- sass
 
 ## Usage
 
@@ -30,42 +30,32 @@ Credits to [web-apps.ninja](http://web-apps.ninja/director-free-responsive-admin
 npm install
 ```
 
-### bundle dev mode
+or 
 
-*General case:*
 ```bash
-npm run dev
+yarn install
 ```
 
-*Windows - particular - case::*
+### bundle dev mode
+
 ```bash
-npm run dev-win
+npm run dev
 ```
 
 ### dev : hot reload mode
 
 Development mode = best dev experience (*hot reload, redux devtools extension...*).
 
-*General case:*
 ```bash
 npm run start
 ```
 
-*Windows - particular - case::*
-```bash
-npm run start-win
-```
-> Then go to localhost:3000
+> Then go to [localhost:3000](http://localhost:3000)
 
 ### bundle production mode
 
-*General case:*
 ```bash
 npm run prod
-```
-*Windows - particular - case::*
-```bash
-npm run prod-win
 ```
 
 ### run production
@@ -79,6 +69,17 @@ In `Development` ReactJS is `not optimized at all` (*you may even find the appli
 npm run prod-server
 ```
 > Then go to localhost:8081
+
+
+## What's next?
+- [ ] get rid of jQuery (*use of react-bootstrap only*)
+- [ ] add react-bootstrap-table
+- [ ] add redux-form
+- [ ] add authentication examples
+- [ ] tests
+- [ ] optimize image import
+
+
 
 ## License
 
