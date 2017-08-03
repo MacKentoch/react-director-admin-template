@@ -56,7 +56,7 @@
     "eslint-plugin-react": "^7.1.0",
     "expose-loader": "^0.7.3",
     "express": "^4.15.3",
-    "extract-text-webpack-plugin": "2.1.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "flow-bin": "^0.49.1",
     "json-loader": "^0.5.4",
@@ -78,10 +78,10 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "2.6.1",
-    "webpack-dev-middleware": "^1.10.2",
-    "webpack-dev-server": "^2.4.5",
-    "webpack-hot-middleware": "^2.18.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.6.1",
+    "webpack-hot-middleware": "^2.18.2",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {

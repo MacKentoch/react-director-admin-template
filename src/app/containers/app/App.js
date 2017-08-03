@@ -1,7 +1,7 @@
 import React, {
-  PropTypes,
   Component
 }                             from 'react';
+import PropTypes              from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as actions           from '../../redux/modules/actions';
@@ -15,11 +15,9 @@ import { Modals }             from '../../views';
 import { appConfig }          from '../../config';
 import { navigation }         from '../../models';
 import MainRoutes             from '../../routes/MainRoutes';
-// import { withRouter }         from 'react-router';
-import { NavLink, withRouter }            from 'react-router-dom';
+import { withRouter }         from 'react-router';
 
 class App extends Component {
-
   static propTypes = {
     // react-router 4:
     match:    PropTypes.object.isRequired,
@@ -101,9 +99,6 @@ class App extends Component {
             isAnimated={true}
             isExpanded={sideMenuIsCollapsed}>
             <MainRoutes />
-            <NavLink to="/Dashboard/statsCard" >
-              TEST
-            </NavLink>
           </AsideRight>
         </div>
         {/* <Footer /> */}

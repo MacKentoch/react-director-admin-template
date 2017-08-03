@@ -22,52 +22,56 @@ const AsideLeft = ({
   currentView,
   sideMenu
 }) => (
-  <aside className={
-    cx({
-      'no-print': true,
-      'left-side': true,
-      'aside-left--fixed': true,
-      'sidebar-offcanvas': true,
-      'sidebar-animated': isAnimated,
-      'collapse-left':    isCollapsed
-    })}
+  <aside 
+    className={
+      cx({
+        'no-print': true,
+        'left-side': true,
+        'aside-left--fixed': true,
+        'sidebar-offcanvas': true,
+        'sidebar-animated': isAnimated,
+        'collapse-left':    isCollapsed
+      })
+    }
     // add overflow to left sidebar:
     style={{
       height: '100%',
       overflow: 'auto',
       position: 'fixed'
-    }}>
-      <section className="sidebar">
-        <UserPanel
-          hello={helloWord}
-          username={username}
-          connectionStatus={connectionStatus}
-          online={userIsConnected}
-          userPicture={userPicture}
-          showUserPicture={showPicture}
-        />
-        <Horloge />
+    }}
+  >
+    <section className="sidebar">
+      <UserPanel
+        hello={helloWord}
+        username={username}
+        connectionStatus={connectionStatus}
+        online={userIsConnected}
+        userPicture={userPicture}
+        showUserPicture={showPicture}
+      />
+      <Horloge />
 
-        <SearchForm
-          onSearchSubmit={(value) => console.log('searching: ', value)}
-        />
-        {
-          sideMenu.map(
-            ({id, group, menus}, menuIdx) => {
-              return (
-                <Menu
-                  key={menuIdx}
-                  initialCollapseState={menuIdx === 0 ? false : null}
-                  headerTitle={group}
-                  headerBackColor="#283744"
-                  activeView={currentView}
-                  views={menus}
-                />
-              );
-            }
-          )
-        }
-      </section>
+      <SearchForm
+        onSearchSubmit={(value) => console.log('searching: ', value)}
+      />
+      {
+        sideMenu.map(
+          ({id, group, menus}, menuIdx) => {
+            return (
+              <Menu
+                key={menuIdx}
+                initialCollapseState={menuIdx === 0 ? false : null}
+                headerTitle={group}
+                headerBackColor="#283744"
+                activeView={currentView}
+                views={menus}
+                id={id}
+              />
+            );
+          }
+        )
+      }
+    </section>
   </aside>
 );
 

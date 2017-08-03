@@ -17,6 +17,7 @@ import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore           from './redux/store/configureStore';
 import App                      from './containers/app/App';
+import ScrollTop                from './components/scrollToTop/ScrollToTop';
 
 const store           = configureStore();
 const history         = createHistory();
@@ -28,7 +29,9 @@ class Root extends Component {
       <Provider store={store}>
         <div>
           <Router history={syncedHistory}>
-            <App />
+            <ScrollTop>
+              <App />
+            </ScrollTop>
           </Router>
         </div>
       </Provider>
