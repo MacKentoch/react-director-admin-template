@@ -6,7 +6,9 @@ import React, {
 // static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
 import {
   // BrowserRouter as Router,
-  HashRouter as Router
+  HashRouter as Router,
+  Switch,
+  Route
 }                               from 'react-router-dom';
 // static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
 import {
@@ -18,6 +20,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore           from './redux/store/configureStore';
 import App                      from './containers/app/App';
 import ScrollTop                from './components/scrollToTop/ScrollToTop';
+import Login                    from './views/login/index';
+import PageNotFound             from './views/pageNotFound';
 
 const store           = configureStore();
 const history         = createHistory();
@@ -30,7 +34,11 @@ class Root extends Component {
         <div>
           <Router history={syncedHistory}>
             <ScrollTop>
-              <App />
+              <Switch>
+                <Route exact path="/login" component={Login} />
+                <App />
+                <Route component={PageNotFound} />
+              </Switch>
             </ScrollTop>
           </Router>
         </div>

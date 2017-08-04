@@ -102,6 +102,7 @@
     "jest": "^20.0.4",
     "jquery": "^3.2.1",
     "js-base64": "^2.1.9",
+    "jwt-decode": "^2.2.0",
     "moment": "^2.18.1",
     "morgan": "^1.8.2",
     "pretty-error": "^2.1.1",

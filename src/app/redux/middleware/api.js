@@ -22,20 +22,19 @@ export default store => next => action => {
   store.dispatch({type: requestType});
   
   return callApi(url, options, authenticated)
-          .then(
-            response => next({
-              type: successType,
-              response,
-              authenticated
-            }
-          )
-          .catch(
-            error => next({
-              type: errorType,
-              error: error.message || 'There was an error.'
-            })
-          )
-        );
+    .then(
+      response => next({
+        type: successType,
+        response,
+        authenticated
+      })
+    )
+    .catch(
+      error => next({
+        type: errorType,
+        error: error.message || 'There was an error.'
+      })
+    );
 };
 
 function callApi(url, options = {}, authenticated = false) {
@@ -51,7 +50,7 @@ function callApi(url, options = {}, authenticated = false) {
       .then(checkStatus)
       .then(parseJSON)
       .then(data => data)
-      .catch(error => error);
+      .catch(error => Promise.reject(error));
   } else {
     return Promise.reject('Authentication needed but no token found');
   }

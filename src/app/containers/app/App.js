@@ -16,6 +16,7 @@ import { appConfig }          from '../../config';
 import { navigation }         from '../../models';
 import MainRoutes             from '../../routes/MainRoutes';
 import { withRouter }         from 'react-router';
+import auth                   from '../../services/auth';
 
 class App extends Component {
   static propTypes = {
@@ -81,6 +82,7 @@ class App extends Component {
           showPicture={userInfos.showPicture}
           currentView={currentView}
           toggleSideMenu={this.handlesMenuButtonClick}
+          onLogout={this.handlesOnLogout}
         />
         <div className="wrapper row-offcanvas row-offcanvas-left">
           <AsideLeft
@@ -112,6 +114,20 @@ class App extends Component {
     event.preventDefault();
     const { actions: { toggleSideMenu } } = this.props;
     toggleSideMenu();
+  }
+
+  handlesOnLogout = (event: any) => {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    // clear all application storage
+    auth.clearAllAppStorage();
+
+    // redirect to login
+    const { history } = this.props;
+    history.push('/login');
   }
 }
 

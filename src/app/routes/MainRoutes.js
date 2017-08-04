@@ -51,7 +51,6 @@ export const MainRoutes = () => (
     <Route path="/general/alerts" component={AlertConnected} />
     <Route path="/general/pagination" component={PaginationViewConnected} />
 
-    <Route component={PageNotFoundConnected} />
   </Switch>
 );
 

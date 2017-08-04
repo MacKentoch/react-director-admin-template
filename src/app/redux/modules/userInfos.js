@@ -14,10 +14,11 @@ const RECEIVED_USER_INFOS_DATA  = 'RECEIVED_USER_INFOS_DATA';
 const ERROR_USER_INFOS_DATA     = 'ERROR_USER_INFOS_DATA';
 
 type UserInfoData = {
-  login:     ?string,
-  firstname:  string,
-  lastname:   string,
-  picture:   ?string
+  login:            ?string,
+  firstname:        string,
+  lastname:         string,
+  picture:          ?string,
+  isAuthenticated:  boolean
 };
 
 type UserInfoState = {
@@ -30,10 +31,11 @@ type UserInfoState = {
 const initialState: UserInfoState = {
   isFetching: false,
   data: {
-    login: null,
-    firstname: '',
-    lastname: '',
-    picture: null
+    login:            null,
+    firstname:        '',
+    lastname:         '',
+    picture:          null,
+    isAuthenticated:  false
   },
   isConnected: false,
   time: null

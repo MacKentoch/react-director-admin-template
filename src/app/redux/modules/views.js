@@ -2,6 +2,9 @@
 
 import moment from 'moment';
 
+const ENTER_LOGIN_VIEW  = 'ENTER_LOGIN_VIEW';
+const LEAVE_LOGIN_VIEW  = 'LEAVE_LOGIN_VIEW';
+
 const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
 const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
 const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
@@ -49,8 +52,8 @@ const initialState = {
 
 export default function views(state = initialState, action) {
   switch (action.type) {
-
   case ENTER_HOME_VIEW:
+  case ENTER_LOGIN_VIEW:
   case ENTER_SIMPLE_TABLES_VIEW:
   case ENTER_BASIC_ELEMENTS_VIEW:
   case ENTER_GENERAL_VIEW:
@@ -81,6 +84,7 @@ export default function views(state = initialState, action) {
     return state;
 
   case LEAVE_HOME_VIEW:
+  case LEAVE_LOGIN_VIEW:
   case LEAVE_SIMPLE_TABLES_VIEW:
   case LEAVE_BASIC_ELEMENTS_VIEW:
   case LEAVE_GENERAL_VIEW:
@@ -453,6 +457,24 @@ export function leavePagination(time = moment().format()) {
   return {
     type:         LEAVE_PAGINATION_VIEW,
     currentView:  'PaginationView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+
+export function enterLogin(time = moment().format()) {
+  return {
+    type:         ENTER_LOGIN_VIEW,
+    currentView:  'Login',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+
+export function leaveLogin(time = moment().format()) {
+  return {
+    type:         LEAVE_LOGIN_VIEW,
+    currentView:  'Login',
     enterTime:    null,
     leaveTime:    time
   };

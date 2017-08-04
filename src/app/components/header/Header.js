@@ -14,7 +14,8 @@ const Header = ({
   userPicture,
   showPicture,
   appName,
-  toggleSideMenu
+  toggleSideMenu,
+  onLogout
 }) => (
   <header
     className="header fixed--header">
@@ -38,6 +39,7 @@ const Header = ({
             lastname={userLastname}
             picture={userPicture}
             showUserPicture={showPicture}
+            onLogout={onLogout}
           />
         </ul>
       </div>
@@ -53,6 +55,7 @@ Header.propTypes = {
   userLastname:   PropTypes.string,
   userPicture:    PropTypes.string,
   showPicture:    PropTypes.bool,
+  onLogout:       PropTypes.func,
 
   currentView:    PropTypes.string,
   toggleSideMenu: PropTypes.func
@@ -61,5 +64,7 @@ Header.propTypes = {
 Header.defaultProps = {
   appName: 'applicationName'
 };
+
+Header.displayName = 'Header';
 
 export default Header;
