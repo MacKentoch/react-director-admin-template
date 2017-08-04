@@ -3,7 +3,7 @@
 exports[`Alert view renders as expected 1`] = `
 <div>
   <section
-    className="content invisible"
+    className="content view-enter"
   >
     <div
       className="row"

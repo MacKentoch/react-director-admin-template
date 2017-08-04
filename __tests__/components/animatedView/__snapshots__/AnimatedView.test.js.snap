@@ -3,7 +3,7 @@
 exports[`AnimatedView component renders as expected 1`] = `
 <div>
   <section
-    className="content invisible"
+    className="content view-enter"
   >
     <p>
       An animated view content

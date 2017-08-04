@@ -36,11 +36,11 @@ const config = {
       'axios',
       'babel-polyfill',
       'better-react-spinkit',
+      'jquery',
       'bootstrap',
       'chart.js',
       'classnames',
       'history',
-      'jquery',
       'js-base64',
       'moment'
     ]
@@ -120,8 +120,9 @@ const config = {
 */
 function getImplicitGlobals() {
   return new webpack.ProvidePlugin({
+    jQuery: 'jquery',
     $: 'jquery',
-    jQuery: 'jquery'
+    jquery: 'jquery'
   });
 }
 

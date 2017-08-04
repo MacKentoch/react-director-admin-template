@@ -2,12 +2,53 @@
 
 import React      from 'react';
 import PropTypes  from 'prop-types';
+// import {
+//   Dropdown,
+//   MenuItem
+// }                 from 'react-bootstrap';
 
 const UserMenu = ({
   firstname,
   lastname,
   onLogout
 }) => (
+  // <Dropdown
+  //   className="user user-menu"
+  //   componentClass="li"
+  //   id="user-menu"
+  // >
+  //   <Dropdown.Toggle>
+  //     <i className="fa fa-user" />
+  //     <span>
+  //       { firstname } { lastname }
+  //       <i className="caret" />
+  //     </span>
+  //   </Dropdown.Toggle>
+  //   <Dropdown.Menu className="super-colors">
+  //     <MenuItem
+  //       eventKey="1"
+  //       className="text-center"
+  //     >
+  //       Account
+  //     </MenuItem>
+  //     <MenuItem
+  //       eventKey="2"
+  //     >
+  //       Another action
+  //     </MenuItem>
+  //     <MenuItem
+  //       eventKey="3"
+  //       active
+  //     >
+  //       Active Item
+  //     </MenuItem>
+
+  //     <MenuItem divider />
+
+  //     <MenuItem eventKey="4">Separated link</MenuItem>
+  //   </Dropdown.Menu>
+  // </Dropdown>
+
   <li className="dropdown user user-menu">
     <a
       href="#"

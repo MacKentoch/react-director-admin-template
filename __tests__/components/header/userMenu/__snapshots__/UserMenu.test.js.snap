@@ -109,7 +109,7 @@ exports[`UserMenu component renders as expected 1`] = `
       />
       <li>
         <a
-          href="#"
+          onClick={[Function]}
         >
           <i
             className="fa fa-ban fa-fw pull-right"

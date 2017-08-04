@@ -6,6 +6,7 @@ import { AppContainer }     from 'react-hot-loader';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
 import 'animate.css';
 import 'jquery';
+import 'bootstrap-loader';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
