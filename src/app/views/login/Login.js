@@ -180,14 +180,14 @@ class Login extends PureComponent {
 
     try {
       await fakeLogin(user);
+      this.setState({ isAuthenticating: false });
       history.push({ pathname: '/' }); // back to Home
     } catch (error) {
       /* eslint-disable no-console */
+      this.setState({ isAuthenticating: false });
       console.log('login went wrong..., error: ', error);
       /* eslint-enable no-console */
     }
-
-    this.setState({ isAuthenticating: false });
   }
 }
 

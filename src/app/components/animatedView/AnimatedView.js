@@ -28,8 +28,8 @@ class AnimatedView extends Component {
             'view-enter': animated
           })
         }>
-      { children }
-    </section>
+        { children }
+      </section>
     );
   }
 }
