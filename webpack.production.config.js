@@ -37,7 +37,7 @@ const config = {
       'babel-polyfill',
       'better-react-spinkit',
       'jquery',
-      'bootstrap',
+      'bootstrap/dist/js/bootstrap.min.js',
       'chart.js',
       'classnames',
       'history',
@@ -75,20 +75,20 @@ const config = {
       {
         test: /\.scss$/,
         use:  SPLIT_STYLE 
-        ? ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
+          ? ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              {loader: 'css-loader', options: { importLoaders: 1 }},
+              'postcss-loader',
+              'sass-loader'
+            ]
+          })
+          : [
+            'style-loader',
             {loader: 'css-loader', options: { importLoaders: 1 }},
             'postcss-loader',
             'sass-loader'
           ]
-        })
-        : [
-          'style-loader',
-          {loader: 'css-loader', options: { importLoaders: 1 }},
-          'postcss-loader',
-          'sass-loader'
-        ]
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
@@ -120,8 +120,8 @@ const config = {
 */
 function getImplicitGlobals() {
   return new webpack.ProvidePlugin({
+    $:      'jquery',
     jQuery: 'jquery',
-    $: 'jquery',
     jquery: 'jquery'
   });
 }

@@ -24,14 +24,14 @@ const UserPanel = (
       <a
         href="#">
         { props.online &&
-          <i className="fa fa-circle text-success"></i>
+          <i className="fa fa-circle text-success" />
         }
         { props.online &&
           props.connectionStatus.online
         }
         {
           !props.online &&
-          <i className="fa fa-circle text-default"></i>
+          <i className="fa fa-circle text-default" />
         }
         { !props.online &&
           props.connectionStatus.disconnected
@@ -47,8 +47,8 @@ UserPanel.propTypes = {
   showUserPicture:  PropTypes.bool,
   userPicture:      PropTypes.any,
   connectionStatus: PropTypes.shape({
-    online:       PropTypes.string,
-    disconnected: PropTypes.string
+    online:         PropTypes.string,
+    disconnected:   PropTypes.string
   }),
   online:           PropTypes.bool
 };

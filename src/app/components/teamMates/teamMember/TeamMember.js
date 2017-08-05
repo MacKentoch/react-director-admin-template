@@ -2,9 +2,25 @@
 
 import React      from 'react';
 import PropTypes  from 'prop-types';
+import DamonIMG   from '../../../img/Damon.png';
+import JoeIMG     from '../../../img/Joe.png';
+import EmmaIMG    from '../../../img/Emma.png';
+import JannieIMG  from '../../../img/Jannie.png';
+
+const images = [
+  { firstname: 'Damon',   img: DamonIMG },
+  { firstname: 'Joe',     img: JoeIMG },
+  { firstname: 'Emma',    img: EmmaIMG },
+  { firstname: 'Jannie',  img: JannieIMG }
+];
+
+function getUserPicture(userFirstname = '') {
+  const user = images.find(({ firstname }) => (firstname === userFirstname));
+  return user ? user.img : '';
+}
 
 const TeamMember = ({
-  picture,
+  // picture,
   firstname,
   lastname,
   profile,
@@ -15,10 +31,10 @@ const TeamMember = ({
     <li className="list-group-item">
       <a href="">
         <img
-          src={picture}
+          src={getUserPicture(firstname)}
           width="50"
           height="50"
-          />
+        />
       </a>
       <span className={profileClass}>
         { profile }

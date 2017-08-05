@@ -25,17 +25,17 @@ const AsideLeft = ({
   <aside 
     className={
       cx({
-        'no-print': true,
-        'left-side': true,
+        'no-print':          true,
+        'left-side':         true,
         'aside-left--fixed': true,
         'sidebar-offcanvas': true,
-        'sidebar-animated': isAnimated,
-        'collapse-left':    isCollapsed
+        'sidebar-animated':  isAnimated,
+        'collapse-left':     isCollapsed
       })
     }
     // add overflow to left sidebar:
     style={{
-      height: '100%',
+      height:   '100%',
       overflow: 'auto',
       position: 'fixed'
     }}
@@ -93,12 +93,12 @@ AsideLeft.propTypes = {
   ).isRequired,
   currentView:      PropTypes.string,
   connectionStatus: PropTypes.shape({
-    online:       PropTypes.string,
-    disconnected: PropTypes.string
+    online:         PropTypes.string,
+    disconnected:   PropTypes.string
   }),
   userIsConnected:  PropTypes.bool,
   username:         PropTypes.string,
-  userPicture:      PropTypes.string,
+  userPicture:      PropTypes.any,
   showPicture:      PropTypes.bool,
   helloWord:        PropTypes.string
 };

@@ -12,6 +12,8 @@ import {
   ListTweetsContainer
 }                         from '../../components';
 import Highlight          from 'react-highlight';
+import JannieIMG          from '../../img/Jannie.png';
+import EmmetIMG           from '../../img/Emmet.png';
 
 
 class TwitterFeed extends PureComponent {
@@ -41,6 +43,11 @@ class TwitterFeed extends PureComponent {
         ListTweetsContainer
       } from './_SOMEWHERE_/components';
 
+      // import image or use relative path as src to image
+      // in this example, consider:
+      // import JannieIMG          from '../../../img/Jannie.png';
+      // import EmmetIMG           from '../../../img/Emmet.png';
+
       // in render():
       <Panel
         title="Twitter feed"
@@ -50,14 +57,14 @@ class TwitterFeed extends PureComponent {
         <ListTweetsContainer>
           <Tweet
             time={'30 min ago'}
-            author={'John Doe'}
-            authorAvatar={require('../../img/26115.jpg')}>
+            author={'Emmet'}
+            authorAvatar={EmmetIMG}>
             <demoTweetMessage />
           </Tweet>
           <Tweet
             time={'35 min ago'}
-            author={'John Doe'}
-            authorAvatar={require('../../img/26115.jpg')}>
+            author={'Jannie'}
+            authorAvatar={JannieIMG}>
             <demoTweetMessage />
           </Tweet>
         </ListTweetsContainer>
@@ -77,14 +84,14 @@ class TwitterFeed extends PureComponent {
               <ListTweetsContainer>
                 <Tweet
                   time={'30 min ago'}
-                  author={'John Doe'}
-                  authorAvatar={require('../../img/26115.jpg')}>
+                  author={'Emmet'}
+                  authorAvatar={EmmetIMG}>
                   <demoTweetMessage />
                 </Tweet>
                 <Tweet
                   time={'35 min ago'}
-                  author={'John Doe'}
-                  authorAvatar={require('../../img/26115.jpg')}>
+                  author={'Jannie'}
+                  authorAvatar={JannieIMG}>
                   <demoTweetMessage />
                 </Tweet>
               </ListTweetsContainer>

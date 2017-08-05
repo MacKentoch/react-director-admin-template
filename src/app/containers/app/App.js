@@ -17,6 +17,7 @@ import { navigation }         from '../../models';
 import MainRoutes             from '../../routes/MainRoutes';
 import { withRouter }         from 'react-router';
 import auth                   from '../../services/auth';
+import UserIMG                from '../../img/user.jpg';
 
 class App extends Component {
   static propTypes = {
@@ -78,7 +79,7 @@ class App extends Component {
           userLogin={userInfos.login}
           userFirstname={userInfos.firstname}
           userLastname={userInfos.lastname}
-          userPicture={userInfos.picture}
+          userPicture={UserIMG}
           showPicture={userInfos.showPicture}
           currentView={currentView}
           toggleSideMenu={this.handlesMenuButtonClick}

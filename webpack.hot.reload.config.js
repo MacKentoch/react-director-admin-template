@@ -23,8 +23,8 @@ const config = {
     rules: [
       {
         test:     /\.jsx?$/,
-        exclude:  [vendorsDir],
         include:  srcInclude,
+        exclude:  [vendorsDir],
         loaders:  ['babel-loader']
       },
       {
@@ -70,8 +70,9 @@ const config = {
 */
 function getImplicitGlobals() {
   return new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery'
+    $:      'jquery',
+    jQuery: 'jquery',
+    jquery: 'jquery'
   });
 }
 

@@ -1,10 +1,12 @@
 // @flow weak
 
-import React          from 'react';
-import Panel          from '../panel/Panel';
-import Tweet          from './tweet/Tweet';
-import WriteNewTweet  from './writeNewTweet/WriteNewTweet';
-import ListTweetsContainer from './listTweetsContainer/ListTweetsContainer';
+import React                from 'react';
+import Panel                from '../panel/Panel';
+import Tweet                from './tweet/Tweet';
+import WriteNewTweet        from './writeNewTweet/WriteNewTweet';
+import ListTweetsContainer  from './listTweetsContainer/ListTweetsContainer';
+import JannieIMG            from '../../img/Jannie.png';
+import EmmetIMG             from '../../img/Emmet.png';
 
 const TwitterFeed = () => (
   <Panel
@@ -14,14 +16,14 @@ const TwitterFeed = () => (
     <ListTweetsContainer>
       <Tweet
         time={'30 min ago'}
-        author={'John Doe'}
-        authorAvatar={require('../../img/26115.jpg')}>
+        author={'Emmet'}
+        authorAvatar={ EmmetIMG }>
         <demoTweetMessage />
       </Tweet>
       <Tweet
         time={'35 min ago'}
-        author={'John Doe'}
-        authorAvatar={require('../../img/26115.jpg')}>
+        author={'Jannie'}
+        authorAvatar={ JannieIMG }>
         <demoTweetMessage />
       </Tweet>
     </ListTweetsContainer>

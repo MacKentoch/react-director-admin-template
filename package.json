@@ -93,7 +93,6 @@
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
-    "bootstrap-loader": "^2.1.0",
     "bootstrap-sass": "^3.3.7",
     "chart.js": "^2.6.0",
     "classnames": "^2.2.5",

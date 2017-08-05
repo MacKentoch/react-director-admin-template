@@ -14,7 +14,7 @@ import {
 import {
 // createBrowserHistory as createHistory,
   createHashHistory as createHistory
-}                              from 'history';
+}                               from 'history';
 import { Provider }             from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore           from './redux/store/configureStore';

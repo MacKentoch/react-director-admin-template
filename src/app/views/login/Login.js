@@ -9,7 +9,7 @@ import {
   Col,
   Button
 }                     from 'react-bootstrap';
-import AnimatedView   from '../../components/animatedView/AnimatedView';
+// import AnimatedView   from '../../components/animatedView/AnimatedView';
 
 
 function fakeLogin({ username }) {
@@ -63,7 +63,7 @@ class Login extends PureComponent {
     } = this.state;
 
     return (
-      <AnimatedView>
+      <div className="content">
         <Row>
           <Col
             md={4}
@@ -76,6 +76,7 @@ class Login extends PureComponent {
                 <legend>
                   Login
                 </legend>
+
                 <div className="form-group">
                   <label
                     htmlFor="inputEmail"
@@ -93,6 +94,7 @@ class Login extends PureComponent {
                     />
                   </div>
                 </div>
+
                 <div className="form-group">
                   <label
                     htmlFor="inputPassword"
@@ -142,7 +144,7 @@ class Login extends PureComponent {
             </form>
           </Col>
         </Row>
-      </AnimatedView>
+      </div>
     );
   }
 

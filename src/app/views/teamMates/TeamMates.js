@@ -12,6 +12,10 @@ import {
   TeamMateAddButton
 }                         from '../../components';
 import Highlight          from 'react-highlight';
+import DamonIMG           from '../../img/Damon.png';
+import JoeIMG             from '../../img/Joe.png';
+import EmmaIMG            from '../../img/Emma.png';
+import JannieIMG          from '../../img/Jannie.png';
 
 
 class TeamMatesView extends PureComponent {
@@ -20,39 +24,32 @@ class TeamMatesView extends PureComponent {
   state = {
     members: [
       {
-        picture: './public/img/26115.jpg',
-        firstname: 'Damon',
-        lastname: 'Parker',
-        profile: 'Admin',
+        picture:      DamonIMG,
+        firstname:    'Damon',
+        lastname:     'Parker',
+        profile:      'Admin',
         profileColor: 'danger'
       },
       {
-        picture: './public/img/26115.jpg',
-        firstname: 'Joe',
-        lastname: 'Waston',
-        profile: 'Member',
+        picture:      JoeIMG,
+        firstname:    'Joe',
+        lastname:     'Waston',
+        profile:      'Member',
         profileColor: 'warning'
       },
       {
-        picture: './public/img/26115.jpg',
-        firstname: 'Jannie',
-        lastname: 'Davis',
-        profile: 'Editor',
+        picture:      JannieIMG,
+        firstname:    'Jannie',
+        lastname:     'Davis',
+        profile:      'Editor',
         profileColor: 'warning'
       },
       {
-        picture: './public/img/26115.jpg',
-        firstname: 'Emma',
-        lastname: 'Welson',
-        profile: 'Editor',
+        picture:      EmmaIMG,
+        firstname:    'Emma',
+        lastname:     'Welson',
+        profile:      'Editor',
         profileColor: 'success'
-      },
-      {
-        picture: './public/img/26115.jpg',
-        firstname: 'Emma',
-        lastname: 'Welson',
-        profile: 'Editor',
-        profileColor: 'info'
       }
     ]
   };
@@ -80,43 +77,42 @@ class TeamMatesView extends PureComponent {
         TeamMateAddButton
       } from './_SOMEWHERE_/components';
 
+      // import images (or just set a string as a path)
+      // import DamonIMG           from '../../img/Damon.png';
+      // import JoeIMG             from '../../img/Joe.png';
+      // import EmmaIMG            from '../../img/Emma.png';
+      // import JannieIMG          from '../../img/Jannie.png';
+
       // team members (in state for example):
       state = {
         members: [
           {
-            picture: './public/img/26115.jpg',
-            firstname: 'Damon',
-            lastname: 'Parker',
-            profile: 'Admin',
+            picture:      DamonIMG,
+            firstname:    'Damon',
+            lastname:     'Parker',
+            profile:      'Admin',
             profileColor: 'danger'
           },
           {
-            picture: './public/img/26115.jpg',
-            firstname: 'Joe',
-            lastname: 'Waston',
-            profile: 'Member',
+            picture:      JoeIMG,
+            firstname:    'Joe',
+            lastname:     'Waston',
+            profile:      'Member',
             profileColor: 'warning'
           },
           {
-            picture: './public/img/26115.jpg',
-            firstname: 'Jannie',
-            lastname: 'Davis',
-            profile: 'Editor',
+            picture:      JannieIMG,
+            firstname:    'Jannie',
+            lastname:     'Davis',
+            profile:      'Editor',
             profileColor: 'warning'
           },
           {
-            picture: './public/img/26115.jpg',
-            firstname: 'Emma',
-            lastname: 'Welson',
-            profile: 'Editor',
+            picture:      EmmaIMG,
+            firstname:    'Emma',
+            lastname:     'Welson',
+            profile:      'Editor',
             profileColor: 'success'
-          },
-          {
-            picture: './public/img/26115.jpg',
-            firstname: 'Emma',
-            lastname: 'Welson',
-            profile: 'Editor',
-            profileColor: 'info'
           }
         ]
       };

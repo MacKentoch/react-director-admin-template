@@ -86,11 +86,7 @@ exports[`TweetFeed component renders as expected 1`] = `
               alt="Avatar"
               className="img-circle"
               height="64"
-              src={
-                Object {
-                  "default": "test-file-stub",
-                }
-              }
+              src="test-file-stub"
               width="64"
             />
           </a>
@@ -127,11 +123,7 @@ exports[`TweetFeed component renders as expected 1`] = `
               alt="Avatar"
               className="img-circle"
               height="64"
-              src={
-                Object {
-                  "default": "test-file-stub",
-                }
-              }
+              src="test-file-stub"
               width="64"
             />
           </a>
