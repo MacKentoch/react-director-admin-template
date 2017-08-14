@@ -97,6 +97,7 @@ const config = {
             loader:  'url-loader',
             options: {
               limit: 100000,
+              publicPath: '/public/assets/',
               name: '[name].[ext]'
             }
           }

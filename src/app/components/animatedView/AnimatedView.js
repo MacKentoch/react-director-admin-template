@@ -1,10 +1,11 @@
 // @flow weak
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes            from 'prop-types';
 import cx                   from 'classnames';
+import { withRouter }       from 'react-router-dom';
 
-class AnimatedView extends Component {
+class AnimatedView extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     animated: PropTypes.bool
@@ -34,4 +35,4 @@ class AnimatedView extends Component {
   }
 }
 
-export default AnimatedView;
+export default withRouter(AnimatedView);

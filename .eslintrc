@@ -6,10 +6,13 @@
     "es6": true,
     "jest": true
   },
-
-  "plugins": ["react"],
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
   "extends": [
-      "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
   ],
   // eslint > 2.x
   "parserOptions": {

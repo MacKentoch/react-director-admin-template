@@ -20,6 +20,20 @@ const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 
 injectTpEventPlugin();
 
+/* eslint-disable no-process-env */
+// if (process.env.NODE_ENV !== 'production') {
+//   // eslint-disable-next-line no-unused-vars,react/no-deprecated
+//   let createClass = React.createClass;
+//   Object.defineProperty(React, 'createClass', {
+//     set: (nextCreateClass) => {
+//       createClass = nextCreateClass;
+//     }
+//   });
+//   // eslint-disable-next-line global-require
+//   const { whyDidYouUpdate } = require('why-did-you-update');
+//   whyDidYouUpdate(React);
+// }
+/* eslint-enable no-process-env */
 
 const renderApp = RootComponent => {
   render(
