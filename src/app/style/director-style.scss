@@ -1262,6 +1262,313 @@ user-panel
    TODO: Navbar custom dropdown menu
 ------------------------------------
 */
+.navbar-nav>.notifications-menu>.dropdown-menu,
+.navbar-nav>.messages-menu>.dropdown-menu,
+.navbar-nav>.tasks-menu>.dropdown-menu {
+  width: 260px;
+  padding: 0 0 0 0!important;
+  margin: 0!important;
+  top: 100%;
+  border: 1px solid #dfdfdf;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  border-radius: 4px !important;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li.header,
+.navbar-nav>.messages-menu>.dropdown-menu>li.header,
+.navbar-nav>.tasks-menu>.dropdown-menu>li.header {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #ffffff;
+  padding: 7px 10px;
+  border-bottom: 1px solid #f4f4f4;
+  color: #444444;
+  font-size: 14px;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li.header:after,
+.navbar-nav>.messages-menu>.dropdown-menu>li.header:after,
+.navbar-nav>.tasks-menu>.dropdown-menu>li.header:after {
+  bottom: 100%;
+  left: 92%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 7px;
+  margin-left: -7px;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li.footer>a,
+.navbar-nav>.messages-menu>.dropdown-menu>li.footer>a,
+.navbar-nav>.tasks-menu>.dropdown-menu>li.footer>a {
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 12px;
+  background-color: #f4f4f4;
+  padding: 7px 10px;
+  border-bottom: 1px solid #eeeeee;
+  color: #444444;
+  text-align: center;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li.footer>a:hover,
+.navbar-nav>.messages-menu>.dropdown-menu>li.footer>a:hover,
+.navbar-nav>.tasks-menu>.dropdown-menu>li.footer>a:hover {
+  background: #f4f4f4;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu,
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu,
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a,
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a,
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a {
+  display: block;
+  white-space: nowrap;
+  /* Prevent text from breaking */
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a:hover,
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a:hover,
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a:hover {
+  background: #fafafa;
+  text-decoration: none;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a {
+  font-size: 12px;
+  color: #444444;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>i {
+  border-radius: 30px;
+}
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion {
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  padding: 15px 0px;
+  margin-right: 5px;
+  /* Default background and font colors */
+  background: #00c0ef;
+  color: #f9f9f9;
+  /* Fallback for browsers that doesn't support rgba */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.danger,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.danger,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.danger {
+  background: #f56954;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.warning,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.warning,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.warning {
+  background: #f39c12;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.success,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.success,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.success {
+  background: #00a65a;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.info,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.info,
+.navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.info {
+  background: #00c0ef;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a {
+  margin: 0px;
+  line-height: 20px;
+  padding: 10px 5px 10px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>div>img {
+  margin: auto 10px auto auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dddddd;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>h4 {
+  padding: 0;
+  margin: 0 0 0 45px;
+  color: #444444;
+  font-size: 15px;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>h4>small {
+  color: #999999;
+  font-size: 10px;
+  float: right;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>p {
+  margin: 0 0 0 45px;
+  font-size: 12px;
+  color: #888888;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a:before,
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a:after {
+  display: table;
+  content: " ";
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a:after {
+  clear: both;
+}
+
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a {
+  padding: 10px;
+}
+
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a>h3 {
+  font-size: 14px;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: #666666;
+}
+
+.navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a>.progress {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  border-top-width: 0;
+  width: 225px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu:after {
+  bottom: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #f9fafc;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+  height: 175px;
+  padding: 10px;
+  background: #3c8dbc;
+  text-align: center;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>img {
+  z-index: 5;
+  height: 90px;
+  width: 90px;
+  border: 8px solid;
+  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p {
+  z-index: 5;
+  color: #f9f9f9;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  text-shadow: 2px 2px 3px #333333;
+  margin-top: 10px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p>small {
+  display: block;
+  font-size: 12px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-body {
+  padding: 15px;
+  border-bottom: 1px solid #f4f4f4;
+  border-top: 1px solid #dddddd;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-body:before,
+.navbar-nav>.user-menu>.dropdown-menu>li.user-body:after {
+  display: table;
+  content: " ";
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-body:after {
+  clear: both;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-body>div>a {
+  color: #0073b7;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer:before,
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer:after {
+  display: table;
+  content: " ";
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer:after {
+  clear: both;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer .btn-default {
+  color: #666666;
+}
+
+
+/* TODO: Add fade animation to dropdown menus */
 
 
 /**
