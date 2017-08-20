@@ -1,8 +1,10 @@
 {
-  "compilerOptions": {
-      "target": "ES6"
-  },
-  "include": [
-      "src/**/*"
-  ]
+  "typeAcquisition": {
+    "include": [
+      "react",
+      "redux",
+      "react-router",
+      "moment"
+    ]
+  }
 }

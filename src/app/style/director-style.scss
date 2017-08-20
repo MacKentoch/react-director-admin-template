@@ -1383,8 +1383,8 @@ user-panel
   padding: 15px 0px;
   margin-right: 5px;
   /* Default background and font colors */
-  background: #00c0ef;
-  color: #f9f9f9;
+  background: $AQUA;
+  color: $BG_COLOR_COLOR;
   /* Fallback for browsers that doesn't support rgba */
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1392,25 +1392,25 @@ user-panel
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.danger,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.danger,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.danger {
-  background: #f56954;
+  background: $MAIN_RED;
 }
 
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.warning,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.warning,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.warning {
-  background: #f39c12;
+  background: $MAIN_YELLOW;
 }
 
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.success,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.success,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.success {
-  background: #00a65a;
+  background: $MAIN_GREEN;
 }
 
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon.info,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa.info,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion.info {
-  background: #00c0ef;
+  background: $AQUA;
 }
 
 .navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a {
@@ -1501,7 +1501,7 @@ user-panel
 .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
   height: 175px;
   padding: 10px;
-  background: #3c8dbc;
+  background: $LIGHT_BLUE;
   text-align: center;
 }
 
@@ -1516,7 +1516,7 @@ user-panel
 
 .navbar-nav>.user-menu>.dropdown-menu>li.user-header>p {
   z-index: 5;
-  color: #f9f9f9;
+  color: $BG_COLOR_COLOR;
   color: rgba(255, 255, 255, 0.8);
   font-size: 17px;
   text-shadow: 2px 2px 3px #333333;
@@ -1545,11 +1545,11 @@ user-panel
 }
 
 .navbar-nav>.user-menu>.dropdown-menu>li.user-body>div>a {
-  color: #0073b7;
+  color: $MAIN_BLUE;
 }
 
 .navbar-nav>.user-menu>.dropdown-menu>li.user-footer {
-  background-color: #f9f9f9;
+  background-color: $BG_COLOR_COLOR;
   padding: 10px;
 }
 

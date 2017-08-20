@@ -11,5 +11,4 @@ before_script:
     - yarn install
     - yarn global add jest
 script:
-  - yarn run test
-  
+  - yarn run test:update
