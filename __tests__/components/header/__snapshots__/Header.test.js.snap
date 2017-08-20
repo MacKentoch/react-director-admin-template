@@ -82,11 +82,7 @@ exports[`Header component renders as expected 1`] = `
                         <img
                           alt="User Image"
                           className="img-circle"
-                          src={
-                            Object {
-                              "default": "test-file-stub",
-                            }
-                          }
+                          src="test-file-stub"
                         />
                       </div>
                       <h4>
@@ -115,11 +111,7 @@ exports[`Header component renders as expected 1`] = `
                         <img
                           alt="user image"
                           className="img-circle"
-                          src={
-                            Object {
-                              "default": "test-file-stub",
-                            }
-                          }
+                          src="test-file-stub"
                         />
                       </div>
                       <h4>
@@ -148,11 +140,7 @@ exports[`Header component renders as expected 1`] = `
                         <img
                           alt="user image"
                           className="img-circle"
-                          src={
-                            Object {
-                              "default": "test-file-stub",
-                            }
-                          }
+                          src="test-file-stub"
                         />
                       </div>
                       <h4>
@@ -181,11 +169,7 @@ exports[`Header component renders as expected 1`] = `
                         <img
                           alt="user image"
                           className="img-circle"
-                          src={
-                            Object {
-                              "default": "test-file-stub",
-                            }
-                          }
+                          src="test-file-stub"
                         />
                       </div>
                       <h4>
@@ -214,11 +198,7 @@ exports[`Header component renders as expected 1`] = `
                         <img
                           alt="user image"
                           className="img-circle"
-                          src={
-                            Object {
-                              "default": "test-file-stub",
-                            }
-                          }
+                          src="test-file-stub"
                         />
                       </div>
                       <h4>

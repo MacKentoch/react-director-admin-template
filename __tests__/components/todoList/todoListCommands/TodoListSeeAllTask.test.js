@@ -2,8 +2,8 @@
 'use strict';
 
 import React                from 'react';
-import TodoListSeeAllTask   from '../../../../src/app/components/todoList/TodoListCommands/TodoListSeeAllTask';
-import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+import TodoListSeeAllTask   from '../../../../src/app/components/todoList/todoListCommands/TodoListSeeAllTask';
+import renderer             from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TodoListSeeAllTask component', () => {
   it('renders as expected', () => {

@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>5/5</span>
       </div>
     </div>
   </div>
@@ -129,12 +129,103 @@
 84
 85
 86
-87</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,24 +306,73 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
 &nbsp;
 import React      from 'react';
 import PropTypes  from 'prop-types';
+// import {
+//   Dropdown,
+//   MenuItem
+// }                 from 'react-bootstrap';
 &nbsp;
 const UserMenu = ({
   firstname,
-  lastname
+  lastname,
+  onLogout
 }) =&gt; (
+  // &lt;Dropdown
+  //   className="user user-menu"
+  //   componentClass="li"
+  //   id="user-menu"
+  // &gt;
+  //   &lt;Dropdown.Toggle&gt;
+  //     &lt;i className="fa fa-user" /&gt;
+  //     &lt;span&gt;
+  //       { firstname } { lastname }
+  //       &lt;i className="caret" /&gt;
+  //     &lt;/span&gt;
+  //   &lt;/Dropdown.Toggle&gt;
+  //   &lt;Dropdown.Menu className="super-colors"&gt;
+  //     &lt;MenuItem
+  //       eventKey="1"
+  //       className="text-center"
+  //     &gt;
+  //       Account
+  //     &lt;/MenuItem&gt;
+  //     &lt;MenuItem
+  //       eventKey="2"
+  //     &gt;
+  //       Another action
+  //     &lt;/MenuItem&gt;
+  //     &lt;MenuItem
+  //       eventKey="3"
+  //       active
+  //     &gt;
+  //       Active Item
+  //     &lt;/MenuItem&gt;
+&nbsp;
+  //     &lt;MenuItem divider /&gt;
+&nbsp;
+  //     &lt;MenuItem eventKey="4"&gt;Separated link&lt;/MenuItem&gt;
+  //   &lt;/Dropdown.Menu&gt;
+  // &lt;/Dropdown&gt;
+&nbsp;
   &lt;li className="dropdown user user-menu"&gt;
     &lt;a
       href="#"
       className="dropdown-toggle"
       data-toggle="dropdown"&gt;
-      &lt;i className="fa fa-user"&gt;&lt;/i&gt;
+      &lt;i className="fa fa-user" /&gt;
       &lt;span&gt;
         { firstname } { lastname }
-        &lt;i className="caret"&gt;&lt;/i&gt;
+        &lt;i className="caret" /&gt;
       &lt;/span&gt;
     &lt;/a&gt;
     &lt;ul className="dropdown-menu dropdown-custom dropdown-menu-right"&gt;
@@ -241,54 +381,54 @@ const UserMenu = ({
       &lt;/li&gt;
       &lt;li&gt;
         &lt;a href="#"&gt;
-          &lt;i className="fa fa-clock-o fa-fw pull-right"&gt;&lt;/i&gt;
+          &lt;i className="fa fa-clock-o fa-fw pull-right" /&gt;
           &lt;span className="badge badge-success pull-right"&gt;
             10
           &lt;/span&gt;
           Updates
         &lt;/a&gt;
         &lt;a href="#"&gt;
-          &lt;i className="fa fa-envelope-o fa-fw pull-right"&gt;&lt;/i&gt;
+          &lt;i className="fa fa-envelope-o fa-fw pull-right" /&gt;
           &lt;span className="badge badge-danger pull-right"&gt;
             5
           &lt;/span&gt;
           Messages
         &lt;/a&gt;
         &lt;a href="#"&gt;
-          &lt;i className="fa fa-magnet fa-fw pull-right"&gt;&lt;/i&gt;
+          &lt;i className="fa fa-magnet fa-fw pull-right" /&gt;
           &lt;span className="badge badge-info pull-right"&gt;
             3
           &lt;/span&gt;
           Subscriptions
         &lt;/a&gt;
         &lt;a href="#"&gt;
-          &lt;i className="fa fa-question fa-fw pull-right"&gt;&lt;/i&gt;
+          &lt;i className="fa fa-question fa-fw pull-right" /&gt;
           &lt;span className="badge pull-right"&gt;
             11
           &lt;/span&gt;
           FAQ
         &lt;/a&gt;
       &lt;/li&gt;
-      &lt;li className="divider"&gt;&lt;/li&gt;
-        &lt;li&gt;
-          &lt;a href="#"&gt;
-            &lt;i className="fa fa-user fa-fw pull-right"&gt;&lt;/i&gt;
-            Profile
-          &lt;/a&gt;
-          &lt;a
-            data-toggle="modal"
-            href="#modal-user-settings"&gt;
-            &lt;i className="fa fa-cog fa-fw pull-right"&gt;&lt;/i&gt;
-            Settings
-          &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li className="divider"&gt;&lt;/li&gt;
-        &lt;li&gt;
-          &lt;a href="#"&gt;
-            &lt;i className="fa fa-ban fa-fw pull-right"&gt;&lt;/i&gt;
-              Logout
-          &lt;/a&gt;
-        &lt;/li&gt;
+      &lt;li className="divider" /&gt;
+      &lt;li&gt;
+        &lt;a href="#"&gt;
+          &lt;i className="fa fa-user fa-fw pull-right" /&gt;
+          Profile
+        &lt;/a&gt;
+        &lt;a
+          data-toggle="modal"
+          href="#modal-user-settings"&gt;
+          &lt;i className="fa fa-cog fa-fw pull-right" /&gt;
+          Settings
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li className="divider" /&gt;
+      &lt;li&gt;
+        &lt;a onClick={onLogout}&gt;
+          &lt;i className="fa fa-ban fa-fw pull-right" /&gt;
+            Logout
+        &lt;/a&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 );
@@ -297,8 +437,15 @@ UserMenu.propTypes = {
   login:      PropTypes.string,
   firstname:  PropTypes.string,
   lastname:   PropTypes.string,
-  picture:    PropTypes.string
+  picture:    PropTypes.string,
+  onLogout:   PropTypes.func
 };
+&nbsp;
+UserMenu.defaultProps = {
+  onLogout: <span class="fstat-no" title="function not covered" >()</span> =&gt; {}
+};
+&nbsp;
+UserMenu.displayName = 'UserMenu';
 &nbsp;
 export default UserMenu;
 &nbsp;</pre></td></tr>
@@ -307,7 +454,7 @@ export default UserMenu;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 22 2017 07:48:44 GMT+0200 (CEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 20 2017 19:46:27 GMT+0200 (CEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

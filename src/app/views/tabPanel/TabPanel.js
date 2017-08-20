@@ -7,9 +7,9 @@ import PropTypes          from 'prop-types';
 import {
   AnimatedView,
   Panel,
-  TabPanel as TabPanelComponent,
-  TabPanelHeader as TabPanelHeaderComponent,
-  TabPanelBody as TabPanelBodyComponent,
+  TabPanel            as TabPanelComponent,
+  TabPanelHeader      as TabPanelHeaderComponent,
+  TabPanelBody        as TabPanelBodyComponent,
   TabPanelBodyContent as TabPanelBodyContentComponent
 }                         from '../../components';
 import Highlight          from 'react-highlight';

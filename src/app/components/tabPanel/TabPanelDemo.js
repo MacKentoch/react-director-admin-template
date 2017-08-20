@@ -1,7 +1,7 @@
 // @flow weak
 
 import React                from 'react';
-import TabPanel             from './tabPanel/TabPanel';
+import TabPanel             from './TabPanel/TabPanel';
 import TabPanelHeader       from './tabPanelHeader/TabPanelHeader';
 import TabPanelBody         from './tabPanelBody/TabPanelBody';
 import TabPanelBodyContent  from './tabPanelBodyContent/TabPanelBodyContent';

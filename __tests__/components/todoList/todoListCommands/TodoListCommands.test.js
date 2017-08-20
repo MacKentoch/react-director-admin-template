@@ -2,7 +2,7 @@
 'use strict';
 
 import React              from 'react';
-import TodoListCommands   from '../../../../src/app/components/todoList/TodoListCommands/TodoListCommands';
+import TodoListCommands   from '../../../../src/app/components/todoList/todoListCommands/TodoListCommands';
 import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TodoListCommands component', () => {

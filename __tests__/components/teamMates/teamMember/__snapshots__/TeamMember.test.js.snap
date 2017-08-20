@@ -10,7 +10,7 @@ exports[`TeamMember component renders as expected 1`] = `
     >
       <img
         height="50"
-        src={undefined}
+        src=""
         width="50"
       />
     </a>
