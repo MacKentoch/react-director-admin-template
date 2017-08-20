@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "flow": "node_modules/.bin/flow",
-    "test": "jest --coverage",
-    "test:update": "cross-env NODE_ENV=test jest -u",
-    "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "test:coverage": "cross-env NODE_ENV=test jest --coverage",
+    "test": "jest && codecov",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "start": "cross-env NODE_ENV=dev node ./server.hot.reload.js",
     "dev": "rimraf docs/public/assets && cross-env NODE_ENV=dev webpack --display-entrypoints --config webpack.dev.config.js",
     "prod": "rimraf docs/public/assets && cross-env NODE_ENV=production webpack -p --config webpack.production.config.js ",
@@ -47,6 +47,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "chalk": "^2.0.1",
+    "codecov": "^2.3.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "css-module-flow": "^1.0.0",
@@ -137,6 +138,8 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|sass|scss)$": "identity-obj-proxy"
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
