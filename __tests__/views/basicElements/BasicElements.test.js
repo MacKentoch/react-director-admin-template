@@ -6,6 +6,9 @@ import renderer      from 'react-test-renderer'; // needed both for snpashot tes
 import {
   shallow
 }                    from 'enzyme';
+import { 
+  MemoryRouter
+}                    from 'react-router';
 
 // react-highlight uses findDOMNode: 
 // -> jest will throw errors (no way to counter that...)
@@ -21,7 +24,9 @@ describe('BasicElements view', () => {
     };
     const component = renderer.create(
       <div>
-        <BasicElements {...props} />
+        <MemoryRouter>
+          <BasicElements {...props} />
+        </MemoryRouter>
       </div>
     ).toJSON();
     expect(component).toMatchSnapshot();

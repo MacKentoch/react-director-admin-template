@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1503251187468" clover="3.2.0">
-  <project timestamp="1503251187468" name="All files">
+<coverage generated="1503251744485" clover="3.2.0">
+  <project timestamp="1503251744485" name="All files">
     <metrics statements="358" coveredstatements="264" conditionals="85" coveredconditionals="37" methods="130" coveredmethods="93" elements="573" coveredelements="394" complexity="0" loc="358" ncloc="358" packages="68" files="82" classes="82">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -13,7 +13,7 @@
         <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="7" count="5" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="11" count="5" type="stmt"/>
           <line num="32" count="5" type="stmt"/>
           <line num="37" count="5" type="stmt"/>
           <line num="41" count="5" type="stmt"/>
@@ -23,8 +23,8 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/animatedView/AnimatedView.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="24" count="3" type="stmt"/>
         </file>
       </package>
       <package name="components.aside">
@@ -321,7 +321,7 @@
         <file name="Panel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/panel/Panel.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
           <line num="6" count="9" type="stmt"/>
-          <line num="14" count="5" type="stmt"/>
+          <line num="14" count="9" type="stmt"/>
           <line num="29" count="9" type="stmt"/>
           <line num="38" count="9" type="stmt"/>
         </file>
@@ -331,7 +331,7 @@
         <file name="ProgressBar.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/progressBar/ProgressBar.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="7" count="5" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
+          <line num="17" count="5" type="stmt"/>
           <line num="52" count="5" type="stmt"/>
           <line num="63" count="5" type="stmt"/>
         </file>
