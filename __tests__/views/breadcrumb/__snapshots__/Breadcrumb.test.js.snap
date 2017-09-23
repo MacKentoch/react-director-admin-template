@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb view renders as expected 1`] = `
+<div>
+  <section
+    className="content view-enter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Breadcrumb
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#F4F5F6",
+              }
+            }
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-xs-12"
+              >
+                <ul
+                  className="breadcrumb"
+                >
+                  <li>
+                    <a
+                      href="#"
+                    >
+                      <i
+                        className="fa fa-home"
+                      />
+                       
+                      home
+                    </a>
+                  </li>
+                  <li
+                    className="active"
+                  >
+                    breadcrumb
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Source
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+              }
+            }
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+`;
