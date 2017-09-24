@@ -14,6 +14,7 @@ import {
 import {
   fetchMockEarningGraphData
 }                           from '../../services/fetchMocks';
+import * as ReduxTypes      from '../types';
 
 /*
   constants
@@ -23,12 +24,12 @@ const RECEIVED_EARNING_GRAPH_DATA  = 'RECEIVED_EARNING_GRAPH_DATA';
 const ERROR_EARNING_GRAPH_DATA     = 'ERROR_EARNING_GRAPH_DATA';
 
 type EarningGraphDataset = {
-  label:        string,
-  fillColor:    string,
-  strokeColor:  string,
-  pointColor:   string,
-  pointStrokeColor:     string,
-  pointHighlightFill:   string,
+  label: string,
+  fillColor: string,
+  strokeColor: string,
+  pointColor: string,
+  pointStrokeColor: string,
+  pointHighlightFill: string,
   pointHighlightStroke: string,
   data: Array<number>
 }
@@ -83,7 +84,10 @@ export default function earningGraph(state = initialState, action) {
   action creators
  */
 export function fetchEarningGraphDataIfNeeded() {
-  return (dispatch, getState) => {
+  return (
+    dispatch, 
+    getState
+  ) => {
     if (shouldFetchEarningData(getState())) {
       return dispatch(fetchEarningGraphData());
     }

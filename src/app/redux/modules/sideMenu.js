@@ -18,9 +18,11 @@ const initialState = {
   time: null
 };
 
-export default function sideMenu(state = initialState, action) {
+export default function sideMenu(
+  state = initialState, 
+  action
+) {
   switch (action.type) {
-
   case GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE:
     return {
       isCollapsed:  Boolean(action.permanentStore.storeValue),

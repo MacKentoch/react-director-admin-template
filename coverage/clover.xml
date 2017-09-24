@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1506055080904" clover="3.2.0">
-  <project timestamp="1506055080904" name="All files">
-    <metrics statements="365" coveredstatements="271" conditionals="85" coveredconditionals="37" methods="133" coveredmethods="96" elements="583" coveredelements="404" complexity="0" loc="365" ncloc="365" packages="69" files="83" classes="83">
+<coverage generated="1506142397398" clover="3.2.0">
+  <project timestamp="1506142397398" name="All files">
+    <metrics statements="388" coveredstatements="283" conditionals="95" coveredconditionals="40" methods="139" coveredmethods="97" elements="622" coveredelements="420" complexity="0" loc="388" ncloc="388" packages="70" files="84" classes="84">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/index.js">
@@ -773,6 +773,35 @@
         <file name="userInfosMock.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/userInfosMock.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="redux.modules">
+        <metrics statements="23" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="6" coveredmethods="1"/>
+        <file name="sideMenu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/redux/modules/sideMenu.js">
+          <metrics statements="23" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="6" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="92" count="0" type="stmt"/>
+          <line num="93" count="0" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="96" count="0" type="stmt"/>
         </file>
       </package>
       <package name="views.alert">
