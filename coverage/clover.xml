@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1506142397398" clover="3.2.0">
-  <project timestamp="1506142397398" name="All files">
-    <metrics statements="388" coveredstatements="283" conditionals="95" coveredconditionals="40" methods="139" coveredmethods="97" elements="622" coveredelements="420" complexity="0" loc="388" ncloc="388" packages="70" files="84" classes="84">
+<coverage generated="1506228573421" clover="3.2.0">
+  <project timestamp="1506228573421" name="All files">
+    <metrics statements="388" coveredstatements="286" conditionals="95" coveredconditionals="43" methods="139" coveredmethods="99" elements="622" coveredelements="428" complexity="0" loc="388" ncloc="388" packages="70" files="84" classes="84">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/index.js">
@@ -776,9 +776,9 @@
         </file>
       </package>
       <package name="redux.modules">
-        <metrics statements="23" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="6" coveredmethods="1"/>
+        <metrics statements="23" coveredstatements="15" conditionals="10" coveredconditionals="6" methods="6" coveredmethods="3"/>
         <file name="sideMenu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/redux/modules/sideMenu.js">
-          <metrics statements="23" coveredstatements="12" conditionals="10" coveredconditionals="3" methods="6" coveredmethods="1"/>
+          <metrics statements="23" coveredstatements="15" conditionals="10" coveredconditionals="6" methods="6" coveredmethods="3"/>
           <line num="5" count="1" type="stmt"/>
           <line num="6" count="1" type="stmt"/>
           <line num="7" count="1" type="stmt"/>
@@ -788,14 +788,14 @@
           <line num="13" count="1" type="stmt"/>
           <line num="14" count="1" type="stmt"/>
           <line num="16" count="1" type="stmt"/>
-          <line num="25" count="2" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
           <line num="27" count="0" type="stmt"/>
           <line num="32" count="1" type="stmt"/>
-          <line num="38" count="0" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
           <line num="44" count="1" type="stmt"/>
           <line num="49" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
-          <line num="76" count="0" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
           <line num="90" count="0" type="stmt"/>
           <line num="91" count="0" type="stmt"/>
           <line num="92" count="0" type="stmt"/>
