@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1506368328435" clover="3.2.0">
-  <project timestamp="1506368328435" name="All files">
-    <metrics statements="286" coveredstatements="151" conditionals="61" coveredconditionals="2" methods="105" coveredmethods="9" elements="452" coveredelements="162" complexity="0" loc="286" ncloc="286" packages="65" files="77" classes="77">
+<coverage generated="1506430066943" clover="3.2.0">
+  <project timestamp="1506430066944" name="All files">
+    <metrics statements="310" coveredstatements="194" conditionals="61" coveredconditionals="9" methods="117" coveredmethods="36" elements="488" coveredelements="239" complexity="0" loc="310" ncloc="310" packages="69" files="81" classes="81">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/index.js">
@@ -9,22 +9,22 @@
         </file>
       </package>
       <package name="components.alert">
-        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/alert/Alert.js">
-          <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="37" count="1" type="stmt"/>
-          <line num="41" count="1" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="11" count="4" type="stmt"/>
+          <line num="32" count="6" type="stmt"/>
+          <line num="37" count="6" type="stmt"/>
+          <line num="41" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.animatedView">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/animatedView/AnimatedView.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
+          <line num="22" count="5" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
         </file>
       </package>
       <package name="components.aside">
@@ -37,12 +37,12 @@
         <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="AsideLeft.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/AsideLeft.js">
           <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="13" count="1" type="stmt"/>
+          <line num="13" count="6" type="stmt"/>
           <line num="25" count="0" type="stmt"/>
           <line num="55" count="0" type="stmt"/>
           <line num="60" count="0" type="stmt"/>
-          <line num="78" count="1" type="stmt"/>
-          <line num="106" count="1" type="stmt"/>
+          <line num="78" count="6" type="stmt"/>
+          <line num="106" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.menu">
@@ -65,10 +65,10 @@
         <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="MenuHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
           <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="16" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
+          <line num="50" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.menu.menuLinks">
@@ -84,10 +84,10 @@
         <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="ViewLink.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/menu/menuLinks/viewLink/ViewLink.js">
           <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
           <line num="15" count="0" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
+          <line num="36" count="6" type="stmt"/>
+          <line num="44" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideLeft.searchForm">
@@ -107,55 +107,55 @@
         <metrics statements="4" coveredstatements="3" conditionals="10" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="UserPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/aside/asideLeft/userPanel/UserPanel.js">
           <metrics statements="4" coveredstatements="3" conditionals="10" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
-          <line num="56" count="1" type="stmt"/>
+          <line num="44" count="6" type="stmt"/>
+          <line num="56" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.aside.asideRight">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="AsideRight.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/aside/asideRight/AsideRight.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
+          <line num="24" count="6" type="stmt"/>
+          <line num="30" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.basicForms">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="BasicForms.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/basicForms/BasicForms.js">
-          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="70" count="1" type="stmt"/>
-          <line num="74" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="70" count="6" type="stmt"/>
+          <line num="74" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.breadcrumb">
-        <metrics statements="9" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="8" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
         <file name="Breadcrumb.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/breadcrumb/Breadcrumb.js">
-          <metrics statements="9" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="19" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
+          <metrics statements="9" coveredstatements="8" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
           <line num="31" count="0" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="53" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.button">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Button.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/button/Button.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
+          <line num="32" count="6" type="stmt"/>
+          <line num="38" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.earningGraph">
@@ -177,7 +177,7 @@
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Footer.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/footer/Footer.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
         </file>
       </package>
@@ -185,27 +185,27 @@
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Header.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/header/Header.js">
           <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
-          <line num="50" count="1" type="stmt"/>
-          <line num="64" count="1" type="stmt"/>
-          <line num="68" count="1" type="stmt"/>
+          <line num="50" count="6" type="stmt"/>
+          <line num="64" count="6" type="stmt"/>
+          <line num="68" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.header.button">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Button.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/header/button/Button.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
+          <line num="24" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.header.messageMenu">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="MessageMenu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/header/messageMenu/MessageMenu.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
         </file>
       </package>
@@ -213,7 +213,7 @@
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TaskMenu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/header/taskMenu/TaskMenu.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="3" count="1" type="stmt"/>
+          <line num="3" count="6" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
         </file>
       </package>
@@ -221,20 +221,20 @@
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="UserMenu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/header/userMenu/UserMenu.js">
           <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="52" count="0" type="stmt"/>
-          <line num="121" count="1" type="stmt"/>
-          <line num="129" count="1" type="stmt"/>
-          <line num="133" count="1" type="stmt"/>
+          <line num="121" count="6" type="stmt"/>
+          <line num="129" count="6" type="stmt"/>
+          <line num="133" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.horloge">
         <metrics statements="10" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <file name="Horloge.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/horloge/Horloge.js">
           <metrics statements="10" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="21" count="0" type="stmt"/>
           <line num="22" count="0" type="stmt"/>
           <line num="28" count="0" type="stmt"/>
@@ -248,26 +248,26 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Jumbotron.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/jumbotron/Jumbotron.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.label">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="label.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/label/label.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
+          <line num="30" count="6" type="stmt"/>
+          <line num="35" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.notifications">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Notifications.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/notifications/Notifications.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/notifications/index.js">
@@ -278,62 +278,62 @@
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Notification.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/notifications/notification/Notification.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
+          <line num="31" count="6" type="stmt"/>
+          <line num="36" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.notifications.notificationPanel">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="NotificationPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/notifications/notificationPanel/NotificationPanel.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="27" count="1" type="stmt"/>
+          <line num="22" count="6" type="stmt"/>
+          <line num="27" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.pager">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Pager.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/pager/Pager.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
+          <line num="38" count="6" type="stmt"/>
+          <line num="44" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.pagination">
         <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="Pagination.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/pagination/Pagination.js">
           <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
           <line num="30" count="0" type="stmt"/>
-          <line num="49" count="1" type="stmt"/>
-          <line num="54" count="1" type="stmt"/>
+          <line num="49" count="6" type="stmt"/>
+          <line num="54" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.panel">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <file name="Panel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/panel/Panel.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="14" count="3" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="14" count="10" type="stmt"/>
+          <line num="29" count="6" type="stmt"/>
+          <line num="38" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.progressBar">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="ProgressBar.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/progressBar/ProgressBar.js">
-          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
-          <line num="63" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="17" count="4" type="stmt"/>
+          <line num="52" count="6" type="stmt"/>
+          <line num="63" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.scrollToTop">
@@ -353,28 +353,28 @@
         <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Stat.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/stat/Stat.js">
           <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
+          <line num="32" count="6" type="stmt"/>
+          <line num="39" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.statsCard">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="StatsCard.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/statsCard/StatsCard.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="27" count="1" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="39" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.tabPanel">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TabPanelDemo.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanelDemo.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/index.js">
@@ -385,35 +385,35 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TabPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/TabPanel/TabPanel.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.tabPanel.tabPanelBody">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TabPanelBody.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanelBody/TabPanelBody.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.tabPanel.tabPanelBodyContent">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TabPanelBodyContent.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanelBodyContent/TabPanelBodyContent.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="31" count="1" type="stmt"/>
+          <line num="25" count="6" type="stmt"/>
+          <line num="31" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.tabPanel.tabPanelHeader">
         <metrics statements="12" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <file name="TabPanelHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/tabPanel/tabPanelHeader/TabPanelHeader.js">
           <metrics statements="12" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
           <line num="14" count="0" type="stmt"/>
@@ -424,65 +424,65 @@
           <line num="26" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
           <line num="34" count="0" type="stmt"/>
-          <line num="55" count="1" type="stmt"/>
+          <line num="55" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.table">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="Table.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/Table.js">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/index.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         </file>
       </package>
       <package name="components.table.tableBody">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TableBody.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/tableBody/TableBody.js">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.table.tableCol">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TableCol.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/tableCol/TableCol.js">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="9" count="48" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.table.tableHeader">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TableHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/tableHeader/TableHeader.js">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.table.tableRow">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="TableRow.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/table/tableRow/TableRow.js">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="9" count="7" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.teamMates">
         <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="TeamMatesDemo.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/teamMates/TeamMatesDemo.js">
           <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="11" count="6" type="stmt"/>
           <line num="14" count="0" type="stmt"/>
           <line num="21" count="0" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
+          <line num="39" count="6" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/teamMates/index.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -492,39 +492,39 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TeamMateAddButton.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMateAddButton/TeamMateAddButton.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="1" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.teamMates.teamMates">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TeamMates.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMates/TeamMates.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.teamMates.teamMember">
         <metrics statements="8" coveredstatements="4" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="TeamMember.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/teamMates/teamMember/TeamMember.js">
           <metrics statements="8" coveredstatements="4" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
+          <line num="10" count="6" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
-          <line num="22" count="1" type="stmt"/>
+          <line num="22" count="6" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
           <line num="30" count="0" type="stmt"/>
-          <line num="49" count="1" type="stmt"/>
-          <line num="57" count="1" type="stmt"/>
+          <line num="49" count="6" type="stmt"/>
+          <line num="57" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.todoList">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TodoListDemo.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/TodoListDemo.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="11" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/index.js">
@@ -535,27 +535,27 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TodoList.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoList/TodoList.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
+          <line num="15" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.todoList.todoListCommands">
         <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="TodoListAddTask.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListCommands/TodoListAddTask.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
         </file>
         <file name="TodoListCommands.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListCommands/TodoListCommands.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
         <file name="TodoListSeeAllTask.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListCommands/TodoListSeeAllTask.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
         </file>
       </package>
@@ -585,44 +585,44 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TodoListItemButtonCancel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListItemButtonCancel/TodoListItemButtonCancel.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.todoList.todoListItemButtonEdit">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TodoListItemButtonEdit.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListItemButtonEdit/TodoListItemButtonEdit.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.todoList.todoListItemButtonValid">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="TodoListItemButtonValid.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/todoList/todoListItemButtonValid/TodoListItemButtonValid.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.toolTip">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/toolTip/index.js">
           <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
           <line num="14" count="0" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
+          <line num="25" count="6" type="stmt"/>
+          <line num="32" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.twitterFeed">
         <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="TwitterFeed.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/twitterFeed/TwitterFeed.js">
           <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="11" count="1" type="stmt"/>
+          <line num="11" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
           <line num="34" count="0" type="stmt"/>
         </file>
@@ -634,71 +634,119 @@
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="ListTweetsContainer.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/twitterFeed/listTweetsContainer/ListTweetsContainer.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.twitterFeed.tweet">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="Tweet.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/twitterFeed/tweet/Tweet.js">
           <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
+          <line num="40" count="6" type="stmt"/>
         </file>
       </package>
       <package name="components.twitterFeed.writeNewTweet">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="WriteNewTweet.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/twitterFeed/writeNewTweet/WriteNewTweet.js">
           <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
         </file>
       </package>
       <package name="components.workProgress">
-        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <file name="WorkProgress.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/workProgress/WorkProgress.js">
-          <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="31" count="0" type="stmt"/>
-          <line num="44" count="0" type="stmt"/>
-          <line num="49" count="0" type="stmt"/>
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="13" count="6" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
+          <line num="24" count="6" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="31" count="6" type="stmt"/>
+          <line num="44" count="7" type="stmt"/>
+          <line num="49" count="42" type="stmt"/>
         </file>
       </package>
       <package name="components.workProgress.workProgressPanel">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="WorkProgressPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/workProgress/workProgressPanel/WorkProgressPanel.js">
-          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="25" count="6" type="stmt"/>
         </file>
       </package>
       <package name="models">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="earningGraphMockData.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/earningGraphMockData.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
+          <line num="1" count="6" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/index.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         </file>
         <file name="navigation.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/navigation.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
+          <line num="1" count="6" type="stmt"/>
         </file>
         <file name="teamMatesMock.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/teamMatesMock.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
+          <line num="1" count="6" type="stmt"/>
         </file>
         <file name="userInfosMock.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/models/userInfosMock.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
+          <line num="1" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.alert">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/alert/Alert.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="24" count="3" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="77" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.basicElements">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="BasicElements.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/basicElements/BasicElements.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.basicProgressBar">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="BasicProgressBar.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/basicProgressBar/BasicProgressBar.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="24" count="3" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="112" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.breadcrumb">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="Breadcrumb.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/breadcrumb/Breadcrumb.js">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="26" count="3" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="53" count="3" type="stmt"/>
         </file>
       </package>
       <package name="views.earningGraph">

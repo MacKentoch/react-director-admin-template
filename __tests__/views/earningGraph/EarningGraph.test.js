@@ -14,6 +14,15 @@ import {
 // -> jest will throw errors (no way to counter that...)
 jest.mock('react-highlight');
 
+jest.mock('chart.js');
+// because of ref issue in snapshot testing
+// this.lineChart.getContext mock:
+function createNodeMock(/* element */) {
+  return {
+    getContext: () => ({})
+  };
+}
+
 describe('EarningGraph view', () => {
   it('renders as expected', () => {
     const props = {
@@ -27,7 +36,8 @@ describe('EarningGraph view', () => {
         <MemoryRouter>
           <EarningGraph {...props} />
         </MemoryRouter>
-      </div>
+      </div>,
+      {createNodeMock}
     ).toJSON();
     expect(component).toMatchSnapshot();
   });

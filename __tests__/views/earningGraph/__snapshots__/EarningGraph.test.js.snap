@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EarningGraph view renders as expected 1`] = `
+<div>
+  <section
+    className="content view-enter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Earning graph
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#F4F5F6",
+              }
+            }
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-md-8 col-md-offset-2"
+              >
+                <section
+                  className="panel "
+                >
+                  <header
+                    className="panel-heading"
+                  >
+                    Earning Graph
+                  </header>
+                  <div
+                    className="panel-body undefined"
+                    style={
+                      Object {
+                        "backgroundColor": "#FFF",
+                      }
+                    }
+                  >
+                    <canvas
+                      height="330"
+                      id="linechart"
+                      width="600"
+                    />
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Source
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+              }
+            }
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+`;
