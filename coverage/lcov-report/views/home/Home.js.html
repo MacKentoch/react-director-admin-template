@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/header/taskMenu/TaskMenu.js</title>
+    <title>Code coverage report for views/home/Home.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">components/header/taskMenu</a> TaskMenu.js
+      <a href="../../index.html">All files</a> / <a href="index.html">views/home</a> Home.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>6/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>3/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>6/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -167,10 +167,31 @@
 122
 123
 124
-125</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -209,6 +230,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,10 +240,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,7 +257,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,130 +321,169 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// flow weak
 &nbsp;
-const TaskMenu = () =&gt; (
-  &lt;li className="dropdown tasks-menu"&gt;
-    &lt;a
-      href="#"
-      className="dropdown-toggle"
-      data-toggle="dropdown"&gt;
-      &lt;i className="fa fa-tasks" /&gt;
-      &lt;span className="label label-danger"&gt;
-        9
-      &lt;/span&gt;
-    &lt;/a&gt;
-    &lt;ul className="dropdown-menu"&gt;
-      &lt;li className="header"&gt;
-        You have 9 tasks
-      &lt;/li&gt;
-      &lt;li&gt;
-        {/* &lt;!-- inner menu: contains the actual data --&gt; */}
-        &lt;ul className="menu"&gt;
-          &lt;li&gt;
-            {/* &lt;!-- Task item --&gt; */}
-            &lt;a href="#"&gt;
-              &lt;h3&gt;
-                Design some buttons
-                &lt;small className="pull-right"&gt;20%&lt;/small&gt;
-              &lt;/h3&gt;
-              &lt;div className="progress progress-striped xs"&gt;
-                &lt;div
-                  className="progress-bar progress-bar-success"
-                  style={{width: '20%'}}
-                  role="progressbar"
-                  aria-valuenow="20"
-                  aria-valuemin="0"
-                  aria-valuemax="100"&gt;
-                  &lt;span className="sr-only"&gt;
-                    20% Complete
-                  &lt;/span&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
-          &lt;/li&gt;
-          {/* &lt;!-- end task item --&gt; */}
-          &lt;li&gt;
-            {/* &lt;!-- Task item --&gt; */}
-            &lt;a href="#"&gt;
-              &lt;h3&gt;
-                Create a nice theme
-                &lt;small className="pull-right"&gt;40%&lt;/small&gt;
-              &lt;/h3&gt;
-              &lt;div className="progress progress-striped xs"&gt;
-                &lt;div
-                  className="progress-bar progress-bar-danger"
-                  style={{width: '40%'}}
-                  role="progressbar"
-                  aria-valuenow="20"
-                  aria-valuemin="0"
-                  aria-valuemax="100"&gt;
-                  &lt;span className="sr-only"&gt;
-                    40% Complete
-                  &lt;/span&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
-          &lt;/li&gt;
-          {/* &lt;!-- end task item --&gt; */}
-          &lt;li&gt;
-            {/* &lt;!-- Task item --&gt; */}
-            &lt;a href="#"&gt;
-              &lt;h3&gt;
-                Some task I need to do
-                &lt;small className="pull-right"&gt;60%&lt;/small&gt;
-              &lt;/h3&gt;
-              &lt;div className="progress progress-striped xs"&gt;
-                &lt;div
-                  className="progress-bar progress-bar-info"
-                  style={{width: '60%'}}
-                  role="progressbar"
-                  aria-valuenow="20"
-                  aria-valuemin="0"
-                  aria-valuemax="100"&gt;
-                  &lt;span className="sr-only"&gt;
-                    60% Complete
-                  &lt;/span&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
-          &lt;/li&gt;
-          {/* &lt;!-- end task item --&gt; */}
-          &lt;li&gt;
-            {/* &lt;!-- Task item --&gt; */}
-            &lt;a href="#"&gt;
-              &lt;h3&gt;
-                Make beautiful transitions
-                &lt;small className="pull-right"&gt;80%&lt;/small&gt;
-              &lt;/h3&gt;
-              &lt;div className="progress progress-striped xs"&gt;
-                &lt;div
-                  className="progress-bar progress-bar-warning"
-                  style={{width: '80%'}}
-                  role="progressbar"
-                  aria-valuenow="20"
-                  aria-valuemin="0"
-                  aria-valuemax="100"&gt;
-                  &lt;span className="sr-only"&gt;
-                    80% Complete
-                  &lt;/span&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
-          &lt;/li&gt;
-          {/* &lt;!-- end task item --&gt; */}
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li className="footer"&gt;
-        &lt;a href="#"&gt;
-          View all tasks
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-);
+import React, {
+  PureComponent
+}                         from 'react';
+import PropTypes          from 'prop-types';
+import {
+  AnimatedView,
+  StatsCard,
+  EarningGraph,
+  Notifications,
+  WorkProgress,
+  TwitterFeed,
+  TodoListDemo,
+  TeamMatesDemo
+}                         from '../../components';
 &nbsp;
-export default TaskMenu;
+class Home extends PureComponent {
+  static propTypes = {
+    earningGraphLabels:   PropTypes.array,
+    earningGraphDatasets: PropTypes.array,
+    teamMatesIsFetching:  PropTypes.bool,
+    teamMates:            PropTypes.arrayOf(
+      PropTypes.shape({
+        picture:      PropTypes.string,
+        firstname:    PropTypes.string,
+        lastname:     PropTypes.string,
+        profile:      PropTypes.string,
+        profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
+      })
+    ),
+    actions: PropTypes.shape({
+      enterHome: PropTypes.func,
+      leaveHome: PropTypes.func,
+      fetchEarningGraphDataIfNeeded:  PropTypes.func,
+      fetchTeamMatesDataIfNeeded:     PropTypes.func
+    })
+  };
+&nbsp;
+  componentWillMount() {
+    const { actions: { enterHome } } = this.props;
+    enterHome();
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
+    const {
+      actions: {
+        fetchEarningGraphDataIfNeeded,
+        fetchTeamMatesDataIfNeeded
+      }
+    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    fetchEarningGraphDataIfNeeded();</span>
+<span class="cstat-no" title="statement not covered" >    fetchTeamMatesDataIfNeeded();</span>
+  }
+&nbsp;
+  componentWillUnmount() {
+    const { actions: { leaveHome } } = this.props;
+    leaveHome();
+  }
+&nbsp;
+  render() {
+    const {
+      teamMates,
+      teamMatesIsFetching,
+      earningGraphLabels,
+      earningGraphDatasets
+    } = this.props;
+&nbsp;
+    return(
+      &lt;AnimatedView&gt;
+        &lt;div
+          className="row"
+          style={{marginBottom: '5px'}}&gt;
+          &lt;div className="col-md-3"&gt;
+            &lt;StatsCard
+              statValue={'3200'}
+              statLabel={'Total Tasks'}
+              icon={&lt;i className="fa fa-check-square-o"&gt;&lt;/i&gt;}
+              backColor={'red'}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-md-3"&gt;
+            &lt;StatsCard
+              statValue={'2200'}
+              statLabel={'Total Messages'}
+              icon={&lt;i className="fa fa-envelope-o"&gt;&lt;/i&gt;}
+              backColor={'violet'}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-md-3"&gt;
+            &lt;StatsCard
+              statValue={'100,320'}
+              statLabel={'Total Profit'}
+              icon={&lt;i className="fa fa-dollar"&gt;&lt;/i&gt;}
+              backColor={'blue'}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-md-3"&gt;
+            &lt;StatsCard
+              statValue={'4567'}
+              statLabel={'Total Documents'}
+              icon={&lt;i className="fa fa-paperclip"&gt;&lt;/i&gt;}
+              backColor={'green'}
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="row"&gt;
+          &lt;div className="col-md-8"&gt;
+            &lt;EarningGraph
+              labels={earningGraphLabels}
+              datasets={earningGraphDatasets}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-lg-4"&gt;
+           &lt;Notifications /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="row"&gt;
+          &lt;div className="col-md-8"&gt;
+            &lt;WorkProgress /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-md-4"&gt;
+            &lt;TwitterFeed /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="row"&gt;
+          &lt;div className="col-md-5"&gt;
+            &lt;TeamMatesDemo
+              isFetching={teamMatesIsFetching}
+              members={teamMates}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-md-7"&gt;
+            &lt;TodoListDemo /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+      &lt;/AnimatedView&gt;
+    );
+  }
+}
+&nbsp;
+export default Home;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -424,7 +493,7 @@ export default TaskMenu;
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Sep 28 2017 06:22:52 GMT+0200 (CEST)
 </div>
 </div>
-<script src="../../../prettify.js"></script>
+<script src="../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -432,6 +501,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../../sorter.js"></script>
+<script src="../../sorter.js"></script>
 </body>
 </html>

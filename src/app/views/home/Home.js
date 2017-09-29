@@ -76,7 +76,7 @@ class Home extends PureComponent {
             <StatsCard
               statValue={'3200'}
               statLabel={'Total Tasks'}
-              icon={<i className="fa fa-check-square-o"></i>}
+              icon={<i className="fa fa-check-square-o" />}
               backColor={'red'}
             />
           </div>
@@ -84,7 +84,7 @@ class Home extends PureComponent {
             <StatsCard
               statValue={'2200'}
               statLabel={'Total Messages'}
-              icon={<i className="fa fa-envelope-o"></i>}
+              icon={<i className="fa fa-envelope-o" />}
               backColor={'violet'}
             />
           </div>
@@ -92,7 +92,7 @@ class Home extends PureComponent {
             <StatsCard
               statValue={'100,320'}
               statLabel={'Total Profit'}
-              icon={<i className="fa fa-dollar"></i>}
+              icon={<i className="fa fa-dollar" />}
               backColor={'blue'}
             />
           </div>
@@ -100,7 +100,7 @@ class Home extends PureComponent {
             <StatsCard
               statValue={'4567'}
               statLabel={'Total Documents'}
-              icon={<i className="fa fa-paperclip"></i>}
+              icon={<i className="fa fa-paperclip" />}
               backColor={'green'}
             />
           </div>
@@ -114,7 +114,7 @@ class Home extends PureComponent {
             />
           </div>
           <div className="col-lg-4">
-           <Notifications />
+            <Notifications />
           </div>
         </div>
 
