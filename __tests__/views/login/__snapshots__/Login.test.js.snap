@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login view renders as expected 1`] = `
+<div>
+  <div
+    className="content"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-md-offset-4"
+      >
+        <form
+          className="form-horizontal"
+          noValidate={true}
+        >
+          <fieldset>
+            <legend>
+              Login
+            </legend>
+            <div
+              className="form-group"
+            >
+              <label
+                className="col-lg-2 control-label"
+                htmlFor="inputEmail"
+              >
+                Email
+              </label>
+              <div
+                className="col-lg-10"
+              >
+                <input
+                  className="form-control"
+                  id="inputEmail"
+                  onChange={[Function]}
+                  placeholder="Email"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              className="form-group"
+            >
+              <label
+                className="col-lg-2 control-label"
+                htmlFor="inputPassword"
+              >
+                Password
+              </label>
+              <div
+                className="col-lg-10"
+              >
+                <input
+                  className="form-control"
+                  id="inputPassword"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              className="form-group"
+            >
+              <div
+                className="col-lg-10 col-lg-offset-2"
+              >
+                <button
+                  className="login-button btn-block btn btn-primary"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Login
+                  </span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

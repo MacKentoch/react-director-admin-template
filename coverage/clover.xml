@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1506572572577" clover="3.2.0">
-  <project timestamp="1506572572577" name="All files">
-    <metrics statements="413" coveredstatements="309" conditionals="95" coveredconditionals="45" methods="155" coveredmethods="112" elements="663" coveredelements="466" complexity="0" loc="413" ncloc="413" packages="73" files="87" classes="87">
+<coverage generated="1506659126605" clover="3.2.0">
+  <project timestamp="1506659126605" name="All files">
+    <metrics statements="437" coveredstatements="315" conditionals="97" coveredconditionals="46" methods="164" coveredmethods="115" elements="698" coveredelements="476" complexity="0" loc="437" ncloc="437" packages="74" files="88" classes="88">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/index.js">
@@ -893,6 +893,36 @@
           <line num="59" count="1" type="stmt"/>
           <line num="68" count="3" type="stmt"/>
           <line num="70" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.login">
+        <metrics statements="24" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="3"/>
+        <file name="Login.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/login/Login.js">
+          <metrics statements="24" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="3"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="63" count="3" type="stmt"/>
+          <line num="65" count="3" type="stmt"/>
+          <line num="152" count="0" type="stmt"/>
+          <line num="154" count="0" type="stmt"/>
+          <line num="158" count="0" type="stmt"/>
+          <line num="160" count="0" type="stmt"/>
+          <line num="164" count="0" type="stmt"/>
+          <line num="167" count="0" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
+          <line num="174" count="0" type="stmt"/>
+          <line num="179" count="0" type="stmt"/>
+          <line num="181" count="0" type="stmt"/>
+          <line num="182" count="0" type="stmt"/>
+          <line num="183" count="0" type="stmt"/>
+          <line num="184" count="0" type="stmt"/>
+          <line num="187" count="0" type="stmt"/>
+          <line num="188" count="0" type="stmt"/>
         </file>
       </package>
     </metrics>
