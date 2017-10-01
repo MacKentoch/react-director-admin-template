@@ -4,7 +4,8 @@ import React            from 'react';
 import Home             from '../../../src/app/views/home/Home';
 import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 import {
-  shallow
+  shallow,
+  mount
 }                       from 'enzyme';
 import { 
   MemoryRouter
@@ -43,7 +44,7 @@ describe('Home view', () => {
       }
     };
     /* eslint-disable no-unused-vars */
-    const wrapper = shallow(
+    const wrapper = mount(
       <Home {...mockProps} />
     );
     expect(mockenterHome.mock.calls.length).toBe(1);
@@ -57,7 +58,7 @@ describe('Home view', () => {
         leaveHome: mockleaveHome
       }
     };
-    const wrapper = shallow(
+    const wrapper = mount(
       <Home {...mockProps} />
     );
     wrapper.unmount();

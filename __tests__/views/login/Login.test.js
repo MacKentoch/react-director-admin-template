@@ -4,7 +4,8 @@ import React            from 'react';
 import Login            from '../../../src/app/views/login/Login';
 import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 import {
-  shallow
+  shallow,
+  mount
 }                       from 'enzyme';
 import { 
   MemoryRouter
@@ -43,7 +44,7 @@ describe('Login view', () => {
       }
     };
     /* eslint-disable no-unused-vars */
-    const wrapper = shallow(
+    const wrapper = mount(
       <Login {...mockProps} />
     );
     expect(mockenterLogin.mock.calls.length).toBe(1);
@@ -57,7 +58,7 @@ describe('Login view', () => {
         leaveLogin: mockleaveLogin
       }
     };
-    const wrapper = shallow(
+    const wrapper = mount(
       <Login {...mockProps} />
     );
     wrapper.unmount();

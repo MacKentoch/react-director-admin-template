@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notifications view renders as expected 1`] = `
+<div>
+  <section
+    className="content view-enter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Notifications
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#F4F5F6",
+              }
+            }
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-md-4 col-md-offset-4"
+              >
+                <section
+                  className="panel"
+                >
+                  <header
+                    className="panel-heading"
+                  >
+                    notifications
+                  </header>
+                  <div
+                    className="panel-body notification--body-container"
+                    id="noti-box"
+                  >
+                    <div
+                      className="alert alert-danger"
+                    >
+                      <button
+                        className="close close-sm"
+                        data-dismiss="alert"
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-times"
+                        />
+                      </button>
+                      <span>
+                        <strong>
+                          Oh snap!
+                        </strong>
+                        Change a few things up and try submitting again.
+                      </span>
+                    </div>
+                    <div
+                      className="alert alert-success"
+                    >
+                      <button
+                        className="close close-sm"
+                        data-dismiss="alert"
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-times"
+                        />
+                      </button>
+                      <span>
+                        <strong>
+                          Well done!
+                        </strong>
+                        You successfully read this important alert message.
+                      </span>
+                    </div>
+                    <div
+                      className="alert alert-info"
+                    >
+                      <button
+                        className="close close-sm"
+                        data-dismiss="alert"
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-times"
+                        />
+                      </button>
+                      <span>
+                        <strong>
+                          Heads up!
+                        </strong>
+                        This alert needs your attention, but it's not super important.
+                      </span>
+                    </div>
+                    <div
+                      className="alert alert-warning"
+                    >
+                      <button
+                        className="close close-sm"
+                        data-dismiss="alert"
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-times"
+                        />
+                      </button>
+                      <span>
+                        <strong>
+                          Warning!
+                        </strong>
+                        Best check yo self, you're not looking too good.
+                      </span>
+                    </div>
+                    <div
+                      className="alert alert-danger"
+                    >
+                      <button
+                        className="close close-sm"
+                        data-dismiss="alert"
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-times"
+                        />
+                      </button>
+                      <span>
+                        <strong>
+                          Oh snap!
+                        </strong>
+                        Change a few things up and try submitting again.
+                      </span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Source
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+              }
+            }
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+`;
