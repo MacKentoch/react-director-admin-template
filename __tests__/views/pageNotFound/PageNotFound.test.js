@@ -1,48 +1,62 @@
 // @flow weak
 
-import React, {
-  PureComponent
-}                       from 'react';
-import PropTypes        from 'prop-types';
-import AnimatedView     from '../../components/animatedView/AnimatedView';
+import React            from 'react';
+import PageNotFound     from '../../../src/app/views/pageNotFound/PageNotFound';
+import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
+import {
+  shallow
+}                       from 'enzyme';
+import { 
+  MemoryRouter
+}                       from 'react-router';
 
 
-class PageNotFound extends PureComponent {
-  static propTypes = {
-    actions: PropTypes.shape({
-      enterPageNotFound: PropTypes.func.isRequired,
-      leavePageNotFound: PropTypes.func.isRequired
-    })
-  };
+describe('PageNotFound view', () => {
+  it('renders as expected', () => {
+    const props = {
+      actions: {
+        enterPageNotFound: () => {},
+        leavePageNotFound: () => {}
+      }
+    };
+    const component = renderer.create(
+      <div>
+        <MemoryRouter>
+          <PageNotFound {...props} />
+        </MemoryRouter>
+      </div>
+    ).toJSON();
+    expect(component).toMatchSnapshot();
+  });
 
-  componentDidMount() {
-    const  { actions } =  this.props;
-    actions.enterPageNotFound();
-  }
 
-  componentWillUnmount() {
-    const { actions } = this.props;
-    actions.leavePageNotFound();
-  }
-
-  render() {
-    return(
-      <AnimatedView>
-        <div className="row">
-          <div className="col-md-12">
-            <h2>
-              <i
-                className="fa fa-frown-o"
-                aria-hidden="true">
-              </i>
-              &nbsp;
-              Sorry... This page does not exist
-            </h2>
-          </div>
-        </div>
-      </AnimatedView>
+  it('triggers enterPageNotFound on mount', () => {
+    const mockenterPageNotFound = jest.fn();
+    const mockProps = {
+      actions: {
+        enterPageNotFound: mockenterPageNotFound,
+        leavePageNotFound: () => {}
+      }
+    };
+    /* eslint-disable no-unused-vars */
+    const wrapper = shallow(
+      <PageNotFound {...mockProps} />
     );
-  }
-}
+    expect(mockenterPageNotFound.mock.calls.length).toBe(1);
+  });
 
-export default PageNotFound;
+  it('triggers leavePageNotFound on unMount', () => {
+    const mockleavePageNotFound = jest.fn();
+    const mockProps = {
+      actions: {
+        enterPageNotFound: () => {},
+        leavePageNotFound: mockleavePageNotFound
+      }
+    };
+    const wrapper = shallow(
+      <PageNotFound {...mockProps} />
+    );
+    wrapper.unmount();
+    expect(mockleavePageNotFound.mock.calls.length).toBe(1);
+  });
+});

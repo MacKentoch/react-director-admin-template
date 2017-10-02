@@ -33,8 +33,8 @@ class PageNotFound extends PureComponent {
             <h2>
               <i
                 className="fa fa-frown-o"
-                aria-hidden="true">
-              </i>
+                aria-hidden="true" 
+              />
               &nbsp;
               Sorry... This page does not exist
             </h2>

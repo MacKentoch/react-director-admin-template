@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1506746447767" clover="3.2.0">
-  <project timestamp="1506746447767" name="All files">
-    <metrics statements="443" coveredstatements="319" conditionals="97" coveredconditionals="46" methods="167" coveredmethods="117" elements="707" coveredelements="482" complexity="0" loc="443" ncloc="443" packages="75" files="89" classes="89">
+<coverage generated="1506834329655" clover="3.2.0">
+  <project timestamp="1506834329655" name="All files">
+    <metrics statements="448" coveredstatements="324" conditionals="97" coveredconditionals="46" methods="170" coveredmethods="120" elements="715" coveredelements="490" complexity="0" loc="448" ncloc="448" packages="76" files="90" classes="90">
       <package name="components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/index.js">
@@ -23,8 +23,8 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/components/animatedView/AnimatedView.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="22" count="9" type="stmt"/>
-          <line num="24" count="9" type="stmt"/>
+          <line num="22" count="10" type="stmt"/>
+          <line num="24" count="10" type="stmt"/>
         </file>
       </package>
       <package name="components.aside">
@@ -935,6 +935,17 @@
           <line num="31" count="1" type="stmt"/>
           <line num="35" count="3" type="stmt"/>
           <line num="93" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="views.pageNotFound">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="PageNotFound.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/pageNotFound/PageNotFound.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
         </file>
       </package>
     </metrics>
