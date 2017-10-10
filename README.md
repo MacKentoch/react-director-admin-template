@@ -6,6 +6,10 @@ ReactJS version of Director Responsive Admin Template Free
 ## Preview
 ![preview](https://raw.githubusercontent.com/MacKentoch/react-director-admin-template/master/preview/preview.png)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-director-admin-template'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Mp96tCWH2KdajZuBzqB6jwj8/MacKentoch/react-director-admin-template.svg' />
+</a>
+
 [Launch preview here](https://mackentoch.github.io/react-director-admin-template)
 
 ## Content
