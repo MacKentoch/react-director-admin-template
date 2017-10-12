@@ -29,12 +29,11 @@ describe('PageNotFound view', () => {
     expect(component).toMatchSnapshot();
   });
 
-
   it('triggers enterPageNotFound on mount', () => {
-    const mockenterPageNotFound = jest.fn();
+    const mockEnterPageNotFound = jest.fn();
     const mockProps = {
       actions: {
-        enterPageNotFound: mockenterPageNotFound,
+        enterPageNotFound: mockEnterPageNotFound,
         leavePageNotFound: () => {}
       }
     };
@@ -42,7 +41,7 @@ describe('PageNotFound view', () => {
     const wrapper = shallow(
       <PageNotFound {...mockProps} />
     );
-    expect(mockenterPageNotFound.mock.calls.length).toBe(1);
+    expect(mockEnterPageNotFound.mock.calls.length).toBe(1);
   });
 
   it('triggers leavePageNotFound on unMount', () => {

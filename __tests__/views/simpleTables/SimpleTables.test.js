@@ -20,7 +20,7 @@ describe('SimpleTables view', () => {
     const props = {
       actions: {
         enterSimpleTables: () => {},
-        leaveEarningGraph: () => {}
+        leaveSimpleTables: () => {}
       }
     };
     const component = renderer.create(

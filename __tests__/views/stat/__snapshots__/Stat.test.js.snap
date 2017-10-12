@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stat view renders as expected 1`] = `
+<div>
+  <section
+    className="content view-enter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Stat
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#F4F5F6",
+              }
+            }
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-file-o  fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#fa8564",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    999 Projects
+                  </h5>
+                </div>
+              </div>
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-paperclip  fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#45cf95",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    999 Documents
+                  </h5>
+                </div>
+              </div>
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-envelope-o  fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#AC75F0",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    999 Messages
+                  </h5>
+                </div>
+              </div>
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-check-square-o  fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#45cf95",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    1000 Tasks
+                  </h5>
+                </div>
+              </div>
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-dollar  fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#AC75F0",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    $99999 Earnings
+                  </h5>
+                </div>
+              </div>
+              <div
+                className="col-md-2"
+              >
+                <div
+                  className="stat"
+                >
+                  <div
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <span
+                      className="fa-stack fa-lg fa-3x"
+                    >
+                      <i
+                        className="fa fa-circle fa-stack-2x"
+                        style={
+                          Object {
+                            "color": "#FFFFFF",
+                          }
+                        }
+                      />
+                      <i
+                        className="fa fa-refresh fa-spin fa-stack-1x fa-inverse"
+                        style={
+                          Object {
+                            "color": "#fa8564",
+                          }
+                        }
+                      />
+                    </span>
+                  </div>
+                  <h5
+                    className="stat-info"
+                  >
+                    Processing....
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Source
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+              }
+            }
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+`;

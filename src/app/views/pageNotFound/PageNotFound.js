@@ -16,13 +16,21 @@ class PageNotFound extends PureComponent {
   };
 
   componentDidMount() {
-    const  { actions } =  this.props;
-    actions.enterPageNotFound();
+    const { 
+      actions: {
+        enterPageNotFound
+      } 
+    } =  this.props;
+    enterPageNotFound();
   }
 
   componentWillUnmount() {
-    const { actions } = this.props;
-    actions.leavePageNotFound();
+    const { 
+      actions: {
+        leavePageNotFound
+      }
+    } = this.props;
+    leavePageNotFound();
   }
 
   render() {

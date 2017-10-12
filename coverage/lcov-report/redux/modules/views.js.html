@@ -1,0 +1,1508 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for redux/modules/views.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">redux/modules</a> views.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.07% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/89</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>41/89</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow weak
+&nbsp;
+import moment from 'moment';
+&nbsp;
+const ENTER_LOGIN_VIEW  = 'ENTER_LOGIN_VIEW';
+const LEAVE_LOGIN_VIEW  = 'LEAVE_LOGIN_VIEW';
+&nbsp;
+const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
+const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
+const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
+const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
+const ENTER_BASIC_ELEMENTS_VIEW = 'ENTER_BASIC_ELEMENTS_VIEW';
+const LEAVE_BASIC_ELEMENTS_VIEW = 'LEAVE_BASIC_ELEMENTS_VIEW';
+const ENTER_GENERAL_VIEW  = 'ENTER_GENERAL_VIEW';
+const LEAVE_GENERAL_VIEW  = 'LEAVE_GENERAL_VIEW';
+const ENTER_PAGE_NOT_FOUND_VIEW  = 'ENTER_PAGE_NOT_FOUND_VIEW';
+const LEAVE_PAGE_NOT_FOUND_VIEW  = 'LEAVE_PAGE_NOT_FOUND_VIEW';
+const ENTER_STATS_CARD_VIEW = 'ENTER_STATS_CARD_VIEW';
+const LEAVE_STATS_CARD_VIEW = 'LEAVE_STATS_CARD_VIEW';
+const ENTER_EARNING_GRAPH_VIEW = 'ENTER_EARNING_GRAPH_VIEW';
+const LEAVE_EARNING_GRAPH_VIEW = 'LEAVE_EARNING_GRAPH_VIEW';
+const ENTER_NOTIFICATIONS_VIEW = 'ENTER_NOTIFICATIONS_VIEW';
+const LEAVE_NOTIFICATIONS_VIEW = 'LEAVE_NOTIFICATIONS_VIEW';
+const ENTER_WORK_PROGRESS_VIEW = 'ENTER_WORK_PROGRESS_VIEW';
+const LEAVE_WORK_PROGRESS_VIEW = 'LEAVE_WORK_PROGRESS_VIEW';
+const ENTER_TWITTER_FEED_VIEW = 'ENTER_TWITTER_FEED_VIEW';
+const LEAVE_TWITTER_FEED_VIEW = 'LEAVE_TWITTER_FEED_VIEW';
+const ENTER_TEAM_MATES_VIEW = 'ENTER_TEAM_MATES_VIEW';
+const LEAVE_TEAM_MATES_VIEW = 'LEAVE_TEAM_MATES_VIEW';
+const ENTER_TODO_LIST_VIEW = 'ENTER_TODO_LIST_VIEW';
+const LEAVE_TODO_LIST_VIEW = 'LEAVE_TODO_LIST_VIEW';
+const ENTER_BREADCRUMB_VIEW = 'ENTER_BREADCRUMB_VIEW';
+const LEAVE_BREADCRUMB_VIEW = 'LEAVE_BREADCRUMB_VIEW';
+const ENTER_STAT_VIEW = 'ENTER_STAT_VIEW';
+const LEAVE_STAT_VIEW = 'LEAVE_STAT_VIEW';
+const ENTER_BASIC_PROGRESS_BAR_VIEW = 'ENTER_BASIC_PROGRESS_BAR_VIEW';
+const LEAVE_BASIC_PROGRESS_BAR_VIEW = 'LEAVE_BASIC_PROGRESS_BAR_VIEW';
+const ENTER_TAB_PANEL_VIEW = 'ENTER_TAB_PANEL_VIEW';
+const LEAVE_TAB_PANEL_VIEW = 'LEAVE_TAB_PANEL_VIEW';
+const ENTER_STRIPED_PROGRESS_BAR_VIEW = 'ENTER_STRIPED_PROGRESS_BAR_VIEW';
+const LEAVE_STRIPED_PROGRESS_BAR_VIEW = 'LEAVE_STRIPED_PROGRESS_BAR_VIEW';
+const ENTER_ALERT_VIEW = 'ENTER_ALERT_VIEW';
+const LEAVE_ALERT_VIEW = 'LEAVE_ALERT_VIEW';
+const ENTER_PAGINATION_VIEW = 'ENTER_PAGINATION_VIEW';
+const LEAVE_PAGINATION_VIEW = 'LEAVE_PAGINATION_VIEW';
+&nbsp;
+const initialState = {
+  currentView:  'home',
+  enterTime:    null,
+  leaveTime:    null
+};
+&nbsp;
+export default function <span class="fstat-no" title="function not covered" >views(</span>state = <span class="branch-0 cbranch-no" title="branch not covered" >initialState,</span> action) {
+<span class="cstat-no" title="statement not covered" >  switch (action.type) {</span>
+  case ENTER_HOME_VIEW:
+  case ENTER_LOGIN_VIEW:
+  case ENTER_SIMPLE_TABLES_VIEW:
+  case ENTER_BASIC_ELEMENTS_VIEW:
+  case ENTER_GENERAL_VIEW:
+  case ENTER_PAGE_NOT_FOUND_VIEW:
+  case ENTER_STATS_CARD_VIEW:
+  case ENTER_EARNING_GRAPH_VIEW:
+  case ENTER_NOTIFICATIONS_VIEW:
+  case ENTER_WORK_PROGRESS_VIEW:
+  case ENTER_TWITTER_FEED_VIEW:
+  case ENTER_TEAM_MATES_VIEW:
+  case ENTER_TODO_LIST_VIEW:
+  case ENTER_BREADCRUMB_VIEW:
+  case ENTER_STAT_VIEW:
+  case ENTER_BASIC_PROGRESS_BAR_VIEW:
+  case ENTER_TAB_PANEL_VIEW:
+  case ENTER_STRIPED_PROGRESS_BAR_VIEW:
+  case ENTER_ALERT_VIEW:
+  case ENTER_PAGINATION_VIEW:
+    // can't enter if you are already inside
+<span class="cstat-no" title="statement not covered" >    if (state.currentView !== action.currentView) {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+<span class="cstat-no" title="statement not covered" >    return state;</span>
+&nbsp;
+  case LEAVE_HOME_VIEW:
+  case LEAVE_LOGIN_VIEW:
+  case LEAVE_SIMPLE_TABLES_VIEW:
+  case LEAVE_BASIC_ELEMENTS_VIEW:
+  case LEAVE_GENERAL_VIEW:
+  case LEAVE_PAGE_NOT_FOUND_VIEW:
+  case LEAVE_STATS_CARD_VIEW:
+  case LEAVE_EARNING_GRAPH_VIEW:
+  case LEAVE_NOTIFICATIONS_VIEW:
+  case LEAVE_WORK_PROGRESS_VIEW:
+  case LEAVE_TWITTER_FEED_VIEW:
+  case LEAVE_TEAM_MATES_VIEW:
+  case LEAVE_TODO_LIST_VIEW:
+  case LEAVE_BREADCRUMB_VIEW:
+  case LEAVE_STAT_VIEW:
+  case LEAVE_BASIC_PROGRESS_BAR_VIEW:
+  case LEAVE_TAB_PANEL_VIEW:
+  case LEAVE_STRIPED_PROGRESS_BAR_VIEW:
+  case LEAVE_ALERT_VIEW:
+  case LEAVE_PAGINATION_VIEW:
+    // can't leave if you aren't already inside
+<span class="cstat-no" title="statement not covered" >    if (state.currentView === action.currentView) {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        ...state,
+        currentView:  action.currentView,
+        enterTime:    action.enterTime,
+        leaveTime:    action.leaveTime
+      };
+    }
+<span class="cstat-no" title="statement not covered" >    return state;</span>
+&nbsp;
+  default:
+<span class="cstat-no" title="statement not covered" >    return state;</span>
+  }
+}
+&nbsp;
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterHome(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_HOME_VIEW,
+    currentView:  'Home',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveHome(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_HOME_VIEW,
+    currentView:  'Home',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterSimpleTables(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveSimpleTables(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_SIMPLE_TABLES_VIEW,
+    currentView:  'SimpleTables',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterBasicElements(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_BASIC_ELEMENTS_VIEW,
+    currentView:  'BasicElements',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveBasicElements(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_BASIC_ELEMENTS_VIEW,
+    currentView:  'BasicElements',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterGeneral(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_GENERAL_VIEW,
+    currentView:  'General',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveGeneral(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_GENERAL_VIEW,
+    currentView:  'General',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterPageNotFound(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_PAGE_NOT_FOUND_VIEW,
+    currentView:  'PageNotFound',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leavePageNotFound(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_PAGE_NOT_FOUND_VIEW,
+    currentView:  'PageNotFound',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterStatsCard(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_STATS_CARD_VIEW,
+    currentView:  'StatsCard',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveStatsCard(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_STATS_CARD_VIEW,
+    currentView:  'StatsCard',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterEarningGraph(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_EARNING_GRAPH_VIEW,
+    currentView:  'EarningGraph',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveEarningGraph(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_EARNING_GRAPH_VIEW,
+    currentView:  'EarningGraph',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterNotifications(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_NOTIFICATIONS_VIEW,
+    currentView:  'Notifications',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveNotifications(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_NOTIFICATIONS_VIEW,
+    currentView:  'Notifications',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterWorkProgress(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_WORK_PROGRESS_VIEW,
+    currentView:  'WorkProgress',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveWorkProgress(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_WORK_PROGRESS_VIEW,
+    currentView:  'WorkProgress',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterTwitterFeed(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_TWITTER_FEED_VIEW,
+    currentView:  'TwitterFeed',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveTwitterFeed(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_TWITTER_FEED_VIEW,
+    currentView:  'TwitterFeed',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterTeamMatesView(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_TEAM_MATES_VIEW,
+    currentView:  'TeamMatesView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveTeamMatesView(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_TEAM_MATES_VIEW,
+    currentView:  'TeamMatesView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterTodoListView(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_TODO_LIST_VIEW,
+    currentView:  'TodoListView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveTodoListView(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_TODO_LIST_VIEW,
+    currentView:  'TodoListView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterBreadcrumb(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_BREADCRUMB_VIEW,
+    currentView:  'BreadcrumbView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveBreadcrumb(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_BREADCRUMB_VIEW,
+    currentView:  'BreadcrumbView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterStat(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_STAT_VIEW,
+    currentView:  'StatView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveStat(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_STAT_VIEW,
+    currentView:  'StatView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterBasicProgressBar(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_BASIC_PROGRESS_BAR_VIEW,
+    currentView:  'BasicProgressBarView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveBasicProgressBar(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_BASIC_PROGRESS_BAR_VIEW,
+    currentView:  'BasicProgressBarView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterTabPanel(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_TAB_PANEL_VIEW,
+    currentView:  'TabPanel',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveTabPanel(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_TAB_PANEL_VIEW,
+    currentView:  'TabPanel',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterStripedProgressBar(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_STRIPED_PROGRESS_BAR_VIEW,
+    currentView:  'StripedProgressBarView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveStripedProgressBar(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_STRIPED_PROGRESS_BAR_VIEW,
+    currentView:  'StripedProgressBarView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterAlert(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_ALERT_VIEW,
+    currentView:  'AlertView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveAlert(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_ALERT_VIEW,
+    currentView:  'AlertView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterPagination(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_PAGINATION_VIEW,
+    currentView:  'PaginationView',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leavePagination(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_PAGINATION_VIEW,
+    currentView:  'PaginationView',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >enterLogin(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         ENTER_LOGIN_VIEW,
+    currentView:  'Login',
+    enterTime:    time,
+    leaveTime:    null
+  };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >leaveLogin(</span>time = <span class="branch-0 cbranch-no" title="branch not covered" >moment().format())</span> {
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    type:         LEAVE_LOGIN_VIEW,
+    currentView:  'Login',
+    enterTime:    null,
+    leaveTime:    time
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 11 2017 06:25:37 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

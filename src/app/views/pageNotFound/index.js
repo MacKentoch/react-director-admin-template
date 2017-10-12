@@ -2,7 +2,7 @@
 
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
+import * as viewActions       from '../../redux/modules/views';
 import PageNotFound           from './PageNotFound';
 
 const mapStateToProps = (state) => {
@@ -15,8 +15,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     actions : bindActionCreators(
       {
-        enterPageNotFound: actions.enterPageNotFound,
-        leavePageNotFound: actions.leavePageNotFound
+        //  views
+        ...viewActions
       },
       dispatch)
   };

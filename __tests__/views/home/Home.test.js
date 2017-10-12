@@ -19,9 +19,15 @@ jest.mock('react-highlight');
 describe('Home view', () => {
   it('renders as expected', () => {
     const props = {
+      earningGraphLabels: [],
+      earningGraphDatasets: [],
+      teamMatesIsFetching: false,
+      teamMates: [],
       actions: {
         enterHome: () => {},
-        leaveHome: () => {}
+        leaveHome: () => {},
+        fetchEarningGraphDataIfNeeded: () => {},
+        fetchTeamMatesDataIfNeeded: () => {}
       }
     };
     const component = renderer.create(
@@ -40,11 +46,13 @@ describe('Home view', () => {
     const mockProps = {
       actions: {
         enterHome: mockenterHome,
-        leaveHome: () => {}
+        leaveHome: () => {},
+        fetchEarningGraphDataIfNeeded: () => {},
+        fetchTeamMatesDataIfNeeded: () => {}
       }
     };
     /* eslint-disable no-unused-vars */
-    const wrapper = mount(
+    const wrapper = shallow(
       <Home {...mockProps} />
     );
     expect(mockenterHome.mock.calls.length).toBe(1);
@@ -55,10 +63,12 @@ describe('Home view', () => {
     const mockProps = {
       actions: {
         enterHome: () => {},
-        leaveHome: mockleaveHome
+        leaveHome: mockleaveHome,
+        fetchEarningGraphDataIfNeeded: () => {},
+        fetchTeamMatesDataIfNeeded: () => {}
       }
     };
-    const wrapper = mount(
+    const wrapper = shallow(
       <Home {...mockProps} />
     );
     wrapper.unmount();

@@ -20,7 +20,7 @@ describe('Pagination view', () => {
     const props = {
       actions: {
         enterPagination: () => {},
-        leaveEarningGraph: () => {}
+        leavePagination: () => {}
       }
     };
     const component = renderer.create(
