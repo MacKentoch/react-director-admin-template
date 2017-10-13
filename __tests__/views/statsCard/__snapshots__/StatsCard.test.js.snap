@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsCard view renders as expected 1`] = `
+<div>
+  <section
+    className="content view-enter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Stats cards
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#F4F5F6",
+              }
+            }
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-md-3"
+              >
+                <div
+                  className="sm-st clearfix"
+                >
+                  <span
+                    className="sm-st-icon st-red"
+                  >
+                    <i
+                      className="fa fa-check-square-o"
+                    />
+                  </span>
+                  <div
+                    className="sm-st-info"
+                  >
+                    <span>
+                      3200
+                    </span>
+                    <div>
+                      Total Tasks
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-md-3"
+              >
+                <div
+                  className="sm-st clearfix"
+                >
+                  <span
+                    className="sm-st-icon st-violet"
+                  >
+                    <i
+                      className="fa fa-envelope-o"
+                    />
+                  </span>
+                  <div
+                    className="sm-st-info"
+                  >
+                    <span>
+                      2200
+                    </span>
+                    <div>
+                      Total Messages
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-md-3"
+              >
+                <div
+                  className="sm-st clearfix"
+                >
+                  <span
+                    className="sm-st-icon st-blue"
+                  >
+                    <i
+                      className="fa fa-dollar"
+                    />
+                  </span>
+                  <div
+                    className="sm-st-info"
+                  >
+                    <span>
+                      100,320
+                    </span>
+                    <div>
+                      Total Profit
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-md-3"
+              >
+                <div
+                  className="sm-st clearfix"
+                >
+                  <span
+                    className="sm-st-icon st-green"
+                  >
+                    <i
+                      className="fa fa-paperclip"
+                    />
+                  </span>
+                  <div
+                    className="sm-st-info"
+                  >
+                    <span>
+                      4567
+                    </span>
+                    <div>
+                      Total Documents
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <section
+          className="panel "
+        >
+          <header
+            className="panel-heading"
+          >
+            Source
+          </header>
+          <div
+            className="panel-body undefined"
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+              }
+            }
+          />
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+`;
