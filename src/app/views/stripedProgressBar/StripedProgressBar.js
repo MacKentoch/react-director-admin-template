@@ -13,6 +13,13 @@ import Highlight          from 'react-highlight';
 
 
 class StripedProgressBar extends PureComponent {
+  static propTypes= {
+    actions: PropTypes.shape({
+      enterStripedProgressBar: PropTypes.func.isRequired,
+      leaveStripedProgressBar: PropTypes.func.isRequired
+    })
+  };
+  
   componentWillMount() {
     const { actions: { enterStripedProgressBar } } = this.props;
     enterStripedProgressBar();
@@ -192,12 +199,5 @@ class StripedProgressBar extends PureComponent {
     );
   }
 }
-
-StripedProgressBar.propTypes= {
-  actions: PropTypes.shape({
-    enterStripedProgressBar: PropTypes.func.isRequired,
-    leaveStripedProgressBar: PropTypes.func.isRequired
-  })
-};
 
 export default StripedProgressBar;
