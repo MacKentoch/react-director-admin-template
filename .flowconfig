@@ -9,3 +9,4 @@
 module.name_mapper='^.*\.css$' -> 'css-module-flow'
 module.system=haste
 strip_root=true
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
