@@ -61,27 +61,21 @@ class BackToTop extends Component<Props, State> {
   }
 
   handleWindowScroll = () => {
-    if ($) {
-      const { windowScrollY } = this.state;
-      const { minScrollY }    = this.props;
+    const { windowScrollY } = this.state;
+    const { minScrollY }    = this.props;
 
-      /* eslint-disable no-undefined */
-      const currentWindowScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-      /* eslint-enable no-undefined */
+    /* eslint-disable no-undefined */
+    const currentWindowScrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    /* eslint-enable no-undefined */
 
-      if (windowScrollY !== currentWindowScrollY) {
-        // console.log('scrollTop: ', currentWindowScrollY);
-        const shouldShowBackButton = currentWindowScrollY >= minScrollY ? true : false;
+    if (windowScrollY !== currentWindowScrollY) {
+      // console.log('scrollTop: ', currentWindowScrollY);
+      const shouldShowBackButton = currentWindowScrollY >= minScrollY ? true : false;
 
-        this.setState({
-          windowScrollY: currentWindowScrollY,
-          showBackButton: shouldShowBackButton
-        });
-      }
-    } else {
-      /* eslint-disable no-throw-literal*/
-      throw 'BackToTop component requires jQuery';
-      /* eslint-enable no-throw-literal*/
+      this.setState({
+        windowScrollY: currentWindowScrollY,
+        showBackButton: shouldShowBackButton
+      });
     }
   }
 
