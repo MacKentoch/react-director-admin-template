@@ -1,9 +1,10 @@
+// @flow
 /* eslint no-process-env:0 */
 import React                        from 'react';
 import {
- Route,
- Switch,
- Redirect
+  Route,
+  Switch,
+  Redirect
 }                                   from 'react-router-dom';
 import HomeConnected                from '../views/home';
 import AlertConnected               from '../views/alert';

@@ -7,7 +7,6 @@
     "axios": "registry:dt/axios#0.9.1+20161016142654",
     "bootstrap": "registry:dt/bootstrap#3.3.5+20160726204056",
     "classnames": "registry:dt/classnames#0.0.0+20161113184211",
-    "jest": "registry:dt/jest#19.2.0+20170312200138",
     "jquery": "registry:dt/jquery#1.10.0+20170310222111",
     "js-base64": "registry:dt/js-base64#2.1.9+20161025033459",
     "moment": "registry:dt/moment#2.11.1+20161010105546",

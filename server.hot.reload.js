@@ -1,5 +1,9 @@
+// @flow
+// @ts-check
+// typescript
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
+
 const path          = require('path');
 const webpack       = require('webpack');
 const express       = require('express');
