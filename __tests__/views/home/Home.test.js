@@ -4,17 +4,18 @@ import React            from 'react';
 import Home             from '../../../src/app/views/home/Home';
 import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 import {
-  shallow,
+  // shallow,
   mount
 }                       from 'enzyme';
-import { 
+import {
   MemoryRouter
 }                       from 'react-router';
+// import teamMatesMock    from '../../../src/app/models/teamMatesMock';
 
-// react-highlight uses findDOMNode: 
+// react-highlight uses findDOMNode:
 // -> jest will throw errors (no way to counter that...)
 jest.mock('react-highlight');
-
+jest.mock('chart.js');
 
 describe('Home view', () => {
   it('renders as expected', () => {
@@ -44,6 +45,10 @@ describe('Home view', () => {
   it('triggers enterHome on mount', () => {
     const mockenterHome = jest.fn();
     const mockProps = {
+      earningGraphLabels: [],
+      earningGraphDatasets: [],
+      teamMatesIsFetching: false,
+      teamMates: [],
       actions: {
         enterHome: mockenterHome,
         leaveHome: () => {},
@@ -52,8 +57,10 @@ describe('Home view', () => {
       }
     };
     /* eslint-disable no-unused-vars */
-    const wrapper = shallow(
-      <Home {...mockProps} />
+    const wrapper = mount(
+      <MemoryRouter>
+        <Home {...mockProps} />
+      </MemoryRouter>
     );
     expect(mockenterHome.mock.calls.length).toBe(1);
   });
@@ -61,6 +68,10 @@ describe('Home view', () => {
   it('triggers leaveHome on unMount', () => {
     const mockleaveHome = jest.fn();
     const mockProps = {
+      earningGraphLabels: [],
+      earningGraphDatasets: [],
+      teamMatesIsFetching: false,
+      teamMates: [],
       actions: {
         enterHome: () => {},
         leaveHome: mockleaveHome,
@@ -68,8 +79,10 @@ describe('Home view', () => {
         fetchTeamMatesDataIfNeeded: () => {}
       }
     };
-    const wrapper = shallow(
-      <Home {...mockProps} />
+    const wrapper = mount(
+      <MemoryRouter>
+        <Home {...mockProps} />
+      </MemoryRouter>
     );
     wrapper.unmount();
     expect(mockleaveHome.mock.calls.length).toBe(1);

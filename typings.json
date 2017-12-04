@@ -16,6 +16,7 @@
     "redux-thunk": "registry:dt/redux-thunk#2.1.0+20160703120921"
   },
   "globalDevDependencies": {
+    "jest": "registry:dt/jest#19.2.0+20170312200138",
     "redux-mock-store": "registry:dt/redux-mock-store#0.0.6+20161121205806",
     "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20170117213337"
   }

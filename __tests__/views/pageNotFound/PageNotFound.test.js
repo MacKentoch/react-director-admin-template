@@ -4,9 +4,10 @@ import React            from 'react';
 import PageNotFound     from '../../../src/app/views/pageNotFound/PageNotFound';
 import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 import {
+  mount,
   shallow
 }                       from 'enzyme';
-import { 
+import {
   MemoryRouter
 }                       from 'react-router';
 
@@ -38,8 +39,10 @@ describe('PageNotFound view', () => {
       }
     };
     /* eslint-disable no-unused-vars */
-    const wrapper = shallow(
-      <PageNotFound {...mockProps} />
+    const wrapper = mount(
+      <MemoryRouter>
+        <PageNotFound {...mockProps} />
+      </MemoryRouter>
     );
     expect(mockEnterPageNotFound.mock.calls.length).toBe(1);
   });
@@ -52,8 +55,10 @@ describe('PageNotFound view', () => {
         leavePageNotFound: mockleavePageNotFound
       }
     };
-    const wrapper = shallow(
-      <PageNotFound {...mockProps} />
+    const wrapper = mount(
+      <MemoryRouter>
+        <PageNotFound {...mockProps} />
+      </MemoryRouter>
     );
     wrapper.unmount();
     expect(mockleavePageNotFound.mock.calls.length).toBe(1);

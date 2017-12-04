@@ -45,7 +45,7 @@ export {
   TodoListSeeAllTask
 }                                     from './todoList';
 export { default as ProgressBar }     from './progressBar/ProgressBar';
-export { default as ToolTip }         from './toolTip/Tootip';
+export { default as ToolTip }         from './toolTip/Tooltip';
 export { default as Pagination }      from './pagination/Pagination';
 export { default as Pager }           from './pager/Pager';
 export {

@@ -16,7 +16,6 @@ import Highlight          from 'react-highlight';
 
 
 class TabPanel extends PureComponent {
-
   state = {
     mockHeader: [
       {name: 'Home', tablink: 'home', isActive: true},

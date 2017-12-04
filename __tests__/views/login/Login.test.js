@@ -4,14 +4,14 @@ import React            from 'react';
 import Login            from '../../../src/app/views/login/Login';
 import renderer         from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 import {
-  shallow,
+  // shallow,
   mount
 }                       from 'enzyme';
-import { 
+import {
   MemoryRouter
 }                       from 'react-router';
 
-// react-highlight uses findDOMNode: 
+// react-highlight uses findDOMNode:
 // -> jest will throw errors (no way to counter that...)
 jest.mock('react-highlight');
 
@@ -19,6 +19,10 @@ jest.mock('react-highlight');
 describe('Login view', () => {
   it('renders as expected', () => {
     const props = {
+      match:    {},
+      location: {},
+      history:  {},
+      currentView: 'login',
       actions: {
         enterLogin: () => {},
         leaveLogin: () => {}
@@ -38,6 +42,10 @@ describe('Login view', () => {
   it('triggers enterLogin on mount', () => {
     const mockenterLogin = jest.fn();
     const mockProps = {
+      match:    {},
+      location: {},
+      history:  {},
+      currentView: 'login',
       actions: {
         enterLogin: mockenterLogin,
         leaveLogin: () => {}
@@ -53,6 +61,10 @@ describe('Login view', () => {
   it('triggers leaveLogin on unMount', () => {
     const mockleaveLogin = jest.fn();
     const mockProps = {
+      match:    {},
+      location: {},
+      history:  {},
+      currentView: 'login',
       actions: {
         enterLogin: () => {},
         leaveLogin: mockleaveLogin

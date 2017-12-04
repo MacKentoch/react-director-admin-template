@@ -64,14 +64,16 @@ class EarningGraph extends PureComponent {
       maintainAspectRatio: true
     };
 
-    this.chart = new Chart(
-      this.linechart.getContext('2d'),
-      {
-        type: 'line',
-        data,
-        options
-      }
-    );
+    if (this.linechart) {
+      this.chart = new Chart(
+        this.linechart.getContext('2d'),
+        {
+          type: 'line',
+          data,
+          options
+        }
+      );
+    }
   }
 }
 
