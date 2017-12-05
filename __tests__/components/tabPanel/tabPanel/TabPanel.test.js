@@ -2,7 +2,7 @@
 'use strict';
 
 import React              from 'react';
-import TabPanel           from '../../../../src/app/components/tabPanel/TabPanel/TabPanel';
+import TabPanel           from '../../../../src/app/components/tabPanel/tabPanel/TabPanel';
 import renderer           from 'react-test-renderer'; // needed both for snpashot testing but also to prevent errors from enzyme
 
 describe('TabPanel component', () => {

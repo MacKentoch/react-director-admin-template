@@ -25,7 +25,7 @@ const config = {
         test:     /\.jsx?$/,
         include:  srcInclude,
         exclude:  [vendorsDir],
-        loaders:  ['babel-loader']
+        loaders:  ['react-hot-loader/webpack', 'babel-loader']
       },
       {
         test: /\.css$/,

@@ -1,5 +1,3 @@
-'use strict';
-/* eslint-disable no-console */
 const express   = require('express');
 const path      = require('path');
 const chalk     = require('chalk');
@@ -12,7 +10,7 @@ const IP_ADRESS = 'localhost';
 app.use(express.static(path.join(__dirname, DOCS_PATH)));
 
 app.get(
-  '/', 
+  '/',
   (req, res) => res.sendFile(path.join(__dirname, DOCS_PATH, 'index.html'))
 );
 

@@ -5,6 +5,7 @@
 /// <reference path="globals/jquery/index.d.ts" />
 /// <reference path="globals/js-base64/index.d.ts" />
 /// <reference path="globals/moment/index.d.ts" />
+/// <reference path="globals/node/index.d.ts" />
 /// <reference path="globals/react-router-dom/index.d.ts" />
 /// <reference path="globals/react-router/index.d.ts" />
 /// <reference path="globals/redux-mock-store/index.d.ts" />

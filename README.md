@@ -16,13 +16,15 @@ ReactJS version of Director Responsive Admin Template Free
 ## Content
 
 - admin template
-- ReactJS 15.6+
+- ReactJS 16+
 - Redux
-- react-hot-reload 3+
+- react-hot-reload 3.1+
 - React router 4
 - webpack 3
 - postcss
 - sass
+- jest
+- enzyme
 
 ## Usage
 
@@ -55,7 +57,7 @@ Development mode = best dev experience (*hot reload, redux devtools extension...
 npm run start
 ```
 
-> Then go to [localhost:3000](http://localhost:3000)
+> Then go to [localhost:3000](http://localhost:3001)
 
 ### bundle production mode
 

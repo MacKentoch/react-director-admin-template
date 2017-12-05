@@ -10,6 +10,7 @@
     "jquery": "registry:dt/jquery#1.10.0+20170310222111",
     "js-base64": "registry:dt/js-base64#2.1.9+20161025033459",
     "moment": "registry:dt/moment#2.11.1+20161010105546",
+    "node": "registry:dt/node#7.0.0+20170322231424",
     "react-router": "registry:dt/react-router#4.0.0+20170323201651",
     "react-router-dom": "registry:dt/react-router-dom#4.0.0+20170323201651",
     "redux": "registry:dt/redux#3.5.2+20160703092728",

@@ -109,7 +109,23 @@ exports[`TweetFeed component renders as expected 1`] = `
                 Emmet
               </strong>
             </a>
-            <demoTweetMessage />
+            <p>
+              In hac
+              <a
+                href="#"
+              >
+                habitasse
+              </a>
+              platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+              <a
+                className="text-danger"
+                href="#"
+              >
+                <strong>
+                  #dev
+                </strong>
+              </a>
+            </p>
           </div>
         </li>
         <li
@@ -146,7 +162,23 @@ exports[`TweetFeed component renders as expected 1`] = `
                 Jannie
               </strong>
             </a>
-            <demoTweetMessage />
+            <p>
+              In hac
+              <a
+                href="#"
+              >
+                habitasse
+              </a>
+              platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+              <a
+                className="text-danger"
+                href="#"
+              >
+                <strong>
+                  #dev
+                </strong>
+              </a>
+            </p>
           </div>
         </li>
       </ul>

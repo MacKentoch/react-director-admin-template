@@ -1,8 +1,11 @@
 // flow weak
 
+// #region imports
 import React                from 'react';
 import {render}             from 'react-dom';
+import { Provider }         from 'react-redux';
 import { AppContainer }     from 'react-hot-loader';
+import smoothScrollPolyfill from 'smoothscroll-polyfill';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
 import 'animate.css';
 import 'jquery';
@@ -13,32 +16,32 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './style/director-style.css';
 import './style/highlight/darkula.css';
 import './style/index.style.scss';
+import configureStore       from './redux/store/configureStore';
 import Root from './Root';
+// #endregion
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
 const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
+const store                 = configureStore();
 
+// #region polyfills initializations
+// tap events
 injectTpEventPlugin();
 
-/* eslint-disable no-process-env */
-// if (process.env.NODE_ENV !== 'production') {
-//   // eslint-disable-next-line no-unused-vars,react/no-deprecated
-//   let createClass = React.createClass;
-//   Object.defineProperty(React, 'createClass', {
-//     set: (nextCreateClass) => {
-//       createClass = nextCreateClass;
-//     }
-//   });
-//   // eslint-disable-next-line global-require
-//   const { whyDidYouUpdate } = require('why-did-you-update');
-//   whyDidYouUpdate(React);
-// }
-/* eslint-enable no-process-env */
+// smoothscroll polyfill
+smoothScrollPolyfill.polyfill();
+// force polyfill (even if browser partially implements it)
+window.__forceSmoothScrollPolyfill__ = true;
+// #endregion
 
 const renderApp = RootComponent => {
   render(
-    <AppContainer>
-      <RootComponent />
+    <AppContainer
+      warnings={false}
+    >
+      <Provider store={store}>
+        <RootComponent />
+      </Provider>
     </AppContainer>,
     BootstrapedElement
   );

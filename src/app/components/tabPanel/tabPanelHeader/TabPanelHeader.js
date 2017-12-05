@@ -24,32 +24,32 @@ const TabPanelHeader = ({
   }
 
   return (
-      <header className="panel-heading tab-bg-dark-navy-blue">
-        <ul className="nav nav-tabs">
-          {
-            tabItemsToDisplay.map(
-              (item, itemIdx) => {
-                const { name, tablink, isActive } = item;
+    <header className="panel-heading tab-bg-dark-navy-blue">
+      <ul className="nav nav-tabs">
+        {
+          tabItemsToDisplay.map(
+            (item, itemIdx) => {
+              const { name, tablink, isActive } = item;
 
-                return (
-                  <li
-                    key={itemIdx}
-                    className={ cx({ active: isActive }) }>
-                    <a
-                      data-toggle="tab"
-                      aria-expanded={isActive === true ? 'true' : 'false'}
-                      href={`#${tablink}`}>
+              return (
+                <li
+                  key={itemIdx}
+                  className={ cx({ active: isActive }) }>
+                  <a
+                    data-toggle="tab"
+                    aria-expanded={isActive === true ? 'true' : 'false'}
+                    href={`#${tablink}`}>
                       &nbsp;
-                      {name}
-                    </a>
-                  </li>
-                );
-              }
-            )
-          }
-        </ul>
-      </header>
-    );
+                    {name}
+                  </a>
+                </li>
+              );
+            }
+          )
+        }
+      </ul>
+    </header>
+  );
 };
 
 TabPanelHeader.propTypes = {

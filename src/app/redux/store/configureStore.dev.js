@@ -6,20 +6,28 @@ import {
 }                               from 'redux';
 import { createLogger }         from 'redux-logger';
 import thunkMiddleware          from 'redux-thunk';
+import { routerMiddleware }     from 'react-router-redux';
+import { composeWithDevTools }  from 'redux-devtools-extension';
+// #region import createHistory from hashHistory or BrowserHistory:
+import createHistory            from 'history/createHashHistory';
+// import createHistory            from 'history/createBrowserHistory';
+// #endregion
 import reducer                  from '../modules/reducers';
 import { localStorageManager }  from '../middleware';
-import { composeWithDevTools }  from 'redux-devtools-extension';
 
 const loggerMiddleware = createLogger({
   level     : 'info',
   collapsed : true
 });
 
+export const history = createHistory();
+
 // createStore : enhancer
 const enhancer = composeWithDevTools(
   applyMiddleware(
     localStorageManager,
     thunkMiddleware,
+    routerMiddleware(history),
     loggerMiddleware
   )
 );

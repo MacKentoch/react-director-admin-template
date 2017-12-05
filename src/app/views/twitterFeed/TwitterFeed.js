@@ -59,13 +59,13 @@ class TwitterFeed extends PureComponent {
             time={'30 min ago'}
             author={'Emmet'}
             authorAvatar={EmmetIMG}>
-            <demoTweetMessage />
+            <DemoTweetMessage />
           </Tweet>
           <Tweet
             time={'35 min ago'}
             author={'Jannie'}
             authorAvatar={JannieIMG}>
-            <demoTweetMessage />
+            <DemoTweetMessage />
           </Tweet>
         </ListTweetsContainer>
       </Panel>
@@ -86,13 +86,13 @@ class TwitterFeed extends PureComponent {
                   time={'30 min ago'}
                   author={'Emmet'}
                   authorAvatar={EmmetIMG}>
-                  <demoTweetMessage />
+                  <DemoTweetMessage />
                 </Tweet>
                 <Tweet
                   time={'35 min ago'}
                   author={'Jannie'}
                   authorAvatar={JannieIMG}>
-                  <demoTweetMessage />
+                  <DemoTweetMessage />
                 </Tweet>
               </ListTweetsContainer>
             </Panel>
