@@ -148,7 +148,7 @@
     "react-collapse": "^4.0.3",
     "react-dom": "^16.2.0",
     "react-height": "^3.0.0",
-    "react-highlight": "^0.10.0",
+    "react-highlight": "briancappello/react-highlight#react-v16-compiled",
     "react-motion": "^0.5.2",
     "react-notification": "^6.8.2",
     "react-redux": "^5.0.6",

@@ -4,6 +4,7 @@ import React, {
   PureComponent
 }                         from 'react';
 import PropTypes          from 'prop-types';
+import Highlight          from 'react-highlight';
 import {
   AnimatedView,
   Panel,
@@ -11,10 +12,27 @@ import {
   WriteNewTweet,
   ListTweetsContainer
 }                         from '../../components';
-import Highlight          from 'react-highlight';
 import JannieIMG          from '../../img/Jannie.png';
 import EmmetIMG           from '../../img/Emmet.png';
 
+function DemoTweetMessage() {
+  return (
+    <p>
+      In hac
+      <a href="#">
+        habitasse
+      </a>
+       platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+      <a
+        href="#"
+        className="text-danger">
+        <strong>
+          #dev
+        </strong>
+      </a>
+    </p>
+  );
+}
 
 class TwitterFeed extends PureComponent {
   static propTypes= {

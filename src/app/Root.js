@@ -8,6 +8,7 @@ import {
   Switch,
   Route
 }                               from 'react-router-dom';
+// import { syncHistoryWithStore } from 'react-router-redux';
 import { history }              from './redux/store/configureStore';
 import App                      from './containers/app/App';
 import ScrollTop                from './components/scrollToTop/ScrollToTop';

@@ -3,7 +3,7 @@
 import { bindActionCreators } from 'redux';
 import { connect }            from 'react-redux';
 import * as actions           from '../../redux/modules/actions';
-import SimpleTables           from './simpleTables';
+import SimpleTables           from './SimpleTables';
 
 const mapStateToProps = (state) => {
   return {

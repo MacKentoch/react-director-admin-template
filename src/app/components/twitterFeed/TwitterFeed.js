@@ -8,6 +8,25 @@ import ListTweetsContainer  from './listTweetsContainer/ListTweetsContainer';
 import JannieIMG            from '../../img/Jannie.png';
 import EmmetIMG             from '../../img/Emmet.png';
 
+function DemoTweetMessage() {
+  return (
+    <p>
+      In hac
+      <a href="#">
+        habitasse
+      </a>
+       platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
+      <a
+        href="#"
+        className="text-danger">
+        <strong>
+          #dev
+        </strong>
+      </a>
+    </p>
+  );
+}
+
 const TwitterFeed = () => (
   <Panel
     hasTitle={true}
@@ -29,24 +48,5 @@ const TwitterFeed = () => (
     </ListTweetsContainer>
   </Panel>
 );
-
-function DemoTweetMessage() {
-  return (
-    <p>
-      In hac
-      <a href="#">
-        habitasse
-      </a>
-       platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.
-      <a
-        href="#"
-        className="text-danger">
-        <strong>
-          #dev
-        </strong>
-      </a>
-    </p>
-  );
-}
 
 export default TwitterFeed;
