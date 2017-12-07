@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">70% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>7/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>3/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">70% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>7/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -159,9 +159,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,12 +171,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,7 +192,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -239,23 +239,23 @@ class Menu extends PureComponent {
     isCollapsed: true
   };
 &nbsp;
-<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
-    const { initialCollapseState } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof initialCollapseState === 'boolean') {</span>
-<span class="cstat-no" title="statement not covered" >      this.setInitialCollapse(initialCollapseState);</span>
+  componentDidMount() {
+    const { initialCollapseState } = this.props;
+    if (typeof initialCollapseState === 'boolean') {
+      this.setInitialCollapse(initialCollapseState);
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
+  render() {
     const {
       headerTitle,
       headerBackColor,
       activeView,
       views
-    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-    const { isCollapsed } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    } = this.props;
+    const { isCollapsed } = this.state;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;div&gt;
         &lt;MenuHeader
           title={headerTitle}
@@ -274,8 +274,8 @@ class Menu extends PureComponent {
     );
   }
 &nbsp;
-  setInitialCollapse = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {
-<span class="cstat-no" title="statement not covered" >    this.setState({ isCollapsed: value });</span>
+  setInitialCollapse = (value) =&gt; {
+    this.setState({ isCollapsed: value });
   }
 &nbsp;
   handlesCollapseClick = <span class="fstat-no" title="function not covered" >(e</span>vt) =&gt; {
@@ -292,7 +292,7 @@ export default Menu;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 06 2017 06:15:55 GMT+0100 (CET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 07 2017 06:36:05 GMT+0100 (CET)
 </div>
 </div>
 <script src="../../../../../../prettify.js"></script>

@@ -1,13 +1,14 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import cx         from 'classnames';
+import React              from 'react';
+import PropTypes          from 'prop-types';
+import cx                 from 'classnames';
+import UpIcon             from './UpIcon';
 
 const defaultBackGroundColor = '#4A4A4A';
-const sideOffset    = '15px';
-const bottomOffset  = '2px';
-const defaultWidth  = '50px';
+const sideOffset    = '-10px';
+const bottomOffset  = '40px';
+const defaultWidth  = '100px';
 const defaultZindex = 10;
 const defaultOpacity= 0.5;
 const defaultStyle = {
@@ -21,44 +22,48 @@ const defaultStyle = {
   backgroundColor: defaultBackGroundColor
 };
 
+type Props = {
+  position: 'bottom-left' | 'bottom-right',
+  onClick: () => any,
+  children: any,
+  motionStyle: any,
+  ...any
+};
+
 const BackToTopButton = ({
   onClick,
   position,
   children,
   motionStyle
-}) => {
+}: Props) => {
   const buttonStyle = setPosition(position, {...motionStyle, ...defaultStyle});
 
   return (
-    <button
-      style={buttonStyle}
-      className={cx({
-        'btn': true
-      })}
-      onClick={onClick}>
-      {
-        !children &&
-          <div style={{marginRight: '0px'}}>
-            <i
-              style={{color: '#F1F1F1'}}
-              className="fa fa-arrow-up"
-              aria-hidden="true"
-            />
+      <button
+        style={buttonStyle}
+        className={cx({
+          'btn': true
+        })}
+        onClick={onClick}>
+        {
+          !children &&
+          <div style={{marginRight: '10px'}}>
+            <UpIcon color={'#F1F1F1'}/>
           </div>
-      }
-      {
-        !!children &&
+        }
+        {
+          !!children &&
           children
-      }
-    </button>
+        }
+      </button>
   );
 };
 
 BackToTopButton.propTypes = {
-  position:     PropTypes.oneOf(['bottom-left', 'bottom-right']),
-  onClick:      PropTypes.func.isRequired,
-  children:     PropTypes.node,
-  motionStyle:  PropTypes.object
+  position: PropTypes.oneOf(['bottom-left', 'bottom-right']),
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node,
+  motionStyle: PropTypes.object
 };
 
 BackToTopButton.defaultProps = {
@@ -71,12 +76,12 @@ function setPosition(position = 'bottom-right', refStyle = defaultStyle) {
   switch (position) {
   case 'bottom-right':
     style.right = sideOffset;
-    style.left  = '';
+    style.left = '';
     return style;
 
   case 'bottom-left':
     style.right = '';
-    style.left  = sideOffset;
+    style.left = sideOffset;
     return style;
 
   default:
