@@ -20,6 +20,7 @@ ReactJS version of Director Responsive Admin Template Free
 - Redux
 - react-hot-reload 3.1+
 - React router 4
+- react-router-redux 5.x
 - webpack 3
 - postcss
 - sass

@@ -3,7 +3,6 @@
 // #region imports
 import React                from 'react';
 import {render}             from 'react-dom';
-import { Provider }         from 'react-redux';
 import { AppContainer }     from 'react-hot-loader';
 import smoothScrollPolyfill from 'smoothscroll-polyfill';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
@@ -16,13 +15,12 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './style/director-style.css';
 import './style/highlight/darkula.css';
 import './style/index.style.scss';
-import configureStore       from './redux/store/configureStore';
+// import configureStore from './redux/store/configureStore';
 import Root from './Root';
 // #endregion
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
 const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
-const store                 = configureStore();
 
 // #region polyfills initializations
 // tap events
@@ -39,9 +37,7 @@ const renderApp = RootComponent => {
     <AppContainer
       warnings={false}
     >
-      <Provider store={store}>
-        <RootComponent />
-      </Provider>
+      <RootComponent />
     </AppContainer>,
     BootstrapedElement
   );

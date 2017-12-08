@@ -1,12 +1,10 @@
 // @flow weak
 
+// #region imports
 import React, {
   Component
 }                             from 'react';
 import PropTypes              from 'prop-types';
-import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
 import {
   Header,
   // Footer,
@@ -17,9 +15,10 @@ import { Modals }             from '../../views';
 import { appConfig }          from '../../config';
 import { navigation }         from '../../models';
 import MainRoutes             from '../../routes/MainRoutes';
-import { withRouter }         from 'react-router';
 import auth                   from '../../services/auth';
 import UserIMG                from '../../img/user.jpg';
+// #endregion
+
 
 class App extends Component {
   static propTypes = {
@@ -56,6 +55,7 @@ class App extends Component {
     helloWord:        appConfig.HELLO_WORD
   };
 
+  // #region lifecycle methods
   componentDidMount() {
     const {
       actions: {
@@ -112,9 +112,12 @@ class App extends Component {
       </div>
     );
   }
+  // #endregion
 
   handlesMenuButtonClick = (event) => {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
     const { actions: { toggleSideMenu } } = this.props;
     toggleSideMenu();
   }
@@ -124,36 +127,12 @@ class App extends Component {
       event.preventDefault();
       event.stopPropagation();
     }
-
     // clear all application storage
     auth.clearAllAppStorage();
-
     // redirect to login
     const { history } = this.props;
     history.push('/login');
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    currentView:         state.views.currentView,
-    sideMenuIsCollapsed: state.sideMenu.isCollapsed,
-    userInfos:           state.userInfos.data,
-    userIsConnected:     state.userInfos.isConnected
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    actions : bindActionCreators(
-      {...actions},
-      dispatch)
-  };
-};
-
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(App)
-);
+export default App;
