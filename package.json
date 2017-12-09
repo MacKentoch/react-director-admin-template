@@ -151,6 +151,7 @@
     "react-highlight": "briancappello/react-highlight#react-v16-compiled",
     "react-motion": "^0.5.2",
     "react-notification": "^6.8.2",
+    "react-overdrive": "^0.0.9",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

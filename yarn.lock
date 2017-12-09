@@ -7138,6 +7138,10 @@ react-notification@^6.8.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-overdrive@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-overdrive/-/react-overdrive-0.0.9.tgz#681d8bee07067910415a5a23b8236220d8a31adb"
+
 react-overlays@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.7.4.tgz#ef2ec652c3444ab8aa014262b18f662068e56d5c"

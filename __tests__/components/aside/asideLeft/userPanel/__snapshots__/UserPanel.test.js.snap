@@ -10,7 +10,11 @@ exports[`UserPanel component renders as expected 1`] = `
     <img
       alt="User Image"
       className="img-circle"
-      src="./public/img/26115.jpg"
+      src={
+        Object {
+          "default": "test-file-stub",
+        }
+      }
     />
   </div>
   <div
