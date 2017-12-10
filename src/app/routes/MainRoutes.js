@@ -6,6 +6,7 @@ import {
   Switch,
   Redirect
 }                                   from 'react-router-dom';
+import PrivateRoute                 from '../components/privateRoute/PrivateRoute';
 import HomeConnected                from '../views/home';
 import AlertConnected               from '../views/alert';
 import BasicElementsConnected       from '../views/basicElements';
@@ -51,6 +52,9 @@ export const MainRoutes = () => (
     <Route path="/general/stripedProgressBars" component={StripedProgressBarConnected} />
     <Route path="/general/alerts" component={AlertConnected} />
     <Route path="/general/pagination" component={PaginationViewConnected} />
+
+    {/* private views: need user to be authenticated */}
+    <PrivateRoute path="/protected" component={Protected} />
 
   </Switch>
 );

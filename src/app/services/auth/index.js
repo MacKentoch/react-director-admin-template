@@ -64,7 +64,7 @@ export const auth = {
   * @returns {boolean} success/failure flag
   */
   setToken(
-    value: string = '', 
+    value: string = '',
     toStorage: Storage = APP_PERSIST_STORES_TYPES[0],
     tokenKey: TokenKey = TOKEN_KEY
   ): ?string {
@@ -84,7 +84,7 @@ export const auth = {
       }
     }
   },
-  
+
 
   /**
    * check
@@ -132,33 +132,14 @@ export const auth = {
   },
 
   /**
-   * return expiration date from token
-   *
-   * @param {string} encodedToken - base 64 token received from server and stored in local storage
-   * @returns {date | null} returns expiration date or null id expired props not found in decoded token
-   */
-  getTokenExpirationDate(
-    encodedToken: string
-  ): any {
-    const token = decode(encodedToken);
-    if (!token.exp) {
-      return null;
-    }
-
-    // const date = new Date(0);
-    // date.setUTCSeconds(token.exp);
-    // return date;
-    const expirationDate = moment(token.exp);
-    return expirationDate;
-  },
-
-  /**
    * delete token
    *
+   * @param {'localStorage' | 'sessionStorage'} [storage='localStorage'] specify storage
    * @param {any} [tokenKey='token'] token key
    * @returns {bool} success/failure flag
    */
   clearToken(
+    storage: Storage  = APP_PERSIST_STORES_TYPES[0],
     tokenKey: TokenKey = TOKEN_KEY
   ): boolean {
     // localStorage:
@@ -175,6 +156,43 @@ export const auth = {
     return false;
   },
 
+  /**
+   * return expiration date from token
+   *
+   * @param {string} encodedToken - base 64 token received from server and stored in local storage
+   * @returns {date | null} returns expiration date or null id expired props not found in decoded token
+   */
+  getTokenExpirationDate(
+    encodedToken: any
+  ): Date {
+    if (!encodedToken) {
+      return new Date(0); // is expired
+    }
+
+    const token = decode(encodedToken);
+    if (!token.exp) {
+      return new Date(0); // is expired
+    }
+
+    const expirationDate = new Date(token.exp*1000);
+    return expirationDate;
+  },
+
+  /**
+   * tell is token is expired (compared to now)
+   *
+   * @param {string} encodedToken - base 64 token received from server and stored in local storage
+   * @returns {bool} returns true if expired else false
+   */
+  isExpiredToken(
+    encodedToken: any
+  ): boolean {
+    const expirationDate = this.getTokenExpirationDate(encodedToken);
+    const rightNow       = moment();
+    const isExpiredToken = moment(rightNow).isAfter(moment(expirationDate));
+
+    return isExpiredToken;
+  },
 
   // /////////////////////////////////////////////////////////////
   // USER_INFO
@@ -187,7 +205,7 @@ export const auth = {
    * @returns {string} token value
    */
   getUserInfo(
-    fromStorage: Storage = APP_PERSIST_STORES_TYPES[0], 
+    fromStorage: Storage = APP_PERSIST_STORES_TYPES[0],
     userInfoKey: UserInfoKey = USER_INFO
   ): ?string {
     // localStorage:
@@ -211,9 +229,9 @@ export const auth = {
    * @returns {boolean} success/failure flag
    */
   setUserInfo(
-    value = '', 
-    toStorage = APP_PERSIST_STORES_TYPES[0], 
-    userInfoKey = USER_INFO
+    value: string = '',
+    toStorage: Storage = APP_PERSIST_STORES_TYPES[0],
+    userInfoKey: UserInfoKey = USER_INFO
   ): any {
     if (!value || value.length <= 0) {
       return;
@@ -235,11 +253,11 @@ export const auth = {
   /**
    * delete userInfo
    *
-   * @param {any} [userInfoKey='userInfo'] token key
+   * @param {string} [userInfoKey='userInfo'] token key
    * @returns {bool} success/failure flag
    */
   clearUserInfo(
-    userInfoKey = USER_INFO
+    userInfoKey: UserInfoKey = USER_INFO
   ): any {
     // localStorage:
     if (localStorage && localStorage[userInfoKey]) {
