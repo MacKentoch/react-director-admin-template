@@ -7,13 +7,15 @@ import sideMenu             from './sideMenu';
 import userInfos            from './userInfos';
 import teamMates            from './teamMates';
 import views                from './views';
+import userAuth             from './userAuth';
 
 export const reducers = {
   earningGraph,
   sideMenu,
   userInfos,
   teamMates,
-  views
+  views,
+  userAuth
 };
 
 export default combineReducers({

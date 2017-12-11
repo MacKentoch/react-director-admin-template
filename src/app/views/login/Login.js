@@ -1,5 +1,6 @@
-// @flow weak
+// @flow
 
+// #region imports
 import React, {
   PureComponent
 }                     from 'react';
@@ -9,21 +10,37 @@ import {
   Col,
   Button
 }                     from 'react-bootstrap';
-// import AnimatedView   from '../../components/animatedView/AnimatedView';
+import auth           from '../../services/auth';
+// #endregion
 
+// #region flow types
+type Props = {
+  // react-router 4:
+  match: any,
+  location: any,
+  history: any,
 
-function fakeLogin({ username }) {
-  return new Promise(
-    resolve => {
-      setTimeout(
-        () => resolve({ token: '1234567890123456', username }),
-        200
-      );
-    }
-  );
+  // views props:
+  currentView: string,
+  enterLogin: () => void,
+  leaveLogin: () => void,
+
+  // userAuth:
+  isAuthenticated: boolean,
+  isFetching: boolean,
+  isLogging: boolean,
+  disconnectUser: () => any,
+  logUserIfNeeded: () => any
+};
+
+type State = {
+  email: string,
+  password: string
 }
+// #endregion
 
-class Login extends PureComponent {
+class Login extends PureComponent<Props, State> {
+  // #region propTypes
   static propTypes= {
     // react-router 4:
     match:    PropTypes.object.isRequired,
@@ -32,35 +49,53 @@ class Login extends PureComponent {
 
     // views props:
     currentView: PropTypes.string.isRequired,
+    enterLogin:  PropTypes.func.isRequired,
+    leaveLogin:  PropTypes.func.isRequired,
 
-    actions: PropTypes.shape({
-      enterLogin:  PropTypes.func.isRequired,
-      leaveLogin:  PropTypes.func.isRequired
-    }).isRequired
+    // userAuth:
+    isAuthenticated: PropTypes.bool,
+    isFetching:      PropTypes.bool,
+    isLogging:       PropTypes.bool,
+    disconnectUser:  PropTypes.func.isRequired,
+    logUserIfNeeded: PropTypes.func.isRequired
   };
+  // #endregion
+
+  static defaultProps = {
+    isFetching:      false,
+    isLogging:       false
+  }
 
   state = {
     email:          '',
-    password:       '',
-    isAuthenticating: false
+    password:       ''
   };
 
+  // #region lifecycle methods
   componentDidMount() {
-    const { actions: { enterLogin } } = this.props;
+    const {
+      enterLogin,
+      disconnectUser
+    } = this.props;
+
+    disconnectUser(); // diconnect user: remove token and user info
     enterLogin();
   }
 
   componentWillUnmount() {
-    const { actions: { leaveLogin } } = this.props;
+    const { leaveLogin } = this.props;
     leaveLogin();
   }
 
   render() {
     const {
       email,
-      password,
-      isAuthenticating
+      password
     } = this.state;
+
+    const {
+      isLogging
+    } = this.props;
 
     return (
       <div className="content">
@@ -68,6 +103,8 @@ class Login extends PureComponent {
           <Col
             md={4}
             mdOffset={4}
+            xs={10}
+            xsOffset={1}
           >
             <form
               className="form-horizontal"
@@ -120,10 +157,10 @@ class Login extends PureComponent {
                     <Button
                       className="login-button btn-block"
                       bsStyle="primary"
-                      disabled={isAuthenticating}
+                      disabled={isLogging}
                       onClick={this.handlesOnLogin}>
                       {
-                        isAuthenticating
+                        isLogging
                           ?
                           <span>
                             login in...
@@ -144,26 +181,60 @@ class Login extends PureComponent {
             </form>
           </Col>
         </Row>
+        <Row>
+          <Col
+            md={4}
+            mdOffset={4}
+            xs={10}
+            xsOffset={1}
+          >
+            <Button
+              bsStyle="primary"
+              onClick={this.goHome}
+            >
+              back to home
+            </Button>
+          </Col>
+        </Row>
       </div>
     );
   }
+  // #endregion
 
-  handlesOnEmailChange = (event) => {
-    event.preventDefault();
-    // should add some validator before setState in real use cases
-    this.setState({ email: event.target.value.trim() });
+  // #region form inputs change callbacks
+  handlesOnEmailChange = (
+    event: SyntheticEvent<>
+  ) => {
+    if (event) {
+      event.preventDefault();
+      // should add some validator before setState in real use cases
+      this.setState({ email: event.target.value.trim() });
+    }
   }
 
-  handlesOnPasswordChange = (event) => {
-    event.preventDefault();
-    // should add some validator before setState in real use cases
-    this.setState({ password: event.target.value.trim() });
+  handlesOnPasswordChange = (
+    event: SyntheticEvent<>
+  ) => {
+    if (event) {
+      event.preventDefault();
+      // should add some validator before setState in real use cases
+      this.setState({ password: event.target.value.trim() });
+    }
   }
+  // #endregion
 
-  handlesOnLogin = async (event) => {
-    event.preventDefault();
+
+  // #region on login button click callback
+  handlesOnLogin = async (
+    event: SyntheticEvent<>
+  ) => {
+    if (event) {
+      event.preventDefault();
+    }
+
     const {
-      history
+      history,
+      logUserIfNeeded
     } = this.props;
 
     const {
@@ -171,24 +242,47 @@ class Login extends PureComponent {
       password
     } = this.state;
 
-    const user = {
-      username: email,
+    const userLogin = {
+      login:    email,
       password: password
     };
 
-    this.setState({ isAuthenticating: true });
-
     try {
-      await fakeLogin(user);
-      this.setState({ isAuthenticating: false });
+      const response = await logUserIfNeeded(userLogin);
+      const {
+        data: {
+          token,
+          user
+        }
+      } = response.payload;
+
+      auth.setToken(token);
+      auth.setUserInfo(user);
+
       history.push({ pathname: '/' }); // back to Home
     } catch (error) {
       /* eslint-disable no-console */
-      this.setState({ isAuthenticating: false });
       console.log('login went wrong..., error: ', error);
       /* eslint-enable no-console */
     }
   }
+  // #endregion
+
+  // #region on go back home button click callback
+  goHome = (
+    event: SyntheticEvent<>
+  ) => {
+    if (event) {
+      event.preventDefault();
+    }
+
+    const {
+      history
+    } = this.props;
+
+    history.push({ pathname: '/' });
+  }
+  // #endregion
 }
 
 export default Login;
