@@ -1,10 +1,10 @@
 // @flow weak
 
-import moment             from 'moment';
-import { appConfig }      from '../../config';
-import userInfosMockData  from '../../mock/userInfosMock.json';
-import getLocationOrigin  from '../../services/utils/getLocationOrigin';
-import auth               from '../../services/auth';
+import moment                 from 'moment';
+import { appConfig }          from '../../config';
+import userInfosMockData      from '../../models/userInfosMock';  // from '../../models/userInfosMocks';
+import { getLocationOrigin }  from '../../services/fetchTools'; // '../../services/utils';
+import auth                   from '../../services/auth';
 
 // --------------------------------
 // CONSTANTS

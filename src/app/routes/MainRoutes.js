@@ -3,8 +3,7 @@
 import React                        from 'react';
 import {
   Route,
-  Switch,
-  Redirect
+  Switch
 }                                   from 'react-router-dom';
 import PrivateRoute                 from '../components/privateRoute/PrivateRoute';
 import HomeConnected                from '../views/home';
@@ -15,7 +14,6 @@ import BreadcrumbViewConnected      from '../views/breadcrumb';
 import EarningGraphConnected        from '../views/earningGraph';
 import GeneralConnected             from '../views/general';
 import NotificationsConnected       from '../views/notifications';
-import PageNotFoundConnected        from '../views/pageNotFound';
 import PaginationViewConnected      from '../views/pagination';
 import SimpleTablesConnected        from '../views/simpleTables';
 import StatViewConnected            from '../views/stat';
@@ -26,6 +24,7 @@ import TeamMatesViewConnected       from '../views/teamMates';
 import TodoListViewConnected        from '../views/todoList';
 import TwitterFeedConnected         from '../views/twitterFeed';
 import WorkProgressConnected        from '../views/workProgress';
+import ProtectedConnected           from '../views/protected';
 
 
 export const MainRoutes = () => (
@@ -54,7 +53,7 @@ export const MainRoutes = () => (
     <Route path="/general/pagination" component={PaginationViewConnected} />
 
     {/* private views: need user to be authenticated */}
-    <PrivateRoute path="/protected" component={Protected} />
+    <PrivateRoute path="/protected" component={ProtectedConnected} />
 
   </Switch>
 );
