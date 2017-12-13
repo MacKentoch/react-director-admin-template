@@ -14,18 +14,18 @@ const RECEIVED_USER_INFOS_DATA  = 'RECEIVED_USER_INFOS_DATA';
 const ERROR_USER_INFOS_DATA     = 'ERROR_USER_INFOS_DATA';
 
 type UserInfoData = {
-  login:            ?string,
-  firstname:        string,
-  lastname:         string,
-  picture:          ?string,
-  isAuthenticated:  boolean
+  login: ?string,
+  firstname: string,
+  lastname: string,
+  picture: ?string,
+  isAuthenticated: boolean
 };
 
 type UserInfoState = {
-  isFetching:   boolean,
-  data:         UserInfoData,
-  isConnected:  boolean,
-  time:         ?string
+  isFetching: boolean,
+  data: UserInfoData,
+  isConnected: boolean,
+  time: ?string
 };
 
 const initialState: UserInfoState = {
@@ -58,7 +58,7 @@ export default function userInfos(
     return {
       ...state,
       isFetching: action.isFetching,
-      data:       { ...action.userInfos },
+      data:       { ...action.userInfos.data },
       isConnected: true, // set user connected when retreiving userInfos
       time:       action.time
     };
@@ -115,12 +115,12 @@ function fetchUserInfosData() {
     dispatch(requestUserInfosData());
 
     if (appConfig.DEV_MODE) {
-      const data = await fetchMockUserInfosData();  
+      const data = await fetchMockUserInfosData();
       return dispatch(receivedUserInfosData(data));
     } else {
       try {
         const data = await getUserInfoData();
-        return dispatch(receivedUserInfosData(data));  
+        return dispatch(receivedUserInfosData(data));
       } catch (error) {
         return dispatch(errorUserInfosData(error))
       }

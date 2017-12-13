@@ -13,14 +13,14 @@ export const fetchMockEarningGraphData = (
   return new Promise(
     resolve => {
       setTimeout(
-       () => resolve({
-         labels: earningGraphMockData.labels,
-         datasets: earningGraphMockData.datasets
-       }),
-       timeToWait
-     );
+        () => resolve({
+          labels: earningGraphMockData.labels,
+          datasets: earningGraphMockData.datasets
+        }),
+        timeToWait
+      );
     }
- );
+  );
 };
 
 export const fetchMockUserInfosData = async (
@@ -29,11 +29,11 @@ export const fetchMockUserInfosData = async (
   return new Promise(
     resolve => {
       setTimeout(
-       () => resolve({...userInfosMockData}),
-       timeToWait
-     );
+        () => resolve({ token: userInfosMockData.token, data: {...userInfosMockData}}), // { token: userInfosMockData.token, data: {...userInfosMockData}}
+        timeToWait
+      );
     }
- );
+  );
 };
 
 export const fetchMockTeamMatesData = (
@@ -42,9 +42,9 @@ export const fetchMockTeamMatesData = (
   return new Promise(
     resolve => {
       setTimeout(
-       () => resolve([...teamMatesMock]),
-       timeToWait
-     );
+        () => resolve([...teamMatesMock]),
+        timeToWait
+      );
     }
- );
+  );
 };

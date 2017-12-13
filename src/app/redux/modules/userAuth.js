@@ -192,7 +192,7 @@ function logUser(
     const FETCH_TYPE  = appConfig.DEV_MODE ? 'FETCH_MOCK' : 'FETCH';
     const __SOME_LOGIN_API__ = 'login';
 
-    const mockResult  = userInfosMockData; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
+    const mockResult  = { token: userInfosMockData.token, data: {...userInfosMockData}}; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
     const url         = `${getLocationOrigin()}/${__SOME_LOGIN_API__}`;
     const method      = 'post';
     const headers     = {};
@@ -262,7 +262,7 @@ function fetchUserInfosData(id = '') {
     const token = auth.getToken();
     const FETCH_TYPE  = appConfig.DEV_MODE ? 'FETCH_MOCK' : 'FETCH';
 
-    const mockResult  = userInfosMockData; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
+    const mockResult  = { token: userInfosMockData.token, data: {...userInfosMockData}}; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
     const url         = `${getLocationOrigin()}/${appConfig.API.users}/${id}`;
     const method      = 'get';
     const headers     = { authorization: `Bearer ${token}` };
