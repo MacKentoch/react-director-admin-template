@@ -154,27 +154,27 @@ class Login extends PureComponent<Props, State> {
                     lg={10}
                     lgOffset={2}
                   >
-                    <Button
-                      className="login-button btn-block"
-                      bsStyle="primary"
-                      disabled={isLogging}
-                      onClick={this.handlesOnLogin}>
-                      {
-                        isLogging
-                          ?
-                          <span>
-                            login in...
-                            &nbsp;
-                            <i
-                              className="fa fa-spinner fa-pulse fa-fw"
-                            />
-                          </span>
-                          :
-                          <span>
-                            Login
-                          </span>
-                      }
-                    </Button>
+                      <Button
+                        className="login-button btn-block"
+                        bsStyle="primary"
+                        disabled={isLogging}
+                        onClick={this.handlesOnLogin}>
+                        {
+                          isLogging
+                            ?
+                            <span>
+                              login in...
+                              &nbsp;
+                              <i
+                                className="fa fa-spinner fa-pulse fa-fw"
+                              />
+                            </span>
+                            :
+                            <span>
+                              Login
+                            </span>
+                        }
+                      </Button>
                   </Col>
                 </div>
               </fieldset>
@@ -188,12 +188,16 @@ class Login extends PureComponent<Props, State> {
             xs={10}
             xsOffset={1}
           >
-            <Button
-              bsStyle="primary"
-              onClick={this.goHome}
+            <div
+              className="pull-right"
             >
-              back to home
-            </Button>
+              <Button
+                bsStyle="default"
+                onClick={this.goHome}
+              >
+                back to home
+              </Button>
+            </div>
           </Col>
         </Row>
       </div>

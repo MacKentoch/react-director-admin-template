@@ -22,7 +22,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
+      // views:
       ...viewsActions,
+      // userAuth:
       ...userAuthActions
     },
     dispatch
