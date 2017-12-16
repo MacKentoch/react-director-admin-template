@@ -110,8 +110,15 @@ class Login extends PureComponent<Props, State> {
               className="form-horizontal"
               noValidate>
               <fieldset>
-                <legend>
-                  Login
+                <legend
+                  className="text-center"
+                >
+                  <h1>
+                    <i className="fa fa-3x fa-user-circle" aria-hidden="true" />
+                  </h1>
+                  <h2>
+                    Login
+                  </h2>
                 </legend>
 
                 <div className="form-group">
@@ -154,27 +161,27 @@ class Login extends PureComponent<Props, State> {
                     lg={10}
                     lgOffset={2}
                   >
-                      <Button
-                        className="login-button btn-block"
-                        bsStyle="primary"
-                        disabled={isLogging}
-                        onClick={this.handlesOnLogin}>
-                        {
-                          isLogging
-                            ?
-                            <span>
+                    <Button
+                      className="login-button btn-block"
+                      bsStyle="primary"
+                      disabled={isLogging}
+                      onClick={this.handlesOnLogin}>
+                      {
+                        isLogging
+                          ?
+                          <span>
                               login in...
                               &nbsp;
-                              <i
-                                className="fa fa-spinner fa-pulse fa-fw"
-                              />
-                            </span>
-                            :
-                            <span>
+                            <i
+                              className="fa fa-spinner fa-pulse fa-fw"
+                            />
+                          </span>
+                          :
+                          <span>
                               Login
-                            </span>
-                        }
-                      </Button>
+                          </span>
+                      }
+                    </Button>
                   </Col>
                 </div>
               </fieldset>

@@ -1,7 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1513316185278" clover="3.2.0">
-  <project timestamp="1513316185278" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
+<coverage generated="1513403520128" clover="3.2.0">
+  <project timestamp="1513403520128" name="All files">
+    <metrics statements="100" coveredstatements="16" conditionals="105" coveredconditionals="1" methods="7" coveredmethods="3" elements="212" coveredelements="20" complexity="0" loc="100" ncloc="100" packages="3" files="3" classes="3">
+      <package name="src">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="setupTests.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/setupTests.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.app.services.auth">
+        <metrics statements="67" coveredstatements="6" conditionals="95" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/services/auth/index.js">
+          <metrics statements="67" coveredstatements="6" conditionals="95" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="48" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="52" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="71" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="83" count="0" type="stmt"/>
+          <line num="115" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="116" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="117" count="0" type="stmt"/>
+          <line num="119" count="0" type="stmt"/>
+          <line num="123" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="124" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="127" count="0" type="stmt"/>
+          <line num="131" count="0" type="stmt"/>
+          <line num="146" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="147" count="0" type="stmt"/>
+          <line num="148" count="0" type="stmt"/>
+          <line num="151" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="152" count="0" type="stmt"/>
+          <line num="153" count="0" type="stmt"/>
+          <line num="156" count="0" type="stmt"/>
+          <line num="168" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="169" count="0" type="stmt"/>
+          <line num="172" count="0" type="stmt"/>
+          <line num="173" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="174" count="0" type="stmt"/>
+          <line num="177" count="0" type="stmt"/>
+          <line num="178" count="0" type="stmt"/>
+          <line num="190" count="0" type="stmt"/>
+          <line num="191" count="0" type="stmt"/>
+          <line num="192" count="0" type="stmt"/>
+          <line num="194" count="0" type="stmt"/>
+          <line num="212" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="213" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="216" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="217" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="220" count="0" type="stmt"/>
+          <line num="236" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="237" count="0" type="stmt"/>
+          <line num="240" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="241" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="242" count="0" type="stmt"/>
+          <line num="246" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="247" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="248" count="0" type="stmt"/>
+          <line num="263" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="264" count="0" type="stmt"/>
+          <line num="267" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="268" count="0" type="stmt"/>
+          <line num="282" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="283" count="0" type="stmt"/>
+          <line num="285" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="286" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.app.views.login">
+        <metrics statements="30" coveredstatements="7" conditionals="10" coveredconditionals="1" methods="7" coveredmethods="3"/>
+        <file name="Login.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/app/views/login/Login.js">
+          <metrics statements="30" coveredstatements="7" conditionals="10" coveredconditionals="1" methods="7" coveredmethods="3"/>
+          <line num="79" count="3" type="stmt"/>
+          <line num="81" count="3" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="86" count="3" type="stmt"/>
+          <line num="87" count="3" type="stmt"/>
+          <line num="94" count="3" type="stmt"/>
+          <line num="98" count="3" type="stmt"/>
+          <line num="100" count="3" type="stmt"/>
+          <line num="219" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="220" count="0" type="stmt"/>
+          <line num="222" count="0" type="stmt"/>
+          <line num="229" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="230" count="0" type="stmt"/>
+          <line num="232" count="0" type="stmt"/>
+          <line num="242" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="243" count="0" type="stmt"/>
+          <line num="249" count="0" type="stmt"/>
+          <line num="254" count="0" type="stmt"/>
+          <line num="256" count="0" type="stmt"/>
+          <line num="261" count="0" type="stmt"/>
+          <line num="262" count="0" type="stmt"/>
+          <line num="268" count="0" type="stmt"/>
+          <line num="270" count="0" type="stmt"/>
+          <line num="271" count="0" type="stmt"/>
+          <line num="273" count="0" type="stmt"/>
+          <line num="276" count="0" type="stmt"/>
+          <line num="286" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="287" count="0" type="stmt"/>
+          <line num="292" count="0" type="stmt"/>
+          <line num="294" count="0" type="stmt"/>
+        </file>
+      </package>
     </metrics>
   </project>
 </coverage>
