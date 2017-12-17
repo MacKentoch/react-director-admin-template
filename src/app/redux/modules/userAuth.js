@@ -80,8 +80,8 @@ export default function (
       isLogging:  true
     };
 
-  case RECEIVED_LOG_USER:
-    const userLogged = action.payload.data;
+  case RECEIVED_LOG_USER: {
+    const userLogged = action.userInfos;
 
     return {
       ...state,
@@ -94,6 +94,7 @@ export default function (
       lastname:        userLogged.lastname,
       isLogging:       false
     };
+  }
 
   case ERROR_LOG_USER:
     return {
@@ -111,8 +112,8 @@ export default function (
       isFetching:   true
     };
 
-  case RECEIVED_USER_INFOS_DATA:
-    const userInfos = action.payload.data;
+  case RECEIVED_USER_INFOS_DATA: {
+    const userInfos = action.userInfos;
 
     return {
       ...state,
@@ -123,6 +124,7 @@ export default function (
       firstname:  userInfos.firstname,
       lastname:   userInfos.lastname
     };
+  }
 
   case ERROR_USER_INFOS_DATA:
     return {
