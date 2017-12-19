@@ -260,13 +260,22 @@ class Login extends PureComponent<Props, State> {
 
     try {
       const response = await logUserIfNeeded(userLogin);
+      const { data } = response.payload;
+      const { token } = data;
       const {
-        data: {
-          token,
-          user
-        }
-      } = response.payload;
-
+        login,
+        firstname,
+        lastname,
+        picture,
+        showPicture
+      } = data;
+      const user = {
+        login,
+        firstname,
+        lastname,
+        picture,
+        showPicture
+      };
       auth.setToken(token);
       auth.setUserInfo(user);
 
