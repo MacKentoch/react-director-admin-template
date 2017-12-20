@@ -253,13 +253,9 @@ class Login extends PureComponent<Props, State> {
       password
     } = this.state;
 
-    const userLogin = {
-      login:    email,
-      password: password
-    };
-
     try {
-      const response = await logUserIfNeeded(userLogin);
+      const response = await logUserIfNeeded(email, password);
+      console.log('response: ', response);
       const { data } = response.payload;
       const { token } = data;
       const {
