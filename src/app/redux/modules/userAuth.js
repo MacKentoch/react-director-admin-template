@@ -239,7 +239,7 @@ export function logUserIfNeeded(
     if (shouldLogUser(getState())) {
       return dispatch(logUser(email, password));
     }
-    return Promise.resolve();
+    return Promise.resolve('already loggin in...');
   };
 }
 function shouldLogUser(
