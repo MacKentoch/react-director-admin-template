@@ -8,6 +8,7 @@ import { createLogger }         from 'redux-logger';
 import thunkMiddleware          from 'redux-thunk';
 import { routerMiddleware }     from 'react-router-redux';
 import { composeWithDevTools }  from 'redux-devtools-extension';
+import fetchMiddleware          from '../middleware/fetchMiddleware';
 // #region import createHistory from hashHistory or BrowserHistory:
 import createHistory            from 'history/createHashHistory';
 // import createHistory            from 'history/createBrowserHistory';
@@ -27,6 +28,7 @@ const enhancer = composeWithDevTools(
   applyMiddleware(
     localStorageManager,
     thunkMiddleware,
+    fetchMiddleware,
     routerMiddleware(history),
     loggerMiddleware
   )

@@ -10,8 +10,8 @@ import { routerMiddleware }     from 'react-router-redux';
 // #region import createHistory from hashHistory or BrowserHistory:
 import createHistory            from 'history/createHashHistory';
 // import createHistory            from 'history/createBrowserHistory';
-// #endregion
 import reducer                  from '../modules/reducers';
+import fetchMiddleware          from '../middleware/fetchMiddleware';
 import { localStorageManager }  from '../middleware';
 
 export const history = createHistory();
@@ -22,7 +22,8 @@ const enhancer = compose(
   applyMiddleware(
     localStorageManager,
     routerMiddleware(history),
-    thunkMiddleware
+    thunkMiddleware,
+    fetchMiddleware
   )
 );
 

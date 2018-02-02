@@ -81,7 +81,7 @@ export default function (
     };
 
   case RECEIVED_LOG_USER: {
-    const userLogged = action.userInfos;
+    const userLogged = action.payload;
 
     return {
       ...state,
@@ -193,7 +193,6 @@ function logUser(
   return async (dispatch) => {
     const FETCH_TYPE  = appConfig.DEV_MODE ? 'FETCH_MOCK' : 'FETCH';
     const __SOME_LOGIN_API__ = 'login';
-
     const mockResult  = { token: userInfosMockData.token, data: {...userInfosMockData}}; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
     const url         = `${getLocationOrigin()}/${__SOME_LOGIN_API__}`;
     const method      = 'post';
