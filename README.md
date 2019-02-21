@@ -2,14 +2,16 @@
 
 [![Build Status](https://travis-ci.org/MacKentoch/react-director-admin-template.svg?branch=master)](https://travis-ci.org/MacKentoch/react-director-admin-template)
 
+**[If you need more choices and look for other nice templates check https://flatlogic.com](https://flatlogic.com/admin-dashboards?ref=qdyWRz6GDo) ✌️**
+
 ## Preview
+
 
 ![preview](https://raw.githubusercontent.com/MacKentoch/react-director-admin-template/master/preview/preview.png)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMacKentoch%2Freact-director-admin-template.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMacKentoch%2Freact-director-admin-template?ref=badge_shield)
 
 [Launch preview here](https://mackentoch.github.io/react-director-admin-template)
 
-[If you search for other nice templates see here](https://flatlogic.com/admin-dashboards?ref=qdyWRz6GDo)
 
 ## Content
 
