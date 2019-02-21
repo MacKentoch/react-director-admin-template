@@ -9,6 +9,8 @@
 
 [Launch preview here](https://mackentoch.github.io/react-director-admin-template)
 
+[If you search for other nice templates see here](https://flatlogic.com/admin-dashboards?ref=qdyWRz6GDo)
+
 ## Content
 
 - admin template
