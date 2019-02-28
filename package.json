@@ -16,9 +16,9 @@
     "prod-server": "npm run prod && node src/server"
   },
   "engines": {
-    "node": ">=8.9.1",
-    "npm": ">=5.5.1",
-    "yarn": ">=1.2.1"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.13.1"
   },
   "keywords": [
     "director",
