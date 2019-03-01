@@ -1,37 +1,35 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import cx         from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 
-const Alert = ({
-  type,
-  children
-}) => (
+type Props = {
+  children: any,
+  type: 'danger' | 'info' | 'warning' | 'success',
+};
+
+const Alert = ({ type, children }: Props) => (
   <div
-    className={
-      cx({
-        alert:            true,
-        'alert-block':    true,
-        'alert-danger':   type === 'danger',
-        'alert-info':     type === 'info',
-        'alert-warning':  type === 'warning',
-        'alert-success':  type === 'success'
-      })
-    }>
-    <button
-      data-dismiss="alert"
-      className="close close-sm"
-      type="button">
+    className={cx({
+      alert: true,
+      'alert-block': true,
+      'alert-danger': type === 'danger',
+      'alert-info': type === 'info',
+      'alert-warning': type === 'warning',
+      'alert-success': type === 'success'
+    })}
+  >
+    <button data-dismiss="alert" className="close close-sm" type="button">
       <i className="fa fa-times" />
     </button>
-    { children }
+    {children}
   </div>
 );
 
 Alert.propTypes = {
   children: PropTypes.node,
-  type:     PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
 };
 
 Alert.defaultProps = {
