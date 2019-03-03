@@ -1,10 +1,10 @@
-const webpack      = require('webpack');
-const path         = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
-const assetsDir   = path.resolve(__dirname, 'public/assets');
-const vendorsDir  = path.resolve(__dirname, 'src/app/vendors');
-const srcInclude  = path.join(__dirname, 'src/app');
-const indexFile   = path.join(__dirname, 'src/app/index.js');
+const assetsDir = path.resolve(__dirname, 'public/assets');
+const vendorsDir = path.resolve(__dirname, 'src/front/vendors');
+const srcInclude = path.join(__dirname, 'src/front');
+const indexFile = path.join(__dirname, 'src/front/index.js');
 
 const config = {
   devtool: 'cheap-module-source-map',
@@ -22,24 +22,24 @@ const config = {
   module: {
     rules: [
       {
-        test:     /\.jsx?$/,
-        include:  srcInclude,
-        exclude:  [vendorsDir],
-        loaders:  ['react-hot-loader/webpack', 'babel-loader']
+        test: /\.jsx?$/,
+        include: srcInclude,
+        exclude: [vendorsDir],
+        loaders: ['react-hot-loader/webpack', 'babel-loader']
       },
       {
         test: /\.css$/,
-        use:  [
+        use: [
           'style-loader',
-          {loader: 'css-loader', options: { importLoaders: 1 }},
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader'
         ]
       },
       {
-        test:  /\.scss$/,
-        use:  [
+        test: /\.scss$/,
+        use: [
           'style-loader',
-          {loader: 'css-loader', options: { importLoaders: 1 }},
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
           'sass-loader'
         ]
@@ -48,7 +48,7 @@ const config = {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
         use: [
           {
-            loader:  'url-loader',
+            loader: 'url-loader',
             options: {
               limit: 100000,
               name: '[name].[ext]'
@@ -66,11 +66,11 @@ const config = {
   ]
 };
 /*
-* here using hoisting so don't use `var NAME = function()...`
-*/
+ * here using hoisting so don't use `var NAME = function()...`
+ */
 function getImplicitGlobals() {
   return new webpack.ProvidePlugin({
-    $:      'jquery',
+    $: 'jquery',
     jQuery: 'jquery',
     jquery: 'jquery'
   });
@@ -79,7 +79,7 @@ function getImplicitGlobals() {
 function setNodeEnv() {
   return new webpack.DefinePlugin({
     'process.env': {
-      'NODE_ENV': JSON.stringify('dev')
+      NODE_ENV: JSON.stringify('dev')
     }
   });
 }
