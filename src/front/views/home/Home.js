@@ -1,9 +1,7 @@
-// flow weak
+// flow
 
-import React, {
-  PureComponent
-}                         from 'react';
-import PropTypes          from 'prop-types';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import {
   AnimatedView,
   StatsCard,
@@ -12,50 +10,49 @@ import {
   WorkProgress,
   TwitterFeed,
   TodoListDemo,
-  TeamMatesDemo
-}                         from '../../components';
+  TeamMatesDemo,
+} from '../../components';
 
 class Home extends PureComponent {
   static propTypes = {
-    earningGraphLabels:   PropTypes.array,
+    earningGraphLabels: PropTypes.array,
     earningGraphDatasets: PropTypes.array,
-    teamMatesIsFetching:  PropTypes.bool,
-    teamMates:            PropTypes.arrayOf(
+    teamMatesIsFetching: PropTypes.bool,
+    teamMates: PropTypes.arrayOf(
       PropTypes.shape({
-        picture:      PropTypes.string,
-        firstname:    PropTypes.string,
-        lastname:     PropTypes.string,
-        profile:      PropTypes.string,
-        profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success'])
-      })
+        picture: PropTypes.string,
+        firstname: PropTypes.string,
+        lastname: PropTypes.string,
+        profile: PropTypes.string,
+        profileColor: PropTypes.oneOf(['danger', 'warning', 'info', 'success']),
+      }),
     ),
     actions: PropTypes.shape({
       enterHome: PropTypes.func,
       leaveHome: PropTypes.func,
-      fetchEarningGraphDataIfNeeded:  PropTypes.func,
-      fetchTeamMatesDataIfNeeded:     PropTypes.func
-    })
+      fetchEarningGraphDataIfNeeded: PropTypes.func,
+      fetchTeamMatesDataIfNeeded: PropTypes.func,
+    }),
   };
-
-  componentWillMount() {
-    const { actions: { enterHome } } = this.props;
-    enterHome();
-  }
 
   componentDidMount() {
     const {
       actions: {
+        enterHome,
         fetchEarningGraphDataIfNeeded,
-        fetchTeamMatesDataIfNeeded
-      }
+        fetchTeamMatesDataIfNeeded,
+      },
     } = this.props;
 
+    enterHome();
     fetchEarningGraphDataIfNeeded();
     fetchTeamMatesDataIfNeeded();
   }
 
   componentWillUnmount() {
-    const { actions: { leaveHome } } = this.props;
+    const {
+      actions: { leaveHome },
+    } = this.props;
     leaveHome();
   }
 
@@ -64,14 +61,12 @@ class Home extends PureComponent {
       teamMates,
       teamMatesIsFetching,
       earningGraphLabels,
-      earningGraphDatasets
+      earningGraphDatasets,
     } = this.props;
 
-    return(
+    return (
       <AnimatedView>
-        <div
-          className="row"
-          style={{marginBottom: '5px'}}>
+        <div className="row" style={{ marginBottom: '5px' }}>
           <div className="col-md-3">
             <StatsCard
               statValue={'3200'}
@@ -138,7 +133,6 @@ class Home extends PureComponent {
             <TodoListDemo />
           </div>
         </div>
-
       </AnimatedView>
     );
   }

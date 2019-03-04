@@ -9,10 +9,13 @@
     "classnames": "registry:dt/classnames#0.0.0+20161113184211",
     "jquery": "registry:dt/jquery#1.10.0+20170310222111",
     "js-base64": "registry:dt/js-base64#2.1.9+20161025033459",
+    "modernizr": "registry:dt/modernizr#3.3.0+20170302103631",
     "moment": "registry:dt/moment#2.11.1+20161010105546",
     "node": "registry:dt/node#7.0.0+20170322231424",
+    "popper.js": "registry:dt/popper.js#0.4.0+20161005184000",
     "react-router": "registry:dt/react-router#4.0.0+20170323201651",
     "react-router-dom": "registry:dt/react-router-dom#4.0.0+20170323201651",
+    "recompose": "registry:dt/recompose#0.22.0+20170306203754",
     "redux": "registry:dt/redux#3.5.2+20160703092728",
     "redux-thunk": "registry:dt/redux-thunk#2.1.0+20160703120921"
   },

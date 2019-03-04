@@ -10,9 +10,9 @@ import 'jquery';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import './style/director-style.css';
-import './style/highlight/darkula.css';
+// import 'bootstrap/dist/js/bootstrap.min.js';
+// import './style/director-style.css';
+// import './style/highlight/darkula.css';
 import './style/index.style.scss';
 import Root from './Root';
 // #endregion
@@ -30,14 +30,14 @@ const ELEMENT_TO_BOOTSTRAP = 'root';
 const BootstrapedElement = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 // #endregion
 
-const renderApp = RootComponent => {
-  render(
+function renderApp(RootComponent) {
+  return render(
     <AppContainer warnings={false}>
       <RootComponent />
     </AppContainer>,
     BootstrapedElement,
   );
-};
+}
 
 renderApp(Root);
 

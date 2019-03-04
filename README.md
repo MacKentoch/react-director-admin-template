@@ -1,5 +1,7 @@
 # ReactJS version of Director Responsive Admin Template Free
 
+## ⚠️WIP: **`BIG` migration in progress** (toolchain, react, bootstrap etc...)
+
 [![Build Status](https://travis-ci.org/MacKentoch/react-director-admin-template.svg?branch=master)](https://travis-ci.org/MacKentoch/react-director-admin-template)
 
 **[If you need more choices and look for other nice templates check https://flatlogic.com](https://flatlogic.com/admin-dashboards?ref=qdyWRz6GDo) ✌️**
@@ -18,11 +20,10 @@
 - admin template
 - ReactJS 16+
 - Redux
-- react-hot-reload 3.1+
+- react-hot-reload 4+
 - React router 4
 - react-router-redux 5.x
-- webpack 3
-- postcss
+- webpack 4+
 - sass
 - jest
 - enzyme
@@ -59,7 +60,7 @@ Development mode = best dev experience (_hot reload, redux devtools extension...
 npm run start
 ```
 
-> Then go to [localhost:3000](http://localhost:3001)
+> Then go to [localhost:3001](http://localhost:3001)
 
 ### bundle production mode
 

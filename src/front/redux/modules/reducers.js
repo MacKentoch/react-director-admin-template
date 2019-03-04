@@ -1,13 +1,13 @@
-// @flow weak
+// @flow
 
-import { routerReducer }    from 'react-router-redux';
-import { combineReducers }  from 'redux';
-import earningGraph         from './earningGraph';
-import sideMenu             from './sideMenu';
-import userInfos            from './userInfos';
-import teamMates            from './teamMates';
-import views                from './views';
-import userAuth             from './userAuth';
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+import earningGraph from './earningGraph';
+import sideMenu from './sideMenu';
+import userInfos from './userInfos';
+import teamMates from './teamMates';
+import views from './views';
+import userAuth from './userAuth';
 
 export const reducers = {
   earningGraph,
@@ -15,10 +15,11 @@ export const reducers = {
   userInfos,
   teamMates,
   views,
-  userAuth
+  userAuth,
 };
 
-export default combineReducers({
-  ...reducers,
-  routing: routerReducer
-});
+export default (history: any) =>
+  combineReducers({
+    router: connectRouter(history),
+    ...reducers,
+  });

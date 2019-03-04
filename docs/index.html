@@ -1,107 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>React Director Admin Template</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="ReactJS Director free admin template">
-		<meta name="author" content="Erwan DATIN (MacKentoch)">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./public/assets/app.styles.css">
-    <style>
-      .loading-message {
-        position: relative;
-        margin: 100px auto;
-        text-align: center;
-        color: #425164;
-      }
 
-      .spinner {
-        margin: 10px auto;
-        width: 40px;
-        height: 40px;
-        position: relative;
-        text-align: center;
+<head>
+  <title>React Director Admin Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="React Director Admin Template">
+  <meta name="author" content="Erwan DATIN (MacKentoch)">
+</head>
 
-        -webkit-animation: sk-rotate 2.0s infinite linear;
-        animation: sk-rotate 2.0s infinite linear;
-      }
+<body>
+  <section id="root"></section>
+  <script type="text/javascript" src="/assets/vendors.js"></script>
+  <script type="text/javascript" src="/assets/app.js"></script>
+  <!--[if !IE]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js"></script>
+  <!--[endif]-->
+</body>
 
-      .dot1, .dot2 {
-        width: 60%;
-        height: 60%;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        background-color: #425164;
-        border-radius: 100%;
-
-        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-        animation: sk-bounce 2.0s infinite ease-in-out;
-      }
-
-      .dot2 {
-        top: auto;
-        bottom: 0;
-        -webkit-animation-delay: -1.0s;
-        animation-delay: -1.0s;
-      }
-
-      @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
-      @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
-
-      @-webkit-keyframes sk-bounce {
-        0%, 100% { -webkit-transform: scale(0.0) }
-        50% { -webkit-transform: scale(1.0) }
-      }
-
-      @keyframes sk-bounce {
-        0%, 100% {
-          transform: scale(0.0);
-          -webkit-transform: scale(0.0);
-        } 50% {
-          transform: scale(1.0);
-          -webkit-transform: scale(1.0);
-        }
-      }
-    </style>
-  </head>
-  <body class="skin-black">
-
-    <div class="loader">
-      <p class="loading-message">
-        <i>
-          Loading...
-        </i>
-      </p>
-      <div class="spinner">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-      </div>
-    </div>
-
-    <section id="root"></section>
-    <script src="./public/assets/app.vendor.bundle.js"></script>
-    <script src="./public/assets/app.bundle.js"></script>
-    <script>
-      // loading fadeOut pure vanilla JS (I9+)
-      ;(function(){
-        document.addEventListener("DOMContentLoaded", function(event) {
-          var el = document.querySelector('.loader');
-          fadeOut(el);
-        });
-        function fadeOut(el){
-          el.style.opacity = 1;
-          (function fade() {
-            if ((el.style.opacity -= .1) < 0.15) {
-              el.style.display = "none";
-            } else {
-              requestAnimationFrame(fade);
-            }
-          })();
-        }
-      })()
-    </script>
-  </body>
 </html>

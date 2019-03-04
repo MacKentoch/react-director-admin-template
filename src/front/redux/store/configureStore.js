@@ -1,4 +1,4 @@
-'use strict';
+// @flow
 
 /* eslint no-process-env:0 */
 if (process.env.NODE_ENV === 'production') {

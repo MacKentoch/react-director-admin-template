@@ -2,7 +2,7 @@
 //  variables
 // //////////////////////////////////////////////
 
-/*  
+/*
   General colors:
 */
 $RED: #f05050;
@@ -27,9 +27,12 @@ $DARK_BLACK: #000000;
   Styling vars
 */
 $BODY_BACKGROUND_COLOR: #F1F2F3;
-$FONT_FAMILLY: 'Lato', sans-serif;
+$FONT_FAMILLY: 'Lato',
+sans-serif;
 
-$NAV_BAR_A_LOGO_FONT_FAMILY: 'Kaushan Script', cursive;;
+$NAV_BAR_A_LOGO_FONT_FAMILY: 'Kaushan Script',
+cursive;
+;
 
 
 $LINK_COLOR: $LIGHT_BLUE;
@@ -39,7 +42,7 @@ $LEFT_SIDE_BAR_WIDTH: 220px;
 $HEADER_HEIGHT : 50px;
 
 $CONTENT_BACKGROUND_COLOR: #f0f3f4;
-$CONTENT_PADDING: 20px 15px; 
+$CONTENT_PADDING: 20px 15px;
 
 $PAGE_HEADER_FONT_SIZE: 22px;
 $PAGE_HEADER_SMALL_COLOR: #666;
@@ -143,7 +146,7 @@ $MAIN_MAROON_GRADIANT_SECONDARY_COLOR: #85144b;
 
 // mixins:
 @mixin html-body {
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
   font-family: $FONT_FAMILLY;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
@@ -204,22 +207,25 @@ body {
           margin-left: 220px;
 
           .nav {
-            & > li.user {
-               & > a {
-                & > .fa {
+            &>li.user {
+              &>a {
+                &>.fa {
                   margin-right: 5px;
                 }
-                & > .glyphicon {
+
+                &>.glyphicon {
                   margin-right: 5px;
                 }
-                & > .ion {
+
+                &>.ion {
                   margin-right: 5px;
                 }
-               }
+              }
             }
-            & > li {
-              & > a {
-                & > .label {
+
+            &>li {
+              &>a {
+                &>.label {
                   -webkit-border-radius: 50%;
                   -moz-border-radius: 50%;
                   border-radius: 50%;
@@ -237,14 +243,14 @@ body {
 
                 &:hover {
                   .label {
-                    top: 3px; 
+                    top: 3px;
                   }
                 }
               }
             }
           }
 
-          & > a.logo {
+          &>a.logo {
             float: left;
             font-size: 20px;
             line-height: 50px;
@@ -286,7 +292,7 @@ body {
               border-radius: 4px;
             }
 
-            .icon-bar + .icon-bar {
+            .icon-bar+.icon-bar {
               margin-top: 4px;
             }
           }
@@ -306,7 +312,7 @@ body {
       the sidebar and the navbar will automatically become poisitioned fixed
   */
   .fixed {
-    > .header {
+    >.header {
       position: fixed;
     }
 
@@ -320,7 +326,7 @@ body {
       right: 0;
     }
 
-    > .header {
+    >.header {
       top: 0;
       right: 0;
       left: 0;
@@ -353,7 +359,7 @@ body {
 }
 
 a {
-  color:$LINK_COLOR;
+  color: $LINK_COLOR;
 
   &:hover {
     @include link-selected($LINK_SELECTED_COLOR);
@@ -391,16 +397,18 @@ a {
 .right-side {
   /* Define 2 column template */
   @include layout-two-col-template();
+
   background: {
     color: $BODY_BACKGROUND_COLOR;
   }
+
   margin-left: $LEFT_SIDE_BAR_WIDTH;
 
-  & > .content-header {
+  &>.content-header {
     position: relative;
     padding: 15px;
 
-    & > .breadcrumb {
+    &>.breadcrumb {
       float: right;
       background: transparent;
       margin-top: 0px;
@@ -414,33 +422,35 @@ a {
       -moz-border-radius: 2px;
       border-radius: 2px;
 
-      & > li {
-        & > a {
+      &>li {
+        &>a {
           color: #444;
           text-decoration: none;
 
           & .fa {
             margin-right: 5px;
           }
+
           & .glyphicon {
             margin-right: 5px;
           }
+
           & .ion {
             margin-right: 5px;
           }
         }
       }
 
-      & > li + li:before {
+      &>li+li:before {
         content: '>\00a0';
       }
     }
 
-    & > h1 {
+    &>h1 {
       margin: 0;
       font-size: 24px;
 
-      & > small {
+      &>small {
         font-size: 15px;
         display: inline-block;
         padding-left: 4px;
@@ -462,6 +472,7 @@ a {
 /* breadcrumb */
 .breadcrumb {
   background-color: $WHITE;
+
   a {
     color: $DARK_BLACK;
   }
@@ -475,11 +486,11 @@ a {
   padding: 0px;
   width: 100%;
 
-  & > li {
+  &>li {
     float: left;
     margin: 0px 25px 0px 0px;
 
-    & > a {
+    &>a {
       position: relative;
       float: left;
       background-color: rgb(238, 238, 238);
@@ -515,7 +526,7 @@ a {
 /* Content */
 .content {
   padding: $CONTENT_PADDING;
-  background:$CONTENT_BACKGROUND_COLOR;
+  background: $CONTENT_BACKGROUND_COLOR;
   overflow: auto;
 }
 
@@ -524,36 +535,47 @@ a {
 h1 {
   font-family: $FONT_FAMILLY;
 }
+
 h2 {
   font-family: $FONT_FAMILLY;
 }
+
 h3 {
   font-family: $FONT_FAMILLY;
 }
+
 h4 {
   font-family: $FONT_FAMILLY;
 }
+
 h5 {
   font-family: $FONT_FAMILLY;
 }
+
 h6 {
   font-family: $FONT_FAMILLY;
 }
+
 .h1 {
   font-family: $FONT_FAMILLY;
 }
+
 .h2 {
   font-family: $FONT_FAMILLY;
 }
+
 .h3 {
   font-family: $FONT_FAMILLY;
 }
+
 .h4 {
   font-family: $FONT_FAMILLY;
 }
+
 .h5 {
   font-family: $FONT_FAMILLY;
 }
+
 .h6 {
   font-family: $FONT_FAMILLY;
 }
@@ -561,13 +583,15 @@ h6 {
 /* Page Header */
 .page-header {
   margin: 10px 0 20px 0;
+
   font: {
     size: $PAGE_HEADER_FONT_SIZE;
   }
 
-  > small {
+  >small {
     color: $PAGE_HEADER_SMALL_COLOR;
     display: block;
+
     margin: {
       top: 5px;
     }
@@ -578,9 +602,11 @@ h6 {
 img {
   max-width: 100% !important;
 }
+
 .sort-highlight {
   background: #f4f4f4;
   border: 1px dashed #ddd;
+
   margin: {
     bottom: 10px;
   }
@@ -590,9 +616,11 @@ img {
 .pad {
   padding: 20px 10px 10px;
 }
+
 .margin {
   margin: 10px;
 }
+
 .pad-20 {
   padding: 20px;
 }
@@ -606,9 +634,11 @@ img {
 .alert-danger {
   background-color: $ALERT_DANGER_BACKGROUND_COLOR;
 }
+
 .alert-success {
   background-color: $ALERT_SUCCESS_BACKGROUND_COLOR;
 }
+
 .alert-warning {
   background-color: $ALERT_WARNING_BACKGROUND_COLOR;
 }
@@ -616,28 +646,33 @@ img {
 /*badge */
 .badge {
   font-weight: bold;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .badge-success {
   background-color: $BADGE_SUCCESS_BACKGROUND_COLOR;
   color: $BADGE_SUCCESS_COLOR;
 }
+
 .badge-warning {
   background-color: $BADGE_WARNING_BACKGROUND_COLOR;
   color: $BADGE_WARNING_COLOR;
 }
+
 .badge-info {
   background-color: $BADGE_INFO_BACKGROUND_COLOR;
   color: $BADGE_INFO_COLOR;
 }
+
 .badge-danger {
   background-color: $BADGE_DANGER_BACKGROUND_COLOR;
   color: $BADGE_DANGER_COLOR;
 }
+
 .badge-primary {
   background-color: $BADGE_PRIMARY_BACKGROUND_COLOR;
 }
+
 .badge-inverse {
   background-color: $BADGE_INVERSE_BACKGROUND_COLOR;
   color: $BADGE_INVERSE_COLOR;
@@ -646,32 +681,38 @@ img {
 /*label*/
 .label {
   font-weight: bold;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .label-primary {
   background-color: $LABEL_PRIMARY_BACKGROUND_COLOR;
 }
+
 .label-default {
   background-color: $LABEL_DEFAULT_BACKGROUND_COLOR;
 
 }
+
 .label-success {
-  background-color:$LABEL_SUCCESS_BACKGROUND_COLOR;
+  background-color: $LABEL_SUCCESS_BACKGROUND_COLOR;
   color: $LABEL_SUCCESS_COLOR;
 }
+
 .label-info {
   background-color: $LABEL_INFO_BACKGROUND_COLOR;
   color: $LABEL_INFO_COLOR;
 }
+
 .label-inverse {
   background-color: $LABEL_INVERSE_BACKGROUND_COLOR;
   color: $LABEL_INVERSE_COLOR;
 }
+
 .label-warning {
   background-color: $LABEL_WARNING_BACKGROUND_COLOR;
   color: $LABEL_WARNING_COLOR;
 }
+
 .label-danger {
   background-color: $LABEL_DANGER_BACKGROUND_COLOR;
   color: $LABEL_DANGER_COLOR;
@@ -682,80 +723,100 @@ img {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_RED_BACKGROUND_COLOR !important;
 }
+
 .bg-yellow {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_YELLOW_BACKGROUND_COLOR !important;
 }
+
 .bg-aqua {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_AQUA_BACKGROUND_COLOR !important
 }
+
 .bg-blue {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_BLUE_BACKGROUND_COLOR !important;
 }
+
 .bg-light-blue {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_LIGHT_BLUE_BACKGROUND_COLOR !important;
 }
+
 .bg-green {
   color: $BG_COLOR_COLOR !important;
-  background-color: $BG_GREEN_BACKGROUND_COLOR  !important;
+  background-color: $BG_GREEN_BACKGROUND_COLOR !important;
 }
+
 .bg-navy {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_NAVY_BACKGROUND_COLOR !important;
 }
+
 .bg-teal {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_TEAL_BACKGROUND_COLOR !important;
 }
+
 .bg-olive {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_OLIVE_BACKGROUND_COLOR !important;
 }
+
 .bg-lime {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_LIME_BACKGROUND_COLOR !important;
 }
+
 .bg-orange {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_ORANGE_BACKGROUND_COLOR !important;
 }
+
 .bg-fuchsia {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_FUSHSIA_BACKGROUND_COLOR !important;
 }
+
 .bg-purple {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_PURPLE_BACKGROUND_COLOR !important;
 }
+
 .bg-maroon {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_MAROON_BACKGROUND_COLOR !important;
 }
+
 .bg-black {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_BLACK_BACKGROUND_COLOR !important;
 }
+
 .bg-violet {
   color: $BG_COLOR_COLOR !important;
   background-color: $BG_VIOLET_BACKGROUND_COLOR !important;
 }
+
 .bg-white {
   background-color: $BG_WHITE_BACKGROUND_COLOR !important;
 }
+
 .bg-gray {
   background-color: $BG_GREY_BACKGROUND_COLOR !important;
 }
+
 .bg-twitter {
   background-color: $BG_TWITTER_BACKGROUND_COLOR;
   color: white;
 }
+
 .bg-facebook {
   background-color: $BG_FACEBOOK_BACKGROUND_COLOR;
   color: white;
 }
+
 .bg-google-plus {
   background-color: $BG_GOOGLE_PLUS_BACKGROUND_COLOR;
   color: white;
@@ -765,12 +826,15 @@ img {
   border: {
     bottom: 1px dotted $TEXT_AREA_BORDER_COLOR;
   }
+
   margin: {
     bottom: 5px;
   }
+
   padding: {
     bottom: 3px;
   }
+
   textarea {
     margin: {
       bottom: 3px;
@@ -784,26 +848,31 @@ img {
     right: 10px;
   }
 }
+
 .m-t-15 {
   margin: {
     top: 15px;
   }
 }
+
 .m-b-5 {
   margin: {
     bottom: 5px;
   }
 }
+
 .m-b-10 {
   margin: {
     bottom: 10px;
   }
 }
+
 .m-b-15 {
   margin: {
     bottom: 15px;
   }
 }
+
 .m-b-20 {
   margin: {
     bottom: 20px;
@@ -813,16 +882,19 @@ img {
 /* teammates  */
 .teammates {
   a {
-    color:$TEAMMATES_LINK_COLOR;
+    color: $TEAMMATES_LINK_COLOR;
   }
+
   img {
     border: {
       radius: 5px;
     }
+
     margin: {
       right: 10px;
     }
   }
+
   li {
     border: {
       width: $TEAMMATES_LI_BODER_WIDTH;
@@ -836,57 +908,75 @@ img {
 .text-primary {
   color: $TEXT_PRIMARY_COLOR;
 }
+
 .text-info {
   color: $TEXT_INFO_COLOR;
 }
+
 .text-success {
   color: $TEXT_SUCCESS_COLOR;
 }
+
 .text-warning {
   color: $TEXT_WARNING_COLOR;
 }
+
 .text-red {
   color: $TEXT_RED_COLOR !important;
 }
+
 .text-yellow {
   color: $TEXT_YELLOW_COLOR !important;
 }
+
 .text-aqua {
   color: $TEXT_AQUA_COLOR !important;
 }
+
 .text-blue {
   color: $TEXT_BLUE_COLOR !important;
 }
+
 .text-black {
   color: $TEXT_BLACK_COLOR !important;
 }
+
 .text-light-blue {
   color: $TEXT_LIGHT_BLUE_COLOR !important;
 }
+
 .text-green {
   color: $TEXT_GREEN_COLOR !important;
 }
+
 .text-navy {
   color: $TEXT_NAVY_COLOR !important;
 }
+
 .text-teal {
   color: $TEXT_TEAL_COLOR !important;
 }
+
 .text-olive {
   color: $TEXT_OLIVE_COLOR !important;
 }
+
 .text-lime {
   color: $TEXT_LIME_COLOR !important;
 }
+
 .text-orange {
   color: $TEXT_ORANGE_COLOR !important;
 }
+
 .text-fuchsia {
   color: $TEXT_FUCHSIA_COLOR !important;
 }
+
 .text-purple {
   color: $TEXT_PURPLE_COLOR !important;
 }
+
 .text-maroon {
   color: $TEXT_MAROON_COLOR !important;
 }
@@ -918,7 +1008,7 @@ img {
 
 #aqua {
   .slider-selection {
-    background:$AQUA;
+    background: $AQUA;
   }
 }
 
@@ -932,6 +1022,7 @@ img {
   background: {
     color: $WHITE;
   }
+
   border: {
     width: 2px;
     style: solid;
@@ -943,21 +1034,25 @@ img {
 .hide {
   display: none !important;
 }
+
 /* Remove borders */
 .no-border {
   border: 0px !important;
 }
+
 /* Remove padding */
 .no-padding {
   padding: 0px !important;
 }
+
 /* Remove margins */
 .no-margin {
   margin: 0px !important;
 }
+
 /* Remove box shadow */
 .no-shadow {
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
 
 /* Remove border radius */
@@ -972,11 +1067,12 @@ img {
 // }
 
 .table-striped {
-  & > tbody {
-    & > tr:nth-child(odd) {
+  &>tbody {
+    &>tr:nth-child(odd) {
       td {
         @include back-color-table-striped();
       }
+
       th {
         @include back-color-table-striped();
       }
@@ -993,19 +1089,24 @@ img {
 .table {
   .no-border {
     border: 0;
+
     th {
       border: 0;
-    } 
+    }
+
     td {
       border: 0;
     }
   }
+
   /* .text-center in tables */
   .text-center {
     text-align: center;
+
     td {
       text-align: right;
     }
+
     th {
       text-align: left;
     }
@@ -1014,9 +1115,11 @@ img {
 
 .text-bold {
   font-weight: 700;
+
   .text-bold.table td {
     font-weight: 700;
   }
+
   .text-bold.table th {
     font-weight: 700;
   }
@@ -1073,13 +1176,16 @@ Gradient Background colors
   @include background-linear-gradiant($MAIN_BLACK, $MAIN_BLACK_GRADIANT_SECONDARY_COLOR);
   color: #fff;
 }
+
 .bg-maroon-gradient {
   @include background-linear-gradiant($MAIN_MAROON, $MAIN_MAROON_GRADIANT_SECONDARY_COLOR);
   color: #fff;
 }
+
 .connectedSortable {
   min-height: 100px;
 }
+
 /*
     Component: Sidebar
 --------------------------
@@ -1092,23 +1198,23 @@ Gradient Background colors
     margin: 0;
     padding: 0;
 
-    & > li {
+    &>li {
       margin: 0;
       padding: 0;
 
-      & > a {
+      &>a {
         padding: 12px 5px 12px 15px;
         display: block;
 
-        & > .fa {
+        &>.fa {
           width: 20px;
         }
 
-        & > .glyphicon {
+        &>.glyphicon {
           width: 20px;
         }
 
-        & > .ion {
+        &>.ion {
           width: 20px;
         }
       }
@@ -1120,24 +1226,24 @@ Gradient Background colors
       padding: 0;
       margin: 0;
 
-      & > li {
+      &>li {
         margin: 0;
 
-        & > a {
+        &>a {
           padding: 8px 5px 8px 15px;
           display: block;
           font-size: 14px;
           margin: 0px 0px;
 
-          & > .fa {
+          &>.fa {
             width: 20px;
           }
 
-          & > .glyphicon {
+          &>.glyphicon {
             width: 20px;
           }
 
-          & > .ion {
+          &>.ion {
             width: 20px;
           }
         }
@@ -1151,12 +1257,13 @@ Gradient Background colors
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        border-color: transparent!important;
+        border-color: transparent !important;
       }
     }
-    
+
   }
 }
+
 /*
 
 user-panel
@@ -1169,47 +1276,50 @@ user-panel
     display: table;
     content: " ";
   }
+
   &:after {
     display: table;
     content: " ";
     clear: both;
   }
 
-  & > .image {
-    & > img {
+  &>.image {
+    &>img {
       width: 45px;
       height: 45px;
     }
   }
 
-  & > .info {
+  &>.info {
     font-weight: 600;
     padding: 5px 5px 5px 15px;
     font-size: 14px;
     line-height: 1;
 
-    & > p {
+    &>p {
       margin-bottom: 9px;
     }
 
-    & > a {
+    &>a {
       text-decoration: none;
       padding-right: 5px;
       margin-top: 3px;
       font-size: 11px;
       font-weight: normal;
 
-      & > .fa {
+      &>.fa {
         margin-right: 3px;
       }
-      & > .ion {
+
+      &>.ion {
         margin-right: 3px;
       }
-      & > .glyphicon {
+
+      &>.glyphicon {
         margin-right: 3px;
       }
     }
-  }  
+  }
 }
 
 /*
@@ -1224,22 +1334,22 @@ user-panel
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   z-index: 2300;
 
-  & > li {
-    & > a {
+  &>li {
+    &>a {
       &:hover {
         background-color: $LIGHT_BLUE;
         color: $BG_COLOR_COLOR;
       }
 
-      & > .fa {
+      &>.fa {
         margin-right: 10px;
       }
 
-      & > .glyphicon {
+      &>.glyphicon {
         margin-right: 10px;
       }
 
-      & > .ion {
+      &>.ion {
         margin-right: 10px;
       }
     }
@@ -1247,8 +1357,8 @@ user-panel
 }
 
 .dropdown-menu-right {
-  & > li {
-    & > a {
+  &>li {
+    &>a {
       &:hover {
         background-color: $DROPDOWN_MENU_RIGHHT_COLOR;
         color: $BG_COLOR_COLOR;
@@ -1266,14 +1376,15 @@ user-panel
 .navbar-nav>.messages-menu>.dropdown-menu,
 .navbar-nav>.tasks-menu>.dropdown-menu {
   width: 260px;
-  padding: 0 0 0 0!important;
-  margin: 0!important;
+  padding: 0 0 0 0 !important;
+  margin: 0 !important;
   top: 100%;
   border: 1px solid #dfdfdf;
   -webkit-border-radius: 4px !important;
   -moz-border-radius: 4px !important;
   border-radius: 4px !important;
 }
+
 .navbar-nav>.notifications-menu>.dropdown-menu>li.header,
 .navbar-nav>.messages-menu>.dropdown-menu>li.header,
 .navbar-nav>.tasks-menu>.dropdown-menu>li.header {
@@ -1295,6 +1406,7 @@ user-panel
   color: #444444;
   font-size: 14px;
 }
+
 .navbar-nav>.notifications-menu>.dropdown-menu>li.header:after,
 .navbar-nav>.messages-menu>.dropdown-menu>li.header:after,
 .navbar-nav>.tasks-menu>.dropdown-menu>li.header:after {
@@ -1311,6 +1423,7 @@ user-panel
   border-width: 7px;
   margin-left: -7px;
 }
+
 .navbar-nav>.notifications-menu>.dropdown-menu>li.footer>a,
 .navbar-nav>.messages-menu>.dropdown-menu>li.footer>a,
 .navbar-nav>.tasks-menu>.dropdown-menu>li.footer>a {
@@ -1333,6 +1446,7 @@ user-panel
   color: #444444;
   text-align: center;
 }
+
 .navbar-nav>.notifications-menu>.dropdown-menu>li.footer>a:hover,
 .navbar-nav>.messages-menu>.dropdown-menu>li.footer>a:hover,
 .navbar-nav>.tasks-menu>.dropdown-menu>li.footer>a:hover {
@@ -1374,6 +1488,7 @@ user-panel
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>i {
   border-radius: 30px;
 }
+
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.glyphicon,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.fa,
 .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a>.ion {
@@ -1613,7 +1728,7 @@ user-panel
       left: 220px;
     }
   }
-  
+
   .sidebar-offcanvas {
     left: 0;
   }
@@ -1622,10 +1737,12 @@ user-panel
     margin-top: 50px;
     left: -220px;
   }
+
   body.fixed .row-offcanvas-left.active .navbar {
     left: 220px !important;
     right: 0;
   }
+
   body.fixed .row-offcanvas-left.active .sidebar-offcanvas {
     left: 0px;
   }
@@ -1640,6 +1757,7 @@ user-panel
       left: -$LEFT_SIDE_BAR_WIDTH;
     }
   }
+
   /*Right side strech mode*/
   .right-side {
     .strech {
@@ -1647,19 +1765,19 @@ user-panel
         left: 0;
       }
 
-      > .content-header {
+      >.content-header {
         margin: {
           top: 0px;
         }
       }
-    } 
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .right-side {
-    & > .content-header {
-      & > .breadcrumb {
+    &>.content-header {
+      &>.breadcrumb {
         position: relative;
         margin-top: 5px;
         top: 0;
@@ -1677,10 +1795,10 @@ user-panel
     float: left;
 
     .navbar-nav {
-      & > li {
+      &>li {
         float: left;
 
-        & > a {
+        &>a {
           padding-top: 15px;
           padding-bottom: 15px;
           line-height: 20px;
@@ -1691,7 +1809,7 @@ user-panel
     .navbar-right {
       float: right;
     }
-  }  
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1704,29 +1822,30 @@ user-panel
           .logo {
             width: 100%;
             float: none;
-            position: relative!important;
-          } 
+            position: relative !important;
+          }
+
           .navbar {
             width: 100%;
             float: none;
-            position: relative!important;
+            position: relative !important;
             margin: 0;
           }
         }
-      } 
+      }
     }
 
     .fixed {
-      & > .header {
-        position: fixed;    
+      &>.header {
+        position: fixed;
       }
 
-      & >.wrapper {
-        margin-top: 100px!important;
+      &>.wrapper {
+        margin-top: 100px !important;
       }
 
-      & > .sidebar-offcanvas {
-        margin-top: 100px!important;
+      &>.sidebar-offcanvas {
+        margin-top: 100px !important;
       }
     }
   }
@@ -1737,11 +1856,13 @@ user-panel
   .no-print {
     display: none;
   }
+
   .left-side,
   .header,
   .content-header {
     display: none;
   }
+
   .right-side {
     margin: 0;
   }

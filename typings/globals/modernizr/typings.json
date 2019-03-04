@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/f7ab322332c2a6e3d923402cec1db0811ea753f2/modernizr/index.d.ts",
+    "raw": "registry:dt/modernizr#3.3.0+20170302103631",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/f7ab322332c2a6e3d923402cec1db0811ea753f2/modernizr/index.d.ts"
+  }
+}

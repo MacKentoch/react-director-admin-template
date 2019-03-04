@@ -1,44 +1,65 @@
-// flow weak
+// @flow
 
-import {
-  createStore,
-  applyMiddleware
-}                               from 'redux';
-import { createLogger }         from 'redux-logger';
-import thunkMiddleware          from 'redux-thunk';
-import { routerMiddleware }     from 'react-router-redux';
-import { composeWithDevTools }  from 'redux-devtools-extension';
-import fetchMiddleware          from '../middleware/fetchMiddleware';
+// #region imports
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+// import { routerMiddleware } from 'react-router-redux'; // deprecated in favor of react-connected-router
+import { routerMiddleware } from 'connected-react-router';
+import { composeWithDevTools } from 'redux-devtools-extension';
 // #region import createHistory from hashHistory or BrowserHistory:
-import createHistory            from 'history/createHashHistory';
-// import createHistory            from 'history/createBrowserHistory';
+// import createHistory from 'history/createHashHistory';
+import createHistory from 'history/createBrowserHistory';
 // #endregion
-import reducer                  from '../modules/reducers';
-import { localStorageManager }  from '../middleware';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import thunkMiddleware from 'redux-thunk';
+import createRootReducer from '../modules/reducers';
+import fetchMiddleware from '../middleware/fetchMiddleware';
+// #endregion
 
-const loggerMiddleware = createLogger({
-  level     : 'info',
-  collapsed : true
-});
-
+// #region constants
 export const history = createHistory();
+// #endregion
 
-// createStore : enhancer
+// #region createStore : enhancer
+
+// #region logger middleware (dev only)
+const loggerMiddleware = createLogger({
+  level: 'info',
+  collapsed: true,
+});
+// #endregion
+
 const enhancer = composeWithDevTools(
   applyMiddleware(
-    localStorageManager,
     thunkMiddleware,
-    fetchMiddleware,
     routerMiddleware(history),
-    loggerMiddleware
-  )
+    fetchMiddleware,
+    loggerMiddleware, // logger at the end
+  ),
 );
+// #endregion
 
-export default function configureStore(initialState) {
-  const store = createStore(reducer, initialState, enhancer);
+// #region persisted reducer
+const persistConfig = {
+  key: 'root',
+  storage,
+  blacklist: ['router'],
+  // whitelist: ['userAuth'],
+};
+
+const persistedReducer = persistReducer(
+  persistConfig,
+  createRootReducer(history),
+);
+// #endregion
+
+export default function configureStore(initialState?: any = {}): any {
+  const store = createStore(persistedReducer, initialState, enhancer);
+
   if (module.hot) {
     module.hot.accept('../modules/reducers', () =>
-      store.replaceReducer(require('../modules/reducers').default)
+      store.replaceReducer(require('../modules/reducers').default),
     );
   }
   return store;

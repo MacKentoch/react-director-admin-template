@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/80060c94ef549c077a011977c2b5461bd0fd8947/popper.js/index.d.ts",
+    "raw": "registry:dt/popper.js#0.4.0+20161005184000",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/80060c94ef549c077a011977c2b5461bd0fd8947/popper.js/index.d.ts"
+  }
+}

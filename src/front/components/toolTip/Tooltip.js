@@ -1,36 +1,34 @@
-// @flow weak
+// @flow
 
-import React          from 'react';
-import PropTypes      from 'prop-types';
-import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import Tooltip        from 'react-bootstrap/lib/Tooltip';
+import React from 'react';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
+type Props = {
+  toolTipId: string | number,
+  toolTipContent: any,
+  tooltipPlacement?: 'left' | 'right' | 'top' | 'bottom',
+  children: any,
+};
 
 const ToolTip = ({
   toolTipId,
   toolTipContent,
   tooltipPlacement,
-  children
-}) => (
+  children,
+}: Props) => (
   <OverlayTrigger
     placement={tooltipPlacement}
-    overlay={
-      <Tooltip id={toolTipId}>
-        {toolTipContent}
-      </Tooltip>
-    }>
+    overlay={<Tooltip id={toolTipId}>{toolTipContent}</Tooltip>}
+  >
     {children}
   </OverlayTrigger>
 );
 
-ToolTip.propTypes = {
-  toolTipId:        PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  toolTipContent:   PropTypes.node.isRequired,
-  tooltipPlacement: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
-  children:         PropTypes.node.isRequired
-};
+ToolTip.displayName = 'ToolTip';
 
 ToolTip.defaultProps = {
-  tooltipPlacement: 'top'
+  tooltipPlacement: 'top',
 };
 
 export default ToolTip;
