@@ -1,35 +1,33 @@
 // @flow weak
 
-import React, {
-  PureComponent
-}                     from 'react';
-import PropTypes      from 'prop-types';
-import Collapse       from 'react-collapse';
-import MenuHeader     from './menuHeader/MenuHeader';
-import MenuLinks      from './menuLinks/MenuLinks';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import Collapse from 'react-collapse';
+import MenuHeader from './menuHeader/MenuHeader';
+import MenuLinks from './menuLinks/MenuLinks';
 
-class Menu extends PureComponent {
+class Menu extends PureComponent<any, any> {
   static propTypes = {
-    headerTitle:      PropTypes.string.isRequired,
-    headerBackColor:  PropTypes.string,
-    activeView:       PropTypes.string.isRequired,
+    headerTitle: PropTypes.string.isRequired,
+    headerBackColor: PropTypes.string,
+    activeView: PropTypes.string.isRequired,
     views: PropTypes.arrayOf(
       PropTypes.shape({
-        name:       PropTypes.string.isRequired,
-        linkTo:     PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        linkTo: PropTypes.string.isRequired,
         faIconName: PropTypes.string.isRequired,
-        itemCount:  PropTypes.number
-      })
+        itemCount: PropTypes.number,
+      }),
     ).isRequired,
-    initialCollapseState: PropTypes.bool
+    initialCollapseState: PropTypes.bool,
   };
 
   static defaultProps = {
-    headerBackColor: '#283744'
+    headerBackColor: '#283744',
   };
 
   state = {
-    isCollapsed: true
+    isCollapsed: true,
   };
 
   componentDidMount() {
@@ -40,12 +38,7 @@ class Menu extends PureComponent {
   }
 
   render() {
-    const {
-      headerTitle,
-      headerBackColor,
-      activeView,
-      views
-    } = this.props;
+    const { headerTitle, headerBackColor, activeView, views } = this.props;
     const { isCollapsed } = this.state;
 
     return (
@@ -56,26 +49,22 @@ class Menu extends PureComponent {
           onClick={this.handlesCollapseClick}
           backColor={headerBackColor}
         />
-        <Collapse
-          isOpened={!isCollapsed}>
-          <MenuLinks
-            activeView={activeView}
-            views={views}
-          />
+        <Collapse isOpened={!isCollapsed}>
+          <MenuLinks activeView={activeView} views={views} />
         </Collapse>
       </div>
     );
   }
 
-  setInitialCollapse = (value) => {
+  setInitialCollapse = value => {
     this.setState({ isCollapsed: value });
-  }
+  };
 
-  handlesCollapseClick = (evt) => {
+  handlesCollapseClick = evt => {
     evt.preventDefault();
     const { isCollapsed } = this.state;
     this.setState({ isCollapsed: !isCollapsed });
-  }
+  };
 }
 
 export default Menu;

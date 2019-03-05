@@ -1,13 +1,11 @@
 // @flow weak
 
-import React, {
-  PureComponent
-}                     from 'react';
-import PropTypes      from 'prop-types';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-class SearchForm extends PureComponent {
+class SearchForm extends PureComponent<any, any> {
   static propTypes = {
-    onSearchSubmit: PropTypes.func
+    onSearchSubmit: PropTypes.func,
   };
 
   searchinput = null;
@@ -18,23 +16,23 @@ class SearchForm extends PureComponent {
 
   render() {
     return (
-      <form
-        className="sidebar-form"
-        onKeyPress={this.handlesFormKeyPress}>
+      <form className="sidebar-form" onKeyPress={this.handlesFormKeyPress}>
         <div className="input-group">
           <input
             ref={this.getRef}
             type="text"
             name="searchinput"
             className="form-control"
-            placeholder="Search..."/>
+            placeholder="Search..."
+          />
           <span className="input-group-btn">
             <button
               onClick={this.handlesFormKeyPress}
               name="search"
               id="search-btn"
-              className="btn btn-flat">
-              <i className="fa fa-search"></i>
+              className="btn btn-flat"
+            >
+              <i className="fa fa-search" />
             </button>
           </span>
         </div>
@@ -42,15 +40,15 @@ class SearchForm extends PureComponent {
     );
   }
 
-  getRef = (ref) => (this.searchinput = ref)
+  getRef = ref => (this.searchinput = ref);
 
-  handlesFormKeyPress = (event) => {
+  handlesFormKeyPress = event => {
     if (event.charCode === 13) {
       event.preventDefault();
       const { onSearchSubmit } = this.props;
       onSearchSubmit(this.searchinput.value.trim());
     }
-  }
+  };
 }
 
 export default SearchForm;

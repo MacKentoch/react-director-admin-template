@@ -1,9 +1,11 @@
 .aside-left--fixed {
   position: fixed;
 }
+
 .sidebar-animated {
   transition: all 0.2s ease-out;
 }
+
 .sidebar-menu__marginTop {
   margin: {
     top: 0px !important;
@@ -14,6 +16,7 @@
   margin: {
     top: 0px !important;
   }
+
   height: 20px;
 }
 
@@ -28,8 +31,9 @@
   z-index: 10;
   transform: translateX(0) !important; // translate to MINUS sideMenu width
 }
+
 .left-side.collapse-left {
-    transform: translateX(-220px) !important; // translate to MINUS sideMenu width
+  transform: translateX(-220px) !important; // translate to MINUS sideMenu width
 }
 
 @media screen and (max-width: 990px) {
@@ -44,6 +48,6 @@
   }
 
   .left-side.collapse-left {
-      transform: translateX(0px) !important;
+    transform: translateX(0px) !important;
   }
 }

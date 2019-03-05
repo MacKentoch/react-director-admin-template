@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 import configureStore from './redux/store/configureStore';
 import { history } from './redux/store/configureStore';
 import ScrollTop from './components/scrollToTop/ScrollToTop';
-import MainRoutes from './routes/MainRoutes';
 import Login from './views/login/index';
 import PageNotFound from './views/pageNotFound';
+import App from './containers/app';
 
 // #region flow types
 type Props = any;
@@ -29,7 +29,7 @@ class Root extends Component<Props, State> {
           <ScrollTop>
             <Switch>
               <Route exact path="/login" component={Login} />
-              <MainRoutes />
+              <App />
               <Route path="*" component={PageNotFound} />
             </Switch>
           </ScrollTop>

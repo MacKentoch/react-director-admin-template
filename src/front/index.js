@@ -9,10 +9,8 @@ import 'animate.css';
 import 'jquery';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.min.js';
-// import './style/director-style.css';
-// import './style/highlight/darkula.css';
+import './style/director-style.css';
+import './style/highlight/darkula.css';
 import './style/index.style.scss';
 import Root from './Root';
 // #endregion
