@@ -42,11 +42,7 @@ const config = {
         loaders: ['babel-loader'],
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
@@ -71,12 +67,6 @@ const config = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
-        },
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true,
         },
       },
     },
