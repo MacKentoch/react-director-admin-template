@@ -1,37 +1,31 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as viewsActions      from '../../redux/modules/views';
-import * as userAuthActions   from '../../redux/modules/userAuth';
-import Login                  from './Login';
+import { connect } from 'react-redux';
+import * as viewsActions from '../../redux/modules/views';
+import * as userAuthActions from '../../redux/modules/userAuth';
+import Login from './Login';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    // views:
-    currentView:  state.views.currentView,
-
-    // useAuth:
+    currentView: state.views.currentView,
     isAuthenticated: state.userAuth.isAuthenticated,
-    isFetching:      state.userAuth.isFetching,
-    isLogging:       state.userAuth.isLogging
-
+    isFetching: state.userAuth.isFetching,
+    isLogging: state.userAuth.isLogging,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {
-      // views:
       ...viewsActions,
-      // userAuth:
-      ...userAuthActions
+      ...userAuthActions,
     },
-    dispatch
+    dispatch,
   );
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Login);
