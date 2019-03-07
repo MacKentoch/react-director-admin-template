@@ -25,7 +25,9 @@ import ProtectedConnected from '../views/protected';
 
 export const MainRoutes = () => (
   <Switch>
-    <Route exact path="/" component={HomeConnected} />
+    <Route path="/" component={HomeConnected} />
+
+    {/* <Route exact path="/" component={HomeConnected} /> */}
 
     <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
     <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />

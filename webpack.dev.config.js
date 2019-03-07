@@ -11,7 +11,7 @@ const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 
 // #region constants
 const outputPath = path.join(__dirname, 'docs/assets');
-const publicPath = '/assets/';
+const publicPath = './assets/'; // NOTE: ''./assets/'' because file statics hosted on Github, set '/assets/' if running your own server server (and leave /assets as public directory)
 const nodeModulesDir = path.join(__dirname, 'node_modules');
 const indexFile = path.join(__dirname, 'src/front/index.js');
 // #endregion
@@ -42,9 +42,7 @@ const config = {
       },
       {
         test: /\.css$/,
-
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        // use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
