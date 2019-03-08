@@ -1,3 +1,3 @@
-// @flow weak
+// @flow
 
-export {localStorageManager} from './localStorage';
+export { localStorageManager } from './localStorage';

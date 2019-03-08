@@ -1,15 +1,17 @@
+// @flow
 
-import {
-  getLocationOrigin,
-  checkStatus,
-  parseJSON
-}                     from '../../services';
+// #region imports
+import { getLocationOrigin, checkStatus, parseJSON } from '../../services';
+// #endregion
 
+// #region constants
 const BASE_URL = getLocationOrigin();
-
 export const CALL_API = Symbol('Call API');
+// #endregion
 
-export default store => next => action => {
+export default (store: any) => (next: (Action: any) => any) => (
+  action: any,
+) => {
   const callAPI = action[CALL_API];
 
   if (!callAPI) {
@@ -17,31 +19,32 @@ export default store => next => action => {
   }
 
   const { url, types, authenticated, options } = callAPI;
-  const [ requestType, successType, errorType ] = types;
+  const [requestType, successType, errorType] = types;
 
-  store.dispatch({type: requestType});
-  
+  store.dispatch({ type: requestType });
+
   return callApi(url, options, authenticated)
-    .then(
-      response => next({
+    .then(response =>
+      next({
         type: successType,
         response,
-        authenticated
-      })
+        authenticated,
+      }),
     )
-    .catch(
-      error => next({
+    .catch(error =>
+      next({
         type: errorType,
-        error: error.message || 'There was an error.'
-      })
+        error: error.message || 'There was an error.',
+      }),
     );
 };
 
 function callApi(url, options = {}, authenticated = false) {
   // add token to options headers props if authenticated:
-  const fullOptions = authenticated === true
-    ? addTokenToHeadersOptions(options) // if error occurs can be null
-    : { ...options };
+  const fullOptions =
+    authenticated === true
+      ? addTokenToHeadersOptions(options) // if error occurs can be null
+      : { ...options };
 
   // fullOptions cannot be null or undefined except error occured in addTokenToHeadersOptions()
   if (fullOptions) {
@@ -59,14 +62,14 @@ function callApi(url, options = {}, authenticated = false) {
 function addTokenToHeadersOptions(options) {
   const token = localStorage.getItem('id_token') || null;
 
-  if(token) {
+  if (token) {
     if (!optionsHasHeadersProp(options)) {
       // add headers to options :
       return {
         ...options,
         headers: {
-          Authorization: `Bearer ${token}`
-        }
+          Authorization: `Bearer ${token}`,
+        },
       };
     } else {
       // options already have headers so just add Authorization:
@@ -74,8 +77,8 @@ function addTokenToHeadersOptions(options) {
         ...options,
         headers: {
           ...options.headers,
-          Authorization: `Bearer ${token}`
-        }
+          Authorization: `Bearer ${token}`,
+        },
       };
     }
   } else {

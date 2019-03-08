@@ -1,9 +1,17 @@
 // @flow
 
-import type { Storage, TokenKey, UserInfoKey, STORES_TYPES } from './type';
+// #region imports
+import {
+  type Storage,
+  type TokenKey,
+  type UserInfoKey,
+  type STORES_TYPES,
+} from '../../types/auth';
 import decode from 'jwt-decode';
-import moment from 'moment';
+import isAfter from 'date-fns/is_after';
+// #endregion
 
+// #region constants
 const TOKEN_KEY = 'token';
 const USER_INFO = 'userInfo';
 
@@ -14,6 +22,7 @@ const APP_PERSIST_STORES_TYPES: Array<STORES_TYPES> = [
 
 const parse = JSON.parse;
 const stringify = JSON.stringify;
+// #endregion
 
 /*
   auth object
@@ -61,7 +70,7 @@ export const auth = {
     value: string = '',
     toStorage: Storage = APP_PERSIST_STORES_TYPES[0],
     tokenKey: TokenKey = TOKEN_KEY,
-  ): ?string {
+  ): void {
     if (!value || value.length <= 0) {
       return;
     }
@@ -69,12 +78,14 @@ export const auth = {
     if (toStorage === APP_PERSIST_STORES_TYPES[0]) {
       if (localStorage) {
         localStorage.setItem(tokenKey, value);
+        return;
       }
     }
     // sessionStorage:
     if (toStorage === APP_PERSIST_STORES_TYPES[1]) {
       if (sessionStorage) {
         sessionStorage.setItem(tokenKey, value);
+        return;
       }
     }
   },
@@ -108,18 +119,18 @@ export const auth = {
     if (fromStorage === APP_PERSIST_STORES_TYPES[0]) {
       if (localStorage && localStorage.getItem(tokenKey)) {
         return true;
-      } else {
-        return false;
       }
+      return false;
     }
+
     // sessionStorage:
     if (fromStorage === APP_PERSIST_STORES_TYPES[1]) {
       if (sessionStorage && sessionStorage.getItem(tokenKey)) {
         return true;
-      } else {
-        return false;
       }
+      return false;
     }
+
     // default:
     return false;
   },
@@ -127,7 +138,6 @@ export const auth = {
   /**
    * delete token
    *
-   * @param {'localStorage' | 'sessionStorage'} [storage='localStorage'] specify storage
    * @param {any} [tokenKey='token'] token key
    * @returns {bool} success/failure flag
    */
@@ -177,8 +187,8 @@ export const auth = {
    */
   isExpiredToken(encodedToken: any): boolean {
     const expirationDate = this.getTokenExpirationDate(encodedToken);
-    const rightNow = moment();
-    const isExpiredToken = moment(rightNow).isAfter(moment(expirationDate));
+    const rightNow = new Date();
+    const isExpiredToken = isAfter(rightNow, expirationDate);
 
     return isExpiredToken;
   },
@@ -199,12 +209,15 @@ export const auth = {
   ): ?string {
     // localStorage:
     if (fromStorage === APP_PERSIST_STORES_TYPES[0]) {
-      return (localStorage && parse(localStorage.getItem(userInfoKey))) || null;
+      return (
+        (localStorage && parse(localStorage.getItem(userInfoKey) || '')) || null
+      );
     }
     // sessionStorage:
     if (fromStorage === APP_PERSIST_STORES_TYPES[1]) {
       return (
-        (sessionStorage && parse(sessionStorage.getItem(userInfoKey))) || null
+        (sessionStorage && parse(sessionStorage.getItem(userInfoKey) || '')) ||
+        null
       );
     }
     // default:
@@ -227,16 +240,20 @@ export const auth = {
     if (!value || value.length <= 0) {
       return;
     }
+
     // localStorage:
     if (toStorage === APP_PERSIST_STORES_TYPES[0]) {
       if (localStorage) {
         localStorage.setItem(userInfoKey, stringify(value));
+        return;
       }
     }
+
     // sessionStorage:
     if (toStorage === APP_PERSIST_STORES_TYPES[1]) {
       if (sessionStorage) {
         sessionStorage.setItem(userInfoKey, stringify(value));
+        return;
       }
     }
   },
@@ -251,10 +268,13 @@ export const auth = {
     // localStorage:
     if (localStorage && localStorage[userInfoKey]) {
       localStorage.removeItem(userInfoKey);
+      return;
     }
+
     // sessionStorage:
     if (sessionStorage && sessionStorage[userInfoKey]) {
       sessionStorage.removeItem(userInfoKey);
+      return;
     }
   },
 
@@ -269,9 +289,12 @@ export const auth = {
   clearAllAppStorage(): any {
     if (localStorage) {
       localStorage.clear();
+      return;
     }
+
     if (sessionStorage) {
       sessionStorage.clear();
+      return;
     }
   },
 };

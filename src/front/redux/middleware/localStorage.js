@@ -1,8 +1,8 @@
 // @flow weak
 
 const objectHasProperty = Object.prototype.hasOwnProperty;
-const jsonStringify     = JSON.stringify;
-const jsonParse         = JSON.parse;
+const jsonStringify = JSON.stringify;
+const jsonParse = JSON.parse;
 /*
     localStorageManager middleware (READ or WRITE to localStorage)
       -> does not delete: do it on your own
@@ -19,7 +19,11 @@ const jsonParse         = JSON.parse;
 /* eslint-disable no-unused-vars */
 export const localStorageManager = store => next => action => {
   // if action contains a "permanentStore" object property: middleware localStorage should be required
-  if (action && action.permanentStore && isPermanentStoreActive(action.permanentStore)) {
+  if (
+    action &&
+    action.permanentStore &&
+    isPermanentStoreActive(action.permanentStore)
+  ) {
     const permanentStore = action.permanentStore;
     if (permanentStore.required) {
       const key = permanentStore.storeKey;
@@ -28,12 +32,12 @@ export const localStorageManager = store => next => action => {
       if (permanentStore.ReadOrWrite) {
         // write to localStorage
         localStorage.setItem(key, jsonStringify(value));
-        next({ ...action, permanentStore: {...permanentStore} });
+        next({ ...action, permanentStore: { ...permanentStore } });
       } else {
         // read localStorage and set action.permanentStore.value to read value from localStorage
         const item: string = localStorage.getItem(key) || 'false';
         permanentStore.storeValue = jsonParse(item);
-        next({ ...action, permanentStore: {...permanentStore} });
+        next({ ...action, permanentStore: { ...permanentStore } });
       }
     } else {
       // permanent storage not needed in this action:
@@ -49,7 +53,6 @@ export const localStorageManager = store => next => action => {
     localStorageManager middleware helpers
  */
 
-
 // permanentStore validation helper
 function isPermanentStoreActive(object) {
   if (isPermanentStoreObject(object)) {
@@ -60,12 +63,16 @@ function isPermanentStoreActive(object) {
 // permanentStore validation helper
 function isPermanentStoreObject(object) {
   if (
-      object &&
-      objectHasProperty.call(object, 'required') && typeof object.required === 'boolean' &&
-      objectHasProperty.call(object, 'storeKey') && typeof object.storeKey === 'string' && storeKeyIsValid(object.storeKey) &&
-      objectHasProperty.call(object, 'storeValue') &&
-      objectHasProperty.call(object, 'ReadOrWrite') && typeof object.ReadOrWrite === 'boolean'
-     ) {
+    object &&
+    objectHasProperty.call(object, 'required') &&
+    typeof object.required === 'boolean' &&
+    objectHasProperty.call(object, 'storeKey') &&
+    typeof object.storeKey === 'string' &&
+    storeKeyIsValid(object.storeKey) &&
+    objectHasProperty.call(object, 'storeValue') &&
+    objectHasProperty.call(object, 'ReadOrWrite') &&
+    typeof object.ReadOrWrite === 'boolean'
+  ) {
     return true;
   }
   return false;

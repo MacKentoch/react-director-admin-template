@@ -1,11 +1,15 @@
-import { Base64 }  from 'js-base64';
+// @flow
+
+import { Base64 } from 'js-base64';
 
 /*
   window.location.origin polyfill
  */
 export const getLocationOrigin = () => {
   if (!window.location.origin) {
-    window.location.origin = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}`;
+    window.location.origin = `${window.location.protocol}//${
+      window.location.hostname
+    }${window.location.port ? ':' + window.location.port : ''}`;
   }
   return window.location.origin;
 };
@@ -14,41 +18,44 @@ export const getLocationOrigin = () => {
   query options:
  */
 export const defaultOptions = {
-  credentials: 'same-origin'
+  credentials: 'same-origin',
 };
 
 export const postMethod = {
-  method: 'POST'
+  method: 'POST',
 };
 
 export const jsonHeader = {
   headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  }
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
 };
 
 /*
   query response helpers:
  */
-export const checkStatus = (response) => {
+export const checkStatus = (response: {
+  status: number,
+  statusText: string,
+  body: any,
+  ...any,
+}) => {
   if (response.status >= 200 && response.status < 300) {
     return response;
-  } else {
-    const error = new Error(response.statusText);
-    error.response = response;
-    // throw error;
-    return Promise.reject(error);
   }
+
+  const error = new Error(response.statusText);
+  return Promise.reject(error);
 };
 
-export const parseJSON = (response) => {
+export const parseJSON = (response: any): any => {
   return response.json();
 };
 
 /*
  general helpers
  */
-export const encodeBase64 = (stringToEncode) => {
+export const encodeBase64 = (stringToEncode: string): string => {
   return Base64.encode(stringToEncode);
 };
