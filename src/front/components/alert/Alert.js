@@ -17,7 +17,7 @@ const Alert = ({ type, children }: Props) => (
       'alert-danger': type === 'danger',
       'alert-info': type === 'info',
       'alert-warning': type === 'warning',
-      'alert-success': type === 'success'
+      'alert-success': type === 'success',
     })}
   >
     <button data-dismiss="alert" className="close close-sm" type="button">
@@ -29,11 +29,11 @@ const Alert = ({ type, children }: Props) => (
 
 Alert.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success'])
+  type: PropTypes.oneOf(['danger', 'info', 'warning', 'success']),
 };
 
 Alert.defaultProps = {
-  type: 'info'
+  type: 'info',
 };
 
 Alert.displayName = 'Alert';
