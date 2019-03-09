@@ -1,38 +1,37 @@
-// @flow weak
+// @flow
 
-import React, { PureComponent } from 'react';
-import PropTypes            from 'prop-types';
-import cx                   from 'classnames';
-import { withRouter }       from 'react-router-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { withRouter } from 'react-router-dom';
 
-class AnimatedView extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node,
-    animated: PropTypes.bool
-  };
+type Props = {
+  children: any,
+  animated: boolean,
+};
 
-  static defaultProps = {
-    animated: true
-  };
-
-  render() {
-    const {
-      animated,
-      children
-    } = this.props;
-
-    return (
-      <section
-        className={
-          cx({
-            'content':    true,
-            'view-enter': animated
-          })
-        }>
-        { children }
-      </section>
-    );
-  }
+function AnimatedView({ animated, children }: Props) {
+  return (
+    <section
+      className={cx({
+        content: true,
+        'view-enter': animated,
+      })}
+    >
+      {children}
+    </section>
+  );
 }
+
+AnimatedView.displayName = 'AnimatedView';
+
+AnimatedView.propTypes = {
+  children: PropTypes.node,
+  animated: PropTypes.bool,
+};
+
+AnimatedView.defaultProps = {
+  animated: true,
+};
 
 export default withRouter(AnimatedView);

@@ -1,10 +1,17 @@
-// @flow weak
+// @flow
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 
-const MenuHeader = ({ title, backColor, isCollapsed, onClick }) => (
+type Props = {
+  title: string,
+  backColor: string,
+  isCollapsed: boolean,
+  onClick: (event?: SyntheticEvent<>) => any,
+};
+
+const MenuHeader = ({ title, backColor, isCollapsed, onClick }: Props) => (
   <ul className="list-inline sidebar-menu__group-container" onClick={onClick}>
     <li style={{ width: '100%', backgroundColor: backColor }}>
       <a
@@ -34,6 +41,8 @@ const MenuHeader = ({ title, backColor, isCollapsed, onClick }) => (
     </li>
   </ul>
 );
+
+MenuHeader.displayName = 'MenuHeader';
 
 MenuHeader.propTypes = {
   backColor: PropTypes.string.isRequired,

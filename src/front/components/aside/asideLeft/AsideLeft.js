@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 /* eslint no-console: 0 */
 import React from 'react';
@@ -8,6 +8,36 @@ import UserPanel from './userPanel/UserPanel';
 import SearchForm from './searchForm/SearchForm';
 import Horloge from '../../horloge/Horloge';
 import Menu from './menu/Menu';
+
+type MenuItem = {
+  name: string,
+  linkTo: string,
+  faIconName: string,
+};
+
+type SideMenuItem = {
+  id: string | number,
+  group: string,
+  menus: Array<MenuItem>,
+};
+
+type ConnectionStatus = {
+  online: string,
+  disconnected: string,
+};
+
+type Props = {
+  isAnimated: boolean,
+  isCollapsed: boolean,
+  sideMenu: Array<SideMenuItem>,
+  currentView: string,
+  connectionStatus: ConnectionStatus,
+  userIsConnected: boolean,
+  username: string,
+  userPicture: any,
+  showPicture: boolean,
+  helloWord: string,
+};
 
 const AsideLeft = ({
   connectionStatus,
@@ -20,7 +50,7 @@ const AsideLeft = ({
   isCollapsed,
   currentView,
   sideMenu,
-}) => (
+}: Props) => (
   <aside
     className={cx({
       'no-print': true,

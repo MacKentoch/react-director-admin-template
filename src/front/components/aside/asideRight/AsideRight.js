@@ -1,10 +1,16 @@
-// @flow weak
+// @flow
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-const AsideRight = ({ children, isAnimated, isExpanded }) => (
+type Props = {
+  children: any,
+  isAnimated: boolean,
+  isExpanded: boolean,
+};
+
+const AsideRight = ({ children, isAnimated, isExpanded }: Props) => (
   <aside
     className={cx({
       'right-side': true,
