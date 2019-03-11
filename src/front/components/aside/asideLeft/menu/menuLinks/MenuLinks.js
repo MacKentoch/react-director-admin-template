@@ -1,42 +1,51 @@
-// @flow weak
+// @flow
 
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ViewLink from './viewLink/ViewLink';
 
-class MenuLinks extends PureComponent<any, any> {
-  static propTypes = {
-    activeView: PropTypes.string.isRequired,
-    views: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        linkTo: PropTypes.string.isRequired,
-        faIconName: PropTypes.string.isRequired,
-        itemCount: PropTypes.number,
-      }),
-    ).isRequired,
-  };
+type View = {
+  name: string,
+  linkTo: string,
+  faIconName: string,
+  itemCount?: number,
+};
+type Props = {
+  activeView: string,
+  views: Array<View>,
+};
 
-  render() {
-    const { activeView, views } = this.props;
-
-    return (
-      <ul className="sidebar-menu sidebar-menu__marginTop">
-        {views.map(({ name, linkTo, faIconName, itemCount }, idx) => {
-          return (
-            <ViewLink
-              key={idx}
-              isActive={activeView === name}
-              linkTo={linkTo}
-              viewName={name}
-              faIconName={faIconName}
-              itemCount={itemCount ? itemCount : 0}
-            />
-          );
-        })}
-      </ul>
-    );
-  }
+function MenuLinks({ activeView, views }: Props) {
+  return (
+    <ul className="sidebar-menu sidebar-menu__marginTop">
+      {views.map(({ name, linkTo, faIconName, itemCount }, idx) => {
+        return (
+          <ViewLink
+            key={idx}
+            isActive={activeView === name}
+            linkTo={linkTo}
+            viewName={name}
+            faIconName={faIconName}
+            itemCount={itemCount ? itemCount : 0}
+          />
+        );
+      })}
+    </ul>
+  );
 }
+
+MenuLinks.displayName = 'MenuLinks';
+
+MenuLinks.propTypes = {
+  activeView: PropTypes.string.isRequired,
+  views: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      linkTo: PropTypes.string.isRequired,
+      faIconName: PropTypes.string.isRequired,
+      itemCount: PropTypes.number,
+    }),
+  ).isRequired,
+};
 
 export default MenuLinks;

@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -6,7 +6,26 @@ import Collapse from 'react-collapse';
 import MenuHeader from './menuHeader/MenuHeader';
 import MenuLinks from './menuLinks/MenuLinks';
 
-class Menu extends PureComponent<any, any> {
+type State = {
+  isCollapsed: boolean,
+};
+
+type View = {
+  name: string,
+  linkTo: string,
+  faIconName: string,
+  itemCount?: number,
+};
+
+type Props = {
+  headerTitle: string,
+  headerBackColor: string,
+  activeView: string,
+  views: Array<View>,
+  initialCollapseState?: boolean,
+};
+
+class Menu extends PureComponent<Props, State> {
   static propTypes = {
     headerTitle: PropTypes.string.isRequired,
     headerBackColor: PropTypes.string,
@@ -56,13 +75,13 @@ class Menu extends PureComponent<any, any> {
     );
   }
 
-  setInitialCollapse = value => {
+  setInitialCollapse = (value: boolean) => {
     this.setState({ isCollapsed: value });
   };
 
-  handlesCollapseClick = evt => {
-    evt.preventDefault();
+  handlesCollapseClick = (evt?: SyntheticEvent<>) => {
     const { isCollapsed } = this.state;
+    evt && evt.preventDefault();
     this.setState({ isCollapsed: !isCollapsed });
   };
 }

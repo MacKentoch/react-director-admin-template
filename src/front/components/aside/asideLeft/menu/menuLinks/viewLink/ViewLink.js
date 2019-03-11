@@ -1,11 +1,25 @@
-// @flow weak
+// @flow
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 
-const ViewLink = ({ isActive, linkTo, viewName, itemCount, faIconName }) => (
+type Props = {
+  isActive?: boolean,
+  viewName: string,
+  linkTo: string,
+  faIconName: string,
+  itemCount: number,
+};
+
+const ViewLink = ({
+  isActive,
+  linkTo,
+  viewName,
+  itemCount,
+  faIconName,
+}: Props) => (
   <li className={cx({ active: isActive })}>
     <Link to={linkTo}>
       <i className={`fa ${faIconName}`} style={{ marginLeft: '10px' }} />
@@ -16,6 +30,8 @@ const ViewLink = ({ isActive, linkTo, viewName, itemCount, faIconName }) => (
     </Link>
   </li>
 );
+
+ViewLink.displayName = 'ViewLink';
 
 ViewLink.propTypes = {
   isActive: PropTypes.bool,
