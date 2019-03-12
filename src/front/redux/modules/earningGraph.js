@@ -1,4 +1,4 @@
-// flow weak
+// flow
 
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
@@ -6,22 +6,18 @@
 /*
   imports
  */
-import moment               from 'moment';
-import { appConfig }        from '../../config';
-import {
-  getEarningGraphData
-}                           from '../../services/API';
-import {
-  fetchMockEarningGraphData
-}                           from '../../services/fetchMocks';
-import * as ReduxTypes      from '../types';
+import moment from 'moment';
+import { appConfig } from '../../config';
+import { getEarningGraphData } from '../../services/API';
+import { fetchMockEarningGraphData } from '../../services/fetchMocks';
+import * as ReduxTypes from '../types';
 
 /*
   constants
  */
-const REQUEST_EARNING_GRAPH_DATA   = 'REQUEST_EARNING_GRAPH_DATA';
-const RECEIVED_EARNING_GRAPH_DATA  = 'RECEIVED_EARNING_GRAPH_DATA';
-const ERROR_EARNING_GRAPH_DATA     = 'ERROR_EARNING_GRAPH_DATA';
+const REQUEST_EARNING_GRAPH_DATA = 'REQUEST_EARNING_GRAPH_DATA';
+const RECEIVED_EARNING_GRAPH_DATA = 'RECEIVED_EARNING_GRAPH_DATA';
+const ERROR_EARNING_GRAPH_DATA = 'ERROR_EARNING_GRAPH_DATA';
 
 type EarningGraphDataset = {
   label: string,
@@ -31,15 +27,14 @@ type EarningGraphDataset = {
   pointStrokeColor: string,
   pointHighlightFill: string,
   pointHighlightStroke: string,
-  data: Array<number>
-}
-
+  data: Array<number>,
+};
 
 type EarningGraphState = {
   isFetching: boolean,
-  labels:     Array<string>,
-  datasets:   Array<EarningGraphDataset>,
-  time:       string
+  labels: Array<string>,
+  datasets: Array<EarningGraphDataset>,
+  time: string,
 };
 
 /*
@@ -47,47 +42,43 @@ type EarningGraphState = {
  */
 const initialState: EarningGraphState = {
   isFetching: false,
-  labels:     [],
-  datasets:   [],
-  time:       null
+  labels: [],
+  datasets: [],
+  time: null,
 };
 
 export default function earningGraph(state = initialState, action) {
   switch (action.type) {
-  case 'REQUEST_EARNING_GRAPH_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      time:       action.time
-    };
-  case 'RECEIVED_EARNING_GRAPH_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      labels:     action.labels,
-      datasets:   action.datasets,
-      time:       action.time
-    };
-  case 'ERROR_EARNING_GRAPH_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      time:       action.time
-    };
-  default:
-    return state;
+    case 'REQUEST_EARNING_GRAPH_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        time: action.time,
+      };
+    case 'RECEIVED_EARNING_GRAPH_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        labels: action.labels,
+        datasets: action.datasets,
+        time: action.time,
+      };
+    case 'ERROR_EARNING_GRAPH_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        time: action.time,
+      };
+    default:
+      return state;
   }
 }
-
 
 /*
   action creators
  */
 export function fetchEarningGraphDataIfNeeded() {
-  return (
-    dispatch, 
-    getState
-  ) => {
+  return (dispatch, getState) => {
     if (shouldFetchEarningData(getState())) {
       return dispatch(fetchEarningGraphData());
     }
@@ -95,26 +86,26 @@ export function fetchEarningGraphDataIfNeeded() {
 }
 function requestEarningGraphData(time = moment().format()) {
   return {
-    type:       REQUEST_EARNING_GRAPH_DATA,
+    type: REQUEST_EARNING_GRAPH_DATA,
     isFetching: true,
-    time
+    time,
   };
 }
 function receivedEarningGraphData(data, time = moment().format()) {
   return {
-    type:       RECEIVED_EARNING_GRAPH_DATA,
+    type: RECEIVED_EARNING_GRAPH_DATA,
     isFetching: false,
-    labels:     [...data.labels],
-    datasets:   [...data.datasets],
-    time
+    labels: [...data.labels],
+    datasets: [...data.datasets],
+    time,
   };
 }
 function errorEarningGraphData(error, time = moment().format()) {
   return {
-    type:       ERROR_EARNING_GRAPH_DATA,
+    type: ERROR_EARNING_GRAPH_DATA,
     isFetching: false,
     error,
-    time
+    time,
   };
 }
 function fetchEarningGraphData() {
@@ -122,18 +113,13 @@ function fetchEarningGraphData() {
     dispatch(requestEarningGraphData());
     if (appConfig.DEV_MODE) {
       // DEV ONLY
-      fetchMockEarningGraphData()
-        .then(
-          data => dispatch(receivedEarningGraphData(data))
-        );
+      fetchMockEarningGraphData().then(data =>
+        dispatch(receivedEarningGraphData(data)),
+      );
     } else {
       getEarningGraphData()
-        .then(
-          data => dispatch(receivedEarningGraphData(data))
-        )
-        .catch(
-          error => dispatch(errorEarningGraphData(error))
-        );
+        .then(data => dispatch(receivedEarningGraphData(data)))
+        .catch(error => dispatch(errorEarningGraphData(error)));
     }
   };
 }

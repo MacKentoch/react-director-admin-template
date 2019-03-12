@@ -206,7 +206,7 @@ export const auth = {
   getUserInfo(
     fromStorage: Storage = APP_PERSIST_STORES_TYPES[0],
     userInfoKey: UserInfoKey = USER_INFO,
-  ): ?string {
+  ): any {
     // localStorage:
     if (fromStorage === APP_PERSIST_STORES_TYPES[0]) {
       return (

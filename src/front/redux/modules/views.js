@@ -1,20 +1,20 @@
-// @flow weak
+// @flow
 
 import moment from 'moment';
 
-const ENTER_LOGIN_VIEW  = 'ENTER_LOGIN_VIEW';
-const LEAVE_LOGIN_VIEW  = 'LEAVE_LOGIN_VIEW';
+const ENTER_LOGIN_VIEW = 'ENTER_LOGIN_VIEW';
+const LEAVE_LOGIN_VIEW = 'LEAVE_LOGIN_VIEW';
 
-const ENTER_HOME_VIEW  = 'ENTER_HOME_VIEW';
-const LEAVE_HOME_VIEW  = 'LEAVE_HOME_VIEW';
+const ENTER_HOME_VIEW = 'ENTER_HOME_VIEW';
+const LEAVE_HOME_VIEW = 'LEAVE_HOME_VIEW';
 const ENTER_SIMPLE_TABLES_VIEW = 'ENTER_SIMPLE_TABLES_VIEW';
 const LEAVE_SIMPLE_TABLES_VIEW = 'LEAVE_SIMPLE_TABLES_VIEW';
 const ENTER_BASIC_ELEMENTS_VIEW = 'ENTER_BASIC_ELEMENTS_VIEW';
 const LEAVE_BASIC_ELEMENTS_VIEW = 'LEAVE_BASIC_ELEMENTS_VIEW';
-const ENTER_GENERAL_VIEW  = 'ENTER_GENERAL_VIEW';
-const LEAVE_GENERAL_VIEW  = 'LEAVE_GENERAL_VIEW';
-const ENTER_PAGE_NOT_FOUND_VIEW  = 'ENTER_PAGE_NOT_FOUND_VIEW';
-const LEAVE_PAGE_NOT_FOUND_VIEW  = 'LEAVE_PAGE_NOT_FOUND_VIEW';
+const ENTER_GENERAL_VIEW = 'ENTER_GENERAL_VIEW';
+const LEAVE_GENERAL_VIEW = 'LEAVE_GENERAL_VIEW';
+const ENTER_PAGE_NOT_FOUND_VIEW = 'ENTER_PAGE_NOT_FOUND_VIEW';
+const LEAVE_PAGE_NOT_FOUND_VIEW = 'LEAVE_PAGE_NOT_FOUND_VIEW';
 const ENTER_STATS_CARD_VIEW = 'ENTER_STATS_CARD_VIEW';
 const LEAVE_STATS_CARD_VIEW = 'LEAVE_STATS_CARD_VIEW';
 const ENTER_EARNING_GRAPH_VIEW = 'ENTER_EARNING_GRAPH_VIEW';
@@ -47,457 +47,456 @@ const ENTER_PROTECTED_VIEW = 'ENTER_PROTECTED_VIEW';
 const LEAVE_PROTECTED_VIEW = 'LEAVE_PROTECTED_VIEW';
 
 const initialState = {
-  currentView:  'home',
-  enterTime:    null,
-  leaveTime:    null
+  currentView: 'home',
+  enterTime: null,
+  leaveTime: null,
 };
 
 export default function views(state = initialState, action) {
   switch (action.type) {
-  case ENTER_HOME_VIEW:
-  case ENTER_LOGIN_VIEW:
-  case ENTER_SIMPLE_TABLES_VIEW:
-  case ENTER_BASIC_ELEMENTS_VIEW:
-  case ENTER_GENERAL_VIEW:
-  case ENTER_PAGE_NOT_FOUND_VIEW:
-  case ENTER_STATS_CARD_VIEW:
-  case ENTER_EARNING_GRAPH_VIEW:
-  case ENTER_NOTIFICATIONS_VIEW:
-  case ENTER_WORK_PROGRESS_VIEW:
-  case ENTER_TWITTER_FEED_VIEW:
-  case ENTER_TEAM_MATES_VIEW:
-  case ENTER_TODO_LIST_VIEW:
-  case ENTER_BREADCRUMB_VIEW:
-  case ENTER_STAT_VIEW:
-  case ENTER_BASIC_PROGRESS_BAR_VIEW:
-  case ENTER_TAB_PANEL_VIEW:
-  case ENTER_STRIPED_PROGRESS_BAR_VIEW:
-  case ENTER_ALERT_VIEW:
-  case ENTER_PAGINATION_VIEW:
-  case ENTER_PROTECTED_VIEW:
-    // can't enter if you are already inside
-    if (state.currentView !== action.currentView) {
-      return {
-        ...state,
-        currentView:  action.currentView,
-        enterTime:    action.enterTime,
-        leaveTime:    action.leaveTime
-      };
-    }
-    return state;
+    case ENTER_HOME_VIEW:
+    case ENTER_LOGIN_VIEW:
+    case ENTER_SIMPLE_TABLES_VIEW:
+    case ENTER_BASIC_ELEMENTS_VIEW:
+    case ENTER_GENERAL_VIEW:
+    case ENTER_PAGE_NOT_FOUND_VIEW:
+    case ENTER_STATS_CARD_VIEW:
+    case ENTER_EARNING_GRAPH_VIEW:
+    case ENTER_NOTIFICATIONS_VIEW:
+    case ENTER_WORK_PROGRESS_VIEW:
+    case ENTER_TWITTER_FEED_VIEW:
+    case ENTER_TEAM_MATES_VIEW:
+    case ENTER_TODO_LIST_VIEW:
+    case ENTER_BREADCRUMB_VIEW:
+    case ENTER_STAT_VIEW:
+    case ENTER_BASIC_PROGRESS_BAR_VIEW:
+    case ENTER_TAB_PANEL_VIEW:
+    case ENTER_STRIPED_PROGRESS_BAR_VIEW:
+    case ENTER_ALERT_VIEW:
+    case ENTER_PAGINATION_VIEW:
+    case ENTER_PROTECTED_VIEW:
+      // can't enter if you are already inside
+      if (state.currentView !== action.currentView) {
+        return {
+          ...state,
+          currentView: action.currentView,
+          enterTime: action.enterTime,
+          leaveTime: action.leaveTime,
+        };
+      }
+      return state;
 
-  case LEAVE_HOME_VIEW:
-  case LEAVE_LOGIN_VIEW:
-  case LEAVE_SIMPLE_TABLES_VIEW:
-  case LEAVE_BASIC_ELEMENTS_VIEW:
-  case LEAVE_GENERAL_VIEW:
-  case LEAVE_PAGE_NOT_FOUND_VIEW:
-  case LEAVE_STATS_CARD_VIEW:
-  case LEAVE_EARNING_GRAPH_VIEW:
-  case LEAVE_NOTIFICATIONS_VIEW:
-  case LEAVE_WORK_PROGRESS_VIEW:
-  case LEAVE_TWITTER_FEED_VIEW:
-  case LEAVE_TEAM_MATES_VIEW:
-  case LEAVE_TODO_LIST_VIEW:
-  case LEAVE_BREADCRUMB_VIEW:
-  case LEAVE_STAT_VIEW:
-  case LEAVE_BASIC_PROGRESS_BAR_VIEW:
-  case LEAVE_TAB_PANEL_VIEW:
-  case LEAVE_STRIPED_PROGRESS_BAR_VIEW:
-  case LEAVE_ALERT_VIEW:
-  case LEAVE_PAGINATION_VIEW:
-  case LEAVE_PROTECTED_VIEW:
-    // can't leave if you aren't already inside
-    if (state.currentView === action.currentView) {
-      return {
-        ...state,
-        currentView:  action.currentView,
-        enterTime:    action.enterTime,
-        leaveTime:    action.leaveTime
-      };
-    }
-    return state;
+    case LEAVE_HOME_VIEW:
+    case LEAVE_LOGIN_VIEW:
+    case LEAVE_SIMPLE_TABLES_VIEW:
+    case LEAVE_BASIC_ELEMENTS_VIEW:
+    case LEAVE_GENERAL_VIEW:
+    case LEAVE_PAGE_NOT_FOUND_VIEW:
+    case LEAVE_STATS_CARD_VIEW:
+    case LEAVE_EARNING_GRAPH_VIEW:
+    case LEAVE_NOTIFICATIONS_VIEW:
+    case LEAVE_WORK_PROGRESS_VIEW:
+    case LEAVE_TWITTER_FEED_VIEW:
+    case LEAVE_TEAM_MATES_VIEW:
+    case LEAVE_TODO_LIST_VIEW:
+    case LEAVE_BREADCRUMB_VIEW:
+    case LEAVE_STAT_VIEW:
+    case LEAVE_BASIC_PROGRESS_BAR_VIEW:
+    case LEAVE_TAB_PANEL_VIEW:
+    case LEAVE_STRIPED_PROGRESS_BAR_VIEW:
+    case LEAVE_ALERT_VIEW:
+    case LEAVE_PAGINATION_VIEW:
+    case LEAVE_PROTECTED_VIEW:
+      // can't leave if you aren't already inside
+      if (state.currentView === action.currentView) {
+        return {
+          ...state,
+          currentView: action.currentView,
+          enterTime: action.enterTime,
+          leaveTime: action.leaveTime,
+        };
+      }
+      return state;
 
-  default:
-    return state;
+    default:
+      return state;
   }
 }
 
-
 export function enterHome(time = moment().format()) {
   return {
-    type:         ENTER_HOME_VIEW,
-    currentView:  'Home',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_HOME_VIEW,
+    currentView: 'Home',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveHome(time = moment().format()) {
   return {
-    type:         LEAVE_HOME_VIEW,
-    currentView:  'Home',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_HOME_VIEW,
+    currentView: 'Home',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterSimpleTables(time = moment().format()) {
   return {
-    type:         ENTER_SIMPLE_TABLES_VIEW,
-    currentView:  'SimpleTables',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_SIMPLE_TABLES_VIEW,
+    currentView: 'SimpleTables',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveSimpleTables(time = moment().format()) {
   return {
-    type:         LEAVE_SIMPLE_TABLES_VIEW,
-    currentView:  'SimpleTables',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_SIMPLE_TABLES_VIEW,
+    currentView: 'SimpleTables',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterBasicElements(time = moment().format()) {
   return {
-    type:         ENTER_BASIC_ELEMENTS_VIEW,
-    currentView:  'BasicElements',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_BASIC_ELEMENTS_VIEW,
+    currentView: 'BasicElements',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveBasicElements(time = moment().format()) {
   return {
-    type:         LEAVE_BASIC_ELEMENTS_VIEW,
-    currentView:  'BasicElements',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_BASIC_ELEMENTS_VIEW,
+    currentView: 'BasicElements',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterGeneral(time = moment().format()) {
   return {
-    type:         ENTER_GENERAL_VIEW,
-    currentView:  'General',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_GENERAL_VIEW,
+    currentView: 'General',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveGeneral(time = moment().format()) {
   return {
-    type:         LEAVE_GENERAL_VIEW,
-    currentView:  'General',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_GENERAL_VIEW,
+    currentView: 'General',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterPageNotFound(time = moment().format()) {
   return {
-    type:         ENTER_PAGE_NOT_FOUND_VIEW,
-    currentView:  'PageNotFound',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_PAGE_NOT_FOUND_VIEW,
+    currentView: 'PageNotFound',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leavePageNotFound(time = moment().format()) {
   return {
-    type:         LEAVE_PAGE_NOT_FOUND_VIEW,
-    currentView:  'PageNotFound',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_PAGE_NOT_FOUND_VIEW,
+    currentView: 'PageNotFound',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterStatsCard(time = moment().format()) {
   return {
-    type:         ENTER_STATS_CARD_VIEW,
-    currentView:  'StatsCard',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_STATS_CARD_VIEW,
+    currentView: 'StatsCard',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveStatsCard(time = moment().format()) {
   return {
-    type:         LEAVE_STATS_CARD_VIEW,
-    currentView:  'StatsCard',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_STATS_CARD_VIEW,
+    currentView: 'StatsCard',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterEarningGraph(time = moment().format()) {
   return {
-    type:         ENTER_EARNING_GRAPH_VIEW,
-    currentView:  'EarningGraph',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_EARNING_GRAPH_VIEW,
+    currentView: 'EarningGraph',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveEarningGraph(time = moment().format()) {
   return {
-    type:         LEAVE_EARNING_GRAPH_VIEW,
-    currentView:  'EarningGraph',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_EARNING_GRAPH_VIEW,
+    currentView: 'EarningGraph',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterNotifications(time = moment().format()) {
   return {
-    type:         ENTER_NOTIFICATIONS_VIEW,
-    currentView:  'Notifications',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_NOTIFICATIONS_VIEW,
+    currentView: 'Notifications',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveNotifications(time = moment().format()) {
   return {
-    type:         LEAVE_NOTIFICATIONS_VIEW,
-    currentView:  'Notifications',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_NOTIFICATIONS_VIEW,
+    currentView: 'Notifications',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterWorkProgress(time = moment().format()) {
   return {
-    type:         ENTER_WORK_PROGRESS_VIEW,
-    currentView:  'WorkProgress',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_WORK_PROGRESS_VIEW,
+    currentView: 'WorkProgress',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveWorkProgress(time = moment().format()) {
   return {
-    type:         LEAVE_WORK_PROGRESS_VIEW,
-    currentView:  'WorkProgress',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_WORK_PROGRESS_VIEW,
+    currentView: 'WorkProgress',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterTwitterFeed(time = moment().format()) {
   return {
-    type:         ENTER_TWITTER_FEED_VIEW,
-    currentView:  'TwitterFeed',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_TWITTER_FEED_VIEW,
+    currentView: 'TwitterFeed',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveTwitterFeed(time = moment().format()) {
   return {
-    type:         LEAVE_TWITTER_FEED_VIEW,
-    currentView:  'TwitterFeed',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_TWITTER_FEED_VIEW,
+    currentView: 'TwitterFeed',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterTeamMatesView(time = moment().format()) {
   return {
-    type:         ENTER_TEAM_MATES_VIEW,
-    currentView:  'TeamMatesView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_TEAM_MATES_VIEW,
+    currentView: 'TeamMatesView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveTeamMatesView(time = moment().format()) {
   return {
-    type:         LEAVE_TEAM_MATES_VIEW,
-    currentView:  'TeamMatesView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_TEAM_MATES_VIEW,
+    currentView: 'TeamMatesView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterTodoListView(time = moment().format()) {
   return {
-    type:         ENTER_TODO_LIST_VIEW,
-    currentView:  'TodoListView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_TODO_LIST_VIEW,
+    currentView: 'TodoListView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveTodoListView(time = moment().format()) {
   return {
-    type:         LEAVE_TODO_LIST_VIEW,
-    currentView:  'TodoListView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_TODO_LIST_VIEW,
+    currentView: 'TodoListView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterBreadcrumb(time = moment().format()) {
   return {
-    type:         ENTER_BREADCRUMB_VIEW,
-    currentView:  'BreadcrumbView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_BREADCRUMB_VIEW,
+    currentView: 'BreadcrumbView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveBreadcrumb(time = moment().format()) {
   return {
-    type:         LEAVE_BREADCRUMB_VIEW,
-    currentView:  'BreadcrumbView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_BREADCRUMB_VIEW,
+    currentView: 'BreadcrumbView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterStat(time = moment().format()) {
   return {
-    type:         ENTER_STAT_VIEW,
-    currentView:  'StatView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_STAT_VIEW,
+    currentView: 'StatView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveStat(time = moment().format()) {
   return {
-    type:         LEAVE_STAT_VIEW,
-    currentView:  'StatView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_STAT_VIEW,
+    currentView: 'StatView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterBasicProgressBar(time = moment().format()) {
   return {
-    type:         ENTER_BASIC_PROGRESS_BAR_VIEW,
-    currentView:  'BasicProgressBarView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_BASIC_PROGRESS_BAR_VIEW,
+    currentView: 'BasicProgressBarView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveBasicProgressBar(time = moment().format()) {
   return {
-    type:         LEAVE_BASIC_PROGRESS_BAR_VIEW,
-    currentView:  'BasicProgressBarView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_BASIC_PROGRESS_BAR_VIEW,
+    currentView: 'BasicProgressBarView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterTabPanel(time = moment().format()) {
   return {
-    type:         ENTER_TAB_PANEL_VIEW,
-    currentView:  'TabPanel',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_TAB_PANEL_VIEW,
+    currentView: 'TabPanel',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveTabPanel(time = moment().format()) {
   return {
-    type:         LEAVE_TAB_PANEL_VIEW,
-    currentView:  'TabPanel',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_TAB_PANEL_VIEW,
+    currentView: 'TabPanel',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterStripedProgressBar(time = moment().format()) {
   return {
-    type:         ENTER_STRIPED_PROGRESS_BAR_VIEW,
-    currentView:  'StripedProgressBarView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_STRIPED_PROGRESS_BAR_VIEW,
+    currentView: 'StripedProgressBarView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveStripedProgressBar(time = moment().format()) {
   return {
-    type:         LEAVE_STRIPED_PROGRESS_BAR_VIEW,
-    currentView:  'StripedProgressBarView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_STRIPED_PROGRESS_BAR_VIEW,
+    currentView: 'StripedProgressBarView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterAlert(time = moment().format()) {
   return {
-    type:         ENTER_ALERT_VIEW,
-    currentView:  'AlertView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_ALERT_VIEW,
+    currentView: 'AlertView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveAlert(time = moment().format()) {
   return {
-    type:         LEAVE_ALERT_VIEW,
-    currentView:  'AlertView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_ALERT_VIEW,
+    currentView: 'AlertView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterPagination(time = moment().format()) {
   return {
-    type:         ENTER_PAGINATION_VIEW,
-    currentView:  'PaginationView',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_PAGINATION_VIEW,
+    currentView: 'PaginationView',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leavePagination(time = moment().format()) {
   return {
-    type:         LEAVE_PAGINATION_VIEW,
-    currentView:  'PaginationView',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_PAGINATION_VIEW,
+    currentView: 'PaginationView',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterLogin(time = moment().format()) {
   return {
-    type:         ENTER_LOGIN_VIEW,
-    currentView:  'Login',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_LOGIN_VIEW,
+    currentView: 'Login',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveLogin(time = moment().format()) {
   return {
-    type:         LEAVE_LOGIN_VIEW,
-    currentView:  'Login',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_LOGIN_VIEW,
+    currentView: 'Login',
+    enterTime: null,
+    leaveTime: time,
   };
 }
 
 export function enterProtected(time = moment().format()) {
   return {
-    type:         ENTER_PROTECTED_VIEW,
-    currentView:  'Protected',
-    enterTime:    time,
-    leaveTime:    null
+    type: ENTER_PROTECTED_VIEW,
+    currentView: 'Protected',
+    enterTime: time,
+    leaveTime: null,
   };
 }
 
 export function leaveProtected(time = moment().format()) {
   return {
-    type:         LEAVE_PROTECTED_VIEW,
-    currentView:  'Protected',
-    enterTime:    null,
-    leaveTime:    time
+    type: LEAVE_PROTECTED_VIEW,
+    currentView: 'Protected',
+    enterTime: null,
+    leaveTime: time,
   };
 }

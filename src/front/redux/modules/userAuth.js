@@ -269,7 +269,7 @@ function fetchUserInfosData(id = '') {
     }; // will be fetch_mock data returned (in case FETCH_TYPE = 'FETCH_MOCK', otherwise cata come from server)
     const url = `${getLocationOrigin()}/${appConfig.API.users}/${id}`;
     const method = 'get';
-    const headers = { authorization: `Bearer ${token}` };
+    const headers = { authorization: `Bearer ${token || ''}` };
     const options = { credentials: 'same-origin' }; // put options here (see axios options)
 
     return dispatch({

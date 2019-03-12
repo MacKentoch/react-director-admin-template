@@ -1,86 +1,77 @@
-// @flow weak
+// @flow
 
-import moment               from 'moment';
-import { appConfig }        from '../../config';
-import {
-  fetchMockUserInfosData
-}                           from '../../services';
-import {
-  getUserInfoData
-}                           from '../../services/API';
+import moment from 'moment';
+import { appConfig } from '../../config';
+import { fetchMockUserInfosData } from '../../services';
+import { getUserInfoData } from '../../services/API';
 
-const REQUEST_USER_INFOS_DATA   = 'REQUEST_USER_INFOS_DATA';
-const RECEIVED_USER_INFOS_DATA  = 'RECEIVED_USER_INFOS_DATA';
-const ERROR_USER_INFOS_DATA     = 'ERROR_USER_INFOS_DATA';
+const REQUEST_USER_INFOS_DATA = 'REQUEST_USER_INFOS_DATA';
+const RECEIVED_USER_INFOS_DATA = 'RECEIVED_USER_INFOS_DATA';
+const ERROR_USER_INFOS_DATA = 'ERROR_USER_INFOS_DATA';
 
 type UserInfoData = {
   login: ?string,
   firstname: string,
   lastname: string,
   picture: ?string,
-  isAuthenticated: boolean
+  isAuthenticated: boolean,
 };
 
 type UserInfoState = {
   isFetching: boolean,
   data: UserInfoData,
   isConnected: boolean,
-  time: ?string
+  time: ?string,
 };
 
 const initialState: UserInfoState = {
   isFetching: false,
   data: {
-    login:            null,
-    firstname:        '',
-    lastname:         '',
-    picture:          null,
-    isAuthenticated:  false
+    login: null,
+    firstname: '',
+    lastname: '',
+    picture: null,
+    isAuthenticated: false,
   },
   isConnected: false,
-  time: null
+  time: null,
 };
 
 export default function userInfos(
   state: UserInfoState = initialState,
-  action: any
+  action: any,
 ) {
   switch (action.type) {
+    case 'REQUEST_USER_INFOS_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        time: action.time,
+      };
 
-  case 'REQUEST_USER_INFOS_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      time:       action.time
-    };
+    case 'RECEIVED_USER_INFOS_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        data: { ...action.userInfos.data },
+        isConnected: true, // set user connected when retreiving userInfos
+        time: action.time,
+      };
 
-  case 'RECEIVED_USER_INFOS_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      data:       { ...action.userInfos.data },
-      isConnected: true, // set user connected when retreiving userInfos
-      time:       action.time
-    };
+    case 'ERROR_USER_INFOS_DATA':
+      return {
+        ...state,
+        isFetching: action.isFetching,
+        time: action.time,
+      };
 
-  case 'ERROR_USER_INFOS_DATA':
-    return {
-      ...state,
-      isFetching: action.isFetching,
-      time:       action.time
-    };
-
-  default:
-    return state;
+    default:
+      return state;
   }
 }
 
-
 export function fetchUserInfoDataIfNeeded() {
-  return (
-    dispatch: (action: any) => any,
-    getState: () => any
-  ) => {
+  return (dispatch: (action: any) => any, getState: () => any) => {
     if (shouldFetchUserInfoData(getState())) {
       return dispatch(fetchUserInfosData());
     }
@@ -89,29 +80,29 @@ export function fetchUserInfoDataIfNeeded() {
 }
 function requestUserInfosData(time: string = moment().format()) {
   return {
-    type:       REQUEST_USER_INFOS_DATA,
+    type: REQUEST_USER_INFOS_DATA,
     isFetching: true,
-    time
+    time,
   };
 }
 function receivedUserInfosData(data, time = moment().format()) {
   return {
-    type:       RECEIVED_USER_INFOS_DATA,
+    type: RECEIVED_USER_INFOS_DATA,
     isFetching: false,
     userInfos: data,
-    time
+    time,
   };
 }
 function errorUserInfosData(time = moment().format()) {
   return {
-    type:       ERROR_USER_INFOS_DATA,
+    type: ERROR_USER_INFOS_DATA,
     isFetching: false,
-    time
+    time,
   };
 }
 
 function fetchUserInfosData() {
-  return async (dispatch) => {
+  return async dispatch => {
     dispatch(requestUserInfosData());
 
     if (appConfig.DEV_MODE) {
@@ -122,7 +113,7 @@ function fetchUserInfosData() {
         const data = await getUserInfoData();
         return dispatch(receivedUserInfosData(data));
       } catch (error) {
-        return dispatch(errorUserInfosData(error))
+        return dispatch(errorUserInfosData(error));
       }
     }
   };
