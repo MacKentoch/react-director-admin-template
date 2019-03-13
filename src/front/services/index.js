@@ -6,17 +6,13 @@ export {
   checkStatus,
   parseJSON,
   getLocationOrigin,
-  encodeBase64
-}                             from './fetchTools';
+  encodeBase64,
+} from './fetchTools';
 // fetchMocks:
 export {
   fetchMockEarningGraphData,
   fetchMockUserInfosData,
-  fetchMockTeamMatesData
-}                             from './fetchMocks';
+  fetchMockTeamMatesData,
+} from './fetchMocks';
 // API:
-export {
-  getEarningGraphData,
-  getTeamMatesData,
-  getUserInfoData
-}                             from './API';
+export { getEarningGraphData, getTeamMatesData, getUserInfoData } from './API';

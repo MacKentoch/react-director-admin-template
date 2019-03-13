@@ -6,7 +6,7 @@
 /*
   imports
  */
-import moment from 'moment';
+import { format } from 'date-fns';
 import { appConfig } from '../../config';
 import { getEarningGraphData } from '../../services/API';
 import { fetchMockEarningGraphData } from '../../services/fetchMocks';
@@ -84,14 +84,14 @@ export function fetchEarningGraphDataIfNeeded() {
     }
   };
 }
-function requestEarningGraphData(time = moment().format()) {
+function requestEarningGraphData(time = format(new Date())) {
   return {
     type: REQUEST_EARNING_GRAPH_DATA,
     isFetching: true,
     time,
   };
 }
-function receivedEarningGraphData(data, time = moment().format()) {
+function receivedEarningGraphData(data: any, time = format(new Date())) {
   return {
     type: RECEIVED_EARNING_GRAPH_DATA,
     isFetching: false,
@@ -100,7 +100,7 @@ function receivedEarningGraphData(data, time = moment().format()) {
     time,
   };
 }
-function errorEarningGraphData(error, time = moment().format()) {
+function errorEarningGraphData(error, time = format(new Date())) {
   return {
     type: ERROR_EARNING_GRAPH_DATA,
     isFetching: false,

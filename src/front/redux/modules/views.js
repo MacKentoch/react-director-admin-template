@@ -1,6 +1,6 @@
 // @flow
 
-import moment from 'moment';
+import { format } from 'date-fns';
 
 const ENTER_LOGIN_VIEW = 'ENTER_LOGIN_VIEW';
 const LEAVE_LOGIN_VIEW = 'LEAVE_LOGIN_VIEW';
@@ -123,7 +123,7 @@ export default function views(state = initialState, action) {
   }
 }
 
-export function enterHome(time = moment().format()) {
+export function enterHome(time: Date = format(new Date())) {
   return {
     type: ENTER_HOME_VIEW,
     currentView: 'Home',
@@ -132,7 +132,7 @@ export function enterHome(time = moment().format()) {
   };
 }
 
-export function leaveHome(time = moment().format()) {
+export function leaveHome(time: Date = format(new Date())) {
   return {
     type: LEAVE_HOME_VIEW,
     currentView: 'Home',
@@ -141,7 +141,7 @@ export function leaveHome(time = moment().format()) {
   };
 }
 
-export function enterSimpleTables(time = moment().format()) {
+export function enterSimpleTables(time: Date = format(new Date())) {
   return {
     type: ENTER_SIMPLE_TABLES_VIEW,
     currentView: 'SimpleTables',
@@ -150,7 +150,7 @@ export function enterSimpleTables(time = moment().format()) {
   };
 }
 
-export function leaveSimpleTables(time = moment().format()) {
+export function leaveSimpleTables(time: Date = format(new Date())) {
   return {
     type: LEAVE_SIMPLE_TABLES_VIEW,
     currentView: 'SimpleTables',
@@ -159,7 +159,7 @@ export function leaveSimpleTables(time = moment().format()) {
   };
 }
 
-export function enterBasicElements(time = moment().format()) {
+export function enterBasicElements(time: Date = format(new Date())) {
   return {
     type: ENTER_BASIC_ELEMENTS_VIEW,
     currentView: 'BasicElements',
@@ -168,7 +168,7 @@ export function enterBasicElements(time = moment().format()) {
   };
 }
 
-export function leaveBasicElements(time = moment().format()) {
+export function leaveBasicElements(time: Date = format(new Date())) {
   return {
     type: LEAVE_BASIC_ELEMENTS_VIEW,
     currentView: 'BasicElements',
@@ -177,7 +177,7 @@ export function leaveBasicElements(time = moment().format()) {
   };
 }
 
-export function enterGeneral(time = moment().format()) {
+export function enterGeneral(time: Date = format(new Date())) {
   return {
     type: ENTER_GENERAL_VIEW,
     currentView: 'General',
@@ -186,7 +186,7 @@ export function enterGeneral(time = moment().format()) {
   };
 }
 
-export function leaveGeneral(time = moment().format()) {
+export function leaveGeneral(time: Date = format(new Date())) {
   return {
     type: LEAVE_GENERAL_VIEW,
     currentView: 'General',
@@ -195,7 +195,7 @@ export function leaveGeneral(time = moment().format()) {
   };
 }
 
-export function enterPageNotFound(time = moment().format()) {
+export function enterPageNotFound(time: Date = format(new Date())) {
   return {
     type: ENTER_PAGE_NOT_FOUND_VIEW,
     currentView: 'PageNotFound',
@@ -204,7 +204,7 @@ export function enterPageNotFound(time = moment().format()) {
   };
 }
 
-export function leavePageNotFound(time = moment().format()) {
+export function leavePageNotFound(time: Date = format(new Date())) {
   return {
     type: LEAVE_PAGE_NOT_FOUND_VIEW,
     currentView: 'PageNotFound',
@@ -213,7 +213,7 @@ export function leavePageNotFound(time = moment().format()) {
   };
 }
 
-export function enterStatsCard(time = moment().format()) {
+export function enterStatsCard(time: Date = format(new Date())) {
   return {
     type: ENTER_STATS_CARD_VIEW,
     currentView: 'StatsCard',
@@ -222,7 +222,7 @@ export function enterStatsCard(time = moment().format()) {
   };
 }
 
-export function leaveStatsCard(time = moment().format()) {
+export function leaveStatsCard(time: Date = format(new Date())) {
   return {
     type: LEAVE_STATS_CARD_VIEW,
     currentView: 'StatsCard',
@@ -231,7 +231,7 @@ export function leaveStatsCard(time = moment().format()) {
   };
 }
 
-export function enterEarningGraph(time = moment().format()) {
+export function enterEarningGraph(time: Date = format(new Date())) {
   return {
     type: ENTER_EARNING_GRAPH_VIEW,
     currentView: 'EarningGraph',
@@ -240,7 +240,7 @@ export function enterEarningGraph(time = moment().format()) {
   };
 }
 
-export function leaveEarningGraph(time = moment().format()) {
+export function leaveEarningGraph(time: Date = format(new Date())) {
   return {
     type: LEAVE_EARNING_GRAPH_VIEW,
     currentView: 'EarningGraph',
@@ -249,7 +249,7 @@ export function leaveEarningGraph(time = moment().format()) {
   };
 }
 
-export function enterNotifications(time = moment().format()) {
+export function enterNotifications(time: Date = format(new Date())) {
   return {
     type: ENTER_NOTIFICATIONS_VIEW,
     currentView: 'Notifications',
@@ -258,7 +258,7 @@ export function enterNotifications(time = moment().format()) {
   };
 }
 
-export function leaveNotifications(time = moment().format()) {
+export function leaveNotifications(time: Date = format(new Date())) {
   return {
     type: LEAVE_NOTIFICATIONS_VIEW,
     currentView: 'Notifications',
@@ -267,7 +267,7 @@ export function leaveNotifications(time = moment().format()) {
   };
 }
 
-export function enterWorkProgress(time = moment().format()) {
+export function enterWorkProgress(time: Date = format(new Date())) {
   return {
     type: ENTER_WORK_PROGRESS_VIEW,
     currentView: 'WorkProgress',
@@ -276,7 +276,7 @@ export function enterWorkProgress(time = moment().format()) {
   };
 }
 
-export function leaveWorkProgress(time = moment().format()) {
+export function leaveWorkProgress(time: Date = format(new Date())) {
   return {
     type: LEAVE_WORK_PROGRESS_VIEW,
     currentView: 'WorkProgress',
@@ -285,7 +285,7 @@ export function leaveWorkProgress(time = moment().format()) {
   };
 }
 
-export function enterTwitterFeed(time = moment().format()) {
+export function enterTwitterFeed(time: Date = format(new Date())) {
   return {
     type: ENTER_TWITTER_FEED_VIEW,
     currentView: 'TwitterFeed',
@@ -294,7 +294,7 @@ export function enterTwitterFeed(time = moment().format()) {
   };
 }
 
-export function leaveTwitterFeed(time = moment().format()) {
+export function leaveTwitterFeed(time: Date = format(new Date())) {
   return {
     type: LEAVE_TWITTER_FEED_VIEW,
     currentView: 'TwitterFeed',
@@ -303,7 +303,7 @@ export function leaveTwitterFeed(time = moment().format()) {
   };
 }
 
-export function enterTeamMatesView(time = moment().format()) {
+export function enterTeamMatesView(time: Date = format(new Date())) {
   return {
     type: ENTER_TEAM_MATES_VIEW,
     currentView: 'TeamMatesView',
@@ -312,7 +312,7 @@ export function enterTeamMatesView(time = moment().format()) {
   };
 }
 
-export function leaveTeamMatesView(time = moment().format()) {
+export function leaveTeamMatesView(time: Date = format(new Date())) {
   return {
     type: LEAVE_TEAM_MATES_VIEW,
     currentView: 'TeamMatesView',
@@ -321,7 +321,7 @@ export function leaveTeamMatesView(time = moment().format()) {
   };
 }
 
-export function enterTodoListView(time = moment().format()) {
+export function enterTodoListView(time: Date = format(new Date())) {
   return {
     type: ENTER_TODO_LIST_VIEW,
     currentView: 'TodoListView',
@@ -330,7 +330,7 @@ export function enterTodoListView(time = moment().format()) {
   };
 }
 
-export function leaveTodoListView(time = moment().format()) {
+export function leaveTodoListView(time: Date = format(new Date())) {
   return {
     type: LEAVE_TODO_LIST_VIEW,
     currentView: 'TodoListView',
@@ -339,7 +339,7 @@ export function leaveTodoListView(time = moment().format()) {
   };
 }
 
-export function enterBreadcrumb(time = moment().format()) {
+export function enterBreadcrumb(time: Date = format(new Date())) {
   return {
     type: ENTER_BREADCRUMB_VIEW,
     currentView: 'BreadcrumbView',
@@ -348,7 +348,7 @@ export function enterBreadcrumb(time = moment().format()) {
   };
 }
 
-export function leaveBreadcrumb(time = moment().format()) {
+export function leaveBreadcrumb(time: Date = format(new Date())) {
   return {
     type: LEAVE_BREADCRUMB_VIEW,
     currentView: 'BreadcrumbView',
@@ -357,7 +357,7 @@ export function leaveBreadcrumb(time = moment().format()) {
   };
 }
 
-export function enterStat(time = moment().format()) {
+export function enterStat(time: Date = format(new Date())) {
   return {
     type: ENTER_STAT_VIEW,
     currentView: 'StatView',
@@ -366,7 +366,7 @@ export function enterStat(time = moment().format()) {
   };
 }
 
-export function leaveStat(time = moment().format()) {
+export function leaveStat(time: Date = format(new Date())) {
   return {
     type: LEAVE_STAT_VIEW,
     currentView: 'StatView',
@@ -375,7 +375,7 @@ export function leaveStat(time = moment().format()) {
   };
 }
 
-export function enterBasicProgressBar(time = moment().format()) {
+export function enterBasicProgressBar(time: Date = format(new Date())) {
   return {
     type: ENTER_BASIC_PROGRESS_BAR_VIEW,
     currentView: 'BasicProgressBarView',
@@ -384,7 +384,7 @@ export function enterBasicProgressBar(time = moment().format()) {
   };
 }
 
-export function leaveBasicProgressBar(time = moment().format()) {
+export function leaveBasicProgressBar(time: Date = format(new Date())) {
   return {
     type: LEAVE_BASIC_PROGRESS_BAR_VIEW,
     currentView: 'BasicProgressBarView',
@@ -393,7 +393,7 @@ export function leaveBasicProgressBar(time = moment().format()) {
   };
 }
 
-export function enterTabPanel(time = moment().format()) {
+export function enterTabPanel(time: Date = format(new Date())) {
   return {
     type: ENTER_TAB_PANEL_VIEW,
     currentView: 'TabPanel',
@@ -402,7 +402,7 @@ export function enterTabPanel(time = moment().format()) {
   };
 }
 
-export function leaveTabPanel(time = moment().format()) {
+export function leaveTabPanel(time: Date = format(new Date())) {
   return {
     type: LEAVE_TAB_PANEL_VIEW,
     currentView: 'TabPanel',
@@ -411,7 +411,7 @@ export function leaveTabPanel(time = moment().format()) {
   };
 }
 
-export function enterStripedProgressBar(time = moment().format()) {
+export function enterStripedProgressBar(time: Date = format(new Date())) {
   return {
     type: ENTER_STRIPED_PROGRESS_BAR_VIEW,
     currentView: 'StripedProgressBarView',
@@ -420,7 +420,7 @@ export function enterStripedProgressBar(time = moment().format()) {
   };
 }
 
-export function leaveStripedProgressBar(time = moment().format()) {
+export function leaveStripedProgressBar(time: Date = format(new Date())) {
   return {
     type: LEAVE_STRIPED_PROGRESS_BAR_VIEW,
     currentView: 'StripedProgressBarView',
@@ -429,7 +429,7 @@ export function leaveStripedProgressBar(time = moment().format()) {
   };
 }
 
-export function enterAlert(time = moment().format()) {
+export function enterAlert(time: Date = format(new Date())) {
   return {
     type: ENTER_ALERT_VIEW,
     currentView: 'AlertView',
@@ -438,7 +438,7 @@ export function enterAlert(time = moment().format()) {
   };
 }
 
-export function leaveAlert(time = moment().format()) {
+export function leaveAlert(time: Date = format(new Date())) {
   return {
     type: LEAVE_ALERT_VIEW,
     currentView: 'AlertView',
@@ -447,7 +447,7 @@ export function leaveAlert(time = moment().format()) {
   };
 }
 
-export function enterPagination(time = moment().format()) {
+export function enterPagination(time: Date = format(new Date())) {
   return {
     type: ENTER_PAGINATION_VIEW,
     currentView: 'PaginationView',
@@ -456,7 +456,7 @@ export function enterPagination(time = moment().format()) {
   };
 }
 
-export function leavePagination(time = moment().format()) {
+export function leavePagination(time: Date = format(new Date())) {
   return {
     type: LEAVE_PAGINATION_VIEW,
     currentView: 'PaginationView',
@@ -465,7 +465,7 @@ export function leavePagination(time = moment().format()) {
   };
 }
 
-export function enterLogin(time = moment().format()) {
+export function enterLogin(time: Date = format(new Date())) {
   return {
     type: ENTER_LOGIN_VIEW,
     currentView: 'Login',
@@ -474,7 +474,7 @@ export function enterLogin(time = moment().format()) {
   };
 }
 
-export function leaveLogin(time = moment().format()) {
+export function leaveLogin(time: Date = format(new Date())) {
   return {
     type: LEAVE_LOGIN_VIEW,
     currentView: 'Login',
@@ -483,7 +483,7 @@ export function leaveLogin(time = moment().format()) {
   };
 }
 
-export function enterProtected(time = moment().format()) {
+export function enterProtected(time: Date = format(new Date())) {
   return {
     type: ENTER_PROTECTED_VIEW,
     currentView: 'Protected',
@@ -492,7 +492,7 @@ export function enterProtected(time = moment().format()) {
   };
 }
 
-export function leaveProtected(time = moment().format()) {
+export function leaveProtected(time: Date = format(new Date())) {
   return {
     type: LEAVE_PROTECTED_VIEW,
     currentView: 'Protected',
