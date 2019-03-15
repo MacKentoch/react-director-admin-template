@@ -1,26 +1,29 @@
-import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import AlertView              from './Alert';
+// @flow
 
-const mapStateToProps = (state) => {
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import AlertView from './Alert';
+
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterAlert: actions.enterAlert,
-        leaveAlert: actions.leaveAlert
+        leaveAlert: actions.leaveAlert,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AlertView);

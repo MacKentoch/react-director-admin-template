@@ -1,351 +1,320 @@
-// @flow weak
+// @flow
+/* eslint-disable react/no-unescaped-entities */
 
-import React, {
-  PureComponent
-}                     from 'react';
-import PropTypes      from 'prop-types';
-import {
-  AnimatedView,
-  BasicForms
-}                     from '../../components';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { AnimatedView, BasicForms } from '../../components';
 
-class BasicElements extends PureComponent {
-  static propTypes = {
-    actions: PropTypes.shape({
-      enterBasicElements: PropTypes.func,
-      leaveBasicElements: PropTypes.func
-    })
-  };
+type Props = {
+  actions: {
+    enterBasicElements: () => any,
+    leaveBasicElements: () => any,
+  },
+};
 
-  componentWillMount() {
-    const { actions: { enterBasicElements } } = this.props;
+function BasicElements({
+  actions: { enterBasicElements, leaveBasicElements },
+}: Props) {
+  useEffect(() => {
     enterBasicElements();
-  }
+    return () => {
+      leaveBasicElements();
+    };
+  }, []);
 
-  componentWillUnmount() {
-    const { actions: { leaveBasicElements } } = this.props;
-    leaveBasicElements();
-  }
-
-  render() {
-    return(
-      <AnimatedView>
-        <div className="row">
-          <div className="col-lg-6">
-            <BasicForms />
-          </div>
-
-          <div className="col-lg-6">
-            <section className="panel">
-              <header className="panel-heading">
-                Horizontal Forms
-              </header>
-              <div className="panel-body">
-                <form
-                  className="form-horizontal"
-                  role="form">
-                  <div className="form-group">
-                    <label
-                      htmlFor="inputEmail1"
-                      className="col-lg-2 col-sm-2 control-label">
-                      Email
-                    </label>
-                    <div className="col-lg-10">
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="inputEmail1"
-                        placeholder="Email"
-                      />
-                      <p className="help-block">
-                        Example block-level help text here.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label
-                      htmlFor="inputPassword1"
-                      className="col-lg-2 col-sm-2 control-label">
-                      Password
-                    </label>
-                    <div className="col-lg-10">
-                      <input
-                        type="password"
-                        className="form-control"
-                        id="inputPassword1"
-                        placeholder="Password"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <div className="col-lg-offset-2 col-lg-10">
-                      <div className="checkbox">
-                        <label>
-                          <input type="checkbox" />
-                           Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <div className="col-lg-offset-2 col-lg-10">
-                      <button type="submit" className="btn btn-danger">Sign in</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-            <section className="panel">
-              <div className="panel-body">
-                <a
-                  href="#myModalBasicElements"
-                  data-toggle="modal"
-                  className="btn btn-xs btn-success">
-                  Form in Modal
-                </a>
-                <a
-                  href="#myModalBasicElements-1"
-                  data-toggle="modal"
-                  className="btn btn-xs btn-warning">
-                  Form in Modal 2
-                </a>
-                <a
-                  href="#myModalBasicElements-2"
-                  data-toggle="modal"
-                  className="btn btn-xs btn-danger">
-                  Form in Modal 3
-                </a>
-              </div>
-            </section>
-          </div>
+  return (
+    <AnimatedView>
+      <div className="row">
+        <div className="col-lg-6">
+          <BasicForms />
         </div>
-        <div className="row">
-          <div className="col-md-12">
-            <section className="panel">
-              <header className="panel-heading">
-                Inline form
-              </header>
-              <div className="panel-body">
-                <form
-                  className="form-inline"
-                  role="form">
-                  <div className="form-group">
-                    <label
-                      className="sr-only"
-                      htmlFor="exampleInputEmail2">
-                      Email address
-                    </label>
+
+        <div className="col-lg-6">
+          <section className="panel">
+            <header className="panel-heading">Horizontal Forms</header>
+            <div className="panel-body">
+              <form className="form-horizontal" role="form">
+                <div className="form-group">
+                  <label
+                    htmlFor="inputEmail1"
+                    className="col-lg-2 col-sm-2 control-label"
+                  >
+                    Email
+                  </label>
+                  <div className="col-lg-10">
                     <input
                       type="email"
                       className="form-control"
-                      id="exampleInputEmail2"
-                      placeholder="Enter email"
+                      id="inputEmail1"
+                      placeholder="Email"
                     />
+                    <p className="help-block">
+                      Example block-level help text here.
+                    </p>
                   </div>
-                  <div className="form-group">
-                    <label
-                      className="sr-only"
-                      htmlFor="exampleInputPassword2">
-                      Password
-                    </label>
+                </div>
+                <div className="form-group">
+                  <label
+                    htmlFor="inputPassword1"
+                    className="col-lg-2 col-sm-2 control-label"
+                  >
+                    Password
+                  </label>
+                  <div className="col-lg-10">
                     <input
                       type="password"
                       className="form-control"
-                      id="exampleInputPassword2"
+                      id="inputPassword1"
                       placeholder="Password"
                     />
                   </div>
-                  <div className="checkbox">
-                    <label>
-                      <input type="checkbox" />
-                       Remember me
-                    </label>
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-success">
-                    Sign in
-                  </button>
-                </form>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <section className="panel">
-              <header className="panel-heading">
-                Form Elements
-              </header>
-              <div className="panel-body">
-                <form
-                  className="form-horizontal tasi-form"
-                  method="get">
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Default
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
+                </div>
+                <div className="form-group">
+                  <div className="col-lg-offset-2 col-lg-10">
+                    <div className="checkbox">
+                      <label>
+                        <input type="checkbox" />
+                        Remember me
+                      </label>
                     </div>
                   </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Help text
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
-                      <span className="help-block">
-                        A block of help text that breaks onto a new line and may extend beyond one line.
-                      </span>
-                    </div>
+                </div>
+                <div className="form-group">
+                  <div className="col-lg-offset-2 col-lg-10">
+                    <button type="submit" className="btn btn-danger">
+                      Sign in
+                    </button>
                   </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Rounder
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control round-input"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Input focus
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        className="form-control"
-                        id="focusedInput"
-                        type="text"
-                        value="This is focused..."
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Disabled
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        className="form-control"
-                        id="disabledInput"
-                        type="text"
-                        placeholder="Disabled input here..."
-                        disabled=""
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Placeholder
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="placeholder"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                      Password
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="password"
-                        className="form-control"
-                        placeholder=""
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-lg-2 col-sm-2 control-label">
-                      Static control
-                    </label>
-                    <div className="col-lg-10">
-                      <p className="form-control-static">
-                        email@example.com
-                      </p>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-            <section className="panel">
-              <header className="panel-heading">
-                Form Elements
-              </header>
-              <div className="panel-body">
-                <form
-                  className="form-horizontal tasi-form"
-                  method="get">
-                  <div className="form-group has-success">
-                    <label
-                      className="col-sm-2 control-label col-lg-2"
-                      htmlFor="inputSuccess">
-                      Input with success
-                    </label>
-                    <div className="col-lg-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputSuccess"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group has-warning">
-                    <label
-                      className="col-sm-2 control-label col-lg-2"
-                      htmlFor="inputWarning">
-                      Input with warning
-                    </label>
-                    <div className="col-lg-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputWarning"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group has-error">
-                    <label
-                      className="col-sm-2 control-label col-lg-2"
-                      htmlFor="inputError">
-                      Input with error
-                    </label>
-                    <div className="col-lg-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputError"
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
           </section>
           <section className="panel">
-            <header className="panel-heading">
-              Control sizing
-            </header>
             <div className="panel-body">
-              <form
-                className="form-horizontal tasi-form"
-                method="get">
+              <a
+                href="#myModalBasicElements"
+                data-toggle="modal"
+                className="btn btn-xs btn-success"
+              >
+                Form in Modal
+              </a>
+              <a
+                href="#myModalBasicElements-1"
+                data-toggle="modal"
+                className="btn btn-xs btn-warning"
+              >
+                Form in Modal 2
+              </a>
+              <a
+                href="#myModalBasicElements-2"
+                data-toggle="modal"
+                className="btn btn-xs btn-danger"
+              >
+                Form in Modal 3
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12">
+          <section className="panel">
+            <header className="panel-heading">Inline form</header>
+            <div className="panel-body">
+              <form className="form-inline" role="form">
+                <div className="form-group">
+                  <label className="sr-only" htmlFor="exampleInputEmail2">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="exampleInputEmail2"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="sr-only" htmlFor="exampleInputPassword2">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="exampleInputPassword2"
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    Remember me
+                  </label>
+                </div>
+                <button type="submit" className="btn btn-success">
+                  Sign in
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12">
+          <section className="panel">
+            <header className="panel-heading">Form Elements</header>
+            <div className="panel-body">
+              <form className="form-horizontal tasi-form" method="get">
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Default
+                  </label>
+                  <div className="col-sm-10">
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Help text
+                  </label>
+                  <div className="col-sm-10">
+                    <input type="text" className="form-control" />
+                    <span className="help-block">
+                      A block of help text that breaks onto a new line and may
+                      extend beyond one line.
+                    </span>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Rounder
+                  </label>
+                  <div className="col-sm-10">
+                    <input type="text" className="form-control round-input" />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Input focus
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      className="form-control"
+                      id="focusedInput"
+                      type="text"
+                      value="This is focused..."
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Disabled
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      className="form-control"
+                      id="disabledInput"
+                      type="text"
+                      placeholder="Disabled input here..."
+                      disabled=""
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Placeholder
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="placeholder"
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-sm-2 col-sm-2 control-label">
+                    Password
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-lg-2 col-sm-2 control-label">
+                    Static control
+                  </label>
+                  <div className="col-lg-10">
+                    <p className="form-control-static">email@example.com</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section className="panel">
+            <header className="panel-heading">Form Elements</header>
+            <div className="panel-body">
+              <form className="form-horizontal tasi-form" method="get">
+                <div className="form-group has-success">
+                  <label
+                    className="col-sm-2 control-label col-lg-2"
+                    htmlFor="inputSuccess"
+                  >
+                    Input with success
+                  </label>
+                  <div className="col-lg-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="inputSuccess"
+                    />
+                  </div>
+                </div>
+                <div className="form-group has-warning">
+                  <label
+                    className="col-sm-2 control-label col-lg-2"
+                    htmlFor="inputWarning"
+                  >
+                    Input with warning
+                  </label>
+                  <div className="col-lg-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="inputWarning"
+                    />
+                  </div>
+                </div>
+                <div className="form-group has-error">
+                  <label
+                    className="col-sm-2 control-label col-lg-2"
+                    htmlFor="inputError"
+                  >
+                    Input with error
+                  </label>
+                  <div className="col-lg-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="inputError"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section className="panel">
+            <header className="panel-heading">Control sizing</header>
+            <div className="panel-body">
+              <form className="form-horizontal tasi-form" method="get">
                 <div className="form-group">
                   <label
                     className="col-sm-2 control-label col-lg-2"
-                    htmlFor="inputSuccess">
+                    htmlFor="inputSuccess"
+                  >
                     Control sizing
                   </label>
                   <div className="col-lg-10">
@@ -385,36 +354,29 @@ class BasicElements extends PureComponent {
             </div>
           </section>
           <section className="panel">
-            <header className="panel-heading">
-               Form Elements
-            </header>
+            <header className="panel-heading">Form Elements</header>
             <div className="panel-body">
-              <form
-                className="form-horizontal tasi-form"
-                method="get">
+              <form className="form-horizontal tasi-form" method="get">
                 <div className="form-group">
                   <label
                     className="col-sm-2 control-label col-lg-2"
-                    htmlFor="inputSuccess">
+                    htmlFor="inputSuccess"
+                  >
                     Checkboxes and radios
                   </label>
                   <div className="col-lg-10">
                     <div className="checkbox">
                       <label>
-                        <input
-                          type="checkbox"
-                          value=""
-                        />
-                        Option one is this and that—be sure to include why it's great
+                        <input type="checkbox" value="" />
+                        Option one is this and that—be sure to include why it's
+                        great
                       </label>
                     </div>
                     <div className="checkbox">
                       <label>
-                        <input
-                          type="checkbox"
-                          value=""
-                        />
-                        Option one is this and that—be sure to include why it's great option one
+                        <input type="checkbox" value="" />
+                        Option one is this and that—be sure to include why it's
+                        great option one
                       </label>
                     </div>
                     <div className="radio">
@@ -426,7 +388,8 @@ class BasicElements extends PureComponent {
                           value="option1"
                           checked=""
                         />
-                        Option one is this and that—be sure to include why it's great
+                        Option one is this and that—be sure to include why it's
+                        great
                       </label>
                     </div>
                     <div className="radio">
@@ -437,7 +400,8 @@ class BasicElements extends PureComponent {
                           id="optionsRadios2"
                           value="option2"
                         />
-                        Option two can be something else and selecting it will deselect option one
+                        Option two can be something else and selecting it will
+                        deselect option one
                       </label>
                     </div>
                   </div>
@@ -445,7 +409,8 @@ class BasicElements extends PureComponent {
                 <div className="form-group">
                   <label
                     className="col-sm-2 control-label col-lg-2"
-                    htmlFor="inputSuccess">
+                    htmlFor="inputSuccess"
+                  >
                     Inline checkboxes
                   </label>
                   <div className="col-lg-10">
@@ -478,7 +443,8 @@ class BasicElements extends PureComponent {
                 <div className="form-group">
                   <label
                     className="col-sm-2 control-label col-lg-2"
-                    htmlFor="inputSuccess">
+                    htmlFor="inputSuccess"
+                  >
                     Selects
                   </label>
                   <div className="col-lg-10">
@@ -501,7 +467,8 @@ class BasicElements extends PureComponent {
                 <div className="form-group">
                   <label
                     className="col-sm-2 control-label col-lg-2"
-                    htmlFor="inputSuccess">
+                    htmlFor="inputSuccess"
+                  >
                     Column sizing
                   </label>
                   <div className="col-lg-10">
@@ -534,22 +501,16 @@ class BasicElements extends PureComponent {
             </div>
           </section>
           <section className="panel">
-            <header className="panel-heading">
-              Input groups
-            </header>
+            <header className="panel-heading">Input groups</header>
             <div className="panel-body">
-              <form
-                className="form-horizontal tasi-form"
-                method="get">
+              <form className="form-horizontal tasi-form" method="get">
                 <div className="form-group">
                   <label className="col-sm-2 control-label col-lg-2">
                     Basic examples
                   </label>
                   <div className="col-lg-10">
                     <div className="input-group m-b-10">
-                      <span className="input-group-addon">
-                        @
-                      </span>
+                      <span className="input-group-addon">@</span>
                       <input
                         type="text"
                         className="form-control"
@@ -557,25 +518,13 @@ class BasicElements extends PureComponent {
                       />
                     </div>
                     <div className="input-group m-b-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
-                      <span className="input-group-addon">
-                        .00
-                      </span>
+                      <input type="text" className="form-control" />
+                      <span className="input-group-addon">.00</span>
                     </div>
                     <div className="input-group m-b-10">
-                      <span className="input-group-addon">
-                        $
-                      </span>
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
-                      <span className="input-group-addon">
-                        .00
-                      </span>
+                      <span className="input-group-addon">$</span>
+                      <input type="text" className="form-control" />
+                      <span className="input-group-addon">.00</span>
                     </div>
                   </div>
                 </div>
@@ -585,9 +534,7 @@ class BasicElements extends PureComponent {
                   </label>
                   <div className="col-lg-10">
                     <div className="input-group input-group-lg m-b-10">
-                      <span className="input-group-addon">
-                        @
-                      </span>
+                      <span className="input-group-addon">@</span>
                       <input
                         type="text"
                         className="form-control input-lg"
@@ -595,9 +542,7 @@ class BasicElements extends PureComponent {
                       />
                     </div>
                     <div className="input-group m-b-10">
-                      <span className="input-group-addon">
-                        @
-                      </span>
+                      <span className="input-group-addon">@</span>
                       <input
                         type="text"
                         className="form-control"
@@ -605,9 +550,7 @@ class BasicElements extends PureComponent {
                       />
                     </div>
                     <div className="input-group input-group-sm m-b-10">
-                      <span className="input-group-addon">
-                        @
-                      </span>
+                      <span className="input-group-addon">@</span>
                       <input
                         type="text"
                         className="form-control"
@@ -625,19 +568,13 @@ class BasicElements extends PureComponent {
                       <span className="input-group-addon">
                         <input type="checkbox" />
                       </span>
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
+                      <input type="text" className="form-control" />
                     </div>
                     <div className="input-group m-b-10">
                       <span className="input-group-addon">
                         <input type="radio" />
                       </span>
-                      <input
-                        type="text"
-                        className="form-control"
-                      />
+                      <input type="text" className="form-control" />
                     </div>
                   </div>
                 </div>
@@ -645,338 +582,404 @@ class BasicElements extends PureComponent {
                   <label className="col-sm-2 control-label col-lg-2">
                     Button addons
                   </label>
-                    <div className="col-lg-10">
-                      <div className="input-group m-b-10">
-                        <span className="input-group-btn">
-                          <button
-                            className="btn btn-white"
-                            type="button">
-                            Go!
-                          </button>
-                        </span>
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
+                  <div className="col-lg-10">
+                    <div className="input-group m-b-10">
+                      <span className="input-group-btn">
+                        <button className="btn btn-white" type="button">
+                          Go!
+                        </button>
+                      </span>
+                      <input type="text" className="form-control" />
+                    </div>
+                    <div className="input-group m-b-10">
+                      <input type="text" className="form-control" />
+                      <span className="input-group-btn">
+                        <button className="btn btn-white" type="button">
+                          Go!
+                        </button>
+                      </span>
+                    </div>
+                    <div className="input-group m-b-10">
+                      <div className="input-group-btn">
+                        <button
+                          type="button"
+                          className="btn btn-white dropdown-toggle"
+                          data-toggle="dropdown"
+                        >
+                          Action
+                          <span className="caret" />
+                        </button>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li className="divider" />
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                        </ul>
                       </div>
-                      <div className="input-group m-b-10">
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
-                        <span className="input-group-btn">
-                          <button
-                            className="btn btn-white"
-                            type="button">
-                            Go!
-                          </button>
-                        </span>
-                      </div>
-                      <div className="input-group m-b-10">
-                        <div className="input-group-btn">
-                          <button
-                            type="button"
-                            className="btn btn-white dropdown-toggle"
-                            data-toggle="dropdown">
-                            Action
-                            <span className="caret"></span>
-                          </button>
-                          <ul className="dropdown-menu">
-                            <li>
-                              <a href="#">
-                                Action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Another action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Something else here
-                              </a>
-                            </li>
-                            <li className="divider"></li>
-                            <li>
-                              <a href="#">
-                                Separated link
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
-                      </div>
-                      <div className="input-group m-b-10">
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
-                        <div className="input-group-btn">
-                          <button
-                            type="button"
-                            className="btn btn-white dropdown-toggle"
-                            data-toggle="dropdown">
-                            Action
-                            <span className="caret"></span>
-                          </button>
-                          <ul className="dropdown-menu pull-right">
-                            <li>
-                              <a href="#">
-                                Action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Another action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Something else here
-                              </a>
-                            </li>
-                            <li className="divider"></li>
-                            <li>
-                              <a href="#">
-                                Separated link
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
+                      <input type="text" className="form-control" />
+                    </div>
+                    <div className="input-group m-b-10">
+                      <input type="text" className="form-control" />
+                      <div className="input-group-btn">
+                        <button
+                          type="button"
+                          className="btn btn-white dropdown-toggle"
+                          data-toggle="dropdown"
+                        >
+                          Action
+                          <span className="caret" />
+                        </button>
+                        <ul className="dropdown-menu pull-right">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li className="divider" />
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-sm-2 control-label col-lg-2">
-                      Segmented buttons
-                    </label>
-                    <div className="col-lg-10">
-                      <div className="input-group m-b-10">
-                        <div className="input-group-btn">
-                          <button
-                            tabIndex="-1"
-                            className="btn btn-white"
-                            type="button">
-                            Action
-                          </button>
-                          <button
-                            tabIndex="-1"
-                            data-toggle="dropdown"
-                            className="btn btn-white dropdown-toggle"
-                            type="button">
-                            <span className="caret"></span>
-                          </button>
-                          <ul
-                            role="menu"
-                            className="dropdown-menu">
-                            <li>
-                              <a href="#">
-                                Action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Another action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Something else here
-                              </a>
-                            </li>
-                            <li className="divider"></li>
-                            <li>
-                              <a href="#">
-                                Separated link
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
-                      </div>
-                      <div className="input-group m-b-10">
-                        <input
-                          type="text"
-                          className="form-control"
-                        />
-                        <div className="input-group-btn">
-                          <button
-                            tabIndex="-1"
-                            className="btn btn-white"
-                            type="button">
-                            Action
-                          </button>
-                          <button
-                            tabIndex="-1"
-                            data-toggle="dropdown"
-                            className="btn btn-white dropdown-toggle"
-                            type="button">
-                            <span className="caret"></span>
-                          </button>
-                          <ul
-                            role="menu"
-                            className="dropdown-menu pull-right">
-                            <li>
-                              <a href="#">
-                                Action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Another action
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                Something else here
-                              </a>
-                            </li>
-                            <li className="divider"></li>
-                            <li>
-                              <a href="#">
-                                Separated link
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-            <section className="panel">
-              <header className="panel-heading">
-                Inline Grid
-              </header>
-              <div className="panel-body">
-                <div className="row">
-                  <div className="col-md-12 form-group">
-                    <input type="text" placeholder=".col-md-12" className="form-control" />
-                  </div>
-
-                  <div className="col-md-6 form-group">
-                    <input type="text" placeholder=".col-md-6" className="form-control" />
-                  </div>
-
-                  <div className="col-md-6 form-group">
-                    <input type="text" placeholder=".col-md-6" className="form-control" />
-                  </div>
-
-                  <div className="col-md-4 form-group">
-                    <input type="text" placeholder=".col-md-4" className="form-control" />
-                  </div>
-
-                  <div className="col-md-4 form-group">
-                    <input type="text" placeholder=".col-md-4" className="form-control" />
-                  </div>
-
-                  <div className="col-md-4 form-group">
-                    <input type="text" placeholder=".col-md-4" className="form-control" />
-                  </div>
-
-                  <div className="col-md-3 form-group">
-                    <input type="text" placeholder=".col-md-3" className="form-control" />
-                  </div>
-
-                  <div className="col-md-3 form-group">
-                    <input type="text" placeholder=".col-md-3" className="form-control" />
-                  </div>
-
-                  <div className="col-md-3 form-group">
-                    <input type="text" placeholder=".col-md-3" className="form-control" />
-                  </div>
-
-                  <div className="col-md-3 form-group">
-                    <input type="text" placeholder=".col-md-3" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-2 form-group">
-                    <input type="text" placeholder=".col-md-2" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
-                  </div>
-
-                  <div className="col-md-1 form-group">
-                    <input type="text" placeholder=".col-md-1" className="form-control" />
                   </div>
                 </div>
+                <div className="form-group">
+                  <label className="col-sm-2 control-label col-lg-2">
+                    Segmented buttons
+                  </label>
+                  <div className="col-lg-10">
+                    <div className="input-group m-b-10">
+                      <div className="input-group-btn">
+                        <button
+                          tabIndex="-1"
+                          className="btn btn-white"
+                          type="button"
+                        >
+                          Action
+                        </button>
+                        <button
+                          tabIndex="-1"
+                          data-toggle="dropdown"
+                          className="btn btn-white dropdown-toggle"
+                          type="button"
+                        >
+                          <span className="caret" />
+                        </button>
+                        <ul role="menu" className="dropdown-menu">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li className="divider" />
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <input type="text" className="form-control" />
+                    </div>
+                    <div className="input-group m-b-10">
+                      <input type="text" className="form-control" />
+                      <div className="input-group-btn">
+                        <button
+                          tabIndex="-1"
+                          className="btn btn-white"
+                          type="button"
+                        >
+                          Action
+                        </button>
+                        <button
+                          tabIndex="-1"
+                          data-toggle="dropdown"
+                          className="btn btn-white dropdown-toggle"
+                          type="button"
+                        >
+                          <span className="caret" />
+                        </button>
+                        <ul role="menu" className="dropdown-menu pull-right">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li className="divider" />
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section className="panel">
+            <header className="panel-heading">Inline Grid</header>
+            <div className="panel-body">
+              <div className="row">
+                <div className="col-md-12 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-12"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-6 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-6"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-6 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-6"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-4 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-4"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-4 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-4"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-4 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-4"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-3 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-3"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-3 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-3"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-3 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-3"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-3 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-3"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-2 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-2"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
+
+                <div className="col-md-1 form-group">
+                  <input
+                    type="text"
+                    placeholder=".col-md-1"
+                    className="form-control"
+                  />
+                </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
-      </AnimatedView>
-    );
-  }
+      </div>
+    </AnimatedView>
+  );
 }
+
+BasicElements.displayName = 'BasicElements';
+
+BasicElements.propTypes = {
+  actions: PropTypes.shape({
+    enterBasicElements: PropTypes.func,
+    leaveBasicElements: PropTypes.func,
+  }),
+};
 
 export default BasicElements;
