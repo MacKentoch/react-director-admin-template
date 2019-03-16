@@ -1,26 +1,47 @@
-// @flow weak
+// @flow
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const UserPanel = props => (
+type Props = {
+  showUserPicture: boolean,
+  userPicture: string,
+  hello: string,
+  username: string,
+  online: boolean,
+  connectionStatus: {
+    online: 'Online' | string,
+    disconnected: 'Disconnected' | string,
+  },
+};
+
+const UserPanel = ({
+  userPicture,
+  showUserPicture,
+  hello,
+  username,
+  online,
+  connectionStatus,
+}: Props) => (
   <div className="user-panel">
-    {props.showUserPicture && (
+    {showUserPicture && (
       <div className="pull-left image">
-        <img src={props.userPicture} className="img-circle" alt="User Image" />
+        <img src={userPicture} className="img-circle" alt="User Image" />
       </div>
     )}
     <div className="pull-left info">
-      <p>{`${props.hello} ${props.username}`}</p>
+      <p>{`${hello} ${username}`}</p>
       <a href="#">
-        {props.online && <i className="fa fa-circle text-success" />}
-        {props.online && props.connectionStatus.online}
-        {!props.online && <i className="fa fa-circle text-default" />}
-        {!props.online && props.connectionStatus.disconnected}
+        {online && <i className="fa fa-circle text-success" />}
+        {online && connectionStatus.online}
+        {!online && <i className="fa fa-circle text-default" />}
+        {!online && connectionStatus.disconnected}
       </a>
     </div>
   </div>
 );
+
+UserPanel.displayName = 'UserPanel';
 
 UserPanel.propTypes = {
   hello: PropTypes.string,

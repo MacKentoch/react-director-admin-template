@@ -10,7 +10,7 @@ type State = {
   isCollapsed: boolean,
 };
 
-type View = {
+type MenuItem = {
   name: string,
   linkTo: string,
   faIconName: string,
@@ -21,7 +21,7 @@ type Props = {
   headerTitle: string,
   headerBackColor: string,
   activeView: string,
-  views: Array<View>,
+  views: Array<MenuItem>,
   initialCollapseState?: boolean,
 };
 

@@ -23,6 +23,8 @@ const AsideRight = ({ children, isAnimated, isExpanded }: Props) => (
   </aside>
 );
 
+AsideRight.displayName = 'AsideRight';
+
 AsideRight.propTypes = {
   children: PropTypes.node.isRequired,
   isAnimated: PropTypes.bool.isRequired,

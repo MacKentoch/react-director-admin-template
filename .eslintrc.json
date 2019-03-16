@@ -6,7 +6,7 @@
     "jest": true,
     "mocha": true
   },
-  "plugins": ["react", "flowtype"],
+  "plugins": ["react", "flowtype", "react-hooks"],
   "extends": ["plugin:react/recommended", "plugin:flowtype/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
@@ -90,6 +90,8 @@
     "$FixMe": false
   },
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prefer-const": [
       "error",
       {

@@ -13,6 +13,7 @@ type MenuItem = {
   name: string,
   linkTo: string,
   faIconName: string,
+  itemCount?: number,
 };
 
 type SideMenuItem = {
@@ -83,7 +84,7 @@ const AsideLeft = ({
         return (
           <Menu
             key={menuIdx}
-            initialCollapseState={menuIdx === 0 ? false : null}
+            initialCollapseState={menuIdx === 0}
             headerTitle={group}
             headerBackColor="#283744"
             activeView={currentView}
@@ -95,6 +96,8 @@ const AsideLeft = ({
     </section>
   </aside>
 );
+
+AsideLeft.displayName = 'AsideLeft';
 
 AsideLeft.propTypes = {
   isAnimated: PropTypes.bool,
