@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 
 // #region imports
-import React, { Component } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import BackToTopButton from './backToTopButton/BackToTopButton';
 import { Motion, spring, presets } from 'react-motion';
 // #endregion
@@ -14,70 +14,24 @@ type Props = {
   scrollTo?: string,
   onScrollDone?: () => any,
 };
-
-type State = {
-  windowScrollY: number,
-  showBackButton: boolean,
-  tickingScollObserve: boolean,
-};
 // #endregion
 
-class BackToTop extends Component<Props, State> {
-  static defaultProps = {
-    minScrollY: 120,
-    onScrollDone: () => {},
-  };
+function BackToTop({ minScrollY, scrollTo, onScrollDone }: Props) {
+  const [windowScrollY, setWindowScrollY] = useState(0);
+  const [showBackButton, setShowBackButton] = useState(false);
+  const [tickingScollObserve, setTickingScollObserve] = useState(false);
 
-  state = {
-    windowScrollY: 0,
-    showBackButton: false,
-    tickingScollObserve: false,
-  };
-
-  // #region lifecycle methods
-  componentDidMount() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', this.handleWindowScroll);
-    }
-  }
-
-  componentWillUnmount() {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('scroll', this.handleWindowScroll);
-    }
-  }
-
-  render() {
-    const { showBackButton } = this.state;
-    return (
-      <Motion style={{ x: spring(showBackButton ? 0 : 120, presets.stiff) }}>
-        {({ x }) => (
-          <BackToTopButton
-            position={'bottom-right'}
-            onClick={this.handlesOnBackButtonClick}
-            motionStyle={{
-              WebkitTransform: `translate3d(${x}px, 0, 0)`,
-              transform: `translate3d(${x}px, 0, 0)`,
-            }}
-          />
-        )}
-      </Motion>
-    );
-  }
-  // #endregion
-
-  // #region on windows scroll callback
-  handleWindowScroll = () => {
+  // #region window scroll event
+  const handleWindowScroll = useCallback(() => {
     if (window) {
-      const { windowScrollY, tickingScollObserve } = this.state;
-      const { minScrollY } = this.props;
-
       /* eslint-disable no-undefined */
       const currentWindowScrollY =
         window.pageYOffset !== undefined
           ? window.pageYOffset
-          : (
+          : // $FlowIgnore
+            (
               document.documentElement ||
+              // $FlowIgnore
               document.body.parentNode ||
               document.body
             ).scrollTop;
@@ -87,45 +41,68 @@ class BackToTop extends Component<Props, State> {
       if (!tickingScollObserve) {
         window.requestAnimationFrame(() => {
           if (windowScrollY !== currentWindowScrollY) {
-            const shouldShowBackButton =
-              currentWindowScrollY >= minScrollY ? true : false;
+            const shouldShowBackButton = currentWindowScrollY >= minScrollY;
 
-            this.setState({
-              windowScrollY: currentWindowScrollY,
-              showBackButton: shouldShowBackButton,
-            });
+            setWindowScrollY(currentWindowScrollY);
+            setShowBackButton(shouldShowBackButton);
           }
-          this.setState({ tickingScollObserve: false });
+          setTickingScollObserve(false);
         });
       }
 
-      this.setState({ tickingScollObserve: true });
+      setTickingScollObserve(true);
     }
-  };
+  }, [minScrollY, tickingScollObserve, windowScrollY]);
   // #endregion
 
-  // #region on button click (smooth scroll)
-  handlesOnBackButtonClick = (event: SyntheticEvent<>) => {
-    if (event) {
-      event.preventDefault();
-    }
-    const { minScrollY } = this.props;
-    const { windowScrollY } = this.state;
+  // #region unmount / unmount
+  useEffect(() => {
+    window && window.addEventListener('scroll', handleWindowScroll);
 
-    if (window && windowScrollY && windowScrollY > minScrollY) {
-      // using here smoothscroll-polyfill
-      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-      // smoothScroll.scrollTo(scrollTo, this.scrollDone);
-    }
-  };
-
-  scrollDone = () => {
-    const { onScrollDone } = this.props;
-    if (onScrollDone) {
-      onScrollDone();
-    }
-  };
+    return () => {
+      window && window.removeEventListener('scroll', handleWindowScroll);
+    };
+  }, []);
   // #endregion
+
+  const handlesOnBackButtonClick = useCallback(
+    (event: SyntheticEvent<>) => {
+      event && event.preventDefault();
+
+      if (window && windowScrollY && windowScrollY > minScrollY) {
+        // using here smoothscroll-polyfill
+        window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        // smoothScroll.scrollTo(scrollTo, this.scrollDone);
+      }
+    },
+    [minScrollY, windowScrollY],
+  );
+
+  // const scrollDone = useCallback(() => {
+  //   onScrollDone && onScrollDone();
+  // }, [onScrollDone]);
+
+  return (
+    <Motion style={{ x: spring(showBackButton ? 0 : 120, presets.stiff) }}>
+      {({ x }) => (
+        <BackToTopButton
+          position={'bottom-right'}
+          onClick={handlesOnBackButtonClick}
+          motionStyle={{
+            WebkitTransform: `translate3d(${x}px, 0, 0)`,
+            transform: `translate3d(${x}px, 0, 0)`,
+          }}
+        />
+      )}
+    </Motion>
+  ); // #endregion
 }
+
+BackToTop.displayName = 'BackToTop';
+
+BackToTop.defaultProps = {
+  minScrollY: 120,
+  onScrollDone: () => {},
+};
 
 export default BackToTop;

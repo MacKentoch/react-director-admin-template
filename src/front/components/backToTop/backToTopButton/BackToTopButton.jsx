@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import UpIcon from './UpIcon';
@@ -36,10 +36,12 @@ const BackToTopButton = ({
   children,
   motionStyle,
 }: Props) => {
-  const buttonStyle = setPosition(position, {
-    ...motionStyle,
-    ...defaultStyle,
-  });
+  const buttonStyle = useMemo(() => {
+    return setPosition(position, {
+      ...motionStyle,
+      ...defaultStyle,
+    });
+  }, [motionStyle, position]);
 
   return (
     <button

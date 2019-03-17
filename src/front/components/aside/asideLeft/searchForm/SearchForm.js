@@ -1,26 +1,28 @@
-// @flow weak
+// @flow
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { useCallback } from 'react';
 
 type Props = {
   onSearchSubmit: (value: string) => any,
 };
 
 function SearchForm({ onSearchSubmit }: Props) {
-  const searchinput = useRef();
+  const searchinput = useRef(null);
 
   useEffect(() => {
     searchinput.current && searchinput.current.focus();
   }, []);
 
-  const handlesFormKeyPress = useCallback(event => {
-    if (event && event.charCode === 13) {
-      event.preventDefault();
-      onSearchSubmit(this.searchinput.value.trim());
-    }
-  });
+  const handlesFormKeyPress = useCallback(
+    (event: any) => {
+      if (event && event.charCode === 13) {
+        event.preventDefault();
+        searchinput.current && onSearchSubmit(searchinput.current.value.trim());
+      }
+    },
+    [onSearchSubmit],
+  );
 
   return (
     <form className="sidebar-form" onKeyPress={handlesFormKeyPress}>
