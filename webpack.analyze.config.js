@@ -4,7 +4,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin'); // not breaking hooks contrary to UglifyJsPlugin
 const workboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -85,11 +86,7 @@ const config = {
         filename: '[name].[hash].css',
         chunkFilename: '[id].[hash].css',
       }),
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
-      }),
+      new TerserPlugin(),
       new OptimizeCSSAssetsPlugin({}),
     ],
   },

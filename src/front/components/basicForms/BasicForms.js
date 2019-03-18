@@ -1,21 +1,18 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import Panel      from '../panel/Panel';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Panel from '../panel/Panel';
 
-const BasicForms = ({
-  headerTitle
-}) => (
-  <Panel
-    hasTitle={true}
-    title={headerTitle}>
+type Props = {
+  headerTitle: string,
+};
+
+const BasicForms = ({ headerTitle }: Props) => (
+  <Panel hasTitle={true} title={headerTitle}>
     <form role="form">
-
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">
-          Email address
-        </label>
+        <label htmlFor="exampleInputEmail1">Email address</label>
         <input
           type="email"
           className="form-control"
@@ -25,10 +22,7 @@ const BasicForms = ({
       </div>
 
       <div className="form-group">
-        <label
-          htmlFor="exampleInputPassword1">
-          Password
-        </label>
+        <label htmlFor="exampleInputPassword1">Password</label>
         <input
           type="password"
           className="form-control"
@@ -38,41 +32,31 @@ const BasicForms = ({
       </div>
 
       <div className="form-group">
-        <label htmlFor="exampleInputFile">
-          File input
-        </label>
-        <input
-          type="file"
-          id="exampleInputFile"
-        />
-        <p className="help-block">
-          Example block-level help text here.
-        </p>
+        <label htmlFor="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile" />
+        <p className="help-block">Example block-level help text here.</p>
       </div>
 
       <div className="checkbox">
         <label>
           <input type="checkbox" />
-            Check me out
+          Check me out
         </label>
       </div>
 
-      <button
-        type="submit"
-        className="btn btn-info">
+      <button type="submit" className="btn btn-info">
         Submit
       </button>
-
     </form>
   </Panel>
 );
 
 BasicForms.propTypes = {
-  headerTitle: PropTypes.string
+  headerTitle: PropTypes.string,
 };
 
 BasicForms.defaultProps = {
-  headerTitle: 'Basic Forms'
+  headerTitle: 'Basic Forms',
 };
 
 export default BasicForms;
