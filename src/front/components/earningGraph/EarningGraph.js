@@ -1,80 +1,82 @@
-// @flow weak
+// @flow
 
-import React, {
-  PureComponent
-}                     from 'react';
-import PropTypes      from 'prop-types';
-import Chart          from 'chart.js';
-import {
-  earningGraphMockData
-}                     from '../../models';
-import Panel          from '../panel/Panel';
+import React, { useRef, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
+import Chart from 'chart.js';
+import { earningGraphMockData } from '../../models';
+import Panel from '../panel/Panel';
 
+type Dataset = {
+  label: string,
+  fillColor: string,
+  strokeColor: string,
+  pointColor: string,
+  pointStrokeColor: string,
+  pointHighlightFill: string,
+  pointHighlightStroke: string,
+  data: number[],
+};
 
-class EarningGraph extends PureComponent {
-  static propTypes = {
-    labels:   PropTypes.array,
-    datasets: PropTypes.array
-  };
+type Data = {
+  labels: Array<string>,
+  datasets: Array<Dataset>,
+};
 
-  static defaultProps = {
-    data: earningGraphMockData
-  };
+type Props = {} & Data;
 
-  chart = null;
-  linechart = null;
+const options = {
+  responsive: true,
+  maintainAspectRatio: true,
+};
 
-  componentDidMount() {
-    const { labels, datasets } = this.props;
-    this.drawChart({labels, datasets});
-  }
+function EarningGraph({ labels, datasets }: Props) {
+  const chart = useRef(null);
+  const linechart = useRef(null);
+  const prevLabels = useRef([]);
+  const prevDatasets = useRef([]);
 
-  componentWillReceiveProps(newProps) {
-    const { labels, datasets } = this.props;
-    if ((newProps.labels.length > 0 && newProps.datasets.length > 0) &&
-        (labels.length === 0 && datasets.length === 0)) {
-      this.drawChart({
-        labels: newProps.labels,
-        datasets: newProps.datasets
+  const drawChart = useCallback((data: Data) => {
+    if (linechart.current) {
+      chart.current = new Chart(linechart.current.getContext('2d'), {
+        type: 'line',
+        data: { labels, datasets },
+        options,
       });
     }
-  }
+  });
 
-  render() {
-    return (
-      <Panel
-        hasTitle={true}
-        title={'Earning Graph'}>
-        <canvas
-          ref={this.getCanvaRef}
-          id="linechart"
-          width="600"
-          height="330"
-        />
-      </Panel>
-    );
-  }
+  useEffect(() => {
+    prevLabels.current = labels;
+    prevDatasets.current = datasets;
+    drawChart({ labels, datasets });
+  }, []);
 
-  getCanvaRef = ref => (this.linechart = ref)
-
-  drawChart(data) {
-    // BAR CHART
-    const options = {
-      responsive : true,
-      maintainAspectRatio: true
-    };
-
-    if (this.linechart) {
-      this.chart = new Chart(
-        this.linechart.getContext('2d'),
-        {
-          type: 'line',
-          data,
-          options
-        }
-      );
+  useEffect(() => {
+    if (
+      labels.length > 0 &&
+      datasets.length > 0 &&
+      (prevLabels.current.length === 0 && prevDatasets.current.length === 0)
+    ) {
+      drawChart({ labels, datasets });
     }
-  }
+  }, [labels, datasets]);
+
+  return (
+    <Panel hasTitle title={'Earning Graph'}>
+      <canvas ref={linechart} id="linechart" width="600" height="330" />
+    </Panel>
+  );
 }
+
+EarningGraph.displayName = 'EarningGraph';
+
+EarningGraph.defaultProps = {
+  data: earningGraphMockData,
+};
+
+EarningGraph.propTypes = {
+  labels: PropTypes.array,
+  datasets: PropTypes.array,
+};
 
 export default EarningGraph;

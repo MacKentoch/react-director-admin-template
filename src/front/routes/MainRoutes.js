@@ -27,8 +27,6 @@ export const MainRoutes = () => (
   <Switch>
     <Route exact path="/" component={HomeConnected} />
 
-    {/* <Route exact path="/" component={HomeConnected} /> */}
-
     <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
     <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />
     <Route path="/Dashboard/notifications" component={NotificationsConnected} />
@@ -58,6 +56,8 @@ export const MainRoutes = () => (
 
     {/* private views: need user to be authenticated */}
     <PrivateRoute path="/protected" component={ProtectedConnected} />
+
+    <Route path="/" component={HomeConnected} />
   </Switch>
 );
 
