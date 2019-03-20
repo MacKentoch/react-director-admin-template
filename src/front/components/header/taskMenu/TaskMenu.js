@@ -1,20 +1,15 @@
+// @flow
+
 import React from 'react';
 
 const TaskMenu = () => (
   <li className="dropdown tasks-menu">
-    <a
-      href="#"
-      className="dropdown-toggle"
-      data-toggle="dropdown">
+    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
       <i className="fa fa-tasks" />
-      <span className="label label-danger">
-        9
-      </span>
+      <span className="label label-danger">9</span>
     </a>
     <ul className="dropdown-menu">
-      <li className="header">
-        You have 9 tasks
-      </li>
+      <li className="header">You have 9 tasks</li>
       <li>
         {/* <!-- inner menu: contains the actual data --> */}
         <ul className="menu">
@@ -28,14 +23,13 @@ const TaskMenu = () => (
               <div className="progress progress-striped xs">
                 <div
                   className="progress-bar progress-bar-success"
-                  style={{width: '20%'}}
+                  style={{ width: '20%' }}
                   role="progressbar"
                   aria-valuenow="20"
                   aria-valuemin="0"
-                  aria-valuemax="100">
-                  <span className="sr-only">
-                    20% Complete
-                  </span>
+                  aria-valuemax="100"
+                >
+                  <span className="sr-only">20% Complete</span>
                 </div>
               </div>
             </a>
@@ -51,14 +45,13 @@ const TaskMenu = () => (
               <div className="progress progress-striped xs">
                 <div
                   className="progress-bar progress-bar-danger"
-                  style={{width: '40%'}}
+                  style={{ width: '40%' }}
                   role="progressbar"
                   aria-valuenow="20"
                   aria-valuemin="0"
-                  aria-valuemax="100">
-                  <span className="sr-only">
-                    40% Complete
-                  </span>
+                  aria-valuemax="100"
+                >
+                  <span className="sr-only">40% Complete</span>
                 </div>
               </div>
             </a>
@@ -74,14 +67,13 @@ const TaskMenu = () => (
               <div className="progress progress-striped xs">
                 <div
                   className="progress-bar progress-bar-info"
-                  style={{width: '60%'}}
+                  style={{ width: '60%' }}
                   role="progressbar"
                   aria-valuenow="20"
                   aria-valuemin="0"
-                  aria-valuemax="100">
-                  <span className="sr-only">
-                    60% Complete
-                  </span>
+                  aria-valuemax="100"
+                >
+                  <span className="sr-only">60% Complete</span>
                 </div>
               </div>
             </a>
@@ -97,14 +89,13 @@ const TaskMenu = () => (
               <div className="progress progress-striped xs">
                 <div
                   className="progress-bar progress-bar-warning"
-                  style={{width: '80%'}}
+                  style={{ width: '80%' }}
                   role="progressbar"
                   aria-valuenow="20"
                   aria-valuemin="0"
-                  aria-valuemax="100">
-                  <span className="sr-only">
-                    80% Complete
-                  </span>
+                  aria-valuemax="100"
+                >
+                  <span className="sr-only">80% Complete</span>
                 </div>
               </div>
             </a>
@@ -113,12 +104,12 @@ const TaskMenu = () => (
         </ul>
       </li>
       <li className="footer">
-        <a href="#">
-          View all tasks
-        </a>
+        <a href="#">View all tasks</a>
       </li>
     </ul>
   </li>
 );
+
+TaskMenu.displayName = 'TaskMenu';
 
 export default TaskMenu;
