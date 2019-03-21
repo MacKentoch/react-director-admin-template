@@ -1,64 +1,49 @@
-// @flow weak
+// @flow
 
-import React, {
-  PureComponent
-}                 from 'react';
-import moment     from 'moment';
+import React, { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+
+// type Props = {};
 
 const CENTIEME_SEC = 1000;
-const DATE_FORMAT  = 'MM/DD/YYYY';
-const TIME_FORMAT  = 'HH:mm:ss';
+const DATE_FORMAT = 'MM/DD/YYYY';
+const TIME_FORMAT = 'HH:MM:SS';
 
-class Horloge extends PureComponent {
-  state = {
-    date: moment().format('DD/MM/YYYY'),
-    time: moment().format('HH:MM:SS')
-  };
+function Horloge() {
+  const [date, setDate] = useState(format(new Date(), DATE_FORMAT));
+  const [time, setTime] = useState(format(new Date(), TIME_FORMAT));
 
-  horloge = null;
+  useEffect(() => {
+    function ticTac() {
+      const now = new Date();
+      setDate(format(now, DATE_FORMAT));
+      setTime(format(now, TIME_FORMAT));
+    }
 
-  componentDidMount() {
-    this.horloge = setInterval(
-      () => this.ticTac(),
-      CENTIEME_SEC
-    );
-  }
+    const horloge = setInterval(() => ticTac(), CENTIEME_SEC);
 
-  componentWillUnmount() {
-    clearInterval(this.horloge);
-    this.horloge = null;
-  }
+    return () => {
+      clearInterval(horloge);
+    };
+  }, []);
 
-  render() {
-    const { time, date } = this.state;
-    return (
-      <div
-        className="row horlogeContainer dateAndTimeContainer text-center"
-        style={{marginLeft: 0, marginRight: 0}}>
-        <div className="col-xs-12 dateAndTimeContainer">
-          <h2
-            className="text-center"
-            style={{marginTop: '5px'}}>
-            <span className="horlogeTime">
-              {time}
-            </span>
-          </h2>
-          <h5 className="text-center">
-            <span className="horlogeDate">
-              {date}
-            </span>
-          </h5>
-        </div>
+  return (
+    <div
+      className="row horlogeContainer dateAndTimeContainer text-center"
+      style={{ marginLeft: 0, marginRight: 0 }}
+    >
+      <div className="col-xs-12 dateAndTimeContainer">
+        <h2 className="text-center" style={{ marginTop: '5px' }}>
+          <span className="horlogeTime">{time}</span>
+        </h2>
+        <h5 className="text-center">
+          <span className="horlogeDate">{date}</span>
+        </h5>
       </div>
-    );
-  }
-
-  ticTac() {
-    this.setState({
-      date: moment().format(DATE_FORMAT),
-      time: moment().format(TIME_FORMAT)
-    });
-  }
+    </div>
+  );
 }
+
+Horloge.displayName = 'Horloge';
 
 export default Horloge;

@@ -4,11 +4,13 @@
       width: 1px;
       style: outset;
     }
+
     top: {
       width: 1px;
       style: outset;
     }
   }
+
   margin: {
     bottom: 10px;
     top: 10px;
@@ -16,13 +18,14 @@
 }
 
 .dateAndTimeContainer {
-  color: rgb(238,238,238);
+  color: rgb(238, 238, 238);
 }
 
 .ionIconHorloge {
   font: {
     size: 12px;
   }
+
   margin-right: 10px;
 }
 
@@ -30,17 +33,15 @@
   // color: #fff;
 }
 
-.horlogeDateContainer {
+.horlogeDateContainer {}
 
-}
 .horlogeDate {
   font: {
     size: 13px;
   }
 }
-.horlogeTimeContainer {
 
-}
+.horlogeTimeContainer {}
 
 .horlogeTime {
   font: {
