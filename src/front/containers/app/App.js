@@ -26,11 +26,11 @@ function App({
     toggleSideMenu,
   },
 }: Props) {
-  const [appName, setAppName] = useState(appConfig.APP_NAME);
-  const [connectionStatus, setConnectionStatus] = useState(
+  const [appName] = useState(appConfig.APP_NAME);
+  const [connectionStatus] = useState(
     appConfig.CONNECTION_STATUS,
   );
-  const [helloWord, setHelloWord] = useState(appConfig.HELLO_WORD);
+  const [helloWord] = useState(appConfig.HELLO_WORD);
 
   /* elsin-disable */
   useEffect(() => {
