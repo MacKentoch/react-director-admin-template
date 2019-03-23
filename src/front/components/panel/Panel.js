@@ -1,45 +1,45 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
+
+type Props = {
+  hasTitle: boolean,
+  title: string,
+  bodyBackGndColor: string,
+  bodyCustomClass: string,
+  sectionCustomClass: string,
+  children: any,
+};
 
 const Panel = ({
-  hasTitle,
-  title,
-  bodyBackGndColor,
+  hasTitle = true,
+  title = 'no title set',
+  bodyBackGndColor = '#FFF',
   bodyCustomClass,
-  sectionCustomClass,
-  children
-}) => (
+  sectionCustomClass = '',
+  children,
+}: Props) => (
   <section className={`panel ${sectionCustomClass}`}>
-    {
-      hasTitle &&
-      <header className="panel-heading">
-        {title}
-      </header>
-    }
+    {hasTitle && <header className="panel-heading">{title}</header>}
     <div
       className={`panel-body ${bodyCustomClass}`}
-      style={{backgroundColor: bodyBackGndColor}}>
-      { children }
+      style={{ backgroundColor: bodyBackGndColor }}
+    >
+      {children}
     </div>
   </section>
 );
 
-Panel.propTypes = {
-  hasTitle:           PropTypes.bool,
-  title:              PropTypes.string,
-  bodyBackGndColor:   PropTypes.string,
-  bodyCustomClass:    PropTypes.string,
-  sectionCustomClass: PropTypes.string,
-  children:           PropTypes.node
-};
+Panel.displayName = 'Panel';
 
-Panel.defaultProps = {
-  hasTitle:           true,
-  title:              'no title set',
-  sectionCustomClass: '',
-  bodyBackGndColor:   '#FFF'
+Panel.propTypes = {
+  hasTitle: PropTypes.bool,
+  title: PropTypes.string,
+  bodyBackGndColor: PropTypes.string,
+  bodyCustomClass: PropTypes.string,
+  sectionCustomClass: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Panel;

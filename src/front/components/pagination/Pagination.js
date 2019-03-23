@@ -1,59 +1,49 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import cx         from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 
-const Pagination = ({
-  size,
-  numberOfPagination
-}) => {
-  const arrayOfPaginationIndexes = [...Array(numberOfPagination)].map((_, y) =>  y + 1);
+type Props = {
+  size?: 'large' | 'default' | 'small',
+  numberOfPagination: number,
+};
+
+const Pagination = ({ size = 'default', numberOfPagination = 5 }: Props) => {
+  const arrayOfPaginationIndexes = [...Array(numberOfPagination)].map(
+    (_, y) => y + 1,
+  );
 
   return (
     <ul
-      className={
-        cx({
-          pagination: true,
-          'pagination-lg': size === 'large',
-          'pagination-sm': size === 'small'
-        })
-      }>
+      className={cx({
+        pagination: true,
+        'pagination-lg': size === 'large',
+        'pagination-sm': size === 'small',
+      })}
+    >
       <li>
-        <a href="#">
-          «
-        </a>
+        <a href="#">«</a>
       </li>
-      {
-        arrayOfPaginationIndexes.map(
-          (index, key) => {
-            return (
-              <li key={key}>
-                <a href="#">
-                  {index}
-                </a>
-              </li>
-            );
-          }
-        )
-      }
+      {arrayOfPaginationIndexes.map((index, key) => {
+        return (
+          <li key={key}>
+            <a href="#">{index}</a>
+          </li>
+        );
+      })}
       <li>
-        <a href="#">
-          »
-        </a>
+        <a href="#">»</a>
       </li>
     </ul>
   );
 };
 
-Pagination.propTypes = {
-  size:               PropTypes.oneOf(['large', 'default', 'small']),
-  numberOfPagination: PropTypes.number.isRequired
-};
+Pagination.displayName = 'Pagination';
 
-Pagination.defaultProps = {
-  size:               'default',
-  numberOfPagination: 5
+Pagination.propTypes = {
+  size: PropTypes.oneOf(['large', 'default', 'small']),
+  numberOfPagination: PropTypes.number.isRequired,
 };
 
 export default Pagination;
