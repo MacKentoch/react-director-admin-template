@@ -1,61 +1,66 @@
-// @flow weak
+// @flow
 
-import React, {
-  Component
-}                         from 'react';
-import PropTypes          from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 import {
-  Route,
-  Redirect,
-  withRouter
-}                         from 'react-router-dom';
-import auth               from '../../services/auth';
+  type Match,
+  type Location,
+  type RouterHistory,
+} from 'react-router-dom';
+import auth from '../../services/auth';
 
-class PrivateRoute extends Component {
-  static propTypes = {
-    // react-router 4:
-    match:    PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
-    history:  PropTypes.object.isRequired,
+type Props = {
+  match: Match,
+  location: Location,
+  history: RouterHistory,
 
-    component:  PropTypes.any.isRequired,
-    path:       PropTypes.string
-  };
+  component: any,
+  path?: string,
+};
 
-  render() {
-    const {
-      component: InnerComponent,
-      ...rest
-    } = this.props;
-    const { location } = this.props;
-
-    const isUserAuthenticated = this.isAuthenticated();
-    const isTokenExpired      = this.isExpired();
-
-    return (
-      <Route
-        {...rest}
-        render={
-          props => (
-            !isTokenExpired && isUserAuthenticated
-              ? <InnerComponent {...props} />
-              : <Redirect to={{ pathname: '/login', state: { from: location } }} />
-          )
-        }
-      />
-    );
-  }
-
-  isAuthenticated() {
-    const checkUserHasId = user => user && user.id;
-    const user = auth.getUserInfo()  ? auth.getUserInfo() : null;
-    const isAuthenticated = auth.getToken() && checkUserHasId(user);
-    return isAuthenticated;
-  }
-
-  isExpired() {
-    return auth.isExpiredToken(auth.getToken());
-  }
+function isAuthenticated() {
+  const checkUserHasId = user => user && user.id;
+  const user = auth.getUserInfo() ? auth.getUserInfo() : null;
+  const authenticated = auth.getToken() && checkUserHasId(user);
+  return authenticated;
 }
+
+function isExpired() {
+  return auth.isExpiredToken(auth.getToken());
+}
+
+function PrivateRoute(props: Props) {
+  const { component: InnerComponent, ...rest } = props;
+  const { location } = props;
+
+  const isUserAuthenticated = isAuthenticated();
+  const isTokenExpired = isExpired();
+
+  return (
+    <Route
+      {...rest}
+      render={p =>
+        !isTokenExpired && isUserAuthenticated ? (
+          <InnerComponent {...p} />
+        ) : (
+          <Redirect to={{ pathname: '/login', state: { from: location } }} />
+        )
+      }
+    />
+  );
+}
+
+PrivateRoute.displayName = 'PrivateRoute';
+
+PrivateRoute.propTypes = {
+  // react-router 4:
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
+  component: PropTypes.any.isRequired,
+  path: PropTypes.string,
+};
 
 export default withRouter(PrivateRoute);

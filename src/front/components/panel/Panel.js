@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 type Props = {
   hasTitle: boolean,
   title: string,
-  bodyBackGndColor: string,
-  bodyCustomClass: string,
-  sectionCustomClass: string,
+  bodyBackGndColor?: string,
+  bodyCustomClass?: string,
+  sectionCustomClass?: string,
   children: any,
 };
 
@@ -16,7 +16,7 @@ const Panel = ({
   hasTitle = true,
   title = 'no title set',
   bodyBackGndColor = '#FFF',
-  bodyCustomClass,
+  bodyCustomClass = '',
   sectionCustomClass = '',
   children,
 }: Props) => (
