@@ -1,34 +1,49 @@
 // @flow
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// #region imports
+import React, { Fragment, useEffect, useRef } from 'react';
+import {
+  type Match,
+  type Location,
+  type RouterHistory,
+} from 'react-router-dom';
 import { withRouter } from 'react-router';
+// #endregion
 
-class ScrollToTop extends Component<any, any> {
-  static propTypes = {
-    // react-router 4:
-    match: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
+// #region flow types
+type Props = {
+  // react-router 4:
+  match: Match,
+  location: Location,
+  history: RouterHistory,
 
-    children: PropTypes.node,
-  };
+  children: any,
 
-  componentDidUpdate(prevProps) {
-    if (window) {
-      const { location: prevLocation } = prevProps;
-      const { location: nextLocation } = this.props;
+  ...any,
+};
+// #endregion
 
-      if (prevLocation !== nextLocation) {
-        window.scrollTo(0, 0);
-      }
+function useScrollToTopOnLocationChange(location: any) {
+  const prevLocation = useRef();
+
+  useEffect(() => {
+    prevLocation.current = location;
+  }, []);
+
+  useEffect(() => {
+    if (prevLocation.current !== location) {
+      window && window.scrollTo(0, 0);
+      prevLocation.current = location;
     }
-  }
-
-  render() {
-    const { children } = this.props;
-    return children;
-  }
+  }, [location]);
 }
+
+function ScrollToTop({ children, location }: Props) {
+  useScrollToTopOnLocationChange(location);
+
+  return <Fragment>{children}</Fragment>;
+}
+
+ScrollToTop.displayName = 'ScrollToTop';
 
 export default withRouter(ScrollToTop);
