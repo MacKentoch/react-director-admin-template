@@ -1,18 +1,18 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TableBody = ({
-  children
-}) => (
-  <tbody>
-    {children}
-  </tbody>
-);
+type Props = {
+  children: any,
+};
+
+const TableBody = ({ children }: Props) => <tbody>{children}</tbody>;
+
+TableBody.displayName = 'TableBody';
 
 TableBody.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TableBody;

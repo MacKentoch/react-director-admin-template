@@ -1,18 +1,18 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TableCol = ({
-  children
-}) => (
-  <td>
-    {children}
-  </td>
-);
+type Props = {
+  children: any,
+};
+
+const TableCol = ({ children }: Props) => <td>{children}</td>;
+
+TableCol.displayName = 'TableCol';
 
 TableCol.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TableCol;

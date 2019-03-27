@@ -1,20 +1,22 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TableHeader = ({
-  children
-}) => (
+type Props = {
+  children: any,
+};
+
+const TableHeader = ({ children }: Props) => (
   <thead>
-    <tr>
-      {children}
-    </tr>
+    <tr>{children}</tr>
   </thead>
 );
 
+TableHeader.displayName = 'TableHeader';
+
 TableHeader.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TableHeader;
