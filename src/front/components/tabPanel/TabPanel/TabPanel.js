@@ -1,18 +1,20 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TabPanel = ({
-  children
-}) => (
-  <section className="panel general">
-    {children}
-  </section>
+type Props = {
+  children: any,
+};
+
+const TabPanel = ({ children }: Props) => (
+  <section className="panel general">{children}</section>
 );
 
+TabPanel.displayName = 'TabPanel';
+
 TabPanel.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TabPanel;

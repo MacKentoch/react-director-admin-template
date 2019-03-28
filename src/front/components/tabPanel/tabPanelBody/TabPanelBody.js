@@ -1,20 +1,22 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TabPanelBody = ({
-  children
-}) => (
+type Props = {
+  children: any,
+};
+
+const TabPanelBody = ({ children }: Props) => (
   <div className="panel-body">
-    <div className="tab-content">
-      {children}
-    </div>
+    <div className="tab-content">{children}</div>
   </div>
 );
 
+TabPanelBody.displayName = 'TabPanelBody';
+
 TabPanelBody.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TabPanelBody;
