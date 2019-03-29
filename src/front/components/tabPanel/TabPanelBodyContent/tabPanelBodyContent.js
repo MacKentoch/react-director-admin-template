@@ -7,7 +7,7 @@ import cx from 'classnames';
 type Props = {
   id: string | number,
   children: any,
-  isActive: boolean,
+  isActive?: boolean,
 };
 
 const TabPanelBodyContent = ({ id, isActive = false, children }: Props) => (
