@@ -1,18 +1,20 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TeamMates = ({
-  children
-}) => (
-  <ul className="list-group teammates">
-    {children}
-  </ul>
+type Props = {
+  children: any,
+};
+
+const TeamMates = ({ children }: Props) => (
+  <ul className="list-group teammates">{children}</ul>
 );
 
+TeamMates.displayName = 'TeamMates';
+
 TeamMates.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default TeamMates;
