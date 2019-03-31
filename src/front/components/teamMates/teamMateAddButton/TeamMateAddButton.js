@@ -7,7 +7,7 @@ type Props = {
   onAdd: () => any,
 };
 
-const TeamMateAddButton = ({ onAdd }: Props) => (
+const TeamMateAddButton = ({ onAdd = () => {} }: Props) => (
   <div className="panel-footer bg-white">
     <button className="btn btn-primary btn-addon btn-sm" onClick={onAdd}>
       <i className="fa fa-plus" />
