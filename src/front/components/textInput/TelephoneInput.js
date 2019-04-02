@@ -9,12 +9,11 @@ type Props = {
   id: string | number,
   value: string,
   onChange: (value: string) => any,
-  delay: number,
 };
 
 const telephoneRegex = /^(\+33|0033|0)([0-9])[0-9]{8}$/g;
 
-function TelephoneInput({ label, id, value, onChange, delay = 200 }: Props) {
+function TelephoneInput({ label, id, value, onChange }: Props) {
   const [valid, setValid] = useState(true);
   const [stateValue, setStateValue] = useState('');
 
@@ -68,7 +67,6 @@ TelephoneInput.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  delay: PropTypes.number,
 };
 
 export default TelephoneInput;
