@@ -1,111 +1,118 @@
-// @flow weak
+// @flow
 /* eslint no-console:0 */
 
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import TodoListItemButtonEdit from '../todoListItemButtonEdit/TodoListItemButtonEdit';
 import TodoListItemButtonValid from '../todoListItemButtonValid/TodoListItemButtonValid';
 import TodoListItemButtonCancel from '../todoListItemButtonCancel/TodoListItemButtonCancel';
+import { useCallback } from 'react';
 
-class TodoListItem extends PureComponent<any, any> {
-  static propTypes = {
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    label: PropTypes.string,
-    done: PropTypes.bool,
-    statusLabel: PropTypes.string,
-    statusLabelStyle: PropTypes.oneOf([
-      'label-success',
-      'label-danger',
-      'label-warning',
-      'label-primary',
-      'label-inverse',
-    ]),
-    onListValidEdit: PropTypes.func,
-  };
+type Props = {
+  id: string | number,
+  label: string,
+  done: boolean,
+  statusLabel: string,
+  statusLabelStyle: | 'label-success'
+    | 'label-danger'
+    | 'label-warning'
+    | 'label-primary'
+    | 'label-inverse',
+  onListValidEdit: (isChecked: boolean) => any,
+};
 
-  static defaultProps = {
-    label: '',
-    statusLabelStyle: 'label-success',
-    done: false,
-  };
+function TodoListItem({
+  id,
+  label = '',
+  done = false,
+  statusLabel = '',
+  statusLabelStyle = 'label-success',
+  onListValidEdit = () => {},
+}: Props) {
+  const [isChecked, setIsChecked] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const prevDoneRef = useRef();
 
-  state = {
-    isChecked: false,
-    isEditing: false,
-  };
+  useEffect(() => {
+    prevDoneRef.current = done;
+    setIsChecked(done);
+  }, []);
 
-  componentDidMount() {
-    const { done } = this.props;
-    this.setCheckedProp(done);
-  }
-
-  componentDidUpdate(prevProps) {
-    const { done: nextDone } = this.props;
-    const { done: prevDone } = this.props;
-    if (nextDone !== prevDone) {
-      this.setCheckedProp(nextDone);
+  useEffect(() => {
+    const prevDone = prevDoneRef.current;
+    if (done !== prevDone) {
+      prevDoneRef.current = done;
+      setIsChecked(done);
     }
-  }
+  }, [done]);
 
-  render() {
-    const { label, statusLabel, statusLabelStyle } = this.props;
-    const { isChecked, isEditing } = this.state;
+  const setCheckedProp = useCallback(
+    checkedValue => {
+      if (checkedValue !== isChecked) {
+        setIsChecked(checkedValue);
+      }
+    },
+    [isChecked],
+  );
 
-    return (
-      <li>
-        <div className="task-checkbox">
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={this.setCheckedProp}
-            className="flat-grey list-child"
-          />
-        </div>
-        <div className="task-title">
-          <span className="task-title-sp">{label}</span>
+  const handlesOnListEdit = useCallback(() => {
+    setIsEditing(true);
+  }, []);
 
-          <span className={`label ${statusLabelStyle}`}>{statusLabel}</span>
+  const handlesOnListCancelEdit = useCallback(() => {
+    setIsEditing(false);
+  }, []);
 
-          <div className="pull-right hidden-phone">
-            {isEditing ? (
-              <div>
-                <TodoListItemButtonValid
-                  onClick={this.handlesOnListValidEdit}
-                />
-                <TodoListItemButtonCancel
-                  onClick={this.handlesOnListCancelEdit}
-                />
-              </div>
-            ) : (
-              <TodoListItemButtonEdit onClick={this.handlesOnListEdit} />
-            )}
-          </div>
-        </div>
-      </li>
-    );
-  }
-
-  setCheckedProp = checkedValue => {
-    if (checkedValue !== this.state.isChecked) {
-      this.setState({ isChecked: checkedValue });
-    }
-  };
-
-  handlesOnListEdit = () => {
-    this.setState({ isEditing: true });
-  };
-
-  handlesOnListCancelEdit = () => {
-    this.setState({ isEditing: false });
-  };
-
-  handlesOnListValidEdit = () => {
-    const { onListValidEdit } = this.props;
-    const { isChecked } = this.state;
-
+  const handlesOnListValidEdit = useCallback(() => {
     onListValidEdit(isChecked);
-    this.setState({ isEditing: false });
-  };
+    setIsEditing(false);
+  }, [isChecked]);
+
+  return (
+    <li>
+      <div className="task-checkbox">
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={setCheckedProp}
+          className="flat-grey list-child"
+        />
+      </div>
+      <div className="task-title">
+        <span className="task-title-sp">{label}</span>
+
+        <span className={`label ${statusLabelStyle}`}>{statusLabel}</span>
+
+        <div className="pull-right hidden-phone">
+          {isEditing ? (
+            <div>
+              <TodoListItemButtonValid onClick={handlesOnListValidEdit} />
+              <TodoListItemButtonCancel onClick={handlesOnListCancelEdit} />
+            </div>
+          ) : (
+            <TodoListItemButtonEdit onClick={handlesOnListEdit} />
+          )}
+        </div>
+      </div>
+    </li>
+  );
 }
+
+TodoListItem.displayName = 'TodoListItem';
+
+TodoListItem.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  label: PropTypes.string,
+  done: PropTypes.bool,
+  statusLabel: PropTypes.string,
+  statusLabelStyle: PropTypes.oneOf([
+    'label-success',
+    'label-danger',
+    'label-warning',
+    'label-primary',
+    'label-inverse',
+  ]),
+  onListValidEdit: PropTypes.func,
+};
 
 export default TodoListItem;
