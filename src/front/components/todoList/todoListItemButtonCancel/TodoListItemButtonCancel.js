@@ -1,20 +1,24 @@
-// @flow weak
+// @flow
 
-import React        from 'react';
-import PropTypes    from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TodoListItemButtonCancel = ({
-  onClick
-}) => (
-  <button
-    className="btn btn-default btn-xs"
-    onClick={onClick}>
-    <i className="fa fa-times"></i>
-  </button>
-);
+type Props = {
+  onClick: (event?: SyntheticEvent<>) => any,
+};
+
+function TodoListItemButtonCancel({ onClick }: Props) {
+  return (
+    <button className="btn btn-default btn-xs" onClick={onClick}>
+      <i className="fa fa-times" />
+    </button>
+  );
+}
+
+TodoListItemButtonCancel.displayName = 'TodoListItemButtonCancel';
 
 TodoListItemButtonCancel.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 export default TodoListItemButtonCancel;
