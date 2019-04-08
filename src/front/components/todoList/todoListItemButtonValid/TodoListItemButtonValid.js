@@ -1,20 +1,22 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TodoListItemButtonValid = ({
-  onClick
-}) => (
-  <button
-    className="btn btn-default btn-xs"
-    onClick={onClick}>
-    <i className="fa fa-check"></i>
+type Props = {
+  onClick: (event?: SyntheticEvent<>) => any,
+};
+
+const TodoListItemButtonValid = ({ onClick }: Props) => (
+  <button className="btn btn-default btn-xs" onClick={onClick}>
+    <i className="fa fa-check" />
   </button>
 );
 
+TodoListItemButtonValid.displayName = 'TodoListItemButtonValid';
+
 TodoListItemButtonValid.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 export default TodoListItemButtonValid;

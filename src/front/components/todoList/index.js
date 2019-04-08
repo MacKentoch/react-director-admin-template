@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 export { default as TodoList } from './todoList/TodoList';
 export { default as TodoListItem } from './todoListItem/TodoListItem';
