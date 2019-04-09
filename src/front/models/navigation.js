@@ -1,19 +1,21 @@
-export const navigation = {
-  brand:      'reactDirectorAdmin',
-  leftLinks:  [],
+// @flow
+
+export const navigation = Object.freeze({
+  brand: 'reactDirectorAdmin',
+  leftLinks: [],
   rightLinks: [
     {
-      label:      'Home',
-      link:       '/',
-      view:       'home',
-      isRouteBtn: true
+      label: 'Home',
+      link: '/',
+      view: 'home',
+      isRouteBtn: true,
     },
     {
-      label:      'About',
-      link:       '/about',
-      view:       'about',
-      isRouteBtn: true
-    }
+      label: 'About',
+      link: '/about',
+      view: 'about',
+      isRouteBtn: true,
+    },
   ],
   sideMenu: [
     // group menu #1
@@ -24,44 +26,44 @@ export const navigation = {
         {
           name: 'Dashboard preview',
           linkTo: '/',
-          faIconName: 'fa-eye'
+          faIconName: 'fa-eye',
         },
         {
           name: 'StatsCard',
           linkTo: '/Dashboard/statsCard',
-          faIconName: 'fa-check-square-o'
+          faIconName: 'fa-check-square-o',
         },
         {
           name: 'EarningGraph',
           linkTo: '/Dashboard/earningGraph',
-          faIconName: 'fa-area-chart'
+          faIconName: 'fa-area-chart',
         },
         {
           name: 'Notifications',
           linkTo: '/Dashboard/notifications',
-          faIconName: 'fa-bell'
+          faIconName: 'fa-bell',
         },
         {
           name: 'Work progress',
           linkTo: '/Dashboard/workProgress',
-          faIconName: 'fa-briefcase'
+          faIconName: 'fa-briefcase',
         },
         {
           name: 'Twitter feed',
           linkTo: '/Dashboard/twitterFeed',
-          faIconName: 'fa-twitter'
+          faIconName: 'fa-twitter',
         },
         {
           name: 'Team Mates',
           linkTo: '/Dashboard/teamMates',
-          faIconName: 'fa-user'
+          faIconName: 'fa-user',
         },
         {
           name: 'Todo list',
           linkTo: '/Dashboard/todoList',
-          faIconName: 'fa-check'
-        }
-      ]
+          faIconName: 'fa-check',
+        },
+      ],
     },
     // group menu #2
     {
@@ -71,49 +73,49 @@ export const navigation = {
         {
           name: 'General preview',
           linkTo: '/general',
-          faIconName: 'fa-eye'
+          faIconName: 'fa-eye',
         },
         {
           name: 'Breadcrumb',
           linkTo: '/general/breadcrumb',
-          faIconName: 'fa-bars'
+          faIconName: 'fa-bars',
         },
         {
           name: 'Stat',
           linkTo: '/general/stat',
-          faIconName: 'fa-bar-chart'
+          faIconName: 'fa-bar-chart',
         },
         {
           name: 'Basic progress bars',
           linkTo: '/general/basicProgressBars',
-          faIconName: 'fa-tasks'
+          faIconName: 'fa-tasks',
         },
         {
           name: 'Tab panels',
           linkTo: '/general/tabPanels',
-          faIconName: 'fa-columns'
+          faIconName: 'fa-columns',
         },
         {
           name: 'Striped progress bar',
           linkTo: '/general/stripedProgressBars',
-          faIconName: 'fa-tasks'
+          faIconName: 'fa-tasks',
         },
         {
           name: 'Alerts',
           linkTo: '/general/alerts',
-          faIconName: 'fa-exclamation-triangle'
+          faIconName: 'fa-exclamation-triangle',
         },
         {
           name: 'Pagination',
           linkTo: '/general/pagination',
-          faIconName: 'fa-sort'
+          faIconName: 'fa-sort',
         },
         {
           name: 'Default buttons',
           linkTo: '/general/defaultButtons',
-          faIconName: 'fa-hand-o-up'
-        }
-      ]
+          faIconName: 'fa-hand-o-up',
+        },
+      ],
     },
     // group menu #3
     {
@@ -123,9 +125,9 @@ export const navigation = {
         {
           name: 'Basic Elements preview',
           linkTo: '/basicElements',
-          faIconName: 'fa-eye'
-        }
-      ]
+          faIconName: 'fa-eye',
+        },
+      ],
     },
     // group menu #4
     {
@@ -135,9 +137,9 @@ export const navigation = {
         {
           name: 'Simple tables preview',
           linkTo: '/simpleTables',
-          faIconName: 'fa-eye'
-        }
-      ]
-    }
-  ]
-};
+          faIconName: 'fa-eye',
+        },
+      ],
+    },
+  ],
+});

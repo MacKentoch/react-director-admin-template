@@ -27,9 +27,7 @@ function App({
   },
 }: Props) {
   const [appName] = useState(appConfig.APP_NAME);
-  const [connectionStatus] = useState(
-    appConfig.CONNECTION_STATUS,
-  );
+  const [connectionStatus] = useState(appConfig.CONNECTION_STATUS);
   const [helloWord] = useState(appConfig.HELLO_WORD);
 
   /* elsin-disable */
@@ -51,14 +49,17 @@ function App({
     [toggleSideMenu],
   );
 
-  const handlesOnLogout = useCallback((event?: SyntheticEvent<>) => {
-    event && event.preventDefault();
-    event && event.stopPropagation();
-    // clear all application storage
-    auth.clearAllAppStorage();
-    // redirect to login
-    history.push('/login');
-  }, [history]);
+  const handlesOnLogout = useCallback(
+    (event?: SyntheticEvent<>) => {
+      event && event.preventDefault();
+      event && event.stopPropagation();
+      // clear all application storage
+      auth.clearAllAppStorage();
+      // redirect to login
+      history.push('/login');
+    },
+    [history],
+  );
 
   return (
     <div>

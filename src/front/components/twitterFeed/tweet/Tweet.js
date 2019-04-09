@@ -1,14 +1,16 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Tweet = ({
-  time,
-  author,
-  authorAvatar,
-  children
-}) => (
+type Props = {
+  time: string,
+  author: string,
+  authorAvatar: any,
+  children: any,
+};
+
+const Tweet = ({ time, author, authorAvatar, children }: Props) => (
   <li className="media">
     <a href="#" className="pull-left">
       <img
@@ -22,26 +24,24 @@ const Tweet = ({
     <div className="media-body">
       <span className="text-muted pull-right">
         <small>
-          <em>
-            {time}
-          </em>
+          <em>{time}</em>
         </small>
       </span>
       <a href="#">
-        <strong>
-          {author}
-        </strong>
+        <strong>{author}</strong>
       </a>
-      { children }
+      {children}
     </div>
   </li>
 );
 
+Tweet.displayName = 'Tweet';
+
 Tweet.propTypes = {
-  time:         PropTypes.string.isRequired,
-  author:       PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   authorAvatar: PropTypes.any.isRequired,
-  children:     PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Tweet;

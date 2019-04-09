@@ -1,6 +1,7 @@
-// @flow weak
+// @flow
 
-export const appConfig = {
+export const appConfig = Object.freeze({
+  APP_NAME: 'reactDirector',
   // dev mode to mock async data for instance
   DEV_MODE: true,
   // When you need some kind "console spam" to debug
@@ -8,33 +9,28 @@ export const appConfig = {
   // fake delay to mock async
   FAKE_ASYNC_DELAY: 1000,
 
-
-  APP_NAME: 'reactDirector',
-
-  // connection status text references
   CONNECTION_STATUS: {
     online: 'online',
-    disconnected: 'disconnected'
+    disconnected: 'disconnected',
   },
-  // eaningGraph config
+
+  // #region API configs
   earningGraph: {
     data: {
-      API: 'api/earnigGraphData'
-    }
+      API: 'api/earnigGraphData',
+    },
   },
-  teamMates:{
+  teamMates: {
     data: {
-      API: 'api/teamMates'
-    }
+      API: 'api/teamMates',
+    },
   },
-
-  // userInfos config
   userInfos: {
     data: {
-      API: 'api/userInfos'
-    }
+      API: 'api/userInfos',
+    },
   },
+  // #endregion
 
-  HELLO_WORD: 'Hello'
-
-};
+  HELLO_WORD: 'Hello',
+});
