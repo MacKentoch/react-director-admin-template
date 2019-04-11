@@ -1,29 +1,25 @@
-// @flow weak
+// @flow
 
-import React      from 'react';
-import PropTypes  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const WorkProgressPanel = ({
-  title,
-  children
-}) => (
+type Props = {
+  title?: string,
+  children: any,
+};
+
+const WorkProgressPanel = ({ title = 'Work Progress', children }: Props) => (
   <section className="panel">
-    <header className="panel-heading">
-      {title}
-    </header>
-    <div className="panel-body table-responsive">
-      {children}
-    </div>
+    <header className="panel-heading">{title}</header>
+    <div className="panel-body table-responsive">{children}</div>
   </section>
 );
 
-WorkProgressPanel.propTypes = {
-  title:    PropTypes.string,
-  children: PropTypes.node.isRequired
-};
+WorkProgressPanel.displayName = 'WorkProgressPanel';
 
-WorkProgressPanel.defaultProps = {
-  title: 'Work Progress'
+WorkProgressPanel.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default WorkProgressPanel;

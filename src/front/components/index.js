@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 export { default as Header } from './header/Header.js';
 export { AsideLeft, AsideRight } from './aside';
