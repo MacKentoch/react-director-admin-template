@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 const objectHasProperty = Object.prototype.hasOwnProperty;
 const jsonStringify = JSON.stringify;
@@ -17,7 +17,9 @@ const jsonParse = JSON.parse;
     }
  */
 /* eslint-disable no-unused-vars */
-export const localStorageManager = store => next => action => {
+export const localStorageManager = (store: any) => (
+  next: (action: any) => any,
+) => (action: any) => {
   // if action contains a "permanentStore" object property: middleware localStorage should be required
   if (
     action &&

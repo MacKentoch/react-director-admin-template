@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 
 // fetchTools:
 export {
@@ -8,6 +8,7 @@ export {
   getLocationOrigin,
   encodeBase64,
 } from './fetchTools';
+
 // fetchMocks:
 export {
   fetchMockEarningGraphData,
