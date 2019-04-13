@@ -1,60 +1,60 @@
-// flow
+// @flow
 
 /* eslint no-console:0 */
 /* eslint consistent-return:0 */
 
-/*
-  imports
- */
+// #region imports
 import { format } from 'date-fns';
 import { appConfig } from '../../config';
 import { getEarningGraphData } from '../../services/API';
 import { fetchMockEarningGraphData } from '../../services/fetchMocks';
-import * as ReduxTypes from '../types';
+import { type Dispatch, type GetState } from '../../types/redux-thunk';
+import { type State } from '../../types/redux/modules/earningGraph';
+// #endregion
 
-/*
-  constants
- */
+// #region  constants
 const REQUEST_EARNING_GRAPH_DATA = 'REQUEST_EARNING_GRAPH_DATA';
 const RECEIVED_EARNING_GRAPH_DATA = 'RECEIVED_EARNING_GRAPH_DATA';
 const ERROR_EARNING_GRAPH_DATA = 'ERROR_EARNING_GRAPH_DATA';
+// #endregion
 
-type EarningGraphDataset = {
-  label: string,
-  fillColor: string,
-  strokeColor: string,
-  pointColor: string,
-  pointStrokeColor: string,
-  pointHighlightFill: string,
-  pointHighlightStroke: string,
-  data: Array<number>,
+// #region flow types
+type Action = {
+  type: | 'REQUEST_EARNING_GRAPH_DATA'
+    | 'RECEIVED_EARNING_GRAPH_DATA'
+    | 'ERROR_EARNING_GRAPH_DATA',
+  error?: ?String,
+  labels?: Array<string>,
+  datasets?: Array<string>,
+  time?: string,
 };
 
-type EarningGraphState = {
-  isFetching: boolean,
-  labels: Array<string>,
-  datasets: Array<EarningGraphDataset>,
-  time: string,
-};
+// #endregion
 
 /*
   reducer
  */
-const initialState: EarningGraphState = {
+const initialState: State = {
   isFetching: false,
   labels: [],
   datasets: [],
-  time: null,
+  time: '',
 };
 
-export default function earningGraph(state = initialState, action) {
+export default function earningGraph(
+  state: State = initialState,
+  action: Action,
+) {
   switch (action.type) {
-    case 'REQUEST_EARNING_GRAPH_DATA':
+    case 'REQUEST_EARNING_GRAPH_DATA': {
+      const { time } = action;
       return {
         ...state,
-        isFetching: action.isFetching,
-        time: action.time,
+        isFetching: true,
+        time,
       };
+    }
+
     case 'RECEIVED_EARNING_GRAPH_DATA':
       return {
         ...state,
@@ -78,48 +78,55 @@ export default function earningGraph(state = initialState, action) {
   action creators
  */
 export function fetchEarningGraphDataIfNeeded() {
-  return (dispatch, getState) => {
+  return (
+    dispatch: Dispatch<Action>,
+    getState: GetState<{ earningGraph: State }>,
+  ) => {
     if (shouldFetchEarningData(getState())) {
       return dispatch(fetchEarningGraphData());
     }
+    return Promise.resolve();
   };
 }
-function requestEarningGraphData(time = format(new Date())) {
+function requestEarningGraphData(time? = format(new Date())): Action {
   return {
     type: REQUEST_EARNING_GRAPH_DATA,
-    isFetching: true,
     time,
   };
 }
-function receivedEarningGraphData(data: any, time = format(new Date())) {
+function receivedEarningGraphData(
+  data: { labels: [], datasets: [] },
+  time = format(new Date()),
+): Action {
   return {
     type: RECEIVED_EARNING_GRAPH_DATA,
-    isFetching: false,
     labels: [...data.labels],
     datasets: [...data.datasets],
     time,
   };
 }
-function errorEarningGraphData(error, time = format(new Date())) {
+function errorEarningGraphData(error, time = format(new Date())): Action {
   return {
     type: ERROR_EARNING_GRAPH_DATA,
-    isFetching: false,
     error,
     time,
   };
 }
-function fetchEarningGraphData() {
-  return dispatch => {
-    dispatch(requestEarningGraphData());
-    if (appConfig.DEV_MODE) {
-      // DEV ONLY
-      fetchMockEarningGraphData().then(data =>
-        dispatch(receivedEarningGraphData(data)),
-      );
-    } else {
-      getEarningGraphData()
-        .then(data => dispatch(receivedEarningGraphData(data)))
-        .catch(error => dispatch(errorEarningGraphData(error)));
+function fetchEarningGraphData(): (...any) => Promise<any> {
+  return async (dispatch: Dispatch<Action>) => {
+    try {
+      dispatch(requestEarningGraphData());
+
+      if (appConfig.DEV_MODE) {
+        const data = await fetchMockEarningGraphData();
+        return dispatch(receivedEarningGraphData(data));
+      }
+
+      const data = await getEarningGraphData();
+      return dispatch(receivedEarningGraphData(data));
+    } catch (error) {
+      dispatch(errorEarningGraphData(error));
+      return Promise.reject(error);
     }
   };
 }
