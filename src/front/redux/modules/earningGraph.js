@@ -1,8 +1,5 @@
 // @flow
 
-/* eslint no-console:0 */
-/* eslint consistent-return:0 */
-
 // #region imports
 import { format } from 'date-fns';
 import { appConfig } from '../../config';
@@ -58,7 +55,7 @@ export default function earningGraph(
     case 'RECEIVED_EARNING_GRAPH_DATA':
       return {
         ...state,
-        isFetching: action.isFetching,
+        isFetching: false,
         labels: action.labels,
         datasets: action.datasets,
         time: action.time,
@@ -66,7 +63,7 @@ export default function earningGraph(
     case 'ERROR_EARNING_GRAPH_DATA':
       return {
         ...state,
-        isFetching: action.isFetching,
+        isFetching: false,
         time: action.time,
       };
     default:
@@ -112,7 +109,7 @@ function errorEarningGraphData(error, time = format(new Date())): Action {
     time,
   };
 }
-function fetchEarningGraphData(): (...any) => Promise<any> {
+function fetchEarningGraphData(): any {
   return async (dispatch: Dispatch<Action>) => {
     try {
       dispatch(requestEarningGraphData());
@@ -131,11 +128,9 @@ function fetchEarningGraphData(): (...any) => Promise<any> {
   };
 }
 function shouldFetchEarningData(state) {
-  const earningGraphStore = state.earningGraph;
+  const {
+    earningGraph: { isFetching },
+  } = state.earningGraph;
   // just check wether fetching (assuming data could be refreshed and should not persist in store)
-  if (earningGraphStore.isFetching) {
-    return false;
-  } else {
-    return true;
-  }
+  return !isFetching;
 }
