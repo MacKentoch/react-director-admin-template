@@ -1,10 +1,15 @@
 // @flow
 
-import moment from 'moment';
+// #region imports
+import { format } from 'date-fns';
+import { type Dispatch, type GetState } from '../../types/redux-thunk';
+import { type State } from '../../types/redux/modules/sideMenu';
+// #endregion
 
+// #region constants
 const SIDEMU_IS_COLLAPSED_KEY = 'SIDEMENU_IS_OPENED_KEY';
-const SIDEMU_IS_COLLAPSED_VALUE = true;
-const SIDEMU_IS_NOT_COLLAPSED_VALUE = false;
+const SIDEMU_IS_COLLAPSED_VALUE: boolean = true;
+const SIDEMU_IS_NOT_COLLAPSED_VALUE: boolean = false;
 const READ_LOCALSTORAGE = false;
 const WRITE_LOCALSTORAGE = true;
 
@@ -12,39 +17,72 @@ const OPEN_SIDE_MENU = 'OPEN_SIDE_MENU';
 const CLOSE_SIDE_MENU = 'CLOSE_SIDE_MENU';
 const GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE =
   'GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE';
+// #endregion
 
-const initialState = {
-  isCollapsed: false,
-  time: null,
+// #region flow types
+
+type PermanentStore = {
+  required: boolean,
+  storeKey: string,
+  storeValue: boolean,
+  ReadOrWrite: boolean, // write key / value to localStorage
+};
+type Action = {
+  type: | 'OPEN_SIDE_MENU'
+    | 'CLOSE_SIDE_MENU'
+    | 'GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE',
+  error?: ?string,
+  isCollapsed?: boolean,
+  time?: string,
+  permanentStore?: PermanentStore,
 };
 
-export default function sideMenu(state = initialState, action) {
+// #endregion
+
+const initialState: State = {
+  isCollapsed: false,
+  time: '',
+};
+
+export default function sideMenu(state: State = initialState, action: Action) {
   switch (action.type) {
-    case GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE:
+    case GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE: {
+      const { permanentStore = { storeValue: false }, time } = action;
+
       return {
-        isCollapsed: Boolean(action.permanentStore.storeValue),
-        time: action.time,
+        isCollapsed: Boolean(permanentStore.storeValue),
+        time,
       };
-    case OPEN_SIDE_MENU:
+    }
+
+    case OPEN_SIDE_MENU: {
+      const { isCollapsed, time } = action;
+
       return {
         ...state,
-        isCollapsed: action.isCollapsed,
-        time: action.time,
+        isCollapsed,
+        time,
       };
-    case CLOSE_SIDE_MENU:
+    }
+
+    case CLOSE_SIDE_MENU: {
+      const { isCollapsed, time } = action;
+
       return {
         ...state,
-        isCollapsed: action.isCollapsed,
-        time: action.time,
+        isCollapsed,
+        time,
       };
+    }
+
     default:
       return state;
   }
 }
 
 export function getSideMenuCollpasedStateFromLocalStorage(
-  time = moment().format(),
-) {
+  time?: string = format(new Date()),
+): Action {
   return {
     type: GET_SIDE_MENU_TOGGLE_STATE_FROM_LOCALSTORAGE,
     time,
@@ -52,12 +90,12 @@ export function getSideMenuCollpasedStateFromLocalStorage(
     permanentStore: {
       required: true,
       storeKey: SIDEMU_IS_COLLAPSED_KEY,
-      storeValue: '',
+      storeValue: false, // set default to false
       ReadOrWrite: READ_LOCALSTORAGE, // write key / value to localStorage
     },
   };
 }
-export function openSideMenu(time = moment().format()) {
+export function openSideMenu(time?: string = format(new Date())): Action {
   return {
     type: OPEN_SIDE_MENU,
     isCollapsed: false,
@@ -71,7 +109,7 @@ export function openSideMenu(time = moment().format()) {
     },
   };
 }
-export function closeSideMenu(time = moment().format()) {
+export function closeSideMenu(time?: string = format(new Date())): Action {
   return {
     type: CLOSE_SIDE_MENU,
     isCollapsed: true,
@@ -86,13 +124,17 @@ export function closeSideMenu(time = moment().format()) {
   };
 }
 export function toggleSideMenu() {
-  return (dispatch, getState) => {
+  return (
+    dispatch: Dispatch<Action>,
+    getState: GetState<{ sideMenu: State }>,
+  ) => {
     const state = getState();
     const sideMenuStore = state.sideMenu;
+
     if (sideMenuStore.isCollapsed) {
-      dispatch(openSideMenu());
-    } else {
-      dispatch(closeSideMenu());
+      return dispatch(openSideMenu());
     }
+
+    dispatch(closeSideMenu());
   };
 }

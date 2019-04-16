@@ -20,7 +20,7 @@ type Action = {
   type: | 'REQUEST_EARNING_GRAPH_DATA'
     | 'RECEIVED_EARNING_GRAPH_DATA'
     | 'ERROR_EARNING_GRAPH_DATA',
-  error?: ?String,
+  error?: ?string,
   labels?: Array<string>,
   datasets?: Array<string>,
   time?: string,
