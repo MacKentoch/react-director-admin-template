@@ -1,52 +1,120 @@
-// @flow weak
+// @flow
 
-import React, {
-  PureComponent
-}                         from 'react';
-import PropTypes          from 'prop-types';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import {
   AnimatedView,
   Panel,
-  ProgressBar as ProgressBarComponent
-}                         from '../../components';
-import Highlight          from 'react-highlight';
+  ProgressBar as ProgressBarComponent,
+} from '../../components';
+import Highlight from 'react-highlight';
 
+type Props = {
+  actions: {
+    enterBasicProgressBar: () => any,
+    leaveBasicProgressBar: () => any,
+  },
+};
 
-class BasicProgressBar extends PureComponent {
-  static propTypes= {
-    actions: PropTypes.shape({
-      enterBasicProgressBar: PropTypes.func.isRequired,
-      leaveBasicProgressBar: PropTypes.func.isRequired
-    })
-  };
+const source = `
+  // import
+  import { ProgressBar } from './_SOMEWHERE_/components';
 
-  componentWillMount() {
-    const { actions: { enterBasicProgressBar } } = this.props;
+  // in render():
+  <div className="row">
+    <div className="col-xs-12">
+      <Panel
+        title="Basic Progress Bars"
+        hasTitle={true}>
+        <p>
+          <code>
+            .progress
+          </code>
+        </p>
+        <ProgressBar
+          barSize="progress"
+          barStriped={false}
+          barStyle="primary"
+          active={false}
+          valueNow={40}
+          valueMin={0}
+          valueMax={100}
+          screenReadersText={'40% Complete (success)'}
+        />
+        <p>
+          Class:
+          <code>
+            .sm
+          </code>
+        </p>
+        <ProgressBar
+          barSize="sm"
+          barStriped={false}
+          barStyle="success"
+          active={true}
+          valueNow={20}
+          valueMin={0}
+          valueMax={100}
+          screenReadersText={'20% Complete'}
+        />
+        <p>
+          Class:
+          <code>
+            .xs
+          </code>
+        </p>
+        <ProgressBar
+          barSize="xs"
+          barStriped={false}
+          barStyle="warning"
+          active={false}
+          valueNow={60}
+          valueMin={0}
+          valueMax={100}
+          screenReadersText={'60% Complete (warning)'}
+        />
+        <p>
+          Class:
+          <code>
+            .xxs
+          </code>
+        </p>
+        <ProgressBar
+          barSize="xxs"
+          barStriped={false}
+          barStyle="danger"
+          active={false}
+          valueNow={60}
+          valueMin={0}
+          valueMax={100}
+          screenReadersText={'60% Complete (warning)'}
+        />
+      </Panel>
+    </div>
+  </div>
+`;
+
+function BasicProgressBar({
+  actions: { enterBasicProgressBar, leaveBasicProgressBar },
+}: Props) {
+  useEffect(() => {
     enterBasicProgressBar();
-  }
 
-  componentWillUnmount() {
-    const { actions: { leaveBasicProgressBar } } = this.props;
-    leaveBasicProgressBar();
-  }
+    return () => {
+      leaveBasicProgressBar();
+    };
+  }, []);
 
-  render() {
-    const source = `
-      // import
-      import { ProgressBar } from './_SOMEWHERE_/components';
-
-      // in render():
+  return (
+    <AnimatedView>
+      {/* preview: */}
       <div className="row">
         <div className="col-xs-12">
-          <Panel
-            title="Basic Progress Bars"
-            hasTitle={true}>
+          <Panel title="Basic Progress Bars" hasTitle={true}>
             <p>
-              <code>
-                .progress
-              </code>
+              <code>.progress</code>
             </p>
-            <ProgressBar
+            <ProgressBarComponent
               barSize="progress"
               barStriped={false}
               barStyle="primary"
@@ -54,15 +122,13 @@ class BasicProgressBar extends PureComponent {
               valueNow={40}
               valueMin={0}
               valueMax={100}
-              screenReadersText={'40% Complete (success)'}
+              screenReadersText={`${40}% Complete (success)`}
             />
             <p>
               Class:
-              <code>
-                .sm
-              </code>
+              <code>.sm</code>
             </p>
-            <ProgressBar
+            <ProgressBarComponent
               barSize="sm"
               barStriped={false}
               barStyle="success"
@@ -70,15 +136,13 @@ class BasicProgressBar extends PureComponent {
               valueNow={20}
               valueMin={0}
               valueMax={100}
-              screenReadersText={'20% Complete'}
+              screenReadersText={`${20}% Complete`}
             />
             <p>
               Class:
-              <code>
-                .xs
-              </code>
+              <code>.xs</code>
             </p>
-            <ProgressBar
+            <ProgressBarComponent
               barSize="xs"
               barStriped={false}
               barStyle="warning"
@@ -86,15 +150,13 @@ class BasicProgressBar extends PureComponent {
               valueNow={60}
               valueMin={0}
               valueMax={100}
-              screenReadersText={'60% Complete (warning)'}
+              screenReadersText={`${60}% Complete (warning)`}
             />
             <p>
               Class:
-              <code>
-                .xxs
-              </code>
+              <code>.xxs</code>
             </p>
-            <ProgressBar
+            <ProgressBarComponent
               barSize="xxs"
               barStriped={false}
               barStyle="danger"
@@ -102,102 +164,30 @@ class BasicProgressBar extends PureComponent {
               valueNow={60}
               valueMin={0}
               valueMax={100}
-              screenReadersText={'60% Complete (warning)'}
+              screenReadersText={`${60}% Complete (warning)`}
             />
           </Panel>
         </div>
       </div>
-      `;
-
-    return(
-      <AnimatedView>
-        {/* preview: */}
-        <div className="row">
-          <div className="col-xs-12">
-            <Panel
-              title="Basic Progress Bars"
-              hasTitle={true}>
-              <p>
-                <code>
-                  .progress
-                </code>
-              </p>
-              <ProgressBarComponent
-                barSize="progress"
-                barStriped={false}
-                barStyle="primary"
-                active={false}
-                valueNow={40}
-                valueMin={0}
-                valueMax={100}
-                screenReadersText={`${40}% Complete (success)`}
-              />
-              <p>
-                Class:
-                <code>
-                  .sm
-                </code>
-              </p>
-              <ProgressBarComponent
-                barSize="sm"
-                barStriped={false}
-                barStyle="success"
-                active={true}
-                valueNow={20}
-                valueMin={0}
-                valueMax={100}
-                screenReadersText={`${20}% Complete`}
-              />
-              <p>
-                Class:
-                <code>
-                  .xs
-                </code>
-              </p>
-              <ProgressBarComponent
-                barSize="xs"
-                barStriped={false}
-                barStyle="warning"
-                active={false}
-                valueNow={60}
-                valueMin={0}
-                valueMax={100}
-                screenReadersText={`${60}% Complete (warning)`}
-              />
-              <p>
-                Class:
-                <code>
-                  .xxs
-                </code>
-              </p>
-              <ProgressBarComponent
-                barSize="xxs"
-                barStriped={false}
-                barStyle="danger"
-                active={false}
-                valueNow={60}
-                valueMin={0}
-                valueMax={100}
-                screenReadersText={`${60}% Complete (warning)`}
-              />
-            </Panel>
-          </div>
+      {/* source: */}
+      <div className="row">
+        <div className="col-xs-12">
+          <Panel title="Source" hasTitle={true}>
+            <Highlight className="javascript">{source}</Highlight>
+          </Panel>
         </div>
-        {/* source: */}
-        <div className="row">
-          <div className="col-xs-12">
-            <Panel
-              title="Source"
-              hasTitle={true}>
-              <Highlight className="javascript">
-                {source}
-              </Highlight>
-            </Panel>
-          </div>
-        </div>
-      </AnimatedView>
-    );
-  }
+      </div>
+    </AnimatedView>
+  );
 }
+
+BasicProgressBar.displayName = 'BasicProgressBar';
+
+BasicProgressBar.propTypes = {
+  actions: PropTypes.shape({
+    enterBasicProgressBar: PropTypes.func.isRequired,
+    leaveBasicProgressBar: PropTypes.func.isRequired,
+  }),
+};
 
 export default BasicProgressBar;

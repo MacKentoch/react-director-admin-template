@@ -8,7 +8,7 @@ type Props = {
   statFaIconName?: string,
   statIconColor?: string,
   statLabel: string,
-  statIconSpin: boolean,
+  statIconSpin?: boolean,
 };
 
 const Stat = ({
@@ -37,7 +37,7 @@ Stat.propTypes = {
   statFaIconName: PropTypes.string.isRequired,
   statIconColor: PropTypes.string,
   statLabel: PropTypes.string.isRequired,
-  statIconSpin: PropTypes.bool.isRequired,
+  statIconSpin: PropTypes.bool,
 };
 
 Stat.displayName = 'Stat';
