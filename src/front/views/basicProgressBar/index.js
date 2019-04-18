@@ -1,28 +1,29 @@
-// @fow weak
+// @fow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import BasicProgressBar       from './BasicProgressBar';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import BasicProgressBar from './BasicProgressBar';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterBasicProgressBar: actions.enterBasicProgressBar,
-        leaveBasicProgressBar: actions.leaveBasicProgressBar
+        leaveBasicProgressBar: actions.leaveBasicProgressBar,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(BasicProgressBar);
