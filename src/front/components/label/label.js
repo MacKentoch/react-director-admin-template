@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 type Props = {
-  type: string,
-  text: | 'default'
+  text: string,
+  type: | 'default'
     | 'primary'
     | 'success'
     | 'info'
