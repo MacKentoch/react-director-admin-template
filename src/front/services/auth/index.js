@@ -233,7 +233,7 @@ export const auth = {
    * @returns {boolean} success/failure flag
    */
   setUserInfo(
-    value: string = '',
+    value: Object = null,
     toStorage: Storage = APP_PERSIST_STORES_TYPES[0],
     userInfoKey: UserInfoKey = USER_INFO,
   ): any {
