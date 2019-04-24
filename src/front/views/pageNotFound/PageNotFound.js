@@ -1,56 +1,47 @@
-// @flow weak
+// @flow
 
-import React, {
-  PureComponent
-}                       from 'react';
-import PropTypes        from 'prop-types';
-import AnimatedView     from '../../components/animatedView/AnimatedView';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import AnimatedView from '../../components/animatedView/AnimatedView';
 
+type Props = {
+  actions: {
+    enterPageNotFound: () => any,
+    leavePageNotFound: () => any,
+  },
+};
 
-class PageNotFound extends PureComponent {
-  static propTypes = {
-    actions: PropTypes.shape({
-      enterPageNotFound: PropTypes.func.isRequired,
-      leavePageNotFound: PropTypes.func.isRequired
-    })
-  };
-
-  componentDidMount() {
-    const { 
-      actions: {
-        enterPageNotFound
-      } 
-    } =  this.props;
+function PageNotFound({
+  actions: { enterPageNotFound, leavePageNotFound },
+}: Props) {
+  useEffect(() => {
     enterPageNotFound();
-  }
+    return () => {
+      leavePageNotFound();
+    };
+  }, []);
 
-  componentWillUnmount() {
-    const { 
-      actions: {
-        leavePageNotFound
-      }
-    } = this.props;
-    leavePageNotFound();
-  }
-
-  render() {
-    return(
-      <AnimatedView>
-        <div className="row">
-          <div className="col-md-12">
-            <h2>
-              <i
-                className="fa fa-frown-o"
-                aria-hidden="true" 
-              />
-              &nbsp;
-              Sorry... This page does not exist
-            </h2>
-          </div>
+  return (
+    <AnimatedView>
+      <div className="row">
+        <div className="col-md-12">
+          <h2>
+            <i className="fa fa-frown-o" aria-hidden="true" />
+            &nbsp; Sorry... This page does not exist
+          </h2>
         </div>
-      </AnimatedView>
-    );
-  }
+      </div>
+    </AnimatedView>
+  );
 }
+
+PageNotFound.displayName = 'PageNotFound';
+
+PageNotFound.propTypes = {
+  actions: PropTypes.shape({
+    enterPageNotFound: PropTypes.func.isRequired,
+    leavePageNotFound: PropTypes.func.isRequired,
+  }),
+};
 
 export default PageNotFound;

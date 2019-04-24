@@ -1,28 +1,28 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as viewActions       from '../../redux/modules/views';
-import PageNotFound           from './PageNotFound';
+import { connect } from 'react-redux';
+import * as viewActions from '../../redux/modules/views';
+import PageNotFound from './PageNotFound';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
-        //  views
-        ...viewActions
+        ...viewActions,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(PageNotFound);
