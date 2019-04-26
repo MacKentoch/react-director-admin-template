@@ -1,20 +1,15 @@
 // @flow
 
 // #region imports
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Button } from 'react-bootstrap';
 import auth from '../../services/auth';
-import { useCallback } from 'react';
+import { type RouterProps } from '../../types/react-router';
 // #endregion
 
 // #region flow types
 type Props = {
-  // react-router 4:
-  match: any,
-  location: any,
-  history: any,
-
   // views props:
   currentView: string,
   enterLogin: () => void,
@@ -26,7 +21,7 @@ type Props = {
   isLogging: boolean,
   disconnectUser: () => any,
   logUserIfNeeded: (email: string, password: string) => Promise<any>,
-};
+} & RouterProps;
 // #endregion
 
 function Login({

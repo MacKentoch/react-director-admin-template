@@ -4,13 +4,14 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AnimatedView, BasicForms } from '../../components';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterBasicElements: () => any,
     leaveBasicElements: () => any,
   },
-};
+} & RouterProps;
 
 function BasicElements({
   actions: { enterBasicElements, leaveBasicElements },
@@ -976,6 +977,11 @@ function BasicElements({
 BasicElements.displayName = 'BasicElements';
 
 BasicElements.propTypes = {
+  // react-router
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterBasicElements: PropTypes.func,
     leaveBasicElements: PropTypes.func,

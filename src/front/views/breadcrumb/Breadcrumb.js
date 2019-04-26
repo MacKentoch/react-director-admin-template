@@ -2,19 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Highlight from 'react-highlight';
 import {
   AnimatedView,
   Panel,
   Breadcrumb as BreadcrumbComponent,
 } from '../../components';
-import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterBreadcrumb: () => any,
     leaveBreadcrumb: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // import
@@ -32,7 +33,7 @@ const source = `
 `;
 
 function Breadcrumb({ actions: { enterBreadcrumb, leaveBreadcrumb } }: Props) {
-  const [path, _] = useState(['home', 'breadcrumb']);
+  const [path] = useState(['home', 'breadcrumb']);
 
   useEffect(() => {
     enterBreadcrumb();
@@ -75,6 +76,11 @@ function Breadcrumb({ actions: { enterBreadcrumb, leaveBreadcrumb } }: Props) {
 Breadcrumb.displayName = 'Breadcrumb';
 
 Breadcrumb.propTypes = {
+  // react-router
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterBreadcrumb: PropTypes.func.isRequired,
     leaveBreadcrumb: PropTypes.func.isRequired,

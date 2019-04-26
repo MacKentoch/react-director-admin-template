@@ -2,20 +2,21 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Highlight from 'react-highlight';
 import {
   AnimatedView,
   Panel,
   NotificationPanel,
   Notification,
 } from '../../components';
-import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterNotifications: () => any,
     leaveNotifications: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // import
@@ -155,6 +156,11 @@ function Notifications({
 Notifications.displayName = 'Notifications';
 
 Notifications.propTypes = {
+  // react-router 4:
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterNotifications: PropTypes.func.isRequired,
     leaveNotifications: PropTypes.func.isRequired,

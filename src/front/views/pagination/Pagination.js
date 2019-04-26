@@ -2,20 +2,21 @@
 
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Highlight from 'react-highlight';
 import {
   AnimatedView,
   Panel,
   Pagination as PaginationComponent,
   Pager as PagerComponent,
 } from '../../components';
-import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterPagination: () => any,
     leavePagination: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // in render():
@@ -138,6 +139,11 @@ function PaginationView({
 PaginationView.displayName = 'PaginationView';
 
 PaginationView.propTypes = {
+  // react-router 4:
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterPagination: PropTypes.func.isRequired,
     leavePagination: PropTypes.func.isRequired,

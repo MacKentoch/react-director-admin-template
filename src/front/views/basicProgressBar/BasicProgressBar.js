@@ -2,19 +2,20 @@
 
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Highlight from 'react-highlight';
 import {
   AnimatedView,
   Panel,
   ProgressBar as ProgressBarComponent,
 } from '../../components';
-import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterBasicProgressBar: () => any,
     leaveBasicProgressBar: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // import
@@ -184,6 +185,11 @@ function BasicProgressBar({
 BasicProgressBar.displayName = 'BasicProgressBar';
 
 BasicProgressBar.propTypes = {
+  // react-router
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterBasicProgressBar: PropTypes.func.isRequired,
     leaveBasicProgressBar: PropTypes.func.isRequired,

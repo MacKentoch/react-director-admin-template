@@ -22,13 +22,14 @@ import {
   Button,
   Label,
 } from '../../components';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterGeneral: () => any,
     leaveGeneral: () => any,
   },
-};
+} & RouterProps;
 
 function General({ actions: { enterGeneral, leaveGeneral } }: Props) {
   useEffect(() => {
@@ -588,6 +589,11 @@ function General({ actions: { enterGeneral, leaveGeneral } }: Props) {
 General.displayName = 'General';
 
 General.propTypes = {
+  // react-router
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterGeneral: PropTypes.func,
     leaveGeneral: PropTypes.func,

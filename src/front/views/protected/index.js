@@ -1,30 +1,30 @@
 // @flow
 
-import { connect }            from 'react-redux';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as viewsActions      from '../../redux/modules/views';
-import Protected              from './Protected';
+import * as viewsActions from '../../redux/modules/views';
+import Protected from './Protected';
 
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     // views
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(
-    {
-      // views
-      enterProtected: viewsActions.enterProtected,
-      leaveProtected: viewsActions.leaveProtected
-    },
-    dispatch
-  );
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        enterProtected: viewsActions.enterProtected,
+        leaveProtected: viewsActions.leaveProtected,
+      },
+      dispatch,
+    ),
+  };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Protected);

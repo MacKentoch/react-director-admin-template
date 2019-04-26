@@ -2,19 +2,20 @@
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Highlight from 'react-highlight';
 import {
   AnimatedView,
   Panel,
   EarningGraph as EarningGraphComponent,
 } from '../../components';
-import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterEarningGraph: () => any,
     leaveEarningGraph: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // import
@@ -134,6 +135,11 @@ function EarningGraph({
 EarningGraph.displayName = 'EarningGraph';
 
 EarningGraph.propTypes = {
+  // react-router
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   actions: PropTypes.shape({
     enterEarningGraph: PropTypes.func.isRequired,
     leaveEarningGraph: PropTypes.func.isRequired,

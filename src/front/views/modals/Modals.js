@@ -1,8 +1,12 @@
 // @flow
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import { type RouterProps } from '../../types/react-router';
 
-const Modals = () => {
+type Props = {} & RouterProps;
+
+const Modals = (props: Props) => {
   return (
     <section>
       {/* modals cannot be placed anywhere (avoid backdrop or modal placement issues) */}
@@ -322,5 +326,12 @@ const Modals = () => {
 };
 
 Modals.displayName = 'Modals';
+
+Modals.propTypes = {
+  // react-router 4:
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+};
 
 export default Modals;

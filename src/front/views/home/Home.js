@@ -12,6 +12,7 @@ import {
   TodoListDemo,
   TeamMatesDemo,
 } from '../../components';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   earningGraphLabels: Array<any>,
@@ -31,7 +32,7 @@ type Props = {
     fetchEarningGraphDataIfNeeded: () => Promise<any>,
     fetchTeamMatesDataIfNeeded: () => Promise<any>,
   },
-};
+} & RouterProps;
 
 function Home({
   actions: {
@@ -128,6 +129,11 @@ function Home({
 Home.displayName = 'Home';
 
 Home.propTypes = {
+  // react-router 4:
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+
   earningGraphLabels: PropTypes.array,
   earningGraphDatasets: PropTypes.array,
   teamMatesIsFetching: PropTypes.bool,
