@@ -1,28 +1,29 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import StatsCard              from './statsCard';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import StatsCard from './statsCard';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterStatsCard: actions.enterStatsCard,
-        leaveStatsCard: actions.leaveStatsCard
+        leaveStatsCard: actions.leaveStatsCard,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StatsCard);
