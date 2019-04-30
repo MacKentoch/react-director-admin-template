@@ -1,28 +1,29 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import StripedProgressBar     from './StripedProgressBar';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import StripedProgressBar from './StripedProgressBar';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterStripedProgressBar: actions.enterStripedProgressBar,
-        leaveStripedProgressBar: actions.leaveStripedProgressBar
+        leaveStripedProgressBar: actions.leaveStripedProgressBar,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(StripedProgressBar);

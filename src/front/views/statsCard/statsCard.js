@@ -8,13 +8,14 @@ import {
   StatsCard as StatsCardComponent,
 } from '../../components';
 import Highlight from 'react-highlight';
+import { type RouterProps } from '../../types/react-router';
 
 type Props = {
   actions: {
     enterStatsCard: () => any,
     leaveStatsCard: () => any,
   },
-};
+} & RouterProps;
 
 const source = `
   // import
