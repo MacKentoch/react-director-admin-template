@@ -1,28 +1,29 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import TeamMatesView          from './TeamMates';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import TeamMatesView from './TeamMates';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterTeamMatesView: actions.enterTeamMatesView,
-        leaveTeamMatesView: actions.leaveTeamMatesView
+        leaveTeamMatesView: actions.leaveTeamMatesView,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TeamMatesView);
