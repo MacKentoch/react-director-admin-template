@@ -1,28 +1,29 @@
-// @flow weak
+// @flow
 
 import { bindActionCreators } from 'redux';
-import { connect }            from 'react-redux';
-import * as actions           from '../../redux/modules/actions';
-import TodoListView           from './TodoListView';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/modules/actions';
+import TodoListView from './TodoListView';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    currentView:  state.views.currentView
+    currentView: state.views.currentView,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    actions : bindActionCreators(
+    actions: bindActionCreators(
       {
         enterTodoListView: actions.enterTodoListView,
-        leaveTodoListView: actions.leaveTwitterFeed
+        leaveTodoListView: actions.leaveTwitterFeed,
       },
-      dispatch)
+      dispatch,
+    ),
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TodoListView);
