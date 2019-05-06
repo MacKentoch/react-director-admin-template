@@ -101,18 +101,18 @@
       "<rootDir>/src/test",
       "<rootDir>/src/test/__mocks__"
     ],
-    "setupFiles": [
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/setupTests.js",
       "<rootDir>/src/test/__mocks__/localStorage.js",
       "<rootDir>/src/test/__mocks__/sessionStorage.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/test/setupTests.js",
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/__mocks__/fileMock.js",
       "\\.(css|less|sass|scss)$": "identity-obj-proxy"
     },
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  }
+  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -167,7 +167,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.15.0",
     "eslint-plugin-flowtype": "^3.4.2",
@@ -180,7 +180,7 @@
     "flow-bin": "^0.96.0",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.1.0",
+    "jest": "^24.8.0",
     "jest-css-modules": "^1.1.0",
     "jest-localstorage-mock": "^2.4.0",
     "json-loader": "^0.5.7",
