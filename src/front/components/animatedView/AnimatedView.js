@@ -10,7 +10,7 @@ type Props = {
   animated: boolean,
 };
 
-function AnimatedView({ animated, children }: Props) {
+function AnimatedView({ animated = true, children }: Props) {
   return (
     <section
       className={cx({
@@ -28,10 +28,6 @@ AnimatedView.displayName = 'AnimatedView';
 AnimatedView.propTypes = {
   children: PropTypes.node,
   animated: PropTypes.bool,
-};
-
-AnimatedView.defaultProps = {
-  animated: true,
 };
 
 export default withRouter(AnimatedView);

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1557080713022" clover="3.2.0">
-  <project timestamp="1557080713022" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1557199922434" clover="3.2.0">
+  <project timestamp="1557199922434" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1" elements="5" coveredelements="5" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+    <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/animatedView/AnimatedView.js">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+    </file>
   </project>
 </coverage>
