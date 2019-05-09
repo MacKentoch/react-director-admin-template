@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1557292607583" clover="3.2.0">
-  <project timestamp="1557292607583" name="All files">
-    <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4" elements="20" coveredelements="20" complexity="0" loc="13" ncloc="13" packages="3" files="3" classes="3"/>
-    <package name="alert">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/alert/Alert.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="animatedView">
-      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/animatedView/AnimatedView.js">
-        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="aside.asideLeft.menu.menuHeader">
-      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="MenuHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1557372130032" clover="3.2.0">
+  <project timestamp="1557372130032" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
