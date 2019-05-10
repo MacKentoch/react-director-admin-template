@@ -21,6 +21,7 @@ function MenuLinks({ activeView, views }: Props) {
       {views.map(({ name, linkTo, faIconName, itemCount }, idx) => {
         return (
           <ViewLink
+            className="js-menulinks-viewlinks"
             key={idx}
             isActive={activeView === name}
             linkTo={linkTo}
