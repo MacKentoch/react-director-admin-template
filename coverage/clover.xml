@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1557458253645" clover="3.2.0">
-  <project timestamp="1557458253645" name="All files">
-    <metrics statements="33" coveredstatements="21" conditionals="11" coveredconditionals="5" methods="11" coveredmethods="5" elements="55" coveredelements="31" complexity="0" loc="33" ncloc="33" packages="7" files="7" classes="7"/>
+<coverage generated="1557552720118" clover="3.2.0">
+  <project timestamp="1557552720119" name="All files">
+    <metrics statements="43" coveredstatements="27" conditionals="19" coveredconditionals="5" methods="14" coveredmethods="6" elements="76" coveredelements="38" complexity="0" loc="43" ncloc="43" packages="8" files="8" classes="8"/>
     <package name="components.alert">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/alert/Alert.js">
@@ -70,11 +70,27 @@
         <line num="44" count="3" type="stmt"/>
       </file>
     </package>
+    <package name="components.aside.asideLeft.searchForm">
+      <metrics statements="10" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="SearchForm.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/searchForm/SearchForm.js">
+        <metrics statements="10" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="models">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="navigation.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/models/navigation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
     </package>
   </project>
