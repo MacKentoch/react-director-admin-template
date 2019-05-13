@@ -29,11 +29,21 @@
 
 .left-side {
   z-index: 10;
-  transform: translateX(0) !important; // translate to MINUS sideMenu width
+  //translatetoMINUSsideMenuwidth:;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -moz-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  -o-transform: translate3d(0, 0, 0) !important;
 }
 
 .left-side.collapse-left {
-  transform: translateX(-220px) !important; // translate to MINUS sideMenu width
+  //translatetoMINUSsideMenuwidth:;
+  transform: translate3d(-220px, 0, 0) !important;
+  -webkit-transform: translate3d(-220px, 0, 0) !important;
+  -moz-transform: translate3d(-220px, 0, 0) !important;
+  -ms-transform: translate3d(-220px, 0, 0) !important;
+  -o-transform: translate3d(-220px, 0, 0) !important;
 }
 
 @media screen and (max-width: 990px) {

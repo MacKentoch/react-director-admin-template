@@ -10,7 +10,7 @@ describe('AnimatedView component', () => {
   const ENTER_KEY = 13;
 
   it('renders as expected', () => {
-    const component = shallow(<SearchForm isActive={onSubmitMock} />);
+    const component = shallow(<SearchForm isActive={onSubmitMock} onSearchSubmit={() => {}} />);
     expect(component).toMatchSnapshot();
   });
 
