@@ -10,7 +10,7 @@ describe('AnimatedView component', () => {
     const component = shallow(
       <UserPanel
         hello="Hi"
-        username={userInfosMockData.firstname + userInfosMockData.lastname}
+        username={`${userInfosMockData.firstname} ${userInfosMockData.lastname}`}
         showUserPicture={userInfosMockData.showPicture}
         userPicture={userInfosMockData.picture}
         connectionStatus={{ online: 'online', disconnected: 'disconnected' }}

@@ -37,14 +37,14 @@ type Props = {
   username: string,
   userPicture: any,
   showPicture: boolean,
-  helloWord: string,
+  helloWord?: string,
 };
 
 const AsideLeft = ({
   connectionStatus,
   userIsConnected,
   username,
-  helloWord,
+  helloWord = '',
   userPicture,
   showPicture,
   isAnimated,
