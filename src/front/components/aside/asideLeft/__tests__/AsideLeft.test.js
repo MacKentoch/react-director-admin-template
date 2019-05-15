@@ -11,7 +11,7 @@ jest.mock('../../../horloge/Horloge', () => 'Horloge');
 
 const { sideMenu: sideMenus } = navigation;
 
-describe('AnimatedView component', () => {
+describe('AsideLeft component', () => {
   it('renders as expected', () => {
     const component = shallow(
       <MemoryRouter>

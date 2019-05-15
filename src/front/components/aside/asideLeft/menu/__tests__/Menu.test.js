@@ -6,15 +6,8 @@ import { MemoryRouter } from 'react-router';
 import Menu from '../Menu';
 import { navigation } from '../../../../../models/navigation';
 
-describe('AnimatedView component', () => {
+describe('Menu component', () => {
   const views = navigation.sideMenu[0];
-
-  // function createNodeMock() {
-  //   // prevent error from cannot find clientHeight of null (ref from Collapse component)
-  //   return {
-  //     clientHeight: 10,
-  //   };
-  // }
 
   it('renders as expected', () => {
     const component = shallow(
@@ -27,7 +20,6 @@ describe('AnimatedView component', () => {
           initialCollapseState={false}
         />
       </MemoryRouter>,
-      // { createNodeMock },
     );
     expect(component).toMatchSnapshot();
   });

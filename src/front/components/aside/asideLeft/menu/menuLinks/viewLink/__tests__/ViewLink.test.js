@@ -6,23 +6,6 @@ import { MemoryRouter } from 'react-router';
 import ViewLink from '../ViewLink';
 
 describe('ViewLink component', () => {
-  const mockViews = [
-    {
-      isActive: true,
-      viewName: 'view1',
-      linkTo: '/view1',
-      faIconName: 'fa-home',
-      itemCount: 1,
-    },
-    {
-      isActive: false,
-      viewName: 'view2',
-      linkTo: '/view2',
-      faIconName: 'fa-user',
-      itemCount: 3,
-    },
-  ];
-
   it('renders as expected', () => {
     const viewName = 'view1';
     const isActive = true;

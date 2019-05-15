@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router';
 import MenuLinks from '../MenuLinks';
 
-describe('AnimatedView component', () => {
+describe('MenuLinks component', () => {
   let activeViewMock;
 
   const mockViews = [
