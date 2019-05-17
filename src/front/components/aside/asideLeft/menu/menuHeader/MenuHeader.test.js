@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import MenuHeader from '../MenuHeader';
+import MenuHeader from './MenuHeader';
 
 describe('MenuHeader component', () => {
   it('renders as expected', () => {

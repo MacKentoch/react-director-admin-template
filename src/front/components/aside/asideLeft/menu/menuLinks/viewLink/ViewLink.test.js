@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import ViewLink from '../ViewLink';
+import ViewLink from './ViewLink';
 
 describe('ViewLink component', () => {
   it('renders as expected', () => {

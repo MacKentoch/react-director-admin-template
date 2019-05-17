@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import MenuLinks from '../MenuLinks';
+import MenuLinks from './MenuLinks';
 
 describe('MenuLinks component', () => {
   let activeViewMock;

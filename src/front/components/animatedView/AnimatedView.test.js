@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import AnimatedView from '../AnimatedView';
+import AnimatedView from './AnimatedView';
 
 describe('AnimatedView component', () => {
   it('renders as expected', () => {

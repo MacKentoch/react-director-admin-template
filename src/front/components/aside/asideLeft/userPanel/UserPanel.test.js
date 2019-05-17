@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import UserPanel from '../UserPanel';
-import { userInfosMockData } from '../../../../../models/userInfosMock';
+import UserPanel from './UserPanel';
+import { userInfosMockData } from '../../../../models/userInfosMock';
 
 describe('UserPanel component', () => {
   it('renders as expected', () => {

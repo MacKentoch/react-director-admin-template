@@ -3,11 +3,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import AsideLeft from '../AsideLeft';
-import { navigation } from '../../../../models/navigation';
+import AsideLeft from './AsideLeft';
+import { navigation } from '../../../models/navigation';
 
 // mock Horloge since snapshot would be different at each run
-jest.mock('../../../horloge/Horloge', () => 'Horloge');
+jest.mock('../../horloge/Horloge', () => 'Horloge');
 
 const { sideMenu: sideMenus } = navigation;
 

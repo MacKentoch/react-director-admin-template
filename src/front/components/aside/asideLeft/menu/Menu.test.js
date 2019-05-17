@@ -3,8 +3,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import Menu from '../Menu';
-import { navigation } from '../../../../../models/navigation';
+import Menu from './Menu';
+import { navigation } from '../../../../models/navigation';
 
 describe('Menu component', () => {
   const views = navigation.sideMenu[0];

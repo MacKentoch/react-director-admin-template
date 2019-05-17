@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import AsideRight from '../AsideRight';
+import AsideRight from './AsideRight';
 
 describe('AsideRight component', () => {
   it('renders as expected', () => {

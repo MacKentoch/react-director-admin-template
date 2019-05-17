@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import BackToTopButton from '../BackToTopButton';
+import BackToTopButton from './BackToTopButton';
 
 describe('BackToTopButton component', () => {
   it('renders as expected', () => {
