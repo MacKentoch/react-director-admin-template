@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558157096499" clover="3.2.0">
-  <project timestamp="1558157096500" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1558243804966" clover="3.2.0">
+  <project timestamp="1558243804966" name="All files">
+    <metrics statements="113" coveredstatements="76" conditionals="63" coveredconditionals="25" methods="31" coveredmethods="14" elements="207" coveredelements="115" complexity="0" loc="113" ncloc="113" packages="13" files="15" classes="15"/>
+    <package name="components.alert">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/alert/Alert.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.animatedView">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="AnimatedView.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/animatedView/AnimatedView.js">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft">
+      <metrics statements="7" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="AsideLeft.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/AsideLeft.js">
+        <metrics statements="7" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="130" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.menu">
+      <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Menu.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/menu/Menu.js">
+        <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="85" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.menu.menuHeader">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="MenuHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/menu/menuHeader/MenuHeader.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.menu.menuLinks">
+      <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="MenuLinks.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/menu/menuLinks/MenuLinks.js">
+        <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.menu.menuLinks.viewLink">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="ViewLink.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/menu/menuLinks/viewLink/ViewLink.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.searchForm">
+      <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <file name="SearchForm.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/searchForm/SearchForm.js">
+        <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideLeft.userPanel">
+      <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="UserPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideLeft/userPanel/UserPanel.js">
+        <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside.asideRight">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="AsideRight.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/aside/asideRight/AsideRight.js">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.backToTop">
+      <metrics statements="26" coveredstatements="9" conditionals="24" coveredconditionals="1" methods="8" coveredmethods="1"/>
+      <file name="BackToTop.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/backToTop/BackToTop.js">
+        <metrics statements="26" coveredstatements="9" conditionals="24" coveredconditionals="1" methods="8" coveredmethods="1"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="96" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.backToTop.backToTopButton">
+      <metrics statements="26" coveredstatements="22" conditionals="9" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="BackToTopButton.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/backToTop/backToTopButton/BackToTopButton.js">
+        <metrics statements="22" coveredstatements="18" conditionals="9" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="78" count="1" type="cond" truecount="1" falsecount="2"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+      </file>
+      <file name="UpIcon.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/backToTop/backToTopButton/UpIcon.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="navigation.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/models/navigation.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="userInfosMock.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/models/userInfosMock.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

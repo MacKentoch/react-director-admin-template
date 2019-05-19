@@ -8,7 +8,6 @@ describe('BackToTop component', () => {
   it('renders as expected', () => {
     const props = {
       minScrollY: 10,
-      scrollTo: null,
       onScrollDone: jest.fn(),
     };
 

@@ -72,15 +72,10 @@ function BackToTop({ minScrollY, scrollTo, onScrollDone }: Props) {
       if (window && windowScrollY && windowScrollY > minScrollY) {
         // using here smoothscroll-polyfill
         window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-        // smoothScroll.scrollTo(scrollTo, this.scrollDone);
       }
     },
     [minScrollY, windowScrollY],
   );
-
-  // const scrollDone = useCallback(() => {
-  //   onScrollDone && onScrollDone();
-  // }, [onScrollDone]);
 
   return (
     <Motion style={{ x: spring(showBackButton ? 0 : 120, presets.stiff) }}>
