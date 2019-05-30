@@ -128,9 +128,7 @@ function fetchEarningGraphData(): any {
   };
 }
 function shouldFetchEarningData(state) {
-  const {
-    earningGraph: { isFetching },
-  } = state.earningGraph;
+  const { isFetching } = state.earningGraph;
   // just check wether fetching (assuming data could be refreshed and should not persist in store)
   return !isFetching;
 }

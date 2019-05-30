@@ -20,6 +20,7 @@
       text-align: center;
       color: #425164;
     }
+
     .spinner {
       margin: 10px auto;
       width: 40px;
@@ -29,7 +30,9 @@
       -webkit-animation: sk-rotate 2.0s infinite linear;
       animation: sk-rotate 2.0s infinite linear;
     }
-    .dot1, .dot2 {
+
+    .dot1,
+    .dot2 {
       width: 60%;
       height: 60%;
       display: inline-block;
@@ -40,31 +43,57 @@
       -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
       animation: sk-bounce 2.0s infinite ease-in-out;
     }
+
     .dot2 {
       top: auto;
       bottom: 0;
       -webkit-animation-delay: -1.0s;
       animation-delay: -1.0s;
     }
-    @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
-    @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
-    @-webkit-keyframes sk-bounce {
-      0%, 100% { -webkit-transform: scale(0.0) }
-      50% { -webkit-transform: scale(1.0) }
+
+    @-webkit-keyframes sk-rotate {
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
     }
+
+    @keyframes sk-rotate {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes sk-bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
     @keyframes sk-bounce {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(0.0);
         -webkit-transform: scale(0.0);
-      } 50% {
+      }
+
+      50% {
         transform: scale(1.0);
         -webkit-transform: scale(1.0);
       }
     }
+
   </style>
 </head>
 
-<body class="skin-black">
+<body class="skin-black" y>
   <div class="loader">
     <p class="loading-message">
       <i>
@@ -76,10 +105,7 @@
       <div class="dot2"></div>
     </div>
   </div>
-
   <section id="root"></section>
-  <script type="text/javascript" src="/assets/vendors.js"></script>
-  <script type="text/javascript" src="/assets/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
     crossorigin="anonymous"></script>
@@ -108,6 +134,6 @@
   <!--[if !IE]-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js"></script>
   <!--[endif]-->
-</body>
+<script type="text/javascript" src="./assets/vendors.d8ca40e724c8ca30f9f8.js"></script><script type="text/javascript" src="./assets/styles.d8ca40e724c8ca30f9f8.js"></script><script type="text/javascript" src="./assets/app.d8ca40e724c8ca30f9f8.js"></script></body>
 
 </html>
