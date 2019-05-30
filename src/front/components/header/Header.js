@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import UserMenu from './userMenu/UserMenu';
 import TaskMenu from './taskMenu/TaskMenu';
 import MessageMenu from './messageMenu/MessageMenu';
@@ -18,6 +19,26 @@ type Props = {
   onLogout: () => any,
 };
 
+const FixedHeader = styled.header`
+  position: fixed;
+
+  @media screen and (max-width: 990px) {
+    & a.logo {
+      width: 0px !important;
+    }
+
+    & nav.navbar {
+      margin: {
+        left: 0px !important;
+      }
+
+      padding: {
+        left: 0px !important;
+      }
+    }
+  }
+`;
+
 const Header = ({
   userLogin,
   userFirstname,
@@ -28,7 +49,7 @@ const Header = ({
   toggleSideMenu,
   onLogout,
 }: Props) => (
-  <header className="header fixed--header">
+  <FixedHeader className="header fixed--header">
     <a href="#" className="logo">
       {appName}
     </a>
@@ -49,7 +70,7 @@ const Header = ({
         </ul>
       </div>
     </nav>
-  </header>
+  </FixedHeader>
 );
 
 Header.propTypes = {

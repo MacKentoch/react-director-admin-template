@@ -2,7 +2,7 @@
 
 // #region imports
 import { injectGlobal } from 'styled-components';
-import { smoothFadeInUp, cardShadows } from './config';
+import { smoothFadeInUp } from './config';
 // #endregion
 
 export const injectGlobalStyle = () => injectGlobal`
