@@ -1,46 +1,69 @@
 // @flow
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
+import styled from 'styled-components';
 
-// type Props = {};
+const Container = styled.div`
+  border-bottom-width: 1px;
+  border-bottom-style: outset;
+  border-top-width: 1px;
+  border-top-style: outset;
+  margin: 10px 0;
+  color: rgb(238, 238, 238);
+  text-align: center;
+`;
+
+const DateAndTimeContainer = styled.div`
+  color: rgb(238, 238, 238);
+`;
+
+const HorlogeTime = styled.h2`
+  margin-top: 5px;
+  font-size: 26px;
+  text-align: center;
+`;
+
+const HorlogeDate = styled.h5`
+  font-size: 13px;
+  text-align: center;
+`;
 
 const CENTIEME_SEC = 1000;
 const DATE_FORMAT = 'MM/DD/YYYY';
-const TIME_FORMAT = 'HH:MM:SS';
+const TIME_FORMAT = 'hh:mm:ss';
 
 function Horloge() {
   const [date, setDate] = useState(format(new Date(), DATE_FORMAT));
   const [time, setTime] = useState(format(new Date(), TIME_FORMAT));
+  const horlogeTimer = useRef(null);
 
   useEffect(() => {
     function ticTac() {
       const now = new Date();
+
       setDate(format(now, DATE_FORMAT));
       setTime(format(now, TIME_FORMAT));
     }
 
-    const horloge = setInterval(() => ticTac(), CENTIEME_SEC);
+    horlogeTimer.current = setInterval(() => ticTac(), CENTIEME_SEC);
 
     return () => {
-      clearInterval(horloge);
+      clearInterval(horlogeTimer.current);
     };
   }, []);
 
   return (
-    <div
-      className="row horlogeContainer dateAndTimeContainer text-center"
-      style={{ marginLeft: 0, marginRight: 0 }}
-    >
-      <div className="col-xs-12 dateAndTimeContainer">
-        <h2 className="text-center" style={{ marginTop: '5px' }}>
+    <Container className="row">
+      <DateAndTimeContainer className="col-xs-12">
+        <HorlogeTime>
           <span className="horlogeTime">{time}</span>
-        </h2>
-        <h5 className="text-center">
+        </HorlogeTime>
+        <HorlogeDate>
           <span className="horlogeDate">{date}</span>
-        </h5>
-      </div>
-    </div>
+        </HorlogeDate>
+      </DateAndTimeContainer>
+    </Container>
   );
 }
 
