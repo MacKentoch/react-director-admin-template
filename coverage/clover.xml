@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1559618674272" clover="3.2.0">
-  <project timestamp="1559618674272" name="All files">
-    <metrics statements="289" coveredstatements="165" conditionals="189" coveredconditionals="32" methods="68" coveredmethods="30" elements="546" coveredelements="227" complexity="0" loc="289" ncloc="289" packages="31" files="36" classes="36"/>
+<coverage generated="1559791576059" clover="3.2.0">
+  <project timestamp="1559791576059" name="All files">
+    <metrics statements="293" coveredstatements="169" conditionals="189" coveredconditionals="32" methods="69" coveredmethods="31" elements="551" coveredelements="232" complexity="0" loc="293" ncloc="293" packages="32" files="37" classes="37"/>
     <package name="components.alert">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/alert/Alert.js">
@@ -359,24 +359,34 @@
         <line num="24" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="components.notifications">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Notifications.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/notifications/Notifications.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="components.notifications.notification">
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Notification.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/notifications/notification/Notification.js">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="12" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.notifications.notificationPanel">
-      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="NotificationPanel.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/notifications/notificationPanel/NotificationPanel.js">
-        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="11" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.panel">
