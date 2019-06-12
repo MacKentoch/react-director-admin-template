@@ -3,22 +3,16 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { shallow } from 'enzyme';
-import PrivateRoute from './PrivateRoute';
+import ScrollToTop from './ScrollToTop';
 
-describe('PrivateRoute component', () => {
+describe('ScrollToTop component', () => {
   it('renders as expected', () => {
-    // spy and mock Storage API (sessionStorage and localStorage)
-    jest
-      .spyOn(Storage.prototype, 'getItem')
-      .mockImplementation(() => 'a fake token key');
-
     const ChildComponent = () => <p>a child component</p>;
-
     const component = shallow(
       <MemoryRouter>
-        <PrivateRoute>
+        <ScrollToTop>
           <ChildComponent />
-        </PrivateRoute>
+        </ScrollToTop>
       </MemoryRouter>,
     );
     expect(component).toMatchSnapshot();

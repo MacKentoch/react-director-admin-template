@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ProgressBar from './ProgressBar';
 
-describe('Panel component', () => {
+describe('ProgressBar component', () => {
   it('renders as expected', () => {
     const props = {
       barSize: 'progress',

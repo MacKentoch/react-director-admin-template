@@ -1,6 +1,8 @@
 // flow
 
 // #region imports
+import 'babel-polyfill';
+import 'regenerator-runtime';
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
