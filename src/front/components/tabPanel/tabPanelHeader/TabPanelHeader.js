@@ -37,7 +37,11 @@ const TabPanelHeader = ({ tabItems = [] }: Props) => {
           const { name, tablink, isActive } = item;
 
           return (
-            <li key={itemIdx} className={cx({ active: isActive })}>
+            <li
+              id="listitem"
+              key={itemIdx}
+              className={cx({ active: isActive })}
+            >
               <a
                 data-toggle="tab"
                 aria-expanded={isActive === true ? 'true' : 'false'}
