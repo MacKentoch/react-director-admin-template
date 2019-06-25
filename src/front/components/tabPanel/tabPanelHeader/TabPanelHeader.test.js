@@ -19,7 +19,7 @@ describe('TabPanelHeader component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should not be active by default', () => {
+  it.only('should set first active by default whne none active from props', () => {
     const props = {
       tabItems: [
         {
@@ -35,10 +35,12 @@ describe('TabPanelHeader component', () => {
       ],
     };
     const component = mount(<TabPanelHeader {...props} />);
-
-    expect(component.find('#listitem').hasClass('active')).toBe(false);
-
-    component.setProps({ isActive: true });
-    expect(component.find('#listitem').hasClass('active')).toBe(true);
+    console.log('component: ', component.debug());
+    expect(
+      component
+        .find('#listitem')
+        .first()
+        .hasClass('active'),
+    ).toBe(true);
   });
 });

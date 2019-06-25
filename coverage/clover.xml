@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561347907197" clover="3.2.0">
-  <project timestamp="1561347907197" name="All files">
-    <metrics statements="13" coveredstatements="13" conditionals="7" coveredconditionals="6" methods="4" coveredmethods="4" elements="24" coveredelements="23" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
-    <file name="TabPanelHeader.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/tabPanel/tabPanelHeader/TabPanelHeader.js">
-      <metrics statements="13" coveredstatements="13" conditionals="7" coveredconditionals="6" methods="4" coveredmethods="4"/>
-      <line num="17" count="1" type="cond" truecount="0" falsecount="1"/>
-      <line num="18" count="3" type="stmt"/>
-      <line num="20" count="2" type="stmt"/>
-      <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="22" count="1" type="stmt"/>
-      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="33" count="2" type="stmt"/>
-      <line num="37" count="3" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
-      <line num="61" count="1" type="stmt"/>
-      <line num="63" count="1" type="stmt"/>
-    </file>
+<coverage generated="1561434264678" clover="3.2.0">
+  <project timestamp="1561434264678" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
