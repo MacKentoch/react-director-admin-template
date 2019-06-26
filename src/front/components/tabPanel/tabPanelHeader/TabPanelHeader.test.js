@@ -35,7 +35,6 @@ describe('TabPanelHeader component', () => {
       ],
     };
     const component = mount(<TabPanelHeader {...props} />);
-    console.log('component: ', component.debug());
     expect(
       component
         .find('#listitem')
