@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561782805128" clover="3.2.0">
-  <project timestamp="1561782805129" name="All files">
-    <metrics statements="422" coveredstatements="270" conditionals="247" coveredconditionals="48" methods="110" coveredmethods="60" elements="779" coveredelements="378" complexity="0" loc="422" ncloc="422" packages="54" files="59" classes="59"/>
+<coverage generated="1561870853400" clover="3.2.0">
+  <project timestamp="1561870853400" name="All files">
+    <metrics statements="434" coveredstatements="276" conditionals="254" coveredconditionals="48" methods="113" coveredmethods="61" elements="801" coveredelements="385" complexity="0" loc="434" ncloc="434" packages="54" files="60" classes="60"/>
     <package name="components.alert">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Alert.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/alert/Alert.js">
@@ -639,7 +639,7 @@
       </file>
     </package>
     <package name="components.textInput">
-      <metrics statements="16" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <metrics statements="28" coveredstatements="14" conditionals="13" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <file name="TelephoneInput.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/textInput/TelephoneInput.js">
         <metrics statements="16" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="14" count="1" type="stmt"/>
@@ -658,6 +658,21 @@
         <line num="38" count="1" type="stmt"/>
         <line num="63" count="1" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
+      </file>
+      <file name="TextAreaInput.js" path="/Users/mackentoch/GitProjects/react-director-admin-template/src/front/components/textInput/TextAreaInput.js">
+        <metrics statements="12" coveredstatements="6" conditionals="7" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
       </file>
     </package>
     <package name="models">
