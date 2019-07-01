@@ -1,11 +1,11 @@
 // @flow
 
 // #region imports
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { smoothFadeInUp } from './config';
 // #endregion
 
-export const injectGlobalStyle = () => injectGlobal`
+export const injectGlobalStyle = () => createGlobalStyle`
   html, body {
     margin: 0;
     height: 100%;
