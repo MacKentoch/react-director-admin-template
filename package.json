@@ -60,7 +60,7 @@
     "helmet": "^3.15.1",
     "history": "^4.7.2",
     "ionicons": "^4.5.5",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "js-base64": "^2.5.1",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.11",
