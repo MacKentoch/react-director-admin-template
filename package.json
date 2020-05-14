@@ -44,7 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-polyfill": "^6.26.0",
     "better-react-spinkit": "^2.0.4",
     "bluebird": "^3.5.1",
