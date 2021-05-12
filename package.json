@@ -51,7 +51,7 @@
     "body-parser": "^1.18.3",
     "bootstrap": "3.4.1",
     "bootstrap-sass": "^3.4.1",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "compression": "^1.7.3",
     "connected-react-router": "^6.3.1",
