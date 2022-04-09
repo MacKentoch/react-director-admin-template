@@ -65,7 +65,7 @@
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.21",
     "modernizr": "^3.7.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "morgan": "^1.9.1",
     "popper.js": "^1.14.7",
     "prettier-eslint": "^8.8.2",
